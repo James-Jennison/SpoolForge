@@ -43,7 +43,7 @@ object CompatibilityResolver {
         canRead = true,
         canWrite = false,
         path = CompatibilityPath.NATIVE,
-        note = "Implementation-compatible with the native CANVAS format; physical reader acceptance is still required.",
+        note = "Native CANVAS format. A tag written by SpoolForge was accepted by an Elegoo CANVAS (owner-reported).",
     )
     private val paxx = TargetCompatibility(
         target = PrinterTarget.SNAPMAKER_U1_PAXX,

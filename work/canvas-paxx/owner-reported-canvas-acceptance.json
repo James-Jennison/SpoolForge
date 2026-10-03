@@ -1,0 +1,12 @@
+{
+  "claim": "An NTAG215 written by SpoolForge with the ELEGOO CANVAS codec was read and accepted by an Elegoo CANVAS.",
+  "evidence_kind": "owner report",
+  "reported_by": "repository owner",
+  "reported_on": "2026-10-03",
+  "codec_id": "elegoo-canvas-1.0",
+  "tag_family": "NTAG215",
+  "reader": "Elegoo CANVAS",
+  "not_recorded": ["printer model and firmware version", "the filament profile written", "tag UID", "photos or logs of the reader"],
+  "not_covered": ["Snapmaker U1 with PAXX/OpenRFID and the Elegoo tag processor", "any other reader"],
+  "note": "The owner stated the tag was written and worked, and later confirmed the reader was an Elegoo CANVAS. No instrumented capture exists; this is a statement, not a device log."
+}

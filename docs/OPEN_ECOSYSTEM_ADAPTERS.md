@@ -8,7 +8,7 @@ SpoolForge reads external tag formats before offering conversion. Known fields r
 |---|---|---:|---:|---:|---:|---:|---|
 | OpenSpool 1.0 | NFC-A / NDEF Type 2, `application/json` | Yes | Yes | Yes | Yes | Yes | Existing NTAG215 acceptance |
 | PAXX U1 Extended | NFC-A / NDEF Type 2, `application/json` | Yes | Yes | Yes | Yes | Yes | Existing NTAG215 and U1 Bay 1 acceptance |
-| ELEGOO CANVAS + PAXX/OpenRFID | NTAG215 / raw CANVAS block at page 16 | Yes | Yes | Yes | Yes | Yes | Host resolver/codec/lock/capacity tests; physical CANVAS acceptance pending |
+| ELEGOO CANVAS + PAXX/OpenRFID | NTAG215 / raw CANVAS block at page 16 | Yes | Yes | Yes | Yes | Yes | Host resolver/codec/lock/capacity tests; a written NTAG215 was accepted by an Elegoo CANVAS (owner-reported, see `work/canvas-paxx/owner-reported-canvas-acceptance.json`); Snapmaker U1 acceptance through PAXX/OpenRFID pending |
 | OpenTag3D 2.000 | NFC-A / NDEF Type 2, `application/opentag3d` | Yes | Yes | Yes | Yes | Yes | Host round-trip tests; no physical OpenTag3D tag supplied |
 | OpenPrintTag current | NFC-V / ISO 15693 NDEF, `application/vnd.openprinttag` | Yes | Yes | Yes | Initialize blank writable NDEF tags | Yes | Fixture/round-trip/routing tests; no physical NFC-V tag supplied |
 | Anycubic ACE Pro | NTAG213/215/216 raw user pages | Yes | Yes | Yes | Yes | Yes | Host byte round-trip tests; physical ACE acceptance pending |
