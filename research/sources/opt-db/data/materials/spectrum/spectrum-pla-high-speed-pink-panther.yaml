@@ -1,0 +1,20 @@
+uuid: d7314490-d442-5690-9b26-755c6770fa62
+slug: spectrum-pla-high-speed-pink-panther
+brand:
+  slug: spectrum
+name: PLA High Speed Pink Panther
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ff5786ff'
+tags:
+- high_speed
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-high-speed-pink-panther/spectrum-pla-high-speed-pink-panther-0-92362b6b.jpg
+  type: unspecified

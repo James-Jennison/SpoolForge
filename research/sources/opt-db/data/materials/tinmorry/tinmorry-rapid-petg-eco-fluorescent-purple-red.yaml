@@ -1,0 +1,11 @@
+uuid: 25bd3d7a-8d75-575d-8d70-71ae562fc01b
+slug: tinmorry-rapid-petg-eco-fluorescent-purple-red
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Fluorescent Purple Red
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#db3fa9ff'
+properties: {}

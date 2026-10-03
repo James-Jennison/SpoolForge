@@ -1,0 +1,14 @@
+uuid: c8b8fc18-628e-5308-8caf-168d05ca112c
+slug: tinmorry-carbon-fiber-pla-coolgrey
+brand:
+  slug: tinmorry
+name: Carbon Fiber PLA CoolGrey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5a696cff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+properties: {}

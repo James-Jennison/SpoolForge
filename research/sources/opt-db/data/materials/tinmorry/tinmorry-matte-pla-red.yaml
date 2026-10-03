@@ -1,0 +1,14 @@
+uuid: 1165b6f7-a94a-5560-930d-4cbe1f139dd5
+slug: tinmorry-matte-pla-red
+brand:
+  slug: tinmorry
+name: Matte PLA Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#932721ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

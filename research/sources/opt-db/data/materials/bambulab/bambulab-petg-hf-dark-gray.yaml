@@ -1,0 +1,23 @@
+uuid: 6a10b841-1353-5320-a113-4d98d3aa52b5
+slug: bambulab-petg-hf-dark-gray
+brand:
+  slug: bambulab
+name: PETG HF Dark Gray
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#515151ff'
+tags:
+  - high_speed
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-hf-dark-gray/30849f711b3a.png
+    type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

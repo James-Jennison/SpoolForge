@@ -1,0 +1,10 @@
+{
+  "uuid": "763bd9b6-f555-4776-96d5-cdbc41a9b0b6",
+  "id": "cf10_carbon",
+  "name": "CF10 Carbon",
+  "color_hex": "#000000",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

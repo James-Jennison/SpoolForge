@@ -1,0 +1,13 @@
+uuid: a995c319-1470-5f29-98b4-1ea0f806c65a
+slug: siddament-pink-abs
+brand:
+  slug: siddament
+name: Pink ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#d99ca4ff'
+tags:
+- filtration_recommended
+properties: {}

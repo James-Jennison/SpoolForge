@@ -1,0 +1,24 @@
+uuid: 68397770-8458-5f67-a6b6-c68925e69c4b
+slug: polymaker-panchroma-matte-pla-pastel-banana
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Pastel Banana
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f7d475ff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-pastel-banana/2e9b249dab25.png
+    type: unspecified
+transmission_distance: 3.6
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

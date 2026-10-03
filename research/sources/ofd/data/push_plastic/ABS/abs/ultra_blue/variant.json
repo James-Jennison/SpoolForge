@@ -1,0 +1,9 @@
+{
+  "uuid": "c75eddfd-b2af-4c8f-b849-696034b30f80",
+  "id": "ultra_blue",
+  "name": "Ultra Blue",
+  "color_hex": "#0022FF",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

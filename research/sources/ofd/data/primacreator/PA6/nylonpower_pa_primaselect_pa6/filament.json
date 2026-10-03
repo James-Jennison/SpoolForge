@@ -1,0 +1,11 @@
+{
+  "uuid": "cedf6867-e603-4a0c-987c-547235d2d97b",
+  "id": "nylonpower_pa_primaselect_pa6",
+  "name": "Nylonpower PA Primaselect PA6",
+  "diameter_tolerance": 0.02,
+  "density": 1.14,
+  "min_print_temperature": 250,
+  "max_print_temperature": 290,
+  "min_bed_temperature": 80,
+  "max_bed_temperature": 100
+}

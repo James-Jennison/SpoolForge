@@ -1,0 +1,15 @@
+{
+  "uuid": "19a369d8-ac8d-48ae-a16e-b2a7e9ad29b7",
+  "id": "burnt_titanium_galaxy",
+  "name": "Burnt Titanium Galaxy",
+  "color_hex": [
+    "#005DA4",
+    "#34695A",
+    "#BB264D"
+  ],
+  "traits": {
+    "iridescent": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

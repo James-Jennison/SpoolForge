@@ -1,0 +1,23 @@
+uuid: 8be085f4-2415-57de-81e8-6cd62c44b699
+slug: addnorth-petg-flame-retardant-v0-black
+brand:
+  slug: addnorth
+name: PETG Flame Retardant V0 Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - self_extinguishing
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-petg-flame-retardant-v0-black/b7ed84a08bb0.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 225
+  max_print_temperature: 260
+  max_bed_temperature: 80
+  drying_temperature: 65
+  drying_time: 360
+url: https://addnorth.com/product/PETG%20Flame%20Retardant%20V0/PETG%20Flame%20Retardant%20V0%20-%201.75mm%20-%20750g%20-%20Black

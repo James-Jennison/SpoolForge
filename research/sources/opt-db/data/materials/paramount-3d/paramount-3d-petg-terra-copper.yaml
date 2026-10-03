@@ -1,0 +1,11 @@
+uuid: e705e7a7-23ec-5de0-b003-57063f3bb924
+slug: paramount-3d-petg-terra-copper
+brand:
+  slug: paramount-3d
+name: PETG (Terra Copper)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#bf7473ff'
+properties: {}

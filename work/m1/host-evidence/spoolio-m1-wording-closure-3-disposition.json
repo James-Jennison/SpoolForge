@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-wording-closure-3",
+  "disposition": "OUT_OF_SCOPE",
+  "reason": "Optional exact prose assertions; existing tests verify UNKNOWN for malformed/nonempty cases and new test verifies absent-read diagnostic. No behavior defect shown.",
+  "resolved": true,
+  "evidence_reference": "reconciliation-wording-deepseek.json; NfcCoordinator.kt"
+}

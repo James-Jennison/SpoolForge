@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "ec16583f-926b-405c-b959-95c1176864cd",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "crealitystore",
+        "url": "https://store.creality.com/products/hyper-rainbow-pla-3d-printing-filament-1kg"
+      }
+    ]
+  }
+]

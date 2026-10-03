@@ -1,0 +1,11 @@
+uuid: 0192f5ae-0ee2-56a5-917a-02d9b6c22e44
+slug: tinmorry-rapid-petg-eco-meeple-white
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Meeple White
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e0dabbff'
+properties: {}

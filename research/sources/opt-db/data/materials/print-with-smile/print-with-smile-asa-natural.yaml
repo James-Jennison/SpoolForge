@@ -1,0 +1,11 @@
+uuid: e6045d75-c4e9-5ebd-bf2f-40468cd0bef1
+slug: print-with-smile-asa-natural
+brand:
+  slug: print-with-smile
+name: ASA NATURAL
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#dfdfd3ff'
+properties: {}

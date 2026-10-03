@@ -1,0 +1,12 @@
+{
+  "uuid": "cc3129e1-6c4a-4570-9b57-d42e637dc8a3",
+  "id": "hot_pink",
+  "name": "Hot Pink",
+  "color_hex": [
+    "#DE008E",
+    "#E5E0E3"
+  ],
+  "traits": {
+    "illuminescent_color_change": true
+  }
+}

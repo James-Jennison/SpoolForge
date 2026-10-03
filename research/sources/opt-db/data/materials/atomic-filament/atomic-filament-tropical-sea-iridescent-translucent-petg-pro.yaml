@@ -1,0 +1,18 @@
+uuid: 59d5328e-d7d3-53ad-b986-e0b28ff5b26a
+slug: atomic-filament-tropical-sea-iridescent-translucent-petg-pro
+brand:
+  slug: atomic-filament
+name: Tropical Sea Iridescent Translucent PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/tropical-sea-iridescent-translucent-petg-pro
+primary_color:
+  color_rgba: '#00b4bcff'
+tags:
+- translucent
+- iridescent
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-tropical-sea-iridescent-translucent-petg-pro/b1663acfaf82.png
+  type: unspecified
+properties: {}

@@ -1,0 +1,9 @@
+{
+  "uuid": "3a9b98d0-1461-4304-9af7-a791aaf75266",
+  "id": "castle_gray",
+  "name": "Castle Gray",
+  "color_hex": "#55657C",
+  "traits": {
+    "industrially_compostable": true
+  }
+}

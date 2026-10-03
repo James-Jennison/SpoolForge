@@ -1,0 +1,19 @@
+uuid: 063508dc-5bad-5096-817b-0c3ea661ac0b
+slug: overture-tpu-high-speed-luminous-orange
+brand:
+  slug: overture
+name: TPU High Speed Luminous Orange
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#ffae62ff'
+secondary_colors:
+- color_rgba: '#e4e7e5ff'
+tags:
+- illuminescent_color_change
+- glow_in_the_dark
+- high_speed
+- abrasive
+properties:
+  hardness_shore_a: 95

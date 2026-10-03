@@ -1,0 +1,18 @@
+{
+  "uuid": "cdc4cd31-4a5e-4167-831f-268cb835affc",
+  "id": "luminous_melody",
+  "name": "Luminous Melody",
+  "color_hex": [
+    "#62E480",
+    "#FCE575",
+    "#AE96D4",
+    "#F7A7A1",
+    "#9AE0DD"
+  ],
+  "traits": {
+    "glow": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "abrasive": true
+  }
+}

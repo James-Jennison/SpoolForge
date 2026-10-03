@@ -1,0 +1,12 @@
+{
+  "uuid": "b483f6a0-bb9b-47fe-a3f1-62f2b4e32335",
+  "id": "nature",
+  "name": "Nature",
+  "color_hex": "#EADAC2",
+  "color_standards": {
+    "ral": "1013"
+  },
+  "traits": {
+    "industrially_compostable": true
+  }
+}

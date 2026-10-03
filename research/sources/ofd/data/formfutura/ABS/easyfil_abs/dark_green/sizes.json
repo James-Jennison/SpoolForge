@@ -1,0 +1,32 @@
+[
+  {
+    "uuid": "d3283086-b892-406d-86b0-f921db00ef7f",
+    "filament_weight": 750,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "EABS-175DGRN-00750",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-abs"
+      }
+    ]
+  },
+  {
+    "uuid": "482170a3-6a8e-4bdb-b289-e1b61b6c3448",
+    "filament_weight": 750,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "EABS-285DGRN-00750",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-abs"
+      }
+    ]
+  }
+]

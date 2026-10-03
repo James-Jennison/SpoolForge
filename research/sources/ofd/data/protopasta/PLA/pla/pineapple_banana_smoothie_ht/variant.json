@@ -1,0 +1,11 @@
+{
+  "uuid": "b92fd999-24d0-4a83-baf3-537ff144ec91",
+  "id": "pineapple_banana_smoothie_ht",
+  "name": "Pineapple Banana Smoothie HT",
+  "color_hex": "#FAD61B",
+  "traits": {
+    "imitates_marble": true,
+    "industrially_compostable": true,
+    "high_temperature": true
+  }
+}

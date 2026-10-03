@@ -1,0 +1,13 @@
+{
+  "uuid": "96e686d1-62eb-4f0a-ac1e-427f8428ba3c",
+  "id": "candy_black_silver",
+  "name": "Candy Black-Silver",
+  "color_hex": [
+    "#000000",
+    "#969998"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

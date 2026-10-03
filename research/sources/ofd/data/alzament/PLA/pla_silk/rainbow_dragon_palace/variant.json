@@ -1,0 +1,15 @@
+{
+  "uuid": "37e5b118-f90f-4bdb-9a24-38946ea75108",
+  "id": "rainbow_dragon_palace",
+  "name": "Rainbow Dragon Palace",
+  "color_hex": [
+    "#e3ab6e",
+    "#a4d8dd",
+    "#cd6310",
+    "#da7880"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

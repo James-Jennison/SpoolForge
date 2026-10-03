@@ -1,0 +1,14 @@
+uuid: 3f183f3d-048e-5f90-82be-811ce812160b
+slug: print-with-smile-rec-pla-just-blue
+brand:
+  slug: print-with-smile
+name: REC-PLA Just BLUE
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0066d9ff'
+tags:
+- recycled
+- industrially_compostable
+properties: {}

@@ -1,0 +1,21 @@
+uuid: 9232f1e8-ad7d-5e52-a7fd-0705e7bcfd1e
+slug: polymaker-creator-special-edition-3d-print-general
+brand:
+  slug: polymaker
+name: 'Creator Special Edition: 3D Print General'
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c3c199ff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-creator-special-edition-3d-print-general/091bb3d8a3cb.png
+    type: unspecified
+properties:
+  density: 1.22
+  min_print_temperature: 190
+  max_print_temperature: 220
+  min_bed_temperature: 30
+  max_bed_temperature: 60

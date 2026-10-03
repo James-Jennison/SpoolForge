@@ -1,0 +1,19 @@
+uuid: 3d40f1f1-5abb-5f9f-ba2b-b6f1ecda7540
+slug: formfutura-python-flex-tpu-98a-skin-tone-id2
+brand:
+  slug: formfutura
+name: Python Flex TPU 98A Skin Tone ID2
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#f7dec2ff'
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-python-flex-tpu-98a-skin-tone-id2/4545e5525f8c.png
+    type: unspecified
+properties:
+  density: 1.16
+  hardness_shore_a: 98.0
+  min_print_temperature: 220
+  max_print_temperature: 250
+  max_bed_temperature: 60

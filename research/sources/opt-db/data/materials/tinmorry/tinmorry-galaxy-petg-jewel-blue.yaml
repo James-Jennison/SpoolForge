@@ -1,0 +1,13 @@
+uuid: e87355c9-eed0-5593-ba0f-0092ded5b0ba
+slug: tinmorry-galaxy-petg-jewel-blue
+brand:
+  slug: tinmorry
+name: Galaxy PETG Jewel Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#453a72ff'
+tags:
+- iridescent
+properties: {}

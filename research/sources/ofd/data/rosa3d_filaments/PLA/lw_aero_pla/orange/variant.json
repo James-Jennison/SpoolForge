@@ -1,0 +1,9 @@
+{
+  "uuid": "8e38a811-a1fd-4094-b1e3-f112d109c704",
+  "id": "orange",
+  "name": "Orange",
+  "color_hex": "#FF4F4D",
+  "traits": {
+    "foaming": true
+  }
+}

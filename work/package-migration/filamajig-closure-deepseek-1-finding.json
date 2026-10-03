@@ -1,0 +1,21 @@
+{
+  "finding_id": "filamajig-closure-deepseek-1",
+  "change_id": "filamajig-identity-camera-20260907",
+  "cycle_id": "review-cycle-23bf89fe8459",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Correctness / Format boundary",
+  "summary": "Code128 GTIN extraction relies solely on the text prefix '01' and does not enforce GS1 symbology or the exact 14-digit length required for AI (01). A plain Code128 or malformed GS1-128 can be misclassified as a valid GTIN.",
+  "claim": "A non-GS1 Code128 barcode (e.g., internal custom code) encoding '01' + 14-digit number will be accepted as a GTIN, violating the requirement to accept Code128 only with GS1 AI (01). A GS1-128 with AI(01) followed by fewer than 14 digits may be padded and accepted, leading to false positives and incorrect data association.",
+  "evidence": {
+    "source": "In normalizeDecodedBarcode, the Code128 branch: val compact = text.replace(\"\\u001d\", \"\").removePrefix(\"]C1\"); if (compact.startsWith(\"01\")) Gtin.normalize(compact.drop(2).take(14))?.let { return it }. No check of result.resultMetadata for FNC1 or symbology identifier, and no length check after drop(2). The unit test nonGs1LinearFormatsCannotMasqueradeAsGtin only tests a 13-digit plain Code128 not starting with '01'; it does not test a plain Code128 containing '0107340002119380' or a malformed GS1-128 '019638936717461'.",
+    "response_sha256": "86111df7215db9d8cba3656e581542427a3bd57edd03f6a4ed89af53aa579337"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "In the Code128 branch, verify actual GS1 encoding (e.g., check result.resultMetadata for FNC1 or symbology identifier ']C1'), and after stripping '01' require exactly 14 digits before calling Gtin.normalize. Add unit tests rejecting plain Code128 '0107340002119380' and malformed '019638936717461'.",
+  "suggested_validation": "A plain Code128 with text '0107340002119380' must return null. A true GS1-128 with FNC1 and the same text must return '07340002119380'. A Code128 with '019638936717461' must return null.",
+  "reviewer_confidence": "MEDIUM"
+}

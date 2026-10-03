@@ -1,0 +1,17 @@
+uuid: 208e7a24-9e0e-527c-8293-b012a2112255
+slug: raise3d-premium-pla-yellow-rfid
+brand:
+  slug: raise3d
+name: Premium PLA Yellow - RFID
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fedf00ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.2
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-premium-pla-yellow-rfid/raise3d-premium-pla-yellow-rfid-0-34dc77ae.jpg
+  type: unspecified

@@ -1,0 +1,11 @@
+uuid: bf81978d-500d-5c20-af2d-b9b3e04f52fb
+slug: paramount-3d-petg-harajuku-pink
+brand:
+  slug: paramount-3d
+name: PETG (Harajuku Pink)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#d93382ff'
+properties: {}

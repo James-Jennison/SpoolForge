@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-remediation-gemini-eviction",
+  "disposition": "REJECTED",
+  "reason": "NOT APPLICABLE as a requirement: there is no Owner 20-entry eviction policy. This would overwrite unresolved write evidence. Owner requires durable UNKNOWN history; host deliberately removed eviction and validated all25 entries retained. Potential long-term storage growth is a separate optional retention design, not authority to delete unresolved evidence.",
+  "evidence_reference": "work/m1/host-remediation-review.json; app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt",
+  "resolved": true
+}

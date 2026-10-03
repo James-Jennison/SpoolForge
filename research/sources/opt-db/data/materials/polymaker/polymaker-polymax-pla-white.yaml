@@ -1,0 +1,22 @@
+uuid: 3268bdc2-48f3-5e3c-931c-4f9cf8ba81dd
+slug: polymaker-polymax-pla-white
+brand:
+  slug: polymaker
+name: PolyMax™ PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ebecedff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polymax-pla-white/72f350e6f20d.png
+    type: unspecified
+properties:
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

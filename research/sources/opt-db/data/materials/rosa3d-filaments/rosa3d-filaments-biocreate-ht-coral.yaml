@@ -1,0 +1,12 @@
+uuid: b7509028-a4c7-5c2f-93f7-e20a479d2914
+slug: rosa3d-filaments-biocreate-ht-coral
+brand:
+  slug: rosa3d-filaments
+name: BioCREATE HT Coral
+class: FFF
+abbreviation: Bio
+primary_color:
+  color_rgba: '#ff9b7dff'
+tags:
+- high_temperature
+properties: {}

@@ -1,0 +1,14 @@
+uuid: 48e04d3e-0e9c-59b3-aff7-05cdec416638
+slug: ziro-3d-matte-pla-pastel-skin
+brand:
+  slug: ziro-3d
+name: Matte PLA Pastel Skin
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ece4a8ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

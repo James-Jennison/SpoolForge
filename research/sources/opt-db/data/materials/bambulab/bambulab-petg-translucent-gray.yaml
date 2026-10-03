@@ -1,0 +1,23 @@
+uuid: 791713de-b94b-5aa5-a494-f983dd705d2e
+slug: bambulab-petg-translucent-gray
+brand:
+  slug: bambulab
+name: PETG Translucent Gray
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#898d8dff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-translucent-gray/7d77b131193e.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

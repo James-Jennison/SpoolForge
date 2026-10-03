@@ -1,0 +1,13 @@
+{
+  "uuid": "044a5c63-ddf5-4650-be58-b1bd9be73ab5",
+  "id": "rpetg",
+  "name": "rPETG",
+  "color_hex": [
+    "#67C993",
+    "#0353BA"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "recycled": true
+  }
+}

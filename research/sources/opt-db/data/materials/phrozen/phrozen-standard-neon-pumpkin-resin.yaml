@@ -1,0 +1,12 @@
+uuid: b1fab3c1-7483-5dd7-acb6-5245fb72ef5f
+slug: phrozen-standard-neon-pumpkin-resin
+brand:
+  slug: phrozen
+name: Standard Neon-Pumpkin Resin
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#fa8423ff'
+tags:
+- neon
+properties: {}

@@ -1,0 +1,23 @@
+uuid: e80e6864-5c4c-540b-b8ed-a87ad8c6a921
+slug: elegoo-pla-matte-black
+brand:
+  slug: elegoo
+name: PLA Matte Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#090909ff'
+tags:
+- matte
+photos:
+- url: https://files.openprinttag.org/elegoo/elegoo-pla-matte-black/9cd54067a40d.png
+  type: unspecified
+properties:
+  density: 1.26
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 65
+  drying_temperature: 50
+  drying_time: 480

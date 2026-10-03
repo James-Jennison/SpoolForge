@@ -1,0 +1,20 @@
+uuid: 0d258083-1912-5048-868e-f7b9e9dd66e3
+slug: spectrum-s-flex-98a-lime-green
+brand:
+  slug: spectrum
+name: S-Flex 98A™ Lime Green
+class: FFF
+abbreviation: TPU
+primary_color:
+  color_rgba: '#58c91bff'
+properties:
+  density: 1.09
+  hardness_shore_a: 98.0
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+type: TPU
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-s-flex-98a-lime-green/spectrum-s-flex-98a-lime-green-0-cd93df44.jpg
+  type: unspecified

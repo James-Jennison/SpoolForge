@@ -1,0 +1,16 @@
+{
+  "uuid": "86e62e1d-9ddb-4b36-af05-518b936cec67",
+  "id": "rainbow_macaroon",
+  "name": "Rainbow Macaroon",
+  "color_hex": [
+    "#00E3E2",
+    "#BB264D",
+    "#FA8423",
+    "#E2FF4D",
+    "#62E480"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

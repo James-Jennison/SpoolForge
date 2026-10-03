@@ -1,0 +1,18 @@
+uuid: fbbf668b-9b68-5784-b10c-b9fde43cdd66
+slug: addnorth-easyflex-light-grey
+brand:
+  slug: addnorth
+name: EasyFlex Light Grey
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#c5c5bfff'
+properties:
+  hardness_shore_a: 95.0
+  min_print_temperature: 230
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-easyflex-light-grey/b286fa3657f7.png
+    type: unspecified

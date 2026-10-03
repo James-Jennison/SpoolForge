@@ -1,0 +1,20 @@
+uuid: b3286b61-2fe2-5277-b638-7e6abd9cc18f
+slug: spectrum-pla-premium-caribbean-blue
+brand:
+  slug: spectrum
+name: PLA Premium Caribbean Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#178b9fff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-premium-caribbean-blue/spectrum-pla-premium-caribbean-blue-0-745b2538.jpg
+  type: unspecified

@@ -1,0 +1,20 @@
+uuid: 88e64aed-9b11-5b01-886a-3cdf8c7810a9
+slug: esun-carbon-fiber-pla-green
+brand:
+  slug: esun
+name: Carbon Fiber PLA Green
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://esun3dstoreeu.com/products/epla-cf?VariantsId=12177
+primary_color:
+  color_rgba: '#283333ff'
+tags:
+  - matte
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+properties: {}
+photos:
+  - url: https://files.openprinttag.org/esun/esun-carbon-fiber-pla-green/309da3dcbab0.jpg
+    type: unspecified

@@ -1,0 +1,13 @@
+uuid: c81866cc-fd75-5270-b819-ed77634f4bcc
+slug: sainsmart-black-abs
+brand:
+  slug: sainsmart
+name: Black ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- filtration_recommended
+properties: {}

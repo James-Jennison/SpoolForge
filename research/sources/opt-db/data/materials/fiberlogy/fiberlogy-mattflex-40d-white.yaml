@@ -1,0 +1,21 @@
+uuid: e7f47a09-c71c-5fff-8cf5-0e626fc4fd6d
+slug: fiberlogy-mattflex-40d-white
+brand:
+  slug: fiberlogy
+name: MattFlex 40D White
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-mattflex-40d-white/030ae0903fa8.png
+    type: unspecified
+properties:
+  hardness_shore_d: 40.0
+  min_print_temperature: 210
+  max_print_temperature: 230
+  min_bed_temperature: 50
+  max_bed_temperature: 70

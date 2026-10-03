@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "eeaf4737-2c12-4dab-aa8c-da8bdac4a3ca",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/estars-pla"
+      }
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-r2-nfc-deepseek-3",
+  "disposition": "CONFIRMED",
+  "reason": "Unused implementation and its tests removed. Actual Android catalog store is separately tested for corruption recovery.",
+  "evidence_reference": "work/m1/host-evidence/remediation-round3-build.log; app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt; work/m1/host-evidence/migrated-user-data/summary.json",
+  "resolved": false
+}

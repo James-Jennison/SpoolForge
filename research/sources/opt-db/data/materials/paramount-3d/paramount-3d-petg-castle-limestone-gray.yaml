@@ -1,0 +1,11 @@
+uuid: a501bbc8-0a22-5477-a8e8-36295f7ebd95
+slug: paramount-3d-petg-castle-limestone-gray
+brand:
+  slug: paramount-3d
+name: PETG (Castle Limestone Gray)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#c5c7c4ff'
+properties: {}

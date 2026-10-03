@@ -1,0 +1,20 @@
+{
+  "finding_id": "spoolio-m1-codex-catalog-colors",
+  "change_id": "spoolio-m1-20260906",
+  "reviewer": "codex",
+  "severity": "HIGH",
+  "category": "Catalog source mapping",
+  "summary": "Array-valued source colors silently become black in generated catalog.",
+  "claim": "CatalogTool uses variant.string(color_hex) ?: #000000.1517 source variants have color arrays; independent all-package comparison finds2785 primary-color mismatches.",
+  "evidence": {
+    "artifact": "work/m1/host-evidence/catalog-source-oracle.json",
+    "example": "902e1fa5-2cff-400a-ab79-fcf1cdf68e16 expected first declared#005DA4, actual#000000"
+  },
+  "affected_components": [
+    "catalog-tool",
+    "app catalog data mapping"
+  ],
+  "suggested_remediation": "Preserve source primary and secondary colors end-to-end; do not default missing values to black. Regenerate catalog and show loss preview for formats with less color capacity.",
+  "suggested_validation": "Independent source-to-generated comparison across all22347 package rows reports zero primary mismatches; multi-color fixtures retain all known colors and format-limits are explicit.",
+  "reviewer_confidence": "HIGH"
+}

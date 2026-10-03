@@ -1,0 +1,14 @@
+{
+  "uuid": "181c861e-0631-41e8-b4a1-28f7a3cb578e",
+  "material": "PLA",
+  "default_max_dry_temperature": 75,
+  "default_slicer_settings": {
+    "orcaslicer": {
+      "bed_temp": 65,
+      "first_layer_bed_temp": 65,
+      "first_layer_nozzle_temp": 210,
+      "nozzle_temp": 210,
+      "profile_name": "PLA"
+    }
+  }
+}

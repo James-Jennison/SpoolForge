@@ -1,0 +1,15 @@
+uuid: d49ab4bf-22be-57da-9c26-feae0e46121d
+slug: winkle-pla-high-speed-ash-gray
+brand:
+  slug: winkle
+name: PLA High Speed Ash Gray
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#9f9f9fff'
+tags:
+- high_speed
+- industrially_compostable
+properties:
+  density: 1.24

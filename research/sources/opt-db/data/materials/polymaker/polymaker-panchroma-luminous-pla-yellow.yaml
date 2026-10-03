@@ -1,0 +1,23 @@
+uuid: 3c3d2418-e328-59c8-adae-025dad50956c
+slug: polymaker-panchroma-luminous-pla-yellow
+brand:
+  slug: polymaker
+name: Panchroma™ Luminous PLA Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#eedc48ff'
+tags:
+  - glow_in_the_dark
+  - abrasive
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-luminous-pla-yellow/5162a615f7e3.png
+    type: unspecified
+properties:
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

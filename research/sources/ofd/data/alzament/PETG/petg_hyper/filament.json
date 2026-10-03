@@ -1,0 +1,8 @@
+{
+  "uuid": "8c0c5a40-4abd-4b24-91e8-7fa7b087ab5a",
+  "id": "petg_hyper",
+  "name": "PETG Hyper",
+  "diameter_tolerance": 0.02,
+  "density": 1.2,
+  "data_sheet_url": "https://dwn.alza.cz/manual/149499"
+}

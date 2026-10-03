@@ -1,0 +1,13 @@
+uuid: b793aa3c-7f9e-547b-bcbe-60d71939b48a
+slug: paramount-3d-pla-british-racing-green
+brand:
+  slug: paramount-3d
+name: PLA (British Racing Green)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#1e5a4fff'
+tags:
+- industrially_compostable
+properties: {}

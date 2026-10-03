@@ -1,0 +1,23 @@
+uuid: 454443e9-e925-5f74-a618-fd756ab6b2f6
+slug: bambulab-petg-hf-gray
+brand:
+  slug: bambulab
+name: PETG HF Gray
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#b1b3b3ff'
+tags:
+  - high_speed
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-hf-gray/9ec4abf7a652.png
+    type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

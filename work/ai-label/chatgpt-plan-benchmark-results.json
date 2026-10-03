@@ -1,0 +1,4466 @@
+{
+  "models": [
+    {
+      "slug": "gpt-6-astra",
+      "display_name": "GPT-6-Astra"
+    },
+    {
+      "slug": "gpt-5.6-sol",
+      "display_name": "GPT-5.6-Sol"
+    },
+    {
+      "slug": "gpt-5.6-terra",
+      "display_name": "GPT-5.6-Terra"
+    },
+    {
+      "slug": "gpt-5.6-luna",
+      "display_name": "GPT-5.6-Luna"
+    },
+    {
+      "slug": "gpt-5.5",
+      "display_name": "GPT-5.5"
+    }
+  ],
+  "usage_limited": false,
+  "runs": [
+    {
+      "case": "3dhojor-fire-engine-red",
+      "model": "gpt-6-astra",
+      "display_name": "GPT-6-Astra",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "3DHoJor",
+          "confidence": 0.96,
+          "evidence": "Label reads “3DHoJor”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.92,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "3DHoJor 3D Printing Filament ...D FDM Printer-Fire Engine Red",
+          "confidence": 0.9,
+          "evidence": "The product line is visibly truncated: “3DHoJor 3D Printing Filament ...D FDM Printer-Fire Engine Red”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "color": {
+          "value": "Fire Engine Red",
+          "confidence": 0.99,
+          "evidence": "Printed product line ends with “Fire Engine Red”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "BE172C",
+          "confidence": 0.78,
+          "evidence": "Red filament is visible through the package window; lighting and shadows affect the estimate.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X00444MZE3",
+            "kind": "Amazon-style marketplace identifier",
+            "evidence": "Printed beneath the barcode and independently decoded by ZXing as CODE_128; not a GTIN or identified manufacturer SKU."
+          }
+        ]
+      },
+      "elapsed_ms": 43707,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "model": "gpt-5.6-sol",
+      "display_name": "GPT-5.6-Sol",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "Zew",
+          "confidence": 0.97,
+          "evidence": "Large printed name “Zew” on the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "3DHoJor 3D Printing Filament, ...D FDM Printer-Fire Engine Red",
+          "confidence": 0.86,
+          "evidence": "Printed product line reads “3DHoJor 3D Printing Filament, ...D FDM Printer-Fire Engine Red”; part of the wording is visibly truncated with an ellipsis.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "color": {
+          "value": "Fire Engine Red",
+          "confidence": 0.99,
+          "evidence": "The printed product wording ends with “Fire Engine Red.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "B81735",
+          "confidence": 0.72,
+          "evidence": "Estimated from the visibly red filament through the package window.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X00444MZE3",
+            "kind": "Amazon-style identifier candidate",
+            "evidence": "Printed beneath the linear barcode and independently decoded as CODE_128 in the profile-label photo."
+          }
+        ]
+      },
+      "elapsed_ms": 39878,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "model": "gpt-5.6-terra",
+      "display_name": "GPT-5.6-Terra",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "Zew",
+          "confidence": 0.98,
+          "evidence": "The package label visibly reads “Zew.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "3DHoJow 3D Printing Filament... D FDM Printer-Fire Engine Red",
+          "confidence": 0.83,
+          "evidence": "The printed label text reads “3DHoJow 3D Printing Filament... D FDM Printer-Fire Engine Red”; the character immediately before “FDM” is unclear\/partly ambiguous in the image.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": null,
+          "confidence": 0.93,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "color": {
+          "value": "Fire Engine Red",
+          "confidence": 0.99,
+          "evidence": "The visible product wording ends with “Fire Engine Red,” and red filament is visible through the package window.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "C8102E",
+          "confidence": 0.7,
+          "evidence": "Estimated from the visibly bright deep-red filament through the package window.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": null,
+          "confidence": 0.94,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.94,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.96,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.96,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.96,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.96,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.96,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X00444MZE3",
+            "kind": "Amazon-style identifier candidate",
+            "evidence": "Decoded independently from the visible CODE_128 barcode on the package label."
+          }
+        ]
+      },
+      "elapsed_ms": 13534,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "model": "gpt-5.6-luna",
+      "display_name": "GPT-5.6-Luna",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "3DColor",
+          "confidence": 0.98,
+          "evidence": "“3DColor” is visibly printed on the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.96,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "3D Printing Filament, ... FDM Printer-Fire Engine Red",
+          "confidence": 0.82,
+          "evidence": "The package label visibly reads “3DColor 3D Printing Filament, ... FDM Printer-Fire Engine Red.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": null,
+          "confidence": 0.97,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "color": {
+          "value": "Fire Engine Red",
+          "confidence": 0.99,
+          "evidence": "“Fire Engine Red” is visibly printed on the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "d91632",
+          "confidence": 0.78,
+          "evidence": "Estimated from the visibly represented red filament through the package window.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": null,
+          "confidence": 0.9,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.9,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.96,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X00444MZE3",
+            "kind": "Amazon-style identifier candidate",
+            "evidence": "Decoded from the visible CODE_128 barcode; retained as a marketplace identifier candidate, not a GTIN."
+          }
+        ]
+      },
+      "elapsed_ms": 27928,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "model": "gpt-5.5",
+      "display_name": "GPT-5.5",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "Zew",
+          "confidence": 0.92,
+          "evidence": "Visible brand text reads \"Zew\" on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.9,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "3DColor 3D Printing Filament ... FDM Printer-Fire Engine Red",
+          "confidence": 0.68,
+          "evidence": "Visible product line includes \"3DColor 3D Printing Filament ... FDM Printer-Fire Engine Red\"; middle wording is partly unclear\/obscured by image resolution\/orientation.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "color": {
+          "value": "Fire Engine Red",
+          "confidence": 0.9,
+          "evidence": "Printed text includes \"Fire Engine Red\"; red filament is also visible through the box window.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "C21E2B",
+          "confidence": 0.72,
+          "evidence": "Estimated from the visible red filament through the package window.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": null,
+          "confidence": 0.92,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.93,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.97,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.97,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.97,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.97,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.96,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.8,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.96,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X00444MZE3",
+            "kind": "Amazon-style identifier candidate",
+            "evidence": "Decoded CODE_128 symbol supplied by local ZXing and matching visible printed code \"X00444MZE3\" on label."
+          }
+        ]
+      },
+      "elapsed_ms": 22969,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "model": "gpt-6-astra",
+      "display_name": "GPT-6-Astra",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "ANYCUBIC",
+          "confidence": 1,
+          "evidence": "ANYCUBIC logo on main label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": "ANYCUBIC",
+          "confidence": 1,
+          "evidence": "ANYCUBIC logo visibly printed.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "product": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "Main label reads “PLA”; marketplace label has the truncated wording “ANYCUBIC PLA 3D ... Magenta”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 1,
+          "evidence": "PLA",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Magenta",
+          "confidence": 1,
+          "evidence": "Color: Magenta",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 1,
+          "evidence": "Diameter 1.75±0.02mm",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 1,
+          "evidence": "Net Weight 1 kg",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": 190,
+          "confidence": 1,
+          "evidence": "Printing Temp 190–230°C",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_max_c": {
+          "value": 230,
+          "confidence": 1,
+          "evidence": "Printing Temp 190–230°C",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": "AHPLMG-107",
+          "confidence": 0.99,
+          "evidence": "AHPLMG-107 printed on both labels.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X004LDC21N",
+            "kind": "marketplace identifier (Amazon-style)",
+            "evidence": "Printed beneath barcode; independently decoded as CODE_128 from profile_label."
+          }
+        ]
+      },
+      "elapsed_ms": 27886,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "model": "gpt-5.6-sol",
+      "display_name": "GPT-5.6-Sol",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "ANYCUBIC",
+          "confidence": 0.99,
+          "evidence": "ANYCUBIC logo is visibly printed on the main product label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": "ANYCUBIC",
+          "confidence": 0.98,
+          "evidence": "ANYCUBIC company\/brand logo is visibly printed on the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "product": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "The prominent product wording on the main label is “PLA”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "“PLA” is prominently printed on the main label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Magenta",
+          "confidence": 0.99,
+          "evidence": "The label states “Color Magenta”; the barcode label also ends with “Magenta”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": "No filament, color swatch, or printed hexadecimal color value is visible for a reliable color estimate.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "The label states “Diameter 1.75±0.02mm”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 0.99,
+          "evidence": "The label states “Net Weight 1 kg”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": 190,
+          "confidence": 0.98,
+          "evidence": "The label prints “Printing Temp 190-230°C”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_max_c": {
+          "value": 230,
+          "confidence": 0.98,
+          "evidence": "The label prints “Printing Temp 190-230°C”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No bed temperature is visible on the package labels.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No bed temperature is visible on the package labels.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No TD or transmission-distance value is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No valid retail GTIN is visible or decoded; X004LDC21N is an Amazon-style identifier candidate, not a GTIN.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": "AHPLMG-107",
+          "confidence": 0.99,
+          "evidence": "“AHPLMG-107” is visibly printed on both package labels.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No lot number is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X004LDC21N",
+            "kind": "Amazon-style identifier candidate (CODE_128)",
+            "evidence": "ZXing decoded the CODE_128 symbol as X004LDC21N, matching the human-readable text beneath the barcode."
+          }
+        ]
+      },
+      "elapsed_ms": 36491,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "model": "gpt-5.6-terra",
+      "display_name": "GPT-5.6-Terra",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "ANYCUBIC",
+          "confidence": 0.99,
+          "evidence": "ANYCUBIC logo visibly printed on the main label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": "ANYCUBIC",
+          "confidence": 0.99,
+          "evidence": "ANYCUBIC name\/logo visibly printed on the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "product": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "Main label prominently states “PLA.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "Main label prominently states “PLA.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Magenta",
+          "confidence": 0.99,
+          "evidence": "Main label states “Color Magenta”; upper label also ends with “Magenta.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "B51F55",
+          "confidence": 0.62,
+          "evidence": "Estimated from the printed color name “Magenta”; no filament sample is visible.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "Label states “Diameter 1.75±0.02mm.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 0.99,
+          "evidence": "Label states “Net Weight 1 kg.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": 190,
+          "confidence": 0.99,
+          "evidence": "Label states “Printing Temp 190-230°C.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_max_c": {
+          "value": 230,
+          "confidence": 0.99,
+          "evidence": "Label states “Printing Temp 190-230°C.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": "AHPLMG-107",
+          "confidence": 0.99,
+          "evidence": "Code “AHPLMG-107” is visibly printed on both package labels.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.97,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X004LDC21N",
+            "kind": "Amazon-style identifier candidate",
+            "evidence": "Printed beneath the upper barcode and independently decoded locally as CODE_128."
+          }
+        ]
+      },
+      "elapsed_ms": 16086,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "model": "gpt-5.6-luna",
+      "display_name": "GPT-5.6-Luna",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "ANYCUBIC",
+          "confidence": 0.99,
+          "evidence": "ANYCUBIC logo visibly printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": "ANYCUBIC",
+          "confidence": 0.9,
+          "evidence": "ANYCUBIC company\/logo name is visibly printed on the package.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "product": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "PLA is visibly printed in large text on the product label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "PLA is visibly printed on the product label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Magenta",
+          "confidence": 0.99,
+          "evidence": "Color: Magenta is visibly printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "Diameter 1.75±0.02mm is visibly printed.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 0.99,
+          "evidence": "Net Weight 1 kg is visibly printed.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": 190,
+          "confidence": 0.99,
+          "evidence": "Printing Temp 190–230°C is visibly printed.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_max_c": {
+          "value": 230,
+          "confidence": 0.99,
+          "evidence": "Printing Temp 190–230°C is visibly printed.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": "AHPLMG-107",
+          "confidence": 0.99,
+          "evidence": "AHPLMG-107 is visibly printed on the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X004LDC21N",
+            "kind": "Amazon-style identifier candidate",
+            "evidence": "Decoded from the package barcode; kept distinct from GTIN."
+          }
+        ]
+      },
+      "elapsed_ms": 20826,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "model": "gpt-5.5",
+      "display_name": "GPT-5.5",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "ANYCUBIC",
+          "confidence": 0.99,
+          "evidence": "ANYCUBIC logo\/name printed on main label",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": "ANYCUBIC",
+          "confidence": 0.9,
+          "evidence": "ANYCUBIC logo\/name visibly printed",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "product": {
+          "value": "PLA",
+          "confidence": 0.98,
+          "evidence": "Large printed product text: \"PLA\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.98,
+          "evidence": "Printed: \"PLA\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Magenta",
+          "confidence": 0.99,
+          "evidence": "Printed color field: \"Magenta\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "C00080",
+          "confidence": 0.75,
+          "evidence": "Estimated from printed color name \"Magenta\"",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "Printed: \"Diameter 1.75±0.02mm\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 0.99,
+          "evidence": "Printed: \"Net Weight 1 kg\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": 190,
+          "confidence": 0.98,
+          "evidence": "Printed: \"Printing Temp 190-230°C\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_max_c": {
+          "value": 230,
+          "confidence": 0.98,
+          "evidence": "Printed: \"Printing Temp 190-230°C\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": "AHPLMG-107",
+          "confidence": 0.99,
+          "evidence": "Printed on main label and barcode label: \"AHPLMG-107\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X004LDC21N",
+            "kind": "Amazon-style identifier candidate",
+            "evidence": "Local ZXing decoded CODE_128; human-readable text under barcode also shows \"X004LDC21N\""
+          },
+          {
+            "value": "330m",
+            "kind": "filament length",
+            "evidence": "Printed: \"Length 330m\""
+          },
+          {
+            "value": "MADE IN CHINA",
+            "kind": "country of origin",
+            "evidence": "Printed on barcode label: \"MADE IN CHINA\""
+          }
+        ]
+      },
+      "elapsed_ms": 23637,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "model": "gpt-6-astra",
+      "display_name": "GPT-6-Astra",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "FLASHFORGE",
+          "confidence": 0.99,
+          "evidence": "FLASHFORGE printed on the white label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": "FLASHFORGE",
+          "confidence": 0.98,
+          "evidence": "FLASHFORGE visibly printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "product": {
+          "value": "FLASHFORGE PLA Filament... ctly Hide The Layer Line",
+          "confidence": 0.9,
+          "evidence": "Label reads “FLASHFORGE PLA Filament... ctly Hide The Layer Line”; the product description is truncated on the printed label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "PLA printed in “FLASHFORGE PLA Filament”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "color_hex": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "diameter_mm": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X0037RJ695",
+            "kind": "Amazon-style marketplace identifier",
+            "evidence": "Printed below the barcode on profile_label and independently decoded by ZXing as CODE_128; not a GTIN."
+          }
+        ]
+      },
+      "elapsed_ms": 43773,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "model": "gpt-5.6-sol",
+      "display_name": "GPT-5.6-Sol",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "FLASHFORGE",
+          "confidence": 0.99,
+          "evidence": "“FLASHFORGE” is visibly printed on the white barcode label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.97,
+          "evidence": "No separate manufacturer company name is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "FLASHFORGE PLA Filament ... city Hide The Layer Line",
+          "confidence": 0.86,
+          "evidence": "The visible barcode-label description reads “FLASHFORGE PLA Filament ... city Hide The Layer Line”; part of the wording is visibly truncated with an ellipsis.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "“PLA” is visibly printed in the product description.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": "No filament color name or clearly represented filament color is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "color_hex": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": "The multicolored box graphics do not clearly represent a specific filament color.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "diameter_mm": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No filament diameter is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No net weight is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No nozzle-temperature range is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No nozzle-temperature range is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No bed-temperature range is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No bed-temperature range is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No TD or transmission-distance value is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "The decoded CODE_128 value is an Amazon-style identifier candidate, not a proven GTIN.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": "No identifier explicitly designated as a manufacturer SKU is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No lot number is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X0037RJ695",
+            "kind": "Amazon-style identifier candidate",
+            "evidence": "Locally decoded from the visible CODE_128 barcode; the same value is printed beneath the barcode."
+          }
+        ]
+      },
+      "elapsed_ms": 28062,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "model": "gpt-5.6-terra",
+      "display_name": "GPT-5.6-Terra",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "TING",
+          "confidence": 0.98,
+          "evidence": "Large vertical text visibly printed on the package reads “TING.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.94,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "FLASHFORGE PLA Filament - City Hide The Layer Line",
+          "confidence": 0.99,
+          "evidence": "Sticker text visibly reads “FLASHFORGE PLA Filament - City Hide The Layer Line.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "Visible product wording includes “PLA Filament.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": null,
+          "confidence": 0.9,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "color_hex": {
+          "value": null,
+          "confidence": 0.9,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "diameter_mm": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.96,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X0037RJ695",
+            "kind": "Amazon-style identifier candidate (CODE_128)",
+            "evidence": "Visible barcode label and independently supplied local ZXing decode identify X0037RJ695; it is not a proven GTIN."
+          }
+        ]
+      },
+      "elapsed_ms": 13552,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "model": "gpt-5.6-luna",
+      "display_name": "GPT-5.6-Luna",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "FLASHFORGE",
+          "confidence": 0.99,
+          "evidence": "FLASHFORGE is visibly printed on the package.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": "FLASHFORGE",
+          "confidence": 0.9,
+          "evidence": "The FLASHFORGE company\/brand name is visibly printed on the package.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "product": {
+          "value": "PLA Filament. City Hide The Layer Line",
+          "confidence": 0.97,
+          "evidence": "The package visibly reads “PLA Filament. City Hide The Layer Line”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "PLA is visibly printed in the product wording.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "color_hex": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "diameter_mm": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.97,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X0037RJ695",
+            "kind": "Amazon-style identifier candidate",
+            "evidence": "CODE 128 barcode value decoded from the package label; not treated as a GTIN."
+          }
+        ]
+      },
+      "elapsed_ms": 19096,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "model": "gpt-5.5",
+      "display_name": "GPT-5.5",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "FLASHFORGE",
+          "confidence": 0.95,
+          "evidence": "“FLASHFORGE” is visibly printed on the white label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.85,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "FLASHFORGE PLA Filament ... City Hide The Layer Line",
+          "confidence": 0.86,
+          "evidence": "White label text reads “FLASHFORGE PLA Filament ... City Hide The Layer Line”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.95,
+          "evidence": "“PLA” is printed in “FLASHFORGE PLA Filament ...”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "City Hide The Layer Line",
+          "confidence": 0.82,
+          "evidence": "Variant\/color wording printed as “City Hide The Layer Line”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": null,
+          "confidence": 0.75,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "diameter_mm": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.9,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X0037RJ695",
+            "kind": "Amazon-style identifier candidate",
+            "evidence": "CODE_128 barcode decoded locally as “X0037RJ695”; same value is printed under\/near the barcode."
+          }
+        ]
+      },
+      "elapsed_ms": 22186,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "model": "gpt-6-astra",
+      "display_name": "GPT-6-Astra",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "GIZMO DORKS",
+          "confidence": 1,
+          "evidence": "GIZMO DORKS",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": "GIZMO DORKS",
+          "confidence": 0.98,
+          "evidence": "GIZMO DORKS",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "product": {
+          "value": "1.75MM HIPS FILAMENT WHITE",
+          "confidence": 1,
+          "evidence": "1.75MM HIPS FILAMENT \/ WHITE",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "HIPS",
+          "confidence": 1,
+          "evidence": "1.75MM HIPS FILAMENT",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "WHITE",
+          "confidence": 1,
+          "evidence": "WHITE",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "F5EBDD",
+          "confidence": 0.66,
+          "evidence": "White filament visible through the package window under warm lighting.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 1,
+          "evidence": "1.75MM",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 1,
+          "evidence": "1.0KG NET WEIGHT",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "00887503120752",
+          "confidence": 1,
+          "evidence": "UPC-A 887503120752, independently decoded; normalized to GTIN-14.",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "AO9C",
+            "kind": "unclassified printed code",
+            "evidence": "AO9C printed below NET WEIGHT; no SKU or lot designation."
+          }
+        ]
+      },
+      "elapsed_ms": 29341,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "model": "gpt-5.6-sol",
+      "display_name": "GPT-5.6-Sol",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "Gizmo Dorks",
+          "confidence": 0.99,
+          "evidence": "“GIZMO DORKS” printed prominently at the top of the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": "Gizmo Dorks",
+          "confidence": 0.9,
+          "evidence": "“GIZMO DORKS” company\/brand name is visibly printed on the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "product": {
+          "value": "1.75MM HIPS FILAMENT WHITE",
+          "confidence": 0.99,
+          "evidence": "Label reads “1.75MM HIPS FILAMENT” followed by “WHITE.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "HIPS",
+          "confidence": 0.99,
+          "evidence": "“HIPS” is printed in “1.75MM HIPS FILAMENT.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "White",
+          "confidence": 0.99,
+          "evidence": "“WHITE” is printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "E8E1D2",
+          "confidence": 0.62,
+          "evidence": "The filament visible through the package window appears warm white under the photograph's lighting.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "“1.75MM” is printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 0.99,
+          "evidence": "“1.0KG NET WEIGHT” is printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "00887503120752",
+          "confidence": 1,
+          "evidence": "Local ZXing decoded the visible UPC-A barcode as 887503120752, normalized to GTIN-14 00887503120752.",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.91,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.91,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "A09C",
+            "kind": "unclassified printed code",
+            "evidence": "“A09C” is printed below the net-weight line; its code type is not identified on the visible label."
+          }
+        ]
+      },
+      "elapsed_ms": 38224,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "model": "gpt-5.6-terra",
+      "display_name": "GPT-5.6-Terra",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "GIZMO DORKS",
+          "confidence": 0.99,
+          "evidence": "Printed at the top of the package label: “GIZMO DORKS.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.92,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "1.75MM HIPS FILAMENT",
+          "confidence": 0.99,
+          "evidence": "Printed on the label: “1.75MM HIPS FILAMENT.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "HIPS",
+          "confidence": 0.99,
+          "evidence": "The visible product wording includes “HIPS FILAMENT.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "WHITE",
+          "confidence": 0.99,
+          "evidence": "Printed on the label: “WHITE.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "F5F2E8",
+          "confidence": 0.72,
+          "evidence": "Estimated from the white filament visible through the package window.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "Printed on the label: “1.75MM HIPS FILAMENT.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 0.99,
+          "evidence": "Printed on the label: “1.0KG NET WEIGHT.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "00887503120752",
+          "confidence": 0.99,
+          "evidence": "Local ZXing decoded the visible UPC-A barcode value “887503120752” and supplied GTIN-14 “00887503120752.”",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": "A09C",
+          "confidence": 0.98,
+          "evidence": "Printed on the label below net weight: “A09C.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.94,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": []
+      },
+      "elapsed_ms": 14330,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "model": "gpt-5.6-luna",
+      "display_name": "GPT-5.6-Luna",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "GIZMO DORKS",
+          "confidence": 0.99,
+          "evidence": "GIZMO DORKS printed at the top of the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "1.75MM HIPS FILAMENT WHITE",
+          "confidence": 0.99,
+          "evidence": "The package label visibly reads “1.75MM HIPS FILAMENT” and “WHITE.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "HIPS",
+          "confidence": 0.99,
+          "evidence": "HIPS is printed on the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "White",
+          "confidence": 0.99,
+          "evidence": "WHITE is printed on the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "FFFFFF",
+          "confidence": 0.78,
+          "evidence": "The filament visible through the package window appears white.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "1.75MM is printed on the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 0.99,
+          "evidence": "1.0KG NET WEIGHT is printed on the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "00887503120752",
+          "confidence": 0.99,
+          "evidence": "UPC-A barcode decoded as 887503120752, corresponding to GTIN-12 887503120752 \/ GTIN-14 00887503120752.",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.92,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "A09C",
+            "kind": "unidentified printed code",
+            "evidence": "A09C is printed below the net weight on the package label."
+          }
+        ]
+      },
+      "elapsed_ms": 16630,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "model": "gpt-5.5",
+      "display_name": "GPT-5.5",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "GIZMO DORKS",
+          "confidence": 0.99,
+          "evidence": "Printed at top of label: \"GIZMO DORKS\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.8,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "1.75MM HIPS FILAMENT WHITE",
+          "confidence": 0.99,
+          "evidence": "Printed product wording: \"1.75MM HIPS FILAMENT WHITE\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "HIPS",
+          "confidence": 0.99,
+          "evidence": "Printed: \"HIPS FILAMENT\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "WHITE",
+          "confidence": 0.99,
+          "evidence": "Printed: \"WHITE\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "F1E7D2",
+          "confidence": 0.55,
+          "evidence": "Filament visible through package window appears off-white\/cream under warm lighting.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "Printed: \"1.75MM\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 0.99,
+          "evidence": "Printed: \"1.0KG NET WEIGHT\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "00887503120752",
+          "confidence": 0.99,
+          "evidence": "Local ZXing decoded UPC-A 887503120752 as GTIN 00887503120752; barcode digits are visible on label.",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.75,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.75,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "AO9C",
+            "kind": "unlabeled printed code",
+            "evidence": "Printed below net weight: \"AO9C\""
+          }
+        ]
+      },
+      "elapsed_ms": 21019,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 1
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "model": "gpt-6-astra",
+      "display_name": "GPT-6-Astra",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "KINGROON 3D",
+          "confidence": 0.99,
+          "evidence": "KINGROON 3D printed beneath the QR code.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": "KINGROON 3D",
+          "confidence": 0.95,
+          "evidence": "KINGROON 3D logo visibly printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "product": {
+          "value": "PETG Basic",
+          "confidence": 0.99,
+          "evidence": "材质:PETG Basic 1.75mm",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PETG",
+          "confidence": 0.99,
+          "evidence": "材质:PETG Basic 1.75mm",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Gray",
+          "confidence": 0.99,
+          "evidence": "Colour:Gray; 颜色:灰色",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "80786B",
+          "confidence": 0.48,
+          "evidence": "Gray filament visible through the right-side window, under warm lighting and reflective wrapping.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "1.75mm",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": 230,
+          "confidence": 0.99,
+          "evidence": "Printing Temp:230-250℃",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_max_c": {
+          "value": 250,
+          "confidence": 0.99,
+          "evidence": "Printing Temp:230-250℃",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_min_c": {
+          "value": 70,
+          "confidence": 0.99,
+          "evidence": "Hotbed Temp:70-90℃",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_max_c": {
+          "value": 90,
+          "confidence": 0.99,
+          "evidence": "Hotbed Temp:70-90℃",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "00176100006713",
+          "confidence": 0.78,
+          "evidence": "Supplied ZXing UPC_E decode: 17667113, expanded to 00176100006713 with a valid GTIN check digit. A corresponding linear barcode is not visually apparent.",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": "HC098",
+          "confidence": 0.85,
+          "evidence": "HC098 printed at the upper right; not explicitly captioned as SKU.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": "0403-4",
+          "confidence": 0.99,
+          "evidence": "批次:0403-4",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "other_codes": [
+          {
+            "value": "https:\/\/qr12.cn\/CRDd80",
+            "kind": "QR payload",
+            "evidence": "Supplied ZXing QR_CODE decode for profile_label."
+          }
+        ]
+      },
+      "elapsed_ms": 50100,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 2
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "model": "gpt-5.6-sol",
+      "display_name": "GPT-5.6-Sol",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "KINGROON 3D",
+          "confidence": 0.99,
+          "evidence": "“KINGROON 3D” is visibly printed at the bottom of the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": "KINGROON 3D",
+          "confidence": 0.94,
+          "evidence": "The KINGROON 3D name\/logo is visibly printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "product": {
+          "value": "PETG Basic 1.75mm",
+          "confidence": 0.99,
+          "evidence": "The label reads “材质: PETG Basic 1.75mm”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PETG",
+          "confidence": 0.99,
+          "evidence": "The material line visibly reads “PETG Basic 1.75mm”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Gray",
+          "confidence": 0.99,
+          "evidence": "The label visibly reads “Colour: Gray”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "77736D",
+          "confidence": 0.55,
+          "evidence": "Estimated from the visibly represented gray filament\/color under the photographed lighting.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "The label visibly reads “PETG Basic 1.75mm”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": 230,
+          "confidence": 0.99,
+          "evidence": "The label visibly reads “Printing Temp: 230-250°C”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_max_c": {
+          "value": 250,
+          "confidence": 0.99,
+          "evidence": "The label visibly reads “Printing Temp: 230-250°C”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_min_c": {
+          "value": 70,
+          "confidence": 0.99,
+          "evidence": "The label visibly reads “Hotbed Temp: 70-90°C”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_max_c": {
+          "value": 90,
+          "confidence": 0.99,
+          "evidence": "The label visibly reads “Hotbed Temp: 70-90°C”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "00176100006713",
+          "confidence": 0.99,
+          "evidence": "Local ZXing decoded UPC-E value 17667113 and supplied the valid normalized GTIN 00176100006713.",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": "HC098",
+          "confidence": 0.98,
+          "evidence": "“HC098” is visibly printed at the upper right of the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": "0403-4",
+          "confidence": 0.99,
+          "evidence": "The label visibly reads “批次: 0403-4”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "other_codes": [
+          {
+            "value": "https:\/\/qr12.cn\/CRDd80",
+            "kind": "QR payload",
+            "evidence": "Local ZXing independently decoded the visible QR code."
+          }
+        ]
+      },
+      "elapsed_ms": 36895,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 2
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "model": "gpt-5.6-terra",
+      "display_name": "GPT-5.6-Terra",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "KINGROON 3D",
+          "confidence": 0.99,
+          "evidence": "\"KINGROON 3D\" is printed below the QR code.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.75,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "PETG Basic 1.75mm",
+          "confidence": 0.99,
+          "evidence": "Label states: \"PETG Basic 1.75mm\".",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PETG",
+          "confidence": 0.99,
+          "evidence": "Label states: \"PETG Basic 1.75mm\".",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Gray",
+          "confidence": 0.99,
+          "evidence": "Label states: \"Colour:Gray\".",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "7A746D",
+          "confidence": 0.55,
+          "evidence": "Estimated from the visibly gray filament through the package window.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "Label states: \"PETG Basic 1.75mm\".",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": 230,
+          "confidence": 0.99,
+          "evidence": "Label states: \"Printing Temp:230-250℃\".",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_max_c": {
+          "value": 250,
+          "confidence": 0.99,
+          "evidence": "Label states: \"Printing Temp:230-250℃\".",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_min_c": {
+          "value": 70,
+          "confidence": 0.99,
+          "evidence": "Label states: \"Hotbed Temp:70-90℃\".",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_max_c": {
+          "value": 90,
+          "confidence": 0.99,
+          "evidence": "Label states: \"Hotbed Temp:70-90℃\".",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "00176100006713",
+          "confidence": 0.99,
+          "evidence": "Locally decoded UPC-E symbol: \"17667113\", expanded GTIN: \"00176100006713\".",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": "HC098",
+          "confidence": 0.99,
+          "evidence": "\"HC098\" is visibly printed at the top-right of the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": "0403-4",
+          "confidence": 0.99,
+          "evidence": "Label states: \"批次:0403-4\" (batch).",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "other_codes": [
+          {
+            "value": "https:\/\/qr12.cn\/CRDd80",
+            "kind": "QR payload",
+            "evidence": "Locally decoded QR_CODE payload."
+          }
+        ]
+      },
+      "elapsed_ms": 15413,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 2
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "model": "gpt-5.6-luna",
+      "display_name": "GPT-5.6-Luna",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "KINGROON 3D",
+          "confidence": 0.98,
+          "evidence": "KINGROON 3D is visibly printed below the package label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": "KINGROON 3D",
+          "confidence": 0.95,
+          "evidence": "The company name\/logo “KINGROON 3D” is visibly printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "product": {
+          "value": "PETG Basic 1.75mm",
+          "confidence": 0.99,
+          "evidence": "The label visibly states “材质: PETG Basic 1.75mm”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PETG",
+          "confidence": 0.99,
+          "evidence": "The printed product specification states “PETG Basic 1.75mm”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Gray",
+          "confidence": 0.99,
+          "evidence": "The label visibly states “Colour: Gray”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "808080",
+          "confidence": 0.55,
+          "evidence": "Estimated from the visibly represented gray filament color; no hexadecimal color is printed.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "The printed product specification includes “1.75mm”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": 230,
+          "confidence": 0.99,
+          "evidence": "The label visibly states “Printing Temp: 230-250°C”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_max_c": {
+          "value": 250,
+          "confidence": 0.99,
+          "evidence": "The label visibly states “Printing Temp: 230-250°C”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_min_c": {
+          "value": 70,
+          "confidence": 0.99,
+          "evidence": "The label visibly states “Hotbed Temp: 70-90°C”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_max_c": {
+          "value": 90,
+          "confidence": 0.99,
+          "evidence": "The label visibly states “Hotbed Temp: 70-90°C”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "00176100006713",
+          "confidence": 0.98,
+          "evidence": "Locally decoded as UPC-E 17667113, expanded to GTIN-12 00176100006713.",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "lot": {
+          "value": "0403-4",
+          "confidence": 0.99,
+          "evidence": "The label visibly states “批次: 0403-4”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "other_codes": [
+          {
+            "value": "https:\/\/qr12.cn\/CRDd80",
+            "kind": "QR payload",
+            "evidence": "Locally decoded QR payload associated with the package label."
+          }
+        ]
+      },
+      "elapsed_ms": 22342,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 2
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "model": "gpt-5.5",
+      "display_name": "GPT-5.5",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "KINGROON 3D",
+          "confidence": 0.9,
+          "evidence": "KINGROON 3D printed at bottom of the label",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.75,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "PETG Basic 1.75mm",
+          "confidence": 0.95,
+          "evidence": "材质: PETG Basic 1.75mm",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PETG Basic",
+          "confidence": 0.95,
+          "evidence": "材质: PETG Basic 1.75mm",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Gray",
+          "confidence": 0.98,
+          "evidence": "Colour: Gray \/ 颜色: 灰色",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "808080",
+          "confidence": 0.65,
+          "evidence": "Visible\/printed filament color is gray",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.98,
+          "evidence": "材质: PETG Basic 1.75mm",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_min_c": {
+          "value": 230,
+          "confidence": 0.98,
+          "evidence": "Printing Temp: 230-250℃",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_max_c": {
+          "value": 250,
+          "confidence": 0.98,
+          "evidence": "Printing Temp: 230-250℃",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_min_c": {
+          "value": 70,
+          "confidence": 0.98,
+          "evidence": "Hotbed Temp: 70-90℃",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "bed_max_c": {
+          "value": 90,
+          "confidence": 0.98,
+          "evidence": "Hotbed Temp: 70-90℃",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "00176100006713",
+          "confidence": 0.95,
+          "evidence": "Decoded UPC_E value 17667113, GTIN 00176100006713",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": "HC098",
+          "confidence": 0.9,
+          "evidence": "HC098 printed at top right of label",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": "0403-4",
+          "confidence": 0.95,
+          "evidence": "批次: 0403-4",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "other_codes": [
+          {
+            "value": "https:\/\/qr12.cn\/CRDd80",
+            "kind": "QR payload",
+            "evidence": "Decoded QR_CODE payload from visible QR symbol"
+          }
+        ]
+      },
+      "elapsed_ms": 25353,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 2
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "model": "gpt-6-astra",
+      "display_name": "GPT-6-Astra",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "Panchroma",
+          "confidence": 1,
+          "evidence": "Panchroma™ PLA",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "Panchroma PLA Gradient Starlight Purple-Red",
+          "confidence": 0.97,
+          "evidence": "Label reads “Panchroma™ PLA Gradient Starl... (1.75mm, 1kg)”; large package text reads “STARLIGHT PURPLE-RED”.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 1,
+          "evidence": "Panchroma™ PLA",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Starlight Purple-Red",
+          "confidence": 1,
+          "evidence": "STARLIGHT PURPLE-RED",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "873F43",
+          "confidence": 0.65,
+          "evidence": "The package color illustration appears muted burgundy\/purple-red; estimate affected by warm lighting.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 1,
+          "evidence": "(1.75mm, 1kg)",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 1,
+          "evidence": "(1.75mm, 1kg)",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 1,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "6938936717461",
+          "confidence": 1,
+          "evidence": "Printed “EAN: 6938936717461”; independently decoded QR payload matches and has a valid GTIN-13 check digit.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": "CA09019",
+          "confidence": 1,
+          "evidence": "SKU: CA09019",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X004QSH4ZH",
+            "kind": "Marketplace identifier",
+            "evidence": "Printed beneath linear barcode; independently decoded CODE_128 payload X004QSH4ZH."
+          },
+          {
+            "value": "6938936717461",
+            "kind": "QR payload",
+            "evidence": "Independently decoded QR_CODE payload; matches the printed EAN."
+          }
+        ]
+      },
+      "elapsed_ms": 44486,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 2
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "model": "gpt-5.6-sol",
+      "display_name": "GPT-5.6-Sol",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "Panchroma™",
+          "confidence": 0.99,
+          "evidence": "“Panchroma™ PLA” is visibly printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No company name or manufacturer logo is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "Panchroma™ PLA Gradient Starlight Purple-Red",
+          "confidence": 0.96,
+          "evidence": "The sticker shows “Panchroma™ PLA Gradient Starl...” and the package prominently prints “STARLIGHT PURPLE-RED.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "“Panchroma™ PLA” is printed on the sticker.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Starlight Purple-Red",
+          "confidence": 0.99,
+          "evidence": "“STARLIGHT PURPLE-RED” is prominently printed on the package.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "8A3E49",
+          "confidence": 0.72,
+          "evidence": "Estimated from the visible muted burgundy\/purple-red color representation on the package.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "“(1.75mm, 1kg)” is printed in the product description.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 0.99,
+          "evidence": "“(1.75mm, 1kg)” is printed in the product description.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No nozzle temperature is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No nozzle temperature is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No bed temperature is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No bed temperature is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No TD or transmission-distance value is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "06938936717461",
+          "confidence": 1,
+          "evidence": "The package prints “EAN: 6938936717461”; the independently decoded QR payload is also 6938936717461, corresponding to GTIN-14 06938936717461.",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": "CA09019",
+          "confidence": 0.99,
+          "evidence": "“SKU: CA09019” is visibly printed.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": "No lot number is visible.",
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X004QSH4ZH",
+            "kind": "Amazon-style identifier candidate (CODE_128)",
+            "evidence": "Printed beneath the linear barcode and independently decoded as CODE_128."
+          },
+          {
+            "value": "6938936717461",
+            "kind": "QR payload (GTIN-13)",
+            "evidence": "Independently decoded from the visible QR code; the same digits are printed as the EAN."
+          }
+        ]
+      },
+      "elapsed_ms": 33734,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 2
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "model": "gpt-5.6-terra",
+      "display_name": "GPT-5.6-Terra",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "Panchroma™ PLA",
+          "confidence": 0.99,
+          "evidence": "Printed label reads “Panchroma™ PLA.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "Panchroma™ PLA Gradient Starlight Purple-Red",
+          "confidence": 0.94,
+          "evidence": "Package visibly states “STARLIGHT PURPLE-RED”; lower label states “Panchroma™ PLA Gradient Starl...”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "Printed “Panchroma™ PLA.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Starlight Purple-Red",
+          "confidence": 0.99,
+          "evidence": "Large package text reads “STARLIGHT PURPLE-RED.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "70303A",
+          "confidence": 0.55,
+          "evidence": "Estimated from the visibly represented dark purple-red package\/filament color.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "Lower label states “(1.75mm, 1kg).”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 0.99,
+          "evidence": "Lower label states “(1.75mm, 1kg).”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "06938936717461",
+          "confidence": 0.99,
+          "evidence": "Printed EAN is “6938936717461”; supplied QR decode identifies GTIN “06938936717461.”",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": "CA09019",
+          "confidence": 0.99,
+          "evidence": "Printed label reads “SKU: CA09019.”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X004QSH4ZH",
+            "kind": "Amazon-style identifier candidate",
+            "evidence": "Visible below the linear barcode; independently decoded as CODE_128."
+          },
+          {
+            "value": "6938936717461",
+            "kind": "QR payload \/ printed EAN",
+            "evidence": "Visible beside QR code and independently decoded from QR; normalized GTIN is reported separately."
+          }
+        ]
+      },
+      "elapsed_ms": 14446,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 2
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "model": "gpt-5.6-luna",
+      "display_name": "GPT-5.6-Luna",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "Panchroma",
+          "confidence": 0.99,
+          "evidence": "“Panchroma™ PLA” is visibly printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.97,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "Panchroma™ PLA Gradient Starlight Purple-Red",
+          "confidence": 0.95,
+          "evidence": "The label visibly shows “STARLIGHT PURPLE-RED” and “Panchroma™ PLA Gradient Starl...”",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.99,
+          "evidence": "“PLA” is visibly printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Starlight Purple-Red",
+          "confidence": 0.99,
+          "evidence": "“STARLIGHT PURPLE-RED” is visibly printed on the package.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "702238",
+          "confidence": 0.62,
+          "evidence": "Estimated from the visibly represented dark purple-red filament color on the package.",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.99,
+          "evidence": "“(1.75mm, 1kg)” is visibly printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 0.99,
+          "evidence": "“(1.75mm, 1kg)” is visibly printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "6938936717461",
+          "confidence": 0.99,
+          "evidence": "The label visibly prints “EAN: 6938936717461”; the independently decoded QR payload corresponds to GTIN-14 06938936717461.",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": "CA09019",
+          "confidence": 0.99,
+          "evidence": "“SKU: CA09019” is visibly printed on the label.",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.98,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X004QSH4ZH",
+            "kind": "Amazon-style identifier candidate",
+            "evidence": "Independently decoded from the package barcode as a CODE_128 symbol."
+          }
+        ]
+      },
+      "elapsed_ms": 27193,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 2
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "model": "gpt-5.5",
+      "display_name": "GPT-5.5",
+      "status": "completed",
+      "extracted": {
+        "label_brand": {
+          "value": "Panchroma™ PLA",
+          "confidence": 0.98,
+          "evidence": "Printed on label: \"Panchroma™ PLA\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "manufacturer": {
+          "value": null,
+          "confidence": 0.9,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "product": {
+          "value": "Panchroma™ PLA Gradient Starl... (1.75mm, 1kg)",
+          "confidence": 0.9,
+          "evidence": "Printed product line visible: \"Panchroma™ PLA Gradient Starl... (1.75mm, 1kg)\"; package also shows \"STARLIGHT PURPLE-RED\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "material": {
+          "value": "PLA",
+          "confidence": 0.98,
+          "evidence": "Printed: \"Panchroma™ PLA\" and product line \"Panchroma™ PLA Gradient...\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color": {
+          "value": "Starlight Purple-Red",
+          "confidence": 0.98,
+          "evidence": "Printed on package: \"STARLIGHT PURPLE-RED\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "color_hex": {
+          "value": "8A3036",
+          "confidence": 0.55,
+          "evidence": "Estimated from visible printed color swatch\/box art showing purple-red tone",
+          "basis": "visual_estimate",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "diameter_mm": {
+          "value": 1.75,
+          "confidence": 0.98,
+          "evidence": "Printed product line includes \"(1.75mm, 1kg)\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "net_weight_g": {
+          "value": 1000,
+          "confidence": 0.98,
+          "evidence": "Printed product line includes \"(1.75mm, 1kg)\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "nozzle_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "nozzle_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_min_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "bed_max_c": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "transmission_distance": {
+          "value": null,
+          "confidence": 0.99,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "gtin": {
+          "value": "06938936717461",
+          "confidence": 0.99,
+          "evidence": "Printed EAN: 6938936717461; QR decoded as 6938936717461 and supplied GTIN form 06938936717461",
+          "basis": "barcode",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "sku": {
+          "value": "CA09019",
+          "confidence": 0.98,
+          "evidence": "Printed: \"SKU: CA09019\"",
+          "basis": "printed",
+          "photo_roles": [
+            "profile_label"
+          ]
+        },
+        "lot": {
+          "value": null,
+          "confidence": 0.95,
+          "evidence": null,
+          "basis": "absent",
+          "photo_roles": []
+        },
+        "other_codes": [
+          {
+            "value": "X004QSH4ZH",
+            "kind": "Amazon-style identifier candidate \/ CODE_128 barcode",
+            "evidence": "Decoded CODE_128 and printed below barcode: \"X004QSH4ZH\""
+          }
+        ]
+      },
+      "elapsed_ms": 15687,
+      "requests": 1,
+      "structured_output": true,
+      "local_codes": 2
+    }
+  ]
+}

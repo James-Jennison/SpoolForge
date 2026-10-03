@@ -1,0 +1,22 @@
+uuid: a65ea238-d02f-5118-9a44-a77458d98367
+slug: formfutura-reform-rpet-yellow
+brand:
+  slug: formfutura
+name: ReForm – rPET Yellow
+class: FFF
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f3c102ff'
+tags:
+  - recycled
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-reform-rpet-yellow/39fe945c5444.png
+    type: unspecified
+properties:
+  density: 1.23
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+  drying_temperature: 60
+  drying_time: 720

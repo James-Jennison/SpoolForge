@@ -1,0 +1,11 @@
+{
+  "uuid": "206c99db-189a-4054-a112-92e999fe8694",
+  "id": "cf_peek",
+  "name": "PEEK CF",
+  "diameter_tolerance": 0.02,
+  "density": 1.3,
+  "min_print_temperature": 360,
+  "max_print_temperature": 420,
+  "min_bed_temperature": 120,
+  "max_bed_temperature": 160
+}

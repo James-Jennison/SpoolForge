@@ -1,0 +1,11 @@
+uuid: ba680d95-aacc-5ae7-9853-e2c72935b09f
+slug: tinmorry-rapid-petg-eco-ivory-white
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Ivory White
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#efefefff'
+properties: {}

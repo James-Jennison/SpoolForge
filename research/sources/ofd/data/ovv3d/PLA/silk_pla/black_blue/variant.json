@@ -1,0 +1,14 @@
+{
+  "uuid": "a25ee01d-cecd-4f7c-bdee-6095cab6465e",
+  "id": "black_blue",
+  "name": "Black Blue",
+  "color_hex": [
+    "#000000",
+    "#0E21AE"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "uuid": "c1404eed-2c4e-477e-a60a-13adb3d55bef",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5903175651662",
+    "article_number": "80201",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1158-Filament-Spectrum-PLA-Tough-1-75mm-NATURAL-1kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "9a3e0944-9d66-43fe-98bf-018f42a3d2d4",
+    "filament_weight": 1000,
+    "diameter": 2.85,
+    "ean": "5903175651709",
+    "article_number": "80202",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1162-Filament-Spectrum-PLA-Tough-2-85mm-NATURAL-1kg.html"
+      }
+    ]
+  }
+]

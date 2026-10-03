@@ -1,0 +1,28 @@
+uuid: bc73dae9-4366-5126-937f-b9f4aa6712c4
+slug: amolen-pla-silk-s-series-black-red-yellow
+brand:
+  slug: amolen
+name: PLA Silk S-Series Black Red Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://www.amolen.com/products/pla-silk-s-series?variant=40767941345303
+secondary_colors:
+- color_rgba: '#2a3940ff'
+- color_rgba: '#b7293eff'
+- color_rgba: '#fffc6aff'
+tags:
+- coextruded
+- silk
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-silk-s-series-black-red-yellow/DSC01264.jpg
+  type: unspecified
+properties:
+  density: 1.29
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

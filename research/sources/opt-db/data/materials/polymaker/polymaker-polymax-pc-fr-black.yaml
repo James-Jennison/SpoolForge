@@ -1,0 +1,25 @@
+uuid: 83822ffe-4ed1-5431-9731-5e8267b46f22
+slug: polymaker-polymax-pc-fr-black
+brand:
+  slug: polymaker
+name: PolyMax™ PC-FR Black
+class: FFF
+type: PC
+abbreviation: PC
+primary_color:
+  color_rgba: '#000000ff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polymax-pc-fr-black/910273b6b12b.png
+    type: unspecified
+properties:
+  density: 1.2
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 90
+  max_bed_temperature: 105
+  min_chamber_temperature: 70
+  max_chamber_temperature: 100
+  drying_temperature: 75
+  drying_time: 360
+tags:
+  - self_extinguishing

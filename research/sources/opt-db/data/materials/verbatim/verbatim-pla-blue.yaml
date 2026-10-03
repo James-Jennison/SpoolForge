@@ -1,0 +1,13 @@
+uuid: 5b833605-6d72-5df8-892e-8d4e742361e2
+slug: verbatim-pla-blue
+brand:
+  slug: verbatim
+name: PLA Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#2c3294ff'
+tags:
+- industrially_compostable
+properties: {}

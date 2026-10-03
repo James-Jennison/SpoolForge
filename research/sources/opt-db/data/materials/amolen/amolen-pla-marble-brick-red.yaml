@@ -1,0 +1,18 @@
+uuid: 37eafd2f-2b60-580d-b306-7843cafcdffe
+slug: amolen-pla-marble-brick-red
+brand:
+  slug: amolen
+name: PLA Marble Brick Red
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://www.amolen.com/products/pla-marble?variant=40609112490007
+primary_color:
+  color_rgba: '#ed2602ff'
+tags:
+- imitates_marble
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-marble-brick-red/ae8cfce88c77.png
+  type: unspecified
+properties: {}

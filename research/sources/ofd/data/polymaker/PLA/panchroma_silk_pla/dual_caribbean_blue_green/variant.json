@@ -1,0 +1,14 @@
+{
+  "uuid": "ffb021ad-024a-4e3a-bd56-c492bcd51577",
+  "id": "dual_caribbean_blue_green",
+  "name": "Dual Caribbean Blue Green",
+  "color_hex": [
+    "#39B9DB",
+    "#02A76B"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

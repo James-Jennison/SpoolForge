@@ -1,0 +1,16 @@
+{
+  "uuid": "7c9375cd-04f0-47dc-82b8-54a57e4d80ee",
+  "id": "candy_series",
+  "name": "Candy Series",
+  "color_hex": [
+    "#DB3FA9",
+    "#FF7A33",
+    "#62E480",
+    "#0099E6"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

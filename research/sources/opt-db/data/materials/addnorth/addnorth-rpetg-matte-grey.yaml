@@ -1,0 +1,24 @@
+uuid: 6947462d-3e6a-5a30-849e-a0d0f0a3e5b2
+slug: addnorth-rpetg-matte-grey
+brand:
+  slug: addnorth
+name: rPETG Matte Grey
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#6a6c6eff'
+tags:
+  - matte
+  - recycled
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-rpetg-matte-grey/6b17c48c1170.jpg
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 225
+  max_print_temperature: 260
+  max_bed_temperature: 80
+  drying_temperature: 65
+  drying_time: 360
+url: https://addnorth.com/product/rPETG%20Matte/rPETG%20Matte%20-%201.75mm%20-%201000g%20-%20Grey

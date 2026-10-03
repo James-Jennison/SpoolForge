@@ -1,0 +1,23 @@
+uuid: 17cd5ae2-4436-5cdf-9f30-6c6eb42f949d
+slug: fiberlogy-fiberflex-30d-beige
+brand:
+  slug: fiberlogy
+name: FiberFlex 30D Beige
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#d4b6a3ff'
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-fiberflex-30d-beige/335bec53eafd.png
+    type: unspecified
+properties:
+  density: 1.07
+  hardness_shore_d: 30.0
+  hardness_shore_a: 81.0
+  min_print_temperature: 200
+  max_print_temperature: 220
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 60
+  drying_time: 240

@@ -1,0 +1,14 @@
+uuid: 64f53fd7-4f03-5cdc-8156-26bff64e22ce
+slug: rosa3d-filaments-asa-10cf-black
+brand:
+  slug: rosa3d-filaments
+name: ASA + 10CF Black
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#292b2bff'
+tags:
+- contains_carbon_fiber
+- abrasive
+properties: {}

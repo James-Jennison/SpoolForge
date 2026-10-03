@@ -1,0 +1,13 @@
+uuid: ffb262db-c6fd-583e-80b7-1ab5410dffd0
+slug: matter3d-inc-petg-hf-ocean-blue
+brand:
+  slug: matter3d-inc
+name: PETg HF Ocean Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0056f9ff'
+tags:
+- high_speed
+properties: {}

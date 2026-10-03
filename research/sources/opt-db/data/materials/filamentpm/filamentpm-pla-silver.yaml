@@ -1,0 +1,22 @@
+uuid: a4e8cd69-4f45-5de4-b2ae-72dc7df56450
+slug: filamentpm-pla-silver
+brand:
+  slug: filamentpm
+name: PLA - Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#8a8d8fff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-pla-silver/87b8a3f1421e.png
+    type: unspecified
+properties:
+  density: 1.24
+  hardness_shore_d: 78.3
+  min_print_temperature: 200
+  max_print_temperature: 220
+  min_bed_temperature: 20
+  max_bed_temperature: 60

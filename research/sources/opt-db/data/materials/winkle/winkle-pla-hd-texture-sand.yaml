@@ -1,0 +1,14 @@
+uuid: ca74af10-523f-570c-9702-142dc6bc0bcd
+slug: winkle-pla-hd-texture-sand
+brand:
+  slug: winkle
+name: PLA HD Texture Sand
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e0dabbff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

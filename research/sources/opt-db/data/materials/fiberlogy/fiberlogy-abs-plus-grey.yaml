@@ -1,0 +1,23 @@
+uuid: 463fbe1b-fcdc-5936-a84d-9618730f35e1
+slug: fiberlogy-abs-plus-grey
+brand:
+  slug: fiberlogy
+name: ABS PLUS Grey
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#c5c5bfff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-abs-plus-grey/fb92c19c2228.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 240

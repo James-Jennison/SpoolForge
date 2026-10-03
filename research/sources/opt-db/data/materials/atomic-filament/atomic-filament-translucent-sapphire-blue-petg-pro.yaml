@@ -1,0 +1,17 @@
+uuid: 0e8d4c10-b402-5e21-9865-09fd853af1fa
+slug: atomic-filament-translucent-sapphire-blue-petg-pro
+brand:
+  slug: atomic-filament
+name: Translucent Sapphire Blue PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/translucent-sapphire-blue-petg-pro
+primary_color:
+  color_rgba: '#0022ffff'
+tags:
+- translucent
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-translucent-sapphire-blue-petg-pro/a984e8be94f0.png
+  type: unspecified
+properties: {}

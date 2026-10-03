@@ -1,0 +1,83 @@
+{
+  "phase": "REMEDIATION_REVIEW",
+  "objective": "Review the exact remediated M7 source and evidence, confirm or challenge the four initial DeepSeek finding dispositions, and report any remaining material defect.",
+  "owner_requirements": [
+    "Add canonical richer transmission-distance and optical characterization with explicit provenance, uncertainty, method, geometry, thickness, environmental, instrument, confidence, and supersession fields",
+    "Add extensible appearance and Full Spectrum role assertions with canonical C, M, Y, G mixing roles and White and Black anchors",
+    "Keep recommended suitability distinct from observed suitability and preserve UNKNOWN and UNTESTED without automatic numeric TD thresholds",
+    "Use an additive Room user database v5-to-v6 migration, retain compatibility tables, copy valid legacy TD once, and quarantine malformed legacy TD without promoting it to numeric evidence",
+    "Expose Full Spectrum only through progressive disclosure on saved local profiles",
+    "Preserve existing Standard OpenSpool and PAXX payload bytes and portable identity v1",
+    "Do not implement sets, recipes, automatic best-set scoring, private NFC fields, or slicer project generation"
+  ],
+  "change_summary": [
+    "Added typed M7 core domain vocabulary and validation for TD origins, optical characterization, appearances, roles, authorities, assertion states, suitability kinds, ratings, and scopes",
+    "Added six Room v6 evidence and Full Spectrum tables with profile/evidence foreign keys, query indices, assessment scope check, DAO reads and writes, and an exported v6 schema",
+    "Added additive v5-to-v6 migration that retains legacy tables, conservatively maps legacy origins, copies valid 0.1-to-100 decimal TD values, and retains malformed values only as quarantined non-TD optical evidence",
+    "Made optical_characterizations authoritative for post-v6 TD writes while leaving transmission_distance_measurements read-only for rollback and export compatibility",
+    "Added repository APIs for aggregate profile reads, user-confirmed role assertions, and observed suitability",
+    "Added collapsed Full Spectrum profile UI with explicit local-only boundary, unknown and untested states, conflict-visible TD evidence, roles, and separate recommended and observed suitability",
+    "Kept codec and portable identity source unchanged from baseline 0dac497b4",
+    "TD replacement and clearing now supersede every prior active TD characterization transactionally; a clear writes a null tombstone so the effective UI state is Unknown without erasing history",
+    "Persistence uses layer_height_mm consistently with the approved layerHeightMm domain contract",
+    "Added exact-device M7 instrumentation covering v5-to-v6 migration, role and suitability persistence, UI summary, foreign keys, and byte-for-byte OpenSpool, PAXX, portable identity v1, and Spoolman isolation",
+    "Added a migration conflict fixture proving valid conflicting TD evidence remains visible with no silent winner, as required by the approved product model",
+    "Fixed narrow-screen detail rows so long labels stack cleanly above their values; verified on the 2023 Razr"
+  ],
+  "objective_evidence": {
+    "ledger_evidence": "evidence-cycle-b1ee43b9c10f: every HIGH check PASS with artifact integrity true, including protected build/tests/lint/packages, Room schema, exact device, compatibility, and diff format",
+    "host_tests": "66 core and 72 app tests pass with zero failures; lintDebug, debug/release APK assembly, and Android-test APK assembly pass",
+    "exact_device": "DeviceFullSpectrumAcceptanceTest PASS on motorola razr 2023 Android 16; work/m7/device-acceptance.json is bound to installed APK SHA-256 28ae6f09a2eca743ca91c69bd8fa5288c1bab7b48298afc01965edf482097fd7",
+    "visual": "work/m7/device-full-spectrum-ui.png shows the live progressive-disclosure profile and corrected long-label layout on the 2023 Razr"
+  },
+  "review_files": [
+    "docs/FULL_SPECTRUM_PRODUCT_DIRECTION.md",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/FullSpectrum.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/data/FullSpectrumPersistence.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/data/Databases.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/FullSpectrumUi.kt",
+    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/FullSpectrumTest.kt",
+    "app/src/test/kotlin/net/jamesjennison/filamajignfc/FullSpectrumUiTest.kt",
+    "app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt",
+    "app/schemas/net.jamesjennison.filamajignfc.data.UserDatabase/6.json",
+    "work/m7/evidence-profile.json",
+    "app/src/androidTest/kotlin/net/jamesjennison/filamajignfc/DeviceFullSpectrumAcceptanceTest.kt",
+    "work/m7/device-acceptance.json",
+    "work/m7/device-full-spectrum-ui.png"
+  ],
+  "known_limits": [
+    "No automatic suitability policy exists, so recommended suitability remains UNKNOWN until a future reviewed policy supplies evidence. Sets, recipes, best-set scoring, private NFC fields, and slicer generation remain outside M7."
+  ],
+  "review_questions": [
+    "Do the remediations and dispositions close every initial finding without contradicting the approved conflict-preserving evidence model?",
+    "Does the current SHA-bound exact-device and ledger evidence support M7 closure?",
+    "Does the narrow-screen presentation preserve readable labels and honest unknown, untested, conflict, recommended, and observed states?",
+    "Report any remaining material defect in the exact current M7 foundation."
+  ],
+  "sanitization": "No credentials, environment values, private database contents, NFC UIDs, device serials, network addresses, account data, or reviewer output are included.",
+  "initial_finding_dispositions": [
+    {
+      "finding": "legacy TD winner",
+      "disposition": "REJECTED",
+      "reason": "Owner-approved model preserves conflicting valid evidence and exposes conflict; new migration test proves no silent winner."
+    },
+    {
+      "finding": "exact 2023 device pending",
+      "disposition": "CONFIRMED_RESOLVED",
+      "reason": "Current SHA-bound exact-device test passes."
+    },
+    {
+      "finding": "serialization boundary unproven",
+      "disposition": "CONFIRMED_RESOLVED",
+      "reason": "Exact-device before/after byte comparisons cover standard OpenSpool, PAXX, portable identity v1, and Spoolman."
+    },
+    {
+      "finding": "migration matrix not enumerated",
+      "disposition": "CONFIRMED_RESOLVED",
+      "reason": "Host matrix plus exact-device v5 fixture cover the cited paths."
+    }
+  ]
+}

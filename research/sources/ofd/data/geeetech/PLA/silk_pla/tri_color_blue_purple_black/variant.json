@@ -1,0 +1,15 @@
+{
+  "uuid": "0407b307-eea7-4e71-9487-16f170de668a",
+  "id": "tri_color_blue_purple_black",
+  "name": "Tri Color Blue Purple Black",
+  "color_hex": [
+    "#000000",
+    "#8846AE",
+    "#0353BA"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

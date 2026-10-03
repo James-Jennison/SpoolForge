@@ -1,0 +1,14 @@
+uuid: 7508a683-5d5a-5158-8cfb-42df4828fa32
+slug: tinmorry-matte-pla-light-green
+brand:
+  slug: tinmorry
+name: Matte PLA Light Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#d0ff61ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

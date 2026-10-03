@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-ui-deepseek-2",
+  "disposition": "CONFIRMED",
+  "reason": "All optional provenance objects, arrays, and displayed keys now use safe opt access with Unavailable fallbacks, so older or partial stored evidence does not crash composition.",
+  "evidence_reference": "app/src/main/kotlin/net/jamesjennison/spoolio/MainActivity.kt; work/gtin/camera-zxing-build.log",
+  "resolved": true
+}

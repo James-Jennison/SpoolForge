@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-claude-2",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "claude",
+  "severity": "HIGH",
+  "category": "Catalog metadata editing / per-field provenance",
+  "summary": "There is no way to edit an existing catalog entry's metadata while retaining its identity and per-field provenance; the only editable path (CustomDialog) always creates a brand-new, provenance-flattened record, and the persisted schema has no per-field provenance column at all despite `FieldValue<T>`/`Provenance.CATALOG_EDITED` being modeled in core.",
+  "claim": "There is no way to edit an existing catalog entry's metadata while retaining its identity and per-field provenance; the only editable path (CustomDialog) always creates a brand-new, provenance-flattened record, and the persisted schema has no per-field provenance column at all despite `FieldValue<T>`/`Provenance.CATALOG_EDITED` being modeled in core.",
+  "evidence": {
+    "source": "Detail composable (MainActivity.kt) only displays catalog fields read-only (Info(...) calls); the sole editable UI, CustomDialog, is reached only via the blank 'Custom filament' FAB or via decodedSeed(), and MainViewModel.saveCustom() always assigns `UUID.randomUUID()` as packageId and `Provenance.CUSTOM`. `Provenance.CATALOG_EDITED` (core/Filament.kt) is defined but never referenced anywhere in the app source. CustomRecord (data/Databases.kt) stores plain String/Int fields, not `FieldValue<T>`, so no per-field source is persisted even for the records that do exist.",
+    "response_sha256": "24d3990562d67e978414fe65adda6f7e9777b1af1f8ae914bef77ccc315c4478"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Implement an actual catalog-entry edit flow that writes a `CATALOG_EDITED` record keyed to the original packageId, persisting a source tag per field (or per-record 'edited' status) that survives catalog reinstall/replacement.",
+  "suggested_validation": "Edit one field of a catalog entry, kill the process, force a catalog replacement (digest/count mismatch path in ensureCatalog()), relaunch, and confirm the edited field is retained with 'edited' provenance while untouched fields still show 'OFD <revision>'.",
+  "reviewer_confidence": "HIGH."
+}

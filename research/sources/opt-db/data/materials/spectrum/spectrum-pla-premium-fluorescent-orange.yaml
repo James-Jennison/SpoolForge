@@ -1,0 +1,20 @@
+uuid: 5bf88ac9-8941-5172-9190-fb864e7fd865
+slug: spectrum-pla-premium-fluorescent-orange
+brand:
+  slug: spectrum
+name: PLA Premium Fluorescent Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f47d59ff'
+tags:
+- neon
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-premium-fluorescent-orange/spectrum-pla-premium-fluorescent-orange-0-7b5fabcb.jpg
+  type: unspecified

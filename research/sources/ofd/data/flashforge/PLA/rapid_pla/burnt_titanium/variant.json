@@ -1,0 +1,14 @@
+{
+  "uuid": "c24d743c-455d-401d-85fc-38e688ceeca6",
+  "id": "burnt_titanium",
+  "name": "Burnt Titanium",
+  "color_hex": [
+    "#492972",
+    "#1E2F5A"
+  ],
+  "traits": {
+    "iridescent": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

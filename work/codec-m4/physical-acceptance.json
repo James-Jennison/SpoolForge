@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-08T04:59:53.010706+00:00",
+  "device": {
+    "model": "motorola_razr_2023",
+    "transport": "wireless-adb",
+    "android_version": 16
+  },
+  "tag": {
+    "type": "NTAG215",
+    "uid_recorded": false,
+    "capacity_bytes": 492
+  },
+  "codec": {
+    "id": "openspool-paxx-u1-1.0",
+    "target": "Snapmaker U1 v1.5.2-paxx12-21"
+  },
+  "spool": {
+    "brand": "MARSWORK",
+    "material": "PLA",
+    "color": "Cyan",
+    "nozzle_min_c": 190,
+    "nozzle_max_c": 230
+  },
+  "phone_acceptance": {
+    "fresh_readback": "PASS",
+    "write_result": "Write verified",
+    "binding_result": "Tag 1 is verified and bound to this spool",
+    "single_tag_completion": "Completed with one verified tag"
+  },
+  "printer_acceptance": {
+    "state": "PASS",
+    "firmware": "v1.5.2-paxx12-21",
+    "mode": "OpenRFID",
+    "bay": 1,
+    "recognized_profile": {
+      "brand": "MARSWORK",
+      "material": "PLA",
+      "color": "Cyan",
+      "nozzle_min_c": 190,
+      "nozzle_max_c": 230
+    },
+    "result_source": "Owner-observed U1 display after physical Bay 1 presentation"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "uuid": "8da7d6f5-71ed-4b81-b592-eef98a7ae084",
+  "id": "pbt_black",
+  "name": "PBT Black",
+  "color_hex": "#000000",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

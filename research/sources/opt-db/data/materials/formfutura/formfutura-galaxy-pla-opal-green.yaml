@@ -1,0 +1,23 @@
+uuid: fb35bfa0-00fa-5796-bb9a-418cb70a6006
+slug: formfutura-galaxy-pla-opal-green
+brand:
+  slug: formfutura
+name: Galaxy PLA Opal Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#488d94ff'
+tags:
+  - glitter
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-galaxy-pla-opal-green/aaa143d97279.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 40
+  drying_time: 360

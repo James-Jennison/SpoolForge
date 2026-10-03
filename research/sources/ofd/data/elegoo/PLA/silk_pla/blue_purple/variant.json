@@ -1,0 +1,14 @@
+{
+  "uuid": "80f48d1f-dfca-45ff-b8d4-982f50eb0ee3",
+  "id": "blue_purple",
+  "name": "Blue Purple",
+  "color_hex": [
+    "#0353BA",
+    "#B645A9"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

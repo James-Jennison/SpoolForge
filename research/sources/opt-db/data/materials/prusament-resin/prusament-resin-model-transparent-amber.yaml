@@ -1,0 +1,18 @@
+uuid: 005c878f-61ef-5bc5-8831-ba8339f145d8
+slug: prusament-resin-model-transparent-amber
+brand:
+  slug: prusament-resin
+name: Model Transparent Amber
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#ffc107ff'
+tags:
+- transparent
+properties:
+  density: 1.11
+  cure_wavelength: 405
+  viscosity_18c: 287
+  viscosity_25c: 167
+  viscosity_40c: 66
+  viscosity_60c: 1

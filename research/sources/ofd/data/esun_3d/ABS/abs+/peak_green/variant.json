@@ -1,0 +1,9 @@
+{
+  "uuid": "a0d4a61e-8304-46e4-9ee0-79b352fa0598",
+  "id": "peak_green",
+  "name": "Peak Green",
+  "color_hex": "#00CC00",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

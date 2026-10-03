@@ -1,0 +1,10 @@
+{
+  "uuid": "110cc421-ca2d-4e9f-8a0a-5de94a8af9fe",
+  "id": "satin_orange_fluorescent",
+  "name": "Satin orange-fluorescent",
+  "color_hex": "#F47D59",
+  "traits": {
+    "neon": true,
+    "industrially_compostable": true
+  }
+}

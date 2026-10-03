@@ -1,0 +1,13 @@
+uuid: 1a5b565d-4f4a-520c-b1af-45686b880d5b
+slug: print-with-smile-pet-g-yellow-glass
+brand:
+  slug: print-with-smile
+name: PET-G Yellow Glass
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f2de00ff'
+tags:
+- translucent
+properties: {}

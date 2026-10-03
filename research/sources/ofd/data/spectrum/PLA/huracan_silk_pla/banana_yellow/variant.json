@@ -1,0 +1,10 @@
+{
+  "uuid": "de3fc9e2-e20c-495f-bc7c-0ef3f90f8047",
+  "id": "banana_yellow",
+  "name": "Banana Yellow",
+  "color_hex": "#E8BD00",
+  "traits": {
+    "silk": true,
+    "industrially_compostable": true
+  }
+}

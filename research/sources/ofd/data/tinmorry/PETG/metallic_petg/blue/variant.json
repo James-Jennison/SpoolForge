@@ -1,0 +1,9 @@
+{
+  "uuid": "8ce38bc9-0c87-489a-bfb7-5f0159505045",
+  "id": "blue",
+  "name": "Blue",
+  "color_hex": "#375680",
+  "traits": {
+    "imitates_metal": true
+  }
+}

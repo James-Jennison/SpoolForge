@@ -1,0 +1,12 @@
+uuid: 3dba3cce-cb86-5267-9e40-4bb4d61fbeb0
+slug: recreus-filaflex-95a-medium-flex-red
+brand:
+  slug: recreus
+name: Filaflex 95A 'Medium-Flex' Red
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#e72f1dff'
+properties:
+  hardness_shore_a: 95

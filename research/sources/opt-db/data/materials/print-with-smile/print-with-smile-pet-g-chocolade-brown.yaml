@@ -1,0 +1,11 @@
+uuid: f271cdf5-9c36-5d32-809b-02b6ce4e0b3b
+slug: print-with-smile-pet-g-chocolade-brown
+brand:
+  slug: print-with-smile
+name: PET-G Chocolade BROWN
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#4f3638ff'
+properties: {}

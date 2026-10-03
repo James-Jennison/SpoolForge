@@ -1,0 +1,22 @@
+uuid: d96da62b-cc53-5934-89b1-295daf710b46
+slug: formfutura-reform-rpet-orange
+brand:
+  slug: formfutura
+name: ReForm – rPET Orange
+class: FFF
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ff7a33ff'
+tags:
+  - recycled
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-reform-rpet-orange/efb2de9d7711.png
+    type: unspecified
+properties:
+  density: 1.23
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+  drying_temperature: 60
+  drying_time: 720

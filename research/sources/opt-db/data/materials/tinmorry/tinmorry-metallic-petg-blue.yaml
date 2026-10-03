@@ -1,0 +1,11 @@
+uuid: e6c71d93-e591-5693-93b6-ae7bc9371db0
+slug: tinmorry-metallic-petg-blue
+brand:
+  slug: tinmorry
+name: Metallic PETG Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#375680ff'
+properties: {}

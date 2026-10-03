@@ -1,0 +1,14 @@
+uuid: c7399025-20f8-534f-83f2-28a443cb9aa4
+slug: winkle-pla-pro-ash-gray
+brand:
+  slug: winkle
+name: PLA PRO Ash Gray
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#808080ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.22

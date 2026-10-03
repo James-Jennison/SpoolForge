@@ -1,0 +1,16 @@
+{
+  "model": "motorola razr 2023",
+  "codec_id": "openspool-paxx-u1-1.0",
+  "firmware_target": "v1.5.2-paxx12-21",
+  "payload_bytes": 286,
+  "ndef_message_bytes": 308,
+  "ntag215_capacity": 492,
+  "semantic_round_trip": "PASS",
+  "physical_write_required": true,
+  "app_version": "0.4.0-m4",
+  "instrumentation_tests": 5,
+  "instrumentation_result": "PASS",
+  "instrumentation_seconds": 13.123,
+  "app_apk_sha256": "1aafa0b84df95f5ba71721f32cc1d8c7e297a4257d0a0d40246703d0a2ce98b4",
+  "test_apk_sha256": "f1967f8883e6d02eb257f2e26872d43cb2331bac667b9be3e67d4179b3f22e85"
+}

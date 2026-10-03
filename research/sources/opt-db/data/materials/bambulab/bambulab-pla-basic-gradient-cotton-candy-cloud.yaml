@@ -1,0 +1,26 @@
+uuid: 97e6cb1c-dffb-59c1-b117-41052923e38c
+slug: bambulab-pla-basic-gradient-cotton-candy-cloud
+brand:
+  slug: bambulab
+name: PLA Basic Gradient Cotton Candy Cloud
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+  - color_rgba: '#8ec9e9ff'
+  - color_rgba: '#e7c1d5ff'
+tags:
+  - gradual_color_change
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-basic-gradient-cotton-candy-cloud/9384c8ef4076.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45
+url: https://us.store.bambulab.com/products/pla-basic-gradient?id=43158301180040

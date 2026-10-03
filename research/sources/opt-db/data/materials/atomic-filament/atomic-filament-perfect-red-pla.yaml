@@ -1,0 +1,17 @@
+uuid: 563d7816-3071-5c65-8bec-d685a2f53fdf
+slug: atomic-filament-perfect-red-pla
+brand:
+  slug: atomic-filament
+name: Perfect Red PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://atomicfilament.com/products/1-kg-red-pla-filament
+primary_color:
+  color_rgba: '#e72f1dff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-perfect-red-pla/704c2632bc55.png
+  type: unspecified
+properties: {}

@@ -1,0 +1,12 @@
+uuid: 54ec63c7-f60d-568a-9a04-b01c79fd1f3b
+slug: tinmorry-tpu-95a-red
+brand:
+  slug: tinmorry
+name: TPU 95A Red
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#e03f26ff'
+properties:
+  hardness_shore_a: 95

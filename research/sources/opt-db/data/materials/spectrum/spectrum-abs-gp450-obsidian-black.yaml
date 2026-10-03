@@ -1,0 +1,21 @@
+uuid: b2bdc95e-f677-5113-9b76-3b9a9401e6fd
+slug: spectrum-abs-gp450-obsidian-black
+brand:
+  slug: spectrum
+name: ABS GP450™ Obsidian Black
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- filtration_recommended
+properties:
+  density: 1.04
+  min_print_temperature: 235
+  max_print_temperature: 255
+  min_bed_temperature: 80
+  max_bed_temperature: 100
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-abs-gp450-obsidian-black/spectrum-abs-gp450-obsidian-black-0-bbf47f90.jpg
+  type: unspecified

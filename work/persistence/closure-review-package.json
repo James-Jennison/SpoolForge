@@ -1,0 +1,34 @@
+{
+  "phase": "REMEDIATION_REVIEW",
+  "objective": "Close the real-device migration evidence gap identified during Filamajig NFC M1 canonical persistence review.",
+  "original_cycle": "review-cycle-842874be8603",
+  "device_remediation": [
+    "Verified the connected target identifies as motorola razr 2023 before installation",
+    "Captured a WAL-aware pre-install backup of the existing user database",
+    "Established the source database was v4 with 6 custom records and 4 recents, then installed the exact locally validated APK",
+    "Verified installed APK SHA-256 matches the local artifact",
+    "Read back database v5 after migration: legacy record and recent hashes are byte-for-byte logically identical, all six records have profiles and spools, and foreign_key_check returns zero violations",
+    "Cold restarted the app and verified Filamajig, AI scan entry, Recent, and representative preserved recent rows are visible"
+  ],
+  "finding_dispositions": [
+    {
+      "finding": "No 2023 Razr migration evidence",
+      "classification": "CONFIRMED",
+      "result": "Resolved with real-device v4 to v5 install, database readback, hash comparison, foreign-key check, cold restart, and visible record acceptance."
+    },
+    {
+      "finding": "Perform v5 to v4 rollback on the owner's live device",
+      "classification": "CONFIRMED WITH NARROWER SCOPE",
+      "result": "The rollback path is objectively tested against a generated v5 Room database and preserves the unchanged compatibility tables. Downgrading the owner's live database would add destructive risk without testing a distinct migration implementation; a complete pre-install backup was retained locally instead."
+    }
+  ],
+  "evidence": [
+    "work/persistence/device-acceptance.json",
+    "work/persistence/device-before/summary.json (local excluded evidence)",
+    "work/persistence/device-after/summary.json (local excluded evidence)",
+    "work/persistence/device-after/ui-restart-ready.xml (local excluded evidence)",
+    "Evidence cycle evidence-cycle-64c31b0d7cf6: all four checks PASS"
+  ],
+  "closure_question": "Is any concrete source, migration, or real-device acceptance defect still unmitigated?",
+  "sanitization": "No credentials, raw user records, database contents, device serial, network address, or tag UID are included."
+}

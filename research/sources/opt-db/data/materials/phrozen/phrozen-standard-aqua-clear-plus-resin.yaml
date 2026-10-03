@@ -1,0 +1,12 @@
+uuid: 46e3fe06-9abd-5623-bd49-741550d0313a
+slug: phrozen-standard-aqua-clear-plus-resin
+brand:
+  slug: phrozen
+name: Standard Aqua Clear Plus Resin
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#e4e7e5ff'
+tags:
+- transparent
+properties: {}

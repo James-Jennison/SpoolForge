@@ -1,0 +1,16 @@
+{
+  "finding_id": "spoolio-m1-wording-closure-2",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-eb391ae1703f",
+  "reviewer": "deepseek",
+  "severity": "LOW",
+  "category": "Reconciliation detail accuracy",
+  "summary": "The nonempty mismatch detail 'Fresh NDEF message does not match; no automatic rewrite' is inaccurate when the tag contains more than one record or when the single record does not have the OpenSpool MIME/TNF. In the multi-record case, tag.records.singleOrNull() returns null, so matches=false but tag.records.isNotEmpty(), leading to that detail even though there is no single fresh NDEF message.",
+  "claim": "Users may be told there is a fresh NDEF message when the observed tag content is multiple records or malformed/non-OpenSpool, causing confusion and possible unnecessary retries.",
+  "evidence": {
+    "source": "WriteStateMachine.kt: val record=tag.records.singleOrNull(); val matches=record!=null && record.tnf==2 && record.mime==OpenSpoolCodec.MIME && ...; else detail=if(tag.records.isEmpty()) \"No NDEF message returned...\" else \"Fresh NDEF message does not match; no automatic rewrite\". Given multiple records, singleOrNull() is null and the 'Fresh NDEF message' phrase is still used."
+  },
+  "suggested_remediation": "Use neutral wording for nonempty mismatch that does not assume a single fresh NDEF message, e.g., 'Tag content does not match the frozen write intent; no automatic rewrite', or differentiate between single non-matching record and multiple records.",
+  "suggested_validation": "Create tests where tag.records has two records and where it has one record with tnf=1; assert the detail contains a neutral mismatch phrase and does not contain 'Fresh NDEF message'.",
+  "reviewer_confidence": "HIGH"
+}

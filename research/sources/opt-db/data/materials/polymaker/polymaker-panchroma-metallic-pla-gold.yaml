@@ -1,0 +1,23 @@
+uuid: bcfd1e55-9411-57bc-9702-67db19a2d312
+slug: polymaker-panchroma-metallic-pla-gold
+brand:
+  slug: polymaker
+name: Panchroma™ Metallic PLA Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#da9f1dff'
+tags:
+  - glitter
+  - imitates_metal
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-metallic-pla-gold/1401142f0ce0.png
+    type: unspecified
+properties:
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

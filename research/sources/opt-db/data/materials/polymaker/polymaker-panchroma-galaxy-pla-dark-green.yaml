@@ -1,0 +1,23 @@
+uuid: 14341cee-71bb-5cd9-8346-aba839fc6b24
+slug: polymaker-panchroma-galaxy-pla-dark-green
+brand:
+  slug: polymaker
+name: Panchroma™ Galaxy PLA Dark Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#13484dff'
+tags:
+  - glitter
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-galaxy-pla-dark-green/8ad23cba186f.png
+    type: unspecified
+properties:
+  density: 1.17
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

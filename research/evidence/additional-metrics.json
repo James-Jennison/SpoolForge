@@ -1,0 +1,8 @@
+{
+  "ofd_barcode_packages": 2693,
+  "ofd_barcode_valid_checksum": 2640,
+  "ofd_unique_barcodes": 2595,
+  "ofd_duplicate_barcode_values": 88,
+  "ofd_source_aggregate_bytes": 7691899,
+  "ofd_source_aggregate_gzip_bytes": 1488288
+}

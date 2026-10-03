@@ -1,0 +1,79 @@
+SpoolPainter
+Copyright (C) 2025-2026 ni4223 and contributors
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your
+option) any later version. See LICENSE for the full text.
+
+== Third-party attribution ==
+
+Snapmaker tag format support
+----------------------------
+The Snapmaker MifareClassic tag format spec, the HKDF salt constant
+(`SNAPMAKER_KEY_SALT`), and the ten RSA-2048 public keys embedded in
+`app/src/main/java/com/spoolpainter/app/hardware/nfc/SnapmakerFormat.kt`
+were derived from the openspool_tag_processor module of Snapmaker U1
+Klipper:
+
+  https://github.com/Snapmaker/u1-klipper
+
+Snapmaker/u1-klipper is published under GPL-3.0. SpoolPainter inherits
+GPL-3.0 as a result of bundling this material.
+
+PR contribution
+---------------
+The initial vendor-tag read implementation (PR #3) was contributed by
+Fabio De Simone <me@fabiodesim.one> (GitHub @ProtoxiDe22).
+
+OpenRFID — QIDI / Anycubic / Elegoo / Creality tag format support
+-----------------------------------------------------------------
+The QIDI, Anycubic, Elegoo, and Creality tag processors and lookup
+tables (under
+`app/src/main/java/com/spoolpainter/app/hardware/nfc/vendor/`) are
+ported from the OpenRFID project:
+
+  https://github.com/suchmememanyskill/OpenRFID
+
+Specifically, the source files at
+`OpenRFID/src/tag/{qidi,anycubic,elegoo,creality}/` at upstream commit
+`ddd1609e9abe9cd37c4b8fa1a0e4307b976d5fd4` were translated to Kotlin
+in this repository. OpenRFID is published under GPL-3.0; SpoolPainter
+inherits and remains under GPL-3.0 as a result.
+
+OpenRFID — vendor tag test fixtures
+-----------------------------------
+The vendor tag dumps and their expected-output sidecars under
+`app/src/test/resources/vendor-fixtures/{Elegoo,Anycubic,Qidi,Snapmaker,Bambu}/`
+(`*.bin` raw chip captures + `*.yml` expected decode results) are copied
+verbatim from `OpenRFID/test/tags/` at the same upstream commit
+`ddd1609e9abe9cd37c4b8fa1a0e4307b976d5fd4`. They are used solely as
+regression test data for the vendor tag processors. Creality fixtures
+are not included — they require a per-tag AES encryption key that
+upstream supplies via environment variable, not in the repository.
+
+Vendor trademarks — referral link artwork
+-----------------------------------------
+The Settings screen's "Support the project" section links to shops the
+maintainer has a referral arrangement with, and identifies each with that
+vendor's own logo:
+
+  app/src/main/res/drawable-nodpi/ic_polymaker_wordmark.png
+    Polymaker logo, retrieved 2026-08-22 from Polymaker's own store CDN
+    (shop.polymaker.com/cdn/shop/files/Polymaker_New_Logo.png). Drawn in
+    the brand's teal, untinted.
+
+  app/src/main/res/drawable/ic_snapmaker_wordmark.xml
+    Snapmaker wordmark, converted to an Android vector drawable from the
+    monochrome SVG served at
+    cdn.snapmaker.com/assets/20260526/header/white-logo.svg, retrieved
+    2026-08-22. Snapmaker publish black and white variants of this mark;
+    the single asset here is tinted to the active theme's foreground
+    colour, which is faithful to both.
+
+"Polymaker" and "Snapmaker" are trademarks of their respective owners.
+They are reproduced here only to identify the store each referral link
+points to (nominative use). SpoolPainter is an independent project and is
+not affiliated with, endorsed by, or sponsored by either company. Neither
+logo is covered by SpoolPainter's GPL-3.0 licence; if either vendor's
+brand guidelines require changes, replace or remove the asset above.

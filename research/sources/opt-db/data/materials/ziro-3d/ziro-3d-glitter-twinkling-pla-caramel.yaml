@@ -1,0 +1,15 @@
+uuid: dca94c41-8161-5b82-8588-ce146a2b0c16
+slug: ziro-3d-glitter-twinkling-pla-caramel
+brand:
+  slug: ziro-3d
+name: Glitter Twinkling PLA Caramel
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f67405ff'
+tags:
+- glitter
+- translucent
+- industrially_compostable
+properties: {}

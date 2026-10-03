@@ -1,0 +1,11 @@
+uuid: c29c6ac9-79ea-5ad7-b086-6affd6e49ac6
+slug: tinmorry-rapid-petg-eco-pink
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Pink
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#fcafc0ff'
+properties: {}

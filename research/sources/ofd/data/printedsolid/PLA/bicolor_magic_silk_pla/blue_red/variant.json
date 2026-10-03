@@ -1,0 +1,14 @@
+{
+  "uuid": "b0c65c17-fc24-4bcb-a487-365c98578353",
+  "id": "blue_red",
+  "name": "Blue-Red",
+  "color_hex": [
+    "#0353BA",
+    "#E72F1D"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,15 @@
+uuid: e5f5b86d-62cb-5348-8164-07e12187040d
+slug: winkle-pla-high-speed-glacier-white
+brand:
+  slug: winkle
+name: PLA High Speed Glacier White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f5f5f5ff'
+tags:
+- high_speed
+- industrially_compostable
+properties:
+  density: 1.24

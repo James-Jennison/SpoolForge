@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "c2ac867c-701d-428f-9631-9cbc72be4a27",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-petg-v0/"
+      }
+    ]
+  }
+]

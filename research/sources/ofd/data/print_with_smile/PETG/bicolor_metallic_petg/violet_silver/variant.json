@@ -1,0 +1,13 @@
+{
+  "uuid": "a6aa608d-55b9-437c-9851-c4264d9ba090",
+  "id": "violet_silver",
+  "name": "VIOLET SILVER",
+  "color_hex": [
+    "#4E486A",
+    "#A8B0BD"
+  ],
+  "traits": {
+    "iridescent": true,
+    "coextruded": true
+  }
+}

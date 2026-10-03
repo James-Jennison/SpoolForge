@@ -1,0 +1,15 @@
+{
+  "uuid": "e1f5d580-b3bd-463c-a51b-9aac3785d39c",
+  "id": "electric_dream_tri_color",
+  "name": "Electric Dream Tri-Color",
+  "color_hex": [
+    "#FFD342",
+    "#0378D0",
+    "#D55D8C"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

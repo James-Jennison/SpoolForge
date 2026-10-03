@@ -1,0 +1,14 @@
+uuid: 858a9bc3-ec95-55a9-b848-949c731b80b6
+slug: winkle-pla-hd-pastel-turquoise-blue
+brand:
+  slug: winkle
+name: PLA HD Pastel Turquoise Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#96d8c5ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

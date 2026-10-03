@@ -1,0 +1,34 @@
+{
+  "canonical": {
+    "illustrative_payload": {
+      "protocol": "openspool",
+      "version": "1.0",
+      "type": "ABS",
+      "color_hex": "FF8E24",
+      "brand": "SUNLU",
+      "min_temp": "230",
+      "max_temp": "260"
+    },
+    "utf8_payload_bytes": 124,
+    "ndef_message_bytes_single_mime_record_no_id": 143,
+    "tag_tlv_bytes": 146
+  },
+  "paxx_extensions": {
+    "illustrative_payload": {
+      "protocol": "openspool",
+      "version": "1.0",
+      "type": "ABS",
+      "color_hex": "FF8E24",
+      "brand": "SUNLU",
+      "min_temp": "230",
+      "max_temp": "260",
+      "bed_min_temp": "90",
+      "bed_max_temp": "110",
+      "diameter": 1.75,
+      "weight": 1000
+    },
+    "utf8_payload_bytes": 195,
+    "ndef_message_bytes_single_mime_record_no_id": 214,
+    "tag_tlv_bytes": 217
+  }
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "uuid": "5b9f77c0-810c-475c-8534-c7208eacb200",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 244,
+    "spool_core_diameter": 55,
+    "gtin": "191314042654",
+    "purchase_links": [
+      {
+        "store_id": "amazon",
+        "url": "https://www.amazon.com/HATCHBOX-Printer-Filament-Dimensional-Accuracy/dp/B0CK9RWYGW"
+      }
+    ]
+  }
+]

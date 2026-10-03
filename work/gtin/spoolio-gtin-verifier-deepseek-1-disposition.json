@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-verifier-deepseek-1",
+  "disposition": "CONFIRMED",
+  "reason": "The builder and independent verifier now reject any prefix other than an optional MIT License title followed by exactly one recognized copyright line. Negative checks cover restrictions both before and after the canonical body.",
+  "evidence_reference": "tools/build_gtin_index.py; tools/verify_gtin_index.py; work/gtin/verify-final-prefix-fix.log",
+  "resolved": true
+}

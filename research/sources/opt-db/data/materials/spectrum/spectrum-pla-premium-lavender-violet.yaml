@@ -1,0 +1,20 @@
+uuid: 43eccd3b-e275-59e5-9cca-2c285b16ec7a
+slug: spectrum-pla-premium-lavender-violet
+brand:
+  slug: spectrum
+name: PLA Premium Lavender Violet
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#a288b6ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-premium-lavender-violet/spectrum-pla-premium-lavender-violet-0-2bb2cb87.jpg
+  type: unspecified

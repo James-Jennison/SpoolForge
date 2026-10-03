@@ -1,0 +1,17 @@
+{
+  "uuid": "b6773b26-31b9-41e4-a58b-b618ff33bbfd",
+  "id": "rpla_pro",
+  "name": "rPLA pro",
+  "color_hex": [
+    "#61C680",
+    "#0099E6",
+    "#005DA4",
+    "#B645A9",
+    "#C6F666"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "recycled": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-gtin-closure-deepseek-3",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-dcf83ca9ce72",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Candidate Identity Stability",
+  "summary": "Community package identity includes the row index from the compiled JSON pointer, making package IDs unstable when the upstream community dataset changes row order. The same logical product (same row id and scope) will get a different package ID after dataset updates, potentially breaking user references and creating duplicates.",
+  "claim": "User edits, favorites, or references keyed by package ID may be orphaned or duplicated after a community dataset update; candidate merging and deduplication across versions become unreliable.",
+  "evidence": {
+    "source": "build_gtin_index.py package_identity uses discriminator = pointer + ('|' + scope if source == 'community' else '') and pointer = f'spoolmandb/compiled.json#/{i}' where i is enumerate index.",
+    "response_sha256": "cbbfa3506a7d9bf853664aa861be1e39241d84883b64b7b167b6d1e39e35a3df"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "Change community package_identity to use stable fields (row['id'] + scope) without the row index, or if row index is needed for uniqueness, document that community identities are not stable across dataset revisions and migrate accordingly.",
+  "suggested_validation": "Construct a test dataset with an extra row inserted before an existing community row, rebuild the index, and assert that the package IDs for the existing rows remain unchanged (or that a migration preserves references).",
+  "reviewer_confidence": "MEDIUM"
+}

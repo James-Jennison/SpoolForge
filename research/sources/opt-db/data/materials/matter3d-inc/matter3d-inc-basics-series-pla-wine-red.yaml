@@ -1,0 +1,13 @@
+uuid: 6e7088c1-d901-5fe0-860c-211c7dfa7d38
+slug: matter3d-inc-basics-series-pla-wine-red
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA Wine Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c01616ff'
+tags:
+- industrially_compostable
+properties: {}

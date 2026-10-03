@@ -1,0 +1,19 @@
+uuid: 620373c8-513c-595c-a46e-5a07c0818cff
+slug: fiberlogy-pp-black
+brand:
+  slug: fiberlogy
+name: PP Black
+class: FFF
+type: PP
+abbreviation: PP
+primary_color:
+  color_rgba: '#000000ff'
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-pp-black/8debef8a6979.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 220
+  max_print_temperature: 250
+  drying_temperature: 50
+  drying_time: 240

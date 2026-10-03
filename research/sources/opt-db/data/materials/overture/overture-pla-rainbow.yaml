@@ -1,0 +1,18 @@
+uuid: a076aa17-9b1b-55e1-970e-c65a867769e4
+slug: overture-pla-rainbow
+brand:
+  slug: overture
+name: PLA Rainbow
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#ffb031ff'
+- color_rgba: '#f14147ff'
+- color_rgba: '#9a491aff'
+- color_rgba: '#395e65ff'
+tags:
+- industrially_compostable
+- gradual_color_change
+photos: []
+properties: {}

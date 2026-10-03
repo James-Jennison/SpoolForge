@@ -1,0 +1,14 @@
+{
+  "uuid": "01b26fba-4497-4818-986f-0dd584fde76d",
+  "id": "purplered_darkgreen",
+  "name": "PurpleRed-DarkGreen",
+  "color_hex": [
+    "#1E5A4F",
+    "#C80181"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "uuid": "a8590107-fc2d-40c5-a821-be3aa309e652",
+  "id": "r_black",
+  "name": "r Black",
+  "color_hex": "#000000",
+  "traits": {
+    "recycled": true,
+    "filtration_recommended": true
+  }
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "cf95a597-730f-41c9-8cc2-85f1612c377c",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 180,
+    "spool_core_diameter": 75,
+    "gtin": "5903707922543",
+    "article_number": "FG-S132-E1",
+    "discontinued": false
+  }
+]

@@ -1,0 +1,13 @@
+uuid: 8429e88b-10a0-572f-b4f7-7eb9fdf63135
+slug: siddament-marble-petg
+brand:
+  slug: siddament
+name: Marble PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#c3ccd5ff'
+tags:
+- imitates_marble
+properties: {}

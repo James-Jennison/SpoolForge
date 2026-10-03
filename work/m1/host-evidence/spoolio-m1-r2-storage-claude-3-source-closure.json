@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-claude-3",
+  "disposition": "OUT_OF_SCOPE",
+  "reason": "Measured existing-catalog integrity cost1.58s and actual warm-query p95<10ms disclosed. Warm-query target met; no separate Owner cold-start budget exists. Retain full corruption verification; startup optimization is optional, not a remaining requirement defect. Codex scope interpretation, not an invented new Owner acceptance decision.",
+  "evidence_reference": "work/m1/host-evidence/queued-disposal-claude.json; work/m1/host-evidence/queued-disposal-deepseek.json; work/m1/host-evidence/queued-disposal-gemini.json; work/m1/host-evidence/lifecycle-claude.json; work/m1/host-evidence/current-validation.json; work/m1/host-evidence/blank-tag-and-queued-disposal-build.log; evidence-cycle-a561eceffd00",
+  "resolved": true
+}

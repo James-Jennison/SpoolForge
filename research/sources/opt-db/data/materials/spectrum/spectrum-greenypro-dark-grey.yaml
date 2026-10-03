@@ -1,0 +1,19 @@
+uuid: e4a9ff0f-9d40-577b-9be0-e46ef20a4487
+slug: spectrum-greenypro-dark-grey
+brand:
+  slug: spectrum
+name: GreenyPro Dark Grey
+class: FFF
+abbreviation: BIO
+primary_color:
+  color_rgba: '#4e5658ff'
+properties:
+  density: 1.34
+  min_print_temperature: 190
+  max_print_temperature: 220
+  max_bed_temperature: 45
+tags:
+- high_temperature
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-greenypro-dark-grey/spectrum-greenypro-dark-grey-0-b954e496.jpg
+  type: unspecified

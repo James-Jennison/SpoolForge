@@ -1,0 +1,21 @@
+uuid: 9ba61542-f52a-5dec-906e-bafee19dc3dd
+slug: spectrum-rpetg-traffic-green
+brand:
+  slug: spectrum
+name: rPETG Traffic Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#26a648ff'
+tags:
+- recycled
+properties:
+  density: 1.23
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-rpetg-traffic-green/spectrum-rpetg-traffic-green-0-b62f624d.jpg
+  type: unspecified

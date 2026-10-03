@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-gemini-3",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "gemini",
+  "severity": "MEDIUM",
+  "category": "UI & User Experience Integration",
+  "summary": "Recents history is persisted to Room storage but is never retrieved or presented in the application UI.",
+  "claim": "Recents history is persisted to Room storage but is never retrieved or presented in the application UI.",
+  "evidence": {
+    "source": "In app/src/main/kotlin/net/jamesjennison/spoolio/data/Databases.kt, UserDao exposes recents(): Flow<List<Recent>>. MainViewModel.kt inserts records into recents in select(), but never queries or exposes store.user.user().recents() to MainActivity.kt.",
+    "response_sha256": "11d27f62d8327b2e140b8d0ad35699fce61fb74755db64e1412c245d13d852bd"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Expose the recents Flow from MainViewModel and add a Recents list section to the UI in MainActivity.kt allowing immediate re-selection and editing of recently accessed items.",
+  "suggested_validation": "Select three distinct catalog and custom items, restart the app, and confirm that the main view renders the three recent items and allows selecting them for NFC write intent preparation.",
+  "reviewer_confidence": "HIGH"
+}

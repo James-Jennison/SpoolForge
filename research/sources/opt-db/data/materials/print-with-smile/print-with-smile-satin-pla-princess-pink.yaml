@@ -1,0 +1,13 @@
+uuid: 8b9b4fb3-6aa8-5192-b236-c37b245f1e08
+slug: print-with-smile-satin-pla-princess-pink
+brand:
+  slug: print-with-smile
+name: SATIN PLA Princess PINK
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ff67f5ff'
+tags:
+- industrially_compostable
+properties: {}

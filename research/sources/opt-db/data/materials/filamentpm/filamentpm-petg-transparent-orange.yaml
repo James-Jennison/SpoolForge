@@ -1,0 +1,21 @@
+uuid: d82a5737-0ce5-566c-b056-fb5fcdaac6d2
+slug: filamentpm-petg-transparent-orange
+brand:
+  slug: filamentpm
+name: PETG - Transparent Orange
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#af5c37ff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-petg-transparent-orange/c114e1c6c7ae.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 90

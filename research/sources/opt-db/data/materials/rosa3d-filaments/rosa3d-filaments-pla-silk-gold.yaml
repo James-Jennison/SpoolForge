@@ -1,0 +1,14 @@
+uuid: 487f3e80-2eec-57d8-aebc-22e2758ede91
+slug: rosa3d-filaments-pla-silk-gold
+brand:
+  slug: rosa3d-filaments
+name: PLA-Silk Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f6c500ff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

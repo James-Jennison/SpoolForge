@@ -1,0 +1,22 @@
+uuid: 99b444f6-a372-5338-9b7c-e5481229c13e
+slug: filamentpm-abs-t-black
+brand:
+  slug: filamentpm
+name: ABS-T - Black
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#27292bff'
+tags:
+  - high_temperature
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-abs-t-black/622238d51225.png
+    type: unspecified
+properties:
+  density: 1.08
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 100
+  max_bed_temperature: 110

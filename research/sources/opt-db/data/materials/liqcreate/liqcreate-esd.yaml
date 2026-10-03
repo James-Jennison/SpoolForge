@@ -1,0 +1,18 @@
+uuid: 5d78d83f-58bf-5833-97f3-f60239691f32
+slug: liqcreate-esd
+brand:
+  slug: liqcreate
+name: ESD
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#595959ff'
+tags:
+- esd_safe
+properties:
+  density: 1.18
+  cure_wavelength: 405
+  viscosity_18c: 1174
+  viscosity_25c: 698
+  viscosity_40c: 263
+  viscosity_60c: 116

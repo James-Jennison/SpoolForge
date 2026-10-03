@@ -1,0 +1,23 @@
+uuid: f104e43f-273a-51b2-a843-6eb8678452a8
+slug: sunlu-pla-sky-blue
+brand:
+  slug: sunlu
+name: PLA Sky Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#39b9dbff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/sunlu/sunlu-pla-sky-blue/8de5ad49ac87.jpg
+  type: unspecified
+properties:
+  density: 1.23
+  hardness_shore_d: 80
+  min_print_temperature: 190
+  max_print_temperature: 260
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50

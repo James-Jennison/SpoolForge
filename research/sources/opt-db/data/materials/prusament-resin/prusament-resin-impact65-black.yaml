@@ -1,0 +1,16 @@
+uuid: ad835c8f-e33f-53f0-9d2e-eb2602a2fb6c
+slug: prusament-resin-impact65-black
+brand:
+  slug: prusament-resin
+name: Impact65 Black
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#595959ff'
+properties:
+  density: 1.11
+  cure_wavelength: 405
+  viscosity_18c: 404
+  viscosity_25c: 234
+  viscosity_40c: 91
+  viscosity_60c: 1

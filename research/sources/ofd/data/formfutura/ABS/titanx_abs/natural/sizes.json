@@ -1,0 +1,92 @@
+[
+  {
+    "uuid": "8e9079b6-ebe3-4158-8432-0797442a5227",
+    "filament_weight": 750,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "TITX-175NTRL-00750",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/titanx"
+      }
+    ]
+  },
+  {
+    "uuid": "541273de-8c49-4ed0-84a8-9542290a67fc",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "TITX-175NTRL-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/titanx"
+      }
+    ]
+  },
+  {
+    "uuid": "057c5554-c31d-4629-a2ee-1e38fca1b847",
+    "filament_weight": 4500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "TITX-175NTRL-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/titanx"
+      }
+    ]
+  },
+  {
+    "uuid": "f3bfcaec-f5b5-4443-ad8b-21e69afc26fc",
+    "filament_weight": 750,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "TITX-285NTRL-00750",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/titanx"
+      }
+    ]
+  },
+  {
+    "uuid": "8890888c-69b3-4b8d-87fd-c467c05dd18b",
+    "filament_weight": 2300,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "TITX-285NTRL-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/titanx"
+      }
+    ]
+  },
+  {
+    "uuid": "f19e769d-d526-458a-b618-5353887040ce",
+    "filament_weight": 4500,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "TITX-285NTRL-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/titanx"
+      }
+    ]
+  }
+]

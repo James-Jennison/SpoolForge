@@ -1,0 +1,14 @@
+{
+  "uuid": "77d64d09-eb71-4156-a7cb-8697a55739bf",
+  "id": "blue_green_pla",
+  "name": "blue & green) PLA",
+  "color_hex": [
+    "#BE2ED6",
+    "#39B9DB",
+    "#62E480"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

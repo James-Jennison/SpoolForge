@@ -1,0 +1,14 @@
+{
+  "uuid": "eb268209-9bdc-49a0-924a-321d474bb2ad",
+  "id": "athena_gf10_gf_pctg",
+  "name": "AthenaX GF10",
+  "diameter_tolerance": 0.02,
+  "density": 1.31,
+  "min_print_temperature": 250,
+  "max_print_temperature": 290,
+  "min_bed_temperature": 85,
+  "max_bed_temperature": 100,
+  "data_sheet_url": "https://www.formfutura.com/web/content/256483?download=true",
+  "safety_sheet_url": "https://www.formfutura.com/web/content/256484?download=true",
+  "discontinued": false
+}

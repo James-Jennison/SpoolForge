@@ -1,0 +1,23 @@
+uuid: 6d6677a0-d3c0-5688-aba0-99be4ce6461c
+slug: fiberlogy-easy-pla-neon-green
+brand:
+  slug: fiberlogy
+name: Easy PLA Neon Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#7cef83ff'
+tags:
+  - neon
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-easy-pla-neon-green/80c1d31dc863.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 240

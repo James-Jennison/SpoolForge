@@ -1,0 +1,20 @@
+uuid: edf88178-374e-5de8-941e-50c4fdc16473
+slug: spectrum-pla-high-speed-granite-grey
+brand:
+  slug: spectrum
+name: PLA High Speed Granite Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5a696cff'
+tags:
+- high_speed
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-high-speed-granite-grey/spectrum-pla-high-speed-granite-grey-0-abca5191.jpg
+  type: unspecified

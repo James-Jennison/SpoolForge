@@ -1,0 +1,14 @@
+uuid: 956910ec-a183-5882-a2cd-84926be76a96
+slug: winkle-pla-hd-pastel-cotton-candy-pink
+brand:
+  slug: winkle
+name: PLA HD Pastel Cotton Candy Pink
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#eac2b7ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

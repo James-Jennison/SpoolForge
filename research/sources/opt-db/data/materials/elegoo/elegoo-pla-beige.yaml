@@ -1,0 +1,24 @@
+uuid: 7fa2c98b-7190-57db-a8a2-93f6efb37367
+slug: elegoo-pla-beige
+brand:
+  slug: elegoo
+name: PLA Beige
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#dac7a0ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/elegoo/elegoo-pla-beige/2a0d493b20fd.png
+  type: unspecified
+properties:
+  density: 1.26
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 65
+  drying_temperature: 50
+  drying_time: 480
+  min_nozzle_diameter: 200

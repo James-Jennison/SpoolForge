@@ -1,0 +1,25 @@
+uuid: 0667d1a3-19b2-5c15-82a1-97cdab7e7cf4
+slug: polymaker-pc-abs-black
+brand:
+  slug: polymaker
+name: PC-ABS Black
+class: FFF
+type: PC
+abbreviation: PC-ABS
+primary_color:
+  color_rgba: '#161618ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-pc-abs-black/d5076f570d3f.png
+    type: unspecified
+properties:
+  density: 1.1
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 90
+  max_bed_temperature: 105
+  min_chamber_temperature: 90
+  max_chamber_temperature: 100
+  drying_temperature: 75
+  drying_time: 360

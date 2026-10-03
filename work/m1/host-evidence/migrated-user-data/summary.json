@@ -1,0 +1,22 @@
+{
+  "integrity": "ok",
+  "version": 2,
+  "customs": [
+    {
+      "id": "edited:14417b3a-38d3-4643-ace8-40bdc9b7ecf3",
+      "original_package_id": "14417b3a-38d3-4643-ace8-40bdc9b7ecf3",
+      "nozzle_min_c": 235,
+      "nozzle_max_c": 260,
+      "bed_min_c": 90,
+      "bed_max_c": 110,
+      "brand_source": "OFD e3888b68",
+      "nozzle_min_source": "Edited locally"
+    }
+  ],
+  "recents": [
+    {
+      "record_id": "14417b3a-38d3-4643-ace8-40bdc9b7ecf3",
+      "kind": "CATALOG"
+    }
+  ]
+}

@@ -1,0 +1,840 @@
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+index 55772ceab..d6fae4e34 100644
+--- a/app/build.gradle.kts
++++ b/app/build.gradle.kts
+@@ -28,7 +28,7 @@ android {
+         minSdk = 28
+         targetSdk = 36
+         versionCode = 1
+-        versionName = "0.2.0-m2"
++        versionName = "0.3.0-m3"
+         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+         buildConfigField("String", "OPENAI_API_KEY", "\"\"")
+     }
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/BarcodeCamera.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/BarcodeCamera.kt
+index 55a9b7a58..933e6e569 100644
+--- a/app/src/main/kotlin/net/jamesjennison/filamajignfc/BarcodeCamera.kt
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/BarcodeCamera.kt
+@@ -153,6 +153,7 @@ internal fun barcodeReader() = MultiFormatReader().apply {
+         ),
+         DecodeHintType.TRY_HARDER to true,
+         DecodeHintType.ASSUME_GS1 to true,
++        DecodeHintType.CHARACTER_SET to "UTF-8",
+     ))
+ }
+ 
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/LabelScan.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/LabelScan.kt
+index e30611f6a..22f3f13a5 100644
+--- a/app/src/main/kotlin/net/jamesjennison/filamajignfc/LabelScan.kt
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/LabelScan.kt
+@@ -5,6 +5,7 @@ import kotlinx.coroutines.Dispatchers
+ import kotlinx.coroutines.withContext
+ import net.jamesjennison.filamajignfc.core.Gtin
+ import net.jamesjennison.filamajignfc.core.JsonValue
++import net.jamesjennison.filamajignfc.core.PORTABLE_QR_MAX_BYTES
+ import net.jamesjennison.filamajignfc.core.StrictJson
+ import net.jamesjennison.filamajignfc.core.string
+ import org.json.JSONArray
+@@ -31,7 +32,7 @@ data class LabelPhoto(val role: LabelPhotoRole, val jpeg: ByteArray, val codes:
+ private fun isAmazonStyleIdentifierCandidate(value: String) = value.trim().uppercase().matches(Regex("X00[A-Z0-9]{7}"))
+ 
+ internal fun classifyLabelCode(value: String, format: String, normalizedGtin: String? = null): LabelCode {
+-    val clean = value.trim().take(512)
++    val clean = value.trim().take(PORTABLE_QR_MAX_BYTES)
+     val gtin = normalizedGtin ?: if (format in setOf("EAN_8", "EAN_13", "UPC_A", "UPC_E")) Gtin.normalize(clean) else null
+     val kind = when {
+         gtin != null -> "GTIN"
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt
+index 58fef1b1f..4d1dee320 100644
+--- a/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt
+@@ -3,11 +3,14 @@ package net.jamesjennison.filamajignfc
+ 
+ import android.nfc.NfcAdapter
+ import android.nfc.Tag
++import android.content.Intent
++import android.graphics.Bitmap
+ import android.os.Bundle
+ import androidx.activity.ComponentActivity
+ import androidx.activity.compose.setContent
+ import androidx.activity.viewModels
+ import androidx.compose.foundation.background
++import androidx.compose.foundation.Image
+ import androidx.compose.foundation.clickable
+ import androidx.compose.foundation.layout.*
+ import androidx.compose.foundation.lazy.LazyColumn
+@@ -23,6 +26,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
+ import androidx.compose.ui.Alignment
+ import androidx.compose.ui.Modifier
+ import androidx.compose.ui.graphics.Color
++import androidx.compose.ui.graphics.asImageBitmap
++import androidx.compose.ui.platform.LocalContext
+ import androidx.compose.ui.platform.LocalUriHandler
+ import androidx.compose.ui.semantics.contentDescription
+ import androidx.compose.ui.semantics.semantics
+@@ -31,7 +36,6 @@ import androidx.compose.ui.text.font.FontWeight
+ import androidx.compose.ui.unit.dp
+ import androidx.compose.ui.window.Dialog
+ import androidx.core.view.WindowCompat
+-import kotlinx.coroutines.launch
+ import net.jamesjennison.filamajignfc.core.*
+ 
+ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
+@@ -55,6 +59,7 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
+ @Composable fun FilamajigApp(model: MainViewModel, nfcAvailable: Boolean) {
+     var custom by remember { mutableStateOf<CustomSeed?>(null) }
+     var showLabelScanner by rememberSaveable { mutableStateOf(false) }
++    var showPortableImport by rememberSaveable { mutableStateOf(false) }
+     var showCustom by remember { mutableStateOf(false) }
+     var labelReview by remember { mutableStateOf<List<String>>(emptyList()) }
+     var labelCodes by remember { mutableStateOf<List<LabelCode>>(emptyList()) }
+@@ -67,6 +72,15 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
+             showCustom = true
+         }
+     }
++    LaunchedEffect(model.portableImport) {
++        model.portableImport?.let { imported ->
++            custom = imported
++            labelReview = listOf("Imported from a self-contained Filamajig portable spool QR. Profile and physical-spool identities were decoded locally.")
++            labelCodes = emptyList()
++            showCustom = true
++            model.consumePortableImport()
++        }
++    }
+     Scaffold(
+         topBar = { TopAppBar(title = { Column { Text(stringResource(R.string.app_name), fontWeight = FontWeight.Bold); Text(stringResource(R.string.app_tagline), style = MaterialTheme.typography.labelMedium) } }) },
+         floatingActionButton = { if (model.selected == null) ExtendedFloatingActionButton(onClick = { custom = CustomSeed(); showCustom = true }) { Text("Custom filament") } },
+@@ -84,6 +98,7 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
+                             onClick = { model.clearLabelPhotos(); showLabelScanner = true },
+                             modifier = Modifier.fillMaxWidth(),
+                         ) { Text("Scan label or QR with AI") }
++                        OutlinedButton(onClick = { showPortableImport = true }, modifier = Modifier.fillMaxWidth()) { Text("Import portable spool bundle") }
+                         labelAnalysis.message?.let { Notice(it, it.startsWith("Label scan failed")) }
+                         model.searchNotice?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
+                     }
+@@ -110,9 +125,27 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
+         },
+     )
+     if (labelAnalysis.busy) LabelAnalysisOverlay()
++    if (showPortableImport) PortableImportDialog(
++        dismiss = { showPortableImport = false },
++        import = { text -> model.importPortableBundle(text); showPortableImport = false },
++    )
+     if (showCustom) CustomDialog(custom ?: CustomSeed(), labelReview, labelCodes, onDismiss = { showCustom = false; labelReview = emptyList(); labelCodes = emptyList(); model.clearLabelAnalysis() }, onSave = { values -> model.saveCustom(custom ?: CustomSeed(), values); showCustom = false; labelReview = emptyList(); labelCodes = emptyList(); model.clearLabelAnalysis() })
+ }
+ 
++@Composable private fun PortableImportDialog(dismiss: () -> Unit, import: (String) -> Unit) {
++    var text by rememberSaveable { mutableStateOf("") }
++    AlertDialog(
++        onDismissRequest = dismiss,
++        title = { Text("Import portable spool") },
++        text = { Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
++            Text("Paste a Filamajig portable spool JSON bundle. It is decoded entirely on this device.")
++            OutlinedTextField(text, { if (it.length <= 65_536) text = it }, Modifier.fillMaxWidth().heightIn(min = 180.dp), label = { Text("Portable JSON bundle") })
++        } },
++        dismissButton = { TextButton(onClick = dismiss) { Text("Cancel") } },
++        confirmButton = { TextButton(onClick = { import(text) }, enabled = text.isNotBlank()) { Text("Review import") } },
++    )
++}
++
+ @Composable private fun LabelAnalysisOverlay() {
+     val stages = listOf(
+         "Reading printed label fields…",
+@@ -194,6 +227,8 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
+     val e = item.entry
+     val uriHandler = LocalUriHandler.current
+     var confirmDelete by remember(item.entry.packageId) { mutableStateOf(false) }
++    var showPortable by remember(item.entry.packageId) { mutableStateOf(false) }
++    var portableIdentity by remember(item.entry.packageId) { mutableStateOf<PortableSpoolIdentity?>(null) }
+     val hasCatalogBarcodeEvidence = isCatalogBarcodeEvidence(item.barcodeEvidence)
+     val hasProviderEvidence = isProviderCandidateEvidence(item.barcodeEvidence)
+     val intentResult = remember(item, model.profile) { runCatching { model.intent(item) } }
+@@ -214,6 +249,9 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
+         if(hasProviderEvidence) ProviderCandidateEvidence(item.barcodeEvidence)
+         Text("Field sources: brand ${item.source("brand").substringBefore(" · ").take(36)}; material ${item.source("material").substringBefore(" · ").take(36)}; color ${item.source("colorHex").substringBefore(" · ").take(36)}", style = MaterialTheme.typography.bodySmall)
+         OutlinedButton(onClick = edit, modifier = Modifier.fillMaxWidth()) { Text(if (item.provenance == Provenance.CATALOG) "Edit locally" else "Edit saved record") }
++        if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = {
++            model.loadPortableIdentity(item) { portableIdentity = it; showPortable = true }
++        }, modifier = Modifier.fillMaxWidth()) { Text("Portable QR and export") }
+         if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = { confirmDelete = true }, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.error)) { Text("Delete local record") }
+         OutlinedButton(onClick = { uriHandler.openUri(FILAMENT_PROFILES_CATALOG_URL) }, modifier = Modifier.fillMaxWidth()) { Text("Search 3D Filament Profiles") }
+         Text("Tag compatibility", fontWeight = FontWeight.Bold)
+@@ -234,6 +272,55 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
+         dismissButton = { TextButton(onClick = { confirmDelete = false }) { Text("Keep record") } },
+         confirmButton = { TextButton(onClick = { confirmDelete = false; model.deleteLocal(item) }, colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error)) { Text("Delete") } },
+     )
++    if (showPortable && portableIdentity != null) PortableIdentityDialog(portableIdentity!!) { showPortable = false }
++}
++
++@Composable private fun PortableIdentityDialog(identity: PortableSpoolIdentity, dismiss: () -> Unit) {
++    val context = LocalContext.current
++    var temperatures by rememberSaveable { mutableStateOf(true) }
++    var identifiers by rememberSaveable { mutableStateOf(true) }
++    var transmissionDistance by rememberSaveable { mutableStateOf(true) }
++    val qrBytes = remember(identity) { PortableIdentityCodec.encodeQr(identity) }
++    val qr = remember(qrBytes.contentHashCode()) {
++        val matrix = com.google.zxing.qrcode.QRCodeWriter().encode(qrBytes.decodeToString(), com.google.zxing.BarcodeFormat.QR_CODE, 720, 720,
++            mapOf(com.google.zxing.EncodeHintType.CHARACTER_SET to "UTF-8"))
++        Bitmap.createBitmap(matrix.width, matrix.height, Bitmap.Config.ARGB_8888).apply {
++            val pixels = IntArray(matrix.width * matrix.height) { index -> if (matrix[index % matrix.width, index / matrix.width]) android.graphics.Color.BLACK else android.graphics.Color.WHITE }
++            setPixels(pixels, 0, matrix.width, 0, 0, matrix.width, matrix.height)
++        }.asImageBitmap()
++    }
++    val f = identity.filament
++    AlertDialog(
++        onDismissRequest = dismiss,
++        title = { Text("Portable spool label") },
++        text = { Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
++            Text("${f.brand.value} · ${f.product.value.ifBlank { f.material.value }}", fontWeight = FontWeight.Bold)
++            Text("${f.material.value} — ${f.colorName.value.ifBlank { "#${f.colorHex.value}" }} · ${f.diameterMm.value} mm · ${identity.initialQuantityG} g")
++            Image(qr, "Self-contained Filamajig portable spool QR", Modifier.fillMaxWidth().aspectRatio(1f))
++            Text("QR schema $PORTABLE_IDENTITY_SCHEMA/$PORTABLE_IDENTITY_VERSION · ${qrBytes.size} bytes", style = MaterialTheme.typography.bodySmall)
++            LabelOption("Show temperatures", temperatures) { temperatures = it }
++            LabelOption("Show identifiers", identifiers) { identifiers = it }
++            LabelOption("Show transmission distance", transmissionDistance) { transmissionDistance = it }
++            if (temperatures) Text("Nozzle ${range(f.nozzleMinC?.value, f.nozzleMaxC?.value)} · Bed ${range(f.bedMinC?.value, f.bedMaxC?.value)}")
++            if (identifiers) listOfNotNull(f.gtin?.let { "GTIN $it" }, f.sku?.let { "SKU $it" }).takeIf { it.isNotEmpty() }?.let { Text(it.joinToString(" · ")) }
++            if (transmissionDistance) f.transmissionDistance?.let { Text("Transmission distance ${it.value} mm") }
++            Text("Profile ID: ${identity.profileId}\nSpool ID: ${identity.spoolId}", style = MaterialTheme.typography.bodySmall)
++            Button(onClick = {
++                val bundle = PortableIdentityCodec.encodeBundle(identity).decodeToString()
++                context.startActivity(Intent.createChooser(Intent(Intent.ACTION_SEND).apply {
++                    type = "application/vnd.filamajig.spool+json"
++                    putExtra(Intent.EXTRA_TEXT, bundle)
++                }, "Export portable spool"))
++            }, modifier = Modifier.fillMaxWidth()) { Text("Share export bundle") }
++        } },
++        confirmButton = { TextButton(onClick = dismiss) { Text("Close") } },
++    )
++}
++
++@Composable private fun LabelOption(text: String, checked: Boolean, change: (Boolean) -> Unit) {
++    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
++        Text(text, Modifier.weight(1f)); Switch(checked, change)
++    }
+ }
+ 
+ @Composable private fun NfcPanel(nfc: NfcCoordinator) {
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt
+index 0bdd37e86..3bd41fe56 100644
+--- a/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt
+@@ -24,6 +24,8 @@ data class LabelAnalysisUiState(val busy: Boolean = false, val result: LabelScan
+ data class FilamentItem(val entry: CatalogEntry, val provenance: Provenance, val sources: Map<String, String>, val originalPackageId: String? = null, val barcodeEvidence: String = "", val transmissionDistance: String? = null) { fun source(field: String) = sources[field].orEmpty() }
+ data class CustomSeed(
+     val id: String? = null, val originalPackageId: String? = null, val barcodeEvidence: String = "",
++    val portableProfileId: String? = null, val portableSpoolId: String? = null,
++    val portableInitialQuantityG: Int? = null, val portableRemainingQuantityG: Int? = null,
+     val variantId: String = "", val productId: String = "", val gtin: String? = null, val articleNumber: String? = null, val additionalColorHexes: String = "",
+     val brand: String = "", val material: String = "", val product: String = "", val color: String = "",
+     val hex: String = "", val diameter: String = DEFAULT_DIAMETER_MM, val mass: String = DEFAULT_NOMINAL_MASS_G,
+@@ -51,6 +53,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
+     private val gtinProvider = MergedGtinCatalogProvider(gtinIndex)
+     private val labelClient = LabelScanClient()
+     var labelAnalysis by mutableStateOf(LabelAnalysisUiState()); private set
++    var portableImport by mutableStateOf<CustomSeed?>(null); private set
+     var labelPhotos by mutableStateOf<List<LabelPhoto>>(emptyList()); private set
+     var barcodeMode by mutableStateOf(false); private set
+     var searchNotice by mutableStateOf<String?>(null); private set
+@@ -124,6 +127,11 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
+                     photos.flatMap { photo -> decodeLabelCodesFromImage(photo.jpeg).map { it.copy(photoRole = photo.role.wireName) } }
+                 }
+                 val mergedCodes = reconcileLabelCodes(photos.flatMap { it.codes } + stillCodes)
++                val portableCode = mergedCodes.firstOrNull { it.format == "QR_CODE" && it.value.contains(PORTABLE_IDENTITY_SCHEMA) }
++                if (portableCode != null) {
++                    handlePortableDecode(PortableIdentityCodec.decode(portableCode.value.encodeToByteArray()), "QR")
++                    return@launch
++                }
+                 labelClient.analyze(photos, mergedCodes)
+             }
+                 .onSuccess { labelAnalysis = LabelAnalysisUiState(result = it, message = "Label analyzed. Review every field before saving.") }
+@@ -131,6 +139,47 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
+         }
+     }
+     fun clearLabelAnalysis() { labelAnalysis = LabelAnalysisUiState(); labelPhotos = emptyList() }
++    fun consumePortableImport() { portableImport = null }
++    fun importPortableBundle(text: String) {
++        if (text.toByteArray().size > 65_536) { error = "Portable bundle is limited to 64 KiB"; return }
++        handlePortableDecode(PortableIdentityCodec.decode(text.encodeToByteArray()), "bundle")
++    }
++    private fun handlePortableDecode(decoded: PortableIdentityDecodeResult, source: String) {
++        when (decoded) {
++            is PortableIdentityDecodeResult.Supported -> {
++                portableImport = decoded.identity.toCustomSeed()
++                labelAnalysis = LabelAnalysisUiState(message = "Portable spool $source decoded locally. Review before saving.")
++                labelPhotos = emptyList()
++                error = null
++            }
++            is PortableIdentityDecodeResult.FutureVersion -> {
++                val message = "This portable identity uses newer schema version ${decoded.version}. It was not imported; the original input remains unchanged."
++                labelAnalysis = LabelAnalysisUiState(message = message)
++                labelPhotos = emptyList()
++                error = message
++            }
++            is PortableIdentityDecodeResult.Rejected -> {
++                val message = "Portable identity rejected: ${decoded.reason}"
++                labelAnalysis = LabelAnalysisUiState(message = message)
++                labelPhotos = emptyList()
++                error = message
++            }
++        }
++    }
++    suspend fun portableIdentity(item: FilamentItem): PortableSpoolIdentity {
++        require(item.provenance != Provenance.CATALOG) { "Save this catalog candidate locally before creating a portable spool identity" }
++        val record = item.toRecord()
++        val ids = withContext(Dispatchers.IO) { store.filaments.portableIds(record.packageId) }
++            ?: throw ValidationException("Saved spool identity is unavailable")
++        return PortableSpoolIdentity(ids.profileId, ids.spoolId, record, ids.initialQuantityG, ids.remainingQuantityG)
++    }
++    fun loadPortableIdentity(item: FilamentItem, ready: (PortableSpoolIdentity) -> Unit) {
++        viewModelScope.launch {
++            runCatching { portableIdentity(item) }
++                .onSuccess { error = null; ready(it) }
++                .onFailure { error = it.message ?: "Portable spool identity is unavailable" }
++        }
++    }
+     fun intent(item: FilamentItem): OpenSpoolIntent = OpenSpoolCodec.encode(item.toRecord(), profile)
+     fun arm(item: FilamentItem) { runCatching { nfc.arm(intent(item)) }.onFailure { error = it.message } }
+ 
+@@ -196,8 +245,13 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
+             transmissionDistance, transmissionDistance?.let { sources["transmissionDistance"] },
+         )
+         viewModelScope.launch {
+-            withContext(Dispatchers.IO) { store.filaments.save(saved) }
+-            selected = saved.asItem(); error = null
++            runCatching {
++                withContext(Dispatchers.IO) { store.filaments.save(saved, seed.portableProfileId, seed.portableSpoolId, seed.portableInitialQuantityG, seed.portableRemainingQuantityG) }
++            }.onSuccess {
++                selected = saved.asItem(); error = null
++            }.onFailure {
++                error = it.message ?: "Local record could not be saved"
++            }
+         }
+     }
+ 
+@@ -278,7 +332,7 @@ private fun FilamentItem.values() = mapOf(
+     "bedMin" to entry.bedMinC?.toString().orEmpty(), "bedMax" to entry.bedMaxC?.toString().orEmpty(),
+     "transmissionDistance" to transmissionDistance.orEmpty(),
+ )
+-private fun FilamentItem.toRecord(): FilamentRecord {
++internal fun FilamentItem.toRecord(): FilamentRecord {
+     val e = entry
+     fun text(key: String, value: String) = FieldValue(value, source(key))
+     fun number(key: String, value: Int?) = value?.let { FieldValue(it, source(key)) }
+@@ -286,6 +340,32 @@ private fun FilamentItem.toRecord(): FilamentRecord {
+     val mass = e.massG.takeIf { it > 0 } ?: DEFAULT_NOMINAL_MASS_G.toInt()
+     return FilamentRecord(e.packageId, e.variantId, e.productId, text("brand", e.brand), text("material", e.material), text("product", e.product), text("colorName", e.colorName), text("colorHex", e.colorHex), text("diameter", diameter), FieldValue(mass, source("mass").ifBlank { ASSUMED_DEFAULT_SOURCE }), number("nozzleMin", e.nozzleMinC), number("nozzleMax", e.nozzleMaxC), number("bedMin", e.bedMinC), number("bedMax", e.bedMaxC), e.gtin, e.sku, e.sourceRevision, provenance, e.additionalColorHexes.split(',').filter(String::isNotBlank), transmissionDistance?.let { text("transmissionDistance", it) })
+ }
++
++private fun PortableSpoolIdentity.toCustomSeed(): CustomSeed {
++    val f = filament
++    fun source(value: FieldValue<*>?) = value?.source.orEmpty()
++    val values = mapOf(
++        "brand" to f.brand.value, "material" to f.material.value, "product" to f.product.value, "colorName" to f.colorName.value,
++        "colorHex" to f.colorHex.value, "diameter" to f.diameterMm.value, "mass" to f.nominalMassG.value.toString(),
++        "nozzleMin" to f.nozzleMinC?.value?.toString().orEmpty(), "nozzleMax" to f.nozzleMaxC?.value?.toString().orEmpty(),
++        "bedMin" to f.bedMinC?.value?.toString().orEmpty(), "bedMax" to f.bedMaxC?.value?.toString().orEmpty(),
++        "transmissionDistance" to f.transmissionDistance?.value.orEmpty(),
++    )
++    return CustomSeed(
++        id = f.packageId, portableProfileId = profileId, portableSpoolId = spoolId,
++        portableInitialQuantityG = initialQuantityG, portableRemainingQuantityG = remainingQuantityG,
++        variantId = f.variantId.orEmpty(), productId = f.productId.orEmpty(), gtin = f.gtin, articleNumber = f.sku,
++        additionalColorHexes = f.additionalColors.joinToString(","), brand = f.brand.value, material = f.material.value, product = f.product.value,
++        color = f.colorName.value, hex = f.colorHex.value, diameter = f.diameterMm.value, mass = f.nominalMassG.value.toString(),
++        nozzleMin = values.getValue("nozzleMin"), nozzleMax = values.getValue("nozzleMax"), bedMin = values.getValue("bedMin"), bedMax = values.getValue("bedMax"),
++        transmissionDistance = values.getValue("transmissionDistance"), sourceRevision = f.sourceRevision, provenance = f.provenance,
++        sources = mapOf("brand" to f.brand.source, "material" to f.material.source, "product" to f.product.source, "colorName" to f.colorName.source,
++            "colorHex" to f.colorHex.source, "diameter" to f.diameterMm.source, "mass" to f.nominalMassG.source,
++            "nozzleMin" to source(f.nozzleMinC), "nozzleMax" to source(f.nozzleMaxC), "bedMin" to source(f.bedMinC), "bedMax" to source(f.bedMaxC),
++            "transmissionDistance" to source(f.transmissionDistance)),
++        originalValues = values,
++    )
++}
+ internal fun encodeSnapshot(item: FilamentItem): String {
+     val values = item.values().toMutableMap()
+     values["packageId"] = item.entry.packageId; values["sourceRevision"] = item.entry.sourceRevision; values["provenance"] = item.provenance.name
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt
+index 0393172ef..ccee877a4 100644
+--- a/app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt
+@@ -184,10 +184,13 @@ interface CanonicalDao {
+     @Upsert suspend fun putTdMeasurement(value: TransmissionDistanceMeasurementEntity)
+ 
+     @Query("SELECT * FROM filament_profiles WHERE profile_id=:id") suspend fun profile(id: String): FilamentProfileEntity?
++    @Query("SELECT * FROM filament_profiles WHERE legacy_record_id=:legacyId") suspend fun profileForLegacyRecord(legacyId: String): FilamentProfileEntity?
+     @Query("SELECT * FROM profile_observations WHERE profile_id=:profileId ORDER BY field_name, created_at, observation_id") suspend fun observations(profileId: String): List<ProfileObservationEntity>
+     @Query("SELECT * FROM profile_overrides WHERE profile_id=:profileId ORDER BY field_name") suspend fun overrides(profileId: String): List<ProfileOverrideEntity>
+     @Query("SELECT * FROM profile_identifiers WHERE profile_id=:profileId ORDER BY scheme, value") suspend fun identifiers(profileId: String): List<ProfileIdentifierEntity>
+     @Query("SELECT * FROM physical_spools WHERE profile_id=:profileId ORDER BY created_at, spool_id") suspend fun spools(profileId: String): List<PhysicalSpoolEntity>
++    @Query("SELECT * FROM physical_spools WHERE spool_id=:id") suspend fun spool(id: String): PhysicalSpoolEntity?
++    @Query("SELECT * FROM physical_spools WHERE legacy_record_id=:legacyId") suspend fun spoolForLegacyRecord(legacyId: String): PhysicalSpoolEntity?
+     @Query("SELECT * FROM tag_bindings WHERE spool_id=:spoolId ORDER BY binding_order, created_at") suspend fun tagBindings(spoolId: String): List<TagBindingEntity>
+     @Query("SELECT * FROM transmission_distance_measurements WHERE profile_id=:profileId ORDER BY created_at, measurement_id") suspend fun tdMeasurements(profileId: String): List<TransmissionDistanceMeasurementEntity>
+     @Query("DELETE FROM profile_observations WHERE observation_id LIKE :prefix || '%'") suspend fun deleteObservationsWithPrefix(prefix: String)
+@@ -196,15 +199,30 @@ interface CanonicalDao {
+     @Query("DELETE FROM transmission_distance_measurements WHERE measurement_id=:id") suspend fun deleteTdMeasurement(id: String)
+     @Query("DELETE FROM physical_spools WHERE legacy_record_id=:legacyId") suspend fun deleteLegacySpool(legacyId: String)
+     @Query("DELETE FROM filament_profiles WHERE legacy_record_id=:legacyId") suspend fun deleteLegacyProfile(legacyId: String)
++    @Query("DELETE FROM filament_profiles WHERE profile_id=:profileId") suspend fun deleteProfile(profileId: String)
+     @Query("SELECT COUNT(*) FROM physical_spools WHERE profile_id=:profileId") suspend fun spoolCount(profileId: String): Int
+     @Query("UPDATE filament_profiles SET legacy_record_id=NULL WHERE profile_id=:profileId") suspend fun detachLegacyProfile(profileId: String)
+ 
+     @Transaction
+-    suspend fun syncLegacyRecord(record: CustomRecord) {
+-        val profileId = legacyProfileId(record.id)
++    suspend fun syncLegacyRecord(record: CustomRecord, requestedProfileId: String? = null, requestedSpoolId: String? = null,
++                                 requestedInitialQuantityG: Int? = null, requestedRemainingQuantityG: Int? = null) {
++        val existingSpool = spoolForLegacyRecord(record.id)
++        require(requestedProfileId == null || existingSpool == null || existingSpool.profileId == requestedProfileId) {
++            "Local record is already assigned to a different profile identity"
++        }
++        require(requestedSpoolId == null || existingSpool == null || existingSpool.spoolId == requestedSpoolId) {
++            "Local record is already assigned to a different spool identity"
++        }
++        val profileId = existingSpool?.profileId ?: profileForLegacyRecord(record.id)?.profileId ?: requestedProfileId ?: legacyProfileId(record.id)
++        val spoolId = existingSpool?.spoolId ?: requestedSpoolId ?: legacySpoolId(record.id)
++        require(profileId.isNotBlank() && spoolId.isNotBlank() && profileId != spoolId)
++        val conflictingSpool = spool(spoolId)
++        require(conflictingSpool == null || conflictingSpool.legacyRecordId == record.id) { "Spool identity is already assigned to another local record" }
+         val observationPrefix = "legacy-observation:${record.id}:"
+         val identifierPrefix = "legacy-identifier:${record.id}:"
+-        putProfile(FilamentProfileEntity(profileId, record.id, record.updatedAt, record.updatedAt))
++        val existingProfile = profile(profileId)
++        putProfile(existingProfile?.copy(updatedAt = record.updatedAt)
++            ?: FilamentProfileEntity(profileId, record.id, record.updatedAt, record.updatedAt))
+         deleteObservationsWithPrefix(observationPrefix)
+         deleteOverrides(profileId)
+         deleteIdentifiersWithPrefix(identifierPrefix)
+@@ -217,8 +235,11 @@ interface CanonicalDao {
+         val identifiers = record.legacyIdentifiers(profileId, identifierPrefix)
+         if (identifiers.isNotEmpty()) putIdentifiers(identifiers)
+         val quantity = record.massG.takeIf { it > 0 } ?: 1000
++        val initialQuantity = requestedInitialQuantityG ?: existingSpool?.initialQuantityG ?: quantity
++        val remainingQuantity = requestedRemainingQuantityG ?: existingSpool?.remainingQuantityG ?: initialQuantity
++        require(initialQuantity > 0 && remainingQuantity in 0..initialQuantity)
+         putSpool(PhysicalSpoolEntity(
+-            legacySpoolId(record.id), profileId, record.id, quantity, quantity,
++            spoolId, profileId, record.id, initialQuantity, remainingQuantity,
+             null, null, null, null, null, null, null, "{}", record.updatedAt, record.updatedAt,
+         ))
+         val tdId = "legacy-td:${record.id}"
+@@ -345,17 +366,27 @@ internal fun dropCanonicalTablesForRollback(db: SupportSQLiteDatabase) {
+ }
+ 
+ class LocalFilamentRepository internal constructor(private val database: UserDatabase) {
+-    suspend fun save(record: CustomRecord) = database.withTransaction {
++    suspend fun save(record: CustomRecord, profileId: String? = null, spoolId: String? = null,
++                     initialQuantityG: Int? = null, remainingQuantityG: Int? = null) = database.withTransaction {
+         database.user().save(record)
+-        database.canonical().syncLegacyRecord(record)
++        database.canonical().syncLegacyRecord(record, profileId, spoolId, initialQuantityG, remainingQuantityG)
+     }
+ 
+     suspend fun delete(recordId: String) = database.withTransaction {
+-        val profileId = legacyProfileId(recordId)
++        val profileId = database.canonical().spoolForLegacyRecord(recordId)?.profileId
++            ?: database.canonical().profileForLegacyRecord(recordId)?.profileId
++            ?: legacyProfileId(recordId)
+         database.user().deleteRecent(recordId)
+         database.canonical().deleteLegacySpool(recordId)
+-        if (database.canonical().spoolCount(profileId) == 0) database.canonical().deleteLegacyProfile(recordId)
+-        else database.canonical().detachLegacyProfile(profileId)
++        if (database.canonical().spoolCount(profileId) == 0) database.canonical().deleteProfile(profileId)
++        else if (database.canonical().profile(profileId)?.legacyRecordId == recordId) database.canonical().detachLegacyProfile(profileId)
+         database.user().deleteCustom(recordId)
+     }
++
++    suspend fun portableIds(recordId: String): SavedPortableIdentity? {
++        val spool = database.canonical().spoolForLegacyRecord(recordId) ?: return null
++        return SavedPortableIdentity(spool.profileId, spool.spoolId, spool.initialQuantityG, spool.remainingQuantityG)
++    }
+ }
++
++data class SavedPortableIdentity(val profileId: String, val spoolId: String, val initialQuantityG: Int, val remainingQuantityG: Int?)
+diff --git a/app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt b/app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt
+index dd2d7b7e0..98ede5e00 100644
+--- a/app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt
++++ b/app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt
+@@ -378,6 +378,43 @@ class StorageAcceptanceTest {
+         }
+     }
+ 
++    @Test fun importedPortableIdentitySurvivesResaveSupportsSharedProfilesAndRejectsSpoolCollisions() = runBlocking {
++        Room.inMemoryDatabaseBuilder(context, UserDatabase::class.java).allowMainThreadQueries().build().use { db ->
++            fun record(id: String, updatedAt: Long) = CustomRecord(
++                id, null, "", "", "Prismático", "PLA", "Basic", "雪", "00ADFF", "1.75", 1000,
++                190, 230, 35, 65, null, null, "", "portable", "CUSTOM", "Portable bundle", "Portable bundle",
++                "Portable bundle", "Portable bundle", "Portable bundle", "Portable bundle", "Portable bundle",
++                "Portable bundle", "Portable bundle", "Portable bundle", "Portable bundle", updatedAt, "", "2.7", "Portable bundle",
++            )
++            val repository = LocalFilamentRepository(db)
++            repository.save(record("portable-a", 10), "profile:shared", "spool:a", 1100, 725)
++            assertEquals(SavedPortableIdentity("profile:shared", "spool:a", 1100, 725), repository.portableIds("portable-a"))
++
++            repository.save(record("portable-a", 11))
++            assertEquals(SavedPortableIdentity("profile:shared", "spool:a", 1100, 725), repository.portableIds("portable-a"))
++
++            val reassignment = runCatching { repository.save(record("portable-a", 12), "profile:other", "spool:other", 1000, 1000) }
++            assertTrue(reassignment.exceptionOrNull()!!.message!!.contains("different profile"))
++            assertEquals("Prismático", db.user().byId("portable-a")!!.brand)
++            assertEquals(SavedPortableIdentity("profile:shared", "spool:a", 1100, 725), repository.portableIds("portable-a"))
++
++            repository.save(record("portable-b", 13), "profile:shared", "spool:b", 1100, 1100)
++            assertEquals(setOf("spool:a", "spool:b"), db.canonical().spools("profile:shared").map { it.spoolId }.toSet())
++            assertEquals(SavedPortableIdentity("profile:shared", "spool:b", 1100, 1100), repository.portableIds("portable-b"))
++
++            val collision = runCatching { repository.save(record("portable-c", 14), "profile:other", "spool:a", 1000, 1000) }
++            assertTrue(collision.exceptionOrNull()!!.message!!.contains("already assigned"))
++            assertNull(db.user().byId("portable-c"))
++
++            repository.delete("portable-b")
++            assertNull(db.user().byId("portable-b"))
++            assertEquals(listOf("spool:a"), db.canonical().spools("profile:shared").map { it.spoolId })
++            assertNotNull(db.canonical().profile("profile:shared"))
++            repository.delete("portable-a")
++            assertNull(db.canonical().profile("profile:shared"))
++        }
++    }
++
+     @Test fun deletingLegacyRecordPreservesAProfileUsedByAnotherPhysicalSpool() = runBlocking {
+         Room.inMemoryDatabaseBuilder(context, UserDatabase::class.java).allowMainThreadQueries().build().use { db ->
+             val record = CustomRecord(
+diff --git a/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/StrictJson.kt b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/StrictJson.kt
+index 36699e72d..5c249d124 100644
+--- a/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/StrictJson.kt
++++ b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/StrictJson.kt
+@@ -54,7 +54,11 @@ class StrictJson(private val maxBytes: Int = 16_384, private val maxDepth: Int =
+                         }
+                     }
+                     c.code < 0x20 -> fail("Control character")
+-                    c.isSurrogate() -> fail("Unpaired surrogate")
++                    c.isHighSurrogate() -> {
++                        if (i >= s.length || !s[i].isLowSurrogate()) fail("Unpaired surrogate")
++                        out.append(c).append(s[i++])
++                    }
++                    c.isLowSurrogate() -> fail("Unpaired surrogate")
+                     else -> out.append(c)
+                 }
+             }
+diff --git a/docs/ARCHITECTURE.md b/docs/ARCHITECTURE.md
+index b68327529..bbfcf293d 100644
+--- a/docs/ARCHITECTURE.md
++++ b/docs/ARCHITECTURE.md
+@@ -44,7 +44,7 @@ PAXX target identity is `v1.5.2-paxx12-21`. Its payload is OpenSpool `applicatio
+ 
+ ### QR and labels
+ 
+-Discovery codes already on packages are evidence inputs. Filamajig-generated QR is an output identity. The planned representation is a versioned offline payload containing a stable local spool ID plus a compact profile snapshot and codec/schema identifiers; an optional interoperable URI may accompany it. A proprietary cloud URL is never the sole identity. Labels render human-readable values and source/version cues from the same frozen export intent.
++Discovery codes already on packages are evidence inputs. Filamajig-generated QR is an output identity. The implemented [`filamajig.spool` version 1 contract](PORTABLE_IDENTITY.md) is a self-contained UTF-8 payload containing distinct stable profile and physical-spool IDs, a compact profile snapshot, and initial/remaining quantity. Full bundles add per-field sources. A proprietary cloud URL is never the sole identity. Labels render configurable human-readable values from the same frozen export intent.
+ 
+ ### Persistence and migration
+ 
+diff --git a/docs/ROADMAP.md b/docs/ROADMAP.md
+index aa6ff65c8..39a9cc602 100644
+--- a/docs/ROADMAP.md
++++ b/docs/ROADMAP.md
+@@ -90,6 +90,8 @@ Completed with OFD, local, merged-GTIN and full SpoolmanDB Community adapters; a
+ 
+ Builds on current QR label prototype. Define and publish a versioned compact offline QR schema, import/export bundle, configurable human-readable labels and spool/profile identity distinction. Acceptance: round-trip without service, forward-version handling, Unicode and capacity tests, app-removal survivability documented.
+ 
++Completed with the self-contained UTF-8 `filamajig.spool` version 1 QR contract; distinct reusable-profile and physical-spool IDs; initial and remaining quantities; a source-bearing JSON export bundle; local camera and pasted-bundle import; and configurable human-readable label fields. Host acceptance covers deterministic offline round trips, valid non-BMP Unicode, malformed and forward-version input, QR capacity, imported identity persistence, shared profiles, collision rollback and deletion. Real-device acceptance on the 2023 Razr verifies the actual camera decode path, exact Unicode and identity round trip, local operation, and the visible import/export surfaces. App-removal recovery and privacy boundaries are documented in [`PORTABLE_IDENTITY.md`](PORTABLE_IDENTITY.md).
++
+ ### M4 — Codec registry and pinned PAXX release
+ 
+ Previous OpenSpool/PAXX/NFC state-machine work remains substantial. Route UI through registry; add exact standard vs PAXX field/omission previews and release-pinned fixtures; bind one or two tags to a spool. Acceptance: unit round trips, byte capacity, malformed/unknown preservation, current Razr NTAG215 write/readback, and U1 `v1.5.2-paxx12-21` recognition across the supported field matrix. No generic claim substitutes.
+@@ -111,7 +113,7 @@ Refine the existing one-photo AI and retail-code paths, landscape/task restorati
+ | GTIN merge and camera scanner | M2/M6 | Implementation retained |
+ | AI label prototype | M6 | Implementation retained as optional |
+ | PAXX/U1 repair and hardware evidence | M4 | Evidence retained; pinned matrix still required |
+-| Label/QR prototype | M3 | Rendering work retained; identity schema missing |
++| Label/QR prototype | M3 | Completed with versioned offline identity and configurable rendering |
+ | Amazon/Icecat trials | None | Research retained; product dependency removed |
+ 
+-The next coherent milestone is **M3 portable spool identity and labels**. It gives the existing QR and label work a documented offline contract that keeps reusable filament profiles distinct from owned physical spools.
++The next coherent milestone is **M4 codec registry and pinned PAXX release**. It converts the already-proven OpenSpool/PAXX work into explicit release-pinned codec contracts and binds one or two verified tags to a physical spool.
+--- /dev/null
++++ b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/PortableIdentity.kt
+@@ -0,0 +1,124 @@
++package net.jamesjennison.filamajignfc.core
++
++const val PORTABLE_IDENTITY_SCHEMA = "filamajig.spool"
++const val PORTABLE_IDENTITY_VERSION = 1
++const val PORTABLE_QR_MAX_BYTES = 2_048
++
++data class PortableSpoolIdentity(
++    val profileId: String,
++    val spoolId: String,
++    val filament: FilamentRecord,
++    val initialQuantityG: Int,
++    val remainingQuantityG: Int? = null,
++) {
++    init {
++        require(profileId.isNotBlank() && spoolId.isNotBlank())
++        require(profileId != spoolId) { "Profile and spool identities must be distinct" }
++        require(initialQuantityG > 0)
++        require(remainingQuantityG == null || remainingQuantityG in 0..initialQuantityG)
++        validateRecord(filament)
++    }
++}
++
++sealed interface PortableIdentityDecodeResult {
++    data class Supported(val identity: PortableSpoolIdentity, val includesSources: Boolean) : PortableIdentityDecodeResult
++    data class FutureVersion(val version: Int, val raw: ByteArray) : PortableIdentityDecodeResult
++    data class Rejected(val reason: String) : PortableIdentityDecodeResult
++}
++
++object PortableIdentityCodec {
++    fun encodeQr(identity: PortableSpoolIdentity): ByteArray = encode(identity, includeSources = false).also {
++        if (it.size > PORTABLE_QR_MAX_BYTES) throw ValidationException("Portable QR payload exceeds $PORTABLE_QR_MAX_BYTES bytes; use the export bundle")
++    }
++
++    fun encodeBundle(identity: PortableSpoolIdentity): ByteArray = encode(identity, includeSources = true)
++
++    fun decode(bytes: ByteArray): PortableIdentityDecodeResult {
++        return try {
++        val root = StrictJson(maxBytes = 65_536, maxDepth = 12).parse(bytes) as? JsonValue.Obj
++            ?: throw ValidationException("Portable identity must be a JSON object")
++        if (root.string("schema") != PORTABLE_IDENTITY_SCHEMA) throw ValidationException("Unsupported portable identity schema")
++        val version = root.int("version") ?: throw ValidationException("Portable identity version must be an integer")
++        if (version > PORTABLE_IDENTITY_VERSION) return PortableIdentityDecodeResult.FutureVersion(version, bytes.copyOf())
++        if (version != PORTABLE_IDENTITY_VERSION) throw ValidationException("Unsupported portable identity version: $version")
++        val profileId = root.requiredString("profile_id")
++        val spoolId = root.requiredString("spool_id")
++        val filament = root.requiredObject("filament")
++        val sources = root.objectOrNull("sources")
++        fun source(key: String) = sources?.string(key).orEmpty().ifBlank { "Portable QR" }
++        fun field(key: String) = FieldValue(filament.requiredString(key), source(key))
++        fun optionalInt(key: String) = filament.int(key)?.let { FieldValue(it, source(key)) }
++        val record = FilamentRecord(
++            packageId = filament.requiredString("record_id"), variantId = filament.string("variant_id"), productId = filament.string("product_id"),
++            brand = field("brand"), material = field("material"), product = field("product"), colorName = field("color_name"),
++            colorHex = field("color_hex"), diameterMm = field("diameter_mm"),
++            nominalMassG = FieldValue(filament.int("nominal_mass_g") ?: throw ValidationException("nominal_mass_g must be an integer"), source("nominal_mass_g")),
++            nozzleMinC = optionalInt("nozzle_min_c"), nozzleMaxC = optionalInt("nozzle_max_c"),
++            bedMinC = optionalInt("bed_min_c"), bedMaxC = optionalInt("bed_max_c"),
++            gtin = filament.string("gtin"), sku = filament.string("sku"), sourceRevision = filament.requiredString("source_revision"),
++            provenance = filament.requiredString("provenance").let { runCatching { Provenance.valueOf(it) }.getOrElse { throw ValidationException("Invalid provenance") } },
++            additionalColors = filament.stringArray("additional_colors"),
++            transmissionDistance = filament.string("transmission_distance")?.let { FieldValue(it, source("transmission_distance")) },
++        )
++        val quantity = root.requiredObject("quantity")
++        PortableIdentityDecodeResult.Supported(
++            PortableSpoolIdentity(profileId, spoolId, record,
++                quantity.int("initial_g") ?: throw ValidationException("initial_g must be an integer"), quantity.int("remaining_g")),
++            sources != null,
++        )
++        } catch (error: Exception) {
++            PortableIdentityDecodeResult.Rejected(error.message ?: "Invalid portable identity")
++        }
++    }
++
++    private fun encode(identity: PortableSpoolIdentity, includeSources: Boolean): ByteArray {
++        val f = identity.filament
++        val filament = linkedMapOf<String, Any?>(
++            "record_id" to f.packageId, "variant_id" to f.variantId, "product_id" to f.productId,
++            "brand" to f.brand.value, "material" to f.material.value, "product" to f.product.value,
++            "color_name" to f.colorName.value, "color_hex" to normalizeHex(f.colorHex.value), "diameter_mm" to f.diameterMm.value,
++            "nominal_mass_g" to f.nominalMassG.value, "nozzle_min_c" to f.nozzleMinC?.value, "nozzle_max_c" to f.nozzleMaxC?.value,
++            "bed_min_c" to f.bedMinC?.value, "bed_max_c" to f.bedMaxC?.value, "gtin" to f.gtin, "sku" to f.sku,
++            "source_revision" to f.sourceRevision, "provenance" to f.provenance.name,
++            "additional_colors" to f.additionalColors.map(::normalizeHex), "transmission_distance" to f.transmissionDistance?.value,
++        )
++        val root = linkedMapOf<String, Any?>(
++            "schema" to PORTABLE_IDENTITY_SCHEMA, "version" to PORTABLE_IDENTITY_VERSION,
++            "profile_id" to identity.profileId, "spool_id" to identity.spoolId,
++            "filament" to filament,
++            "quantity" to linkedMapOf("initial_g" to identity.initialQuantityG, "remaining_g" to identity.remainingQuantityG),
++        )
++        if (includeSources) root["sources"] = linkedMapOf(
++            "brand" to f.brand.source, "material" to f.material.source, "product" to f.product.source,
++            "color_name" to f.colorName.source, "color_hex" to f.colorHex.source, "diameter_mm" to f.diameterMm.source,
++            "nominal_mass_g" to f.nominalMassG.source, "nozzle_min_c" to f.nozzleMinC?.source,
++            "nozzle_max_c" to f.nozzleMaxC?.source, "bed_min_c" to f.bedMinC?.source, "bed_max_c" to f.bedMaxC?.source,
++            "transmission_distance" to f.transmissionDistance?.source,
++        )
++        return json(root).encodeToByteArray()
++    }
++}
++
++private fun JsonValue.Obj.requiredString(key: String) = string(key)?.takeIf(String::isNotBlank)
++    ?: throw ValidationException("$key must be a non-empty string")
++private fun JsonValue.Obj.requiredObject(key: String) = values[key] as? JsonValue.Obj
++    ?: throw ValidationException("$key must be an object")
++private fun JsonValue.Obj.objectOrNull(key: String) = values[key] as? JsonValue.Obj
++private fun JsonValue.Obj.stringArray(key: String): List<String> = when (val value = values[key]) {
++    null -> emptyList()
++    is JsonValue.Arr -> value.values.map { (it as? JsonValue.Str)?.value ?: throw ValidationException("$key must contain strings") }
++    else -> throw ValidationException("$key must be an array")
++}
++
++private fun json(value: Any?): String = when (value) {
++    null -> "null"
++    is String -> buildString { append('"'); value.forEach { c -> when (c) {
++        '"' -> append("\\\""); '\\' -> append("\\\\"); '\b' -> append("\\b"); '\u000C' -> append("\\f")
++        '\n' -> append("\\n"); '\r' -> append("\\r"); '\t' -> append("\\t")
++        else -> if (c.code < 0x20) append("\\u%04x".format(c.code)) else append(c)
++    } }; append('"') }
++    is Int, is Long, is Boolean -> value.toString()
++    is Map<*, *> -> value.entries.filter { it.value != null }.joinToString(",", "{", "}") { json(it.key.toString()) + ":" + json(it.value) }
++    is Iterable<*> -> value.joinToString(",", "[", "]") { json(it) }
++    else -> throw ValidationException("Unsupported portable identity value")
++}
+--- /dev/null
++++ b/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/PortableIdentityTest.kt
+@@ -0,0 +1,65 @@
++package net.jamesjennison.filamajignfc.core
++
++import kotlin.test.*
++
++class PortableIdentityTest {
++    private fun sample(product: String = "PLA Basic") = PortableSpoolIdentity(
++        profileId = "profile:manufacturer:cyan", spoolId = "spool:owned:01",
++        filament = FilamentRecord(
++            "record-1", "variant-1", "product-1", FieldValue("MarsWork", "Label scan"), FieldValue("PLA", "Label scan"),
++            FieldValue(product, "Label scan"), FieldValue("Cyan", "Label scan"), FieldValue("00ADFF", "Label scan"),
++            FieldValue("1.75", "Assumed Filamajig default"), FieldValue(1000, "Label scan"), FieldValue(190, "Label scan"),
++            FieldValue(230, "Label scan"), FieldValue(35, "Label scan"), FieldValue(65, "Label scan"), "6938936717461", "MW-CYAN",
++            "label:sha256", Provenance.CUSTOM, listOf("FF00AA"), FieldValue("2.7", "Printed label"),
++        ), initialQuantityG = 1000, remainingQuantityG = 875,
++    )
++
++    @Test fun compactQrRoundTripsOfflineAndKeepsSpoolSeparateFromProfile() {
++        val expected = sample()
++        val encoded = PortableIdentityCodec.encodeQr(expected)
++        assertTrue(encoded.size <= PORTABLE_QR_MAX_BYTES)
++        val decoded = assertIs<PortableIdentityDecodeResult.Supported>(PortableIdentityCodec.decode(encoded))
++        assertEquals(expected.profileId, decoded.identity.profileId)
++        assertEquals(expected.spoolId, decoded.identity.spoolId)
++        assertEquals(expected.filament.brand.value, decoded.identity.filament.brand.value)
++        assertEquals(expected.filament.transmissionDistance?.value, decoded.identity.filament.transmissionDistance?.value)
++        assertEquals(expected.remainingQuantityG, decoded.identity.remainingQuantityG)
++        assertFalse(decoded.includesSources)
++        assertNotEquals(decoded.identity.profileId, decoded.identity.spoolId)
++        assertTrue(encoded.decodeToString().contains("MarsWork"))
++    }
++
++    @Test fun exportBundleRoundTripsUnicodeAndEveryFieldSource() {
++        val expected = sample("PLA Básico 雪色 🧵")
++        val encoded = PortableIdentityCodec.encodeBundle(expected)
++        val result = PortableIdentityCodec.decode(encoded)
++        val decoded = assertIs<PortableIdentityDecodeResult.Supported>(result, result.toString())
++        assertEquals(expected, decoded.identity)
++        assertTrue(decoded.includesSources)
++        assertEquals("PLA Básico 雪色 🧵", decoded.identity.filament.product.value)
++        assertEquals("Printed label", decoded.identity.filament.transmissionDistance?.source)
++    }
++
++    @Test fun futureVersionIsPreservedWithoutInterpretation() {
++        val future = "{\"schema\":\"filamajig.spool\",\"version\":2,\"new\":true}".encodeToByteArray()
++        val decoded = assertIs<PortableIdentityDecodeResult.FutureVersion>(PortableIdentityCodec.decode(future))
++        assertEquals(2, decoded.version)
++        assertContentEquals(future, decoded.raw)
++    }
++
++    @Test fun malformedIdentityAndOversizedQrAreRejected() {
++        assertIs<PortableIdentityDecodeResult.Rejected>(PortableIdentityCodec.decode("{}".encodeToByteArray()))
++        val oversized = sample().let { it.copy(filament = it.filament.copy(sourceRevision = "x".repeat(3000))) }
++        assertFailsWith<ValidationException> { PortableIdentityCodec.encodeQr(oversized) }
++        assertFailsWith<IllegalArgumentException> { sample().copy(spoolId = sample().profileId) }
++    }
++
++    @Test fun strictJsonAcceptsUnicodeSurrogatePairsAndRejectsUnpairedSurrogates() {
++        val escaped = StrictJson().parse("{\"value\":\"\\uD83E\\uDDF5\"}".encodeToByteArray()) as JsonValue.Obj
++        assertEquals("🧵", escaped.string("value"))
++        val literal = StrictJson().parse("{\"value\":\"雪色 🧵\"}".encodeToByteArray()) as JsonValue.Obj
++        assertEquals("雪色 🧵", literal.string("value"))
++        assertFailsWith<ValidationException> { StrictJson().parse("{\"value\":\"\\uD83E\"}".encodeToByteArray()) }
++        assertFailsWith<ValidationException> { StrictJson().parse("{\"value\":\"\\uDDF5\"}".encodeToByteArray()) }
++    }
++}
+--- /dev/null
++++ b/app/src/androidTest/kotlin/net/jamesjennison/filamajignfc/DevicePortableIdentityAcceptanceTest.kt
+@@ -0,0 +1,55 @@
++package net.jamesjennison.filamajignfc
++
++import android.graphics.Bitmap
++import android.os.Build
++import androidx.test.ext.junit.runners.AndroidJUnit4
++import androidx.test.platform.app.InstrumentationRegistry
++import com.google.zxing.BarcodeFormat
++import com.google.zxing.EncodeHintType
++import com.google.zxing.qrcode.QRCodeWriter
++import kotlinx.coroutines.runBlocking
++import net.jamesjennison.filamajignfc.core.*
++import org.json.JSONObject
++import org.junit.Assert.*
++import org.junit.Test
++import org.junit.runner.RunWith
++import java.io.ByteArrayOutputStream
++import java.io.File
++
++@RunWith(AndroidJUnit4::class)
++class DevicePortableIdentityAcceptanceTest {
++    @Test fun generatedQrRoundTripsOfflineOnRazr2023() = runBlocking {
++        assertEquals("motorola razr 2023", Build.MODEL)
++        val fieldSource = "Printed label"
++        val identity = PortableSpoolIdentity(
++            "legacy-profile:portable-device", "legacy-spool:portable-device",
++            FilamentRecord(
++                "portable-device", null, null, FieldValue("Filamajig QA", fieldSource), FieldValue("PLA+", fieldSource),
++                FieldValue("Prismático 雪", fieldSource), FieldValue("Cyan", fieldSource), FieldValue("00ADFF", fieldSource),
++                FieldValue("1.75", fieldSource), FieldValue(1000, fieldSource), FieldValue(195, fieldSource), FieldValue(225, fieldSource),
++                FieldValue(50, fieldSource), FieldValue(60, fieldSource), null, "QA-PORTABLE", "device-test", Provenance.CUSTOM,
++                listOf("FF00AA"), FieldValue("2.7", fieldSource),
++            ), 1000, 840,
++        )
++        val payload = PortableIdentityCodec.encodeQr(identity)
++        val matrix = QRCodeWriter().encode(payload.decodeToString(), BarcodeFormat.QR_CODE, 1000, 1000,
++            mapOf(EncodeHintType.CHARACTER_SET to "UTF-8"))
++        val bitmap = Bitmap.createBitmap(matrix.width, matrix.height, Bitmap.Config.ARGB_8888)
++        bitmap.setPixels(IntArray(matrix.width * matrix.height) { index ->
++            if (matrix[index % matrix.width, index / matrix.width]) android.graphics.Color.BLACK else android.graphics.Color.WHITE
++        }, 0, matrix.width, 0, 0, matrix.width, matrix.height)
++        val jpeg = ByteArrayOutputStream().also { bitmap.compress(Bitmap.CompressFormat.JPEG, 95, it) }.toByteArray()
++        val detected = decodeLabelCodesFromImage(jpeg).single { it.format == "QR_CODE" }
++        assertEquals(payload.decodeToString(), detected.value)
++        val decoded = PortableIdentityCodec.decode(detected.value.encodeToByteArray()) as PortableIdentityDecodeResult.Supported
++        assertEquals(identity.profileId, decoded.identity.profileId)
++        assertEquals(identity.spoolId, decoded.identity.spoolId)
++        assertEquals("Prismático 雪", decoded.identity.filament.product.value)
++        assertEquals(840, decoded.identity.remainingQuantityG)
++        val context = InstrumentationRegistry.getInstrumentation().targetContext
++        File(context.filesDir, "device-portable-identity-acceptance.json").writeText(JSONObject()
++            .put("model", Build.MODEL).put("schema", PORTABLE_IDENTITY_SCHEMA).put("version", PORTABLE_IDENTITY_VERSION)
++            .put("payload_bytes", payload.size).put("profile_id_distinct_from_spool_id", identity.profileId != identity.spoolId)
++            .put("qr_decode", "PASS").put("unicode_round_trip", "PASS").put("network_required", false).toString(2))
++    }
++}
+--- /dev/null
++++ b/docs/PORTABLE_IDENTITY.md
+@@ -0,0 +1,29 @@
++# Filamajig portable spool identity 1
++
++Filamajig portable identity is a self-contained UTF-8 JSON format for moving one physical spool and its reusable filament profile without an account, server, proprietary URL, or installed app. The MIME type for a full bundle is `application/vnd.filamajig.spool+json`.
++
++## Identity and versioning
++
++Every document has `schema: "filamajig.spool"`, integer `version: 1`, a `profile_id`, and a different `spool_id`. The profile identifies the reusable material/package definition. The spool identifies one owned physical instance and carries its initial and remaining quantity. Implementations must not substitute one ID for the other.
++
++Version 1 readers reject older, malformed, oversized, or wrong-schema documents. A document with a larger positive version is preserved as uninterpreted bytes and must not be imported, rewritten, or silently downgraded.
++
++## Encodings
++
++The compact QR form includes:
++
++- schema, version, profile ID, and spool ID;
++- brand, product, material, color, diameter, mass, temperature, TD, GTIN/SKU, source revision, and additional colors when present;
++- initial and remaining spool quantity.
++
++The export bundle contains the same identity plus the source string attached to every supported field. Null optional values are omitted. Object keys have a fixed order, color hex values are normalized to six uppercase digits, and UTF-8 is used without ASCII escaping. A compact QR is limited to 2,048 bytes; larger data must use the export bundle.
++
++## Offline round trip
++
++The detail view for a saved local spool generates its QR locally and can share the full JSON bundle through Android's user-selected share target. The home screen can paste/import that bundle. The label/QR camera recognizes this schema locally and bypasses AI analysis. Both import paths open the ordinary editable review form before saving.
++
++The QR contains its data directly rather than a link. A printed QR or separately saved JSON bundle therefore remains readable after Filamajig is removed, its local database is lost, or the original phone is unavailable. Reinstalling the app is not required to recover the JSON with any standards-compliant QR decoder, though another implementation must follow this versioning contract to interpret it.
++
++## Safety and privacy
++
++Portable documents contain spool data selected for export. They do not contain API keys, device identifiers, NFC UIDs, image data, account data, or network locations. Sharing is an explicit Android user action.

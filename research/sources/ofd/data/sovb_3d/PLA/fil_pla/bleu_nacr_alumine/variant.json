@@ -1,0 +1,9 @@
+{
+  "uuid": "a0814e45-1c2c-473a-a659-e86760164e74",
+  "id": "bleu_nacr_alumine",
+  "name": "Bleu Nacré Alumine",
+  "color_hex": "#2941BD",
+  "traits": {
+    "contains_aluminium": true
+  }
+}

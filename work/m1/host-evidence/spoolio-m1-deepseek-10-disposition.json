@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-deepseek-10",
+  "disposition": "CONFIRMED",
+  "reason": "CONFIRMED future acceptance gate, not a claim of present readiness. Physical NTAG215/U1/independent-reader and on-device p95 remain required before full M1 completion.",
+  "evidence_reference": "work/m1/HOST_REMEDIATION_DIRECTION.md; host initial source snapshot review-cycle-38636c32948d",
+  "resolved": false
+}

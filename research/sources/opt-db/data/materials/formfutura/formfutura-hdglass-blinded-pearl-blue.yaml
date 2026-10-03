@@ -1,0 +1,21 @@
+uuid: bf695300-80ad-55c0-b8a7-4f18531f263c
+slug: formfutura-hdglass-blinded-pearl-blue
+brand:
+  slug: formfutura
+name: HDglass Blinded Pearl Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#599499ff'
+tags:
+  - silk
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-hdglass-blinded-pearl-blue/89f173919855.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 195
+  max_print_temperature: 225
+  min_bed_temperature: 80
+  max_bed_temperature: 90

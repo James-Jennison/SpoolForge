@@ -1,0 +1,23 @@
+uuid: a175fd9c-f2c1-59a2-b9f4-c7af411da005
+slug: fiberlogy-easy-pla-vertigo
+brand:
+  slug: fiberlogy
+name: Easy PLA Vertigo
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5a696cff'
+tags:
+  - glitter
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-easy-pla-vertigo/bff357bae06e.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 240

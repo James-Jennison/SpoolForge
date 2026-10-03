@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-deepseek-1",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "Data persistence/provenance",
+  "summary": "Custom records and edited-catalog records cannot preserve temperatures or per-field provenance.",
+  "claim": "Custom records and edited-catalog records cannot preserve temperatures or per-field provenance.",
+  "evidence": {
+    "source": "CustomRecord entity in Databases.kt has columns only for id,brand,material,product,color_name,color_hex,diameter_mm,mass_g,updated_at; no nozzle_min_c, nozzle_max_c, bed_min_c, bed_max_c, and no per-field source/provenance. CustomRecord.asCatalogEntry() in MainViewModel.kt maps all temperatures to null and sets sourceRevision='user' for every field. CustomDialog in MainActivity.kt exposes only brand/material/product/color/hex/diameter/mass, no temperature inputs. MainViewModel.decodedSeed() drops min_temp, max_temp, bed_min_temp, bed_max_temp from decoded tag values.",
+    "response_sha256": "9ce1f17a15210414355a99fa316c46989f28239b61a329155699d55078adf435"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Add temperature columns and per-field provenance columns to CustomRecord (or a normalized editing table). Extend custom UI and decodedSeed() to include temperature fields. Store original source per field for edited catalog records and preserve it across catalog replacement.",
+  "suggested_validation": "Create a custom record with nozzle/bed temperatures, restart the app, verify temperatures and per-field provenance are retained. Edit a catalog entry, replace the catalog, verify edited metadata and original source per field remain intact.",
+  "reviewer_confidence": "HIGH"
+}

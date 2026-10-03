@@ -1,0 +1,28 @@
+[
+  {
+    "uuid": "4d7a57ae-7a9a-46f9-a148-7fc8042b332d",
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "ean": "5903175653574",
+    "article_number": "80575",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1386-Filament-Spectrum-S-Flex-85A-1-75mm-LIME-GREEN-0-50kg-RAL-6018.html"
+      }
+    ]
+  },
+  {
+    "uuid": "075d9271-8d38-4573-9492-56087c73aa8e",
+    "filament_weight": 250,
+    "diameter": 1.75,
+    "ean": "5903175653499",
+    "article_number": "80568",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1379-Filament-Spectrum-S-Flex-85A-1-75mm-LIME-GREEN-0-25kg-RAL-6018.html"
+      }
+    ]
+  }
+]

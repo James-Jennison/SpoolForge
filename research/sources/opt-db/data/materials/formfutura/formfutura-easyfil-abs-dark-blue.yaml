@@ -1,0 +1,23 @@
+uuid: 24429454-359b-5284-8ed8-8d581dabfe74
+slug: formfutura-easyfil-abs-dark-blue
+brand:
+  slug: formfutura
+name: EasyFil ABS Dark Blue
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#0353baff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easyfil-abs-dark-blue/c61664ef2bda.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 100
+  max_bed_temperature: 100
+  drying_temperature: 40
+  drying_time: 360

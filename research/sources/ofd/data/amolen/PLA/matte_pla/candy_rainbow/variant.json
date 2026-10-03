@@ -1,0 +1,17 @@
+{
+  "uuid": "f4fc201f-4e45-4821-97e2-e6ab3e63b3ba",
+  "id": "candy_rainbow",
+  "name": "Candy Rainbow",
+  "color_hex": [
+    "#FEF49C",
+    "#FFE6FD",
+    "#F5B797",
+    "#D8EEA3",
+    "#9CD0DB"
+  ],
+  "traits": {
+    "matte": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

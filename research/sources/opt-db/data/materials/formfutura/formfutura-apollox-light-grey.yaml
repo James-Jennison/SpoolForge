@@ -1,0 +1,22 @@
+uuid: 3d066e7f-1b1d-5baf-81aa-68625174bf25
+slug: formfutura-apollox-light-grey
+brand:
+  slug: formfutura
+name: ApolloX Light Grey
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#c3ccd5ff'
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-apollox-light-grey/2bfcab5cee4f.png
+    type: unspecified
+properties:
+  density: 1.11
+  min_print_temperature: 235
+  max_print_temperature: 255
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  chamber_temperature: 40
+tags:
+  - filtration_recommended

@@ -1,0 +1,11 @@
+{
+  "uuid": "66dd30df-44c5-4df5-adbf-3dd528faf98e",
+  "id": "high_speed_pla",
+  "name": "High Speed PLA",
+  "diameter_tolerance": 0.02,
+  "density": 1.24,
+  "min_print_temperature": 190,
+  "max_print_temperature": 230,
+  "min_bed_temperature": 50,
+  "max_bed_temperature": 70
+}

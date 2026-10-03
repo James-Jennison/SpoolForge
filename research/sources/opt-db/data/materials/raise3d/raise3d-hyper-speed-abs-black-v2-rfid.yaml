@@ -1,0 +1,17 @@
+uuid: 62802e40-bf30-5211-b747-901cd9387782
+slug: raise3d-hyper-speed-abs-black-v2-rfid
+brand:
+  slug: raise3d
+name: Hyper Speed ABS Black-V2 - RFID
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#2f3234ff'
+tags:
+- high_speed
+properties:
+  density: 1.08
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-hyper-speed-abs-black-v2-rfid/raise3d-hyper-speed-abs-black-v2-rfid-0-96dfa930.jpg
+  type: unspecified

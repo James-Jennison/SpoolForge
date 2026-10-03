@@ -1,0 +1,22 @@
+uuid: a805da94-d43e-5cde-b450-1274e759fc70
+slug: filamentpm-abs-t-orange
+brand:
+  slug: filamentpm
+name: ABS-T - Orange
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#ff8e24ff'
+tags:
+  - high_temperature
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-abs-t-orange/0e0334111d26.png
+    type: unspecified
+properties:
+  density: 1.08
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 100
+  max_bed_temperature: 110

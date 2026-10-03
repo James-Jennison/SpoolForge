@@ -1,0 +1,10 @@
+{
+  "uuid": "b517f8ee-ad49-4507-a4f3-19513aad19ad",
+  "id": "greygreen",
+  "name": "GreyGreen",
+  "color_hex": "#656D60",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "uuid": "7fba4ae1-cdee-4c47-9bdb-715afdb8788c",
+  "id": "green",
+  "name": "Green",
+  "color_hex": "#83E665",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

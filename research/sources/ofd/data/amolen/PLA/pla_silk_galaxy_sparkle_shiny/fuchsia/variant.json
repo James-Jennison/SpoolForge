@@ -1,0 +1,15 @@
+{
+  "uuid": "0de65d75-53cd-403a-a7d1-5dd557728db6",
+  "id": "fuchsia",
+  "name": "Fuchsia",
+  "color_hex": [
+    "#7F068C",
+    "#CC00E3"
+  ],
+  "traits": {
+    "silk": true,
+    "glitter": true,
+    "iridescent": true,
+    "industrially_compostable": true
+  }
+}

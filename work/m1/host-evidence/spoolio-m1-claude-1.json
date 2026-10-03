@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-claude-1",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "claude",
+  "severity": "HIGH",
+  "category": "Custom filament records / data model",
+  "summary": "Custom filament records (both freshly authored and those seeded from a decoded NFC tag) can never store nozzle or bed temperatures, directly contradicting the requirement to 'preserve temperatures ... for edited-catalog/custom records.'",
+  "claim": "Custom filament records (both freshly authored and those seeded from a decoded NFC tag) can never store nozzle or bed temperatures, directly contradicting the requirement to 'preserve temperatures ... for edited-catalog/custom records.'",
+  "evidence": {
+    "source": "CustomRecord entity (data/Databases.kt) has columns only for brand/material/product/colorName/colorHex/diameterMm/massG/updatedAt \u2014 no nozzle/bed columns. CustomDialog's editable field list (MainActivity.kt) is exactly `listOf(\"Brand\" to brand,\"Material\" to material,\"Product\" to product,\"Color name\" to color,\"Color hex\" to hex,\"Diameter mm\" to diameter,\"Mass g\" to mass)` \u2014 no temperature inputs exist. MainViewModel.saveCustom() constructs its validation-only FilamentRecord with nozzleMinC/nozzleMaxC/bedMinC/bedMaxC hardcoded to `null`. MainViewModel.decodedSeed() extracts brand/type/subtype/color_hex/diameter/weight from a decoded tag but never reads min_temp/max_temp/bed_min_temp/bed_max_temp, and CustomSeed has no temperature fields to carry them. CustomRecord.asCatalogEntry() (MainViewModel.kt) hardcodes nozzleMinC/nozzleMaxC/bedMinC/bedMaxC to null, so CatalogEntry.toRecord() (MainViewModel.kt) then omits them (`nozzleMinC?.let{...}`) from any subsequent OpenSpool write.",
+    "response_sha256": "24d3990562d67e978414fe65adda6f7e9777b1af1f8ae914bef77ccc315c4478"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Add nozzle/bed temperature columns to CustomRecord (with a Room migration), add corresponding input fields to CustomDialog, populate them in decodedSeed()/CustomSeed, and thread them through saveCustom()/asCatalogEntry()/toRecord().",
+  "suggested_validation": "Create a custom record with explicit nozzle 230\u2013260 \u00b0C / bed 90\u2013110 \u00b0C, kill and relaunch the process, confirm the values persist, then arm and encode it in both Canonical and PAXX profiles and confirm min_temp/max_temp/bed_min_temp/bed_max_temp appear in the resulting payload where the profile supports them.",
+  "reviewer_confidence": "HIGH \u2014 derived directly from the full schema, UI, and mapping code with no external dependency."
+}

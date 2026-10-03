@@ -1,0 +1,22 @@
+uuid: 3e3dbd8c-c6f1-59a1-98ce-71d80f7eb0fc
+slug: filamentpm-pla-white
+brand:
+  slug: filamentpm
+name: PLA - White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ebece9ff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-pla-white/604a90712edc.png
+    type: unspecified
+properties:
+  density: 1.24
+  hardness_shore_d: 78.3
+  min_print_temperature: 200
+  max_print_temperature: 220
+  min_bed_temperature: 20
+  max_bed_temperature: 60

@@ -1,0 +1,13 @@
+{
+  "uuid": "5ce7428e-208c-4b70-abe1-c59eb1d51e0b",
+  "id": "copper_shore",
+  "name": "Copper Shore",
+  "color_hex": [
+    "#AF784D",
+    "#0085CA"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "uuid": "e7dbc77a-f836-4060-9f0c-d464c87dab47",
+  "id": "candy_gold_red",
+  "name": "Candy Gold Red",
+  "color_hex": [
+    "#FFCB47",
+    "#ED1536"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

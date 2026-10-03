@@ -1,0 +1,14 @@
+{
+  "uuid": "554bffd8-f66f-4d6e-902b-9351a5c06427",
+  "id": "gradient_gold_to_red",
+  "name": "Gradient Gold to Red",
+  "color_hex": [
+    "#CE8D00",
+    "#E20010"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

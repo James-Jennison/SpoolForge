@@ -1,0 +1,19 @@
+uuid: 2eb8ee50-81ac-525b-a6ac-9fde50df7fb0
+slug: formfutura-easyfil-epetg-white
+brand:
+  slug: formfutura
+name: EasyFil ePETG White
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ffffffff'
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easyfil-epetg-white/4182826fe14e.png
+    type: unspecified
+properties:
+  density: 1.29
+  min_print_temperature: 235
+  max_print_temperature: 275
+  min_bed_temperature: 70
+  max_bed_temperature: 90

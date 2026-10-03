@@ -1,0 +1,113 @@
+{
+  "model": "grok-4.6",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 3384,
+    "input_tokens_details": {
+      "cached_tokens": 512
+    },
+    "output_tokens": 892,
+    "output_tokens_details": {
+      "reasoning_tokens": 369
+    },
+    "total_tokens": 4276,
+    "num_sources_used": 0,
+    "num_server_side_tools_used": 0,
+    "cost_in_usd_ticks": 113520000,
+    "context_details": {
+      "input_tokens": 3384,
+      "output_tokens": 892
+    }
+  },
+  "extracted": {
+    "brand": {
+      "value": "Panchroma",
+      "confidence": 0.95,
+      "evidence": "Printed as Panchroma\u2122 PLA on the white label",
+      "basis": "printed"
+    },
+    "product": {
+      "value": "STARLIGHT PURPLE-RED",
+      "confidence": 0.92,
+      "evidence": "Large white text STARLIGHT PURPLE-RED on black panel; also Panchroma\u2122 PLA Gradient Starl... (1.75mm, 1kg)",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PLA",
+      "confidence": 0.97,
+      "evidence": "Printed Panchroma\u2122 PLA and Panchroma\u2122 PLA Gradient",
+      "basis": "printed"
+    },
+    "color": {
+      "value": "Starlight Purple-Red",
+      "confidence": 0.93,
+      "evidence": "STARLIGHT PURPLE-RED on the color name panel",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": 1.75,
+      "confidence": 0.96,
+      "evidence": "Printed (1.75mm, 1kg) under the barcode",
+      "basis": "printed"
+    },
+    "net_weight_g": {
+      "value": 1000,
+      "confidence": 0.96,
+      "evidence": "Printed 1kg next to 1.75mm",
+      "basis": "printed"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 1.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 1.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 1.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 1.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": "6938936717461",
+      "confidence": 0.98,
+      "evidence": "Printed EAN: 6938936717461",
+      "basis": "printed"
+    },
+    "sku": {
+      "value": "CA09019",
+      "confidence": 0.97,
+      "evidence": "Printed SKU: CA09019",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 1.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [
+      {
+        "value": "X004QSH4ZH",
+        "kind": "marketplace_asin",
+        "evidence": "Printed above barcode as X004QSH4ZH"
+      }
+    ],
+    "needs_user_review": [
+      "product name truncated as Gradient Starl...",
+      "QR payload not readable as text"
+    ]
+  }
+}

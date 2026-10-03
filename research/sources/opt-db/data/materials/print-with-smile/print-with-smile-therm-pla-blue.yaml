@@ -1,0 +1,15 @@
+uuid: 7f0c1d3e-8d69-5554-8007-40ba494376db
+slug: print-with-smile-therm-pla-blue
+brand:
+  slug: print-with-smile
+name: THERM PLA BLUE
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#dfdfd3ff'
+- color_rgba: '#6299dfff'
+tags:
+- temperature_color_change
+- industrially_compostable
+properties: {}

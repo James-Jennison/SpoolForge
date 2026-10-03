@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-claude-6",
+  "disposition": "CONFIRMED",
+  "reason": "Confirmed; remediate against Owner requirements and host guidance. Preserve unresolved NFC history, exercise actual Android store/lifecycle paths, remove unused installer if not authoritative. Source-level correction now validated by protected builds/tests and completed targeted review cycles8b02c7b33686,d04a66d06bba,8531a942e791,cac82d6622a8,084e65c7d60c as applicable; latest cycle all3 COMPLETE/no findings. Physical NFC acceptance remains separately open under spoolio-m1-deepseek-10. No RF success is inferred from these source tests.",
+  "evidence_reference": "work/m1/host-evidence/queued-disposal-claude.json; work/m1/host-evidence/queued-disposal-deepseek.json; work/m1/host-evidence/queued-disposal-gemini.json; work/m1/host-evidence/lifecycle-claude.json; work/m1/host-evidence/current-validation.json; work/m1/host-evidence/blank-tag-and-queued-disposal-build.log; evidence-cycle-a561eceffd00",
+  "resolved": true
+}

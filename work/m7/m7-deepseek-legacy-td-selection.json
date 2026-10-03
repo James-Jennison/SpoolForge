@@ -1,0 +1,20 @@
+{
+  "change_id": "filamajig-full-spectrum-m7-20260908",
+  "cycle_id": "review-cycle-1cb8ed9895da",
+  "reviewer_job_id": "deepseek-250ad0cefdcc",
+  "reviewer": "deepseek",
+  "evidence": {
+    "reviewer": "DeepSeek INITIAL_REVIEW",
+    "response_sha256": "aa5e9afc99f1159920f4043e53a7548e3aab388b176df7470b89ad2a83ef7f9a"
+  },
+  "affected_components": [],
+  "immutable": true,
+  "finding_id": "m7-deepseek-legacy-td-selection",
+  "severity": "MEDIUM",
+  "category": "migration-evidence-fidelity",
+  "summary": "Multiple valid legacy TD rows could migrate as multiple active characterizations.",
+  "claim": "Migration may need a deterministic single winner rather than conflict-preserving evidence.",
+  "suggested_validation": "Migrate multiple valid TD rows and verify the effective UI state.",
+  "suggested_remediation": "Select one legacy value and quarantine or supersede the remainder.",
+  "reviewer_confidence": "MEDIUM"
+}

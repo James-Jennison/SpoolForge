@@ -1,0 +1,20 @@
+{
+  "finding_id": "filamajig-label-grok-camera-transition",
+  "change_id": "filamajig-label-prototype-20260907",
+  "cycle_id": "review-cycle-b283c5a2aa6c",
+  "reviewer": "grok",
+  "severity": "MEDIUM",
+  "category": "capture-lifecycle",
+  "summary": "Successful capture left the camera dialog busy while network analysis ran.",
+  "claim": "The capture UI could appear stuck and could not transition cleanly to review.",
+  "evidence": {
+    "source": "review-cycle-b283c5a2aa6c"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "Dismiss the camera after a successful still and represent network analysis in parent state.",
+  "suggested_validation": "Device capture closes camera and presents review form after HTTP completion.",
+  "reviewer_confidence": "HIGH"
+}

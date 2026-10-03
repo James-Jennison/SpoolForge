@@ -1,0 +1,17 @@
+uuid: 5db401e4-1bf5-54ee-a31b-8f2556f57020
+slug: polymaker-panchroma-silk-pla-pezriwinkle
+brand:
+  slug: polymaker
+name: Panchroma™ Silk PLA Pezriwinkle
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#7894f2ff'
+tags:
+- silk
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/polymaker/polymaker-panchroma-silk-pla-pezriwinkle/86787f590ae1.png
+  type: unspecified
+properties: {}

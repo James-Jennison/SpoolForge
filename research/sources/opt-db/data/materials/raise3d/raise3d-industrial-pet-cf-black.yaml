@@ -1,0 +1,18 @@
+uuid: 1980c6b8-f08d-5275-ae0a-6ed3ffbaccc1
+slug: raise3d-industrial-pet-cf-black
+brand:
+  slug: raise3d
+name: Industrial PET CF Black
+class: FFF
+type: PET
+abbreviation: PET
+primary_color:
+  color_rgba: '#212322ff'
+tags:
+- contains_carbon_fiber
+- abrasive
+- contains_carbon
+properties: {}
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-industrial-pet-cf-black/raise3d-industrial-pet-cf-black-0-75a831e8.jpg
+  type: unspecified

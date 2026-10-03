@@ -1,0 +1,16 @@
+uuid: d3415ba0-cc2f-58de-b66c-42876a85bddf
+slug: precision-3d-filament-victory-red-pla
+brand:
+  slug: precision-3d-filament
+name: Victory Red PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e60000ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/precision-3d-filament/precision-3d-filament-victory-red-pla/42a113d0e88b.png
+  type: unspecified
+properties: {}

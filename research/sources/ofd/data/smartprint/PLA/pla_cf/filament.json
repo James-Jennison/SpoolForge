@@ -1,0 +1,8 @@
+{
+  "uuid": "f4cd796e-327f-4795-83c2-ed3081ba9b5f",
+  "id": "pla_cf",
+  "name": "PLA-CF",
+  "diameter_tolerance": 0.03,
+  "density": 1.26,
+  "max_dry_temperature": 50
+}

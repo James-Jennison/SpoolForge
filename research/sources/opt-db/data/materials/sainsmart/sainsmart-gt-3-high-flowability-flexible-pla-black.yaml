@@ -1,0 +1,13 @@
+uuid: 4ade6aee-202a-53de-b76b-92b2e368155f
+slug: sainsmart-gt-3-high-flowability-flexible-pla-black
+brand:
+  slug: sainsmart
+name: GT-3 High Flowability Flexible PLA Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- industrially_compostable
+properties: {}

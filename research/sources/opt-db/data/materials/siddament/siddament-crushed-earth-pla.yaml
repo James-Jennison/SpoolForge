@@ -1,0 +1,15 @@
+uuid: 274fdc63-44b5-53b1-bfbe-26fb7106d442
+slug: siddament-crushed-earth-pla
+brand:
+  slug: siddament
+name: Crushed Earth PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#462b2eff'
+tags:
+- glitter
+- iridescent
+- industrially_compostable
+properties: {}

@@ -1,0 +1,15 @@
+{
+  "change_id": "filamajig-canvas-u1-paxx-20260929",
+  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "summary": "Add printer-target compatibility resolution and a single-format ELEGOO CANVAS NTAG215 workflow shared with Snapmaker U1 through PAXX/OpenRFID's Elegoo processor.",
+  "classification": "SUBSTANTIVE",
+  "affected_components": ["android", "nfc", "ntag215", "elegoo-canvas", "paxx", "openrfid", "ui", "documentation"],
+  "required_capabilities": ["architecture", "platform", "adversarial"],
+  "provenance": {
+    "branch": "codex/m1-offline-openspool",
+    "source_commit": "9eb7ca5fb6eca944155eb9cb6e4ef4918cccb01a",
+    "dirty_source_snapshot_sha256": "d44431b9e4aa4934a1c4d12859bbb8807388ad8b633a215dd436fb284861f66e",
+    "build_host": "gthost-build01",
+    "scope": "Local implementation, remote build validation, and read-only upstream research; no printer firmware modification, deployment, release, or physical tag write"
+  }
+}

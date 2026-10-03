@@ -1,0 +1,22 @@
+uuid: 5a2db4e3-095f-5f83-98f2-197e53d66b15
+slug: spectrum-lw-asa-ultrafoam-traffic-black
+brand:
+  slug: spectrum
+name: LW-ASA UltraFoam Traffic Black
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- foaming
+- filtration_recommended
+properties:
+  density: 1.08
+  min_print_temperature: 220
+  max_print_temperature: 285
+  min_bed_temperature: 60
+  max_bed_temperature: 90
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-lw-asa-ultrafoam-traffic-black/spectrum-lw-asa-ultrafoam-traffic-black-0-de37c68d.jpg
+  type: unspecified

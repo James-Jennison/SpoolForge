@@ -1,0 +1,7 @@
+{
+  "change_id": "filamajig-label-marketplace-guard-20260907",
+  "severity": "MEDIUM",
+  "concern": "The installed supervised debug prototype still uses temporary unauthenticated ADB-reversed loopback HTTP; release builds contain no configured label-service endpoint.",
+  "evidence_reference": "docs/AI_LABEL_SCANNING.md; app/src/debug/AndroidManifest.xml",
+  "accepted": true
+}

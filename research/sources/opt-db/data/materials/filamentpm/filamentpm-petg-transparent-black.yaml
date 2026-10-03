@@ -1,0 +1,21 @@
+uuid: 0574c216-3369-5db8-9941-db2512fc9181
+slug: filamentpm-petg-transparent-black
+brand:
+  slug: filamentpm
+name: PETG - Transparent black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-petg-transparent-black/50ad829f5387.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 90

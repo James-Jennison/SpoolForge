@@ -1,0 +1,20 @@
+uuid: 806b9dc0-6b01-5614-9815-89c77aa04410
+slug: spectrum-pla-high-speed-baby-blue
+brand:
+  slug: spectrum
+name: PLA High Speed Baby Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#39b9dbff'
+tags:
+- high_speed
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-high-speed-baby-blue/spectrum-pla-high-speed-baby-blue-0-fd647d0c.jpg
+  type: unspecified

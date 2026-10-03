@@ -1,0 +1,11 @@
+{
+  "uuid": "4dcdb411-dbc7-4a80-935a-84c1e22cc6be",
+  "id": "petg_pro",
+  "name": "PETG Pro",
+  "diameter_tolerance": 0.02,
+  "density": 1.27,
+  "min_print_temperature": 220,
+  "max_print_temperature": 250,
+  "min_bed_temperature": 70,
+  "max_bed_temperature": 80
+}

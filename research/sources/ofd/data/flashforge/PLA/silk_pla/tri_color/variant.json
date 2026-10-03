@@ -1,0 +1,15 @@
+{
+  "uuid": "f74d73d4-f3e8-4f94-887a-2ae863976b5d",
+  "id": "tri_color",
+  "name": "Tri-Color",
+  "color_hex": [
+    "#C63DBA",
+    "#0078BF",
+    "#41A840"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

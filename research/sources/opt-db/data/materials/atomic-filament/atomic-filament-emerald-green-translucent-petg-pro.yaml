@@ -1,0 +1,17 @@
+uuid: d92be758-80d0-568a-9fd8-73a75b485ebb
+slug: atomic-filament-emerald-green-translucent-petg-pro
+brand:
+  slug: atomic-filament
+name: Emerald Green Translucent PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/emerald-green-translucent-petg-pro
+primary_color:
+  color_rgba: '#34695aff'
+tags:
+- translucent
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-emerald-green-translucent-petg-pro/a0bd3af025b5.png
+  type: unspecified
+properties: {}

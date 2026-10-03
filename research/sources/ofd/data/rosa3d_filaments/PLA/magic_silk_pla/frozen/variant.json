@@ -1,0 +1,13 @@
+{
+  "uuid": "c2784fe8-0c03-4200-b368-ceb74edf8584",
+  "id": "frozen",
+  "name": "Frozen",
+  "color_hex": [
+    "#0099E6",
+    "#F5F5F5"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

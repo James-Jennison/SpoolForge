@@ -1,0 +1,24 @@
+uuid: cc79b932-a358-5aca-b850-24ce5e3455e5
+slug: polymaker-panchroma-matte-pla-army-light-green
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Army Light Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ab8c02ff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-army-light-green/0259c736afd6.png
+    type: unspecified
+transmission_distance: 0.8
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

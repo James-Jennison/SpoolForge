@@ -1,0 +1,23 @@
+uuid: 4749d4b9-f6fa-5277-8be9-f4fd1862096a
+slug: sunlu-pla-plus-grassgreen
+brand:
+  slug: sunlu
+name: PLA Plus GrassGreen
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#00a594ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/sunlu/sunlu-pla-plus-grassgreen/280a613c73da.jpg
+  type: unspecified
+properties:
+  density: 1.21
+  hardness_shore_d: 81
+  min_print_temperature: 205
+  max_print_temperature: 245
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50

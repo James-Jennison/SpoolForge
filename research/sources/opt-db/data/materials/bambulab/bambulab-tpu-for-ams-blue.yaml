@@ -1,0 +1,22 @@
+uuid: f7a665a5-1f76-59e8-9e1b-2d91b9ab371b
+slug: bambulab-tpu-for-ams-blue
+brand:
+  slug: bambulab
+name: TPU for AMS Blue
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#5898ddff'
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-tpu-for-ams-blue/49758d878369.png
+    type: unspecified
+properties:
+  density: 1.26
+  hardness_shore_d: 68.0
+  min_print_temperature: 220
+  max_print_temperature: 240
+  min_bed_temperature: 30
+  max_bed_temperature: 35
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45

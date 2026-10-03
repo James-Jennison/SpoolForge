@@ -1,0 +1,10 @@
+{
+  "uuid": "0a4c1aef-b4b2-4b8b-873d-a115bd02373b",
+  "id": "dual_purple_gold",
+  "name": "Dual Purple Gold",
+  "color_hex": "#800080",
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

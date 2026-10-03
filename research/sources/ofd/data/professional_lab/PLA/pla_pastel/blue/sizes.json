@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "d48a16a4-ede2-42ef-bf83-878d29c019e2",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 180,
+    "spool_core_diameter": 75,
+    "gtin": "5903707923021",
+    "article_number": "FG-P168-E1",
+    "discontinued": false
+  }
+]

@@ -1,0 +1,23 @@
+uuid: 7f6ef348-9473-5f4d-9b8d-2187e55c74f1
+slug: spectrum-pla-high-speed-neon-orange-uv
+brand:
+  slug: spectrum
+name: PLA High Speed Neon Orange UV
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#fa8423ff'
+- color_rgba: '#ebece9ff'
+tags:
+- high_speed
+- neon
+- illuminescent_color_change
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-high-speed-neon-orange-uv/spectrum-pla-high-speed-neon-orange-uv-0-6eb0878b.jpg
+  type: unspecified

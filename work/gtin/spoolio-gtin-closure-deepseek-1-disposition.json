@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-closure-deepseek-1",
+  "disposition": "REJECTED",
+  "reason": "NOT APPLICABLE: GtinIndex.lookup calls ensureFile on every invocation, and ensureFile hashes the entire sidecar. The revised device test nevertheless creates a fresh GtinIndex for every timed sample; actual Razr p95 is 87.42 ms with full hash validation.",
+  "evidence_reference": "app/src/main/kotlin/net/jamesjennison/spoolio/data/GtinIndex.kt; work/gtin/device-gtin-acceptance-stable-id.json",
+  "resolved": true
+}

@@ -1,0 +1,20 @@
+uuid: 729d81c7-aa87-507e-84a3-e7c6812de3fb
+slug: spectrum-pla-glitter-clear-gold
+brand:
+  slug: spectrum
+name: PLA Glitter Clear Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#d0bd93ff'
+tags:
+- glitter
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-glitter-clear-gold/spectrum-pla-glitter-clear-gold-0-09d56fdb.jpg
+  type: unspecified

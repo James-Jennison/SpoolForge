@@ -1,0 +1,21 @@
+uuid: 8be21446-d412-5f13-8503-1f12a898566c
+slug: hatchbox-blue-pla-filament
+brand:
+  slug: hatchbox
+name: Blue PLA Filament
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0353baff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-blue-pla-filament/ce3a7446677e.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 180
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 60

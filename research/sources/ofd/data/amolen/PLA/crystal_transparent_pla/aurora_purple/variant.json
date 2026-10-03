@@ -1,0 +1,13 @@
+{
+  "uuid": "d7e46c04-b8ec-485f-bc04-0b3a290cce7d",
+  "id": "aurora_purple",
+  "name": "Aurora Purple",
+  "color_hex": [
+    "#FD3DB5",
+    "#C63DBA"
+  ],
+  "traits": {
+    "translucent": true,
+    "gradual_color_change": true
+  }
+}

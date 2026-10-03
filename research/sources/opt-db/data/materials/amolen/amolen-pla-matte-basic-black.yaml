@@ -1,0 +1,24 @@
+uuid: 9c31fc70-cc0b-5793-87e7-20e2765c937f
+slug: amolen-pla-matte-basic-black
+brand:
+  slug: amolen
+name: PLA Matte Basic Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#3b353aff'
+tags:
+- matte
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-matte-basic-black/f3102a0f43e1.png
+  type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

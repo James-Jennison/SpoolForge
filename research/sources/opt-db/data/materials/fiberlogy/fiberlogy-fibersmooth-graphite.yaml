@@ -1,0 +1,23 @@
+uuid: 9dde8e71-efc7-5913-9bd8-b426c074a6d8
+slug: fiberlogy-fibersmooth-graphite
+brand:
+  slug: fiberlogy
+name: FiberSmooth Graphite
+class: FFF
+type: PVB
+abbreviation: PVB
+primary_color:
+  color_rgba: '#55555eff'
+tags:
+  - ipa_soluble
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-fibersmooth-graphite/6e38777562ff.png
+    type: unspecified
+properties:
+  density: 1.1
+  min_print_temperature: 215
+  max_print_temperature: 225
+  min_bed_temperature: 75
+  max_bed_temperature: 75
+  drying_temperature: 40
+  drying_time: 240

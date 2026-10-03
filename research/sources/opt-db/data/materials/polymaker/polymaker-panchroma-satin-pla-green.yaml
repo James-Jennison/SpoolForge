@@ -1,0 +1,21 @@
+uuid: d89d806f-ae43-5aef-910a-2aa8e93d08a4
+slug: polymaker-panchroma-satin-pla-green
+brand:
+  slug: polymaker
+name: Panchroma™ Satin PLA Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5eab71ff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-satin-pla-green/416cbf6c5a61.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

@@ -1,0 +1,21 @@
+uuid: b0a899ba-8f33-5883-b76a-a2cf2857859c
+slug: polymaker-panchroma-satin-pla-red
+brand:
+  slug: polymaker
+name: Panchroma™ Satin PLA Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#da1521ff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-satin-pla-red/f00b874a93a7.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

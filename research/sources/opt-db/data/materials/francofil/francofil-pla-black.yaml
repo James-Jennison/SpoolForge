@@ -1,0 +1,19 @@
+uuid: 551a7a7a-dcde-5957-a172-e794dea372c7
+slug: francofil-pla-black
+brand:
+  slug: francofil
+name: PLA Black
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://francofil.fr/en/product/filament-pla-noir/
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 70

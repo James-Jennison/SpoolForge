@@ -1,0 +1,24 @@
+uuid: ea11dc8c-2335-53c7-ae51-b61519ea4056
+slug: polymaker-panchroma-matte-pla-cotton-white
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Cotton White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f4efebff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-cotton-white/94f11c3c75dc.png
+    type: unspecified
+transmission_distance: 4.1
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

@@ -1,0 +1,16 @@
+uuid: e5930c2e-6aea-5d19-bfdd-44a625d8daf3
+slug: polymaker-polylite-abs-polymaker-teal
+brand:
+  slug: polymaker
+name: PolyLite™ ABS Polymaker Teal
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#00b4bcff'
+tags:
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/polymaker/polymaker-polylite-abs-polymaker-teal/4bdfd930c312.png
+  type: unspecified
+properties: {}

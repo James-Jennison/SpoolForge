@@ -1,0 +1,14 @@
+{
+  "uuid": "fd633e76-60a2-414f-9546-6e478aa201ff",
+  "id": "jungle",
+  "name": "Jungle",
+  "color_hex": [
+    "#3D9441",
+    "#70FA00",
+    "#F6FB38"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

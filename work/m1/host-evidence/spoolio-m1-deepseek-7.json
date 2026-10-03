@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-deepseek-7",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Catalog integrity",
+  "summary": "ensureCatalog skips verification if row count matches, without digest/content check.",
+  "claim": "ensureCatalog skips verification if row count matches, without digest/content check.",
+  "evidence": {
+    "source": "DataStore.ensureCatalog() contains `if(catalog.catalog().count()==expectedCount)return` before any digest validation or parsing. It only validates the compressed asset digest before initial insert; there is no verification of the existing DB generation against the current manifest.",
+    "response_sha256": "9ce1f17a15210414355a99fa316c46989f28239b61a329155699d55078adf435"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Store a content hash or generation ID in the database and verify it against the manifest before trusting; if mismatch, reinstall the complete validated generation.",
+  "suggested_validation": "Modify a row in the existing catalog DB while keeping the count identical; on next launch, ensureCatalog should detect the mismatch and reinstall the correct catalog.",
+  "reviewer_confidence": "HIGH"
+}

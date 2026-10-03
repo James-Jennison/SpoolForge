@@ -1,0 +1,23 @@
+uuid: d77567c5-1784-56cc-b971-97bfbba9eb70
+slug: sovb-3d-fil-abs-phosphorescent
+brand:
+  slug: sovb-3d
+name: Fil ABS Phosphorescent
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#70fa00ff'
+secondary_colors:
+- color_rgba: '#efeadfff'
+tags:
+- glow_in_the_dark
+- illuminescent_color_change
+- abrasive
+- filtration_recommended
+properties:
+  density: 1.03
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 90
+  max_bed_temperature: 100

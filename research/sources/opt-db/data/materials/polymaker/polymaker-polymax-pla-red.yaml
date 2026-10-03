@@ -1,0 +1,22 @@
+uuid: c65023d8-a523-573e-8456-5c86162c4af8
+slug: polymaker-polymax-pla-red
+brand:
+  slug: polymaker
+name: PolyMax™ PLA Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ed2f20ff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polymax-pla-red/12e58c2e9153.png
+    type: unspecified
+properties:
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

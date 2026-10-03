@@ -1,0 +1,13 @@
+uuid: ba760e7f-a6c2-583b-ad17-e2ee9f98e0ec
+slug: print-with-smile-re-petg-sugar-pink
+brand:
+  slug: print-with-smile
+name: RE-PETG Sugar PINK
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ffcccdff'
+tags:
+- recycled
+properties: {}

@@ -1,0 +1,13 @@
+uuid: 07dda76d-dfd8-5b70-ab87-8a2bf4fc4852
+slug: tinmorry-petg-marble-magic-brown
+brand:
+  slug: tinmorry
+name: PETG Marble Magic Brown
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e6dedeff'
+tags:
+- imitates_marble
+properties: {}

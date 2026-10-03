@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "4e7316ad-5a2d-49d0-8fae-285a0107cfd3",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/epla-matte"
+      }
+    ]
+  }
+]

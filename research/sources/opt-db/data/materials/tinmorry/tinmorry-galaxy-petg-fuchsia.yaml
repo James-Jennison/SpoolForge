@@ -1,0 +1,13 @@
+uuid: 85877f5b-e0e3-57ce-9bb7-0996c815ee46
+slug: tinmorry-galaxy-petg-fuchsia
+brand:
+  slug: tinmorry
+name: Galaxy PETG Fuchsia
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#71577eff'
+tags:
+- iridescent
+properties: {}

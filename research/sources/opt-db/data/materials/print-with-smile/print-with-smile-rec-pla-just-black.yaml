@@ -1,0 +1,14 @@
+uuid: 8f4fea9a-e930-5ae8-a557-a2870a0283b0
+slug: print-with-smile-rec-pla-just-black
+brand:
+  slug: print-with-smile
+name: REC-PLA Just BLACK
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#321702ff'
+tags:
+- recycled
+- industrially_compostable
+properties: {}

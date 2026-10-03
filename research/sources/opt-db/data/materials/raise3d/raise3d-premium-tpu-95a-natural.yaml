@@ -1,0 +1,18 @@
+uuid: e9423446-e111-5b19-9f16-faa260886f18
+slug: raise3d-premium-tpu-95a-natural
+brand:
+  slug: raise3d
+name: Premium TPU-95A Natural
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#d9d8deff'
+tags:
+- translucent
+- without_pigments
+properties:
+  hardness_shore_a: 95.0
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-premium-tpu-95a-natural/raise3d-premium-tpu-95a-natural-0-9a5d03c5.jpg
+  type: unspecified

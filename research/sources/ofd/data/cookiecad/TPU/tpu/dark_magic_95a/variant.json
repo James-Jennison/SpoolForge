@@ -1,0 +1,13 @@
+{
+  "uuid": "fb9fa2a1-7740-4e04-9fa8-0122efc5e052",
+  "id": "dark_magic_95a",
+  "name": "Dark Magic 95A",
+  "color_hex": [
+    "#2A3940",
+    "#02776F",
+    "#567BAC"
+  ],
+  "traits": {
+    "iridescent": true
+  }
+}

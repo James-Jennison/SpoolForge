@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-final-deepseek-2",
+  "disposition": "CONFIRMED",
+  "reason": "The verifier no longer imports the builder. It independently recomputes every Community package ID from source_record and scope, and compares it with the stored database ID.",
+  "evidence_reference": "tools/verify_gtin_index.py; work/gtin/verify-after-review-fixes.log",
+  "resolved": true
+}

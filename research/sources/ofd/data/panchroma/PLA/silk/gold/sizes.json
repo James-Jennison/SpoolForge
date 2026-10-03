@@ -1,0 +1,17 @@
+[
+  {
+    "uuid": "6300b931-92b5-4c69-bf1c-f67408cdc1a6",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 145,
+    "article_number": "CA03006",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "polymaker",
+        "url": "https://us.polymaker.com/products/panchroma-silk"
+      }
+    ]
+  }
+]

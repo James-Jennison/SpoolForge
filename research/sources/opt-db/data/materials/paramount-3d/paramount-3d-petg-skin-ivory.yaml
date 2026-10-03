@@ -1,0 +1,11 @@
+uuid: ed99c175-a774-5653-8e4c-621fdd7c84bc
+slug: paramount-3d-petg-skin-ivory
+brand:
+  slug: paramount-3d
+name: PETG (Skin - Ivory)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e3d99fff'
+properties: {}

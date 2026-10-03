@@ -1,0 +1,15 @@
+uuid: 20b212a7-79ff-5f50-8877-e3c563000dd5
+slug: raise3d-premium-pc-black-rfid
+brand:
+  slug: raise3d
+name: Premium PC Black - RFID
+class: FFF
+type: PC
+abbreviation: PC
+primary_color:
+  color_rgba: '#30312fff'
+properties:
+  density: 1.19
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-premium-pc-black-rfid/raise3d-premium-pc-black-rfid-0-2d3eecb7.jpg
+  type: unspecified

@@ -1,0 +1,16 @@
+uuid: ec5de959-40ec-57a2-ae3c-fe25e88872ee
+slug: prusament-resin-model-ultra-violet
+brand:
+  slug: prusament-resin
+name: Model Ultra Violet
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#413a7aff'
+properties:
+  density: 1.11
+  cure_wavelength: 405
+  viscosity_18c: 287
+  viscosity_25c: 167
+  viscosity_40c: 66
+  viscosity_60c: 1

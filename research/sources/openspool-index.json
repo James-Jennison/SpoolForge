@@ -1,0 +1,2558 @@
+{
+  "repo": "spuder/OpenSpool",
+  "branch": "main",
+  "sha": "c060a06c72b592aa6acb45ce9a8f345d08aa4b7a",
+  "date": "2026-07-30T20:22:31Z",
+  "license": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ce6fa4e52bee245d3a2437bc0329834b31ebd8a",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/4ce6fa4e52bee245d3a2437bc0329834b31ebd8a"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0e779187dc6574bee8ea27501e803e589182115",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/d0e779187dc6574bee8ea27501e803e589182115"
+    },
+    {
+      "path": ".github/workflows/contributors.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ab183b9ffdca656cb3c520977641111643daefb",
+      "size": 394,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/6ab183b9ffdca656cb3c520977641111643daefb"
+    },
+    {
+      "path": ".github/workflows/esphome.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cfce74cfaa39dd3a9c0f7ec418bf2a153c2f755",
+      "size": 7109,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4cfce74cfaa39dd3a9c0f7ec418bf2a153c2f755"
+    },
+    {
+      "path": ".github/workflows/pages-version.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c52af673fb656e91bf431602e417309dcc6ea53",
+      "size": 1212,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8c52af673fb656e91bf431602e417309dcc6ea53"
+    },
+    {
+      "path": ".github/workflows/pages.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d8f054016e314d0034069e3178500c24e8c958f",
+      "size": 2064,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/1d8f054016e314d0034069e3178500c24e8c958f"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc26cb6fb2da4a43b98f3d41c83e802abf18282e",
+      "size": 48,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/cc26cb6fb2da4a43b98f3d41c83e802abf18282e"
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc43cf613fbcd5d037b4faad083760b5f3ff6fa9",
+      "size": 903,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/bc43cf613fbcd5d037b4faad083760b5f3ff6fa9"
+    },
+    {
+      "path": ".yamlfmt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34c1a779fabe5cee72314c0df45c4db500848f42",
+      "size": 171,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/34c1a779fabe5cee72314c0df45c4db500848f42"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "CNAME",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7cb83fb4d25cfcce885d949b728db6a2dd0993d",
+      "size": 12,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f7cb83fb4d25cfcce885d949b728db6a2dd0993d"
+    },
+    {
+      "path": "LICENSE-Dependencies.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60785eab515393944c14472d45ee65c059aa2ff3",
+      "size": 83,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/60785eab515393944c14472d45ee65c059aa2ff3"
+    },
+    {
+      "path": "LICENSE-Documentation.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f625a0fba8e73eab6272ea1f9194e0b9350eb81c",
+      "size": 40,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f625a0fba8e73eab6272ea1f9194e0b9350eb81c"
+    },
+    {
+      "path": "LICENSE-Hardware.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf5c54deef149c27ecf1d4caa438092d3f66cd60",
+      "size": 14,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/bf5c54deef149c27ecf1d4caa438092d3f66cd60"
+    },
+    {
+      "path": "LICENSE-Software.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5410b6a11a79439adb852358395759eefa79887f",
+      "size": 18,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/5410b6a11a79439adb852358395759eefa79887f"
+    },
+    {
+      "path": "LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "858a02b8772f5796d9e6e83d19f061ac34a1f995",
+      "size": 213,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/858a02b8772f5796d9e6e83d19f061ac34a1f995"
+    },
+    {
+      "path": "NOTES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cb4356344c53c6b821ed5899dd30a20751ab38f",
+      "size": 5305,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8cb4356344c53c6b821ed5899dd30a20751ab38f"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f70aa38c524c28f5b33937ffe3768c9a4d734d4",
+      "size": 16824,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/7f70aa38c524c28f5b33937ffe3768c9a4d734d4"
+    },
+    {
+      "path": "TODO.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10e3eb83fb09f65b168ba46abf4ecf979b37d7a9",
+      "size": 2076,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/10e3eb83fb09f65b168ba46abf4ecf979b37d7a9"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5367681be84d3181116fbcdb66b7ea2b29ba88aa",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/5367681be84d3181116fbcdb66b7ea2b29ba88aa"
+    },
+    {
+      "path": "docs/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1264625042cc3a0bb5044eff796fb3332edcf6f",
+      "size": 61,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c1264625042cc3a0bb5044eff796fb3332edcf6f"
+    },
+    {
+      "path": "docs/Gemfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ae0cb099c4cb33b0fb1f304fbef21fa8f2bcff8",
+      "size": 333,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8ae0cb099c4cb33b0fb1f304fbef21fa8f2bcff8"
+    },
+    {
+      "path": "docs/Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "534e52f9dd15f4b8af499200d4e92d3be6a2d9c9",
+      "size": 268,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/534e52f9dd15f4b8af499200d4e92d3be6a2d9c9"
+    },
+    {
+      "path": "docs/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "212579fd848cb303a3dea2a1b7de31f725e4f919",
+      "size": 168,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/212579fd848cb303a3dea2a1b7de31f725e4f919"
+    },
+    {
+      "path": "docs/_config.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd22fecf7481a0145a4955c45d62f9ca38d1161b",
+      "size": 1585,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/cd22fecf7481a0145a4955c45d62f9ca38d1161b"
+    },
+    {
+      "path": "docs/_includes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2f30eb2853e16f0341dad8e4f5a588db089fc6b5",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/2f30eb2853e16f0341dad8e4f5a588db089fc6b5"
+    },
+    {
+      "path": "docs/_includes/footer_custom.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00ad7cf4505d59251b5223dc143174c67fb70bfd",
+      "size": 650,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/00ad7cf4505d59251b5223dc143174c67fb70bfd"
+    },
+    {
+      "path": "docs/_includes/head_custom.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f73259125059f0884e1a9225af8327fb324aae99",
+      "size": 109,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f73259125059f0884e1a9225af8327fb324aae99"
+    },
+    {
+      "path": "docs/_plugins",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "21d285db8d7fbb2fdf541f452431b4a201c888a5",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/21d285db8d7fbb2fdf541f452431b4a201c888a5"
+    },
+    {
+      "path": "docs/_plugins/file_size.rb",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "718e4af7adc03a113d165af6bee02f2cd2c45279",
+      "size": 165,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/718e4af7adc03a113d165af6bee02f2cd2c45279"
+    },
+    {
+      "path": "docs/_sass",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5955a95d6f25783ba942518476a87b16cc349a24",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/5955a95d6f25783ba942518476a87b16cc349a24"
+    },
+    {
+      "path": "docs/_sass/custom",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0081a05777da48a59a3ee6cb53615f054891de66",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/0081a05777da48a59a3ee6cb53615f054891de66"
+    },
+    {
+      "path": "docs/_sass/custom/custom.scss",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ec806bf275be68374061c9d9074ff789f3a2d87",
+      "size": 591,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/3ec806bf275be68374061c9d9074ff789f3a2d87"
+    },
+    {
+      "path": "docs/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ab585f4f5017813a6a65c0078dcaa11665799a72",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/ab585f4f5017813a6a65c0078dcaa11665799a72"
+    },
+    {
+      "path": "docs/assets/js",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc0e7ef66b1248e80954eb683f52004a28b2b423",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/fc0e7ef66b1248e80954eb683f52004a28b2b423"
+    },
+    {
+      "path": "docs/assets/js/tag-handler.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "995c3d438f578f469e013d10dfcf348f5d8c144f",
+      "size": 3858,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/995c3d438f578f469e013d10dfcf348f5d8c144f"
+    },
+    {
+      "path": "docs/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "817df2872510129160c4a1528a2fbf03a662b09c",
+      "size": 15406,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/817df2872510129160c4a1528a2fbf03a662b09c"
+    },
+    {
+      "path": "docs/firmware",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ab21816b99546988d24744d6576b5c73008627dc",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/ab21816b99546988d24744d6576b5c73008627dc"
+    },
+    {
+      "path": "docs/firmware/index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "919462f782a106c28387bf9003059561bb58e842",
+      "size": 768,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/919462f782a106c28387bf9003059561bb58e842"
+    },
+    {
+      "path": "docs/firmware/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "721bfdb0badde71ee2e6ebaffebe80b82d4a1606",
+      "size": 879,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/721bfdb0badde71ee2e6ebaffebe80b82d4a1606"
+    },
+    {
+      "path": "docs/firmware/openspool-esp32s2.factory.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8b198665a224021245823a01d3f3e20632a96eb",
+      "size": 1286880,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f8b198665a224021245823a01d3f3e20632a96eb"
+    },
+    {
+      "path": "docs/firmware/openspool-esp32s2.factory.bin.md5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6bce7a8b7b4e78c3ad15db148f5f94817c3d9cee",
+      "size": 33,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/6bce7a8b7b4e78c3ad15db148f5f94817c3d9cee"
+    },
+    {
+      "path": "docs/firmware/openspool-esp32s2.ota.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d83411d410d67cd48f9a83216d9b0fbddfac0029",
+      "size": 1221344,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/d83411d410d67cd48f9a83216d9b0fbddfac0029"
+    },
+    {
+      "path": "docs/firmware/openspool-esp32s2.ota.bin.md5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b508b6e8fb0c3f0d45efcea780e5cf4114b52f34",
+      "size": 33,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/b508b6e8fb0c3f0d45efcea780e5cf4114b52f34"
+    },
+    {
+      "path": "docs/firmware/openspool-esp32s3.factory.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3894acd686806de705857b38153658bc8ee3c726",
+      "size": 1316160,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/3894acd686806de705857b38153658bc8ee3c726"
+    },
+    {
+      "path": "docs/firmware/openspool-esp32s3.factory.bin.md5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "530c940dd806908d170d3444a80418a29adf8081",
+      "size": 33,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/530c940dd806908d170d3444a80418a29adf8081"
+    },
+    {
+      "path": "docs/firmware/openspool-esp32s3.ota.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ff4c350f61a6c2e7c312ea72e5ba33aea4d6047",
+      "size": 1250624,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8ff4c350f61a6c2e7c312ea72e5ba33aea4d6047"
+    },
+    {
+      "path": "docs/firmware/openspool-esp32s3.ota.bin.md5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0e2803df888f973dd40f52dd7c12884e51d64a1",
+      "size": 33,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c0e2803df888f973dd40f52dd7c12884e51d64a1"
+    },
+    {
+      "path": "docs/hardware",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3771329e614625cd23c909a388ef97d8a5e5c92",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/e3771329e614625cd23c909a388ef97d8a5e5c92"
+    },
+    {
+      "path": "docs/hardware/index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b88ff9c8bd5c5f82ad072823f4d1a6208442ce9d",
+      "size": 1158,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/b88ff9c8bd5c5f82ad072823f4d1a6208442ce9d"
+    },
+    {
+      "path": "docs/hardware/openspool-ams.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6ebc1aec2a491f883db333bfc2fabcf70ff1dfef",
+      "size": 113,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/6ebc1aec2a491f883db333bfc2fabcf70ff1dfef"
+    },
+    {
+      "path": "docs/hardware/openspool-mini.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f9eaf0ed320eb4b4d6058017a565d8319a92e33",
+      "size": 549,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/0f9eaf0ed320eb4b4d6058017a565d8319a92e33"
+    },
+    {
+      "path": "docs/images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c82f13302cb6682b2828ef2bf53dede2adb566c4",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/c82f13302cb6682b2828ef2bf53dede2adb566c4"
+    },
+    {
+      "path": "docs/images/BambuLogoLarge.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91b26245e4815ae513bedb2b3cbda86e7040a71d",
+      "size": 147191,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/91b26245e4815ae513bedb2b3cbda86e7040a71d"
+    },
+    {
+      "path": "docs/images/BambuLogoSmall.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24aa36c630617cede846c5d0851d1b03c44e0d81",
+      "size": 102322,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/24aa36c630617cede846c5d0851d1b03c44e0d81"
+    },
+    {
+      "path": "docs/images/IMG_5066.heic",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a4b064e57192f05f724db2feea090a4addb1a6d",
+      "size": 234765,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/3a4b064e57192f05f724db2feea090a4addb1a6d"
+    },
+    {
+      "path": "docs/images/NFC1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a385fb6bbbac8dbf12c8a7e2d2fdcae41e14280e",
+      "size": 966153,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/a385fb6bbbac8dbf12c8a7e2d2fdcae41e14280e"
+    },
+    {
+      "path": "docs/images/NFC3.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ab73816ae5bfa1310316841bd088fc2f326eaf0",
+      "size": 1255694,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4ab73816ae5bfa1310316841bd088fc2f326eaf0"
+    },
+    {
+      "path": "docs/images/OpenSpoolAMS1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f31c9a047263af56097fb3af0a9e2f815866b209",
+      "size": 485116,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f31c9a047263af56097fb3af0a9e2f815866b209"
+    },
+    {
+      "path": "docs/images/OpenSpoolLogoMedium1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0a253e4e63349dc8619f5d9074cd26691bf0f57",
+      "size": 217990,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/e0a253e4e63349dc8619f5d9074cd26691bf0f57"
+    },
+    {
+      "path": "docs/images/OpenSpoolMini1.heic",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5c3672141e147c1b66348a637c1c0d3b196465b",
+      "size": 46484,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/d5c3672141e147c1b66348a637c1c0d3b196465b"
+    },
+    {
+      "path": "docs/images/OpenSpoolMini2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59c017d4db0db7f4bd4714ce5a25746dd7aad6c6",
+      "size": 644443,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/59c017d4db0db7f4bd4714ce5a25746dd7aad6c6"
+    },
+    {
+      "path": "docs/images/OpenSpoolMini3.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a045d2bdcc6946b614dc2fdc6140a3e638551b71",
+      "size": 414947,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/a045d2bdcc6946b614dc2fdc6140a3e638551b71"
+    },
+    {
+      "path": "docs/images/OpenSpoolMiniWiringDiagram.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21de782efef7b364dafc00570d9b40346e4ba183",
+      "size": 460589,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/21de782efef7b364dafc00570d9b40346e4ba183"
+    },
+    {
+      "path": "docs/images/OpenSpoolMiniWiringDiagram2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bbafcf9d41348a4eea8248a1d12d15a355fd166",
+      "size": 237098,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8bbafcf9d41348a4eea8248a1d12d15a355fd166"
+    },
+    {
+      "path": "docs/images/android-chrome-192x192.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91520d8cc37755544a052eb379f9bc9caee192e9",
+      "size": 61885,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/91520d8cc37755544a052eb379f9bc9caee192e9"
+    },
+    {
+      "path": "docs/images/android-chrome-512x512.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b34fa4115d6e4f1be2777624b3ea3f084bde1bc0",
+      "size": 312981,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/b34fa4115d6e4f1be2777624b3ea3f084bde1bc0"
+    },
+    {
+      "path": "docs/images/apple-touch-icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acf528466aea2f8aea4fe21c0b513de1a77e999c",
+      "size": 55487,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/acf528466aea2f8aea4fe21c0b513de1a77e999c"
+    },
+    {
+      "path": "docs/images/favicon-16x16.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7567b7001b1e658b4ba5ebc3d12b0c70c0a5165",
+      "size": 991,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/a7567b7001b1e658b4ba5ebc3d12b0c70c0a5165"
+    },
+    {
+      "path": "docs/images/favicon-32x32.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "281d56513d4a1fe3345fef1fb37a1c18797731a4",
+      "size": 2889,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/281d56513d4a1fe3345fef1fb37a1c18797731a4"
+    },
+    {
+      "path": "docs/images/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "817df2872510129160c4a1528a2fbf03a662b09c",
+      "size": 15406,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/817df2872510129160c4a1528a2fbf03a662b09c"
+    },
+    {
+      "path": "docs/images/phoneNFC.jpeg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b8b2b49cbf38f7daa2186529da826bb9d34bc68",
+      "size": 160212,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/1b8b2b49cbf38f7daa2186529da826bb9d34bc68"
+    },
+    {
+      "path": "docs/images/printersettings.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "070ad60f680405a7004758ddc8bffb2e83a7af88",
+      "size": 54907,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/070ad60f680405a7004758ddc8bffb2e83a7af88"
+    },
+    {
+      "path": "docs/images/site.webmanifest",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45dc8a20658bd09ecb8ca1c88f94fe80cc4ca286",
+      "size": 263,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/45dc8a20658bd09ecb8ca1c88f94fe80cc4ca286"
+    },
+    {
+      "path": "docs/images/wifi1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a10f8a139bbb63a9b5133bcef3807ae7e9f032e",
+      "size": 181924,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8a10f8a139bbb63a9b5133bcef3807ae7e9f032e"
+    },
+    {
+      "path": "docs/index.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f60acb569d6eb50c463fec4b49d97b743477cdd0",
+      "size": 2797,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f60acb569d6eb50c463fec4b49d97b743477cdd0"
+    },
+    {
+      "path": "docs/makerchip.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35b3fd39a18b0a5694d437c9f4f36830f6c538c7",
+      "size": 707,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/35b3fd39a18b0a5694d437c9f4f36830f6c538c7"
+    },
+    {
+      "path": "docs/privacy_policy.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7af71e2ad34cf8e2bed9f9fa77e3c8adc81ec0bd",
+      "size": 1818,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/7af71e2ad34cf8e2bed9f9fa77e3c8adc81ec0bd"
+    },
+    {
+      "path": "docs/rfid.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "058365d5aec016073a8b075075914fe688554dcb",
+      "size": 2296,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/058365d5aec016073a8b075075914fe688554dcb"
+    },
+    {
+      "path": "docs/tag.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84f55cb6ed3ec03c8b1c1a9d398cc6ef8f71c784",
+      "size": 6442,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/84f55cb6ed3ec03c8b1c1a9d398cc6ef8f71c784"
+    },
+    {
+      "path": "extras",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f234ee356711b4352c6ac858cf8b6ca25153645",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/7f234ee356711b4352c6ac858cf8b6ca25153645"
+    },
+    {
+      "path": "extras/firmware_upload",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "88ef51e619304a4956cac4337bbb33c2d1793e98",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/88ef51e619304a4956cac4337bbb33c2d1793e98"
+    },
+    {
+      "path": "extras/firmware_upload/batch_upload.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "42a3f12c422dbd883b8a29648ea1cdf931665c13",
+      "size": 1169,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/42a3f12c422dbd883b8a29648ea1cdf931665c13"
+    },
+    {
+      "path": "extras/marketing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62e21b57cafae0f2b2f7c4be18cb6c1f0ecd08c1",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/62e21b57cafae0f2b2f7c4be18cb6c1f0ecd08c1"
+    },
+    {
+      "path": "extras/marketing/Mobile Apps.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "237d9996c8fb97e18f424fbe5e493f771af1a846",
+      "size": 248095,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/237d9996c8fb97e18f424fbe5e493f771af1a846"
+    },
+    {
+      "path": "extras/marketing/github.comspuderopenspool.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "daca609dfd0e11856a5e0b645ae6d317f0fb68c0",
+      "size": 62428,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/daca609dfd0e11856a5e0b645ae6d317f0fb68c0"
+    },
+    {
+      "path": "extras/shipping",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "740979fef412976e9d3686650e8c794caaf7f566",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/740979fef412976e9d3686650e8c794caaf7f566"
+    },
+    {
+      "path": "extras/shipping/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0233b041195df6c6823c126217603878b1d27c08",
+      "size": 102,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/0233b041195df6c6823c126217603878b1d27c08"
+    },
+    {
+      "path": "extras/shipping/get_mac.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c83c5d6018a4282f74cc80bc99bbca0900d6bd0",
+      "size": 2791,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/6c83c5d6018a4282f74cc80bc99bbca0900d6bd0"
+    },
+    {
+      "path": "extras/stickers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ffa359c16f764ea2b8440b79e76b2bf83f10523",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/3ffa359c16f764ea2b8440b79e76b2bf83f10523"
+    },
+    {
+      "path": "extras/stickers/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96c06f857d4d40bccf388558d2d6a201577c406c",
+      "size": 97,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/96c06f857d4d40bccf388558d2d6a201577c406c"
+    },
+    {
+      "path": "extras/stickers/1-Inch-Template.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f29657efa13bc47bc44b411efe131cf457f9a5f",
+      "size": 4513,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/1f29657efa13bc47bc44b411efe131cf457f9a5f"
+    },
+    {
+      "path": "extras/stickers/BambuLogo1Inch.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "289da542b30c5ef0187da45d052015c5d02cdabd",
+      "size": 23696,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/289da542b30c5ef0187da45d052015c5d02cdabd"
+    },
+    {
+      "path": "extras/stickers/BambuLogo1Inch.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97e773a5d9b14522a56622714509b6e8063944f5",
+      "size": 45942,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/97e773a5d9b14522a56622714509b6e8063944f5"
+    },
+    {
+      "path": "extras/stickers/OpenSpoolLogo1Inch.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6031b47edb308cea34e2706d7dc0fd670ad5df4",
+      "size": 195486,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/a6031b47edb308cea34e2706d7dc0fd670ad5df4"
+    },
+    {
+      "path": "extras/stickers/OpenSpoolLogo1Inch.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6da534ccbb4471499d62984b844341fcd87d0eba",
+      "size": 250658,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/6da534ccbb4471499d62984b844341fcd87d0eba"
+    },
+    {
+      "path": "extras/stickers/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5aa53ff40cecabce34e4a649feb0bdb804d9709",
+      "size": 316,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c5aa53ff40cecabce34e4a649feb0bdb804d9709"
+    },
+    {
+      "path": "extras/stickers/generate-stickers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f79c761ed2995a4c24a4360153a6f682d06a080d",
+      "size": 6355,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f79c761ed2995a4c24a4360153a6f682d06a080d"
+    },
+    {
+      "path": "extras/stickers/generate-template.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d273ade64cd4b50fc18155bf520142bb3170a174",
+      "size": 2899,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/d273ade64cd4b50fc18155bf520142bb3170a174"
+    },
+    {
+      "path": "firmware",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8a36db78c62270d4d6a4935504a186345a0b1131",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/8a36db78c62270d4d6a4935504a186345a0b1131"
+    },
+    {
+      "path": "firmware/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99358b334a7799370a4773e71f2b754c8ba58a03",
+      "size": 45,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/99358b334a7799370a4773e71f2b754c8ba58a03"
+    },
+    {
+      "path": "firmware/Makefile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b45fa23322fe21e159be9a723e9f05a435f37b57",
+      "size": 2171,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/b45fa23322fe21e159be9a723e9f05a435f37b57"
+    },
+    {
+      "path": "firmware/bambu.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b9248969c97b62db7690ef32b8844d9004fccdc",
+      "size": 5729,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4b9248969c97b62db7690ef32b8844d9004fccdc"
+    },
+    {
+      "path": "firmware/common.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "909770068cfff63f6c5f213b367e5f1cdd81312e",
+      "size": 3507,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/909770068cfff63f6c5f213b367e5f1cdd81312e"
+    },
+    {
+      "path": "firmware/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b60fbe795bea54f9ab0e321d7cb8da7a95de23e",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/5b60fbe795bea54f9ab0e321d7cb8da7a95de23e"
+    },
+    {
+      "path": "firmware/components/nfc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "89877dc7ebb19bfb40071559695aae78778c314d",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/89877dc7ebb19bfb40071559695aae78778c314d"
+    },
+    {
+      "path": "firmware/components/nfc/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eea1a47b24b9245c4459364f82fba7a856cc2b53",
+      "size": 362,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/eea1a47b24b9245c4459364f82fba7a856cc2b53"
+    },
+    {
+      "path": "firmware/components/nfc/automation.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff00340df0c9296856c08c211ec8a0af81a25a57",
+      "size": 226,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/ff00340df0c9296856c08c211ec8a0af81a25a57"
+    },
+    {
+      "path": "firmware/components/nfc/automation.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "565b71bdd97dc2953aefcd390bf01d7f9db53cfc",
+      "size": 296,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/565b71bdd97dc2953aefcd390bf01d7f9db53cfc"
+    },
+    {
+      "path": "firmware/components/nfc/binary_sensor",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cc3c6b1c214e32cb6a66855c770202c0255c5451",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/cc3c6b1c214e32cb6a66855c770202c0255c5451"
+    },
+    {
+      "path": "firmware/components/nfc/binary_sensor/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21c8298ea86b5d004f12da1b4deb01dbc219a9f5",
+      "size": 2191,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/21c8298ea86b5d004f12da1b4deb01dbc219a9f5"
+    },
+    {
+      "path": "firmware/components/nfc/binary_sensor/binary_sensor.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f1f6acd51fbfc46d31489c203dbd8a18dd30cc1",
+      "size": 3110,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8f1f6acd51fbfc46d31489c203dbd8a18dd30cc1"
+    },
+    {
+      "path": "firmware/components/nfc/binary_sensor/binary_sensor.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc313c2f2b43b1a63bb6f695c175071381435225",
+      "size": 1111,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/cc313c2f2b43b1a63bb6f695c175071381435225"
+    },
+    {
+      "path": "firmware/components/nfc/nci_core.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdaf6d0cc5940d7c859e20f60da0fd10dcf6dbeb",
+      "size": 6827,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/fdaf6d0cc5940d7c859e20f60da0fd10dcf6dbeb"
+    },
+    {
+      "path": "firmware/components/nfc/nci_message.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6b21f6ae072bd928aa2a1fae48e1350783f7bb2",
+      "size": 6292,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c6b21f6ae072bd928aa2a1fae48e1350783f7bb2"
+    },
+    {
+      "path": "firmware/components/nfc/nci_message.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6b8537402ceb2770d9f518a658c59719a46d4a4",
+      "size": 1653,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c6b8537402ceb2770d9f518a658c59719a46d4a4"
+    },
+    {
+      "path": "firmware/components/nfc/ndef_message.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e7304445c55be88fa9bb6f0f26773b16a8078e1f",
+      "size": 3822,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/e7304445c55be88fa9bb6f0f26773b16a8078e1f"
+    },
+    {
+      "path": "firmware/components/nfc/ndef_message.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e81fb216c64a210196567d0fe0643a4f6dfcbbd",
+      "size": 1026,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/2e81fb216c64a210196567d0fe0643a4f6dfcbbd"
+    },
+    {
+      "path": "firmware/components/nfc/ndef_record.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8eb0c3b9014086ade4144f3c5e5d10a2cd205c75",
+      "size": 1650,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8eb0c3b9014086ade4144f3c5e5d10a2cd205c75"
+    },
+    {
+      "path": "firmware/components/nfc/ndef_record.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20542bf24bd20776ac9978e7fcd57b38d4420a26",
+      "size": 1706,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/20542bf24bd20776ac9978e7fcd57b38d4420a26"
+    },
+    {
+      "path": "firmware/components/nfc/ndef_record_text.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80b0108b46cbb8f1aee5cc6314c9734fb39f2a30",
+      "size": 1072,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/80b0108b46cbb8f1aee5cc6314c9734fb39f2a30"
+    },
+    {
+      "path": "firmware/components/nfc/ndef_record_text.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa8f13bb4b05d4bdb487329bafdfb6ea8d279334",
+      "size": 1140,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/aa8f13bb4b05d4bdb487329bafdfb6ea8d279334"
+    },
+    {
+      "path": "firmware/components/nfc/ndef_record_uri.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9064f04f296c0babf25de1815e338034c040ea4c",
+      "size": 1286,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/9064f04f296c0babf25de1815e338034c040ea4c"
+    },
+    {
+      "path": "firmware/components/nfc/ndef_record_uri.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc8f2d9a73126f132fc582399d8b85fdb0a1b59c",
+      "size": 3293,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/fc8f2d9a73126f132fc582399d8b85fdb0a1b59c"
+    },
+    {
+      "path": "firmware/components/nfc/nfc.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf5a7f5ef131124fea7753878a1a26f4581c1b9d",
+      "size": 3219,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/cf5a7f5ef131124fea7753878a1a26f4581c1b9d"
+    },
+    {
+      "path": "firmware/components/nfc/nfc.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23bfdd8ef0cb87810ffb28b5a0b23514c39be6e2",
+      "size": 2993,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/23bfdd8ef0cb87810ffb28b5a0b23514c39be6e2"
+    },
+    {
+      "path": "firmware/components/nfc/nfc_helpers.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfaed6e486fac1119253f50af01e1ad891344293",
+      "size": 1275,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/bfaed6e486fac1119253f50af01e1ad891344293"
+    },
+    {
+      "path": "firmware/components/nfc/nfc_helpers.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74f5beba13445994b56bfa58601418627a4f5efb",
+      "size": 467,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/74f5beba13445994b56bfa58601418627a4f5efb"
+    },
+    {
+      "path": "firmware/components/nfc/nfc_tag.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5c15b00ec8d13c66db49134dcde91a5347dd984",
+      "size": 146,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c5c15b00ec8d13c66db49134dcde91a5347dd984"
+    },
+    {
+      "path": "firmware/components/nfc/nfc_tag.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58875a744d4371317461e4277cd2995d8c2c346d",
+      "size": 1702,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/58875a744d4371317461e4277cd2995d8c2c346d"
+    },
+    {
+      "path": "firmware/components/pn532",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "03ad908112b5b118f1a90da093933a88b8226fe7",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/03ad908112b5b118f1a90da093933a88b8226fe7"
+    },
+    {
+      "path": "firmware/components/pn532/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdcaf4267c8204bd7fe02a1d53b25a65c432209c",
+      "size": 2933,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/cdcaf4267c8204bd7fe02a1d53b25a65c432209c"
+    },
+    {
+      "path": "firmware/components/pn532/binary_sensor.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bcae30750d825c58eb5742dcd5e81c4c96a8ee3",
+      "size": 1444,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/9bcae30750d825c58eb5742dcd5e81c4c96a8ee3"
+    },
+    {
+      "path": "firmware/components/pn532/pn532.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8088e6c022f6417d9cd264fc240aee52bc98fb14",
+      "size": 12747,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8088e6c022f6417d9cd264fc240aee52bc98fb14"
+    },
+    {
+      "path": "firmware/components/pn532/pn532.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8194d864779e77f3cbf46c9695035d802847b3ce",
+      "size": 5112,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8194d864779e77f3cbf46c9695035d802847b3ce"
+    },
+    {
+      "path": "firmware/components/pn532/pn532_mifare_classic.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "943f8c551924acb750c434dbf6d887d06ebfa426",
+      "size": 9013,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/943f8c551924acb750c434dbf6d887d06ebfa426"
+    },
+    {
+      "path": "firmware/components/pn532/pn532_mifare_ultralight.cpp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b08a7336c77064991030bc1c6efcc74b96b06a54",
+      "size": 6875,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/b08a7336c77064991030bc1c6efcc74b96b06a54"
+    },
+    {
+      "path": "firmware/conf.d",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca2347e430c97d8260a5786aab47a3a3981f1d98",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/ca2347e430c97d8260a5786aab47a3a3981f1d98"
+    },
+    {
+      "path": "firmware/conf.d/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8596087b6fa1c9d0e3e1c364b6c6fb2b72267874",
+      "size": 28,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8596087b6fa1c9d0e3e1c364b6c6fb2b72267874"
+    },
+    {
+      "path": "firmware/conf.d/api.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "830d0d37af2cc56c6919393ea3cc6c473ea80730",
+      "size": 100,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/830d0d37af2cc56c6919393ea3cc6c473ea80730"
+    },
+    {
+      "path": "firmware/conf.d/automation.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d596a40649593d049867f10833de733ad144bb2c",
+      "size": 15361,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/d596a40649593d049867f10833de733ad144bb2c"
+    },
+    {
+      "path": "firmware/conf.d/bambu_printer.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "624b2978a1e23557cbfb2a6f5118ed19ad5fb576",
+      "size": 4344,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/624b2978a1e23557cbfb2a6f5118ed19ad5fb576"
+    },
+    {
+      "path": "firmware/conf.d/button.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "048e5aeaa49ca7ca124def10df16a3bb346b19c7",
+      "size": 1440,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/048e5aeaa49ca7ca124def10df16a3bb346b19c7"
+    },
+    {
+      "path": "firmware/conf.d/debug.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8d8d16d146f43d119bee7e1712285351a316e4a",
+      "size": 1067,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/b8d8d16d146f43d119bee7e1712285351a316e4a"
+    },
+    {
+      "path": "firmware/conf.d/extra.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4b687c5d8c3490a939c1f972ebc82c014e6bea7",
+      "size": 3189,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/d4b687c5d8c3490a939c1f972ebc82c014e6bea7"
+    },
+    {
+      "path": "firmware/conf.d/filament.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a6d03b48c760b81cb6f4c5e0c1f1890448a8814",
+      "size": 9021,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/3a6d03b48c760b81cb6f4c5e0c1f1890448a8814"
+    },
+    {
+      "path": "firmware/conf.d/i2c.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4800cd0c8de1cb3a3e8c7246e703740a60339c9",
+      "size": 899,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f4800cd0c8de1cb3a3e8c7246e703740a60339c9"
+    },
+    {
+      "path": "firmware/conf.d/improv-bluetooth.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57ecf68ae5557bed4037834213d1a82effcc7f0c",
+      "size": 33,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/57ecf68ae5557bed4037834213d1a82effcc7f0c"
+    },
+    {
+      "path": "firmware/conf.d/improv-serial.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a61cf62a8722941891639c144c375e73933855a9",
+      "size": 55,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/a61cf62a8722941891639c144c375e73933855a9"
+    },
+    {
+      "path": "firmware/conf.d/led-external.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2da57505b97d90c8faec1ff6e37454516ff35fe",
+      "size": 4188,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/e2da57505b97d90c8faec1ff6e37454516ff35fe"
+    },
+    {
+      "path": "firmware/conf.d/led-internal.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "749cb3e89f268b3491925b5607a3838784865fdd",
+      "size": 269,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/749cb3e89f268b3491925b5607a3838784865fdd"
+    },
+    {
+      "path": "firmware/conf.d/logger.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27c1ca8708beffc8ff4b5a583622ce0fe6d901f6",
+      "size": 900,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/27c1ca8708beffc8ff4b5a583622ce0fe6d901f6"
+    },
+    {
+      "path": "firmware/conf.d/mqtt_bambu_lan.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92cc5045dbaf41ffd23a20cfbfa5d91a77c5c1c3",
+      "size": 4167,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/92cc5045dbaf41ffd23a20cfbfa5d91a77c5c1c3"
+    },
+    {
+      "path": "firmware/conf.d/ota.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3354234b9541f08784f2421b95f30d4d1caa67f6",
+      "size": 47,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/3354234b9541f08784f2421b95f30d4d1caa67f6"
+    },
+    {
+      "path": "firmware/conf.d/pn532_rfid-ams.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8013aec1db10ee9cfaa23e0f925d97762348436a",
+      "size": 9619,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8013aec1db10ee9cfaa23e0f925d97762348436a"
+    },
+    {
+      "path": "firmware/conf.d/pn532_rfid-solo.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3e5f64dc058631f7c7be37f38111870a4ac3c53",
+      "size": 11449,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c3e5f64dc058631f7c7be37f38111870a4ac3c53"
+    },
+    {
+      "path": "firmware/conf.d/psram-esp32s2.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35df558972a75540d84d9a081fc85262093f1721",
+      "size": 1857,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/35df558972a75540d84d9a081fc85262093f1721"
+    },
+    {
+      "path": "firmware/conf.d/psram-esp32s3.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b60718ff1bf441773188cd0df2ee91f51c1beaf8",
+      "size": 105,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/b60718ff1bf441773188cd0df2ee91f51c1beaf8"
+    },
+    {
+      "path": "firmware/conf.d/status_led.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c575fe1a2b703e070033f0225448959bf962e60",
+      "size": 75,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/3c575fe1a2b703e070033f0225448959bf962e60"
+    },
+    {
+      "path": "firmware/conf.d/time.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9f5a7085b08b98f1e83d136a34d62c13f99d25f",
+      "size": 1103,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c9f5a7085b08b98f1e83d136a34d62c13f99d25f"
+    },
+    {
+      "path": "firmware/conf.d/update.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0da0acf10c56b53959910fbc046224b08c3074b1",
+      "size": 2240,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/0da0acf10c56b53959910fbc046224b08c3074b1"
+    },
+    {
+      "path": "firmware/conf.d/uptime.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9c08c060e9bca73ffd7c2b7efbbf78b7d05f6d6",
+      "size": 84,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/e9c08c060e9bca73ffd7c2b7efbbf78b7d05f6d6"
+    },
+    {
+      "path": "firmware/conf.d/version.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08db9b08b6f9ac78766ac734110a5c348a1506c4",
+      "size": 114,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/08db9b08b6f9ac78766ac734110a5c348a1506c4"
+    },
+    {
+      "path": "firmware/conf.d/web_server.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33e425730541b3a10ad9cbdd7144e585f5bb5abf",
+      "size": 526,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/33e425730541b3a10ad9cbdd7144e585f5bb5abf"
+    },
+    {
+      "path": "firmware/conf.d/wifi.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a9ccf1a1de60ebbf6ec2f6fc51b8672413e8739",
+      "size": 952,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/1a9ccf1a1de60ebbf6ec2f6fc51b8672413e8739"
+    },
+    {
+      "path": "firmware/esp32-s3-devkitc-1.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5676d0c11bc2bdf1aafc80dad3b2f282976e1808",
+      "size": 1245,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/5676d0c11bc2bdf1aafc80dad3b2f282976e1808"
+    },
+    {
+      "path": "firmware/lolin_s2_mini.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c7a48e5a2d08a53626f25727bebd6173e65755f",
+      "size": 879,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/7c7a48e5a2d08a53626f25727bebd6173e65755f"
+    },
+    {
+      "path": "firmware/lolin_s3_mini.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b5cbc5346fd9172933abd39189ab6134a7b453d",
+      "size": 823,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/9b5cbc5346fd9172933abd39189ab6134a7b453d"
+    },
+    {
+      "path": "firmware/manifest.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ceb94e4e40c764927db77821ac102c76ff9b2d9",
+      "size": 569,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/5ceb94e4e40c764927db77821ac102c76ff9b2d9"
+    },
+    {
+      "path": "firmware/openspool-ams.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20b20acdf14fc4ff859eca0b828b1bb224c7ad93",
+      "size": 138,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/20b20acdf14fc4ff859eca0b828b1bb224c7ad93"
+    },
+    {
+      "path": "firmware/openspool-mini.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8861db15c6210ea9e016bdcfa62ffc65cb486b98",
+      "size": 39,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8861db15c6210ea9e016bdcfa62ffc65cb486b98"
+    },
+    {
+      "path": "hardware",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d7975eedfa1b9334b717b2996e9675efe115079f",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/d7975eedfa1b9334b717b2996e9675efe115079f"
+    },
+    {
+      "path": "hardware/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "747e8b62627495933095a0ea1a58f6065876531e",
+      "size": 167,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/747e8b62627495933095a0ea1a58f6065876531e"
+    },
+    {
+      "path": "hardware/fritzing components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f6b3b55aa5b2d8e9fa364dd531e96c81532a09a2",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/f6b3b55aa5b2d8e9fa364dd531e96c81532a09a2"
+    },
+    {
+      "path": "hardware/fritzing components/ESP32-S3-WROOM-1-N16R8-dev-board.fzpz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0f0cfe8695ed917c04ff64ebbaba3fdbedfa54a",
+      "size": 26960,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c0f0cfe8695ed917c04ff64ebbaba3fdbedfa54a"
+    },
+    {
+      "path": "hardware/fritzing components/PN532 Elechouse RFID NFC Module V3.fzpz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1313e60af0ee9c293cb0907c23a77e838dd36bb4",
+      "size": 30762,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/1313e60af0ee9c293cb0907c23a77e838dd36bb4"
+    },
+    {
+      "path": "hardware/fritzing components/WS2812 RGB LED strip.fzpz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "feafc866b36b5f26aa8f496bf9fe88508d817319",
+      "size": 17134,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/feafc866b36b5f26aa8f496bf9fe88508d817319"
+    },
+    {
+      "path": "hardware/fritzing components/WS2812B RGB LED.fzpz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f612cfd784e66382287b1c78dff18a625656ba1d",
+      "size": 8460,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f612cfd784e66382287b1c78dff18a625656ba1d"
+    },
+    {
+      "path": "hardware/fritzing components/Wemos-s2-mini.fzpz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2e26654fc0483ee7435b423b3f272b43b23b51a",
+      "size": 17753,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/d2e26654fc0483ee7435b423b3f272b43b23b51a"
+    },
+    {
+      "path": "hardware/fritzing components/wago-221-413.fzpz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e6144d4095ba26808e0bf13500105cd3ae7d29d",
+      "size": 5209,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/5e6144d4095ba26808e0bf13500105cd3ae7d29d"
+    },
+    {
+      "path": "hardware/fritzing components/wago-221-415.fzpz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df9719360a49a9473d58bc17fb255c0dad91dd17",
+      "size": 5768,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/df9719360a49a9473d58bc17fb255c0dad91dd17"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "202aedeae1709212b9a7ae147361b18ae41d7565",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/202aedeae1709212b9a7ae147361b18ae41d7565"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1-color",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d438356deb392d95870ff69f3f91197d645f156b",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/d438356deb392d95870ff69f3f91197d645f156b"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1-color/Gerber_PCB_PCB_OpenSpool-Mini-Daughterboard_2025-01-10_2025-01-10.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95e0bf01291a7e57eed7d251846910530d4211a2",
+      "size": 1256628,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/95e0bf01291a7e57eed7d251846910530d4211a2"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1-color/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4882654c47cc4034adb76eeb63e9e5cc30794aa4",
+      "size": 142,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4882654c47cc4034adb76eeb63e9e5cc30794aa4"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1-color/Screenshot 2025-01-10 at 20.30.41.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b777958faa7368b67f04aeaa3bbd1fb60834b20c",
+      "size": 736121,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/b777958faa7368b67f04aeaa3bbd1fb60834b20c"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1-color/Screenshot 2025-01-10 at 20.30.48.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3484ffd50f72503ce7c70876d5e98a77c1d12ac",
+      "size": 759048,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f3484ffd50f72503ce7c70876d5e98a77c1d12ac"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1.1-color",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "118c3d5cf32bc6b6612146bcbb9f20246d12aa74",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/118c3d5cf32bc6b6612146bcbb9f20246d12aa74"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1.1-color/Gerber_PCB_PCB_OpenSpool-Mini-Daughterboard_2025-06-16_2025-06-16.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85b6088fb52b3122a167994c6b9459e141ffc449",
+      "size": 1283439,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/85b6088fb52b3122a167994c6b9459e141ffc449"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69abe3597bb57f0bd841f65fb3008f3f3ac56907",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/69abe3597bb57f0bd841f65fb3008f3f3ac56907"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1.1/Archive.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3dabf7732b300c7d7a11709a36a9d3c94b89d587",
+      "size": 96739,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/3dabf7732b300c7d7a11709a36a9d3c94b89d587"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1.1/BOM_OpenSpool-Mini-Daughterboard_2025-06-16.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e7817ba2cd75a9de0958fef975b2f0ae86c0c52",
+      "size": 1012,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/9e7817ba2cd75a9de0958fef975b2f0ae86c0c52"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1.1/Gerber_OpenSpool-Mini-Daughterboard_PCB_OpenSpool-Mini-Daughterboard_2025-06-16.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "716f323cf81df10cad40269eadc3bc6fb55fc706",
+      "size": 54887,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/716f323cf81df10cad40269eadc3bc6fb55fc706"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1.1/PCB_PCB_OpenSpool-Mini-Daughterboard_2025-06-16.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f59953182f01e7259a0ba6b1e6cdc89330bb75c7",
+      "size": 299868,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f59953182f01e7259a0ba6b1e6cdc89330bb75c7"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1.1/PickAndPlace_PCB_OpenSpool-Mini-Daughterboard_2025-06-16.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e222356c3dd0aba281fd6b465bd4a4bce31edf5",
+      "size": 2440,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/0e222356c3dd0aba281fd6b465bd4a4bce31edf5"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1.1/SCH_OpenSpool-Mini-Daughterboard_2025-06-16.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ee21d753ffdd7e9eef99283435b157d6a643717",
+      "size": 268146,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8ee21d753ffdd7e9eef99283435b157d6a643717"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d2a6ecde36342c3da20a44a2545237daecca08ff",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/d2a6ecde36342c3da20a44a2545237daecca08ff"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1/BOM_OpenSpool-Mini-Daughterboard_2025-01-10.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bf4056f93f629a1b952f077a8eca5506a9645f5",
+      "size": 1020,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/2bf4056f93f629a1b952f077a8eca5506a9645f5"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1/EasyEDA.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "213d6ab9d9f776f5aacb1407f865b23861df9fd5",
+      "size": 95580,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/213d6ab9d9f776f5aacb1407f865b23861df9fd5"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1/Gerber_OpenSpool-Mini-Daughterboard_PCB_OpenSpool-Mini-Daughterboard_2025-01-10.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4abd4ce3c2f122abd38f2b1508ea3739fa156687",
+      "size": 50225,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4abd4ce3c2f122abd38f2b1508ea3739fa156687"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1/IMG_6507 Large.jpeg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fe2fe6b6e900e337a7c03e224267f5780093234",
+      "size": 339291,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4fe2fe6b6e900e337a7c03e224267f5780093234"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1/PickAndPlace_PCB_OpenSpool-Mini-Daughterboard_2025-01-10.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0e222356c3dd0aba281fd6b465bd4a4bce31edf5",
+      "size": 2440,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/0e222356c3dd0aba281fd6b465bd4a4bce31edf5"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6c4f3adc7b948422015b5cbaf3895856e00443b",
+      "size": 138,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/e6c4f3adc7b948422015b5cbaf3895856e00443b"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1/Schematic_OpenSpool-Mini-Daughterboard_2025-01-10.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a86766b5f8d9ee7c2ff861e746a8b186d9fea5f",
+      "size": 377768,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4a86766b5f8d9ee7c2ff861e746a8b186d9fea5f"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1/Screenshot 2025-01-10 at 18.37.22.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afc0171d91d797da0a2b17d5afa8ccbbe6cfb18e",
+      "size": 253973,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/afc0171d91d797da0a2b17d5afa8ccbbe6cfb18e"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1/Screenshot 2025-01-10 at 18.37.32.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28fd42417527e9894c95f4e4211b442e86ce70b2",
+      "size": 194188,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/28fd42417527e9894c95f4e4211b442e86ce70b2"
+    },
+    {
+      "path": "hardware/openspool-mini-daughterboard/v1/Screenshot 2025-01-10 at 18.37.39.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5ab94fb022c0aa69a7a5b3fe8ea4f6595b352ca",
+      "size": 190923,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c5ab94fb022c0aa69a7a5b3fe8ea4f6595b352ca"
+    },
+    {
+      "path": "hardware/openspool-mini",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b41a2ce85055804d2dfa9aa86735aeae9654eb0f",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/b41a2ce85055804d2dfa9aa86735aeae9654eb0f"
+    },
+    {
+      "path": "hardware/openspool-mini/BOM.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "513adf7839902eca0945de0f5e02e7fe218c4668",
+      "size": 643,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/513adf7839902eca0945de0f5e02e7fe218c4668"
+    },
+    {
+      "path": "hardware/openspool-mini/OpenSpool-Mini.fzz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cba813fc5b9308a36dd3d79d9f2b7e8d1aa808c3",
+      "size": 65732,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/cba813fc5b9308a36dd3d79d9f2b7e8d1aa808c3"
+    },
+    {
+      "path": "hardware/openspool-mini/v1.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "646a7250b59fe414d7fe044045a0ae64e767c161",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/646a7250b59fe414d7fe044045a0ae64e767c161"
+    },
+    {
+      "path": "hardware/openspool-mini/v1.0/Gerber_OpenSpool_PCB_OpenSpool_2024-11-05.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f02fa0de06451cbb1e1b494f7946c0bb0322e95a",
+      "size": 66806,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f02fa0de06451cbb1e1b494f7946c0bb0322e95a"
+    },
+    {
+      "path": "hardware/openspool-mini/v1.0/PCB_PCB_OpenSpool_2024-11-05.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81e840aaef8cf559ff69f1645fc57ba062c0ed7f",
+      "size": 256385,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/81e840aaef8cf559ff69f1645fc57ba062c0ed7f"
+    },
+    {
+      "path": "hardware/openspool-mini/v1.0/SCH_OpenSpool_2024-11-05.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa5864684eee269568c1c425398b2d1e20686820",
+      "size": 286748,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/aa5864684eee269568c1c425398b2d1e20686820"
+    },
+    {
+      "path": "hardware/openspool-mini/v2.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "93bbfc98bdee06887312fae3204bd27fc9868795",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/93bbfc98bdee06887312fae3204bd27fc9868795"
+    },
+    {
+      "path": "hardware/openspool-mini/v2.0/Gerber_OpenSpool_PCB_OpenSpool_2024-11-19.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ff7ce37578acf68dbd17460651f00d09f1b009c",
+      "size": 82752,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4ff7ce37578acf68dbd17460651f00d09f1b009c"
+    },
+    {
+      "path": "hardware/openspool-mini/v2.0/PCB_PCB_OpenSpool_2024-11-19.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6351c1c269fa1c2b0451fbeaed423459ac31218a",
+      "size": 419595,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/6351c1c269fa1c2b0451fbeaed423459ac31218a"
+    },
+    {
+      "path": "hardware/openspool-mini/v2.0/SCH_OpenSpool_2024-11-19.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ad543f170da9d71746aacb76bcf1cbfca314223",
+      "size": 293582,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/9ad543f170da9d71746aacb76bcf1cbfca314223"
+    },
+    {
+      "path": "hardware/openspool-mini/v2.0/Schematic_OpenSpool_2024-11-19.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dec86e3facfede44f9c0408cb8300e6f953629e3",
+      "size": 397667,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/dec86e3facfede44f9c0408cb8300e6f953629e3"
+    },
+    {
+      "path": "hardware/openspool-mini/v2.0/Screenshot 2024-11-19 at 22.33.28.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4176a7a87f1a7fa21ab15fe4a0f2cf72a4473251",
+      "size": 227148,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4176a7a87f1a7fa21ab15fe4a0f2cf72a4473251"
+    },
+    {
+      "path": "hardware/openspool-mini/v2.0/Screenshot 2024-11-20 at 10.53.56.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebdaa566d9d0e68c827e41b23abdc0234bfe52ec",
+      "size": 485251,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/ebdaa566d9d0e68c827e41b23abdc0234bfe52ec"
+    },
+    {
+      "path": "hardware/openspool-mini/v2.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c32a2694797c228f58940f64304dc7809b185521",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/c32a2694797c228f58940f64304dc7809b185521"
+    },
+    {
+      "path": "hardware/openspool-mini/v2.1/Gerber_OpenSpool_PCB_OpenSpool_2024-11-20.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23a476ad90da514604472e3d49434a61ec17694d",
+      "size": 80471,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/23a476ad90da514604472e3d49434a61ec17694d"
+    },
+    {
+      "path": "hardware/openspool-mini/v2.1/PCB_PCB_OpenSpool_2024-11-20.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa8b82a16c4f34a903190cb4cda64e2b90f17a97",
+      "size": 411860,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/aa8b82a16c4f34a903190cb4cda64e2b90f17a97"
+    },
+    {
+      "path": "hardware/openspool-mini/v2.1/SCH_OpenSpool_2024-11-20.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54c9c76a01dfca54be984315eee974befe6384a9",
+      "size": 293584,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/54c9c76a01dfca54be984315eee974befe6384a9"
+    },
+    {
+      "path": "hardware/openspool-mini/v2.1/Screenshot 2024-11-20 at 10.53.56.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e17fc6ebae03a0a3e86be8b19a9deb82b459900",
+      "size": 500099,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/3e17fc6ebae03a0a3e86be8b19a9deb82b459900"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "11993655f33cbb664e827badcaebbcae4da7030f",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/11993655f33cbb664e827badcaebbcae4da7030f"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.0/BOM_OpenSpool_2024-12-14.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c85d9622c99a7b692ac2fd82606492d90aa467fc",
+      "size": 450,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c85d9622c99a7b692ac2fd82606492d90aa467fc"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.0/Gerber_OpenSpool_PCB_OpenSpool_2024-12-14.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a74b8ff4a21dd864b3c6554b6a468f4593315b2c",
+      "size": 95661,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/a74b8ff4a21dd864b3c6554b6a468f4593315b2c"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.0/PCB_PCB_OpenSpool_2024-12-14.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1d7cae97edfe064f247006292f7df9712505af4",
+      "size": 372466,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/b1d7cae97edfe064f247006292f7df9712505af4"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.0/PickAndPlace_PCB_OpenSpool_2024-12-14.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b29b7f3b69d70cf6923fd324cd946f247e03d629",
+      "size": 3004,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/b29b7f3b69d70cf6923fd324cd946f247e03d629"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.0/SCH_OpenSpool_2024-12-14.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "053981936b0f8d13228a5b520aae8ebca7f88a5e",
+      "size": 290489,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/053981936b0f8d13228a5b520aae8ebca7f88a5e"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.0/Schematic_OpenSpool_2024-12-14.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "793a5e75babc18e22e62459885c7024e568ba8f8",
+      "size": 396019,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/793a5e75babc18e22e62459885c7024e568ba8f8"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.0/Screenshot 2024-12-14 at 23.07.57.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0b0dcb9847a736c0edea2bdbca3ec99e315f219e",
+      "size": 270959,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/0b0dcb9847a736c0edea2bdbca3ec99e315f219e"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.0/Screenshot 2024-12-14 at 23.08.03.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "668c7d29df847530dc346a97d389a7e3a89b18c3",
+      "size": 331465,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/668c7d29df847530dc346a97d389a7e3a89b18c3"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2280135c210bae906ded20a0b85a056192b670b6",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/2280135c210bae906ded20a0b85a056192b670b6"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.1/BOM_OpenSpool_2024-12-24.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "345ebc8a93dade9b21ba53072c1a05d9da83cade",
+      "size": 424,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/345ebc8a93dade9b21ba53072c1a05d9da83cade"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.1/Gerber_OpenSpool_PCB_OpenSpool_2024-12-25.zip",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "284e8bbe9ddbf6cd81f6334024797785b431d6ca",
+      "size": 103805,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/284e8bbe9ddbf6cd81f6334024797785b431d6ca"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.1/PCB_OpenSpool_2024-12-24.dxf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da95d000fc7401312fbfaaf97c2a459c17bdc8c7",
+      "size": 408837,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/da95d000fc7401312fbfaaf97c2a459c17bdc8c7"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.1/PCB_PCB_OpenSpool_2024-12-25.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb40b2431c371f48015b3451ae0a8c4651d04131",
+      "size": 435744,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/bb40b2431c371f48015b3451ae0a8c4651d04131"
+    },
+    {
+      "path": "hardware/openspool-mini/v3.1/SCH_OpenSpool_2024-12-25.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c522ba2ccd86f84ede7f7cb33c775916ca50ddac",
+      "size": 290563,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c522ba2ccd86f84ede7f7cb33c775916ca50ddac"
+    },
+    {
+      "path": "hardware/openspool-pro",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9571ccbfcda4dde7a62ac12d24def652219fbe51",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/9571ccbfcda4dde7a62ac12d24def652219fbe51"
+    },
+    {
+      "path": "hardware/openspool-pro/OpenSpool-AMS.fzz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc76171b0df283368e89c6fa42e59a7bd619a2cb",
+      "size": 82103,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/cc76171b0df283368e89c6fa42e59a7bd619a2cb"
+    },
+    {
+      "path": "hardware/openspool-pro/v0.3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a39d3f92c760d61ff570c4dab970f487b62cd83c",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/a39d3f92c760d61ff570c4dab970f487b62cd83c"
+    },
+    {
+      "path": "hardware/openspool-pro/v0.3/OpenSpool Pro - v0.3 - 250113.f3d",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b783da928e7d2621ed602965ef6283c458f5423",
+      "size": 2738276,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/3b783da928e7d2621ed602965ef6283c458f5423"
+    },
+    {
+      "path": "hardware/openspool-pro/v0.3/OpenSpool Pro - v0.3 - 250113.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b16c043ed55579d3430b632063b32707ca2be89d",
+      "size": 29230,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/b16c043ed55579d3430b632063b32707ca2be89d"
+    },
+    {
+      "path": "hardware/openspool-pro/v0.3/Screenshot_2025-01-13_at_10.35.16_PM.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06eea55a176d19bc1359245a5686f72cd7682a04",
+      "size": 1604089,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/06eea55a176d19bc1359245a5686f72cd7682a04"
+    },
+    {
+      "path": "hardware/pn532",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34870ea2641b0827f0aa7b0fd67cf2024f217f93",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/34870ea2641b0827f0aa7b0fd67cf2024f217f93"
+    },
+    {
+      "path": "hardware/pn532/PN532_ Manual_V3.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4278b128190c25f0db057df4f071302bd6b074eb",
+      "size": 1726862,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4278b128190c25f0db057df4f071302bd6b074eb"
+    },
+    {
+      "path": "hardware/pn532/PN532_AntennaDesign_v1.0.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6920896854d7ccf50dfb5d4fdd57290447f6acad",
+      "size": 541161,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/6920896854d7ccf50dfb5d4fdd57290447f6acad"
+    },
+    {
+      "path": "hardware/pn532/PN532_C1.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd973fa8d7f2112c492f73e0e53349db714c9d27",
+      "size": 1795189,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/fd973fa8d7f2112c492f73e0e53349db714c9d27"
+    },
+    {
+      "path": "hardware/pn532/PN532_shematic_drowing.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af073f85d70da870e50d8d296c4ac0a7a89499e8",
+      "size": 83227,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/af073f85d70da870e50d8d296c4ac0a7a89499e8"
+    },
+    {
+      "path": "images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "83eab534be11f968879766fe85abe9ed73088067",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/83eab534be11f968879766fe85abe9ed73088067"
+    },
+    {
+      "path": "images/BambuLogo1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8189c67cec02518fb0d11fe604387446cbb4ceb2",
+      "size": 180231,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8189c67cec02518fb0d11fe604387446cbb4ceb2"
+    },
+    {
+      "path": "images/Banner.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a346177b5a7c3b93fc4ae38038d85570f96ab97a",
+      "size": 106637,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/a346177b5a7c3b93fc4ae38038d85570f96ab97a"
+    },
+    {
+      "path": "images/Change_fillament.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9523d23e25811cfdc4781b96ab65f53d9b56b568",
+      "size": 56252,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/9523d23e25811cfdc4781b96ab65f53d9b56b568"
+    },
+    {
+      "path": "images/Headers1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f922c1da80f1f78b3efb5349f8cdbcc77b42712",
+      "size": 365083,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4f922c1da80f1f78b3efb5349f8cdbcc77b42712"
+    },
+    {
+      "path": "images/Headers2.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba1fa1352f703fc1f43bbc590e28449840eb7442",
+      "size": 98549,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/ba1fa1352f703fc1f43bbc590e28449840eb7442"
+    },
+    {
+      "path": "images/Icon3.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d36642add352ba0a6d3f46b5a9777631f0ba37ff",
+      "size": 401612,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/d36642add352ba0a6d3f46b5a9777631f0ba37ff"
+    },
+    {
+      "path": "images/LED1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "560bc78ada1ec1ed48bda94b4687621d5619d9f1",
+      "size": 783137,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/560bc78ada1ec1ed48bda94b4687621d5619d9f1"
+    },
+    {
+      "path": "images/LED2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "718841ecbcc3cae6ffa6b9311578251421324b08",
+      "size": 347950,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/718841ecbcc3cae6ffa6b9311578251421324b08"
+    },
+    {
+      "path": "images/LLC1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9345e84bc4894f5e74657cd57b8ed4e19c40d6b",
+      "size": 1090328,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/d9345e84bc4894f5e74657cd57b8ed4e19c40d6b"
+    },
+    {
+      "path": "images/Logo v11.step",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d2c57b654ac69eee3d8922895562c979bf35171",
+      "size": 378912,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4d2c57b654ac69eee3d8922895562c979bf35171"
+    },
+    {
+      "path": "images/Logo.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18a9e1e9d7e58d333ee3b7439e27c34f469749f8",
+      "size": 19201,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/18a9e1e9d7e58d333ee3b7439e27c34f469749f8"
+    },
+    {
+      "path": "images/Logo.xcf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7aa527b526504e12cb3ffa4feca17ddeebadf05d",
+      "size": 235387,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/7aa527b526504e12cb3ffa4feca17ddeebadf05d"
+    },
+    {
+      "path": "images/Logo1.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75e10c582c4cdfed055494f1adffebf7252ffd61",
+      "size": 125252,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/75e10c582c4cdfed055494f1adffebf7252ffd61"
+    },
+    {
+      "path": "images/Logo2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8fecee7addf1e6c808197cca7ed42db74cb4b42",
+      "size": 2690653,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/d8fecee7addf1e6c808197cca7ed42db74cb4b42"
+    },
+    {
+      "path": "images/Logo2.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "989e07a689c842ff3b4b7e93180b7c6170c5aef8",
+      "size": 8874,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/989e07a689c842ff3b4b7e93180b7c6170c5aef8"
+    },
+    {
+      "path": "images/Logo3.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "24d0d7fe6896a5e697048bacf48bffd24c898e96",
+      "size": 4428888,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/24d0d7fe6896a5e697048bacf48bffd24c898e96"
+    },
+    {
+      "path": "images/Logo4.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "447c8c3e3a05e0eb4c4dfeddd71222acd61313a5",
+      "size": 96310,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/447c8c3e3a05e0eb4c4dfeddd71222acd61313a5"
+    },
+    {
+      "path": "images/MiniBreadboard.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "587db9e0eeb56bb2b4f826b819ba858891a4b846",
+      "size": 83460,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/587db9e0eeb56bb2b4f826b819ba858891a4b846"
+    },
+    {
+      "path": "images/NFC.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c04ffb7fb0ec4f98a49f8ae080f71708733feb99",
+      "size": 69366,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c04ffb7fb0ec4f98a49f8ae080f71708733feb99"
+    },
+    {
+      "path": "images/NFC2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a575c59e36bab6dd84cd6bf4ed555698f77ce31d",
+      "size": 100940,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/a575c59e36bab6dd84cd6bf4ed555698f77ce31d"
+    },
+    {
+      "path": "images/NFC3.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ab73816ae5bfa1310316841bd088fc2f326eaf0",
+      "size": 1255694,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4ab73816ae5bfa1310316841bd088fc2f326eaf0"
+    },
+    {
+      "path": "images/OpenSpoolLogo.ai.ps",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5970feccaa70517ad2296c144d0526d6fa79f002",
+      "size": 89415,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/5970feccaa70517ad2296c144d0526d6fa79f002"
+    },
+    {
+      "path": "images/OpenSpoolLogo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aedfab99443da3b3e25de577304f64868b44a91d",
+      "size": 1334057,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/aedfab99443da3b3e25de577304f64868b44a91d"
+    },
+    {
+      "path": "images/OpenSpoolLogo2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b65c5728973a3d62facbeebf55c677361af2ade",
+      "size": 115219,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4b65c5728973a3d62facbeebf55c677361af2ade"
+    },
+    {
+      "path": "images/OpenSpoolLogoMedium1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0a253e4e63349dc8619f5d9074cd26691bf0f57",
+      "size": 217990,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/e0a253e4e63349dc8619f5d9074cd26691bf0f57"
+    },
+    {
+      "path": "images/OpenSpoolLogoSmall1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0a253e4e63349dc8619f5d9074cd26691bf0f57",
+      "size": 217990,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/e0a253e4e63349dc8619f5d9074cd26691bf0f57"
+    },
+    {
+      "path": "images/OpenSpoolMini.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e95733fa254d4eb1fdcbce7f7d436bea3996672d",
+      "size": 578244,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/e95733fa254d4eb1fdcbce7f7d436bea3996672d"
+    },
+    {
+      "path": "images/OpenSpoolMiniWiringDiagram.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "433a67dda308b97b2908df7b1c706a94c53ac079",
+      "size": 113599,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/433a67dda308b97b2908df7b1c706a94c53ac079"
+    },
+    {
+      "path": "images/PCB1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17066c9a88f87d9416a7c3f4fbb826c63e1d3183",
+      "size": 454642,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/17066c9a88f87d9416a7c3f4fbb826c63e1d3183"
+    },
+    {
+      "path": "images/PCB_v3.1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c5d01aed41488ad1e84541b446fbbd1fc9a85da",
+      "size": 58771,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4c5d01aed41488ad1e84541b446fbbd1fc9a85da"
+    },
+    {
+      "path": "images/PN532-4.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18473115e619ec7d9480b34702a31bbbf86ebbed",
+      "size": 70078,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/18473115e619ec7d9480b34702a31bbbf86ebbed"
+    },
+    {
+      "path": "images/PSRAM.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27dd4309c2de1df68a53e38a93e28feeb095568f",
+      "size": 856980,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/27dd4309c2de1df68a53e38a93e28feeb095568f"
+    },
+    {
+      "path": "images/PrinterSettings.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a5ee4b8653294d0eb3080af059bc9a796590c28",
+      "size": 83518,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/2a5ee4b8653294d0eb3080af059bc9a796590c28"
+    },
+    {
+      "path": "images/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "739c089c0d4a11d03a99aebb4bf89b1baf8de696",
+      "size": 54,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/739c089c0d4a11d03a99aebb4bf89b1baf8de696"
+    },
+    {
+      "path": "images/RainbowReel.excalidraw",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf290b80cdada356d32f0e24db71744d4f7f6ad0",
+      "size": 1922747,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/bf290b80cdada356d32f0e24db71744d4f7f6ad0"
+    },
+    {
+      "path": "images/RainbowReel.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d48df88f190297e10c39aff80373b164a6cc68f",
+      "size": 1661541,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/5d48df88f190297e10c39aff80373b164a6cc68f"
+    },
+    {
+      "path": "images/Simulator Screenshot - iPhone SE (3rd generation) - 2025-01-03 at 22.12.15.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b39b2aead5e867bc78d2150abcffc7c5e963aaf",
+      "size": 1107350,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/9b39b2aead5e867bc78d2150abcffc7c5e963aaf"
+    },
+    {
+      "path": "images/WebInterface1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66a373ea08548773ab73bb34dc36ace04fea27dd",
+      "size": 405258,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/66a373ea08548773ab73bb34dc36ace04fea27dd"
+    },
+    {
+      "path": "images/WiringDiagram1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d1bb066417d878a7b6ac52b587d2cf258689336",
+      "size": 1457351,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/5d1bb066417d878a7b6ac52b587d2cf258689336"
+    },
+    {
+      "path": "images/WiringDiagram2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a33b1a83471b72ad2c693118523b80beffdcd61",
+      "size": 469226,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/2a33b1a83471b72ad2c693118523b80beffdcd61"
+    },
+    {
+      "path": "images/certification-mark-US002704-stacked.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a10b3193b82d23ac0142446eae92b900784b603",
+      "size": 13858,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/5a10b3193b82d23ac0142446eae92b900784b603"
+    },
+    {
+      "path": "images/certification-mark-US002704-wide.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a93216a0974b69ff2a78e12c0c984418dfe31d86",
+      "size": 13762,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/a93216a0974b69ff2a78e12c0c984418dfe31d86"
+    },
+    {
+      "path": "images/jumper1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e36fb5c6c21e2b3f9330141b13faa6c682bbf83",
+      "size": 664630,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/3e36fb5c6c21e2b3f9330141b13faa6c682bbf83"
+    },
+    {
+      "path": "images/made-for-esphome-white-on-black.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37c5ccccae8741bdcbbe3b58ccb5c4990f05246c",
+      "size": 5478,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/37c5ccccae8741bdcbbe3b58ccb5c4990f05246c"
+    },
+    {
+      "path": "images/mosfet.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c68b2b0344d1d3754cb780ad28e8daa2a44a877a",
+      "size": 13837,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/c68b2b0344d1d3754cb780ad28e8daa2a44a877a"
+    },
+    {
+      "path": "images/mqttx.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16b2b7b361fc56c8ca493a6b0e7313adf4ddfc59",
+      "size": 88762,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/16b2b7b361fc56c8ca493a6b0e7313adf4ddfc59"
+    },
+    {
+      "path": "images/nfc-bambuhandy.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64077503199ace0d7ae2e33b496ab6032b687021",
+      "size": 6305367,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/64077503199ace0d7ae2e33b496ab6032b687021"
+    },
+    {
+      "path": "images/nfc-openspool.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6f3c076592630b9b52d11ed03f48b0054db964b",
+      "size": 9934934,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/a6f3c076592630b9b52d11ed03f48b0054db964b"
+    },
+    {
+      "path": "images/openspool-transparent.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ad2e216ea9054f3670623b854ffd1c4f948cf29",
+      "size": 716268,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4ad2e216ea9054f3670623b854ffd1c4f948cf29"
+    },
+    {
+      "path": "images/oshw-logo.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae7e5ed4d2fc8c531acfd48998a9e0c9f79b53e9",
+      "size": 9175,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/ae7e5ed4d2fc8c531acfd48998a9e0c9f79b53e9"
+    },
+    {
+      "path": "images/oshw_facts-2.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecdcfabc508e23e7c95e663e5c61056d8083c6bc",
+      "size": 8975,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/ecdcfabc508e23e7c95e663e5c61056d8083c6bc"
+    },
+    {
+      "path": "images/phone2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7185bbd5e43035c30c5fdaf1e01c43ddb34d7458",
+      "size": 335056,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/7185bbd5e43035c30c5fdaf1e01c43ddb34d7458"
+    },
+    {
+      "path": "images/pn532-large.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1b887127fe5a475281483b8c84effbf79d7a0272",
+      "size": 231663,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/1b887127fe5a475281483b8c84effbf79d7a0272"
+    },
+    {
+      "path": "images/pn532-small.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0ef34b3158b3d05a5418cf493bfd02cd9cfc926",
+      "size": 170557,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/d0ef34b3158b3d05a5418cf493bfd02cd9cfc926"
+    },
+    {
+      "path": "images/resistor.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4db1173f3c9f9972045f811f656922f036638a3",
+      "size": 29084,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f4db1173f3c9f9972045f811f656922f036638a3"
+    },
+    {
+      "path": "images/tindie",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb1de6337863a82e5e3f6be198a4f8f867cd3d8f",
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/trees/fb1de6337863a82e5e3f6be198a4f8f867cd3d8f"
+    },
+    {
+      "path": "images/tindie/IMG_6108.HEIC",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac6ece9d63e04293032c5110c89701791694f366",
+      "size": 242988,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/ac6ece9d63e04293032c5110c89701791694f366"
+    },
+    {
+      "path": "images/tindie/IMG_6108.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afb3f60313ee9755abbea24b834ac48118bf82ea",
+      "size": 3722151,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/afb3f60313ee9755abbea24b834ac48118bf82ea"
+    },
+    {
+      "path": "images/tindie/IMG_6109.HEIC",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4fa7f44c51130526fc691b307afde761e6928fb",
+      "size": 971192,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/f4fa7f44c51130526fc691b307afde761e6928fb"
+    },
+    {
+      "path": "images/tindie/IMG_6113.HEIC",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d772b0298ee470c6066429a27cb3b76698103b51",
+      "size": 729112,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/d772b0298ee470c6066429a27cb3b76698103b51"
+    },
+    {
+      "path": "images/tindie/IMG_6120.HEIC",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38fcb443134aa4b47bcef2c7415e1c8fe9f820c5",
+      "size": 322537,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/38fcb443134aa4b47bcef2c7415e1c8fe9f820c5"
+    },
+    {
+      "path": "images/tindie/IMG_6120.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8485fdb9b8feecd971a3a0925f4adaf717754543",
+      "size": 3820757,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/8485fdb9b8feecd971a3a0925f4adaf717754543"
+    },
+    {
+      "path": "images/tindie/IMG_6125-small.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d62bf4c00f9dc64563162d9b9f11eece62fbe50",
+      "size": 4948137,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/1d62bf4c00f9dc64563162d9b9f11eece62fbe50"
+    },
+    {
+      "path": "images/tindie/IMG_6125.HEIC",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "842677c486d434263982c5d624670f2c34701ccc",
+      "size": 458965,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/842677c486d434263982c5d624670f2c34701ccc"
+    },
+    {
+      "path": "images/tindie/IMG_6125.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "250f38bd80472a99ad85fbe69ec214c38054f2ea",
+      "size": 2075920,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/250f38bd80472a99ad85fbe69ec214c38054f2ea"
+    },
+    {
+      "path": "images/tindie/IMG_6125.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec3dd714b976ba76478ee7622ae586844b28c0f0",
+      "size": 4950410,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/ec3dd714b976ba76478ee7622ae586844b28c0f0"
+    },
+    {
+      "path": "images/wemos-d1mini.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcc463fb26f80a786a10c71d354f65d92355d347",
+      "size": 162901,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/fcc463fb26f80a786a10c71d354f65d92355d347"
+    },
+    {
+      "path": "images/wemos-d1mini2.png.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f61eb784acd6fe69d4911b6d7722411429fec5c",
+      "size": 752101,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/6f61eb784acd6fe69d4911b6d7722411429fec5c"
+    },
+    {
+      "path": "images/wemos-d1minis3.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4771efc34ac43bcc65678647faf03fbc3eaee5e5",
+      "size": 560356,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/4771efc34ac43bcc65678647faf03fbc3eaee5e5"
+    },
+    {
+      "path": "release.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "1f4578dd0165bb3cbc176255309eb218f020e4a4",
+      "size": 893,
+      "url": "https://api.github.com/repos/spuder/OpenSpool/git/blobs/1f4578dd0165bb3cbc176255309eb218f020e4a4"
+    }
+  ]
+}

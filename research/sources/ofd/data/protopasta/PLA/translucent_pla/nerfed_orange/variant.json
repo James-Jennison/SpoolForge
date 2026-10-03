@@ -1,0 +1,9 @@
+{
+  "uuid": "f1984061-6e89-4af9-a446-c23f381c9304",
+  "id": "nerfed_orange",
+  "name": "Nerfed Orange",
+  "color_hex": "#F69E22",
+  "traits": {
+    "translucent": true
+  }
+}

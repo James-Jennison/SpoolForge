@@ -1,0 +1,11 @@
+uuid: 7db1deb0-6770-5d69-8503-772af22df95d
+slug: paramount-3d-asa-decepticon-purple
+brand:
+  slug: paramount-3d
+name: ASA (Decepticon Purple)
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#431e33ff'
+properties: {}

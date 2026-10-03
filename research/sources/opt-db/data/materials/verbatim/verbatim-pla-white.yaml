@@ -1,0 +1,13 @@
+uuid: 88ba25a4-478c-542b-84f2-ce3410d2fa1f
+slug: verbatim-pla-white
+brand:
+  slug: verbatim
+name: PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- industrially_compostable
+properties: {}

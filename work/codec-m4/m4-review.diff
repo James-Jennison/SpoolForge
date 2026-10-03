@@ -1,0 +1,774 @@
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+index d6fae4e34..f75656bc2 100644
+--- a/app/build.gradle.kts
++++ b/app/build.gradle.kts
+@@ -28,7 +28,7 @@ android {
+         minSdk = 28
+         targetSdk = 36
+         versionCode = 1
+-        versionName = "0.3.0-m3"
++        versionName = "0.4.0-m4"
+         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+         buildConfigField("String", "OPENAI_API_KEY", "\"\"")
+     }
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt
+index 4d1dee320..0cfc05cef 100644
+--- a/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt
+@@ -231,8 +231,9 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
+     var portableIdentity by remember(item.entry.packageId) { mutableStateOf<PortableSpoolIdentity?>(null) }
+     val hasCatalogBarcodeEvidence = isCatalogBarcodeEvidence(item.barcodeEvidence)
+     val hasProviderEvidence = isProviderCandidateEvidence(item.barcodeEvidence)
+-    val intentResult = remember(item, model.profile) { runCatching { model.intent(item) } }
+-    val intent = intentResult.getOrNull()
++    val encodedResult = remember(item, model.codecId) { runCatching { model.encodedTag(item) } }
++    val encoded = encodedResult.getOrNull()
++    val selectedCodec = remember(model.codecId) { model.selectedTagCodec() }
+     Column(Modifier.padding(vertical = 12.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+         TextButton(onClick = back) { Text("‹ Back to catalog") }
+         Text("${e.brand} ${e.product.ifBlank { e.material }}", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
+@@ -255,14 +256,19 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
+         if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = { confirmDelete = true }, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.error)) { Text("Delete local record") }
+         OutlinedButton(onClick = { uriHandler.openUri(FILAMENT_PROFILES_CATALOG_URL) }, modifier = Modifier.fillMaxWidth()) { Text("Search 3D Filament Profiles") }
+         Text("Tag compatibility", fontWeight = FontWeight.Bold)
++        if(item.provenance!=Provenance.CATALOG) Info("Verified tag bindings", "${model.savedTagBindings.size} of 2" + model.savedTagBindings.joinToString(prefix=if(model.savedTagBindings.isEmpty()) "" else " · ",separator=" / ") { binding -> "position ${binding.bindingOrder}: ${runCatching { TagCodecRegistry.require(binding.codecId).format.displayName }.getOrDefault(binding.codecId)}" })
+         SingleChoiceSegmentedButtonRow(Modifier.fillMaxWidth()) {
+-            OpenSpoolProfile.entries.forEachIndexed { i, p -> SegmentedButton(selected = model.profile == p, onClick = { model.profile = p }, shape = SegmentedButtonDefaults.itemShape(i, 2), modifier = Modifier.heightIn(min = 48.dp)) { Text(if (p == OpenSpoolProfile.CANONICAL) "Canonical" else "PAXX") } }
++            model.tagCodecs.forEachIndexed { i, codec -> SegmentedButton(selected = model.codecId == codec.format.id, onClick = { model.codecId = codec.format.id }, shape = SegmentedButtonDefaults.itemShape(i, model.tagCodecs.size), modifier = Modifier.heightIn(min = 48.dp)) { Text(if (codec === StandardOpenSpoolTagCodec) "OpenSpool" else "PAXX U1") } }
+         }
+-        intent?.let { Notice("NDEF payload ${it.payload.size} bytes. Not written in this profile: ${it.omittedFields.sorted().joinToString { fieldLabel(it) }}.", false) }
+-        if (item.transmissionDistance != null && model.profile == OpenSpoolProfile.PAXX) Text("TD is preserved on the tag as a Filamajig extension. The PAXX parser ignores it while reading the mapped U1 filament fields.", style = MaterialTheme.typography.bodySmall)
+-        intentResult.exceptionOrNull()?.message?.let { Notice("Complete missing or invalid fields before writing: $it", true) }
++        encoded?.let {
++            val ndefBytes = remember(it) { android.nfc.NdefMessage(arrayOf(android.nfc.NdefRecord.createMime(it.format.mimeType,it.payload))).toByteArray().size }
++            Notice("${it.format.displayName}\nTarget: ${it.format.compatibilityTarget}\nNDEF message $ndefBytes / 492 bytes (JSON payload ${it.sizeBytes}).\nIncluded: ${wireFieldSummary(it.payload)}\nOmitted local fields: ${it.omittedFields.sorted().joinToString { field -> fieldLabel(field) }.ifBlank { "none" }}.", false)
++        }
++        if (item.transmissionDistance != null && selectedCodec === PaxxU1ExtendedTagCodec) Text("transmission_distance is a numeric Filamajig extension. PAXX v1.5.2-paxx12-21 ignores it; the U1 fields above remain compatible.", style = MaterialTheme.typography.bodySmall)
++        if (item.provenance == Provenance.CATALOG) Text("Save this candidate locally to bind verified tag identities to a physical spool. The tag can still be written without a local binding.", style = MaterialTheme.typography.bodySmall)
++        encodedResult.exceptionOrNull()?.message?.let { Notice("Complete missing or invalid fields before writing: $it", true) }
+         val canStartWrite = model.nfc.state.phase in setOf(WritePhase.DRAFT, WritePhase.COMPLETED, WritePhase.CANCELLED, WritePhase.REJECTED, WritePhase.FAILED_BEFORE_WRITE, WritePhase.UNRESOLVED_ARCHIVED)
+-        Button(onClick = { model.arm(item) }, modifier = Modifier.fillMaxWidth(), enabled = intent != null && canStartWrite) { Text("Prepare verified NFC write") }
++        Button(onClick = { model.arm(item) }, modifier = Modifier.fillMaxWidth(), enabled = encoded != null && canStartWrite) { Text("Prepare verified NFC write") }
+         Spacer(Modifier.height(90.dp))
+     }
+     if (confirmDelete) AlertDialog(
+@@ -348,6 +354,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
+         if (nfc.readDiagnostic != null) TextButton(onClick = { showDiagnostics = true }) { Text("Tag diagnostics") }
+         if (nfc.unresolvedArchiveCount > 0) TextButton(onClick = { showHistory = true }) { Text("Unresolved history (${nfc.unresolvedArchiveCount})") }
+     }
++    nfc.bindingStatus?.let { Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.primary) }
+     if (showDiagnostics) AlertDialog(onDismissRequest = { showDiagnostics = false }, title = { Text("Last tag read diagnostics") }, text = {
+         Text(nfc.readDiagnostic.orEmpty(), modifier = Modifier.heightIn(max = 420.dp).verticalScroll(rememberScrollState()), style = MaterialTheme.typography.bodySmall)
+     }, confirmButton = { TextButton(onClick = { showDiagnostics = false }) { Text("Close") } })
+@@ -362,6 +369,14 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
+     }, confirmButton = { TextButton(onClick = { showHistory = false }) { Text("Close") } })
+ }
+
++internal fun wireFieldSummary(payload: ByteArray): String {
++    val root=StrictJson().parse(payload) as JsonValue.Obj
++    return root.values.entries.joinToString { (name,value) ->
++        val type=when(value){is JsonValue.Str->"string";is JsonValue.Num->"number";is JsonValue.Arr->"array";is JsonValue.Bool->"boolean";JsonValue.Null->"null";is JsonValue.Obj->"object"}
++        "$name ($type)"
++    }
++}
++
+ private fun barcodeSummary(evidence: String): String = runCatching {
+     val e = org.json.JSONObject(evidence)
+     val count = e.getInt("candidate_count")
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt
+index 3bd41fe56..1ec297e91 100644
+--- a/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt
+@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
+ import kotlinx.coroutines.Dispatchers
+ import kotlinx.coroutines.flow.collectLatest
+ import kotlinx.coroutines.launch
++import kotlinx.coroutines.runBlocking
+ import kotlinx.coroutines.withContext
+ import net.jamesjennison.filamajignfc.core.*
+ import net.jamesjennison.filamajignfc.data.*
+@@ -38,14 +39,25 @@ data class CustomSeed(
+
+ class MainViewModel(app: Application) : AndroidViewModel(app) {
+     private val store = (app as FilamajigApplication).data
+-    val nfc = NfcCoordinator(app)
++    var savedTagBindings by mutableStateOf<List<TagBindingEntity>>(emptyList()); private set
++    val nfc = NfcCoordinator(app, onVerified = { verified ->
++        runBlocking {
++            store.filaments.bindVerifiedTag(
++                verified.context.spoolId, verified.uid, verified.context.codecId,
++                verified.payload, verified.bindingOrder,
++            )
++            val bindings=store.filaments.tagBindings(verified.context.spoolId)
++            viewModelScope.launch { savedTagBindings=bindings }
++        }
++    })
+     var loading by mutableStateOf(true); private set
+     var query by mutableStateOf("")
+     var results by mutableStateOf<List<FilamentItem>>(emptyList()); private set
+     var recents by mutableStateOf<List<FilamentItem>>(emptyList()); private set
+     var selected by mutableStateOf<FilamentItem?>(null)
+     var error by mutableStateOf<String?>(null); private set
+-    var profile by mutableStateOf(OpenSpoolProfile.PAXX)
++    val tagCodecs: List<FilamentTagCodec> = TagCodecRegistry.codecs
++    var codecId by mutableStateOf(TagCodecRegistry.DEFAULT_CODEC_ID)
+     private val gtinIndex = GtinIndex(app)
+     private val ofdProvider = OfdCatalogProvider(store.catalog.catalog())
+     private val localProvider = LocalCatalogProvider(store.user.user())
+@@ -109,7 +121,13 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
+
+     fun select(item: FilamentItem) {
+         selected = item
++        savedTagBindings=emptyList()
+         viewModelScope.launch(Dispatchers.IO) { store.user.user().recent(Recent(item.entry.packageId, item.provenance.name, encodeSnapshot(item), System.currentTimeMillis())) }
++        if(item.provenance!=Provenance.CATALOG)viewModelScope.launch {
++            savedTagBindings=withContext(Dispatchers.IO) {
++                store.filaments.portableIds(item.entry.packageId)?.let { store.filaments.tagBindings(it.spoolId) }.orEmpty()
++            }
++        }
+     }
+     fun clearLabelPhotos() { if (!labelAnalysis.busy) labelPhotos = emptyList() }
+     fun addLabelPhoto(jpeg: ByteArray, codes: List<LabelCode>) {
+@@ -180,8 +198,22 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
+                 .onFailure { error = it.message ?: "Portable spool identity is unavailable" }
+         }
+     }
+-    fun intent(item: FilamentItem): OpenSpoolIntent = OpenSpoolCodec.encode(item.toRecord(), profile)
+-    fun arm(item: FilamentItem) { runCatching { nfc.arm(intent(item)) }.onFailure { error = it.message } }
++    fun selectedTagCodec(): FilamentTagCodec = TagCodecRegistry.require(codecId)
++    fun encodedTag(item: FilamentItem): EncodedTag = selectedTagCodec().encode(item.toRecord())
++    fun intent(item: FilamentItem): OpenSpoolIntent = selectedTagCodec().intent(item.toRecord())
++    fun arm(item: FilamentItem) {
++        val selectedCodecId=codecId
++        viewModelScope.launch {
++            runCatching {
++                val intent=TagCodecRegistry.require(selectedCodecId).intent(item.toRecord())
++                val binding=if(item.provenance==Provenance.CATALOG)null else withContext(Dispatchers.IO) {
++                    store.filaments.portableIds(item.entry.packageId)?.let { WriteBindingContext(it.spoolId,selectedCodecId) }
++                        ?: throw ValidationException("Saved spool identity is unavailable")
++                }
++                nfc.arm(intent,binding)
++            }.onSuccess { error=null }.onFailure { error=it.message }
++        }
++    }
+
+     fun seed(item: FilamentItem): CustomSeed {
+         val e = item.entry
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt
+index fa86c4d39..ecaf7b6a4 100644
+--- a/app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt
+@@ -10,7 +10,15 @@ import androidx.compose.runtime.*
+ import net.jamesjennison.filamajignfc.core.*
+ import java.util.concurrent.Executors
+
+-class NfcCoordinator(context:Context, private val io: java.util.concurrent.ExecutorService = Executors.newSingleThreadExecutor()) {
++data class WriteBindingContext(val spoolId: String, val codecId: String)
++data class VerifiedTagWrite(val context: WriteBindingContext, val uid: ByteArray, val payload: ByteArray, val bindingOrder: Int)
++internal enum class BindingPersistence { NOT_REQUIRED, SAVED, RETRY_REQUIRED }
++
++class NfcCoordinator(
++    context:Context,
++    private val io: java.util.concurrent.ExecutorService = Executors.newSingleThreadExecutor(),
++    private val onVerified: ((VerifiedTagWrite) -> Unit)? = null,
++) {
+     private val machine=WriteStateMachine(); private val main=Handler(Looper.getMainLooper())
+     @Volatile private var disposed = false
+     private val journal=WriteJournal(context)
+@@ -18,12 +26,14 @@ class NfcCoordinator(context:Context, private val io: java.util.concurrent.Execu
+     var readDiagnostic by mutableStateOf<String?>(null); private set
+     var state by mutableStateOf(machine.state); private set
+     var lastRead by mutableStateOf<DecodeResult?>(null); private set
++    var bindingStatus by mutableStateOf<String?>(null); private set
+     var unresolvedArchiveCount by mutableIntStateOf(journal.archiveCount()); private set
+-    init { journal.load()?.let{if(it.verificationPending)machine.restorePending(it.uid,it.payload)else machine.restoreUnknown(it.uid,it.payload);state=machine.state} }
++    private var bindingContext: WriteBindingContext? = null
++    init { journal.load()?.let{bindingContext=it.bindingContext;if(it.verificationPending)machine.restorePending(it.uid,it.payload,it.tagNumber)else machine.restoreUnknown(it.uid,it.payload,it.tagNumber);state=machine.state} }
+     internal fun archivedWrites() = journal.archives()
+-    fun arm(intent:OpenSpoolIntent)=dispatch{machine.arm(intent)}
++    fun arm(intent:OpenSpoolIntent, binding: WriteBindingContext? = null)=dispatch{bindingContext=binding;bindingStatus=null;machine.arm(intent)}
+     fun armSecondTag()=dispatch{machine.armSecondTag()}
+-    fun finishWithOneTag()=dispatch{machine.finishWithOneTag();journal.clear()}
++    fun finishWithOneTag()=dispatch{machine.finishWithOneTag();journal.clear();bindingContext=null}
+     fun approveOverwrite()=dispatch{machine.approveOverwrite()}
+     fun cancel()=dispatch{machine.cancel();persistOrClear()}
+     fun archiveUnknown()=dispatch{val s=machine.state;val uid=s.uid?:error("No unresolved tag");val payload=journal.activePayload()?:error("No unresolved payload");check(journal.archive(uid,payload)){"Could not archive unresolved write"};machine.archiveUnknown();post{unresolvedArchiveCount=journal.archiveCount()}}
+@@ -33,7 +43,26 @@ class NfcCoordinator(context:Context, private val io: java.util.concurrent.Execu
+     fun onTag(tag:Tag){ execute { handle(tag) } }
+     private fun dispatch(block:()->Unit){execute{runCatching(block).onFailure{e->post{state=state.copy(detail=e.message?:"Operation rejected")}};publish()}}
+     private fun publish(){val next=machine.state;post{state=next}}
+-    private fun persistOrClear(){val s=machine.state;when(s.phase){WritePhase.WRITING,WritePhase.VERIFYING,WritePhase.VERIFICATION_PENDING,WritePhase.WRITE_OUTCOME_UNKNOWN->{val uid=s.uid;val payload=s.intent?.payload?:journal.activePayload();if(uid!=null&&payload!=null)journal.save(uid,payload,s.phase==WritePhase.VERIFICATION_PENDING)}WritePhase.VERIFIED->journal.clear();else->Unit}}
++    private fun persistOrClear(){val s=machine.state;when(s.phase){WritePhase.WRITING,WritePhase.VERIFYING,WritePhase.VERIFICATION_PENDING,WritePhase.WRITE_OUTCOME_UNKNOWN->{val uid=s.uid;val payload=s.intent?.payload?:journal.activePayload();if(uid!=null&&payload!=null)journal.save(uid,payload,s.phase==WritePhase.VERIFICATION_PENDING,bindingContext,s.tagNumber)}else->Unit}}
++    private fun verifiedWrite(): VerifiedTagWrite? {
++        val s=machine.state
++        val binding=bindingContext ?: return null
++        val uid=s.uid ?: return null
++        val payload=s.intent?.payload ?: journal.activePayload() ?: return null
++        return VerifiedTagWrite(binding,uid,payload,s.tagNumber)
++    }
++    private fun reconcile(snapshot: TagSnapshot) {
++        val before=machine.state.phase
++        machine.reconciled(snapshot)
++        if(before!=WritePhase.VERIFIED&&machine.state.phase==WritePhase.VERIFIED) {
++            val result=finalizeVerifiedBinding(verifiedWrite(),onVerified,journal)
++            when(result.persistence) {
++                BindingPersistence.SAVED -> post { bindingStatus="Tag ${machine.state.tagNumber} is verified and bound to this spool" }
++                BindingPersistence.RETRY_REQUIRED -> post { bindingStatus="Tag verified, but its local spool binding could not be saved: ${result.errorMessage}. Restart and re-tap this tag for read-only retry." }
++                BindingPersistence.NOT_REQUIRED -> Unit
++            }
++        } else persistOrClear()
++    }
+     private fun awaitingWrite()=machine.state.phase in setOf(WritePhase.AWAITING_TAG,WritePhase.INSPECTING,WritePhase.NEEDS_OVERWRITE_CONSENT)
+     private fun handle(tag:Tag){
+         val ndef=Ndef.get(tag) ?: run {if(awaitingWrite()){machine.rejectBeforeWrite("Unsupported or unformatted tag. Automatic formatting is disabled.");publish()}else post{lastRead=DecodeResult.Rejected("Unsupported or unformatted tag. Automatic formatting is disabled.")};return}
+@@ -45,7 +74,7 @@ class NfcCoordinator(context:Context, private val io: java.util.concurrent.Execu
+             val records=current?.records?.map{TagRecord(it.tnf.toInt(),it.type.toString(Charsets.US_ASCII),it.payload)}?:emptyList()
+             val snapshot=TagSnapshot(tag.id.copyOf(),ndef.isWritable,ndef.maxSize,records)
+             if(machine.state.phase in setOf(WritePhase.VERIFYING,WritePhase.VERIFICATION_PENDING,WritePhase.WRITE_OUTCOME_UNKNOWN)){
+-                machine.reconciled(snapshot);persistOrClear();post{lastRead=decodeSingleOpenSpool(current)};publish();return
++                reconcile(snapshot);post{lastRead=decodeSingleOpenSpool(current)};publish();return
+             }
+             if(!awaitingWrite()){post{lastRead=decodeSingleOpenSpool(current)};return}
+             val intent=machine.state.intent ?: return
+@@ -57,7 +86,7 @@ class NfcCoordinator(context:Context, private val io: java.util.concurrent.Execu
+             machine.inspected(snapshot,message.toByteArray().size);publish()
+             if(machine.state.phase!=WritePhase.WRITING)return
+             val writeUid=machine.state.uid;val writePayload=machine.state.intent?.payload
+-            if(writeUid==null||writePayload==null||!journal.save(writeUid,writePayload)){machine.writeFailedBeforeCall("Could not durably journal the write; no write was attempted");publish();return}
++            if(writeUid==null||writePayload==null||!journal.save(writeUid,writePayload,false,bindingContext,machine.state.tagNumber)){machine.writeFailedBeforeCall("Could not durably journal the write; no write was attempted");publish();return}
+             try { ndef.writeNdefMessage(message) } catch(e:Exception){ machine.writeInterrupted("Write did not complete: ${e.javaClass.simpleName}");publish();return }
+             machine.writeReturned();persistOrClear();publish()
+             // Every attempt is an uncached active RF read. A transient null after a
+@@ -65,7 +94,7 @@ class NfcCoordinator(context:Context, private val io: java.util.concurrent.Execu
+             val fresh=readFreshNdefWithRetries { ndef.ndefMessage }
+             completedReads.add("post-write" to fresh)
+             val freshRecords=fresh?.records?.map{TagRecord(it.tnf.toInt(),it.type.toString(Charsets.US_ASCII),it.payload)}?:emptyList()
+-            machine.reconciled(TagSnapshot(tag.id.copyOf(),ndef.isWritable,ndef.maxSize,freshRecords));persistOrClear();post{lastRead=decodeSingleOpenSpool(fresh)};publish()
++            reconcile(TagSnapshot(tag.id.copyOf(),ndef.isWritable,ndef.maxSize,freshRecords));post{lastRead=decodeSingleOpenSpool(fresh)};publish()
+         } catch(e:Exception){
+             if(machine.state.phase==WritePhase.WRITING)machine.writeInterrupted("Tag connection lost during write")
+             else if(machine.state.phase==WritePhase.VERIFYING)machine.verificationDeferred("Android lost the tag connection during verification")
+@@ -98,6 +127,16 @@ class NfcCoordinator(context:Context, private val io: java.util.concurrent.Execu
+     internal fun decodeSingleOpenSpool(message:NdefMessage?):DecodeResult {val records=message?.records?:emptyArray();if(records.isEmpty())return DecodeResult.Rejected("No NDEF message returned by this read. This does not establish whether an earlier write persisted.");if(records.size!=1)return DecodeResult.Rejected("Multiple NDEF records found; existing contents will not be overwritten.");val record=records.single();if(record.tnf!=NdefRecord.TNF_MIME_MEDIA||record.type.toString(Charsets.US_ASCII)!=OpenSpoolCodec.MIME)return DecodeResult.Rejected("No OpenSpool MIME record found");return OpenSpoolCodec.decode(record.payload)}
+ }
+
++internal data class BindingFinalization(val persistence: BindingPersistence, val errorMessage: String?=null)
++internal fun finalizeVerifiedBinding(write: VerifiedTagWrite?, callback: ((VerifiedTagWrite)->Unit)?, journal: WriteJournal): BindingFinalization {
++    if(write==null) { journal.clear(); return BindingFinalization(BindingPersistence.NOT_REQUIRED) }
++    return runCatching { requireNotNull(callback) { "No binding persistence callback is available" };callback(write) }
++        .fold(
++            onSuccess={journal.clear();BindingFinalization(BindingPersistence.SAVED)},
++            onFailure={error->journal.save(write.uid,write.payload,true,write.context,write.bindingOrder);BindingFinalization(BindingPersistence.RETRY_REQUIRED,error.message?:"unknown error")},
++        )
++}
++
+ internal fun readFreshNdefWithRetries(
+     attempts: Int = 6,
+     pauseMillis: Long = 180,
+@@ -113,16 +152,21 @@ internal fun readFreshNdefWithRetries(
+ }
+
+ internal class WriteJournal(context:Context){
+-    data class Entry(val uid:ByteArray,val payload:ByteArray,val verificationPending:Boolean=false)
++    data class Entry(val uid:ByteArray,val payload:ByteArray,val verificationPending:Boolean=false,val bindingContext:WriteBindingContext?=null,val tagNumber:Int=1)
+     private val prefs=context.getSharedPreferences("nfc-write-journal",Context.MODE_PRIVATE)
+-    fun save(uid:ByteArray,payload:ByteArray,verificationPending:Boolean=false):Boolean=prefs.edit().putInt("version",2).putString("uid",Base64.encodeToString(uid,Base64.NO_WRAP)).putString("payload",Base64.encodeToString(payload,Base64.NO_WRAP)).putBoolean("verification_pending",verificationPending).commit()
+-    fun load():Entry?=runCatching{val version=prefs.getInt("version",0);if(version !in 1..2)return null;val uid=Base64.decode(prefs.getString("uid",null)?:return null,Base64.DEFAULT);val payload=Base64.decode(prefs.getString("payload",null)?:return null,Base64.DEFAULT);if(uid.isEmpty()||payload.isEmpty())return null;Entry(uid,payload,version>=2&&prefs.getBoolean("verification_pending",false))}.getOrNull()
++    fun save(uid:ByteArray,payload:ByteArray,verificationPending:Boolean=false,bindingContext:WriteBindingContext?=null,tagNumber:Int=1):Boolean {
++        require(tagNumber in 1..2)
++        val edit=prefs.edit().putInt("version",3).putString("uid",Base64.encodeToString(uid,Base64.NO_WRAP)).putString("payload",Base64.encodeToString(payload,Base64.NO_WRAP)).putBoolean("verification_pending",verificationPending).putInt("tag_number",tagNumber)
++        if(bindingContext==null)edit.remove("spool_id").remove("codec_id") else edit.putString("spool_id",bindingContext.spoolId).putString("codec_id",bindingContext.codecId)
++        return edit.commit()
++    }
++    fun load():Entry?=runCatching{val version=prefs.getInt("version",0);if(version !in 1..3)return null;val uid=Base64.decode(prefs.getString("uid",null)?:return null,Base64.DEFAULT);val payload=Base64.decode(prefs.getString("payload",null)?:return null,Base64.DEFAULT);if(uid.isEmpty()||payload.isEmpty())return null;val spool=if(version>=3)prefs.getString("spool_id",null)else null;val codec=if(version>=3)prefs.getString("codec_id",null)else null;val binding=if(!spool.isNullOrBlank()&&!codec.isNullOrBlank())WriteBindingContext(spool,codec)else null;Entry(uid,payload,version>=2&&prefs.getBoolean("verification_pending",false),binding,if(version>=3)prefs.getInt("tag_number",1)else 1)}.getOrNull()
+     fun activePayload():ByteArray?=load()?.payload
+     data class ArchivedEntry(val timestamp: Long, val uid: ByteArray, val payload: ByteArray)
+     fun archives(): List<ArchivedEntry> = prefs.all.entries.filter { it.key.startsWith("archive_") && it.key != "archive_count" }.mapNotNull { (_, value) ->
+         runCatching { val parts = (value as String).split(':', limit = 3); ArchivedEntry(parts[0].toLong(), Base64.decode(parts[1], Base64.DEFAULT), Base64.decode(parts[2], Base64.DEFAULT)) }.getOrNull()
+     }.sortedByDescending { it.timestamp }
+     fun archiveCount():Int=prefs.getInt("archive_count",0)
+-    fun archive(uid:ByteArray,payload:ByteArray):Boolean{val count=prefs.getInt("archive_count",0);check(count < Int.MAX_VALUE){"Unresolved archive capacity reached"};val slot=count;return prefs.edit().putInt("archive_count",count+1).putString("archive_$slot",System.currentTimeMillis().toString()+":"+Base64.encodeToString(uid,Base64.NO_WRAP)+":"+Base64.encodeToString(payload,Base64.NO_WRAP)).remove("version").remove("uid").remove("payload").remove("verification_pending").commit()}
+-    fun clear():Boolean=prefs.edit().remove("version").remove("uid").remove("payload").remove("verification_pending").commit()
++    fun archive(uid:ByteArray,payload:ByteArray):Boolean{val count=prefs.getInt("archive_count",0);check(count < Int.MAX_VALUE){"Unresolved archive capacity reached"};val slot=count;return prefs.edit().putInt("archive_count",count+1).putString("archive_$slot",System.currentTimeMillis().toString()+":"+Base64.encodeToString(uid,Base64.NO_WRAP)+":"+Base64.encodeToString(payload,Base64.NO_WRAP)).remove("version").remove("uid").remove("payload").remove("verification_pending").remove("spool_id").remove("codec_id").remove("tag_number").commit()}
++    fun clear():Boolean=prefs.edit().remove("version").remove("uid").remove("payload").remove("verification_pending").remove("spool_id").remove("codec_id").remove("tag_number").commit()
+ }
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt
+index ccee877a4..fdd9d18d2 100644
+--- a/app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt
+@@ -192,6 +192,7 @@ interface CanonicalDao {
+     @Query("SELECT * FROM physical_spools WHERE spool_id=:id") suspend fun spool(id: String): PhysicalSpoolEntity?
+     @Query("SELECT * FROM physical_spools WHERE legacy_record_id=:legacyId") suspend fun spoolForLegacyRecord(legacyId: String): PhysicalSpoolEntity?
+     @Query("SELECT * FROM tag_bindings WHERE spool_id=:spoolId ORDER BY binding_order, created_at") suspend fun tagBindings(spoolId: String): List<TagBindingEntity>
++    @Query("SELECT * FROM tag_bindings WHERE technology=:technology AND uid_hex=:uidHex") suspend fun tagBindingByUid(technology: String, uidHex: String): TagBindingEntity?
+     @Query("SELECT * FROM transmission_distance_measurements WHERE profile_id=:profileId ORDER BY created_at, measurement_id") suspend fun tdMeasurements(profileId: String): List<TransmissionDistanceMeasurementEntity>
+     @Query("DELETE FROM profile_observations WHERE observation_id LIKE :prefix || '%'") suspend fun deleteObservationsWithPrefix(prefix: String)
+     @Query("DELETE FROM profile_overrides WHERE profile_id=:profileId") suspend fun deleteOverrides(profileId: String)
+@@ -200,6 +201,8 @@ interface CanonicalDao {
+     @Query("DELETE FROM physical_spools WHERE legacy_record_id=:legacyId") suspend fun deleteLegacySpool(legacyId: String)
+     @Query("DELETE FROM filament_profiles WHERE legacy_record_id=:legacyId") suspend fun deleteLegacyProfile(legacyId: String)
+     @Query("DELETE FROM filament_profiles WHERE profile_id=:profileId") suspend fun deleteProfile(profileId: String)
++    @Query("DELETE FROM tag_bindings WHERE spool_id=:spoolId AND binding_order=:bindingOrder") suspend fun deleteTagBindingAt(spoolId: String, bindingOrder: Int)
++    @Query("DELETE FROM tag_bindings WHERE technology=:technology AND uid_hex=:uidHex") suspend fun deleteTagBindingByUid(technology: String, uidHex: String)
+     @Query("SELECT COUNT(*) FROM physical_spools WHERE profile_id=:profileId") suspend fun spoolCount(profileId: String): Int
+     @Query("UPDATE filament_profiles SET legacy_record_id=NULL WHERE profile_id=:profileId") suspend fun detachLegacyProfile(profileId: String)
+
+@@ -251,6 +254,22 @@ interface CanonicalDao {
+             ))
+         }
+     }
++
++    @Transaction
++    suspend fun bindVerifiedTag(spoolId: String, technology: String, uidHex: String, codecId: String,
++                                payloadSha256: String, verifiedAt: Long, bindingOrder: Int) {
++        require(spool(spoolId) != null) { "Physical spool does not exist" }
++        require(bindingOrder in 1..2) { "A spool supports tag positions one and two" }
++        require(technology.isNotBlank() && uidHex.matches(Regex("[0-9A-F]+")) && uidHex.length % 2 == 0) { "Tag identity is invalid" }
++        require(codecId.isNotBlank() && payloadSha256.matches(Regex("[0-9a-f]{64}"))) { "Verified tag metadata is invalid" }
++        val previous = tagBindingByUid(technology, uidHex)
++        deleteTagBindingAt(spoolId, bindingOrder)
++        deleteTagBindingByUid(technology, uidHex)
++        putTagBinding(TagBindingEntity(
++            "tag:${technology.lowercase()}:$uidHex", spoolId, technology, uidHex, codecId,
++            payloadSha256, verifiedAt, bindingOrder, previous?.createdAt ?: verifiedAt,
++        ))
++    }
+ }
+
+ internal fun legacyProfileId(recordId: String) = "$LEGACY_PROFILE_PREFIX$recordId"
+@@ -387,6 +406,15 @@ class LocalFilamentRepository internal constructor(private val database: UserDat
+         val spool = database.canonical().spoolForLegacyRecord(recordId) ?: return null
+         return SavedPortableIdentity(spool.profileId, spool.spoolId, spool.initialQuantityG, spool.remainingQuantityG)
+     }
++
++    suspend fun bindVerifiedTag(spoolId: String, uid: ByteArray, codecId: String, payload: ByteArray,
++                                bindingOrder: Int, verifiedAt: Long = System.currentTimeMillis()) {
++        val uidHex = uid.joinToString("") { "%02X".format(it) }
++        val digest = java.security.MessageDigest.getInstance("SHA-256").digest(payload).joinToString("") { "%02x".format(it) }
++        database.canonical().bindVerifiedTag(spoolId, "NFC-A", uidHex, codecId, digest, verifiedAt, bindingOrder)
++    }
++
++    suspend fun tagBindings(spoolId: String): List<TagBindingEntity> = database.canonical().tagBindings(spoolId)
+ }
+
+ data class SavedPortableIdentity(val profileId: String, val spoolId: String, val initialQuantityG: Int, val remainingQuantityG: Int?)
+diff --git a/app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt b/app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt
+index 98ede5e00..fc2286183 100644
+--- a/app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt
++++ b/app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt
+@@ -97,10 +97,36 @@ class StorageAcceptanceTest {
+
+     @Test fun journalDistinguishesVerificationPendingFromUnknownAcrossRestart() {
+         val journal = WriteJournal(context)
+-        assertTrue(journal.save(byteArrayOf(7), byteArrayOf(8), verificationPending = true))
+-        assertTrue(WriteJournal(context).load()!!.verificationPending)
++        val binding=WriteBindingContext("spool:one","openspool-paxx-u1-1.0")
++        assertTrue(journal.save(byteArrayOf(7), byteArrayOf(8), verificationPending = true, bindingContext = binding, tagNumber = 2))
++        val restored=WriteJournal(context).load()!!
++        assertTrue(restored.verificationPending)
++        assertEquals(binding,restored.bindingContext)
++        assertEquals(2,restored.tagNumber)
+         assertTrue(journal.save(byteArrayOf(7), byteArrayOf(8), verificationPending = false))
+         assertFalse(WriteJournal(context).load()!!.verificationPending)
++        assertNull(WriteJournal(context).load()!!.bindingContext)
++        assertEquals(1,WriteJournal(context).load()!!.tagNumber)
++    }
++
++    @Test fun verifiedBindingCallbackFailureRetainsReadOnlyRetryContextUntilPersistenceSucceeds() {
++        val journal=WriteJournal(context)
++        journal.clear()
++        val binding=WriteBindingContext("spool:retry","openspool-paxx-u1-1.0")
++        val write=VerifiedTagWrite(binding,byteArrayOf(0x0A,0x0B),"verified".encodeToByteArray(),2)
++        val failed=finalizeVerifiedBinding(write,{ throw java.io.IOException("database unavailable") },journal)
++        assertEquals(BindingPersistence.RETRY_REQUIRED,failed.persistence)
++        val retained=journal.load()!!
++        assertTrue(retained.verificationPending)
++        assertEquals(binding,retained.bindingContext)
++        assertEquals(2,retained.tagNumber)
++        assertArrayEquals(write.uid,retained.uid)
++        assertArrayEquals(write.payload,retained.payload)
++        var saved:VerifiedTagWrite?=null
++        val retried=finalizeVerifiedBinding(write,{ saved=it },journal)
++        assertEquals(BindingPersistence.SAVED,retried.persistence)
++        assertEquals(write,saved)
++        assertNull(journal.load())
+     }
+
+     @Test fun allUiCommandsAfterCoordinatorDisposalAreHarmless() {
+@@ -378,6 +404,29 @@ class StorageAcceptanceTest {
+         }
+     }
+
++    @Test fun repositoryBindsTwoVerifiedTagsReplacesSlotsAndCascadesWithSpool() = runBlocking {
++        Room.inMemoryDatabaseBuilder(context, UserDatabase::class.java).allowMainThreadQueries().build().use { db ->
++            val record = CustomRecord(
++                "bound-spool", null, "", "", "Owner", "PLA", "Basic", "Blue", "0000FF", "1.75", 1000,
++                200, 220, 50, 60, null, null, "", "user", "CUSTOM", "User", "User", "User", "User", "User",
++                "Assumed default", "Assumed default", "User", "User", "User", "User", 99, "", null, null,
++            )
++            val repository=LocalFilamentRepository(db)
++            repository.save(record)
++            val spoolId=repository.portableIds(record.id)!!.spoolId
++            repository.bindVerifiedTag(spoolId,byteArrayOf(1,2),"openspool-paxx-u1-1.0","first".encodeToByteArray(),1,100)
++            repository.bindVerifiedTag(spoolId,byteArrayOf(3,4),"openspool-paxx-u1-1.0","second".encodeToByteArray(),2,200)
++            assertEquals(listOf("0102","0304"),repository.tagBindings(spoolId).map { it.uidHex })
++            repository.bindVerifiedTag(spoolId,byteArrayOf(5,6),"openspool-1.0","replacement".encodeToByteArray(),1,300)
++            val bindings=repository.tagBindings(spoolId)
++            assertEquals(listOf(1,2),bindings.map { it.bindingOrder })
++            assertEquals("0506",bindings.first().uidHex)
++            assertEquals("openspool-1.0",bindings.first().codecId)
++            repository.delete(record.id)
++            assertTrue(repository.tagBindings(spoolId).isEmpty())
++        }
++    }
++
+     @Test fun importedPortableIdentitySurvivesResaveSupportsSharedProfilesAndRejectsSpoolCollisions() = runBlocking {
+         Room.inMemoryDatabaseBuilder(context, UserDatabase::class.java).allowMainThreadQueries().build().use { db ->
+             fun record(id: String, updatedAt: Long) = CustomRecord(
+diff --git a/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/OpenSpoolCodec.kt b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/OpenSpoolCodec.kt
+index 84f236c06..cd9508cdb 100644
+--- a/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/OpenSpoolCodec.kt
++++ b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/OpenSpoolCodec.kt
+@@ -88,6 +88,9 @@ object OpenSpoolCodec {
+             "95A" in description && ("HIGH FLOW" in description || Regex("(?:^|\\s)HF(?:\\s|$)").containsMatchIn(description)) -> "95A HF"
+             "95A" in description -> "95A"
+             "SNAPSPEED" in description -> "SnapSpeed"
++            "TRANSPARENT" in description || "CLEAR" in description -> "Transparent"
++            "RAPID" in description -> "Rapid"
++            "FLEXIBLE" in description -> "Flexible"
+             "MATTE" in description -> "Matte"
+             "SILK" in description -> "Silk"
+             "SUPPORT" in description -> "Support"
+diff --git a/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/TagCodec.kt b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/TagCodec.kt
+index 0195606b2..523c1ddb9 100644
+--- a/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/TagCodec.kt
++++ b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/TagCodec.kt
+@@ -5,9 +5,10 @@ data class TagFormat(
+     val displayName: String,
+     val mimeType: String,
+     val protocolVersion: String,
++    val compatibilityTarget: String,
+ )
+
+-class EncodedTag(payload: ByteArray, val format: TagFormat, val omittedFields: Set<String>) {
++class EncodedTag(payload: ByteArray, val format: TagFormat, val omittedFields: Set<String>, val includedWireFields: Set<String>) {
+     private val bytes = payload.copyOf()
+     val payload: ByteArray get() = bytes.copyOf()
+     val sizeBytes: Int get() = bytes.size
+@@ -16,21 +17,30 @@ class EncodedTag(payload: ByteArray, val format: TagFormat, val omittedFields: S
+
+ interface FilamentTagCodec {
+     val format: TagFormat
+-    fun encode(record: FilamentRecord): EncodedTag
++    fun intent(record: FilamentRecord): OpenSpoolIntent
++    fun encode(record: FilamentRecord): EncodedTag = intent(record).let { encoded ->
++        val root = StrictJson().parse(encoded.payload) as JsonValue.Obj
++        EncodedTag(encoded.payload, format, encoded.omittedFields, root.values.keys)
++    }
+     fun decode(payload: ByteArray): DecodeResult
+ }
+
+ object StandardOpenSpoolTagCodec : FilamentTagCodec {
+-    override val format = TagFormat("openspool-1.0", "OpenSpool 1.0", OpenSpoolCodec.MIME, "1.0")
+-    override fun encode(record: FilamentRecord): EncodedTag = OpenSpoolCodec.encode(record, OpenSpoolProfile.CANONICAL)
+-        .let { EncodedTag(it.payload, format, it.omittedFields) }
++    override val format = TagFormat("openspool-1.0", "Standard OpenSpool 1.0", OpenSpoolCodec.MIME, "1.0", "OpenSpool 1.0 readers")
++    override fun intent(record: FilamentRecord) = OpenSpoolCodec.encode(record, OpenSpoolProfile.CANONICAL)
+     override fun decode(payload: ByteArray) = OpenSpoolCodec.decode(payload)
+ }
+
+ object PaxxU1ExtendedTagCodec : FilamentTagCodec {
+     const val TARGET_FIRMWARE = "v1.5.2-paxx12-21"
+-    override val format = TagFormat("openspool-paxx-u1-1.0", "PAXX U1 Extended OpenSpool", OpenSpoolCodec.MIME, "1.0")
+-    override fun encode(record: FilamentRecord): EncodedTag = OpenSpoolCodec.encode(record, OpenSpoolProfile.PAXX)
+-        .let { EncodedTag(it.payload, format, it.omittedFields) }
++    override val format = TagFormat("openspool-paxx-u1-1.0", "PAXX U1 Extended", OpenSpoolCodec.MIME, "1.0", "Snapmaker U1 $TARGET_FIRMWARE")
++    override fun intent(record: FilamentRecord) = OpenSpoolCodec.encode(record, OpenSpoolProfile.PAXX)
+     override fun decode(payload: ByteArray) = OpenSpoolCodec.decode(payload)
+ }
++
++object TagCodecRegistry {
++    val codecs: List<FilamentTagCodec> = listOf(StandardOpenSpoolTagCodec, PaxxU1ExtendedTagCodec)
++    const val DEFAULT_CODEC_ID = "openspool-paxx-u1-1.0"
++    fun require(id: String): FilamentTagCodec = codecs.singleOrNull { it.format.id == id }
++        ?: throw ValidationException("Unknown tag codec '$id'")
++}
+diff --git a/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/WriteStateMachine.kt b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/WriteStateMachine.kt
+index f4b153f89..4ee92fe39 100644
+--- a/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/WriteStateMachine.kt
++++ b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/WriteStateMachine.kt
+@@ -45,8 +45,8 @@ class WriteStateMachine {
+             else -> state.copy(phase=WritePhase.WRITE_OUTCOME_UNKNOWN,detail=if(tag.records.isEmpty()) "No NDEF message returned by this read; outcome remains unknown; no automatic rewrite" else "Fresh NDEF message does not match; no automatic rewrite")
+         }
+     }
+-    fun restoreUnknown(uid:ByteArray,payload:ByteArray){require(state.phase==WritePhase.DRAFT);expectedPayload=payload.copyOf();state=WriteState(WritePhase.WRITE_OUTCOME_UNKNOWN,null,uid.copyOf(),"A prior write may have reached the tag. Re-tap for read-only reconciliation.")}
+-    fun restorePending(uid:ByteArray,payload:ByteArray){require(state.phase==WritePhase.DRAFT);expectedPayload=payload.copyOf();state=WriteState(WritePhase.VERIFICATION_PENDING,null,uid.copyOf(),"A write call completed before restart. Re-tap the same tag for read-only verification.")}
++    fun restoreUnknown(uid:ByteArray,payload:ByteArray,tagNumber:Int=1){require(state.phase==WritePhase.DRAFT);require(tagNumber in 1..2);expectedPayload=payload.copyOf();state=WriteState(WritePhase.WRITE_OUTCOME_UNKNOWN,null,uid.copyOf(),"A prior write may have reached the tag. Re-tap for read-only reconciliation.",tagNumber)}
++    fun restorePending(uid:ByteArray,payload:ByteArray,tagNumber:Int=1){require(state.phase==WritePhase.DRAFT);require(tagNumber in 1..2);expectedPayload=payload.copyOf();state=WriteState(WritePhase.VERIFICATION_PENDING,null,uid.copyOf(),"A write call completed before restart. Re-tap the same tag for read-only verification.",tagNumber)}
+     fun reconciliationReadFailed(reason:String){require(state.phase in setOf(WritePhase.VERIFICATION_PENDING,WritePhase.WRITE_OUTCOME_UNKNOWN));state=state.copy(detail=if(state.phase==WritePhase.VERIFICATION_PENDING) "$reason. Verification is still pending; re-tap the same tag. No rewrite will occur." else "$reason. The outcome remains unknown; re-tap the same tag for read-only reconciliation.")}
+     fun archiveUnknown(){require(state.phase==WritePhase.WRITE_OUTCOME_UNKNOWN||state.phase==WritePhase.VERIFICATION_PENDING);state=WriteState(WritePhase.UNRESOLVED_ARCHIVED,detail="Unresolved write archived without claiming cancellation or verification")}
+     fun cancel() { if(state.phase==WritePhase.WRITING||state.phase==WritePhase.VERIFYING||state.phase==WritePhase.WRITE_OUTCOME_UNKNOWN||state.phase==WritePhase.VERIFICATION_PENDING) { if(state.phase==WritePhase.WRITING||state.phase==WritePhase.VERIFYING)writeInterrupted("Operation interrupted") } else state=state.copy(phase=WritePhase.CANCELLED,detail="Cancelled before writing") }
+diff --git a/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/WriteStateMachineTest.kt b/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/WriteStateMachineTest.kt
+index 4c30ef817..0aaf895de 100644
+--- a/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/WriteStateMachineTest.kt
++++ b/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/WriteStateMachineTest.kt
+@@ -13,7 +13,9 @@ class WriteStateMachineTest {
+     @Test fun `second tag reuses frozen intent and rejects first tag uid`() { val sm=WriteStateMachine();sm.arm(intent);sm.inspected(tag(),300);sm.writeReturned();sm.reconciled(tag(records=listOf(record())));sm.armSecondTag();assertEquals(2,sm.state.tagNumber);sm.inspected(tag(),300);assertEquals(WritePhase.AWAITING_TAG,sm.state.phase);assertTrue(sm.state.detail.contains("first tag"));sm.inspected(tag(uid=byteArrayOf(2)),300);assertEquals(WritePhase.WRITING,sm.state.phase);assertContentEquals(byteArrayOf(2),sm.state.uid);sm.writeReturned();sm.reconciled(tag(uid=byteArrayOf(2),records=listOf(record())));assertEquals(WritePhase.VERIFIED,sm.state.phase);assertEquals(2,sm.state.tagNumber) }
+     @Test fun `verified first tag can finish without a second tag`() { val sm=WriteStateMachine();sm.arm(intent);sm.inspected(tag(),300);sm.writeReturned();sm.reconciled(tag(records=listOf(record())));sm.finishWithOneTag();assertEquals(WritePhase.COMPLETED,sm.state.phase);assertEquals("Completed with one verified tag",sm.state.detail) }
+     @Test fun `armed second tag can be cancelled while retaining first completion`() { val sm=WriteStateMachine();sm.arm(intent);sm.inspected(tag(),300);sm.writeReturned();sm.reconciled(tag(records=listOf(record())));sm.armSecondTag();sm.finishWithOneTag();assertEquals(WritePhase.COMPLETED,sm.state.phase) }
++    @Test fun `failed second tag can finish with the already verified first tag`() { val sm=WriteStateMachine();sm.arm(intent);sm.inspected(tag(),300);sm.writeReturned();sm.reconciled(tag(records=listOf(record())));sm.armSecondTag();sm.inspected(tag(uid=byteArrayOf(2),writable=false),300);assertEquals(WritePhase.REJECTED,sm.state.phase);assertEquals(2,sm.state.tagNumber);sm.finishWithOneTag();assertEquals(WritePhase.COMPLETED,sm.state.phase) }
+     @Test fun `pending verification survives restoration and can verify`() { val sm=WriteStateMachine();sm.restorePending(byteArrayOf(1),intent.payload);assertEquals(WritePhase.VERIFICATION_PENDING,sm.state.phase);sm.reconciled(tag(records=listOf(record())));assertEquals(WritePhase.VERIFIED,sm.state.phase) }
++    @Test fun `second tag position survives pending restoration`() { val sm=WriteStateMachine();sm.restorePending(byteArrayOf(1),intent.payload,2);assertEquals(2,sm.state.tagNumber);sm.reconciled(tag(records=listOf(record())));assertEquals(WritePhase.VERIFIED,sm.state.phase);assertEquals(2,sm.state.tagNumber) }
+     @Test fun `read exception after successful write is pending verification not unknown`() { val sm=WriteStateMachine();sm.arm(intent);sm.inspected(tag(),300);sm.writeReturned();sm.verificationDeferred("read failed");assertEquals(WritePhase.VERIFICATION_PENDING,sm.state.phase);assertTrue(sm.state.detail.contains("write call completed",ignoreCase=true)) }
+     @Test fun `interruption remains unknown and never rewrites`() { val sm=WriteStateMachine(); sm.arm(intent); sm.inspected(tag(),300); sm.writeInterrupted("lost"); assertEquals(WritePhase.WRITE_OUTCOME_UNKNOWN,sm.state.phase); sm.reconciled(tag(records=listOf(record("{}".encodeToByteArray())))); assertEquals(WritePhase.WRITE_OUTCOME_UNKNOWN,sm.state.phase) }
+     @Test fun `different uid cannot reconcile`() { val sm=WriteStateMachine(); sm.arm(intent); sm.inspected(tag(),300); sm.writeReturned(); sm.reconciled(tag(byteArrayOf(2),records=listOf(record()))); assertEquals(WritePhase.WRITE_OUTCOME_UNKNOWN,sm.state.phase) }
+diff --git a/docs/ROADMAP.md b/docs/ROADMAP.md
+index 39a9cc602..55de86f5c 100644
+--- a/docs/ROADMAP.md
++++ b/docs/ROADMAP.md
+@@ -96,6 +96,8 @@ Completed with the self-contained UTF-8 `filamajig.spool` version 1 QR contract;
+
+ Previous OpenSpool/PAXX/NFC state-machine work remains substantial. Route UI through registry; add exact standard vs PAXX field/omission previews and release-pinned fixtures; bind one or two tags to a spool. Acceptance: unit round trips, byte capacity, malformed/unknown preservation, current Razr NTAG215 write/readback, and U1 `v1.5.2-paxx12-21` recognition across the supported field matrix. No generic claim substitutes.
+
++Completed with an explicit Standard OpenSpool/PAXX codec registry; exact included-field, JSON-type, omitted-field and NTAG215-capacity previews; byte-stable release-pinned PAXX fixtures; and transactional one- or two-tag spool bindings recorded only after fresh semantic readback. Host acceptance covers the supported PLA, PETG, ABS, TPU and PVA type matrix plus Silk, Rapid, Transparent, Flexible and Support subtype mappings, malformed and unknown-field preservation, restart reconciliation, duplicate UIDs, second-tag failure, and binding-callback recovery without rewriting. All 101 host tests, lint and both APK assemblies pass. Five instrumentation tests pass on the 2023 Razr, and a real NTAG215 written there was read back, bound as a single verified tag and recognized in U1 Bay 1 running `v1.5.2-paxx12-21` in OpenRFID mode.
++
+ ### M5 — Open ecosystem adapters
+
+ Add read/convert support before write support for OpenPrintTag and OpenTag3D, then Spoolman import/export/sync. Acceptance is format-specific and separates radio hardware, read, write, verify and conversion. No printer control.
+@@ -116,4 +118,4 @@ Refine the existing one-photo AI and retail-code paths, landscape/task restorati
+ | Label/QR prototype | M3 | Completed with versioned offline identity and configurable rendering |
+ | Amazon/Icecat trials | None | Research retained; product dependency removed |
+
+-The next coherent milestone is **M4 codec registry and pinned PAXX release**. It converts the already-proven OpenSpool/PAXX work into explicit release-pinned codec contracts and binds one or two verified tags to a physical spool.
++The next coherent milestone is **M5 open ecosystem adapters**: read and conversion support for OpenPrintTag and OpenTag3D, followed by Spoolman interoperability.
+diff --git a/research/evidence/SHA256SUMS b/research/evidence/SHA256SUMS
+index 4dca0ca8d..1472cd755 100644
+--- a/research/evidence/SHA256SUMS
++++ b/research/evidence/SHA256SUMS
+@@ -55,7 +55,7 @@ efa161efe41b0fbf7ee3efa9b6169cc40c0cd013b3404bd6d88e1108d78fcb09  research/sourc
+ 462d9aa114217e33582d5b214b01a343244f966e5f28a05706bf3d8be067ac23  research/sources/opt-db-index.json
+ 3b8d5e1d93fbce910d831e6b6f85355f4d8315f42434098dba378a3102e2441b  research/sources/opt-spec-index.json
+ 7195afadd5ea66b24c2ae83c326689bc569c96b94c62df5b66c6ff1b44027c3f  research/sources/paxx-index.json
+-0d6afa05e9edaa00e6d05b282a79cb6fa699a3475f3c792f16a88efd83237548  research/sources/paxx-release-index.json
++1f72f30473774bc27e89bb792f093fbc0e8c4ed7f7efb114aa2656070aa57bda  research/sources/paxx-release-index.json
+ 641ff5aba50445af4314c97841ac4b1231325aa261364414ea58ec07bc6b2939  research/sources/printtag-web-index.json
+ 365b1feae00d5b9e42684438ec4c491864e08d8dddfb8ef1be59919891193a7f  research/sources/spoolman-index.json
+ 7fd82e4b71aa7c726d3b572686d08e1de7b7508a2b15da749a7c9f5a22acc705  research/sources/spoolmandb-index.json
+diff --git a/research/sources/paxx-release-index.json b/research/sources/paxx-release-index.json
+index 06d10381b..86522fb77 100644
+--- a/research/sources/paxx-release-index.json
++++ b/research/sources/paxx-release-index.json
+@@ -1,6 +1,7 @@
+ {
+   "repo": "paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware",
+-  "branch": "develop",
++  "ref": "refs/tags/v1.5.2-paxx12-21",
++  "tag": "v1.5.2-paxx12-21",
+   "sha": "8d97e83f0329b72c512563a8e98305cfbdef7a18",
+   "date": "2026-09-06T21:24:45Z",
+   "license": {
+@@ -5282,4 +5283,4 @@
+       "url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/git/blobs/4a71b0daeaa67beac9f81ef78d600cbe93182eb2"
+     }
+   ]
+-}
+\ No newline at end of file
++}
+diff --git a/app/src/androidTest/kotlin/net/jamesjennison/filamajignfc/DeviceCodecAcceptanceTest.kt b/app/src/androidTest/kotlin/net/jamesjennison/filamajignfc/DeviceCodecAcceptanceTest.kt
+new file mode 100644
+index 000000000..a09a02566
+--- /dev/null
++++ b/app/src/androidTest/kotlin/net/jamesjennison/filamajignfc/DeviceCodecAcceptanceTest.kt
+@@ -0,0 +1,40 @@
++package net.jamesjennison.filamajignfc
++
++import android.nfc.NdefMessage
++import android.nfc.NdefRecord
++import android.os.Build
++import androidx.test.ext.junit.runners.AndroidJUnit4
++import androidx.test.platform.app.InstrumentationRegistry
++import net.jamesjennison.filamajignfc.core.*
++import org.json.JSONObject
++import org.junit.Assert.*
++import org.junit.Test
++import org.junit.runner.RunWith
++import java.io.File
++
++@RunWith(AndroidJUnit4::class)
++class DeviceCodecAcceptanceTest {
++    @Test fun registeredPinnedPaxxPayloadFitsNtag215OnRazr2023() {
++        assertEquals("motorola razr 2023",Build.MODEL)
++        val source="Device fixture"
++        val record=FilamentRecord(
++            "m4-device",null,null,FieldValue("Filamajig QA",source),FieldValue("PETG",source),
++            FieldValue("Rapid",source),FieldValue("Multicolor",source),FieldValue("AFAFAF",source),
++            FieldValue("1.75",source),FieldValue(1000,source),FieldValue(230,source),FieldValue(260,source),
++            FieldValue(70,source),FieldValue(90,source),sourceRevision=PaxxU1ExtendedTagCodec.TARGET_FIRMWARE,
++            provenance=Provenance.CUSTOM,additionalColors=listOf("EEFFEE","FF00FF"),transmissionDistance=FieldValue("2.7",source),
++        )
++        val codec=TagCodecRegistry.require(TagCodecRegistry.DEFAULT_CODEC_ID)
++        val encoded=codec.encode(record)
++        val ndefBytes=NdefMessage(arrayOf(NdefRecord.createMime(codec.format.mimeType,encoded.payload))).toByteArray().size
++        assertEquals(PaxxU1ExtendedTagCodec.TARGET_FIRMWARE,codec.format.compatibilityTarget.substringAfterLast(' '))
++        assertTrue(ndefBytes<=492)
++        assertTrue(encoded.includedWireFields.containsAll(setOf("diameter","weight","subtype","additional_color_hexes")))
++        assertTrue(codec.decode(encoded.payload) is DecodeResult.Supported)
++        val context=InstrumentationRegistry.getInstrumentation().targetContext
++        File(context.filesDir,"device-codec-m4-acceptance.json").writeText(JSONObject()
++            .put("model",Build.MODEL).put("codec_id",codec.format.id).put("firmware_target",PaxxU1ExtendedTagCodec.TARGET_FIRMWARE)
++            .put("payload_bytes",encoded.sizeBytes).put("ndef_message_bytes",ndefBytes).put("ntag215_capacity",492)
++            .put("semantic_round_trip","PASS").put("physical_write_required",true).toString(2))
++    }
++}
+diff --git a/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/PaxxPinnedReleaseCodecTest.kt b/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/PaxxPinnedReleaseCodecTest.kt
+new file mode 100644
+index 000000000..273ab563f
+--- /dev/null
++++ b/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/PaxxPinnedReleaseCodecTest.kt
+@@ -0,0 +1,54 @@
++package net.jamesjennison.filamajignfc.core
++
++import kotlin.test.*
++
++/** Contract fixtures for SnapmakerU1-Extended-Firmware v1.5.2-paxx12-21 at 8d97e83f. */
++class PaxxPinnedReleaseCodecTest {
++    private fun record(material: String, product: String, brand: String="Fixture", color: String="AFAFAF", mass: Int=1000) = FilamentRecord(
++        "fixture", null, null, FieldValue(brand,"fixture"), FieldValue(material,"fixture"),
++        FieldValue(product,"fixture"), FieldValue("Fixture","fixture"), FieldValue(color,"fixture"),
++        FieldValue("1.75","fixture"), FieldValue(mass,"fixture"), FieldValue(230,"fixture"),
++        FieldValue(260,"fixture"), FieldValue(50,"fixture"), FieldValue(65,"fixture"),
++        sourceRevision="v1.5.2-paxx12-21", provenance=Provenance.CUSTOM,
++    )
++
++    @Test fun registryHasStableIdsAndPinnedCompatibilityTarget() {
++        assertEquals(listOf("openspool-1.0","openspool-paxx-u1-1.0"),TagCodecRegistry.codecs.map { it.format.id })
++        assertSame(PaxxU1ExtendedTagCodec,TagCodecRegistry.require(TagCodecRegistry.DEFAULT_CODEC_ID))
++        assertContains(PaxxU1ExtendedTagCodec.format.compatibilityTarget,PaxxU1ExtendedTagCodec.TARGET_FIRMWARE)
++        assertFailsWith<ValidationException> { TagCodecRegistry.require("future") }
++    }
++
++    @Test fun standardFixtureIsByteStableAndReportsExactWireContract() {
++        val encoded=StandardOpenSpoolTagCodec.encode(record("PLA","Basic"))
++        assertEquals("""{"protocol":"openspool","version":"1.0","type":"PLA","color_hex":"AFAFAF","brand":"Fixture","min_temp":"230","max_temp":"260"}""",encoded.payload.decodeToString())
++        assertEquals(setOf("protocol","version","type","color_hex","brand","min_temp","max_temp"),encoded.includedWireFields)
++        assertTrue(encoded.fits(492))
++        assertIs<DecodeResult.Supported>(StandardOpenSpoolTagCodec.decode(encoded.payload))
++    }
++
++    @Test fun paxxFixtureIsByteStableUsesNumericTypesAndReportsExactWireContract() {
++        val encoded=PaxxU1ExtendedTagCodec.encode(record("PETG","Rapid PETG").copy(
++            additionalColors=listOf("EEFFEE","FF00FF"), transmissionDistance=FieldValue("2.70","fixture"),
++        ))
++        assertEquals("""{"protocol":"openspool","version":"1.0","type":"PETG","color_hex":"AFAFAF","brand":"Fixture","min_temp":230,"max_temp":260,"subtype":"Rapid","bed_min_temp":50,"bed_max_temp":65,"diameter":1.75,"weight":1000,"additional_color_hexes":["EEFFEE", "FF00FF"],"transmission_distance":2.7}""",encoded.payload.decodeToString())
++        assertEquals(setOf("protocol","version","type","color_hex","brand","min_temp","max_temp","subtype","bed_min_temp","bed_max_temp","diameter","weight","additional_color_hexes","transmission_distance"),encoded.includedWireFields)
++        assertTrue(encoded.fits(492))
++        assertIs<DecodeResult.Supported>(PaxxU1ExtendedTagCodec.decode(encoded.payload))
++    }
++
++    @Test fun pinnedReleaseTypeAndSubtypeMatrixMatchesParserPassthroughExamples() {
++        val cases=mapOf(
++            record("PLA","Silk multicolor") to ("PLA" to "Silk"),
++            record("PETG","Rapid") to ("PETG" to "Rapid"),
++            record("ABS","Transparent") to ("ABS" to "Transparent"),
++            record("TPU","Flexible",mass=500) to ("TPU" to "Flexible"),
++            record("PVA","Support") to ("PVA" to "Support"),
++        )
++        cases.forEach { (source, expected) ->
++            val decoded=PaxxU1ExtendedTagCodec.decode(PaxxU1ExtendedTagCodec.encode(source).payload) as DecodeResult.Supported
++            assertEquals(expected.first,(decoded.values.getValue("type") as JsonValue.Str).value)
++            assertEquals(expected.second,(decoded.values.getValue("subtype") as JsonValue.Str).value)
++        }
++    }
++}
+diff --git a/docs/PAXX_COMPATIBILITY.md b/docs/PAXX_COMPATIBILITY.md
+new file mode 100644
+index 000000000..9fd86f989
+--- /dev/null
++++ b/docs/PAXX_COMPATIBILITY.md
+@@ -0,0 +1,47 @@
++# PAXX U1 compatibility contract
++
++Filamajig NFC's `openspool-paxx-u1-1.0` codec targets the exact
++`v1.5.2-paxx12-21` tag of
++`paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware`, commit
++`8d97e83f0329b72c512563a8e98305cfbdef7a18`. The retained parser snapshot has
++SHA-256 `e34cad67d090ea1978601f819ec89c27e0f4b0be56da0683ac6c279a8c7d2e40`.
++This target is shown before every PAXX write.
++
++The codec writes one NFC Forum MIME record with type `application/json`. It
++writes `protocol`, `version`, `brand`, uppercase `type`, `subtype`,
++`color_hex`, optional nozzle and bed limits, decimal-millimetre `diameter`,
++integer-gram `weight`, and as many as four `additional_color_hexes`. PAXX's
++parser passes brand and subtype through, converts type to uppercase, maps the
++five colors to its RGB slots, converts diameter `1.75` to its internal value
++`175`, and stores weight and temperature values. It collapses a positive bed
++minimum to one bed temperature, otherwise using the bed maximum.
++
++Filamajig's first-class material matrix is PLA, PETG, ABS, TPU, and PVA. Its
++subtype mapping covers Basic, Matte, Silk, Support, HF, 95A, 95A HF,
++SnapSpeed, Transparent, Rapid, and Flexible. The pinned parser accepts subtype
++as a string; these labels include the vocabulary used by its release fixtures.
++Unsupported materials remain available locally and can use the Standard
++OpenSpool codec, but Filamajig does not claim PAXX/U1 compatibility for them.
++
++`transmission_distance` is an optional numeric Filamajig extension. The pinned
++PAXX parser ignores it. The app labels that distinction in its preview. The app
++does not emit `alpha`: the pinned parser accepts it, but Filamajig preserves an
++incoming alpha-bearing record read-only until lossless editing semantics are
++defined. Local product names, GTINs, SKUs, package IDs, provenance, quantity,
++purchase data, and notes are omitted from this tag codec and remain in local or
++portable spool records.
++
++The registry preview lists the exact serialized field names and JSON types,
++all omitted local fields, JSON payload bytes, and total NDEF message bytes
++against the NTAG215's reported 492-byte NDEF capacity. A write is bound to a
++physical spool only after a fresh semantic readback verifies it. A second
++verified tag may occupy binding position two; the first tag's UID is rejected
++for that position. Pending and unknown results retain spool, codec, and tag
++position across restart, and reconciliation remains read-only.
++
++Automated fixtures cover byte-stable Standard and PAXX payloads, numeric field
++types, registry identity, all five supported material types, release-example
++subtypes, malformed payloads, unknown-field preservation, capacity rejection,
++and one/two-tag persistence. Hardware acceptance remains separate: the current
++APK must write and read back actual NTAG215 tags on the 2023 Razr, then the U1
++running the pinned release must recognize the tested field/type matrix.
+diff --git a/tools/verify_codec_m4_evidence.py b/tools/verify_codec_m4_evidence.py
+new file mode 100644
+index 000000000..04d5afc0e
+--- /dev/null
++++ b/tools/verify_codec_m4_evidence.py
+@@ -0,0 +1,33 @@
++#!/usr/bin/env python3
++import json
++from pathlib import Path
++
++d=json.loads(Path('work/codec-m4/device-acceptance.json').read_text())
++assert d['model']=='motorola razr 2023'
++assert d['codec_id']=='openspool-paxx-u1-1.0'
++assert d['firmware_target']=='v1.5.2-paxx12-21'
++assert 0 < d['payload_bytes'] < d['ndef_message_bytes'] <= d['ntag215_capacity']==492
++assert d['semantic_round_trip']=='PASS'
++assert d['physical_write_required'] is True
++
++p=json.loads(Path('work/codec-m4/physical-acceptance.json').read_text())
++assert p['tag']['type']=='NTAG215'
++assert p['tag']['uid_recorded'] is False
++assert p['tag']['capacity_bytes']==492
++assert p['codec']['id']=='openspool-paxx-u1-1.0'
++assert p['codec']['target']=='Snapmaker U1 v1.5.2-paxx12-21'
++assert p['phone_acceptance']['fresh_readback']=='PASS'
++assert p['phone_acceptance']['write_result']=='Write verified'
++assert p['phone_acceptance']['single_tag_completion']=='Completed with one verified tag'
++assert p['printer_acceptance']['state']=='PASS'
++assert p['printer_acceptance']['firmware']=='v1.5.2-paxx12-21'
++assert p['printer_acceptance']['mode']=='OpenRFID'
++assert p['printer_acceptance']['bay']==1
++assert p['printer_acceptance']['recognized_profile'] == {
++    'brand': 'MARSWORK',
++    'material': 'PLA',
++    'color': 'Cyan',
++    'nozzle_min_c': 190,
++    'nozzle_max_c': 230,
++}
++print('M4 codec, physical NTAG215, and U1 evidence: PASS')

@@ -1,0 +1,10 @@
+{
+  "uuid": "49ded524-d20f-4a1f-9ebf-7334e3481e1b",
+  "id": "brown_washed",
+  "name": "Brown Washed",
+  "color_hex": "#AE875B",
+  "discontinued": false,
+  "traits": {
+    "contains_wood": true
+  }
+}

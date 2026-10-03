@@ -1,0 +1,14 @@
+uuid: e93c47ab-0db1-5d5d-9bb9-80af660ee3e7
+slug: recreus-filaflex-95a-medium-flex-transparent
+brand:
+  slug: recreus
+name: Filaflex 95A 'Medium-Flex' Transparent
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#e4e7e5ff'
+tags:
+- transparent
+properties:
+  hardness_shore_a: 95

@@ -1,0 +1,10 @@
+{
+  "uuid": "995d054e-fd95-4f83-97f8-d929187c7907",
+  "id": "peacock_green",
+  "name": "Peacock Green",
+  "color_hex": "#2B5D66",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

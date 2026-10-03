@@ -1,0 +1,13 @@
+uuid: 4ca4f1f3-db51-5644-a8cb-85bff6704b1c
+slug: print-with-smile-m-abs-black
+brand:
+  slug: print-with-smile
+name: M-ABS Black
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- filtration_recommended
+properties: {}

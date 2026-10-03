@@ -1,0 +1,24 @@
+uuid: 2ab74232-ba66-546d-9823-b65253699dd2
+slug: polymaker-panchroma-matte-pla-lavender-purple
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Lavender Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#9572bfff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-lavender-purple/40eefead8a70.png
+    type: unspecified
+transmission_distance: 0.6
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

@@ -1,0 +1,24 @@
+uuid: 0df8f7ff-5baa-59b1-a2b9-647639f52df0
+slug: bambulab-pla-metal-iron-gray-metallic
+brand:
+  slug: bambulab
+name: PLA Metal Iron Gray Metallic
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#43403dff'
+tags:
+  - imitates_metal
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-metal-iron-gray-metallic/d797994b768a.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45

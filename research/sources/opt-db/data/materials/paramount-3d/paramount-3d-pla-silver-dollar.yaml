@@ -1,0 +1,13 @@
+uuid: fd2519d4-31c6-5086-97e6-24f0916bb805
+slug: paramount-3d-pla-silver-dollar
+brand:
+  slug: paramount-3d
+name: PLA (Silver Dollar)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#878da2ff'
+tags:
+- industrially_compostable
+properties: {}

@@ -1,0 +1,16 @@
+{
+  "uuid": "3c7bec0b-5595-4fc4-8076-6303bc3dc30c",
+  "id": "magic_rainbow",
+  "name": "Magic Rainbow",
+  "color_hex": [
+    "#77A54B",
+    "#0353BA",
+    "#F4AC23",
+    "#C75072"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

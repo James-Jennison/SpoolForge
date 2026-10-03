@@ -1,0 +1,14 @@
+uuid: 1c4476c6-5d69-52b6-b989-1b8965ef7d73
+slug: overture-pla-cement-gray
+brand:
+  slug: overture
+name: PLA Cement Gray
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#697272ff'
+tags:
+- industrially_compostable
+photos: []
+properties: {}

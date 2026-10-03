@@ -1,0 +1,13 @@
+uuid: 41feecdc-5d35-5c73-a297-50d052bbe5e7
+slug: sainsmart-white-abs
+brand:
+  slug: sainsmart
+name: White ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- filtration_recommended
+properties: {}

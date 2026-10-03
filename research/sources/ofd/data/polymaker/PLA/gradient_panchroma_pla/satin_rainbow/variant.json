@@ -1,0 +1,15 @@
+{
+  "uuid": "f3e63f45-60fc-434f-96d0-0b0275574705",
+  "id": "satin_rainbow",
+  "name": "Satin Rainbow",
+  "color_hex": [
+    "#F5CF6F",
+    "#F5B797",
+    "#CE92CE",
+    "#9EF9FF"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

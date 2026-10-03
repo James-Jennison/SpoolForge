@@ -1,0 +1,23 @@
+uuid: 8bb9a389-69e1-5ab8-ab9f-7b4981677572
+slug: polymaker-polylite-pla-yellow
+brand:
+  slug: polymaker
+name: PolyLite™ PLA Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f3aa01ff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polylite-pla-yellow/6575c25a613b.png
+    type: unspecified
+properties:
+  density: 1.17
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

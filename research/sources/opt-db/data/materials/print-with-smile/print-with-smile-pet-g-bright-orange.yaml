@@ -1,0 +1,11 @@
+uuid: 1ca76b6f-fdc9-58a0-af36-b5e8f0f6c0b9
+slug: print-with-smile-pet-g-bright-orange
+brand:
+  slug: print-with-smile
+name: PET-G Bright Orange
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ffb031ff'
+properties: {}

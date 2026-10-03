@@ -1,0 +1,14 @@
+uuid: f2ab03f7-93c3-5164-986a-de0fce89d700
+slug: rosa3d-filaments-pla-starter-lithophane-yellow
+brand:
+  slug: rosa3d-filaments
+name: PLA Starter Lithophane Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f6fb38ff'
+tags:
+- lithophane
+- industrially_compostable
+properties: {}

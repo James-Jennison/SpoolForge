@@ -1,0 +1,22 @@
+uuid: 7ac3687c-a0d2-5311-8c32-a9aed6129e17
+slug: polymaker-polylite-metallic-pla-pro-silver
+brand:
+  slug: polymaker
+name: PolyLite™ Metallic PLA Pro Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#8a8d95ff'
+tags:
+  - imitates_metal
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polylite-metallic-pla-pro-silver/f0c38e7b3a86.png
+    type: unspecified
+properties:
+  density: 1.22
+  min_print_temperature: 190
+  max_print_temperature: 220
+  min_bed_temperature: 30
+  max_bed_temperature: 60

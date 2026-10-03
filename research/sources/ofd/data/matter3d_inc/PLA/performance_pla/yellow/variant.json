@@ -1,0 +1,9 @@
+{
+  "uuid": "b38ab8d9-24f2-471d-959d-db3f27cbd805",
+  "id": "yellow",
+  "name": "Yellow",
+  "color_hex": "#FFFC25",
+  "traits": {
+    "high_temperature": true
+  }
+}

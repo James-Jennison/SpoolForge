@@ -1,0 +1,16 @@
+uuid: c389d04f-a248-51df-8cae-8d49a611d831
+slug: print-with-smile-bicolor-metallic-pla-violet-silver
+brand:
+  slug: print-with-smile
+name: BICOLOR METALLIC PLA VIOLET SILVER
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#583061ff'
+- color_rgba: '#55657cff'
+tags:
+- iridescent
+- industrially_compostable
+- coextruded
+properties: {}

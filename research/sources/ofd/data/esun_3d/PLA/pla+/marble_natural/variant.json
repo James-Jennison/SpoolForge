@@ -1,0 +1,10 @@
+{
+  "uuid": "df8b50da-b939-41e8-b9fc-c78ae0decef8",
+  "id": "marble_natural",
+  "name": "Marble Natural",
+  "color_hex": "#D9D8DE",
+  "traits": {
+    "imitates_marble": true,
+    "industrially_compostable": true
+  }
+}

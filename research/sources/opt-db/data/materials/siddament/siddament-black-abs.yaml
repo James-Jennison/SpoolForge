@@ -1,0 +1,13 @@
+uuid: 4fa6f3c3-996b-59b8-81a1-25532acfb41e
+slug: siddament-black-abs
+brand:
+  slug: siddament
+name: Black ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#0e0e10ff'
+tags:
+- filtration_recommended
+properties: {}

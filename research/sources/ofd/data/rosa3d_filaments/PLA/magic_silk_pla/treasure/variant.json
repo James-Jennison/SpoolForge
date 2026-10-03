@@ -1,0 +1,14 @@
+{
+  "uuid": "018165b0-87cc-4b95-a95d-b23b7a3e825f",
+  "id": "treasure",
+  "name": "Treasure",
+  "color_hex": [
+    "#F6C500",
+    "#C06341",
+    "#A45B27"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

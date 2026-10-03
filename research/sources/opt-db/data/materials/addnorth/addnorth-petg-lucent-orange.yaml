@@ -1,0 +1,20 @@
+uuid: 2b30d75a-ef46-54d4-a6eb-4081d2846b80
+slug: addnorth-petg-lucent-orange
+brand:
+  slug: addnorth
+name: PETG Lucent Orange
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ff5f2eff'
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-petg-lucent-orange/72184245c10a.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 225
+  max_print_temperature: 260
+  max_bed_temperature: 80
+  drying_temperature: 65
+  drying_time: 360

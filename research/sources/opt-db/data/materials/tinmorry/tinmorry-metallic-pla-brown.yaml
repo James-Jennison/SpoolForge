@@ -1,0 +1,13 @@
+uuid: 1c3b00a5-aef9-5eb6-aea4-cf1fd309ee65
+slug: tinmorry-metallic-pla-brown
+brand:
+  slug: tinmorry
+name: Metallic PLA Brown
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#816300ff'
+tags:
+- industrially_compostable
+properties: {}

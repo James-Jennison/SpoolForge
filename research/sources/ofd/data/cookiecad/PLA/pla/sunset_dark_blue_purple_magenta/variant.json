@@ -1,0 +1,14 @@
+{
+  "uuid": "31257552-49ba-4cfb-a828-b6607ec21629",
+  "id": "sunset_dark_blue_purple_magenta",
+  "name": "Sunset (dark blue → purple → magenta)",
+  "color_hex": [
+    "#324485",
+    "#6000B0",
+    "#C90D6E"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

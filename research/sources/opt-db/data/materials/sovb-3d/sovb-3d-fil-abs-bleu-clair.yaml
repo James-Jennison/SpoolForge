@@ -1,0 +1,19 @@
+uuid: 381a458c-c8e6-5f9f-93a8-e1f4a3707a98
+slug: sovb-3d-fil-abs-bleu-clair
+brand:
+  slug: sovb-3d
+name: Fil ABS Bleu Clair
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#0099e6ff'
+  color_ral: '5012'
+tags:
+- filtration_recommended
+properties:
+  density: 1.03
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 90
+  max_bed_temperature: 100

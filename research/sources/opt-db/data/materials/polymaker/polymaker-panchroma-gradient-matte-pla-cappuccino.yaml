@@ -1,0 +1,20 @@
+uuid: eca95e18-04ab-55ef-817f-dc58f83ab32d
+slug: polymaker-panchroma-gradient-matte-pla-cappuccino
+brand:
+  slug: polymaker
+name: Panchroma™ Gradient Matte PLA Cappuccino
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#9f563eff'
+- color_rgba: '#cca897ff'
+- color_rgba: '#c6ad74ff'
+tags:
+- matte
+- industrially_compostable
+- gradual_color_change
+photos:
+- url: https://files.openprinttag.org/polymaker/polymaker-panchroma-gradient-matte-pla-cappuccino/83a6c13a8544.png
+  type: unspecified
+properties: {}

@@ -1,0 +1,16 @@
+{
+  "uuid": "8099d5e1-6966-4b75-ab07-e706c3be6765",
+  "id": "bloom",
+  "name": "Bloom",
+  "color_hex": [
+    "#F1EB9C",
+    "#FF72B6",
+    "#6C93B5",
+    "#EE8881",
+    "#FF0039"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

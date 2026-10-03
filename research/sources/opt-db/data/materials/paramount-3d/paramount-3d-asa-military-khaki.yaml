@@ -1,0 +1,11 @@
+uuid: 5906b6a9-c4e0-5afa-9dd7-b2db2d283d62
+slug: paramount-3d-asa-military-khaki
+brand:
+  slug: paramount-3d
+name: ASA (Military Khaki)
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#ae9d7eff'
+properties: {}

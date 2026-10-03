@@ -1,0 +1,20 @@
+{
+  "finding_id": "spoolio-deepseek-2",
+  "change_id": "spoolio-feasibility-20260906",
+  "cycle_id": "review-cycle-511bc96fa65d",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "OpenSpool / PAXX compatibility profile",
+  "summary": "The report identifies a direct unit conflict in the primary U1/PAXX adapter: PAXX source parses `diameter` as mm and multiplies by 100, while U1-RFID's write path and README supply 175. If M1 copies that example or otherwise writes 175, the value becomes 17,500 internally and is physically wrong.",
+  "claim": "The report identifies a direct unit conflict in the primary U1/PAXX adapter: PAXX source parses `diameter` as mm and multiplies by 100, while U1-RFID's write path and README supply 175. If M1 copies that example or otherwise writes 175, the value becomes 17,500 internally and is physically wrong.",
+  "evidence": {
+    "source": "Report section 9: \"`diameter` is parsed as mm and multiplied by 100. U1-RFID's inspected write path supplies 175, which would become 17,500 internally; its README also shows 175. Use 1.75 for that PAXX adapter, verified against firmware. Do not copy the example blindly.\" Section 6 table also states \"**Never 175** for the inspected PAXX parser.\"",
+    "response_sha256": "14940ade81683577086eff6f20c1f63e0fab8d59722f737536c2d459e73d8747"
+  },
+  "affected_components": [
+    "docs/FEASIBILITY.md"
+  ],
+  "suggested_remediation": "Enforce the proposed PAXX profile to write `1.75` (decimal mm) for 1.75 mm filament. Create regression tests that reject or prevent `175`. Ensure any adapter/fixture derived from U1-RFID is not copied without correction.",
+  "suggested_validation": "Build a minimal OpenSpool/PAXX profile write with diameter 1.75, read it back on a phone and on PAXX/U1, and assert the parsed internal diameter is 1.75 mm (not 175 or 17,500). Include a negative test that a legacy 175 input is flagged or converted only by explicit correction.",
+  "reviewer_confidence": "HIGH"
+}

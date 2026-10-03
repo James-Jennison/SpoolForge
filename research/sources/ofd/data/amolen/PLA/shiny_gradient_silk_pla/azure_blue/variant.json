@@ -1,0 +1,13 @@
+{
+  "uuid": "e82e95ca-ce0c-4571-bae1-6a710182d796",
+  "id": "azure_blue",
+  "name": "Azure Blue",
+  "color_hex": [
+    "#A5EEEE",
+    "#4921C1"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

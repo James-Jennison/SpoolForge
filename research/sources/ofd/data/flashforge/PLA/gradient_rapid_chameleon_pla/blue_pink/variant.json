@@ -1,0 +1,14 @@
+{
+  "uuid": "fad5cea8-b74a-4387-ad47-ac8355b41e03",
+  "id": "blue_pink",
+  "name": "Blue Pink",
+  "color_hex": [
+    "#F87FB5",
+    "#5C50E0"
+  ],
+  "traits": {
+    "iridescent": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

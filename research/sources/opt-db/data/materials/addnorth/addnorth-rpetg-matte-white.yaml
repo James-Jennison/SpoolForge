@@ -1,0 +1,23 @@
+uuid: 40db8363-469d-5ea0-8e48-b03f80e830db
+slug: addnorth-rpetg-matte-white
+brand:
+  slug: addnorth
+name: rPETG Matte White
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+  - recycled
+  - matte
+properties:
+  density: 1.27
+  min_print_temperature: 225
+  max_print_temperature: 260
+  max_bed_temperature: 80
+  drying_temperature: 65
+  drying_time: 360
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-rpetg-matte-white/addnorth-rpetg-matte-white-0-67add47d.png
+    type: unspecified

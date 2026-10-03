@@ -1,0 +1,24 @@
+[
+  {
+    "uuid": "d3c4f157-7052-4669-a5fd-0fc7e24347cd",
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "eryone",
+        "url": "https://eryone3d.com/products/tpu-rainbow"
+      }
+    ]
+  },
+  {
+    "uuid": "60adaffb-793d-4fd3-b180-2531800165b1",
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "eryone",
+        "url": "https://eryone3d.com/products/tpu"
+      }
+    ]
+  }
+]

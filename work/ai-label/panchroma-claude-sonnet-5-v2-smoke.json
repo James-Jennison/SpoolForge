@@ -1,0 +1,116 @@
+{
+  "model": "claude-sonnet-5",
+  "status": null,
+  "usage": {
+    "input_tokens": 3085,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 1085,
+    "output_tokens_details": {
+      "thinking_tokens": 237
+    },
+    "service_tier": "standard",
+    "inference_geo": "global"
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "Panchroma",
+      "confidence": 0.95,
+      "evidence": "Panchroma\u2122 PLA",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "product": {
+      "value": "Starlight Purple-Red Gradient PLA",
+      "confidence": 0.9,
+      "evidence": "STARLIGHT PURPLE-RED / Panchroma\u2122 PLA Gradient Starl... (1.75mm, 1kg)",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PLA",
+      "confidence": 0.95,
+      "evidence": "Panchroma\u2122 PLA",
+      "basis": "printed"
+    },
+    "color": {
+      "value": "Purple-Red",
+      "confidence": 0.9,
+      "evidence": "STARLIGHT PURPLE-RED",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": 1.75,
+      "confidence": 0.95,
+      "evidence": "(1.75mm, 1kg)",
+      "basis": "printed"
+    },
+    "net_weight_g": {
+      "value": 1000,
+      "confidence": 0.9,
+      "evidence": "(1.75mm, 1kg)",
+      "basis": "printed"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": "6938936717461",
+      "confidence": 0.95,
+      "evidence": "EAN: 6938936717461",
+      "basis": "printed"
+    },
+    "sku": {
+      "value": "CA09019",
+      "confidence": 0.95,
+      "evidence": "SKU: CA09019",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 0.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [
+      {
+        "value": "X004QSH4ZH",
+        "kind": "marketplace_id_partial",
+        "evidence": "Code printed below barcode: X004QSH4ZH, likely partial Amazon ASIN"
+      }
+    ],
+    "needs_user_review": [
+      "manufacturer",
+      "lot"
+    ]
+  }
+}

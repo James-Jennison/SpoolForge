@@ -1,0 +1,13 @@
+uuid: 32b6a947-3fab-5029-96c4-f9ae9f912061
+slug: spectrum-rpetg-orange
+brand:
+  slug: spectrum
+name: rPETG Orange
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ff8133ff'
+tags:
+- recycled
+properties: {}

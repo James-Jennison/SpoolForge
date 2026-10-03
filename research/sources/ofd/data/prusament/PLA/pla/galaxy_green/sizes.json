@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "a7c0e3c1-6475-4f98-b7fb-f93f678c5425",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-pla-galaxy-green-1kg/"
+      }
+    ]
+  }
+]

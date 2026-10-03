@@ -1,0 +1,23 @@
+uuid: 0b171d86-d24f-5b56-af94-a6e41c57550f
+slug: polymaker-polylite-abs-blue
+brand:
+  slug: polymaker
+name: PolyLite™ ABS Blue
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#003576ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polylite-abs-blue/fe7cee4e7454.png
+    type: unspecified
+properties:
+  density: 1.04
+  min_print_temperature: 245
+  max_print_temperature: 265
+  min_bed_temperature: 90
+  max_bed_temperature: 100
+  drying_temperature: 70
+  drying_time: 360

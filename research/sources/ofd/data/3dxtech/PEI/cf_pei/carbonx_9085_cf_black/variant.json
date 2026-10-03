@@ -1,0 +1,11 @@
+{
+  "uuid": "8b2e4caa-9589-4960-bdc1-f4a2a98141cd",
+  "id": "carbonx_9085_cf_black",
+  "name": "CarbonX™ 9085 + CF Black",
+  "color_hex": "#000000",
+  "traits": {
+    "abrasive": true,
+    "low_outgassing": true,
+    "contains_carbon_fiber": true
+  }
+}

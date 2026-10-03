@@ -1,0 +1,23 @@
+uuid: e934a474-66eb-5401-9ecb-7c91fc4a7048
+slug: bambulab-petg-hf-black
+brand:
+  slug: bambulab
+name: PETG HF Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - high_speed
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-hf-black/42c5f539a37b.png
+    type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

@@ -1,0 +1,21 @@
+uuid: b82adc89-5c7b-577c-9ce4-9e433cc5103d
+slug: formfutura-hdglass-see-through-green
+brand:
+  slug: formfutura
+name: HDglass See Through Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#26a648ff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-hdglass-see-through-green/54bae511b3ca.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 195
+  max_print_temperature: 225
+  min_bed_temperature: 80
+  max_bed_temperature: 90

@@ -1,0 +1,22 @@
+uuid: 6764c7cd-6f11-55cc-b993-2bfe602862d1
+slug: spectrum-petg-premium-high-speed-transparet-red
+brand:
+  slug: spectrum
+name: PETG Premium High Speed Transparet Red
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e72f1dff'
+tags:
+- high_speed
+- translucent
+properties:
+  density: 1.29
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-petg-premium-high-speed-transparet-red/spectrum-petg-premium-high-speed-transparet-red-0-437a7c7f.jpg
+  type: unspecified

@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "7672b1cb-8abb-47ed-a54a-788addc21b77",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-petg-v0-jet-black-1kg/"
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "uuid": "4db3b665-efae-45f3-97ac-c9d982e5e4b2",
+  "id": "pps_am230",
+  "name": "PPS AM230",
+  "diameter_tolerance": 0.02,
+  "density": 1.33,
+  "min_print_temperature": 300,
+  "max_print_temperature": 330,
+  "min_bed_temperature": 100,
+  "max_bed_temperature": 120
+}

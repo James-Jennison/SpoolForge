@@ -1,0 +1,15 @@
+{
+  "uuid": "cdb566ed-52be-4352-b190-2275c5bf9e0c",
+  "id": "tigerwood",
+  "name": "Tigerwood",
+  "color_hex": [
+    "#8B3A3A",
+    "#913F1F",
+    "#452F25"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "contains_wood": true
+  }
+}

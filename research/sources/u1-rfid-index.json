@@ -1,0 +1,985 @@
+{
+  "repo": "DnG-Crafts/U1-RFID",
+  "branch": "main",
+  "sha": "273e2d43ae3a87cfe013ef7b9b0b20caa3741b46",
+  "date": "2026-04-19T02:53:33Z",
+  "license": null,
+  "tree": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfe0770424b2a19faf507a501ebfc23be8f54e7b",
+      "size": 66,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/dfe0770424b2a19faf507a501ebfc23be8f54e7b"
+    },
+    {
+      "path": "Android",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32dc7d3f8ee6ca1600127fc578469618557fbbf5",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/32dc7d3f8ee6ca1600127fc578469618557fbbf5"
+    },
+    {
+      "path": "Android/U1RFID",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aeb29aa25f5cab757debdbfd413709e39774f611",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/aeb29aa25f5cab757debdbfd413709e39774f611"
+    },
+    {
+      "path": "Android/U1RFID/app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef539c28d09787d3900e5c93670c988c348dbce6",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/ef539c28d09787d3900e5c93670c988c348dbce6"
+    },
+    {
+      "path": "Android/U1RFID/app/build.gradle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e97572f23956c3755b6f129842e16c7b98411f1f",
+      "size": 1077,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/e97572f23956c3755b6f129842e16c7b98411f1f"
+    },
+    {
+      "path": "Android/U1RFID/app/proguard-rules.pro",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "481bb434814107eb79d7a30b676d344b0df2f8ce",
+      "size": 750,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/481bb434814107eb79d7a30b676d344b0df2f8ce"
+    },
+    {
+      "path": "Android/U1RFID/app/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "75b9ac2735197b271aed6b99aa6ddb2214da3a0a",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/75b9ac2735197b271aed6b99aa6ddb2214da3a0a"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f787c54f84a129182de9de2878ee5eac47bf93c0",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/f787c54f84a129182de9de2878ee5eac47bf93c0"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/AndroidManifest.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63b531dba492dd4d3017e81abd2cb885074ae46e",
+      "size": 2572,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/63b531dba492dd4d3017e81abd2cb885074ae46e"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4b00e94c82e68ab26ab33e0da16d905ae673e3d6",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/4b00e94c82e68ab26ab33e0da16d905ae673e3d6"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/assets/colors.db",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8221ff45ca4470dfcfc494eef3e79f3545dcdcc",
+      "size": 297579,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/e8221ff45ca4470dfcfc494eef3e79f3545dcdcc"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/ic_launcher-playstore.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac9e0c946cc33496f1eb02995abdc27d59192ba0",
+      "size": 285616,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/ac9e0c946cc33496f1eb02995abdc27d59192ba0"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0e164a1c95659fc1c625190c1ca0e8d3387dc060",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/0e164a1c95659fc1c625190c1ca0e8d3387dc060"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8cb0efea5401e5de22953949d0c463f6fc7c40b3",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/8cb0efea5401e5de22953949d0c463f6fc7c40b3"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware/u1rfid",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cd4716edd2260efc2334fdc8c3def1e1461b0879",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/cd4716edd2260efc2334fdc8c3def1e1461b0879"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware/u1rfid/ColorMatcher.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ce7dc13adb5cc979dfaecf1d2fff09028bf7c2a",
+      "size": 2680,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/7ce7dc13adb5cc979dfaecf1d2fff09028bf7c2a"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware/u1rfid/Filament.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "513a4d5ea9d03c114afe0de44e35a314e422abc8",
+      "size": 943,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/513a4d5ea9d03c114afe0de44e35a314e422abc8"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware/u1rfid/FilamentRegistry.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdb6bf6468656862769b99bc2919b899e9a81d3a",
+      "size": 7472,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/fdb6bf6468656862769b99bc2919b899e9a81d3a"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware/u1rfid/LaunchActivity.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcf7386ed86715277340ddb7e5574be6d41e65c2",
+      "size": 661,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/dcf7386ed86715277340ddb7e5574be6d41e65c2"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware/u1rfid/MainActivity.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "593a7b807903d1fad638a30de69668b937a6ebdb",
+      "size": 119822,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/593a7b807903d1fad638a30de69668b937a6ebdb"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware/u1rfid/MatDB.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05cdf95eebbdfb0f4b389b483319a7bc650086cd",
+      "size": 1228,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/05cdf95eebbdfb0f4b389b483319a7bc650086cd"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware/u1rfid/OpenSpoolFilament.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d30e3e4181a6fd723253403a9fab267a45f205ba",
+      "size": 3088,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/d30e3e4181a6fd723253403a9fab267a45f205ba"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware/u1rfid/Utils.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc45e45fa05fdef3a9b74373edf92c82da8d25c4",
+      "size": 37557,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/fc45e45fa05fdef3a9b74373edf92c82da8d25c4"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware/u1rfid/filamentDB.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21b816237e2b6be462876bf8733f6b3a10f28b76",
+      "size": 1106,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/21b816237e2b6be462876bf8733f6b3a10f28b76"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware/u1rfid/tagAdapter.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6b6f1ac8b421d25fec61ac0e8b0007876bca296",
+      "size": 1956,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/d6b6f1ac8b421d25fec61ac0e8b0007876bca296"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/java/dngsoftware/u1rfid/tagItem.java",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4e9b837a432b7a0bc60bbf52ca4d662c9053989c",
+      "size": 176,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/4e9b837a432b7a0bc60bbf52ca4d662c9053989c"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c478b58031a2b248b6c124a3001fd02a80f8111b",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/c478b58031a2b248b6c124a3001fd02a80f8111b"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/color",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df37fcd77d4ae1eee13c979a6d9afd029af8bfbc",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/df37fcd77d4ae1eee13c979a6d9afd029af8bfbc"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/color/button_selector.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18285d96fbe5f9455e57a41a7f24dfe7ca0285ad",
+      "size": 237,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/18285d96fbe5f9455e57a41a7f24dfe7ca0285ad"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/color/input_border_color.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99ac784f1b06eaeca20b2d2e2cc2f09009beab32",
+      "size": 312,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/99ac784f1b06eaeca20b2d2e2cc2f09009beab32"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/color/switch_tint_selector.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b199f7f50a59866b8fbb7f5919ca5744147ebb04",
+      "size": 265,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/b199f7f50a59866b8fbb7f5919ca5744147ebb04"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b02d11dbb22694c79756e65ca642ca9f72d55361",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/b02d11dbb22694c79756e65ca642ca9f72d55361"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/border.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3fd349e1faa5eac796ef716dbf51be3909e425c",
+      "size": 478,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/b3fd349e1faa5eac796ef716dbf51be3909e425c"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/camera.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94b4e555694bd89077a593530c5025aaa9b6c6b3",
+      "size": 100455,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/94b4e555694bd89077a593530c5025aaa9b6c6b3"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/check_circle.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b56f4e6d3447e16e1c50056a2e8d368a098284d7",
+      "size": 842,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/b56f4e6d3447e16e1c50056a2e8d368a098284d7"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/circle_shape.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba912431c9cbcf3b1a37dfee9668f5b390ecbb62",
+      "size": 292,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/ba912431c9cbcf3b1a37dfee9668f5b390ecbb62"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/circle_tool.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61adb70679c7bd463dac7a01dc78e4529dff8636",
+      "size": 285,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/61adb70679c7bd463dac7a01dc78e4529dff8636"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/dialog_rounded_bg.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0f9e262ffe2d4f27b6bef73ff80f59d60d75763",
+      "size": 205,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/c0f9e262ffe2d4f27b6bef73ff80f59d60d75763"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/divider.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7df12492f989eac107c199f8198a4f3dee5c2ea0",
+      "size": 455,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/7df12492f989eac107c199f8198a4f3dee5c2ea0"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/hint_background.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05617a53329a488c9a7b867028d17a7ba13d39bb",
+      "size": 361,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/05617a53329a488c9a7b867028d17a7ba13d39bb"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/ic_arrow_down.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9387830e584e3d4aba47a61088478fae5eb4075b",
+      "size": 297,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/9387830e584e3d4aba47a61088478fae5eb4075b"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/ic_arrow_up.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca195be5ca8f383056d4a0ec426a46571faca6b2",
+      "size": 296,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/ca195be5ca8f383056d4a0ec426a46571faca6b2"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/internal.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5d1b260fc4565107ded5aa7e4e814ce271575a42",
+      "size": 26628,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/5d1b260fc4565107ded5aa7e4e814ce271575a42"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/locked.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86dc373c566405a02f857c30b882ee99b698cac3",
+      "size": 23694,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/86dc373c566405a02f857c30b882ee99b698cac3"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/rounded_card_background.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "312c42850b73979ddf65c6d94146d9e10a1d0db9",
+      "size": 272,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/312c42850b73979ddf65c6d94146d9e10a1d0db9"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/rounded_edittext_background.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b3b566cc9c9d415937d0467fc1bdba700f43f67",
+      "size": 360,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/2b3b566cc9c9d415937d0467fc1bdba700f43f67"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/seekbar_border.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ca57929f395a9a6865a992e82ff839529fed142",
+      "size": 221,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/1ca57929f395a9a6865a992e82ff839529fed142"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/seekbar_drawable.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "176bad1a171225e5d9d27d88dfba1d7a9972c3cf",
+      "size": 290,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/176bad1a171225e5d9d27d88dfba1d7a9972c3cf"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/seekbar_progress.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ca57929f395a9a6865a992e82ff839529fed142",
+      "size": 221,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/1ca57929f395a9a6865a992e82ff839529fed142"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/seekbar_thumb.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "40e4130df320542ffdd0e886ad5bb65ecbbe945d",
+      "size": 279,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/40e4130df320542ffdd0e886ad5bb65ecbbe945d"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/spinner_background.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "117b48d0db52414fe503c12447ace942a9d294ea",
+      "size": 852,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/117b48d0db52414fe503c12447ace942a9d294ea"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/spoolman.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22b55dd238796e6f6f273dca7fcbe2f26fe8c1f5",
+      "size": 10658,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/22b55dd238796e6f6f273dca7fcbe2f26fe8c1f5"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/tool_selected.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c91fac181fbca5eef9202bb8ba21a3d12e128968",
+      "size": 83598,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/c91fac181fbca5eef9202bb8ba21a3d12e128968"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/tool_unselected.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8621b8d0c20373b32dee529e2372b5de733b2977",
+      "size": 73511,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/8621b8d0c20373b32dee529e2372b5de733b2977"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_add_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb232541d873c666e1063cb1ef41aa3e66b1cf27",
+      "size": 354,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/eb232541d873c666e1063cb1ef41aa3e66b1cf27"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_api_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7f8f01760dd0a35e1055e116e235c8debdce81e",
+      "size": 577,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/b7f8f01760dd0a35e1055e116e235c8debdce81e"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_cached_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4d5311340d6f9cc259e18b82953e30dd6b6a8ad",
+      "size": 568,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/e4d5311340d6f9cc259e18b82953e30dd6b6a8ad"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_cancel_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64473041cdcfe29baeb62d1f3e893e1352c4d6d9",
+      "size": 876,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/64473041cdcfe29baeb62d1f3e893e1352c4d6d9"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_contactless_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d719685204859e15d72af7117093ad61f48ee089",
+      "size": 1878,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/d719685204859e15d72af7117093ad61f48ee089"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_dark_mode_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bec87e5c25a4155725b82be1c1e1f989f9616ab",
+      "size": 1001,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/0bec87e5c25a4155725b82be1c1e1f989f9616ab"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_database_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "92fefc86ae81f81eaf35d65cd4c8419a153caf26",
+      "size": 1113,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/92fefc86ae81f81eaf35d65cd4c8419a153caf26"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_delete_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b77afdc91fee7df02fc775c582c746e08088edfb",
+      "size": 570,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/b77afdc91fee7df02fc775c582c746e08088edfb"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_edit_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62445fa893918a1d259f8c200a299ff8f004f106",
+      "size": 738,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/62445fa893918a1d259f8c200a299ff8f004f106"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_export_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15f6a635df62d19f90393f9e472fbb18568afec5",
+      "size": 584,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/15f6a635df62d19f90393f9e472fbb18568afec5"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_help_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67d2d95fd8402366c98119a1c5a4a67f71679b3d",
+      "size": 965,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/67d2d95fd8402366c98119a1c5a4a67f71679b3d"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_import_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d2aac73dc167bb29488a140a3924950c31548f2",
+      "size": 591,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/7d2aac73dc167bb29488a140a3924950c31548f2"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_layers_clear_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "523ca153ab592c825087cbe1224d3bb8440f9116",
+      "size": 836,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/523ca153ab592c825087cbe1224d3bb8440f9116"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_memory_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ada63825cc90b09bef0751b449b7e2ee5034d50",
+      "size": 745,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/5ada63825cc90b09bef0751b449b7e2ee5034d50"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_menu_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4350ba96af83d9d872b25b4e2c4983af51a279d9",
+      "size": 376,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/4350ba96af83d9d872b25b4e2c4983af51a279d9"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_nfc_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63435db338eea619bfcbf3cd00c304837a00b2fc",
+      "size": 591,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/63435db338eea619bfcbf3cd00c304837a00b2fc"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_palette_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f0bfa25e182a9f81f4c4891b8bb700a48e1e962",
+      "size": 1918,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/9f0bfa25e182a9f81f4c4891b8bb700a48e1e962"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_restart_alt_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f9f24ca97fb0a9f4623cd15df78e607e3ceddea",
+      "size": 639,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/2f9f24ca97fb0a9f4623cd15df78e607e3ceddea"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_settings_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6b331ea803d5a499a67e07a055e1e95ae524fab",
+      "size": 2958,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/b6b331ea803d5a499a67e07a055e1e95ae524fab"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_settings_applications_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ffaf01622324eb8201e29dc36de40b7049693c2",
+      "size": 2343,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/4ffaf01622324eb8201e29dc36de40b7049693c2"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_spool_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dbec1b16a45ec3f4e61261b7d0108d5fea572c7",
+      "size": 1829,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/4dbec1b16a45ec3f4e61261b7d0108d5fea572c7"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/twotone_tool_24.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "457edf8cb77b9be4b261f7bad8f679cf83b65231",
+      "size": 1305,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/457edf8cb77b9be4b261f7bad8f679cf83b65231"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/drawable/writable.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9032bb34aa12eff239a9e8aea0efcdd9fe259f9b",
+      "size": 21961,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/9032bb34aa12eff239a9e8aea0efcdd9fe259f9b"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/layout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e9a9cfecb24935c67aa3cc8c56d65a953f17de30",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/e9a9cfecb24935c67aa3cc8c56d65a953f17de30"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/layout/activity_main.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ddb51c43dbd4fccbc4d8928cd101ae6ccf7c355",
+      "size": 30733,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/7ddb51c43dbd4fccbc4d8928cd101ae6ccf7c355"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/layout/add_dialog.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c808617e196aa1467fa0ba56704db352b2fe1b8",
+      "size": 15433,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/7c808617e196aa1467fa0ba56704db352b2fe1b8"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/layout/dryer_dialog.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3b472d26d6f26d984dc1f99d5e2b49e65d1706d",
+      "size": 6992,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/e3b472d26d6f26d984dc1f99d5e2b49e65d1706d"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/layout/item_tag.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbf44a7c9d420d33b9ed8498bb84052e106ed9ec",
+      "size": 2564,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/bbf44a7c9d420d33b9ed8498bb84052e106ed9ec"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/layout/nav_header_main.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4712df9a758cc9c469b5444676bb1982e6f2fec",
+      "size": 855,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/b4712df9a758cc9c469b5444676bb1982e6f2fec"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/layout/picker_dialog.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb2132d1edfa9b2a5a704b5c03896f8d22d7e49a",
+      "size": 18186,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/cb2132d1edfa9b2a5a704b5c03896f8d22d7e49a"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/layout/settings_dialog.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b481e14f81d4b7772be072393150bf84892da4da",
+      "size": 23797,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/b481e14f81d4b7772be072393150bf84892da4da"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/layout/spinner_item.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54b4fa6cac212d6c35c88383b7e86a101eb36583",
+      "size": 463,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/54b4fa6cac212d6c35c88383b7e86a101eb36583"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/layout/spool_dialog.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da4faeba84d23737942dc0c2c0ae87cbef704004",
+      "size": 43569,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/da4faeba84d23737942dc0c2c0ae87cbef704004"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/layout/switch_item.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ba39b92b8d2f98fd26c5b83441b2004b27f0dfd",
+      "size": 555,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/1ba39b92b8d2f98fd26c5b83441b2004b27f0dfd"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/layout/tag_dialog.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca610baeced5152005736aea54edff50a7c204b6",
+      "size": 3253,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/ca610baeced5152005736aea54edff50a7c204b6"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/menu",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9258b440b8f34760854b4f221099443350a2824b",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/9258b440b8f34760854b4f221099443350a2824b"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/menu/activity_main_drawer.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae8e069481a89525b0aa5385e292920b73919e9a",
+      "size": 2195,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/ae8e069481a89525b0aa5385e292920b73919e9a"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/mipmap-hdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dba59870073ccd0101f9b482c525457e792ec6ba",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/dba59870073ccd0101f9b482c525457e792ec6ba"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b256832c153b52502f9e171ea74dccf1e520ebd1",
+      "size": 41132,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/b256832c153b52502f9e171ea74dccf1e520ebd1"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/mipmap-mdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5ac7d507b87bd50d6c169179534f1242de6316ae",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/5ac7d507b87bd50d6c169179534f1242de6316ae"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cd379a0be96c8edafef4114d1a45345e74a8bd0",
+      "size": 19643,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/5cd379a0be96c8edafef4114d1a45345e74a8bd0"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/mipmap-xhdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7cd98185b6f1e437bfc97022b58d1a8112b9efcd",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/7cd98185b6f1e437bfc97022b58d1a8112b9efcd"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "183e91d8573a8a46ad12726838a7c095b135ac85",
+      "size": 70065,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/183e91d8573a8a46ad12726838a7c095b135ac85"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/mipmap-xxhdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b00198625d07b13d3c1221674b948a34cb3cfa27",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/b00198625d07b13d3c1221674b948a34cb3cfa27"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b155a9b3abf6523bbd83a43b00d2447c416a853e",
+      "size": 151117,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/b155a9b3abf6523bbd83a43b00d2447c416a853e"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/mipmap-xxxhdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b0a84fa821f57ccd87f19752b1748a1a7f871aeb",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/b0a84fa821f57ccd87f19752b1748a1a7f871aeb"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d55b8a2abeb1839ebccf9e095f6086cd9cab272",
+      "size": 261417,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/6d55b8a2abeb1839ebccf9e095f6086cd9cab272"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/values-night",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4e37fd490ba2fb20ea509596a1c48ee02466f6f2",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/4e37fd490ba2fb20ea509596a1c48ee02466f6f2"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/values-night/colors.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef9fae63231bcf6b5fc090be3917fea6fc65e9a0",
+      "size": 580,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/ef9fae63231bcf6b5fc090be3917fea6fc65e9a0"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/values",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3a0adbabf5b97714cfc659d9a6b46e219e6484a4",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/3a0adbabf5b97714cfc659d9a6b46e219e6484a4"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/values/colors.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c6b18b732dbac12cf10a0999140723aac38f20a",
+      "size": 580,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/5c6b18b732dbac12cf10a0999140723aac38f20a"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/values/dimens.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c21ce91b8e1b9560b668a24e494f58fb33623a95",
+      "size": 164,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/c21ce91b8e1b9560b668a24e494f58fb33623a95"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/values/strings.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "706b8547b36a1346a76ec4520a6f0f8e28da22eb",
+      "size": 11581,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/706b8547b36a1346a76ec4520a6f0f8e28da22eb"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/values/themes.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c493bd58684576aa5b52a029a6628fdd3ebdf2d9",
+      "size": 2337,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/c493bd58684576aa5b52a029a6628fdd3ebdf2d9"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/xml",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e7df86ae262f167603de503cb6d5c24b14fe756e",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/e7df86ae262f167603de503cb6d5c24b14fe756e"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/xml/nsc.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f18e1f040a2949792a9af353b99fa853b7e0431e",
+      "size": 252,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/f18e1f040a2949792a9af353b99fa853b7e0431e"
+    },
+    {
+      "path": "Android/U1RFID/app/src/main/res/xml/tech_list.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "43ab126f5f4252a8c9439cac8a1fe0040bbba4df",
+      "size": 353,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/43ab126f5f4252a8c9439cac8a1fe0040bbba4df"
+    },
+    {
+      "path": "Android/U1RFID/build.gradle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37562787fc544e6bccb4ab62f9f1983c6debe54c",
+      "size": 167,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/37562787fc544e6bccb4ab62f9f1983c6debe54c"
+    },
+    {
+      "path": "Android/U1RFID/gradle.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7d8e6656a03d8c2d04086a67a21c99fffd9d093",
+      "size": 1648,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/d7d8e6656a03d8c2d04086a67a21c99fffd9d093"
+    },
+    {
+      "path": "Android/U1RFID/gradle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ac2b0ddd22d051592f1752c0e39afa4c7f5f6b7",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/3ac2b0ddd22d051592f1752c0e39afa4c7f5f6b7"
+    },
+    {
+      "path": "Android/U1RFID/gradle/libs.versions.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edb15ee770361c692c144f3c0fd886cecbf1e92b",
+      "size": 1058,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/edb15ee770361c692c144f3c0fd886cecbf1e92b"
+    },
+    {
+      "path": "Android/U1RFID/gradlew",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f906e0c811fc9e230eb44819f509cd0627f2600",
+      "size": 5766,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/4f906e0c811fc9e230eb44819f509cd0627f2600"
+    },
+    {
+      "path": "Android/U1RFID/gradlew.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "107acd32c4e687021ef32db511e8a206129b88ec",
+      "size": 2674,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/107acd32c4e687021ef32db511e8a206129b88ec"
+    },
+    {
+      "path": "Android/U1RFID/settings.gradle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cde9f884b84f54162d325b6b983a7e2ae25cc0f6",
+      "size": 530,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/cde9f884b84f54162d325b6b983a7e2ae25cc0f6"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42840e46a39604d534ad2d8905511cc981c7395f",
+      "size": 2079,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/42840e46a39604d534ad2d8905511cc981c7395f"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4ef217c97df061a6ca98ec208441f42aa0dfadc9",
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/trees/4ef217c97df061a6ca98ec208441f42aa0dfadc9"
+    },
+    {
+      "path": "docs/U1 Tag Protocol.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caeb88119e19a10673151b5ab3ba0491a5df6fc9",
+      "size": 10997,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/caeb88119e19a10673151b5ab3ba0491a5df6fc9"
+    },
+    {
+      "path": "docs/filament_parameters.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9ec07a7f52cd454b357afeb7213666a111d65ec",
+      "size": 18473,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/d9ec07a7f52cd454b357afeb7213666a111d65ec"
+    },
+    {
+      "path": "docs/filament_protocol.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4b8e4616e97f67cd22fcb7cc3ea3ef6151863aa",
+      "size": 18409,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/e4b8e4616e97f67cd22fcb7cc3ea3ef6151863aa"
+    },
+    {
+      "path": "docs/fm175xx_reader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd104a740242a0fd7bb09be708bfd73304e96e3c",
+      "size": 41453,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/dd104a740242a0fd7bb09be708bfd73304e96e3c"
+    },
+    {
+      "path": "docs/gp.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4317129f585add9f2f89aa32f7857d3f7b35e36c",
+      "size": 10520,
+      "url": "https://api.github.com/repos/DnG-Crafts/U1-RFID/git/blobs/4317129f585add9f2f89aa32f7857d3f7b35e36c"
+    }
+  ]
+}

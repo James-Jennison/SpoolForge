@@ -1,0 +1,14 @@
+{
+  "uuid": "6357871f-d6c0-4b20-8e3b-8f065c629070",
+  "id": "mango_medley_multicolor_ht",
+  "name": "Mango Medley Multicolor HT",
+  "color_hex": [
+    "#E72F1D",
+    "#FA8423"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "high_temperature": true
+  }
+}

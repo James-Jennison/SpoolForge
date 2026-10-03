@@ -1,0 +1,35 @@
+[
+  {
+    "uuid": "e37af954-9aa8-44fa-a41f-8c1427fef6a0",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "gst3d",
+        "url": "https://gst3d.eu/products/petg-transluscent?variant=52158185275725"
+      }
+    ]
+  },
+  {
+    "uuid": "9ca513fc-7ab2-4b7a-ba17-3aa37340c43a",
+    "filament_weight": 3500,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "gst3d",
+        "url": "https://gst3d.eu/products/petg-5kg-crystal?variant=52220099166541"
+      }
+    ]
+  },
+  {
+    "uuid": "e6d6cb8d-4dc6-4410-91aa-6c3f09523afe",
+    "filament_weight": 5000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "gst3d",
+        "url": "https://gst3d.eu/products/petg-5kg-crystal?variant=52250600309069"
+      }
+    ]
+  }
+]

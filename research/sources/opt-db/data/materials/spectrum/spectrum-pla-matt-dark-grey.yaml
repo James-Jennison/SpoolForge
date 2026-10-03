@@ -1,0 +1,20 @@
+uuid: 682caa82-a255-58c8-891c-1ca4f94186c5
+slug: spectrum-pla-matt-dark-grey
+brand:
+  slug: spectrum
+name: PLA MATT Dark Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#727376ff'
+tags:
+- matte
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-matt-dark-grey/spectrum-pla-matt-dark-grey-0-36f09104.jpg
+  type: unspecified

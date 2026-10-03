@@ -1,0 +1,24 @@
+uuid: 032641f2-abd8-5161-b010-663cdfc7661d
+slug: filamentpm-pa-cfjet-black
+brand:
+  slug: filamentpm
+name: PA-CFJet - Black
+class: FFF
+type: PA12
+abbreviation: PA12
+primary_color:
+  color_rgba: '#3f4444ff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-pa-cfjet-black/f0de91fd1795.png
+    type: unspecified
+properties:
+  density: 1.01
+  min_print_temperature: 230
+  max_print_temperature: 240
+  min_bed_temperature: 110
+  max_bed_temperature: 120

@@ -1,0 +1,14 @@
+{
+  "uuid": "c9fdc53a-e53b-4e5c-90f1-065108a9e033",
+  "id": "carnival",
+  "name": "Carnival",
+  "color_hex": [
+    "#FBF942",
+    "#0066D9",
+    "#CE0058"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

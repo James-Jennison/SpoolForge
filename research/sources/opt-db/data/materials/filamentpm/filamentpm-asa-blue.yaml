@@ -1,0 +1,21 @@
+uuid: d4478c71-5dc6-559b-9561-a504d8dc7818
+slug: filamentpm-asa-blue
+brand:
+  slug: filamentpm
+name: ASA - Blue
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#0099e6ff'
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-asa-blue/d02ff03fb710.png
+    type: unspecified
+properties:
+  density: 1.07
+  min_print_temperature: 240
+  max_print_temperature: 260
+  min_bed_temperature: 100
+  max_bed_temperature: 110
+tags:
+  - filtration_recommended

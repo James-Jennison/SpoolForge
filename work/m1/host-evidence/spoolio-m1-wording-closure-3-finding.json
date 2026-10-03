@@ -1,0 +1,16 @@
+{
+  "finding_id": "spoolio-m1-wording-closure-3",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-eb391ae1703f",
+  "reviewer": "deepseek",
+  "severity": "LOW",
+  "category": "Acceptance test coverage / wording regression",
+  "summary": "The regression test suite does not assert the changed nonempty mismatch wording. The only new/updated wording test checks empty reconciliation and only asserts contains 'No NDEF message' and not contains 'does not match'; it does not verify exact phrases 'outcome remains unknown' or 'no automatic rewrite', and no test asserts the nonempty mismatch detail.",
+  "claim": "A future code change could regress the nonempty or empty wording (e.g., reintroduce 'complete' or 'incomplete' language) and the test suite would still pass, undermining the targeted remediation.",
+  "evidence": {
+    "source": "WriteStateMachineTest.kt emptyReconciliationRemainsUnknownWithoutClaimingCompleteRead: assertEquals(WRITE_OUTCOME_UNKNOWN); assertTrue(detail.contains(\"No NDEF message\")); assertFalse(detail.contains(\"does not match\")). The test extra record wrong tnf or mime cannot verify only asserts phase, not wording. No test for nonempty mismatch detail."
+  },
+  "suggested_remediation": "Add a regression test for the nonempty mismatch path that asserts detail contains the neutral mismatch phrase and does not contain 'complete' (and ideally asserts the exact expected string). Strengthen the empty test to assert 'outcome remains unknown' and 'no automatic rewrite'.",
+  "suggested_validation": "Run the suite with a deliberate regression that changes nonempty mismatch detail to 'Fresh NDEF message does not match but read may be incomplete; no automatic rewrite'; the new test must fail. Similarly, a change to empty detail omitting 'outcome remains unknown' must fail.",
+  "reviewer_confidence": "HIGH"
+}

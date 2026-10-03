@@ -1,0 +1,14 @@
+{
+  "uuid": "a0d10e75-b66c-4de6-a57d-dbe77cf24c9e",
+  "id": "texas_sky_dual_color",
+  "name": "Texas Sky Dual Color",
+  "color_hex": [
+    "#0099E6",
+    "#FC6D8E"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,13 @@
+uuid: c487b1e0-07a0-5a0d-8d0c-872394bdf4f6
+slug: tinmorry-rapid-pla-royal-blue
+brand:
+  slug: tinmorry
+name: Rapid PLA Royal Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#2941bdff'
+tags:
+- industrially_compostable
+properties: {}

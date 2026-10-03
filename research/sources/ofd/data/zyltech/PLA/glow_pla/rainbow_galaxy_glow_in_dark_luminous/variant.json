@@ -1,0 +1,19 @@
+{
+  "uuid": "97890d19-3b04-4948-84a3-89f9ba9d6520",
+  "id": "rainbow_galaxy_glow_in_dark_luminous",
+  "name": "Rainbow Galaxy Glow in Dark Luminous",
+  "color_hex": [
+    "#F0EBE5",
+    "#8873C7",
+    "#39B9DB",
+    "#0353BA",
+    "#FF72B6"
+  ],
+  "traits": {
+    "glow": true,
+    "gradual_color_change": true,
+    "illuminescent_color_change": true,
+    "industrially_compostable": true,
+    "abrasive": true
+  }
+}

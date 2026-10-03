@@ -1,0 +1,13 @@
+uuid: 103edf82-1abe-5212-9fcb-4c155f6a95ba
+slug: overture-rock-pla-walnut-wood
+brand:
+  slug: overture
+name: Rock PLA Walnut Wood
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#976b62ff'
+tags:
+- industrially_compostable
+properties: {}

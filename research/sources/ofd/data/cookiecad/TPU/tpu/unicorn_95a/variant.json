@@ -1,0 +1,13 @@
+{
+  "uuid": "8a114263-2e39-439b-80d1-0e40ffca904d",
+  "id": "unicorn_95a",
+  "name": "Unicorn 95A",
+  "color_hex": [
+    "#8D65C7",
+    "#FF72B6",
+    "#39B9DB"
+  ],
+  "traits": {
+    "gradual_color_change": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "uuid": "bb5208d2-8397-4ad8-96c5-626c3b5be3dd",
+  "id": "nordic_birch",
+  "name": "Nordic Birch",
+  "color_hex": "#f8dfa1",
+  "traits": {
+    "imitates_wood": true,
+    "industrially_compostable": true,
+    "contains_wood": true
+  }
+}

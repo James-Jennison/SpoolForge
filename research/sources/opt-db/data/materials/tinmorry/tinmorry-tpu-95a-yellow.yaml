@@ -1,0 +1,12 @@
+uuid: 9c122dff-54be-5ca0-8d72-4d17308c798b
+slug: tinmorry-tpu-95a-yellow
+brand:
+  slug: tinmorry
+name: TPU 95A Yellow
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#fffb00ff'
+properties:
+  hardness_shore_a: 95

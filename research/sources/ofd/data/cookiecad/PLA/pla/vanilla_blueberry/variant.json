@@ -1,0 +1,13 @@
+{
+  "uuid": "f6420b35-97bb-403d-b97c-752f217a9dc1",
+  "id": "vanilla_blueberry",
+  "name": "Vanilla Blueberry",
+  "color_hex": [
+    "#EAECF5",
+    "#0078BF"
+  ],
+  "traits": {
+    "imitates_marble": true,
+    "industrially_compostable": true
+  }
+}

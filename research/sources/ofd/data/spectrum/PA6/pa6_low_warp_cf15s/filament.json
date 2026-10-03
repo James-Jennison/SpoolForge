@@ -1,0 +1,11 @@
+{
+  "uuid": "69764e40-1668-479a-ad75-1982a857f6a5",
+  "id": "pa6_low_warp_cf15s",
+  "name": "PA6 Low Warp CF15S",
+  "diameter_tolerance": 0.02,
+  "density": 1.28,
+  "min_print_temperature": 250,
+  "max_print_temperature": 280,
+  "min_bed_temperature": 80,
+  "max_bed_temperature": 80
+}

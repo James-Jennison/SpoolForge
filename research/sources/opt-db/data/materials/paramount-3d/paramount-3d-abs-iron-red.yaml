@@ -1,0 +1,13 @@
+uuid: eb187524-7304-575d-b359-7f0c7ea090e4
+slug: paramount-3d-abs-iron-red
+brand:
+  slug: paramount-3d
+name: ABS (Iron Red)
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#932721ff'
+tags:
+- filtration_recommended
+properties: {}

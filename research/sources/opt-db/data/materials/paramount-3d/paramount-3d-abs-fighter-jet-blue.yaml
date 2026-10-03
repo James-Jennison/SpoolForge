@@ -1,0 +1,13 @@
+uuid: 0b4f84cb-0e6e-5ed1-bdf4-aa737ccf9416
+slug: paramount-3d-abs-fighter-jet-blue
+brand:
+  slug: paramount-3d
+name: ABS (Fighter Jet Blue)
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#394658ff'
+tags:
+- filtration_recommended
+properties: {}

@@ -1,0 +1,11 @@
+{
+  "uuid": "c1e9399e-7d12-493c-a899-8b2b679d17a5",
+  "id": "mattflex_40d_matte_tpu",
+  "name": "Mattflex 40D Matte TPU",
+  "diameter_tolerance": 0.02,
+  "density": 1.21,
+  "min_print_temperature": 210,
+  "max_print_temperature": 240,
+  "min_bed_temperature": 30,
+  "max_bed_temperature": 60
+}

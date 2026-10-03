@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "eeb99cad-0339-4327-acf5-1a8d61311a41",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 190,
+    "spool_core_diameter": 100,
+    "gtin": "5903707924035",
+    "article_number": "FG-P220-E1",
+    "discontinued": false
+  }
+]

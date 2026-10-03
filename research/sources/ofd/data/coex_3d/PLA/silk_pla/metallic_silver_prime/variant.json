@@ -1,0 +1,11 @@
+{
+  "uuid": "467deaad-3985-4e51-af92-1e764ae0cc1d",
+  "id": "metallic_silver_prime",
+  "name": "Metallic Silver Prime",
+  "color_hex": "#848484",
+  "traits": {
+    "silk": true,
+    "imitates_metal": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,20 @@
+uuid: 38242281-5574-560c-94b4-e13b172cea13
+slug: addnorth-textura-matte-natural
+brand:
+  slug: addnorth
+name: Textura™ Matte Natural
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f1e6b2ff'
+tags:
+  - matte
+  - without_pigments
+  - contains_organic_material
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-textura-matte-natural/1b12508595ca.png
+    type: unspecified
+properties:
+  min_print_temperature: 205
+  max_print_temperature: 220

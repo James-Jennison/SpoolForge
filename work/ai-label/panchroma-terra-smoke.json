@@ -1,0 +1,107 @@
+{
+  "model": "gpt-5.6-terra",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 2391,
+    "input_tokens_details": {
+      "cache_write_tokens": 2388,
+      "cached_tokens": 0
+    },
+    "output_tokens": 541,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 2932
+  },
+  "extracted": {
+    "brand": {
+      "value": "Polymaker",
+      "confidence": 0.7,
+      "evidence": "Panchroma\u2122 product branding is printed; no separate manufacturer name is visible.",
+      "basis": "printed"
+    },
+    "product": {
+      "value": "Panchroma\u2122 PLA Gradient Starlight Purple-Red",
+      "confidence": 0.98,
+      "evidence": "Package reads \u201cPanchroma\u2122 PLA,\u201d \u201cPanchroma\u2122 PLA Gradient Starl...,\u201d and \u201cSTARLIGHT PURPLE-RED.\u201d",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PLA",
+      "confidence": 0.99,
+      "evidence": "Printed as \u201cPanchroma\u2122 PLA.\u201d",
+      "basis": "printed"
+    },
+    "color": {
+      "value": "Starlight Purple-Red",
+      "confidence": 0.99,
+      "evidence": "Large front label reads \u201cSTARLIGHT PURPLE-RED.\u201d",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": 1.75,
+      "confidence": 0.99,
+      "evidence": "Bottom description includes \u201c(1.75mm, 1kg)\u201d.",
+      "basis": "printed"
+    },
+    "net_weight_g": {
+      "value": 1000,
+      "confidence": 0.99,
+      "evidence": "Bottom description includes \u201c(1.75mm, 1kg)\u201d.",
+      "basis": "printed"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 1,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 1,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 1,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 1,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": "6938936717461",
+      "confidence": 0.99,
+      "evidence": "Printed explicitly as \u201cEAN: 6938936717461.\u201d",
+      "basis": "printed"
+    },
+    "sku": {
+      "value": "CA09019",
+      "confidence": 0.99,
+      "evidence": "Printed explicitly as \u201cSKU: CA09019.\u201d",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 1,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [
+      {
+        "value": "X004QSH4ZH",
+        "kind": "marketplace identifier",
+        "evidence": "Printed below the linear barcode; format resembles an Amazon-style marketplace identifier. The QR code content is not human-readable in the image."
+      }
+    ],
+    "needs_user_review": [
+      "Brand is not explicitly printed as \u201cPolymaker\u201d in this image; it is associated with the visible Panchroma\u2122 branding.",
+      "QR code is visible but its encoded content cannot be reliably read from the image."
+    ]
+  }
+}

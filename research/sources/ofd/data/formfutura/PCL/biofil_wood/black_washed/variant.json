@@ -1,0 +1,10 @@
+{
+  "uuid": "f33ed7e8-59ce-4d76-a0f1-fd0d4ed5afec",
+  "id": "black_washed",
+  "name": "Black Washed",
+  "color_hex": "#404040",
+  "discontinued": false,
+  "traits": {
+    "contains_wood": true
+  }
+}

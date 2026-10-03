@@ -1,0 +1,19 @@
+uuid: f7b5abec-3e7d-527a-bdb7-4ecf2a47195a
+slug: hatchbox-pastel-green-petg
+brand:
+  slug: hatchbox
+name: Pastel Green PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e4e46dff'
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-pastel-green-petg/8ac3d699c901.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 0
+  max_bed_temperature: 85

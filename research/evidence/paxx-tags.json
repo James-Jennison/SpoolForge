@@ -1,0 +1,52 @@
+[
+  {
+    "name": "v1.5.2-paxx12-21",
+    "zipball_url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/zipball/refs/tags/v1.5.2-paxx12-21",
+    "tarball_url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/tarball/refs/tags/v1.5.2-paxx12-21",
+    "commit": {
+      "sha": "8d97e83f0329b72c512563a8e98305cfbdef7a18",
+      "url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/commits/8d97e83f0329b72c512563a8e98305cfbdef7a18"
+    },
+    "node_id": "REF_kwDOQZu3PrpyZWZzL3RhZ3MvdjEuNS4yLXBheHgxMi0yMQ"
+  },
+  {
+    "name": "v1.4.1-paxx12-20",
+    "zipball_url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/zipball/refs/tags/v1.4.1-paxx12-20",
+    "tarball_url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/tarball/refs/tags/v1.4.1-paxx12-20",
+    "commit": {
+      "sha": "4cb3a6da84aaa4e7b4f77e60f1b16a1d47020a99",
+      "url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/commits/4cb3a6da84aaa4e7b4f77e60f1b16a1d47020a99"
+    },
+    "node_id": "REF_kwDOQZu3PrpyZWZzL3RhZ3MvdjEuNC4xLXBheHgxMi0yMA"
+  },
+  {
+    "name": "v1.4.1-paxx12-19",
+    "zipball_url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/zipball/refs/tags/v1.4.1-paxx12-19",
+    "tarball_url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/tarball/refs/tags/v1.4.1-paxx12-19",
+    "commit": {
+      "sha": "f5941719c4597ce592ea72e8e8404799b97a661a",
+      "url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/commits/f5941719c4597ce592ea72e8e8404799b97a661a"
+    },
+    "node_id": "REF_kwDOQZu3PrpyZWZzL3RhZ3MvdjEuNC4xLXBheHgxMi0xOQ"
+  },
+  {
+    "name": "v1.4.0-paxx12-18",
+    "zipball_url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/zipball/refs/tags/v1.4.0-paxx12-18",
+    "tarball_url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/tarball/refs/tags/v1.4.0-paxx12-18",
+    "commit": {
+      "sha": "fb8cea0357d69abe770007c7f37883e860104035",
+      "url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/commits/fb8cea0357d69abe770007c7f37883e860104035"
+    },
+    "node_id": "REF_kwDOQZu3PrpyZWZzL3RhZ3MvdjEuNC4wLXBheHgxMi0xOA"
+  },
+  {
+    "name": "v1.3.0-paxx12-17",
+    "zipball_url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/zipball/refs/tags/v1.3.0-paxx12-17",
+    "tarball_url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/tarball/refs/tags/v1.3.0-paxx12-17",
+    "commit": {
+      "sha": "b9bb5828c39972abfcee556ef008915fd2071706",
+      "url": "https://api.github.com/repos/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware/commits/b9bb5828c39972abfcee556ef008915fd2071706"
+    },
+    "node_id": "REF_kwDOQZu3PrpyZWZzL3RhZ3MvdjEuMy4wLXBheHgxMi0xNw"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "uuid": "52d2cfa8-2bfa-4d74-9186-859fc3f2695d",
+  "id": "burnt_titanium_nebula_purple",
+  "name": "Burnt Titanium Nebula Purple",
+  "color_hex": [
+    "#663D7E",
+    "#003287"
+  ],
+  "traits": {
+    "iridescent": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

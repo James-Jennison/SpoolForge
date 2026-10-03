@@ -1,0 +1,21 @@
+uuid: 297b84c5-48c5-5291-9fd5-4cf39c07ba88
+slug: spectrum-abs-gp450-pure-white
+brand:
+  slug: spectrum
+name: ABS GP450™ Pure White
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#efefefff'
+tags:
+- filtration_recommended
+properties:
+  density: 1.04
+  min_print_temperature: 235
+  max_print_temperature: 255
+  min_bed_temperature: 80
+  max_bed_temperature: 100
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-abs-gp450-pure-white/spectrum-abs-gp450-pure-white-0-d00b3b42.jpg
+  type: unspecified

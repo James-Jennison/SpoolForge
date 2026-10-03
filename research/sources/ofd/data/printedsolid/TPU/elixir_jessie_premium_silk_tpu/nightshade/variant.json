@@ -1,0 +1,9 @@
+{
+  "uuid": "be0e4129-511a-4239-9061-4e5afadc27ba",
+  "id": "nightshade",
+  "name": "Nightshade",
+  "color_hex": "#1F2761",
+  "traits": {
+    "silk": true
+  }
+}

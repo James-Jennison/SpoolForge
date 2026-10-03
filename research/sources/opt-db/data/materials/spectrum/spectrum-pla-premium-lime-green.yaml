@@ -1,0 +1,20 @@
+uuid: 30856fd6-3f82-5fe2-9188-08a376b2d940
+slug: spectrum-pla-premium-lime-green
+brand:
+  slug: spectrum
+name: PLA Premium Lime Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#bbdb4bff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-premium-lime-green/spectrum-pla-premium-lime-green-0-277f6d19.jpg
+  type: unspecified

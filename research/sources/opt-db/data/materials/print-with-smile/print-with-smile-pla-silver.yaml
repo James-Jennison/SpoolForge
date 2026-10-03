@@ -1,0 +1,13 @@
+uuid: 27423957-7abe-50f1-9058-bfdd16124e92
+slug: print-with-smile-pla-silver
+brand:
+  slug: print-with-smile
+name: PLA Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5e6c6fff'
+tags:
+- industrially_compostable
+properties: {}

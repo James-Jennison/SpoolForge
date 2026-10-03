@@ -1,0 +1,16 @@
+{
+  "uuid": "2b15e05b-19d9-4e5e-9822-2542d5e14ecc",
+  "id": "mermaid_elixir_purple_blue_green",
+  "name": "Mermaid Elixir (purple → blue → green)",
+  "color_hex": [
+    "#BE2ED6",
+    "#36DBE7",
+    "#ADEBB3"
+  ],
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

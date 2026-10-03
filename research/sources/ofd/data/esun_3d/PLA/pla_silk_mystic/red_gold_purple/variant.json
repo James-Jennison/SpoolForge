@@ -1,0 +1,16 @@
+{
+  "uuid": "ca245935-c069-4a22-b1ad-c4ff7d9c0625",
+  "id": "red_gold_purple",
+  "name": "Red Gold Purple",
+  "color_hex": [
+    "#FFCB47",
+    "#E03F26",
+    "#8846AE"
+  ],
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,14 @@
+uuid: 7b4c0ec1-337b-508d-8eec-7dee80ea923f
+slug: tinmorry-carbon-fiber-petg-violet
+brand:
+  slug: tinmorry
+name: Carbon Fiber PETG Violet
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#583061ff'
+tags:
+- contains_carbon_fiber
+- abrasive
+properties: {}

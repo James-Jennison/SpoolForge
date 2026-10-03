@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-binding-deepseek-1",
+  "disposition": "CONFIRMED",
+  "reason": "The independent verifier now recomputes source GTIN and source identity from original OFD, OpenPrintTag, and scope-correct Community fields. Its negative oracle rejects a valid but unrelated GTIN and a changed OpenPrintTag UUID.",
+  "evidence_reference": "tools/verify_gtin_index.py; work/gtin/verify-source-binding-fix.log",
+  "resolved": true
+}

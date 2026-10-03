@@ -1,0 +1,14 @@
+{
+  "uuid": "9bf08a53-65bc-443a-8a19-4a5585147070",
+  "id": "dual_colors_magenta_gold",
+  "name": "Dual Colors Magenta-Gold",
+  "color_hex": [
+    "#F6C500",
+    "#E23288"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

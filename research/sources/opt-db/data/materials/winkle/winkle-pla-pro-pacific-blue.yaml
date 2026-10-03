@@ -1,0 +1,14 @@
+uuid: af066058-6645-5d07-94ae-5f08a68e3df4
+slug: winkle-pla-pro-pacific-blue
+brand:
+  slug: winkle
+name: PLA PRO Pacific Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0353baff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.22

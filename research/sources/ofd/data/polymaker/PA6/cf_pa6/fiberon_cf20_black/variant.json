@@ -1,0 +1,10 @@
+{
+  "uuid": "86c2cd20-09e6-4e9d-87e5-a7482de86873",
+  "id": "fiberon_cf20_black",
+  "name": "Fiberon™ -CF20 Black",
+  "color_hex": "#000000",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

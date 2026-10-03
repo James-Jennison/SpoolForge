@@ -1,0 +1,19 @@
+uuid: 30c5102f-219c-5006-9c0a-098de687c818
+slug: amolen-pla-glow-in-the-dark-glow-white
+brand:
+  slug: amolen
+name: PLA Glow-in-the-Dark Glow White
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://www.amolen.com/products/pla-glow?variant=41718427516951
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- glow_in_the_dark
+- abrasive
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-glow-in-the-dark-glow-white/a494286c8606.png
+  type: unspecified
+properties: {}

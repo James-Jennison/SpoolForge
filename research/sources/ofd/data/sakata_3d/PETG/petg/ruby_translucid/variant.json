@@ -1,0 +1,9 @@
+{
+  "uuid": "dbeb5ff2-a020-4c65-8285-f4f7082d13b7",
+  "id": "ruby_translucid",
+  "name": "Ruby (translucid)",
+  "color_hex": "#CA0230",
+  "traits": {
+    "translucent": true
+  }
+}

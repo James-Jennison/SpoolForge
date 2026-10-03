@@ -1,0 +1,11 @@
+uuid: d01bcd31-b5b2-522e-9277-0114b9343bc0
+slug: print-with-smile-pet-g-cyan-blue
+brand:
+  slug: print-with-smile
+name: PET-G CYAN Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0099e6ff'
+properties: {}

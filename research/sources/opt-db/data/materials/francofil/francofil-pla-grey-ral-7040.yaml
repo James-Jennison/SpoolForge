@@ -1,0 +1,19 @@
+uuid: 0548a4cd-ffbe-5abc-be6f-376f7d308cda
+slug: francofil-pla-grey-ral-7040
+brand:
+  slug: francofil
+name: PLA Grey RAL 7040
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://francofil.fr/en/product/filament-pla-gris-ral-7040/
+primary_color:
+  color_rgba: '#bdc8c8ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 70

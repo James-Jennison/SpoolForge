@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-claude-3",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8b02c7b33686",
+  "reviewer": "claude",
+  "severity": "LOW",
+  "category": "Catalog load performance",
+  "summary": "Unchanged: `ensureCatalog()` recomputes a full-table SHA-256 digest over ~22,347 rows on every launch, even when unchanged.",
+  "claim": "Avoidable cold-start I/O/CPU cost on the target modest-hardware device on every launch.",
+  "evidence": {
+    "source": "`DataStore.ensureCatalog()` (identical to prior submission) unconditionally evaluates `catalogDigest(dao.allForIntegrity()) == expectedContentDigest` as part of the reinstall-skip check on every `init{}`.",
+    "response_sha256": "b2edd4f8158ecbdbe0fa40ccdfef0d865615410fedc3b04319bbf019f759f765"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "As previously stated: incremental checksum, periodic/on-demand verification, or equivalent.",
+  "suggested_validation": "Measure and bound on-device cold-start latency contribution.",
+  "reviewer_confidence": "MEDIUM"
+}

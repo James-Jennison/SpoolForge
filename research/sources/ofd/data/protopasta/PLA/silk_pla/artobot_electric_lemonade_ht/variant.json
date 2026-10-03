@@ -1,0 +1,11 @@
+{
+  "uuid": "556832fe-d811-481a-9037-d2e55583f691",
+  "id": "artobot_electric_lemonade_ht",
+  "name": "Artobot Electric Lemonade HT",
+  "color_hex": "#FBE200",
+  "traits": {
+    "silk": true,
+    "industrially_compostable": true,
+    "high_temperature": true
+  }
+}

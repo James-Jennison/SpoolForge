@@ -1,0 +1,11 @@
+uuid: 8e255901-08b7-51bf-abef-e86d72eda05c
+slug: sainsmart-blue-pro-3-petg
+brand:
+  slug: sainsmart
+name: Blue PRO-3 PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0e21aeff'
+properties: {}

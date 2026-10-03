@@ -1,0 +1,15 @@
+{
+  "uuid": "ac27d443-df3a-43d3-91ea-cc7beb7faf75",
+  "id": "tri_color_macaron",
+  "name": "Tri-Color Macaron",
+  "color_hex": [
+    "#FCE575",
+    "#9EF9FF",
+    "#F6ABD7"
+  ],
+  "traits": {
+    "matte": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

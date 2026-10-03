@@ -1,0 +1,23 @@
+uuid: 1dcd5be6-5b6c-580d-9fe0-b7c6383cf556
+slug: bambulab-abs-black
+brand:
+  slug: bambulab
+name: ABS Black
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-abs-black/fb03646709e0.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 100
+  min_chamber_temperature: 45
+  max_chamber_temperature: 60

@@ -1,0 +1,14 @@
+uuid: 181bbddc-e371-56dc-8858-7c9d70549365
+slug: siddament-pps-cf
+brand:
+  slug: siddament
+name: PPS CF
+class: FFF
+type: PPS
+abbreviation: PPS
+primary_color:
+  color_rgba: '#2c2c2cff'
+tags:
+- contains_carbon_fiber
+- abrasive
+properties: {}

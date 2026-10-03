@@ -1,0 +1,14 @@
+{
+  "uuid": "56bb185c-ccd9-430e-b255-2c1107a8f4ae",
+  "id": "white_green_in_dark",
+  "name": "White (Green in Dark)",
+  "color_hex": [
+    "#4DFF64",
+    "#EFEADF"
+  ],
+  "traits": {
+    "glow": true,
+    "illuminescent_color_change": true,
+    "industrially_compostable": true
+  }
+}

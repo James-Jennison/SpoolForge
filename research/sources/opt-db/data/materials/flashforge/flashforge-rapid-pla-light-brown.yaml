@@ -1,0 +1,16 @@
+uuid: da32e0f1-bc45-57ad-9a59-5e7f565be4a9
+slug: flashforge-rapid-pla-light-brown
+brand:
+  slug: flashforge
+name: Rapid PLA Light Brown
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c37c4fff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/flashforge/flashforge-rapid-pla-light-brown/97042be21844.jpg
+  type: unspecified
+properties: {}

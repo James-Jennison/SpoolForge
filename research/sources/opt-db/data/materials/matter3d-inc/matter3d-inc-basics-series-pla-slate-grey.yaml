@@ -1,0 +1,13 @@
+uuid: 8f99e141-703b-5853-87d6-9b3cda1d39b8
+slug: matter3d-inc-basics-series-pla-slate-grey
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA Slate Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#808080ff'
+tags:
+- industrially_compostable
+properties: {}

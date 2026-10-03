@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-deepseek-5",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8b02c7b33686",
+  "reviewer": "deepseek",
+  "severity": "LOW",
+  "category": "Code Quality/Test Coverage",
+  "summary": "Unused CatalogGenerationStore remains and its core tests do not exercise Android storage; test suite may give false confidence.",
+  "claim": "Misleading test coverage; unused code may hide gaps or confuse maintenance.",
+  "evidence": {
+    "source": "core evidence includes CatalogGenerationStoreTest (2 tests) but no app source reference to CatalogGenerationStore; StorageAcceptanceTest is separate and does not cover it.",
+    "response_sha256": "519f846ac62aa678c54f2ef894a01beb502b004b570b5debb037f921542ece99"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "Remove unused CatalogGenerationStore or add Android storage test that directly validates real database behavior.",
+  "suggested_validation": "Codebase has no unused catalog generation store in app path; Android storage tests are sole coverage.",
+  "reviewer_confidence": "HIGH"
+}

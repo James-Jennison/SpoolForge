@@ -1,0 +1,14 @@
+{
+  "uuid": "a2cc7da3-1a68-4468-85fe-02a1fa6562ff",
+  "id": "purple_yellow",
+  "name": "Purple-Yellow",
+  "color_hex": [
+    "#EBFF57",
+    "#5C50E0"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

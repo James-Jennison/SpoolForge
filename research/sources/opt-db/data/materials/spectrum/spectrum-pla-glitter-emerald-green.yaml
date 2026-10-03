@@ -1,0 +1,20 @@
+uuid: dc8c487e-390c-52db-91ab-f21cfe473086
+slug: spectrum-pla-glitter-emerald-green
+brand:
+  slug: spectrum
+name: PLA Glitter Emerald Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#446b20ff'
+tags:
+- glitter
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-glitter-emerald-green/spectrum-pla-glitter-emerald-green-0-db446b30.jpg
+  type: unspecified

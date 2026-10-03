@@ -1,0 +1,18 @@
+uuid: 474986f6-1a50-5b50-a8ed-18cde0dfbc6f
+slug: qidi-pc-abs-fr-white
+brand:
+  slug: qidi
+name: PC/ABS-FR White
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- self_extinguishing
+- filtration_recommended
+properties:
+  density: 1.08
+photos:
+- url: https://files.openprinttag.org/qidi/qidi-pc-abs-fr-white/qidi-pc-abs-fr-white-0-1115bf58.jpg
+  type: unspecified

@@ -1,0 +1,19 @@
+{
+  "finding_id": "filamajig-marketplace-non-code128-candidate-bypass",
+  "change_id": "filamajig-label-marketplace-guard-20260907",
+  "cycle_id": "review-cycle-5037cd18b671",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "identifier-classification",
+  "summary": "X00-shaped values decoded from QR or another symbology bypassed the Code 128-only candidate rule.",
+  "claim": "Candidate detection must be symbology-independent after valid GTIN priority.",
+  "evidence": {
+    "review_cycle": "review-cycle-5037cd18b671"
+  },
+  "affected_components": [
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/LabelScan.kt"
+  ],
+  "suggested_remediation": "Use one ambiguity-safe predicate across local decoded values and AI SKU claims; preserve exact evidence and require user confirmation.",
+  "suggested_validation": "Cover known X00-shaped Code 128, QR, AI-only candidates, and a noncandidate X0 manufacturer SKU.",
+  "reviewer_confidence": "HIGH"
+}

@@ -1,0 +1,11 @@
+uuid: 430c43bf-9f84-5eee-b3a2-cdb7e5c2b007
+slug: print-with-smile-pet-g-grey
+brand:
+  slug: print-with-smile
+name: PET-G GREY
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#6a6c6eff'
+properties: {}

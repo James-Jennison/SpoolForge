@@ -1,0 +1,13 @@
+uuid: 80f3b89f-f439-5fea-a516-44345a369eeb
+slug: matter3d-inc-basics-series-pla-lime-green
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA Lime Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#97d700ff'
+tags:
+- industrially_compostable
+properties: {}

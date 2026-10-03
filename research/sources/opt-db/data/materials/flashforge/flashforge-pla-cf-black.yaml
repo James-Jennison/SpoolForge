@@ -1,0 +1,17 @@
+uuid: 006a4f28-ed9b-5f8f-abbc-2b4b63052111
+slug: flashforge-pla-cf-black
+brand:
+  slug: flashforge
+name: PLA-CF Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+photos:
+  - url: https://files.openprinttag.org/flashforge/flashforge-pla-cf-black/acb0f6d434d7.jpg
+    type: unspecified
+properties: {}

@@ -1,0 +1,12 @@
+uuid: aa3aa963-b866-5dc1-8d3d-f394dd844f0e
+slug: sainsmart-small-spool-tpu-flexible-blue
+brand:
+  slug: sainsmart
+name: Small-Spool TPU Flexible Blue
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#0e21aeff'
+properties:
+  hardness_shore_a: 95

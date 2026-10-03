@@ -1,0 +1,22 @@
+uuid: 6780b0cc-c459-5d95-b48d-b845a6ee3396
+slug: formfutura-apollox-traffic-yellow
+brand:
+  slug: formfutura
+name: ApolloX Traffic Yellow
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#fbe200ff'
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-apollox-traffic-yellow/b16e622324e6.png
+    type: unspecified
+properties:
+  density: 1.11
+  min_print_temperature: 235
+  max_print_temperature: 255
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  chamber_temperature: 40
+tags:
+  - filtration_recommended

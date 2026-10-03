@@ -1,0 +1,14 @@
+uuid: 136cab28-b6b5-5512-961d-2973deec70c4
+slug: phrozen-high-speed-pla-white
+brand:
+  slug: phrozen
+name: High-Speed PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- high_speed
+- industrially_compostable
+properties: {}

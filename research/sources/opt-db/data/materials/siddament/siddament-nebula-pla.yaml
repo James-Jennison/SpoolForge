@@ -1,0 +1,15 @@
+uuid: 1b4dcae0-38d7-5511-8a5e-488274cfaa33
+slug: siddament-nebula-pla
+brand:
+  slug: siddament
+name: Nebula PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ae00ffff'
+tags:
+- glitter
+- iridescent
+- industrially_compostable
+properties: {}

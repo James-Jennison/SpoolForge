@@ -1,0 +1,13 @@
+uuid: 165a8d5e-d521-530f-9be4-2de98e9873b3
+slug: siddament-purple-abs
+brand:
+  slug: siddament
+name: Purple ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#694482ff'
+tags:
+- filtration_recommended
+properties: {}

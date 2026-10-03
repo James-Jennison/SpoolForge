@@ -1,0 +1,12 @@
+uuid: 849badf3-f52d-5739-9599-c1300ddb0fcd
+slug: mosaic-asa-black
+brand:
+  slug: mosaic
+name: ASA Black
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#000000ff'
+properties:
+  density: 1.13

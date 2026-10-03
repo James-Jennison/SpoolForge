@@ -1,0 +1,13 @@
+uuid: 33a25857-734d-5cbb-a7ab-0ef2fe33e2b6
+slug: paramount-3d-flexpla-skin-dark-complexion
+brand:
+  slug: paramount-3d
+name: FlexPLA (Skin - Dark Complexion)
+class: FFF
+type: PLA
+abbreviation: FlexPLA
+primary_color:
+  color_rgba: '#c0894dff'
+tags:
+- industrially_compostable
+properties: {}

@@ -1,0 +1,24 @@
+uuid: 0f31aae1-6125-5048-ad68-82d8dd8448a2
+slug: polymaker-panchroma-matte-pla-army-blue
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Army Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#2e4462ff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-army-blue/b7b2f67d9de3.png
+    type: unspecified
+transmission_distance: 0.1
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

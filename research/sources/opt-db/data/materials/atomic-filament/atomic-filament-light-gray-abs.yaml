@@ -1,0 +1,17 @@
+uuid: cac7fded-1a9f-5cd6-85fd-d7fa653807c0
+slug: atomic-filament-light-gray-abs
+brand:
+  slug: atomic-filament
+name: Light Gray ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+url: https://atomicfilament.com/products/light-gray-abs-filament
+primary_color:
+  color_rgba: '#afaeabff'
+tags:
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-light-gray-abs/7bd1698c0737.png
+  type: unspecified
+properties: {}

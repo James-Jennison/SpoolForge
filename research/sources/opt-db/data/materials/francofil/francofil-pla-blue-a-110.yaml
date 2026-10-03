@@ -1,0 +1,19 @@
+uuid: fc37092c-255b-592d-af93-0fa9d040a614
+slug: francofil-pla-blue-a-110
+brand:
+  slug: francofil
+name: PLA Blue A 110
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://francofil.fr/en/product/filament-pla-bleu-a-110/
+primary_color:
+  color_rgba: '#005da4ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 70

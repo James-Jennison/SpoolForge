@@ -1,0 +1,20 @@
+uuid: 9a877e54-4043-5ade-9883-3dbf6ed21c8b
+slug: spectrum-pla-crystal-frozen-berry
+brand:
+  slug: spectrum
+name: PLA Crystal Frozen Berry
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#b13566ff'
+tags:
+- translucent
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-crystal-frozen-berry/spectrum-pla-crystal-frozen-berry-0-85b301f0.jpg
+  type: unspecified

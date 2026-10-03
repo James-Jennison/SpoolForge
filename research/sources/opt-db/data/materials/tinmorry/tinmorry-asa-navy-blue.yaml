@@ -1,0 +1,11 @@
+uuid: 341f694a-7c2e-5f54-af08-d71d28a9b414
+slug: tinmorry-asa-navy-blue
+brand:
+  slug: tinmorry
+name: ASA Navy Blue
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#2941bdff'
+properties: {}

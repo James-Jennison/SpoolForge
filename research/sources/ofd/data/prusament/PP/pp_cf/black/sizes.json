@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "97cd641a-aea9-4886-be72-858066353072",
+    "filament_weight": 650,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-pp-carbon-fiber-black-650g/"
+      }
+    ]
+  }
+]

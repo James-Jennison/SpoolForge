@@ -1,0 +1,12 @@
+{
+  "uuid": "feb75a69-adce-4c36-867e-0a2a4e5763df",
+  "id": "gold_copper",
+  "name": "Gold-Copper",
+  "color_hex": [
+    "#F6C500",
+    "#C06341"
+  ],
+  "traits": {
+    "silk": true
+  }
+}

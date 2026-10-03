@@ -1,0 +1,14 @@
+uuid: 76649669-d3cf-5468-8f51-3a8efa0e8c1c
+slug: tinmorry-matte-pla-purple
+brand:
+  slug: tinmorry
+name: Matte PLA Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#a5a1dfff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

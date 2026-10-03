@@ -1,0 +1,15 @@
+{
+  "uuid": "4a76899f-942c-4019-b6e3-cef06c760f68",
+  "id": "vintage_metal_rainbow",
+  "name": "Vintage Metal Rainbow",
+  "color_hex": [
+    "#CE8D00",
+    "#81BA6D",
+    "#AF784D"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

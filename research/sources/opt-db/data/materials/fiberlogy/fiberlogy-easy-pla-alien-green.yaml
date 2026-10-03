@@ -1,0 +1,23 @@
+uuid: 4cd76c67-1f52-575b-bc30-c55de1782f84
+slug: fiberlogy-easy-pla-alien-green
+brand:
+  slug: fiberlogy
+name: Easy PLA Alien Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#244852ff'
+tags:
+  - glitter
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-easy-pla-alien-green/6b5118523b14.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 240

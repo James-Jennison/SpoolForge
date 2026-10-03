@@ -1,0 +1,8 @@
+{
+  "uuid": "f61b988f-972e-4996-85d0-ba64bafe6a14",
+  "id": "hs_pla",
+  "name": "HS-PLA",
+  "diameter_tolerance": 0.03,
+  "density": 1.25,
+  "max_dry_temperature": 55
+}

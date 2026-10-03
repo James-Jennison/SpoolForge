@@ -1,0 +1,13 @@
+uuid: 823b3156-8a59-548c-a1a1-2e07f8d1fde9
+slug: paramount-3d-pla-skin-fair-complexion
+brand:
+  slug: paramount-3d
+name: PLA (Skin - Fair Complexion)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f0ddc2ff'
+tags:
+- industrially_compostable
+properties: {}

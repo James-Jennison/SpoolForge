@@ -1,0 +1,21 @@
+uuid: a904b2f5-7862-5aaa-acf4-7859725214bd
+slug: spectrum-smart-abs-forest-green
+brand:
+  slug: spectrum
+name: smart ABS™ Forest Green
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#3d9441ff'
+tags:
+- filtration_recommended
+properties:
+  density: 1.05
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 80
+  max_bed_temperature: 100
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-smart-abs-forest-green/spectrum-smart-abs-forest-green-0-99cbf4d6.jpg
+  type: unspecified

@@ -1,0 +1,20 @@
+uuid: 7644661a-56fc-5207-a1a8-ae31f65c78d1
+slug: esun-petg-solid-black
+brand:
+  slug: esun
+name: PETG Solid Black
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://esun3dstoreeu.com/products/petg?VariantsId=12115
+primary_color:
+  color_rgba: '#000000ff'
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 75
+  max_bed_temperature: 90
+photos:
+  - url: https://files.openprinttag.org/esun/esun-petg-solid-black/121ef908e34a.jpg
+    type: unspecified

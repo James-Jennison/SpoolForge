@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "e8db7fce-53df-47e3-8eb0-f1a2ca57eeee",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/petg"
+      }
+    ]
+  }
+]

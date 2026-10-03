@@ -1,0 +1,13 @@
+uuid: 7175ad47-203d-5fc3-991e-7154bff7eadf
+slug: print-with-smile-satin-pla-spring-green
+brand:
+  slug: print-with-smile
+name: SATIN PLA Spring GREEN
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#26a648ff'
+tags:
+- industrially_compostable
+properties: {}

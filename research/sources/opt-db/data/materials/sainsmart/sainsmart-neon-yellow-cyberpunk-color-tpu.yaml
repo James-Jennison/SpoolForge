@@ -1,0 +1,14 @@
+uuid: 05fcbbfa-776e-5ded-af65-de86865e519b
+slug: sainsmart-neon-yellow-cyberpunk-color-tpu
+brand:
+  slug: sainsmart
+name: Neon Yellow, Cyberpunk Color TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#f2de00ff'
+tags:
+- neon
+properties:
+  hardness_shore_a: 95

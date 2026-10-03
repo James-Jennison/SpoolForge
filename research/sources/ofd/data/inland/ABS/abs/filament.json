@@ -1,0 +1,11 @@
+{
+  "uuid": "6a6192f5-adf9-418d-84cc-011ff2dee920",
+  "id": "abs",
+  "name": "ABS",
+  "diameter_tolerance": 0.02,
+  "density": 1.04,
+  "min_print_temperature": 230,
+  "max_print_temperature": 260,
+  "min_bed_temperature": 90,
+  "max_bed_temperature": 110
+}

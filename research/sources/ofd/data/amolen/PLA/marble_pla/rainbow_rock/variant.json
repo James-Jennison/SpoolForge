@@ -1,0 +1,15 @@
+{
+  "uuid": "0b8a8e53-ef9d-43cf-995f-d6cb730b150e",
+  "id": "rainbow_rock",
+  "name": "Rainbow Rock",
+  "color_hex": [
+    "#8B3A3A",
+    "#423435",
+    "#A45B27"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "imitates_marble": true,
+    "industrially_compostable": true
+  }
+}

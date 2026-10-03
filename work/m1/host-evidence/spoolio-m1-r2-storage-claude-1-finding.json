@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-claude-1",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8b02c7b33686",
+  "reviewer": "claude",
+  "severity": "MEDIUM",
+  "category": "Legacy recents hydration (v1 migration)",
+  "summary": "Unchanged from prior review: v1 legacy 'recent' rows that referenced a CUSTOM record are silently and permanently dropped during hydration; only legacy recents that referenced a CATALOG entry are recovered.",
+  "claim": "Users with a pre-remediation 'recent' pointing at a custom record permanently lose that recency entry, though the underlying custom record itself survives.",
+  "evidence": {
+    "source": "`restoreLegacyRecent()` (MainViewModel.kt, identical to prior submission) resolves the legacy `package_id` only via `store.catalog.catalog().byId(id)`; `UserDao` still exposes no by-id lookup into `custom_records` as a fallback.",
+    "response_sha256": "b2edd4f8158ecbdbe0fa40ccdfef0d865615410fedc3b04319bbf019f759f765"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "Add a `suspend fun byId(id: String): CustomRecord?` to `UserDao` and fall back to it in `restoreLegacyRecent` before discarding.",
+  "suggested_validation": "Seed a v1-schema `recents` row whose id matches an existing `custom_records.id`, run migration+hydration, and confirm it is not dropped.",
+  "reviewer_confidence": "HIGH"
+}

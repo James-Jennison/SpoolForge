@@ -1,0 +1,20 @@
+uuid: cf807697-440e-58ce-9f20-2286012a867e
+slug: francofil-pla-fluorescent-yellow-ral-1026
+brand:
+  slug: francofil
+name: PLA Fluorescent Yellow RAL 1026
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://francofil.fr/en/product/filament-pla-jaune-fluo-ral-1026/
+primary_color:
+  color_rgba: '#fffc25ff'
+tags:
+- neon
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 70

@@ -1,0 +1,23 @@
+uuid: 851d6aad-6836-50e5-bc2f-734273506d23
+slug: formfutura-easyfil-abs-grey
+brand:
+  slug: formfutura
+name: EasyFil ABS Grey
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#8c9099ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easyfil-abs-grey/170bdefc1b55.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 100
+  max_bed_temperature: 100
+  drying_temperature: 40
+  drying_time: 360

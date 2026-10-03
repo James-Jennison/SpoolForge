@@ -1,0 +1,10 @@
+{
+  "uuid": "fcd192f0-d5dd-40c9-8ece-5fbc4425aaaa",
+  "id": "balanced_beige",
+  "name": "Balanced Beige",
+  "color_hex": "#EADAC2",
+  "traits": {
+    "matte": true,
+    "recycled": true
+  }
+}

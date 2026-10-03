@@ -1,0 +1,15 @@
+uuid: 941f95c0-d407-53c1-8226-c1f753ecb4b6
+slug: winkle-pla-matte-cream-white
+brand:
+  slug: winkle
+name: PLA Matte Cream White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f5f5f5ff'
+tags:
+- matte
+- industrially_compostable
+properties:
+  density: 1.24

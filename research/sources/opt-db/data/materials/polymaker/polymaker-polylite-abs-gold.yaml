@@ -1,0 +1,23 @@
+uuid: 836e422e-3845-5421-ad7c-4177fef9118b
+slug: polymaker-polylite-abs-gold
+brand:
+  slug: polymaker
+name: PolyLite™ ABS Gold
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#bd6200ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polylite-abs-gold/f67e96e0b187.png
+    type: unspecified
+properties:
+  density: 1.04
+  min_print_temperature: 245
+  max_print_temperature: 265
+  min_bed_temperature: 90
+  max_bed_temperature: 100
+  drying_temperature: 70
+  drying_time: 360

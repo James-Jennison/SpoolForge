@@ -1,0 +1,22 @@
+uuid: caf46c55-2a94-58eb-979b-c4f3e788387a
+slug: esun-super-tough-pla-black
+brand:
+  slug: esun
+name: Super Tough PLA Black
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://esun3dstoreeu.com/products/epla-st?VariantsId=12135
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - industrially_compostable
+properties:
+  density: 1.25
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 45
+  max_bed_temperature: 60
+photos:
+  - url: https://files.openprinttag.org/esun/esun-super-tough-pla-black/0dfceb342d03.jpg
+    type: unspecified

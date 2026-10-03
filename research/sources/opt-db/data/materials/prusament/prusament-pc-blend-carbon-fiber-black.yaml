@@ -1,0 +1,30 @@
+uuid: 4d14d098-1429-55aa-8978-91e5241f43ac
+slug: prusament-pc-blend-carbon-fiber-black
+brand:
+  slug: prusament
+name: PC Blend Carbon Fiber Black
+class: FFF
+type: PC
+abbreviation: PCCF
+primary_color:
+  color_rgba: '#262727ff'
+transmission_distance: 0.1
+tags:
+- contains_carbon_fiber
+- blend
+- abrasive
+- contains_carbon
+photos:
+- url: https://files.openprinttag.org/prusament/prusament-pc-blend-carbon-fiber-black/f8968d48c87a.png
+  type: unspecified
+properties:
+  density: 1.22
+  hardness_shore_d: 83
+  min_print_temperature: 275
+  max_print_temperature: 295
+  preheat_temperature: 170
+  min_bed_temperature: 100
+  max_bed_temperature: 120
+  chamber_temperature: 90
+  min_chamber_temperature: 60
+  max_chamber_temperature: 90

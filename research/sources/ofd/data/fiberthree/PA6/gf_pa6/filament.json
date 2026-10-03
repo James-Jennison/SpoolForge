@@ -1,0 +1,11 @@
+{
+  "uuid": "96fcb333-cc5e-405c-ac38-306e21c4ead9",
+  "id": "gf_pa6",
+  "name": "PA6 GF",
+  "diameter_tolerance": 0.02,
+  "density": 1.27,
+  "min_print_temperature": 250,
+  "max_print_temperature": 290,
+  "min_bed_temperature": 80,
+  "max_bed_temperature": 100
+}

@@ -1,0 +1,20 @@
+uuid: c63483e7-585b-54e6-94a6-0ed90d3fd0b8
+slug: spectrum-pastello-pla-lemon-cream
+brand:
+  slug: spectrum
+name: Pastello PLA Lemon Cream
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fef49cff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.3
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pastello-pla-lemon-cream/spectrum-pastello-pla-lemon-cream-0-ac30a641.jpg
+  type: unspecified

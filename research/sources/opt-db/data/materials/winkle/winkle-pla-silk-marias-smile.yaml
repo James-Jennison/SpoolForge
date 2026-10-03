@@ -1,0 +1,15 @@
+uuid: d020ab70-4f00-5f75-bbf8-dda5019d7f9a
+slug: winkle-pla-silk-marias-smile
+brand:
+  slug: winkle
+name: PLA Silk Maria’s Smile
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#8ed9f9ff'
+tags:
+- silk
+- industrially_compostable
+properties:
+  density: 1.24

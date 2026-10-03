@@ -1,0 +1,23 @@
+uuid: 49a3bbdc-bc2f-56aa-882d-b0cb34dde634
+slug: bambulab-petg-translucent-orange
+brand:
+  slug: bambulab
+name: PETG Translucent Orange
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ff911aff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-translucent-orange/e7315faf255d.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

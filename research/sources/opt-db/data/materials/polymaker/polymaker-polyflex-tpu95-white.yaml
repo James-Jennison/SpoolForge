@@ -1,0 +1,21 @@
+uuid: 39cc274b-f92f-543b-a573-8b216a5ada25
+slug: polymaker-polyflex-tpu95-white
+brand:
+  slug: polymaker
+name: PolyFlex™ TPU95 White
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#f0ebe8ff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polyflex-tpu95-white/63e667dfb258.png
+    type: unspecified
+properties:
+  hardness_shore_a: 95.0
+  min_print_temperature: 210
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 70
+  drying_time: 480

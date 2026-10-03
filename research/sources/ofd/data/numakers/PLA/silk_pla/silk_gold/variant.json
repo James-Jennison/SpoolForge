@@ -1,0 +1,9 @@
+{
+  "uuid": "9b669a10-390b-4fef-b706-3722ca48c2e2",
+  "id": "silk_gold",
+  "name": "Silk Gold",
+  "color_hex": "#D4AF37",
+  "traits": {
+    "silk": true
+  }
+}

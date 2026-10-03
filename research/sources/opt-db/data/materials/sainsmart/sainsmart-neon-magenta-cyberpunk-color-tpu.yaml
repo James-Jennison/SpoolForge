@@ -1,0 +1,14 @@
+uuid: d68182d5-8e51-580a-9e73-7c19b645ae77
+slug: sainsmart-neon-magenta-cyberpunk-color-tpu
+brand:
+  slug: sainsmart
+name: Neon Magenta, Cyberpunk Color TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#db3fa9ff'
+tags:
+- neon
+properties:
+  hardness_shore_a: 95

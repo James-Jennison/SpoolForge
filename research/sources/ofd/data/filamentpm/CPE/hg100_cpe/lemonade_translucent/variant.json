@@ -1,0 +1,9 @@
+{
+  "uuid": "ecc2e3d0-20d5-4a22-8fe7-aec73acaa177",
+  "id": "lemonade_translucent",
+  "name": "\"Lemonade Translucent\"",
+  "color_hex": "#FBE200",
+  "traits": {
+    "translucent": true
+  }
+}

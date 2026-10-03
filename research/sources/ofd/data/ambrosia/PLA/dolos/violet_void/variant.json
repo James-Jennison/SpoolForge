@@ -1,0 +1,9 @@
+{
+  "uuid": "ad1fd0ca-4180-4dd7-8d7d-274927ccac3b",
+  "id": "violet_void",
+  "name": "Violet Void",
+  "color_hex": "#502747",
+  "traits": {
+    "coextruded": true
+  }
+}

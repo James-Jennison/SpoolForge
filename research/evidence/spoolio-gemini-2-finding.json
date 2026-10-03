@@ -1,0 +1,20 @@
+{
+  "finding_id": "spoolio-gemini-2",
+  "change_id": "spoolio-feasibility-20260906",
+  "cycle_id": "review-cycle-511bc96fa65d",
+  "reviewer": "gemini",
+  "severity": "MEDIUM",
+  "category": "Codec & Standards Interoperability",
+  "summary": "OpenPrintTag draft specification unreleased key migrations (diameter keys 30 vs 61) present serialization interoperability hazards.",
+  "claim": "OpenPrintTag draft specification unreleased key migrations (diameter keys 30 vs 61) present serialization interoperability hazards.",
+  "evidence": {
+    "source": "Section 7 documents that spec commit 7e09cc38 introduces unreleased draft diameter key 61 (\u00b5m) and nozzle key 62 (\u00b5m) replacing legacy keys 30/33 (mm), while upstream release tags returned 404/empty.",
+    "response_sha256": "46e4326441f410d3246da130337903a28de7445e5bec6ba73a9bba31356f2acf"
+  },
+  "affected_components": [
+    "docs/FEASIBILITY.md"
+  ],
+  "suggested_remediation": "Isolate the OpenPrintTag codec behind an explicit schema versioning gate that defaults tag serialization to published stable key assignments (keys 30 and 33 in mm) and rejects unversioned main-branch key drift.",
+  "suggested_validation": "Codec unit test suite validates that default serialized CBOR payloads emit legacy keys 30 and 33 in mm, and emit keys 61 and 62 in \u00b5m only when explicitly configured for draft schema targets.",
+  "reviewer_confidence": "HIGH"
+}

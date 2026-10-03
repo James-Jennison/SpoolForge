@@ -1,0 +1,18 @@
+{
+  "uuid": "69f391d6-4e3f-4a77-9a9d-5cfe5a5ef985",
+  "id": "midnight_multicolor_ht",
+  "name": "Midnight Multicolor HT",
+  "color_hex": [
+    "#818FA0",
+    "#005DA4",
+    "#0378D0",
+    "#0099E6",
+    "#003B80"
+  ],
+  "traits": {
+    "glitter": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "high_temperature": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "uuid": "0fa15654-c97c-4ed3-9fa7-2a0e90332b5d",
+  "id": "shiny_triple_color_blue_green_orange",
+  "name": "Shiny Triple Color Blue Green Orange",
+  "color_hex": [
+    "#2E56F1",
+    "#41A840",
+    "#FF8B47"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

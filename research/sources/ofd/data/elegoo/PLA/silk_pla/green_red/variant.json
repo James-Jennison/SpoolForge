@@ -1,0 +1,14 @@
+{
+  "uuid": "d2c8c174-edc5-49b5-bb82-3266095aca65",
+  "id": "green_red",
+  "name": "Green Red",
+  "color_hex": [
+    "#3D9441",
+    "#ED1536"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

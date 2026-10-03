@@ -1,0 +1,23 @@
+uuid: 7e12d59b-99a9-54a8-aa4e-74a2cc66dd73
+slug: formfutura-high-gloss-pla-purple
+brand:
+  slug: formfutura
+name: High Gloss PLA Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#492972ff'
+tags:
+  - silk
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-high-gloss-pla-purple/10054d269eb4.png
+    type: unspecified
+properties:
+  density: 1.22
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 40
+  max_bed_temperature: 60
+  drying_temperature: 60
+  drying_time: 360

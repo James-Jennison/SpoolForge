@@ -1,0 +1,23 @@
+uuid: 80629376-1038-507e-a68b-592b715580f8
+slug: polymaker-panchroma-silk-pla-dark-blue
+brand:
+  slug: polymaker
+name: Panchroma™ Silk PLA Dark Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#081b36ff'
+tags:
+  - silk
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-silk-pla-dark-blue/24c39715b814.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

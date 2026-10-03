@@ -1,0 +1,21 @@
+uuid: d82ad632-7b23-55df-a178-eb39c3eef6b6
+slug: polymaker-panchroma-satin-pla-blue
+brand:
+  slug: polymaker
+name: Panchroma™ Satin PLA Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0162a6ff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-satin-pla-blue/cf831c5461f1.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

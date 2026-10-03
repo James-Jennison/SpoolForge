@@ -1,0 +1,14 @@
+uuid: d302ef0b-4e13-56ed-89bb-a3b9235637a3
+slug: sainsmart-bronze-carbon-fiber-petg
+brand:
+  slug: sainsmart
+name: Bronze Carbon Fiber PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#8c7354ff'
+tags:
+- contains_carbon_fiber
+- abrasive
+properties: {}

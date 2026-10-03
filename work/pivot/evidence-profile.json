@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "baseline": [
+    {
+      "id": "pivot-android-build-tests-lint",
+      "type": "build-test-static",
+      "severity": "HIGH",
+      "command": ["heavy-gradle", ":core:test", ":app:testDebugUnitTest", ":app:lintDebug", ":app:assembleDebug"]
+    },
+    {
+      "id": "pivot-document-and-boundary-contract",
+      "type": "architecture-contract",
+      "severity": "HIGH",
+      "command": ["python3", "tools/verify_pivot_foundation.py"]
+    },
+    {
+      "id": "pivot-gtin-data-integrity",
+      "type": "data-integrity",
+      "severity": "HIGH",
+      "command": ["python3", "tools/verify_gtin_index.py"]
+    },
+    {
+      "id": "pivot-package-identity-migration",
+      "type": "package-identity-device-data",
+      "severity": "HIGH",
+      "command": ["python3", "work/package-migration/verify_rename.py"]
+    }
+  ],
+  "substantive": [],
+  "conditional": {}
+}

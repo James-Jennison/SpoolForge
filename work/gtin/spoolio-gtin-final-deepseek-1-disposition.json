@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-final-deepseek-1",
+  "disposition": "CONFIRMED",
+  "reason": "Canonical full-body MIT matching now rejects appended restrictions; the independent verifier compares each shipped notice byte-for-byte with its retained source LICENSE and independently checks the canonical body.",
+  "evidence_reference": "tools/build_gtin_index.py; tools/verify_gtin_index.py; work/gtin/verify-after-review-fixes.log",
+  "resolved": true
+}

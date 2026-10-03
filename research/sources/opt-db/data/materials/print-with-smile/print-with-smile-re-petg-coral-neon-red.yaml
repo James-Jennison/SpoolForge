@@ -1,0 +1,14 @@
+uuid: 25aef7ab-6972-5904-9300-183324d4f093
+slug: print-with-smile-re-petg-coral-neon-red
+brand:
+  slug: print-with-smile
+name: RE-PETG Coral NEON RED
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ff854dff'
+tags:
+- recycled
+- neon
+properties: {}

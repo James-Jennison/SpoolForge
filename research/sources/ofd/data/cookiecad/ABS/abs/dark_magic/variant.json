@@ -1,0 +1,15 @@
+{
+  "uuid": "3e1ef9c3-96c0-466b-baf4-d7b769033f83",
+  "id": "dark_magic",
+  "name": "Dark Magic",
+  "color_hex": [
+    "#2A3940",
+    "#00E3E2",
+    "#C63DBA",
+    "#62E480"
+  ],
+  "traits": {
+    "iridescent": true,
+    "filtration_recommended": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "uuid": "9bca2a16-e185-449b-a34d-09b0a9760a26",
+  "id": "matte_abs",
+  "name": "Matte ABS",
+  "diameter_tolerance": 0.02,
+  "density": 1.04,
+  "min_print_temperature": 230,
+  "max_print_temperature": 260,
+  "min_bed_temperature": 90,
+  "max_bed_temperature": 110
+}

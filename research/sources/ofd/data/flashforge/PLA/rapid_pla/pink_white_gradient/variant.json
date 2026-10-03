@@ -1,0 +1,13 @@
+{
+  "uuid": "20ddd2de-d366-4f7a-9570-e8d599ab9d49",
+  "id": "pink_white_gradient",
+  "name": "Pink White Gradient",
+  "color_hex": [
+    "#FF67F5",
+    "#FFFFFF"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

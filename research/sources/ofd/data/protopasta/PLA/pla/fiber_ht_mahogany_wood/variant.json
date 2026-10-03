@@ -1,0 +1,12 @@
+{
+  "uuid": "5aba7a30-8469-45ca-9490-2f08bf1c063b",
+  "id": "fiber_ht_mahogany_wood",
+  "name": "Fiber HT - Mahogany Wood",
+  "color_hex": "#A35A4B",
+  "traits": {
+    "imitates_wood": true,
+    "industrially_compostable": true,
+    "high_temperature": true,
+    "contains_wood": true
+  }
+}

@@ -1,0 +1,26 @@
+uuid: 0ede44b9-33c9-5ece-b625-3cc300c91f9c
+slug: bambulab-pla-wood-white-oak
+brand:
+  slug: bambulab
+name: PLA Wood White Oak
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#d6cca3ff'
+tags:
+  - matte
+  - contains_wood
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-wood-white-oak/b144bdf8a7fe.png
+    type: unspecified
+properties:
+  density: 1.21
+  min_print_temperature: 190
+  max_print_temperature: 240
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45
+url: https://us.store.bambulab.com/products/pla-wood?id=43075832086664

@@ -1,0 +1,11 @@
+uuid: a39cbe16-058e-5073-b950-a8df3af02f83
+slug: print-with-smile-pet-g-satine-black
+brand:
+  slug: print-with-smile
+name: PET-G Satine Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+properties: {}

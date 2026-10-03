@@ -1,0 +1,13 @@
+{
+  "uuid": "d5f3309b-edca-44ae-bd5c-0727b4b31d24",
+  "id": "dual_colour_red_gold",
+  "name": "Dual colour Red-Gold",
+  "color_hex": [
+    "#F6C500"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

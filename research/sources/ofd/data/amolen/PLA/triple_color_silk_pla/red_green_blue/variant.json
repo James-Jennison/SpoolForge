@@ -1,0 +1,14 @@
+{
+  "uuid": "586d4ac7-ced0-42d0-b51b-704fe05a242a",
+  "id": "red_green_blue",
+  "name": "Red Green Blue",
+  "color_hex": [
+    "#00C26B",
+    "#F600C7",
+    "#4921C1"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

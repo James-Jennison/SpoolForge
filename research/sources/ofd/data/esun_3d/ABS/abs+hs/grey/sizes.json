@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "999df3b2-4aed-496a-8fba-a52b73fad84f",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/eabs-pro-hs"
+      }
+    ]
+  }
+]

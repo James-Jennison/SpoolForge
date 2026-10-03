@@ -1,0 +1,22 @@
+uuid: 323694de-8308-52d9-833d-2c6e12e947a1
+slug: polymaker-panchroma-marble-pla-white
+brand:
+  slug: polymaker
+name: Panchroma™ Marble PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#cfccd6ff'
+tags:
+  - imitates_marble
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-marble-pla-white/6a85b4642515.png
+    type: unspecified
+properties:
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

@@ -1,0 +1,12 @@
+uuid: 356b499f-6f4d-5595-af87-4f13a23608f1
+slug: sainsmart-orange-flexible-tpu
+brand:
+  slug: sainsmart
+name: Orange, Flexible TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#ff5f2eff'
+properties:
+  hardness_shore_a: 90

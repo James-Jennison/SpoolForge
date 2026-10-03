@@ -1,0 +1,23 @@
+uuid: f844c264-43ab-5859-b833-e46e9f0d3431
+slug: formfutura-tough-pla-white
+brand:
+  slug: formfutura
+name: Tough PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-tough-pla-white/9cc2e819c072.png
+    type: unspecified
+properties:
+  density: 1.2
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 40
+  drying_time: 360

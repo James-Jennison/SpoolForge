@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-nfc-deepseek-3",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-d04a66d06bba",
+  "reviewer": "deepseek",
+  "severity": "LOW",
+  "category": "Catalog generation store install semantics",
+  "summary": "CatalogGenerationStore.install silently ignores new bytes when re-installing the same generation ID if the destination directory already exists, while still updating the active pointer to the existing artifact.",
+  "claim": "If a generation ID is reused (e.g., repair/reissue), the new validated bytes are discarded and the old artifact stays active, potentially serving outdated/corrupted catalog without error despite successful install returning the active.",
+  "evidence": {
+    "source": "Code: `if(!Files.exists(destination)) Files.move(staging,destination,StandardCopyOption.ATOMIC_MOVE)`; if destination exists, staging is not moved and old artifact remains; then pointer is written to generation. This can leave active pointing to stale content if a reinstall with corrected bytes occurs after a prior successful install of same generation.",
+    "response_sha256": "d3bd1c6eea8c22e7dcc8eb2668b89f870a1883b485e73fd046820115c164fae8"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "Either reject reinstallation of an existing generation ID with non-identical bytes, or replace atomically after validation. At minimum, compare existing artifact digest and fail on mismatch.",
+  "suggested_validation": "Test installing generation 'v1' with bytes A, then attempting reinstall with bytes B but same expected sha; assert either exception or active artifact still A, not silent success with stale bytes.",
+  "reviewer_confidence": "MEDIUM"
+}

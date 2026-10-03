@@ -1,0 +1,19 @@
+uuid: 49e5f7c8-b165-5d87-a1f5-2cc28710ea7a
+slug: francofil-pla-silver
+brand:
+  slug: francofil
+name: PLA Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://francofil.fr/en/product/filament-pla-argent/
+primary_color:
+  color_rgba: '#848484ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 70

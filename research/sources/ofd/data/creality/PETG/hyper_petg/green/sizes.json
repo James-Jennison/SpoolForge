@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "e459d00c-6a1a-43e0-ac22-8e1158b96a22",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "crealitystore",
+        "url": "https://store.creality.com/products/hyper-series-petg-3d-printing-filament-1kg"
+      }
+    ]
+  }
+]

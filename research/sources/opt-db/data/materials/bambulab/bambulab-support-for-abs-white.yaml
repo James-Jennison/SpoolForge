@@ -1,0 +1,20 @@
+uuid: 80b8d6c0-197a-511f-ab00-12b24cf8ed4d
+slug: bambulab-support-for-abs-white
+brand:
+  slug: bambulab
+name: Support for ABS White
+class: FFF
+abbreviation: Support
+primary_color:
+  color_rgba: '#ffffffff'
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-support-for-abs-white/c9c2ad1872fc.png
+    type: unspecified
+properties:
+  density: 1.16
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 100
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45

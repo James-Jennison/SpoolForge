@@ -1,0 +1,24 @@
+uuid: 86343188-00f1-5588-b3c6-9e7b3cae9415
+slug: elegoo-rapid-petg-white
+brand:
+  slug: elegoo
+name: RAPID PETG White
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- high_speed
+photos:
+- url: https://files.openprinttag.org/elegoo/elegoo-rapid-petg-white/ed47251c1ca2.png
+  type: unspecified
+properties:
+  density: 1.29
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  drying_temperature: 60
+  drying_time: 480
+  min_nozzle_diameter: 200

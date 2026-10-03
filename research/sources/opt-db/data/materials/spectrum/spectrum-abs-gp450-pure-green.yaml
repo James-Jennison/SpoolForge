@@ -1,0 +1,21 @@
+uuid: 75458f4c-275f-5579-bfa8-4542d9984c0b
+slug: spectrum-abs-gp450-pure-green
+brand:
+  slug: spectrum
+name: ABS GP450™ Pure Green
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#91c500ff'
+tags:
+- filtration_recommended
+properties:
+  density: 1.04
+  min_print_temperature: 235
+  max_print_temperature: 255
+  min_bed_temperature: 80
+  max_bed_temperature: 100
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-abs-gp450-pure-green/spectrum-abs-gp450-pure-green-0-5dd52681.jpg
+  type: unspecified

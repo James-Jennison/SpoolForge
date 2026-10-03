@@ -1,0 +1,17 @@
+uuid: 78f27153-4336-5109-885e-b481635bc46c
+slug: atomic-filament-translucent-bright-orange-petg-pro
+brand:
+  slug: atomic-filament
+name: Translucent Bright Orange PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/translucent-bright-orange-petg-pro
+primary_color:
+  color_rgba: '#f67405ff'
+tags:
+- translucent
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-translucent-bright-orange-petg-pro/2622c7d7b7b7.png
+  type: unspecified
+properties: {}

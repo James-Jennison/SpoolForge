@@ -1,0 +1,12 @@
+{
+  "change_id": "spoolio-camera-20260907",
+  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "summary": "Owner-approved on-device camera barcode scanner feeding the existing exact offline GTIN candidate lookup.",
+  "classification": "SUBSTANTIVE",
+  "affected_components": ["app", "core"],
+  "required_capabilities": ["architecture", "platform", "adversarial"],
+  "provenance": {
+    "branch": "codex/m1-offline-openspool",
+    "scope": "Bundled offline EAN-8, EAN-13, UPC-A and ITF barcode decoding; no image storage, upload, live source refresh, NFC write, release or package-identity change"
+  }
+}

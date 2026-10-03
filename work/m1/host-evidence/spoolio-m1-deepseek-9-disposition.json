@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-deepseek-9",
+  "disposition": "CONFIRMED",
+  "reason": "CONFIRMED WITH NARROWER SCOPE: preserve decoded temperature/physical fields and optional display labels; do not invent missing physical facts or require fabricated brand/color/product defaults. Missing diameter/mass may require explicit user input.",
+  "evidence_reference": "work/m1/HOST_REMEDIATION_DIRECTION.md; host initial source snapshot review-cycle-38636c32948d",
+  "resolved": false
+}

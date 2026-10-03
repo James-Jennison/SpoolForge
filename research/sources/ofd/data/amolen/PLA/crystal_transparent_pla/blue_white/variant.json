@@ -1,0 +1,14 @@
+{
+  "uuid": "6a7c4746-50bf-4932-a561-f18a150c622c",
+  "id": "blue_white",
+  "name": "Blue White",
+  "color_hex": [
+    "#FFFFFF",
+    "#1ADAFB"
+  ],
+  "traits": {
+    "translucent": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

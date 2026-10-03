@@ -1,0 +1,13 @@
+uuid: dd67f2f2-7d99-54e6-ae9c-ae9645eea234
+slug: paramount-3d-abs-enzo-red
+brand:
+  slug: paramount-3d
+name: ABS (Enzo Red)
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#e72f1dff'
+tags:
+- filtration_recommended
+properties: {}

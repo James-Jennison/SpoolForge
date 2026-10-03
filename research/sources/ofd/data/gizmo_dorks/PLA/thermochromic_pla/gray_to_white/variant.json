@@ -1,0 +1,13 @@
+{
+  "uuid": "2dd61f12-4794-4b64-aa50-fe6bb0105e5c",
+  "id": "gray_to_white",
+  "name": "Gray to White",
+  "color_hex": [
+    "#FFFFFF",
+    "#808080"
+  ],
+  "traits": {
+    "temperature_color_change": true,
+    "industrially_compostable": true
+  }
+}

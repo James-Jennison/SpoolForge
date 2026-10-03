@@ -1,0 +1,13 @@
+{
+  "uuid": "f8abbf2a-3197-4a6e-ab38-8494ff5aa56e",
+  "id": "goldpink",
+  "name": "Gold&Pink",
+  "color_hex": [
+    "#DB3FA9",
+    "#F3B400"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

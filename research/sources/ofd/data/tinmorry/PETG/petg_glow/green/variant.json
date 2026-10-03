@@ -1,0 +1,13 @@
+{
+  "uuid": "025ab082-25df-46fa-af33-5c096865d89e",
+  "id": "green",
+  "name": "Green",
+  "color_hex": [
+    "#7FE200",
+    "#EFEADF"
+  ],
+  "traits": {
+    "glow": true,
+    "illuminescent_color_change": true
+  }
+}

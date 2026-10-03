@@ -1,0 +1,7 @@
+{
+  "finding_id": "m7-deepseek-serialization-boundary",
+  "disposition": "CONFIRMED",
+  "resolved": true,
+  "reason": "Added exact-device byte comparisons before and after M7 database evidence for standard OpenSpool, PAXX, portable identity v1, and Spoolman export.",
+  "evidence_reference": "DeviceFullSpectrumAcceptanceTest.m7MigrationPersistenceUiAndCompatibilityBoundariesPassOnRazr2023"
+}

@@ -1,0 +1,13 @@
+{
+  "uuid": "3e4056b2-ab96-4f41-a6cb-02e33ef44895",
+  "id": "mistic_violet",
+  "name": "Mistic Violet",
+  "color_hex": [
+    "#292824",
+    "#7142A3"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

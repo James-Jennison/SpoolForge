@@ -1,0 +1,10 @@
+{
+  "uuid": "c94a451f-493e-4b92-9f89-59d96427a3c9",
+  "id": "obsidian_gf_blue",
+  "name": "OBSIDIAN GF+ Blue",
+  "color_hex": "#2E56F1",
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

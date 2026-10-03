@@ -1,0 +1,15 @@
+{
+  "uuid": "e92658dc-2968-48c7-bd79-e483dda879ae",
+  "id": "lime_ripple",
+  "name": "Lime Ripple",
+  "color_hex": [
+    "#06B100",
+    "#0353BA",
+    "#EEEA44"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

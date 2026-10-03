@@ -1,0 +1,9 @@
+{
+  "uuid": "98c5e281-f3e1-4bdf-8169-f3148262b7cb",
+  "id": "graphite",
+  "name": "Graphite",
+  "color_hex": "#959FA1",
+  "traits": {
+    "matte": true
+  }
+}

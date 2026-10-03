@@ -1,0 +1,13 @@
+uuid: 4fff3f22-5e15-5a14-89fd-317cf841d70d
+slug: print-with-smile-pla-green-apple
+brand:
+  slug: print-with-smile
+name: PLA GREEN Apple
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#9fec41ff'
+tags:
+- industrially_compostable
+properties: {}

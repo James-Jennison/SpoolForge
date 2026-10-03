@@ -1,0 +1,1 @@
+Verification refuses optimized Python because its invariant checks require assertions

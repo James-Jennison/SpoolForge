@@ -1,0 +1,10 @@
+{
+  "uuid": "ff34e383-7490-45fe-a59c-83857ba24760",
+  "id": "red",
+  "name": "Red",
+  "color_hex": "#FF4F4D",
+  "traits": {
+    "neon": true,
+    "industrially_compostable": true
+  }
+}

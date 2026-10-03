@@ -1,0 +1,9 @@
+{
+  "uuid": "f077a3df-1828-4da0-b14b-4d3ae6b0bf7e",
+  "id": "orange",
+  "name": "Orange",
+  "color_hex": "#FF6900",
+  "traits": {
+    "recyclable": true
+  }
+}

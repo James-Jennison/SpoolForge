@@ -1,0 +1,10 @@
+{
+  "uuid": "52b1df40-ba2d-4b3c-b92a-a580d98ba25a",
+  "id": "cream_white",
+  "name": "Cream White",
+  "color_hex": "#F6DFB7",
+  "discontinued": false,
+  "traits": {
+    "recycled": true
+  }
+}

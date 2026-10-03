@@ -1,0 +1,14 @@
+uuid: e87768f8-6d01-5b7e-a419-338e45803c19
+slug: ziro-3d-silk-pla-bronze
+brand:
+  slug: ziro-3d
+name: Silk PLA Bronze
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#9ba759ff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

@@ -1,0 +1,9 @@
+{
+  "uuid": "eced517d-0f3d-4eaf-9fec-8294539710dd",
+  "id": "fiberon_esd_black",
+  "name": "Fiberon™ -ESD Black",
+  "color_hex": "#000000",
+  "traits": {
+    "contains_carbon_nano_tubes": true
+  }
+}

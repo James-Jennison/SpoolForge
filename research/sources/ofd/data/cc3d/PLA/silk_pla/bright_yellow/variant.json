@@ -1,0 +1,10 @@
+{
+  "uuid": "f1581b06-c899-43db-b9d6-034d08e4f0c1",
+  "id": "bright_yellow",
+  "name": "Bright Yellow",
+  "color_hex": "#FAD61B",
+  "traits": {
+    "silk": true,
+    "industrially_compostable": true
+  }
+}

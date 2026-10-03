@@ -1,0 +1,15 @@
+uuid: 7fbc460e-ec92-5fec-a542-66edbed9c06b
+slug: sainsmart-gt-3-high-speed-matte-pla-white
+brand:
+  slug: sainsmart
+name: GT-3 High Speed Matte PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- matte
+- industrially_compostable
+- high_speed
+properties: {}

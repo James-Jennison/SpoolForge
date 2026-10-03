@@ -1,0 +1,16 @@
+uuid: 24d8f5df-2de8-5ee3-bb47-989e03d9882b
+slug: prusament-resin-basic-grey
+brand:
+  slug: prusament-resin
+name: Basic Grey
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#9c9d9eff'
+properties:
+  density: 1.03
+  cure_wavelength: 405
+  viscosity_18c: 360
+  viscosity_25c: 207
+  viscosity_40c: 81
+  viscosity_60c: 32

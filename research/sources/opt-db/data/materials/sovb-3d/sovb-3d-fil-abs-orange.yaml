@@ -1,0 +1,19 @@
+uuid: a6e991ae-f57d-5574-99cd-15828af4b0d1
+slug: sovb-3d-fil-abs-orange
+brand:
+  slug: sovb-3d
+name: Fil ABS Orange
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#f67405ff'
+  color_ral: '2009'
+tags:
+- filtration_recommended
+properties:
+  density: 1.03
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 90
+  max_bed_temperature: 100

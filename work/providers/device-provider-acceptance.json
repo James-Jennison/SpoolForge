@@ -1,0 +1,12 @@
+{
+  "model": "motorola razr 2023",
+  "provider": "spoolmandb-community",
+  "gtin_ambiguous_candidates": 4,
+  "community_sku_candidates": 3,
+  "structured_text_candidates": 1,
+  "initial_lookup_ms": 107.791563,
+  "warm_samples": 20,
+  "warm_p95_ms": 5.547969,
+  "warm_max_ms": 5.897917,
+  "measurement": "Provider initialization, installed-sidecar hash validation and queries run in the target app process. Timing excludes Compose rendering; no predefined latency threshold."
+}

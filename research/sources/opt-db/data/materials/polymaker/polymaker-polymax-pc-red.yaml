@@ -1,0 +1,23 @@
+uuid: 2dd3fc20-7104-5021-98d3-0d7ba016aaab
+slug: polymaker-polymax-pc-red
+brand:
+  slug: polymaker
+name: PolyMax™ PC Red
+class: FFF
+type: PC
+abbreviation: PC
+primary_color:
+  color_rgba: '#da2a1eff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polymax-pc-red/856b3afbf4ae.png
+    type: unspecified
+properties:
+  density: 1.19
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 90
+  max_bed_temperature: 105
+  min_chamber_temperature: 70
+  max_chamber_temperature: 100
+  drying_temperature: 75
+  drying_time: 360

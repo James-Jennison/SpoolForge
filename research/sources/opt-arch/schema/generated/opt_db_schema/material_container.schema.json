@@ -1,0 +1,92 @@
+{
+  "$id": "/material_container",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "MaterialContainer",
+  "properties": {
+    "class": {
+      "type": "string",
+      "enum": [
+        "FFF",
+        "SLA",
+        "FFF",
+        "SLA"
+      ],
+      "x-example": "FFF",
+      "description": "FFF/SLA"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier of the product.\nIf not provided by the manufacturer, the UUID can be derived as specified in [the UUID section](/uuid)."
+    },
+    "brand": {
+      "oneOf": [
+        {
+          "$ref": "brand.schema.json"
+        },
+        {
+          "$ref": "slug_reference.schema.json"
+        },
+        {
+          "$ref": "uuid_reference.schema.json"
+        }
+      ],
+      "x-example": "Prusament"
+    },
+    "brand_specific_id": {
+      "type": "string",
+      "description": "Unique identifier of the container within the brand"
+    },
+    "name": {
+      "type": "string"
+    },
+    "volumetric_capacity": {
+      "type": "number",
+      "x-unit": "ml (cm\u00b3)",
+      "description": "Maximum amount of material the container can hold.\nThe volumetric unit has been selected so that the property would work with both SLA and FFF."
+    },
+    "empty_weight": {
+      "type": "number",
+      "x-unit": "g",
+      "description": "Weight of the empty container.\nThe aim is to be able to put the container on a scale, subtract this number and be able to estimate the amount of material inside."
+    },
+    "slug": {
+      "type": "string",
+      "description": "Identifier within the material database directory structure. Has to correspond with entity yaml the filename."
+    }
+  },
+  "required": [
+    "class",
+    "uuid",
+    "name"
+  ],
+  "x-recommended": [],
+  "unevaluatedProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "class": {
+            "const": "FFF"
+          }
+        }
+      },
+      "then": {
+        "$ref": "fff_material_container.schema.json"
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "class": {
+            "const": "SLA"
+          }
+        }
+      },
+      "then": {
+        "$ref": "sla_material_container.schema.json"
+      }
+    }
+  ]
+}

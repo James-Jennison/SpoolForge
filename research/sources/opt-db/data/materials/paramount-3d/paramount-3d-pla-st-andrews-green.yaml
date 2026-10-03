@@ -1,0 +1,13 @@
+uuid: a536f878-477a-5329-b06b-1fca227d7476
+slug: paramount-3d-pla-st-andrews-green
+brand:
+  slug: paramount-3d
+name: PLA (St Andrews Green)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#446b20ff'
+tags:
+- industrially_compostable
+properties: {}

@@ -1,0 +1,13 @@
+{
+  "uuid": "7de43c33-45b0-4e49-9fd9-5763a98cbdb6",
+  "id": "magic_red_green",
+  "name": "Magic Red-Green",
+  "color_hex": [
+    "#EC0000",
+    "#1DAF5E"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

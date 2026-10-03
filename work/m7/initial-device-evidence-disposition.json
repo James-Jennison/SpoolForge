@@ -1,0 +1,5 @@
+{
+  "evidence_id": "evidence-887634cbea22",
+  "disposition": "FIXED",
+  "reason": "The first immutable cycle correctly failed because no exact-device artifact existed. The replacement evidence cycle evidence-cycle-b1ee43b9c10f passes with a current SHA-bound motorola razr 2023 artifact."
+}

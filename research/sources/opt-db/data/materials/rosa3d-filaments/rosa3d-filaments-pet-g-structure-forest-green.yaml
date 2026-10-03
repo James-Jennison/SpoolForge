@@ -1,0 +1,11 @@
+uuid: 25fd18ea-19e8-5763-93b9-a5cc542d0866
+slug: rosa3d-filaments-pet-g-structure-forest-green
+brand:
+  slug: rosa3d-filaments
+name: PET-G Structure Forest Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#556d5aff'
+properties: {}

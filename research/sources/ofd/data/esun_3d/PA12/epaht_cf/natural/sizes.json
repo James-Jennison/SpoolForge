@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "12b24d00-71b3-4d64-aad1-791abf71168a",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/epaht-cf"
+      }
+    ]
+  }
+]

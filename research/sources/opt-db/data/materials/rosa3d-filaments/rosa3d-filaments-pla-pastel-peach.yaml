@@ -1,0 +1,13 @@
+uuid: de708322-45bb-5ecd-bc7c-603021fcd7b3
+slug: rosa3d-filaments-pla-pastel-peach
+brand:
+  slug: rosa3d-filaments
+name: PLA Pastel Peach
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f5b797ff'
+tags:
+- industrially_compostable
+properties: {}

@@ -1,0 +1,14 @@
+uuid: be5ba6d3-bccf-538f-a5e2-cb8e6437ae71
+slug: sainsmart-black-carbon-fiber-petg
+brand:
+  slug: sainsmart
+name: Black Carbon Fiber PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#1d1d1dff'
+tags:
+- contains_carbon_fiber
+- abrasive
+properties: {}

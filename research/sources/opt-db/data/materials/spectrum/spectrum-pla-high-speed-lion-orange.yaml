@@ -1,0 +1,20 @@
+uuid: 9f8e94e5-d898-5e4e-8d16-b153c9e98be9
+slug: spectrum-pla-high-speed-lion-orange
+brand:
+  slug: spectrum
+name: PLA High Speed Lion Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fd9106ff'
+tags:
+- high_speed
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-high-speed-lion-orange/spectrum-pla-high-speed-lion-orange-0-ea13a1dc.jpg
+  type: unspecified

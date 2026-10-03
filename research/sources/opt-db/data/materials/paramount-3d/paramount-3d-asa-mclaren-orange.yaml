@@ -1,0 +1,11 @@
+uuid: 9d3040e1-15ad-54dd-998f-accafb82038d
+slug: paramount-3d-asa-mclaren-orange
+brand:
+  slug: paramount-3d
+name: ASA (McLaren Orange)
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#ffb031ff'
+properties: {}

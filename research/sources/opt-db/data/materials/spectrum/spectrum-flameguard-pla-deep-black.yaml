@@ -1,0 +1,21 @@
+uuid: 55e63ebf-f24c-5701-bbde-960a3bd3c6c4
+slug: spectrum-flameguard-pla-deep-black
+brand:
+  slug: spectrum
+name: FlameGuard PLA Deep Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- self_extinguishing
+properties:
+  density: 1.26
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 40
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-flameguard-pla-deep-black/spectrum-flameguard-pla-deep-black-0-6345f07f.jpg
+  type: unspecified

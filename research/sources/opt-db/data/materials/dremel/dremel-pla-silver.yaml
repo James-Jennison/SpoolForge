@@ -1,0 +1,16 @@
+uuid: 672027d9-7fcb-56f6-8b89-c604a71e0a81
+slug: dremel-pla-silver
+brand:
+  slug: dremel
+name: PLA Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#818184ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/dremel/dremel-pla-silver/81dd39f07b20.jpg
+  type: unspecified
+properties: {}

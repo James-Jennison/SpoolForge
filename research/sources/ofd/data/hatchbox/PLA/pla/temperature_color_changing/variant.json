@@ -1,0 +1,15 @@
+{
+  "uuid": "de9cf8c6-47a6-4f5c-a5a1-85b877e07ea1",
+  "id": "temperature_color_changing",
+  "name": "Temperature Color Changing",
+  "color_hex": [
+    "#FF8400",
+    "#906482",
+    "#F2306E"
+  ],
+  "traits": {
+    "temperature_color_change": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,11 @@
+uuid: a50d8b8c-d72c-5b8a-a66d-d4e01ce987f2
+slug: tinmorry-asa-gray
+brand:
+  slug: tinmorry
+name: ASA Gray
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#b2b8b8ff'
+properties: {}

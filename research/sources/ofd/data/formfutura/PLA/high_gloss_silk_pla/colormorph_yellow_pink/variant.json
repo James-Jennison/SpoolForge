@@ -1,0 +1,16 @@
+{
+  "uuid": "b19a265e-34c5-4728-bc82-6b55ccf58e3b",
+  "id": "colormorph_yellow_pink",
+  "name": "ColorMorph Yellow & Pink",
+  "color_hex": [
+    "#FCE575",
+    "#F4A3C0"
+  ],
+  "discontinued": true,
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

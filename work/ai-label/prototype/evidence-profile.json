@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "baseline": [
+    {
+      "id": "python-label-service-tests-v7",
+      "type": "unit-tests",
+      "severity": "HIGH",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "tools/test_label_scan_server.py",
+        "tools/test_score_label_benchmark.py"
+      ]
+    },
+    {
+      "id": "android-label-prototype-v7",
+      "type": "android-test-build",
+      "severity": "HIGH",
+      "command": [
+        "heavy-gradle",
+        "testDebugUnitTest",
+        "lintDebug",
+        "assembleDebug"
+      ]
+    }
+  ],
+  "substantive": [
+    {
+      "id": "python-label-service-tests-v7",
+      "type": "unit-tests",
+      "severity": "HIGH",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "tools/test_label_scan_server.py",
+        "tools/test_score_label_benchmark.py"
+      ]
+    },
+    {
+      "id": "android-label-prototype-v7",
+      "type": "android-test-build",
+      "severity": "HIGH",
+      "command": [
+        "heavy-gradle",
+        "testDebugUnitTest",
+        "lintDebug",
+        "assembleDebug"
+      ]
+    },
+    {
+      "id": "label-benchmark-validation-v6",
+      "type": "benchmark-integrity",
+      "severity": "HIGH",
+      "command": [
+        "python3",
+        "tools/validate_label_benchmark.py"
+      ]
+    }
+  ],
+  "conditional": {}
+}

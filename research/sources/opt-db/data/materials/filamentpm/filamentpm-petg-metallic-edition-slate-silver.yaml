@@ -1,0 +1,21 @@
+uuid: 754a032d-cec1-5699-86ab-62989e5ea490
+slug: filamentpm-petg-metallic-edition-slate-silver
+brand:
+  slug: filamentpm
+name: PETG metallic edition - Slate Silver
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#3e3e3cff'
+tags:
+  - imitates_metal
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-petg-metallic-edition-slate-silver/abfa11550514.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 90

@@ -1,0 +1,9 @@
+{
+  "uuid": "7070ca39-c030-4b39-8b30-d77d5074fd62",
+  "id": "salsa_red",
+  "name": "Salsa Red",
+  "color_hex": "#E60000",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

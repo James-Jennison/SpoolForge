@@ -1,0 +1,14 @@
+{
+  "uuid": "92eff5d6-a060-4fcd-9317-6457548be109",
+  "id": "dual_color_black_purple",
+  "name": "Dual Color Black Purple",
+  "color_hex": [
+    "#000000",
+    "#8846AE"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

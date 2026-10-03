@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-gtin-android-deepseek-2",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-2cba3cb75876",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Provenance Preservation",
+  "summary": "When a field is edited locally, its source provenance is overwritten with the constant string 'Edited locally', discarding the original source details (e.g., OFD revision and origin). This conflicts with the requirement that original field sources survive local editing.",
+  "claim": "Users and auditors cannot determine the upstream source of a locally edited field, breaking provenance traceability required by the project. Subsequent edits also lose history.",
+  "evidence": {
+    "source": "MainViewModel.saveCustom: 'seed.originalValues[key] != normalized[key].orEmpty() -> \"Edited locally\"'. The original source string from seed.sources is not retained anywhere for that field. BarcodeEvidence dialog only shows current `item.sources`, so original provenance is lost.",
+    "response_sha256": "ce723611f338a8ea74c80a27e0021f13be463cfb2697892f09e34f1afe91ebf9"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "tools"
+  ],
+  "suggested_remediation": "Store original source separately (e.g., add originalSources map or prefix source with 'Edited locally (was: <original>)') when marking a field as edited; persist this in CustomRecord and expose in detail UI.",
+  "suggested_validation": "From a barcode candidate, edit a non-blank field, save, then verify the saved custom record's source for that field still contains the original upstream provenance while clearly indicating local edit (e.g., string contains 'OFD ...').",
+  "reviewer_confidence": "MEDIUM"
+}

@@ -1,0 +1,19 @@
+uuid: 3e65e8be-d909-5be3-a15d-f11875c4c789
+slug: sovb-3d-fil-abs-violet
+brand:
+  slug: sovb-3d
+name: Fil ABS Violet
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#9d00b1ff'
+  color_ral: '4008'
+tags:
+- filtration_recommended
+properties:
+  density: 1.03
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 90
+  max_bed_temperature: 100

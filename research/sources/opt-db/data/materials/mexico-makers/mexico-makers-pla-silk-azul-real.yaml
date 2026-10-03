@@ -1,0 +1,14 @@
+uuid: ccac2bbd-d1c3-5f5f-b02d-0a6706ef7cd9
+slug: mexico-makers-pla-silk-azul-real
+brand:
+  slug: mexico-makers
+name: PLA Silk - Azul Real
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#295ad9ff'
+tags:
+  - silk
+  - industrially_compostable
+properties: {}

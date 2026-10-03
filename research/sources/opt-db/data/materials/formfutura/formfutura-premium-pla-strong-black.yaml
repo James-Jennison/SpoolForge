@@ -1,0 +1,23 @@
+uuid: 9a79d169-232d-51ed-a980-e0fab1ade36b
+slug: formfutura-premium-pla-strong-black
+brand:
+  slug: formfutura
+name: Premium PLA Strong Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-premium-pla-strong-black/20c331b1ca0b.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50
+  drying_time: 360

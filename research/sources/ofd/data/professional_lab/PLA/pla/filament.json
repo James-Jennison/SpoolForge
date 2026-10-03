@@ -1,0 +1,8 @@
+{
+  "uuid": "080a992f-19b2-4eeb-8339-81a4e7364018",
+  "id": "pla",
+  "name": "PLA",
+  "diameter_tolerance": 0.03,
+  "density": 1.25,
+  "max_dry_temperature": 50
+}

@@ -1,0 +1,22 @@
+uuid: e27b4578-fc36-5dd5-a95d-041ce0dcf181
+slug: filamentpm-abs-glittering-sahara
+brand:
+  slug: filamentpm
+name: ABS - Glittering Sahara
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#af804fff'
+tags:
+  - glitter
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-abs-glittering-sahara/5c50f49fd7e3.png
+    type: unspecified
+properties:
+  density: 1.04
+  min_print_temperature: 220
+  max_print_temperature: 250
+  min_bed_temperature: 100
+  max_bed_temperature: 110

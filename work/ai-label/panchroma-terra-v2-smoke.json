@@ -1,0 +1,110 @@
+{
+  "model": "gpt-5.6-terra",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 2499,
+    "input_tokens_details": {
+      "cache_write_tokens": 2496,
+      "cached_tokens": 0
+    },
+    "output_tokens": 495,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 2994
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "Panchroma",
+      "confidence": 0.99,
+      "evidence": "Printed prominently as \u201cPanchroma\u2122 PLA.\u201d",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": null,
+      "confidence": 1.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "product": {
+      "value": "Panchroma PLA Gradient Starlight",
+      "confidence": 0.93,
+      "evidence": "Bottom label reads \u201cPanchroma\u2122 PLA Gradient Starl...\u201d and upper panel reads \u201cSTARLIGHT.\u201d",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PLA",
+      "confidence": 0.99,
+      "evidence": "Printed as \u201cPanchroma\u2122 PLA.\u201d",
+      "basis": "printed"
+    },
+    "color": {
+      "value": "Starlight Purple-Red",
+      "confidence": 0.99,
+      "evidence": "Upper package panel reads \u201cSTARLIGHT PURPLE-RED.\u201d",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": 1.75,
+      "confidence": 0.99,
+      "evidence": "Product line includes \u201c(1.75mm, 1kg).\u201d",
+      "basis": "printed"
+    },
+    "net_weight_g": {
+      "value": 1000,
+      "confidence": 0.99,
+      "evidence": "Product line includes \u201c(1.75mm, 1kg).\u201d",
+      "basis": "printed"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 1.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 1.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 1.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 1.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": "6938936717461",
+      "confidence": 0.99,
+      "evidence": "Printed label states \u201cEAN: 6938936717461.\u201d",
+      "basis": "barcode"
+    },
+    "sku": {
+      "value": "CA09019",
+      "confidence": 0.99,
+      "evidence": "Printed label states \u201cSKU: CA09019.\u201d",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 1.0,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [
+      {
+        "value": "X004QSH4ZH",
+        "kind": "marketplace identifier",
+        "evidence": "Printed beneath the linear barcode."
+      }
+    ],
+    "needs_user_review": []
+  }
+}

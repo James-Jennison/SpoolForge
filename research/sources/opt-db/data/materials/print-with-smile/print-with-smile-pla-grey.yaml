@@ -1,0 +1,13 @@
+uuid: eec746c8-1181-50b8-9ac2-e05bedba8686
+slug: print-with-smile-pla-grey
+brand:
+  slug: print-with-smile
+name: PLA Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5a696cff'
+tags:
+- industrially_compostable
+properties: {}

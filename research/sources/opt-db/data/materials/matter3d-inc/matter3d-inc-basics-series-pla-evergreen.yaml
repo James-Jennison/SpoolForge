@@ -1,0 +1,13 @@
+uuid: b0bb789a-6038-5d7d-ad67-9b979fff38df
+slug: matter3d-inc-basics-series-pla-evergreen
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA Evergreen
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0d5c54ff'
+tags:
+- industrially_compostable
+properties: {}

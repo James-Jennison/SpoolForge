@@ -1,0 +1,9 @@
+{
+  "uuid": "418e022d-8bb4-415b-80ab-58cb1d69bbae",
+  "id": "ruby_red",
+  "name": "Ruby Red",
+  "color_hex": "#F14147",
+  "traits": {
+    "silk": true
+  }
+}

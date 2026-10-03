@@ -1,0 +1,14 @@
+{
+  "uuid": "059efb20-41ad-4732-b4c8-7f75df82892b",
+  "id": "tropic",
+  "name": "Tropic",
+  "color_hex": [
+    "#26A648",
+    "#69EE00",
+    "#00B4BC"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

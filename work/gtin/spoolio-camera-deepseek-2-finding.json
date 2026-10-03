@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-camera-deepseek-2",
+  "change_id": "spoolio-camera-20260907",
+  "cycle_id": "review-cycle-059719ed2779",
+  "reviewer": "deepseek",
+  "severity": "LOW",
+  "category": "Concurrency / camera lifecycle",
+  "summary": "The `disposed` flag is a plain Boolean that is written on the main thread in `onDispose` and read on the background analyzer thread without synchronization, causing a data race.",
+  "claim": "The analyzer may continue processing camera frames briefly after disposal, leading to wasted CPU and the scheduling of a callback that is only suppressed because the callback itself checks `disposed` on the main thread. The data race is undefined behavior and could lead to rare crashes or delayed callbacks.",
+  "evidence": {
+    "source": "In BarcodeCamera.kt inside `DisposableEffect`, `var disposed = false` is declared. The analyzer thread reads `if (!disposed && !delivered)`, while `onDispose` later sets `disposed = true`. No volatile or atomic synchronization is used.",
+    "response_sha256": "ca94ac50691a81d3dcbc7b3d3ff17a99786bd54f0e96ccc51503a641ad848ad0"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Change `disposed` to an `AtomicBoolean` or use synchronized/volatile access to ensure cross-thread visibility.",
+  "suggested_validation": "Stress test opening and immediately dismissing the scanner repeatedly while camera frames are being processed; verify that no callbacks occur after dismissal and no exceptions are thrown.",
+  "reviewer_confidence": "HIGH"
+}

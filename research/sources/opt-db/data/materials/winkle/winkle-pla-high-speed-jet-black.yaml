@@ -1,0 +1,15 @@
+uuid: 389b91bc-aeb6-5913-9194-dc6db902408d
+slug: winkle-pla-high-speed-jet-black
+brand:
+  slug: winkle
+name: PLA High Speed Jet Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#292824ff'
+tags:
+- high_speed
+- industrially_compostable
+properties:
+  density: 1.24

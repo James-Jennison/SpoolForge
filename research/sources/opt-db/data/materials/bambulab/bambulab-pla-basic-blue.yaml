@@ -1,0 +1,16 @@
+uuid: 9a35223f-b265-58ae-a26d-e21254483276
+slug: bambulab-pla-basic-blue
+brand:
+  slug: bambulab
+name: PLA Basic Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0a2989ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/bambulab/bambulab-pla-basic-blue/c449c5700238.png
+  type: unspecified
+properties: {}

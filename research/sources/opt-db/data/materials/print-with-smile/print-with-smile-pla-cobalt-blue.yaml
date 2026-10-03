@@ -1,0 +1,13 @@
+uuid: 54f39f48-a007-52b1-86de-357100951ad6
+slug: print-with-smile-pla-cobalt-blue
+brand:
+  slug: print-with-smile
+name: PLA Cobalt BLUE
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0353baff'
+tags:
+- industrially_compostable
+properties: {}

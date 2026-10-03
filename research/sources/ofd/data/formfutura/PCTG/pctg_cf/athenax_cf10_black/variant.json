@@ -1,0 +1,11 @@
+{
+  "uuid": "c111828a-9340-425c-9635-43286efe124a",
+  "id": "athenax_cf10_black",
+  "name": "Black",
+  "color_hex": "#000000",
+  "discontinued": false,
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

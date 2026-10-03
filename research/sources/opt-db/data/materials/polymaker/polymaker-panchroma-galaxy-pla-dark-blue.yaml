@@ -1,0 +1,23 @@
+uuid: 7578e39f-4196-51f2-ab33-55d55830ef83
+slug: polymaker-panchroma-galaxy-pla-dark-blue
+brand:
+  slug: polymaker
+name: Panchroma™ Galaxy PLA Dark Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#081b36ff'
+tags:
+  - glitter
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-galaxy-pla-dark-blue/3fcf4392d96f.png
+    type: unspecified
+properties:
+  density: 1.17
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

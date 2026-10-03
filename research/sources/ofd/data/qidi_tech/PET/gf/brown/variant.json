@@ -1,0 +1,10 @@
+{
+  "uuid": "0139f5f3-7bba-4aec-adc4-8518265bc02c",
+  "id": "brown",
+  "name": "Brown",
+  "color_hex": "#946037",
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

@@ -1,0 +1,24 @@
+uuid: 3af94494-38d5-53de-a295-27315dc008ef
+slug: polymaker-panchroma-matte-pla-army-beige
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Army Beige
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#dbbaa5ff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-army-beige/4a18e7447dbb.png
+    type: unspecified
+transmission_distance: 0.7
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

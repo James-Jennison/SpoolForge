@@ -1,0 +1,13 @@
+uuid: fb2f2693-1df6-5ff9-a83e-34e80bbcacde
+slug: matter3d-inc-basics-series-pla-sandstone
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA Sandstone
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#d1b48dff'
+tags:
+- industrially_compostable
+properties: {}

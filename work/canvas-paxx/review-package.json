@@ -1,0 +1,66 @@
+{
+  "phase": "INITIAL_REVIEW",
+  "objective": "Review the Filamajig one-tag ELEGOO CANVAS plus Snapmaker U1/PAXX compatibility implementation for architecture, upstream contract accuracy, Android NFC safety, and false compatibility claims.",
+  "owner_requirements": [
+    "Use one NTAG215 encoded only in ELEGOO CANVAS format",
+    "CANVAS reads natively; U1 reads through PAXX/OpenRFID's Elegoo processor",
+    "Stock U1 firmware is unsupported",
+    "Introduce a reusable printer compatibility resolver without rewriting the NFC system",
+    "Detect NTAG215, validate capacity/locks/protection, preserve unknown content, and verify a fresh readback",
+    "Preserve existing direct format workflows and PAXX/OpenSpool behavior",
+    "Do not imply official Snapmaker or ELEGOO endorsement"
+  ],
+  "implementation_summary": [
+    "CompatibilityResolver models printer targets, NTAG215, codec selection, native versus alternate-firmware paths, read/write capability, and PAXX/OpenRFID requirements.",
+    "Canvas plus U1/PAXX resolves to ElegooCanvasTagCodec; Canvas alone uses the same codec; U1/PAXX alone preserves PaxxU1ExtendedTagCodec; stock U1 is rejected.",
+    "ElegooCanvasTagCodec emits one 64-byte raw CANVAS block with no OpenSpool record. It maps fixed ELEGOO manufacturer, material/subtype, RGB, nozzle range, diameter, and weight, and rejects non-ELEGOO brands.",
+    "Android GET_VERSION accepts only NTAG215. Dynamic lock bit and block-lock bit for pages 16-31 plus AUTH0 are checked before writing. Only pages 16-31 are written.",
+    "Existing nonzero target-page content must decode as CANVAS and then requires UID/content-bound overwrite consent; unrecognized target data is rejected. Other user pages are preserved.",
+    "Fresh exact 64-byte readback drives WriteStateMachine verification and the result is decoded by the CANVAS decoder. The UI shows detected tag type and upstream setup guidance."
+  ],
+  "upstream_verification": {
+    "paxx_develop": "87df4f1356ffebb7e22e18c62441333c1c440eb4",
+    "paxx_openrfid_pin": "1a6f605d0334157b532afdd14f89fc182d9000f6",
+    "openrfid_head_inspected": "a13bc9e181374e182f61db4e69abf9fa1786cc29",
+    "behavior": "The pinned ElegooTagProcessor reads bytes 0x40..0x68, requires EEEEEEEE, maps material/subtype, and extracts RGBA, nozzle range, diameter, and weight. PAXX disables [elegoo_tag_processor] by default and documents /oem/printer_data/config/extended/openrfid_user.cfg plus unreliable factory tag placement. The pinned reader has explicit NTAG215 135-page support."
+  },
+  "objective_evidence": {
+    "build_host": "gthost-build01",
+    "source_snapshot_sha256": "d44431b9e4aa4934a1c4d12859bbb8807388ad8b633a215dd436fb284861f66e",
+    "source_commit": "9eb7ca5fb6eca944155eb9cb6e4ef4918cccb01a",
+    "jdk": "Temurin 17.0.20.1",
+    "android_sdk": "/opt/android-sdk",
+    "core_tests": {"tests": 92, "failures": 0, "errors": 0},
+    "app_tests": {"tests": 74, "failures": 0, "errors": 0},
+    "lint_debug": "PASS",
+    "assemble_debug": "PASS",
+    "apk_sha256": "86c7dfea754a5eaec48da6e5fb542d7bed9a88c2ee2d07c578fef67875646fa0"
+  },
+  "review_files": [
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/CompatibilityResolver.kt",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/ElegooCanvasCodec.kt",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/TagCodec.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt",
+    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/CompatibilityResolverTest.kt",
+    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/VendorTagCodecsTest.kt",
+    "docs/PAXX_COMPATIBILITY.md",
+    "research/evidence/canvas-paxx-upstream-verification.json"
+  ],
+  "known_limits": [
+    "No physical NTAG215 was written in this task and no actual CANVAS or U1/PAXX reader acceptance was run.",
+    "PAXX documents unreliable factory Elegoo tag placement; this implementation cannot correct reader antenna geometry.",
+    "CANVAS cannot represent arbitrary brand, bed temperatures, color names, identifiers, additional colors, or transmission distance.",
+    "The working tree contained pre-existing unrelated M8 and open-ecosystem changes; they were preserved and included in the remote build snapshot."
+  ],
+  "review_questions": [
+    "Is the resolver boundary reusable and correctly separated from codecs and Android transport?",
+    "Does the single raw CANVAS block actually match the pinned OpenRFID processor without accidental OpenSpool coupling?",
+    "Can Android misidentify, partially overwrite, or falsely verify a tag under lock, password, RF-loss, restart, or pre-existing-content conditions?",
+    "Are UI and documentation claims appropriately bounded given no physical CANVAS/U1 acceptance?",
+    "Are there regressions to direct PAXX/OpenSpool or other raw NTAG workflows?",
+    "Return normalized findings with severity, evidence, consequence, required correction, acceptance test, and confidence."
+  ],
+  "sanitization": "No credentials, tokens, keys, private network addresses, NFC UIDs, user data, device serials, photos, or account data are included."
+}

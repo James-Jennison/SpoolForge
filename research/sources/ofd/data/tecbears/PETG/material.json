@@ -1,0 +1,14 @@
+{
+  "uuid": "61a4fab7-24a6-4e23-acc1-0b0d0f8bb501",
+  "material": "PETG",
+  "default_max_dry_temperature": 50,
+  "default_slicer_settings": {
+    "orcaslicer": {
+      "bed_temp": 70,
+      "first_layer_bed_temp": 70,
+      "first_layer_nozzle_temp": 250,
+      "nozzle_temp": 250,
+      "profile_name": "PETG"
+    }
+  }
+}

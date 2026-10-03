@@ -1,0 +1,41 @@
+[
+  {
+    "uuid": "7b71c17b-c8e6-4250-ad3a-7c96d77fb4d3",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "6975337031390",
+    "purchase_links": [
+      {
+        "store_id": "bblstore",
+        "url": "https://us.store.bambulab.com/collections/pla/products/pla-basic-filament?variant=41078274949256"
+      }
+    ]
+  },
+  {
+    "uuid": "d718a0ce-ee75-413e-ac71-b533b3c5910a",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "ean": "6975337031390",
+    "article_number": "10102",
+    "purchase_links": [
+      {
+        "store_id": "bblstore",
+        "url": "https://us.store.bambulab.com/collections/pla/products/pla-basic-filament?variant=40475106803848"
+      }
+    ]
+  },
+  {
+    "uuid": "d8b0bd06-9cb1-4029-a71a-40381fb0d9fd",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "gtin": "921032457960",
+    "purchase_links": [
+      {
+        "store_id": "3deksperten",
+        "url": "https://3deksperten.dk/products/bambu-lab-pla-basic-silver-1-75mm-1kg-refill"
+      }
+    ]
+  }
+]

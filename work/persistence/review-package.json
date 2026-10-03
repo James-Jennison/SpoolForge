@@ -1,0 +1,47 @@
+{
+  "phase": "INITIAL_REVIEW",
+  "objective": "Independently review Filamajig NFC M1 canonical persistence for migration safety, schema integrity, repository transaction boundaries, provenance retention, shared-spool semantics, and rollback failure modes.",
+  "owner_requirements": [
+    "Preserve all existing saved records, edits, barcode evidence, source attribution, recents, and current app behavior",
+    "Persist reusable filament profiles separately from owned physical spools",
+    "Retain conflicting observations and prevent provider refresh from overwriting the chosen current value",
+    "Allow one profile to serve several physical spools and zero, one, or two tag bindings per spool",
+    "Persist transmission-distance current evidence and measurement history",
+    "Keep the migration additive and provide a data-preserving rollback path",
+    "Do not change NFC serialization, NFC I/O, or printer behavior in this milestone"
+  ],
+  "change_summary": [
+    "Bumped UserDatabase from v4 to v5 and added profile, observation, override, identifier, physical spool, tag binding, and TD measurement entities with foreign keys and indexes",
+    "Added deterministic v4 to v5 backfill while retaining custom_records and recents unchanged",
+    "Added LocalFilamentRepository transactions so new local saves and deletes update legacy and canonical persistence together",
+    "Added shared-profile-safe deletion and a v5 to v4 rollback migration that drops only canonical tables",
+    "Added Room migration and behavior tests for lossless fields/sources, conflicting observations, pinned choices, shared profiles, two tags, dual writes, deletion, and rollback"
+  ],
+  "objective_evidence": {
+    "protected_validation": "heavy-gradle :core:test :app:testDebugUnitTest :app:lintDebug :app:assembleDebug -> BUILD SUCCESSFUL",
+    "storage_suite": "StorageAcceptanceTest: 24 tests, 0 failures, 0 errors",
+    "regressions": "pivot foundation, GTIN index, and package identity verification all PASS",
+    "apk_sha256": "ca73900b2a48fce47765e65c898b21570488c8b39b808a33009c2dd540f3d7d0"
+  },
+  "review_files": [
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/data/Databases.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt",
+    "app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt",
+    "app/schemas/net.jamesjennison.filamajignfc.data.UserDatabase/5.json",
+    "docs/ARCHITECTURE.md",
+    "docs/ROADMAP.md"
+  ],
+  "limitations": [
+    "The built APK has not yet been installed on the 2023 Razr because that phone is not currently listed by ADB",
+    "No NFC tag write or U1 operation is required or performed because this change does not touch those paths",
+    "The compatibility UI still reads custom_records during the additive transition; canonical inventory UI is a later milestone"
+  ],
+  "review_questions": [
+    "Can any v4 row lose or misclassify a populated value during backfill?",
+    "Can any save, delete, refresh, shared profile, or tag-binding operation violate identity or user-choice invariants?",
+    "Does the rollback preserve every pre-v5 table and value, and are schema/migration definitions exactly aligned with Room?",
+    "What concrete defect must be corrected before real-device migration acceptance?"
+  ],
+  "sanitization": "No credentials, environment values, private device data, tag UIDs, or user database contents are included."
+}

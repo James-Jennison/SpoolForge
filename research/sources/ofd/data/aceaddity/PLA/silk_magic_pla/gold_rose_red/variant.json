@@ -1,0 +1,13 @@
+{
+  "uuid": "c1dad8a3-542e-4594-bd0a-53186490f222",
+  "id": "gold_rose_red",
+  "name": "Gold Rose Red",
+  "color_hex": [
+    "#D4AF37",
+    "#E8537A"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

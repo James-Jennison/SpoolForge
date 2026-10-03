@@ -1,0 +1,12 @@
+{
+  "uuid": "4311603f-2cbc-4ca6-8df1-2f2668e5c5dd",
+  "id": "black",
+  "name": "Black",
+  "color_hex": "#000000",
+  "discontinued": false,
+  "traits": {
+    "self_extinguishing": true,
+    "high_temperature": true,
+    "contains_ceramic": true
+  }
+}

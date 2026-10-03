@@ -1,0 +1,15 @@
+{
+  "uuid": "b0f1b097-e7d5-4ec3-b7d7-02ecb9b8c0d7",
+  "id": "rainbow_candy",
+  "name": "Rainbow Candy",
+  "color_hex": [
+    "#62E480",
+    "#485CC7",
+    "#D93382",
+    "#E2FF4D"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

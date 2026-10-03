@@ -1,0 +1,11 @@
+uuid: edb4c2be-f91d-5416-a3e7-b56d51e3cda9
+slug: paramount-3d-petg-white
+brand:
+  slug: paramount-3d
+name: PETG (White)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ffffffff'
+properties: {}

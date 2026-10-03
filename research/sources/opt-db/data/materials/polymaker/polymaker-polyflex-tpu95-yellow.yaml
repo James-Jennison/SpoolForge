@@ -1,0 +1,21 @@
+uuid: 92edbbd6-e025-5fee-a6f9-4b071ebbbbff
+slug: polymaker-polyflex-tpu95-yellow
+brand:
+  slug: polymaker
+name: PolyFlex™ TPU95 Yellow
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#eda900ff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polyflex-tpu95-yellow/b6e446538dcb.png
+    type: unspecified
+properties:
+  hardness_shore_a: 95.0
+  min_print_temperature: 210
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 70
+  drying_time: 480

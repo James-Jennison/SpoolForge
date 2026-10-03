@@ -1,0 +1,13 @@
+{
+  "uuid": "cab5e493-83f9-42ca-82e1-fc4323aad605",
+  "id": "white_wood",
+  "name": "White Wood",
+  "color_hex": [
+    "#E6DDDB",
+    "#A6662E"
+  ],
+  "traits": {
+    "industrially_compostable": true,
+    "contains_wood": true
+  }
+}

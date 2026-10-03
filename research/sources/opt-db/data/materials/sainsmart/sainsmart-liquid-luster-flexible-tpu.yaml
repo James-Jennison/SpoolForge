@@ -1,0 +1,12 @@
+uuid: b438a372-72ab-554c-a7f9-8d9fc75a6da9
+slug: sainsmart-liquid-luster-flexible-tpu
+brand:
+  slug: sainsmart
+name: Liquid Luster, Flexible TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#6a6c6eff'
+properties:
+  hardness_shore_a: 95

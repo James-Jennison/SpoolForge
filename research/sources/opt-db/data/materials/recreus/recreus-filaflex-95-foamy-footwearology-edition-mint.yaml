@@ -1,0 +1,12 @@
+uuid: 4fa5fe96-be84-587c-b5e1-a795aea1b616
+slug: recreus-filaflex-95-foamy-footwearology-edition-mint
+brand:
+  slug: recreus
+name: Filaflex 95 Foamy Footwearology edition Mint
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#c5d5c1ff'
+properties:
+  hardness_shore_a: 95

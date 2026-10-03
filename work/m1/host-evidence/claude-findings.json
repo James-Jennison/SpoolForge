@@ -1,0 +1,77 @@
+{
+  "phase": "INITIAL_REVIEW",
+  "findings": [
+    {
+      "severity": "HIGH",
+      "area": "Custom filament records / data model",
+      "finding": "Custom filament records (both freshly authored and those seeded from a decoded NFC tag) can never store nozzle or bed temperatures, directly contradicting the requirement to 'preserve temperatures ... for edited-catalog/custom records.'",
+      "evidence": "CustomRecord entity (data/Databases.kt) has columns only for brand/material/product/colorName/colorHex/diameterMm/massG/updatedAt \u2014 no nozzle/bed columns. CustomDialog's editable field list (MainActivity.kt) is exactly `listOf(\"Brand\" to brand,\"Material\" to material,\"Product\" to product,\"Color name\" to color,\"Color hex\" to hex,\"Diameter mm\" to diameter,\"Mass g\" to mass)` \u2014 no temperature inputs exist. MainViewModel.saveCustom() constructs its validation-only FilamentRecord with nozzleMinC/nozzleMaxC/bedMinC/bedMaxC hardcoded to `null`. MainViewModel.decodedSeed() extracts brand/type/subtype/color_hex/diameter/weight from a decoded tag but never reads min_temp/max_temp/bed_min_temp/bed_max_temp, and CustomSeed has no temperature fields to carry them. CustomRecord.asCatalogEntry() (MainViewModel.kt) hardcodes nozzleMinC/nozzleMaxC/bedMinC/bedMaxC to null, so CatalogEntry.toRecord() (MainViewModel.kt) then omits them (`nozzleMinC?.let{...}`) from any subsequent OpenSpool write.",
+      "consequence": "Any user-created or NFC-imported custom filament profile permanently loses its print-temperature data, and any tag written from that record will omit nozzle/bed temperatures in both Canonical and PAXX profiles \u2014 defeating the app's core purpose of carrying filament print-temperature data on NFC tags.",
+      "required_correction": "Add nozzle/bed temperature columns to CustomRecord (with a Room migration), add corresponding input fields to CustomDialog, populate them in decodedSeed()/CustomSeed, and thread them through saveCustom()/asCatalogEntry()/toRecord().",
+      "acceptance_test": "Create a custom record with explicit nozzle 230\u2013260 \u00b0C / bed 90\u2013110 \u00b0C, kill and relaunch the process, confirm the values persist, then arm and encode it in both Canonical and PAXX profiles and confirm min_temp/max_temp/bed_min_temp/bed_max_temp appear in the resulting payload where the profile supports them.",
+      "confidence": "HIGH \u2014 derived directly from the full schema, UI, and mapping code with no external dependency."
+    },
+    {
+      "severity": "HIGH",
+      "area": "Catalog metadata editing / per-field provenance",
+      "finding": "There is no way to edit an existing catalog entry's metadata while retaining its identity and per-field provenance; the only editable path (CustomDialog) always creates a brand-new, provenance-flattened record, and the persisted schema has no per-field provenance column at all despite `FieldValue<T>`/`Provenance.CATALOG_EDITED` being modeled in core.",
+      "evidence": "Detail composable (MainActivity.kt) only displays catalog fields read-only (Info(...) calls); the sole editable UI, CustomDialog, is reached only via the blank 'Custom filament' FAB or via decodedSeed(), and MainViewModel.saveCustom() always assigns `UUID.randomUUID()` as packageId and `Provenance.CUSTOM`. `Provenance.CATALOG_EDITED` (core/Filament.kt) is defined but never referenced anywhere in the app source. CustomRecord (data/Databases.kt) stores plain String/Int fields, not `FieldValue<T>`, so no per-field source is persisted even for the records that do exist.",
+      "consequence": "A user cannot correct one field of a specific OFD package (e.g. a wrong bed temperature) while keeping the rest linked to the original catalog record and its provenance; every edit becomes an orphaned duplicate with no per-field origin, and this cannot be verified to survive catalog replacement since the feature doesn't exist to test.",
+      "required_correction": "Implement an actual catalog-entry edit flow that writes a `CATALOG_EDITED` record keyed to the original packageId, persisting a source tag per field (or per-record 'edited' status) that survives catalog reinstall/replacement.",
+      "acceptance_test": "Edit one field of a catalog entry, kill the process, force a catalog replacement (digest/count mismatch path in ensureCatalog()), relaunch, and confirm the edited field is retained with 'edited' provenance while untouched fields still show 'OFD <revision>'.",
+      "confidence": "HIGH."
+    },
+    {
+      "severity": "HIGH",
+      "area": "NFC write-state machine / crash safety",
+      "finding": "A transient NFC read failure (e.g. tag lifted early) occurring during read-only reconciliation from WRITE_OUTCOME_UNKNOWN throws an uncaught exception instead of degrading safely, because the catch-block's fallback call violates the callee's own precondition.",
+      "evidence": "NfcCoordinator.handle()'s catch block (NfcCoordinator.kt): `if(phase==WRITING||phase==VERIFYING) writeInterrupted(...) else if(phase!=DRAFT) machine.rejectBeforeWrite(...)`. WriteStateMachine.rejectBeforeWrite() (WriteStateMachine.kt) declares `require(state.phase !in setOf(WRITING,VERIFYING,WRITE_OUTCOME_UNKNOWN))`. When `phase==WRITE_OUTCOME_UNKNOWN` (the state entered after process death or an interrupted write, per restoreUnknown()/writeInterrupted()), the reconciliation read happens inside the same try block; any exception there (e.g. from `ndef.connect()`/`ndef.ndefMessage`) is neither WRITING nor VERIFYING, so it falls to the `else if` branch and calls `rejectBeforeWrite`, whose own `require` then throws a new, unhandled IllegalArgumentException from inside the catch block, propagating uncaught out of the `io` executor's Runnable.",
+      "consequence": "In exactly the highest-stakes state \u2014 an unresolved prior write awaiting reconciliation \u2014 an ordinary transient tag-lost error crashes the app instead of leaving the safe WRITE_OUTCOME_UNKNOWN state intact for a clean re-tap, undermining the stated 're-tap read-only reconciliation' and 'no automatic retry' safety design.",
+      "required_correction": "Exclude WRITE_OUTCOME_UNKNOWN (and ideally VERIFYING) from the `else if` branch's call to `rejectBeforeWrite`; on read failure while already WRITE_OUTCOME_UNKNOWN, leave the phase unchanged and only update the detail message.",
+      "acceptance_test": "Simulate/inject an I/O exception during the reconciliation read while `machine.state.phase==WRITE_OUTCOME_UNKNOWN` (unit test on WriteStateMachine/NfcCoordinator or instrumented test forcing TagLostException) and assert no exception escapes and phase remains WRITE_OUTCOME_UNKNOWN.",
+      "confidence": "HIGH for the code-level precondition conflict, traceable exactly in the two supplied files; the real-world trigger (tag lost mid-reconciliation) is plausible but not yet physically exercised, which the package itself discloses ('No physical tag test')."
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "NFC write-state machine / UI affordance",
+      "finding": "The visible 'Cancel' control is a silent no-op once the machine is in WRITE_OUTCOME_UNKNOWN, with no way to voluntarily leave that state short of re-tapping the tag.",
+      "evidence": "WriteStateMachine.cancel() (WriteStateMachine.kt): `if(phase==WRITING||VERIFYING||WRITE_OUTCOME_UNKNOWN){ if(phase!=WRITE_OUTCOME_UNKNOWN) writeInterrupted(...) } else {...=CANCELLED...}` \u2014 when phase is already WRITE_OUTCOME_UNKNOWN, neither branch fires, so state is unchanged. NfcPanel (MainActivity.kt) renders `TextButton(onClick=nfc::cancel){Text(\"Cancel\")}` whenever `phase != VERIFIED`, which includes WRITE_OUTCOME_UNKNOWN.",
+      "consequence": "A user stuck in WRITE_OUTCOME_UNKNOWN who taps the visible Cancel button gets no feedback and no state change, which is misleading and offers no self-service recovery besides the physical tag re-tap.",
+      "required_correction": "Hide/relabel the Cancel button while WRITE_OUTCOME_UNKNOWN (e.g. show only re-tap guidance), or give it a real, clearly-labeled effect (e.g. explicitly abandon the journaled write and return to DRAFT with an explicit warning that the tag's true state is still unverified).",
+      "acceptance_test": "From WRITE_OUTCOME_UNKNOWN, tap Cancel and confirm either the control is absent or the state/detail visibly changes; currently neither occurs.",
+      "confidence": "HIGH."
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "Recents / local-scope completion",
+      "finding": "Recents are written to the database but never displayed or otherwise surfaced, leaving the named requirement '...recents usable in UI' unmet at the source level, independent of the pending physical-device gate.",
+      "evidence": "MainViewModel.select() (MainViewModel.kt) calls `store.user.user().recent(Recent(...))` on every selection, but `UserDao.recents()` (data/Databases.kt) is never invoked or collected anywhere in MainViewModel.kt or MainActivity.kt, and there is no 'Recent' UI section/tab in the Compose tree.",
+      "consequence": "A core-named M1 acceptance item is entirely absent from the UI, not merely awaiting physical validation.",
+      "required_correction": "Add a Recents UI surface backed by `UserDao.recents()`.",
+      "acceptance_test": "Select several catalog/custom entries, open the Recents UI, and confirm they appear ordered by recency.",
+      "confidence": "HIGH."
+    },
+    {
+      "severity": "LOW",
+      "area": "Dead code / catalog installation architecture",
+      "finding": "`CatalogGenerationStore` (generation/pointer-based atomic catalog installer) has no call sites; the app's only actual catalog-load path (`DataStore.ensureCatalog()`) uses a different, simpler digest-check-plus-Room-transaction mechanism.",
+      "evidence": "core/CatalogGenerationStore.kt defines `install()`/`active()` with atomic file moves and a pointer file; data/Databases.kt's `DataStore.ensureCatalog()` never references `CatalogGenerationStore`, instead reading `ofd-catalog.tsv.gzip` directly from assets and replacing rows inside a Room `withTransaction`.",
+      "consequence": "No functional defect today (the simpler mechanism does satisfy atomic replacement for the bundled-asset case), but the unused class risks being mistaken for an implemented capability (e.g. future downloaded-catalog replacement) when it is not wired in.",
+      "required_correction": "Either integrate `CatalogGenerationStore` for its intended purpose or remove it to avoid ambiguity about which replacement mechanism is authoritative.",
+      "acceptance_test": "Grep/build-time check confirming zero non-test references, or an end-to-end test if it is retained and wired in.",
+      "confidence": "HIGH (presence/absence of call sites is directly verifiable in the fully supplied source)."
+    },
+    {
+      "severity": "LOW",
+      "area": "Resource lifecycle",
+      "finding": "NfcCoordinator's single-thread executor is never shut down; `MainViewModel` has no `onCleared()` override to release it.",
+      "evidence": "NfcCoordinator (NfcCoordinator.kt) creates `io = Executors.newSingleThreadExecutor()` with no exposed shutdown method; MainViewModel.kt defines no `onCleared()` override.",
+      "consequence": "Minor background-thread leak per ViewModel instance; low real-world impact given the single-Activity M1 scope, but poor hygiene.",
+      "required_correction": "Add `NfcCoordinator.shutdown()` (calling `io.shutdown()`) invoked from `MainViewModel.onCleared()`.",
+      "acceptance_test": "Instrumented test confirming background thread count returns to baseline after the ViewModel is cleared.",
+      "confidence": "MEDIUM \u2014 leak mechanics are standard, but real-world severity in this single-Activity app is minor."
+    }
+  ],
+  "note_on_scope": "This review covers only source-level completeness and internal logical consistency against the stated requirements, per the objective's explicit disclaimer that physical NTAG215/PAXX/independent-reader and on-device p95 acceptance remain outstanding and unproven by source alone; no readiness or release claim is made or implied above.",
+  "disposition": "FINDINGS RETURNED"
+}

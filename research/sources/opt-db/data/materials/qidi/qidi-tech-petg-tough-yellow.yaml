@@ -1,0 +1,14 @@
+uuid: 85e5f0b2-64e2-50ec-9ac5-e59581f14977
+slug: qidi-tech-petg-tough-yellow
+brand:
+  slug: qidi
+name: PETG-Tough Yellow
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#fce300ff'
+properties: {}
+photos:
+- url: https://files.openprinttag.org/qidi/qidi-tech-petg-tough-yellow/qidi-tech-petg-tough-yellow-0-b872947a.jpg
+  type: unspecified

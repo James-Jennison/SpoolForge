@@ -1,0 +1,35 @@
+[
+  {
+    "uuid": "9e437ce7-5d84-485e-a735-57a0a9d358b7",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-pla-azure-blue-1kg/"
+      }
+    ]
+  },
+  {
+    "uuid": "496a2005-10e7-4d07-bacb-c3699a8bbeb8",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-pla-azure-blue-1kg-refill/"
+      }
+    ]
+  },
+  {
+    "uuid": "e584fc37-9dfc-4dc0-b8f7-9ae12da9cf27",
+    "filament_weight": 2000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-pla-azure-blue-2kg/"
+      }
+    ]
+  }
+]

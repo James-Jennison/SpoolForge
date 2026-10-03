@@ -1,0 +1,14 @@
+uuid: baec98cb-270f-5d6e-b105-93bb353f6c3a
+slug: sainsmart-green-flexible-tpu
+brand:
+  slug: sainsmart
+name: Green, Flexible TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#4dff64ff'
+tags:
+- translucent
+properties:
+  hardness_shore_a: 95

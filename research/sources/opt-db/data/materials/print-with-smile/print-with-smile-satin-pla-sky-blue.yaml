@@ -1,0 +1,13 @@
+uuid: 6b83297c-901a-5dc6-b8dc-d1b4bc871386
+slug: print-with-smile-satin-pla-sky-blue
+brand:
+  slug: print-with-smile
+name: SATIN PLA Sky BLUE
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0099e6ff'
+tags:
+- industrially_compostable
+properties: {}

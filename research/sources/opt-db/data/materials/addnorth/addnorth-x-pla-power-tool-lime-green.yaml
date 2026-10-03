@@ -1,0 +1,18 @@
+uuid: 0e77974d-4be0-5b08-a7b3-e024f0428825
+slug: addnorth-x-pla-power-tool-lime-green
+brand:
+  slug: addnorth
+name: X-PLA Power Tool Lime Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#dede00ff'
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-x-pla-power-tool-lime-green/1e95b071444f.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 180
+  max_print_temperature: 220
+  max_bed_temperature: 70

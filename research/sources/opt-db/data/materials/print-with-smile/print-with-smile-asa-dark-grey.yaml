@@ -1,0 +1,11 @@
+uuid: a5453b8d-44fc-5e96-88e8-7be14c030182
+slug: print-with-smile-asa-dark-grey
+brand:
+  slug: print-with-smile
+name: ASA Dark GREY
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#3f4647ff'
+properties: {}

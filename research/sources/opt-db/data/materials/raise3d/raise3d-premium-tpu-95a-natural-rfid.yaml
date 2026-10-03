@@ -1,0 +1,18 @@
+uuid: 281ef7b9-8805-55e1-8b7a-5e48d88dea6f
+slug: raise3d-premium-tpu-95a-natural-rfid
+brand:
+  slug: raise3d
+name: Premium TPU-95A Natural - RFID
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#d9d8deff'
+tags:
+- translucent
+- without_pigments
+properties:
+  hardness_shore_a: 95.0
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-premium-tpu-95a-natural-rfid/raise3d-premium-tpu-95a-natural-rfid-0-a2da4274.jpg
+  type: unspecified

@@ -1,0 +1,17 @@
+uuid: ab69d2bf-1748-565b-8086-1e39f3fc4f14
+slug: makergear-pla-construction-orange
+brand:
+  slug: makergear
+name: PLA Construction Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ff8b47ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.25
+photos:
+- url: https://files.openprinttag.org/makergear/makergear-pla-construction-orange/makergear-pla-construction-orange-0-452895f5.jpg
+  type: unspecified

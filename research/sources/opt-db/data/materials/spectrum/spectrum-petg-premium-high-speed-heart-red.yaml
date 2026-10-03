@@ -1,0 +1,19 @@
+uuid: 7e08b310-ad52-5ffd-a538-fda70f73f5a0
+slug: spectrum-petg-premium-high-speed-heart-red
+brand:
+  slug: spectrum
+name: PETG Premium High Speed Heart Red
+class: FFF
+type: PETG
+abbreviation: PETG
+tags:
+- high_speed
+properties:
+  density: 1.29
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-petg-premium-high-speed-heart-red/spectrum-petg-premium-high-speed-heart-red-0-ae05dd31.jpg
+  type: unspecified

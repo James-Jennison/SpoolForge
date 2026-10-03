@@ -1,0 +1,12 @@
+uuid: 702e05df-e019-532e-8aef-2e0355720b8e
+slug: recreus-filaflex-82a-tpu-grey
+brand:
+  slug: recreus
+name: Filaflex 82A TPU Grey
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#a2aaadff'
+properties:
+  hardness_shore_a: 82

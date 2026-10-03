@@ -1,0 +1,13 @@
+uuid: cde7d102-8556-59a1-8955-2ae658cf4bb2
+slug: paramount-3d-abs-battleship-gray
+brand:
+  slug: paramount-3d
+name: ABS (Battleship Gray)
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#7d8eaaff'
+tags:
+- filtration_recommended
+properties: {}

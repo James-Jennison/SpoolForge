@@ -1,0 +1,24 @@
+uuid: 3c21b84d-b0ee-5f72-96bf-ddf98cbba964
+slug: fiberlogy-nylon-pa12-natural
+brand:
+  slug: fiberlogy
+name: Nylon PA12 Natural
+class: FFF
+type: PA12
+abbreviation: PA12
+primary_color:
+  color_rgba: '#f2efe9ff'
+tags:
+  - without_pigments
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-nylon-pa12-natural/1faf17c7106f.png
+    type: unspecified
+properties:
+  density: 1.01
+  min_print_temperature: 255
+  max_print_temperature: 270
+  min_bed_temperature: 100
+  max_bed_temperature: 110
+  drying_temperature: 70
+  drying_time: 240

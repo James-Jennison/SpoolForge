@@ -1,0 +1,15 @@
+uuid: 671754fa-613c-54b2-8179-4a252c093990
+slug: winkle-pla-hd-fluorescent-electric-green
+brand:
+  slug: winkle
+name: PLA HD Fluorescent Electric Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#70fa00ff'
+tags:
+- neon
+- industrially_compostable
+properties:
+  density: 1.24

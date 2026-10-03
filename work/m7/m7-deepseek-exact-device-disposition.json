@@ -1,0 +1,7 @@
+{
+  "finding_id": "m7-deepseek-exact-device",
+  "disposition": "CONFIRMED",
+  "resolved": true,
+  "reason": "The current APK and test APK were installed on motorola razr 2023 Android 16. The M7 exact-device test passes and its artifact is bound to the installed APK SHA-256.",
+  "evidence_reference": "work/m7/device-acceptance.json and DeviceFullSpectrumAcceptanceTest"
+}

@@ -1,0 +1,14 @@
+{
+  "uuid": "e13645b4-5e46-4f65-a223-5b56080029ef",
+  "id": "black_purple",
+  "name": "Black Purple",
+  "color_hex": [
+    "#000000",
+    "#AE00FF"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

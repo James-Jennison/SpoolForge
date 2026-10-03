@@ -1,0 +1,20 @@
+uuid: 7cbfc058-1264-5ebd-8994-06d11bd99340
+slug: spectrum-pla-glitter-metallic-silver
+brand:
+  slug: spectrum
+name: PLA Glitter Metallic Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#abacb0ff'
+tags:
+- glitter
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-glitter-metallic-silver/spectrum-pla-glitter-metallic-silver-0-eeae2fbf.jpg
+  type: unspecified

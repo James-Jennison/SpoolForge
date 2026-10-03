@@ -1,0 +1,14 @@
+uuid: b2067cdd-d3ab-561e-83dd-5aaa8b5b7f88
+slug: raise3d-industrial-ppa-support-purple-rfid
+brand:
+  slug: raise3d
+name: Industrial PPA Support Purple - RFID
+class: FFF
+type: PPA
+abbreviation: PPA
+primary_color:
+  color_rgba: '#d7a9e3ff'
+properties: {}
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-industrial-ppa-support-purple-rfid/raise3d-industrial-ppa-support-purple-rfid-0-5077bc48.jpg
+  type: unspecified

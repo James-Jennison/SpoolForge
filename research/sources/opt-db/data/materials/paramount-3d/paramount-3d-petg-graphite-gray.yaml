@@ -1,0 +1,11 @@
+uuid: 3ebdf635-b72a-5fdd-84d1-c9a108b6b682
+slug: paramount-3d-petg-graphite-gray
+brand:
+  slug: paramount-3d
+name: PETG (Graphite Gray)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#545f67ff'
+properties: {}

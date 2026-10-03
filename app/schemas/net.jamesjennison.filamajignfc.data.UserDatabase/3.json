@@ -1,0 +1,249 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "1ba3a617fbc6b3ff3f7a8583db893c03",
+    "entities": [
+      {
+        "tableName": "custom_records",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `original_package_id` TEXT, `variant_id` TEXT NOT NULL, `product_id` TEXT NOT NULL, `brand` TEXT NOT NULL, `material` TEXT NOT NULL, `product` TEXT NOT NULL, `color_name` TEXT NOT NULL, `color_hex` TEXT NOT NULL, `diameter_mm` TEXT NOT NULL, `mass_g` INTEGER NOT NULL, `nozzle_min_c` INTEGER, `nozzle_max_c` INTEGER, `bed_min_c` INTEGER, `bed_max_c` INTEGER, `gtin` TEXT, `article_number` TEXT, `additional_color_hexes` TEXT NOT NULL, `source_revision` TEXT NOT NULL, `provenance` TEXT NOT NULL, `brand_source` TEXT NOT NULL, `material_source` TEXT NOT NULL, `product_source` TEXT NOT NULL, `color_name_source` TEXT NOT NULL, `color_hex_source` TEXT NOT NULL, `diameter_source` TEXT NOT NULL, `mass_source` TEXT NOT NULL, `nozzle_min_source` TEXT, `nozzle_max_source` TEXT, `bed_min_source` TEXT, `bed_max_source` TEXT, `updated_at` INTEGER NOT NULL, `barcode_evidence` TEXT NOT NULL DEFAULT '', PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "originalPackageId",
+            "columnName": "original_package_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "productId",
+            "columnName": "product_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "brand",
+            "columnName": "brand",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "material",
+            "columnName": "material",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "product",
+            "columnName": "product",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorName",
+            "columnName": "color_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorHex",
+            "columnName": "color_hex",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diameterMm",
+            "columnName": "diameter_mm",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "massG",
+            "columnName": "mass_g",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nozzleMinC",
+            "columnName": "nozzle_min_c",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "nozzleMaxC",
+            "columnName": "nozzle_max_c",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "bedMinC",
+            "columnName": "bed_min_c",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "bedMaxC",
+            "columnName": "bed_max_c",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "gtin",
+            "columnName": "gtin",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "articleNumber",
+            "columnName": "article_number",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "additionalColorHexes",
+            "columnName": "additional_color_hexes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceRevision",
+            "columnName": "source_revision",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "provenance",
+            "columnName": "provenance",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "brandSource",
+            "columnName": "brand_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "materialSource",
+            "columnName": "material_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "productSource",
+            "columnName": "product_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorNameSource",
+            "columnName": "color_name_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorHexSource",
+            "columnName": "color_hex_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diameterSource",
+            "columnName": "diameter_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "massSource",
+            "columnName": "mass_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nozzleMinSource",
+            "columnName": "nozzle_min_source",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "nozzleMaxSource",
+            "columnName": "nozzle_max_source",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "bedMinSource",
+            "columnName": "bed_min_source",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "bedMaxSource",
+            "columnName": "bed_max_source",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "barcodeEvidence",
+            "columnName": "barcode_evidence",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "''"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "recents",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`record_id` TEXT NOT NULL, `kind` TEXT NOT NULL, `snapshot_json` TEXT NOT NULL, `used_at` INTEGER NOT NULL, PRIMARY KEY(`record_id`))",
+        "fields": [
+          {
+            "fieldPath": "recordId",
+            "columnName": "record_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kind",
+            "columnName": "kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "snapshotJson",
+            "columnName": "snapshot_json",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "usedAt",
+            "columnName": "used_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "record_id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1ba3a617fbc6b3ff3f7a8583db893c03')"
+    ]
+  }
+}

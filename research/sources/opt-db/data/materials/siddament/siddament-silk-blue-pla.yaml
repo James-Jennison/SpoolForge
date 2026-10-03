@@ -1,0 +1,14 @@
+uuid: dfa56d9d-85ac-52e9-9006-7875f16346d1
+slug: siddament-silk-blue-pla
+brand:
+  slug: siddament
+name: Silk Blue PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0151baff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

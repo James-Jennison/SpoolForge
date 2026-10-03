@@ -1,0 +1,15 @@
+{
+  "uuid": "d6dd6fc0-a13f-4549-8216-0be5d3cb7cdd",
+  "id": "tri_color_orange_blue_green",
+  "name": "Tri-Color Orange Blue Green",
+  "color_hex": [
+    "#7AB352",
+    "#2E56F1",
+    "#F67405"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

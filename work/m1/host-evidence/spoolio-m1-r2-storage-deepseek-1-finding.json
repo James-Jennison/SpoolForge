@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-deepseek-1",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8b02c7b33686",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Search",
+  "summary": "Search does not provide exact brand/product/color matching; it tokenizes and prefix-matches FTS, which can return irrelevant entries.",
+  "claim": "Users cannot reliably search by exact brand/product/color as required; results may include unrelated items, failing acceptance.",
+  "evidence": {
+    "source": "MainViewModel.search builds FTS query as each term quoted + '*' (prefix) and only exact package ID via dao.byId(q). No exact equality queries on brand/product/color fields.",
+    "response_sha256": "519f846ac62aa678c54f2ef894a01beb502b004b570b5debb037f921542ece99"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "Implement exact field searches (e.g., WHERE brand = :q, product = :q, color_name = :q) or precise FTS phrase matching with field filters.",
+  "suggested_validation": "Robolectric/instrumented test: searching exact existing brand string returns only entries with that brand; searching exact color returns only that color; package ID returns single entry.",
+  "reviewer_confidence": "HIGH"
+}

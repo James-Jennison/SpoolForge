@@ -1,0 +1,22 @@
+uuid: 06f18924-5ac0-5d20-80be-0771f765ab3b
+slug: polymaker-panchroma-neon-pla-yellow
+brand:
+  slug: polymaker
+name: Panchroma™ Neon PLA Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e5db2eff'
+tags:
+  - neon
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-neon-pla-yellow/99c0e892647a.png
+    type: unspecified
+properties:
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

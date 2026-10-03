@@ -1,0 +1,16 @@
+uuid: 8a64a451-dcdc-5b6f-a173-7e4a5202e2a2
+slug: bambulab-pla-basic-magenta
+brand:
+  slug: bambulab
+name: PLA Basic Magenta
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ec008cff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/bambulab/bambulab-pla-basic-magenta/f751e8df31de.png
+  type: unspecified
+properties: {}

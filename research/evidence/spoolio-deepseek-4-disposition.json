@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-deepseek-4",
+  "disposition": "CONFIRMED",
+  "reason": "Exact protocol/version validation and read-only unknown profiles now explicit; no silent down-conversion.",
+  "evidence_reference": "docs/FEASIBILITY.md revised; research/evidence/ofd-snapshot-validation.json; remediation review-cycle-5ac84cff9d4b",
+  "resolved": true
+}

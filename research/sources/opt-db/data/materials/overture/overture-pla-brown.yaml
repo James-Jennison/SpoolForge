@@ -1,0 +1,14 @@
+uuid: b1b3b1c6-55ff-55b1-bb51-7148ae1415cc
+slug: overture-pla-brown
+brand:
+  slug: overture
+name: PLA Brown
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#d7a86aff'
+tags:
+- industrially_compostable
+photos: []
+properties: {}

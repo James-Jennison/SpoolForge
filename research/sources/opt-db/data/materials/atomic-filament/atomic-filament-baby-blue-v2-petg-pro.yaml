@@ -1,0 +1,15 @@
+uuid: 3add3bff-d0b8-588a-9984-e267bfc0648f
+slug: atomic-filament-baby-blue-v2-petg-pro
+brand:
+  slug: atomic-filament
+name: Baby Blue v2 PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/baby-blue-petg-pro
+primary_color:
+  color_rgba: '#5fbcddff'
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-baby-blue-v2-petg-pro/921d6076c61f.png
+  type: unspecified
+properties: {}

@@ -1,0 +1,9 @@
+{
+  "basis": "Owner screenshot plus app-private journal and diagnostics",
+  "active_journal_preserved": true,
+  "same_uid": true,
+  "fresh_read_matches_prior_235_payload_hash": true,
+  "attempted_230_write_not_verified": true,
+  "unknown_preserved_in_owner_screenshot": true,
+  "full_m1_complete": false
+}

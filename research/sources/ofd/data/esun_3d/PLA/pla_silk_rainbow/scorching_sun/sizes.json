@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "e7f3732d-5b8b-4828-b92d-e6800ce1ea0a",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/epla-silk-rainbow"
+      }
+    ]
+  }
+]

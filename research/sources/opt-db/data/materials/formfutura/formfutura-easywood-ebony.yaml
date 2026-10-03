@@ -1,0 +1,23 @@
+uuid: 1081daac-1b28-5127-a8fd-2f496c660ac9
+slug: formfutura-easywood-ebony
+brand:
+  slug: formfutura
+name: EasyWood Ebony
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#50483dff'
+tags:
+  - contains_wood
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easywood-ebony/8dfcee12c2ce.png
+    type: unspecified
+properties:
+  density: 1.15
+  min_print_temperature: 190
+  max_print_temperature: 240
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 40
+  drying_time: 360

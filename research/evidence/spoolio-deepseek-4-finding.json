@@ -1,0 +1,20 @@
+{
+  "finding_id": "spoolio-deepseek-4",
+  "change_id": "spoolio-feasibility-20260906",
+  "cycle_id": "review-cycle-511bc96fa65d",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "OpenSpool under-specification and version negotiation",
+  "summary": "OpenSpool 1.0 has no rigorous required/optional JSON Schema, and the PAXX parser does not enforce the JSON `version` value as a strict negotiated contract. This permits unsupported future fields or versions to be silently interpreted or ignored by some readers.",
+  "claim": "OpenSpool 1.0 has no rigorous required/optional JSON Schema, and the PAXX parser does not enforce the JSON `version` value as a strict negotiated contract. This permits unsupported future fields or versions to be silently interpreted or ignored by some readers.",
+  "evidence": {
+    "source": "Report section 6: \"The documentation provides version 1.0 and an example, not a rigorous required/optional JSON Schema.\" Section 9: \"The parser does not enforce the JSON `version` value as a strict negotiated contract. This is incomplete compatibility semantics.\"",
+    "response_sha256": "14940ade81683577086eff6f20c1f63e0fab8d59722f737536c2d459e73d8747"
+  },
+  "affected_components": [
+    "docs/FEASIBILITY.md"
+  ],
+  "suggested_remediation": "The application must define and publish its own exact OpenSpool profile with strict `protocol`/`version` validation. Unsupported versions and unknown fields must be read-only or rejected, never silently down-converted. Verify PAXX's actual installed parser behavior against that profile.",
+  "suggested_validation": "Tests with `version` unknown/missing and with incompatible additional fields must produce read-only/rejected outcomes on the app. If PAXX is used, verify its behavior on the same fixtures and document any differences.",
+  "reviewer_confidence": "HIGH"
+}

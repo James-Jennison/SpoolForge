@@ -1,0 +1,21 @@
+uuid: 66fd89ab-88d6-5a0d-ac0a-2c2bb4bc8a0f
+slug: spectrum-pla-pro-polar-white
+brand:
+  slug: spectrum
+name: PLA Pro Polar White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#efefefff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.22
+  min_print_temperature: 185
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-pro-polar-white/spectrum-pla-pro-polar-white-0-3aae3c99.jpg
+  type: unspecified

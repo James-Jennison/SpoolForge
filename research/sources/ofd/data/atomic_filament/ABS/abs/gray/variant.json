@@ -1,0 +1,9 @@
+{
+  "uuid": "ebf01f8b-af94-4331-80b6-f9763e75ba69",
+  "id": "gray",
+  "name": "Gray",
+  "color_hex": "#55555E",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

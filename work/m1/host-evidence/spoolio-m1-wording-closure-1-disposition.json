@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-wording-closure-1",
+  "disposition": "DUPLICATE",
+  "reason": "Physical persistence remains tracked as open spoolio-m1-persistence-contradiction. This bounded hardware test gathers evidence; no full closure. Signature verification does not prove data durability.",
+  "resolved": false,
+  "evidence_reference": "reconciliation-wording-deepseek.json; NfcCoordinator.kt"
+}

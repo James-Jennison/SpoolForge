@@ -1,0 +1,14 @@
+{
+  "uuid": "bb747d6c-a481-48fb-be8a-537c56650625",
+  "id": "rainbow_meteor",
+  "name": "Rainbow Meteor",
+  "color_hex": [
+    "#292824",
+    "#8E5850",
+    "#5C5B59"
+  ],
+  "traits": {
+    "glitter": true,
+    "gradual_color_change": true
+  }
+}

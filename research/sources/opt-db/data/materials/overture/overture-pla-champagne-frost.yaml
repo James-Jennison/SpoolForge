@@ -1,0 +1,13 @@
+uuid: 080c1c2c-4f5e-5eb0-9585-20a412128f3b
+slug: overture-pla-champagne-frost
+brand:
+  slug: overture
+name: PLA Champagne Frost
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#eccea7ff'
+tags:
+- industrially_compostable
+properties: {}

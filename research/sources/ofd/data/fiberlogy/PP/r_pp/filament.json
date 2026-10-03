@@ -1,0 +1,9 @@
+{
+  "uuid": "371e99ab-5a7b-4272-98cd-3ecdd0e370d9",
+  "id": "r_pp",
+  "name": "R PP",
+  "diameter_tolerance": 0.02,
+  "density": 1.05,
+  "min_print_temperature": 220,
+  "max_print_temperature": 250
+}

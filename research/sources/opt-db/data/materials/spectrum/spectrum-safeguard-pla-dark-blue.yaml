@@ -1,0 +1,20 @@
+uuid: 9af8d09d-0a38-5959-9cc4-3c355f380392
+slug: spectrum-safeguard-pla-dark-blue
+brand:
+  slug: spectrum
+name: Safeguard PLA Dark Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#4921c1ff'
+tags:
+- antibacterial
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-safeguard-pla-dark-blue/spectrum-safeguard-pla-dark-blue-0-d9ea1255.jpg
+  type: unspecified

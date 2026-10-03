@@ -1,0 +1,19 @@
+{
+  "uuid": "cd6967f2-f571-48f8-9fd1-ba42b1e8ce85",
+  "id": "nebula_night_ht",
+  "name": "Nebula Night HT",
+  "color_hex": [
+    "#A38496",
+    "#0353BA",
+    "#B33174"
+  ],
+  "traits": {
+    "translucent": true,
+    "glitter": true,
+    "neon": true,
+    "glow": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "high_temperature": true
+  }
+}

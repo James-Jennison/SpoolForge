@@ -1,0 +1,13 @@
+uuid: 21f81bd8-c3d5-5f24-b063-6d6ff79190ba
+slug: print-with-smile-satin-pla-violet
+brand:
+  slug: print-with-smile
+name: SATIN PLA Violet
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0353baff'
+tags:
+- industrially_compostable
+properties: {}

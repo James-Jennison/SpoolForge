@@ -1,0 +1,13 @@
+{
+  "uuid": "704cd156-9387-4dec-8fd5-2cb225b93cea",
+  "id": "pink_ombr_elixir",
+  "name": "Pink Ombré Elixir",
+  "color_hex": [
+    "#FF00A2",
+    "#FFBDD1"
+  ],
+  "traits": {
+    "iridescent": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,14 @@
+uuid: c98d8822-a766-5cdc-8b7f-1a3882890b99
+slug: siddament-matte-yellow-pla
+brand:
+  slug: siddament
+name: Matte Yellow PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffff00ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

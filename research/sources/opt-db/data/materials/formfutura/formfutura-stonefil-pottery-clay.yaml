@@ -1,0 +1,24 @@
+uuid: 7a6770f7-7004-5e38-8e0e-29043c210df3
+slug: formfutura-stonefil-pottery-clay
+brand:
+  slug: formfutura
+name: StoneFil Pottery Clay
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e6dddbff'
+tags:
+  - contains_stone
+  - imitates_stone
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-stonefil-pottery-clay/29939bae7268.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 225
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 40
+  drying_time: 360

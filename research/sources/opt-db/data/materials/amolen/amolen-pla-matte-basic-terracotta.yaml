@@ -1,0 +1,24 @@
+uuid: 4fbae654-e488-57b0-84d7-54cb34de4dbe
+slug: amolen-pla-matte-basic-terracotta
+brand:
+  slug: amolen
+name: PLA Matte Basic Terracotta
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#b47d6cff'
+tags:
+- matte
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-matte-basic-terracotta/da3c291b941c.png
+  type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

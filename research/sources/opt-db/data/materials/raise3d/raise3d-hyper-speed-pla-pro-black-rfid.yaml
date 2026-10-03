@@ -1,0 +1,20 @@
+uuid: f534d1c7-a58a-5d99-ab02-9aa2d84a55ae
+slug: raise3d-hyper-speed-pla-pro-black-rfid
+brand:
+  slug: raise3d
+name: 'Hyper Speed PLA Pro Black - RFID '
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- high_speed
+- matte
+- contains_carbon
+- industrially_compostable
+properties:
+  density: 1.21
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-hyper-speed-pla-pro-black-rfid/raise3d-hyper-speed-pla-pro-black-rfid-0-096aa0b6.jpg
+  type: unspecified

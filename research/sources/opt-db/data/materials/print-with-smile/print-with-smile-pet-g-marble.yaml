@@ -1,0 +1,13 @@
+uuid: e501aaab-bdb1-5465-af6e-4169fe318600
+slug: print-with-smile-pet-g-marble
+brand:
+  slug: print-with-smile
+name: PET-G MARBLE
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e9d1c1ff'
+tags:
+- imitates_marble
+properties: {}

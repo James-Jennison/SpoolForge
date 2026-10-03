@@ -1,0 +1,12 @@
+uuid: 717b7bc2-6ce3-5679-a87b-194e32c53add
+slug: tinmorry-tpu-95a-pink
+brand:
+  slug: tinmorry
+name: TPU 95A Pink
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#fc6d8eff'
+properties:
+  hardness_shore_a: 95

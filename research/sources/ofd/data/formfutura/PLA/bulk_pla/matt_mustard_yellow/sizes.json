@@ -1,0 +1,17 @@
+[
+  {
+    "uuid": "24696af5-3d4f-4206-898f-0cc1a3b49a41",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 200,
+    "article_number": "BPLA-175MMYW-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/bulk-pla"
+      }
+    ]
+  }
+]

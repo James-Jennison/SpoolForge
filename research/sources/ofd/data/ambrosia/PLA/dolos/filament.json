@@ -1,0 +1,11 @@
+{
+  "uuid": "db2a6561-6263-4ab1-98d9-68e83c6e9cce",
+  "id": "dolos",
+  "name": "PLA Dolos Color Shifting",
+  "diameter_tolerance": 0.03,
+  "density": 1.25,
+  "min_print_temperature": 190,
+  "max_print_temperature": 220,
+  "min_bed_temperature": 0,
+  "max_bed_temperature": 65
+}

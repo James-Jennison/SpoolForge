@@ -1,0 +1,20 @@
+uuid: 97e0ca79-83aa-5213-baf1-ce393b9940a9
+slug: spectrum-pla-high-speed-true-yellow
+brand:
+  slug: spectrum
+name: PLA High Speed True Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fad61bff'
+tags:
+- high_speed
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-high-speed-true-yellow/spectrum-pla-high-speed-true-yellow-0-eaafab07.jpg
+  type: unspecified

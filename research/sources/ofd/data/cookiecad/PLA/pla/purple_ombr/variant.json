@@ -1,0 +1,13 @@
+{
+  "uuid": "fcc27f91-3f0a-491f-ba8e-d5c55a365ed2",
+  "id": "purple_ombr",
+  "name": "Purple Ombré",
+  "color_hex": [
+    "#6C47B2",
+    "#BE2ED6"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

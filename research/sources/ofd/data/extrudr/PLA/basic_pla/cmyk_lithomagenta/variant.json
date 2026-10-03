@@ -1,0 +1,12 @@
+{
+  "uuid": "130eca81-6f4a-480e-af9a-b4058cc7abbb",
+  "id": "cmyk_lithomagenta",
+  "name": "CMYK Lithomagenta",
+  "color_hex": "#C75072",
+  "color_standards": {
+    "ral": "4010"
+  },
+  "traits": {
+    "industrially_compostable": true
+  }
+}

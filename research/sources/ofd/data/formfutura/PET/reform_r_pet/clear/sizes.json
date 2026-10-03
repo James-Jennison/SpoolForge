@@ -1,0 +1,92 @@
+[
+  {
+    "uuid": "b3fb6a46-055c-4d74-9977-1e7f3d0b7432",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 140,
+    "article_number": "RPET-175CLEA-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "07543525-a3e9-4146-bb3d-6d5704b90291",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "RPET-175CLEA-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "24ad69cf-953a-47bc-ac9b-bba7d6496133",
+    "filament_weight": 3500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 705,
+    "article_number": "RPET-175CLEA-03500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "93acc378-8d39-4fbf-a75c-70297394a10f",
+    "filament_weight": 4500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "RPET-175CLEA-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "403470a2-30d3-4299-a694-2963bcb72291",
+    "filament_weight": 1000,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "RPET-285CLEA-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "bbcb4986-0556-4e49-a1ad-74cb5f444d11",
+    "filament_weight": 4500,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "RPET-285CLEA-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+uuid: 72b336c3-1bdb-5285-8d5f-5c5794b446ff
+slug: winkle-petg-lemon-yellow
+brand:
+  slug: winkle
+name: PETG Lemon Yellow
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f6fb38ff'
+properties:
+  density: 1.23

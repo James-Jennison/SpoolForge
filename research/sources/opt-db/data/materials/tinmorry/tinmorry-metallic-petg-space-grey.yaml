@@ -1,0 +1,11 @@
+uuid: d2fdcea4-fe00-5387-8b48-9f9585e90911
+slug: tinmorry-metallic-petg-space-grey
+brand:
+  slug: tinmorry
+name: Metallic PETG Space Grey
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#76797dff'
+properties: {}

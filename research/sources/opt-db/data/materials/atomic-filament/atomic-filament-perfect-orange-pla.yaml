@@ -1,0 +1,17 @@
+uuid: 28fb95fd-3d2f-5488-abb0-1b8db0fb4299
+slug: atomic-filament-perfect-orange-pla
+brand:
+  slug: atomic-filament
+name: Perfect Orange PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://atomicfilament.com/products/perfect-orange-pla-filament
+primary_color:
+  color_rgba: '#f67405ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-perfect-orange-pla/2696f955c260.png
+  type: unspecified
+properties: {}

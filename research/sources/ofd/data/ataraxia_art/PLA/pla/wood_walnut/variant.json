@@ -1,0 +1,11 @@
+{
+  "uuid": "2dbd0a6f-11ee-41bb-ad25-0e35e4b93e8e",
+  "id": "wood_walnut",
+  "name": "Wood Walnut",
+  "color_hex": "#D99773",
+  "traits": {
+    "imitates_wood": true,
+    "industrially_compostable": true,
+    "contains_wood": true
+  }
+}

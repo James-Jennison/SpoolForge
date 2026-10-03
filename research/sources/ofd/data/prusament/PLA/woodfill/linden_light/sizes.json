@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "8d275103-a369-46f7-867b-53b65f4813d9",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-woodfill-linden-lignt-1-kg/"
+      }
+    ]
+  }
+]

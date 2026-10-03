@@ -1,0 +1,22 @@
+uuid: d2df409b-5961-5dcd-aa8a-81c45e7444e1
+slug: formfutura-apollox-dark-blue
+brand:
+  slug: formfutura
+name: ApolloX Dark Blue
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#0266bbff'
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-apollox-dark-blue/710a5f3bc6e3.png
+    type: unspecified
+properties:
+  density: 1.11
+  min_print_temperature: 235
+  max_print_temperature: 255
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  chamber_temperature: 40
+tags:
+  - filtration_recommended

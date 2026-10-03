@@ -1,0 +1,21 @@
+uuid: 3de9d615-f241-5beb-9eef-c86071a0b061
+slug: polymaker-panchroma-cope-blue
+brand:
+  slug: polymaker
+name: Panchroma™ CoPE Blue
+class: FFF
+type: CPE
+abbreviation: CPE
+primary_color:
+  color_rgba: '#003776ff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-cope-blue/f370b076d68b.png
+    type: unspecified
+properties:
+  density: 1.3
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

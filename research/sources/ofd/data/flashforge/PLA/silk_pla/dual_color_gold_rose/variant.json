@@ -1,0 +1,14 @@
+{
+  "uuid": "7433015d-8dae-4a6f-8dde-ba2201cb2a77",
+  "id": "dual_color_gold_rose",
+  "name": "Dual Color Gold & Rose",
+  "color_hex": [
+    "#BB264D",
+    "#CE8D00"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

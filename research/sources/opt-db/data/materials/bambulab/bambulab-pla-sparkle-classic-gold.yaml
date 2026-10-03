@@ -1,0 +1,24 @@
+uuid: 261e5f06-ca36-5083-a87c-129b08693c7b
+slug: bambulab-pla-sparkle-classic-gold
+brand:
+  slug: bambulab
+name: PLA Sparkle Classic Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#cea629ff'
+tags:
+  - glitter
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-sparkle-classic-gold/84aca617883f.png
+    type: unspecified
+properties:
+  density: 1.26
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45

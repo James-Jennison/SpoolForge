@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-android-deepseek-2",
+  "disposition": "CONFIRMED",
+  "reason": "CONFIRMED WITH NARROWER SCOPE: immutable barcodeEvidence already retained original values and origins while current field authorship became Edited locally. The dialog now exposes both layers separately and regression coverage verifies the original origin survives.",
+  "evidence_reference": "app/src/main/kotlin/net/jamesjennison/spoolio/MainActivity.kt; app/src/test/kotlin/net/jamesjennison/spoolio/GtinIndexTest.kt; work/gtin/camera-zxing-build.log",
+  "resolved": true
+}

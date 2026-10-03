@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-nfc-claude-2",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-d04a66d06bba",
+  "reviewer": "claude",
+  "severity": "LOW",
+  "category": "NFC write journal lifecycle",
+  "summary": "archiveUnknown() performs two separate, non-atomic SharedPreferences commits (`journal.archive(...)` then `journal.clear()`); a process death between them leaves the 'active' journal entry un-cleared alongside the newly-written archive entry.",
+  "claim": "In the narrow window between the archive commit succeeding and the clear commit running, a process death would cause the next launch to restore WRITE_OUTCOME_UNKNOWN again for a write that was already archived, risking a duplicate archive entry if the user archives it again (not data loss, but a state/bookkeeping inconsistency).",
+  "evidence": {
+    "source": "NfcCoordinator.archiveUnknown(): `check(journal.archive(uid,payload)){...}; machine.archiveUnknown(); journal.clear()`. Each of `archive()` and `clear()` is an independent `prefs.edit()....commit()` call; there is no single transaction covering both. NfcCoordinator's init block (`journal.load()?.let{machine.restoreUnknown(...)}`) unconditionally trusts the presence of an active journal entry on next launch.",
+    "response_sha256": "d6d71aae2d028242a00be48b5f18e4566107f046cfee292ddd5d03a59e223f5e"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "Reorder or combine so that clearing the active slot happens first (idempotent) and archiving happens from the already-loaded values, or store both operations under a single commit using a versioned/atomic scheme.",
+  "suggested_validation": "Kill the process (or throw) between `journal.archive()` succeeding and `journal.clear()` running, relaunch, and confirm the app does not present a stale WRITE_OUTCOME_UNKNOWN for an already-archived write and/or does not create a duplicate archive entry.",
+  "reviewer_confidence": "MEDIUM"
+}

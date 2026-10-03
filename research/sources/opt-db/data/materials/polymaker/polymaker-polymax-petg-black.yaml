@@ -1,0 +1,21 @@
+uuid: da13a442-aa5f-53c5-b97b-1dd98d83225d
+slug: polymaker-polymax-petg-black
+brand:
+  slug: polymaker
+name: PolyMax™ PETG Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#181718ff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polymax-petg-black/eb5a4afa375b.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 70
+  max_bed_temperature: 80
+  drying_temperature: 65
+  drying_time: 360

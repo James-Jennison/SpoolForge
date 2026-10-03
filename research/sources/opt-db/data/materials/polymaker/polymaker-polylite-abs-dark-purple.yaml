@@ -1,0 +1,23 @@
+uuid: 5745e142-2b05-5dba-94da-5c3d8fb18da9
+slug: polymaker-polylite-abs-dark-purple
+brand:
+  slug: polymaker
+name: PolyLite™ ABS Dark Purple
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#46394eff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polylite-abs-dark-purple/b2ed11d3071e.png
+    type: unspecified
+properties:
+  density: 1.04
+  min_print_temperature: 245
+  max_print_temperature: 265
+  min_bed_temperature: 90
+  max_bed_temperature: 100
+  drying_temperature: 70
+  drying_time: 360

@@ -1,0 +1,18 @@
+uuid: 5411d1da-64e8-5312-bedc-ce2a9329e6d9
+slug: atomic-filament-light-gray-hi-flow-pro-pla
+brand:
+  slug: atomic-filament
+name: Light Gray Hi-Flow Pro PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://atomicfilament.com/products/light-gray-hi-flow-pro-pla-filament
+primary_color:
+  color_rgba: '#afaeabff'
+tags:
+- industrially_compostable
+- high_speed
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-light-gray-hi-flow-pro-pla/cb7b96db9774.png
+  type: unspecified
+properties: {}

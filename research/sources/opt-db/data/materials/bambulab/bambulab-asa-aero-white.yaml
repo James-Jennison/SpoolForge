@@ -1,0 +1,24 @@
+uuid: 8074ab4f-d512-57ae-9857-0cedc562947f
+slug: bambulab-asa-aero-white
+brand:
+  slug: bambulab
+name: ASA Aero White
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#f5f1ddff'
+tags:
+  - foaming
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-asa-aero-white/733448c74778.png
+    type: unspecified
+properties:
+  density: 0.99
+  min_print_temperature: 240
+  max_print_temperature: 280
+  min_bed_temperature: 80
+  max_bed_temperature: 90
+  min_chamber_temperature: 45
+  max_chamber_temperature: 60

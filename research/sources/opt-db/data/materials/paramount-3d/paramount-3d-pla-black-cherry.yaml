@@ -1,0 +1,13 @@
+uuid: c894e1b9-60b5-5e4e-b0f7-225d5888f4a8
+slug: paramount-3d-pla-black-cherry
+brand:
+  slug: paramount-3d
+name: PLA (Black Cherry)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#76232fff'
+tags:
+- industrially_compostable
+properties: {}

@@ -1,0 +1,14 @@
+uuid: 551433c0-8abe-5159-b55c-be3c390a99b1
+slug: tinmorry-silk-pla-bronze
+brand:
+  slug: tinmorry
+name: Silk PLA Bronze
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#999f89ff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

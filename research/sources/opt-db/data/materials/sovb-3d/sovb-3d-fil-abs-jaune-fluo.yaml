@@ -1,0 +1,20 @@
+uuid: 8b62644f-6a37-5c6a-9497-48fc42c3fde3
+slug: sovb-3d-fil-abs-jaune-fluo
+brand:
+  slug: sovb-3d
+name: Fil ABS Jaune Fluo
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#e4ff33ff'
+  color_ral: '1026'
+tags:
+- neon
+- filtration_recommended
+properties:
+  density: 1.03
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 90
+  max_bed_temperature: 100

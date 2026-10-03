@@ -1,0 +1,14 @@
+uuid: 098dc907-2004-55a4-a6c6-8f17c06450c8
+slug: rosa3d-filaments-pla-speed-matt-clear-blue
+brand:
+  slug: rosa3d-filaments
+name: PLA Speed Matt Clear Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0099e6ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

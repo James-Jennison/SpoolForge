@@ -1,0 +1,25 @@
+uuid: 9c0c84d2-13ff-543d-a42e-3916772d5255
+slug: bambulab-pla-cf-matcha-green
+brand:
+  slug: bambulab
+name: PLA-CF Matcha Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5c9748ff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-cf-matcha-green/0644698b0ee1.png
+    type: unspecified
+properties:
+  density: 1.22
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45

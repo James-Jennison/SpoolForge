@@ -1,0 +1,23 @@
+uuid: 0516cd4e-dc60-559f-9e76-fd003a44bf57
+slug: fiberlogy-easy-pla-onyx-gold
+brand:
+  slug: fiberlogy
+name: Easy PLA Onyx Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6e5e2fff'
+tags:
+  - iridescent
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-easy-pla-onyx-gold/464b645f3135.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 240

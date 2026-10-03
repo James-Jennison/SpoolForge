@@ -1,0 +1,16 @@
+[
+  {
+    "uuid": "02b0b004-74e0-4afa-ba92-c274b4660f15",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 144,
+    "spool_core_diameter": 55,
+    "gtin": "618996980437",
+    "purchase_links": [
+      {
+        "store_id": "microcenter",
+        "url": "https://www.microcenter.com/product/512943/inland-175mm-pla-3d-printer-filament-1kg-(22-lbs)-cardboard-spool-gold?sp=262.5"
+      }
+    ]
+  }
+]

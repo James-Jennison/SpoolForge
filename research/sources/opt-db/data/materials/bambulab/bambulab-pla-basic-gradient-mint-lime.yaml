@@ -1,0 +1,26 @@
+uuid: 4a1d89fc-0442-5df1-a072-774dedf23dff
+slug: bambulab-pla-basic-gradient-mint-lime
+brand:
+  slug: bambulab
+name: PLA Basic Gradient Mint Lime
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+  - color_rgba: '#4ec939ff'
+  - color_rgba: '#b6ff43ff'
+tags:
+  - gradual_color_change
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-basic-gradient-mint-lime/5a401744489a.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45
+url: https://us.store.bambulab.com/products/pla-basic-gradient?id=43158301245576

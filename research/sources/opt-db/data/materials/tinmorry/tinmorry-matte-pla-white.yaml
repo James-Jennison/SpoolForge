@@ -1,0 +1,14 @@
+uuid: 9ac7cc2f-9e24-5eed-ade1-e601d51df0c3
+slug: tinmorry-matte-pla-white
+brand:
+  slug: tinmorry
+name: Matte PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

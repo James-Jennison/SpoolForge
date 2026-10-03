@@ -1,0 +1,23 @@
+uuid: d1b9f980-560a-551b-828b-62508529f044
+slug: fiberlogy-fibersmooth-grey
+brand:
+  slug: fiberlogy
+name: FiberSmooth Grey
+class: FFF
+type: PVB
+abbreviation: PVB
+primary_color:
+  color_rgba: '#ecefedff'
+tags:
+  - ipa_soluble
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-fibersmooth-grey/0987ef6fcdfb.png
+    type: unspecified
+properties:
+  density: 1.1
+  min_print_temperature: 215
+  max_print_temperature: 225
+  min_bed_temperature: 75
+  max_bed_temperature: 75
+  drying_temperature: 40
+  drying_time: 240

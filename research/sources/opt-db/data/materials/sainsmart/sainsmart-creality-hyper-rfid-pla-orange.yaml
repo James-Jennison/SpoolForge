@@ -1,0 +1,13 @@
+uuid: 459a3f31-b2f0-5a03-9117-f6313e9b3809
+slug: sainsmart-creality-hyper-rfid-pla-orange
+brand:
+  slug: sainsmart
+name: Creality Hyper RFID PLA Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fa8423ff'
+tags:
+- industrially_compostable
+properties: {}

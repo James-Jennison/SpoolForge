@@ -1,0 +1,10 @@
+{
+  "uuid": "3bb8ab47-8450-4bb6-93c7-9db00f46f7c4",
+  "id": "fibrex_nylon_gf30_dark_grey",
+  "name": "FIBREX™ Nylon +GF30 Dark Grey",
+  "color_hex": "#6A6C6E",
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

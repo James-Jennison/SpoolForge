@@ -1,0 +1,13 @@
+{
+  "uuid": "72723d78-fa65-4a52-a695-435a6a45a484",
+  "id": "mistic_green",
+  "name": "Mistic Green",
+  "color_hex": [
+    "#3D9441",
+    "#545252"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

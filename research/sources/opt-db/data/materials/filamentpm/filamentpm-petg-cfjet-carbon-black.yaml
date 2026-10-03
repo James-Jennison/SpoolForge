@@ -1,0 +1,23 @@
+uuid: feb0f06d-00ef-5db5-83a6-45e374d47348
+slug: filamentpm-petg-cfjet-carbon-black
+brand:
+  slug: filamentpm
+name: PETG CFJet Carbon - Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#3f4444ff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-petg-cfjet-carbon-black/6f438833e9ab.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 220
+  max_print_temperature: 250
+  min_bed_temperature: 80
+  max_bed_temperature: 90

@@ -1,0 +1,25 @@
+uuid: b82d3a58-daf1-51c0-b51d-bf1b13bcfd3d
+slug: formfutura-carbonfil-green
+brand:
+  slug: formfutura
+name: CarbonFil Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#5e6345ff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-carbonfil-green/d4fa66c78286.png
+    type: unspecified
+properties:
+  density: 1.32
+  min_print_temperature: 230
+  max_print_temperature: 275
+  min_bed_temperature: 80
+  max_bed_temperature: 90
+  drying_temperature: 60
+  drying_time: 720

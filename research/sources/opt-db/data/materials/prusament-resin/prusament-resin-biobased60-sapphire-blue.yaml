@@ -1,0 +1,13 @@
+uuid: e33e8cc4-bfae-5bf7-831f-d3c11393fdd9
+slug: prusament-resin-biobased60-sapphire-blue
+brand:
+  slug: prusament-resin
+name: BioBased60 Sapphire Blue
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#2196f3ff'
+tags:
+- bio_based
+properties:
+  density: 1.04

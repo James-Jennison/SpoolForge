@@ -1,0 +1,13 @@
+uuid: d5fe0f07-a067-570d-a7c7-45be8d7d0151
+slug: tectonic-3d-aura-abs-ec-red-ral3001
+brand:
+  slug: tectonic-3d
+name: AURA ABS EC Red (RAL3001)
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#ec0000ff'
+tags:
+- filtration_recommended
+properties: {}

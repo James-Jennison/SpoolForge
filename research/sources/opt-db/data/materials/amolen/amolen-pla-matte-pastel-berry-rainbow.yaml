@@ -1,0 +1,29 @@
+uuid: 38fe16a2-80ed-5724-915f-aa226e9f42b9
+slug: amolen-pla-matte-pastel-berry-rainbow
+brand:
+  slug: amolen
+name: PLA Matte Pastel Berry Rainbow
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#4d99b0ff'
+- color_rgba: '#f5cf6fff'
+- color_rgba: '#f19269ff'
+- color_rgba: '#93b580ff'
+- color_rgba: '#bb1173ff'
+tags:
+- matte
+- gradual_color_change
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-matte-pastel-berry-rainbow/Pastel_Rainbow.jpg
+  type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

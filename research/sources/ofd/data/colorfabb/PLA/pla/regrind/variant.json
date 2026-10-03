@@ -1,0 +1,10 @@
+{
+  "uuid": "dd482fce-7677-41fd-98e0-8aa957a30f38",
+  "id": "regrind",
+  "name": "Regrind",
+  "color_hex": "#6A6C6E",
+  "traits": {
+    "recycled": true,
+    "industrially_compostable": true
+  }
+}

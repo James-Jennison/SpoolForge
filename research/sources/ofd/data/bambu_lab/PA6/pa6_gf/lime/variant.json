@@ -1,0 +1,10 @@
+{
+  "uuid": "0f3607cb-e45a-4eca-95bc-5a6aa82173da",
+  "id": "lime",
+  "name": "Lime",
+  "color_hex": "#C5ED48",
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

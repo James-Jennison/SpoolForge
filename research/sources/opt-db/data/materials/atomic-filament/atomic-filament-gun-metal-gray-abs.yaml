@@ -1,0 +1,17 @@
+uuid: 4fc2e110-a963-5c68-8767-f2ae2ec97c5c
+slug: atomic-filament-gun-metal-gray-abs
+brand:
+  slug: atomic-filament
+name: Gun Metal Gray ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+url: https://atomicfilament.com/products/gun-metal-gray-abs-filament
+primary_color:
+  color_rgba: '#55555eff'
+tags:
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-gun-metal-gray-abs/27aaa6628c05.png
+  type: unspecified
+properties: {}

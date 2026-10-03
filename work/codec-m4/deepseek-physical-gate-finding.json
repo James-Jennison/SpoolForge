@@ -1,0 +1,15 @@
+{
+  "finding_id": "filamajig-m4-deepseek-physical-gate",
+  "change_id": "filamajig-codec-paxx-m4-20260907",
+  "cycle_id": "review-cycle-c7f4a095abee",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "Hardware acceptance",
+  "summary": "The owner-required physical NTAG215 write/readback and U1 recognition gate has not yet run.",
+  "claim": "Software and device instrumentation cannot establish physical RF write reliability or printer recognition.",
+  "evidence": {"source": "The review package explicitly records physical acceptance as pending.", "response_sha256": "91dc8e266a3a7d0945646b9c7c102db7fab41e7d2188dd74fc1fa1c5fcb74135"},
+  "affected_components": ["android", "nfc", "snapmaker-u1"],
+  "suggested_remediation": "Write and read back real NTAG215 tags on the 2023 Razr and verify recognition on the U1 running v1.5.2-paxx12-21.",
+  "suggested_validation": "Record codec, payload/message size and hash, binding position, verified readback, and U1 result without publishing tag UIDs.",
+  "reviewer_confidence": "HIGH"
+}

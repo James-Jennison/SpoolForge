@@ -1,0 +1,14 @@
+uuid: d71d4cdb-c889-5006-856c-0d5059a606dd
+slug: sainsmart-blue-flexible-tpu
+brand:
+  slug: sainsmart
+name: Blue, Flexible TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#0e21aeff'
+tags:
+- translucent
+properties:
+  hardness_shore_a: 95

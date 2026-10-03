@@ -1,0 +1,13 @@
+uuid: e854f5f2-d2ad-5378-8fe4-09ab69135b63
+slug: paramount-3d-pla-graphite-gray
+brand:
+  slug: paramount-3d
+name: PLA (Graphite Gray)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#55657cff'
+tags:
+- industrially_compostable
+properties: {}

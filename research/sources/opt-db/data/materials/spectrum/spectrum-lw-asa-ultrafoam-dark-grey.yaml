@@ -1,0 +1,22 @@
+uuid: 9769619f-9fa9-5c5a-9467-5cf449d14f23
+slug: spectrum-lw-asa-ultrafoam-dark-grey
+brand:
+  slug: spectrum
+name: LW-ASA UltraFoam Dark Grey
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#6a6c6eff'
+tags:
+- foaming
+- filtration_recommended
+properties:
+  density: 1.08
+  min_print_temperature: 220
+  max_print_temperature: 285
+  min_bed_temperature: 60
+  max_bed_temperature: 90
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-lw-asa-ultrafoam-dark-grey/spectrum-lw-asa-ultrafoam-dark-grey-0-9e782457.jpg
+  type: unspecified

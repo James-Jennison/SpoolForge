@@ -1,0 +1,13 @@
+uuid: ade04cc9-f8a1-5253-a95f-08051b66c05d
+slug: rosa3d-filaments-pla-starter-gray
+brand:
+  slug: rosa3d-filaments
+name: PLA Starter Gray
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#999596ff'
+tags:
+- industrially_compostable
+properties: {}

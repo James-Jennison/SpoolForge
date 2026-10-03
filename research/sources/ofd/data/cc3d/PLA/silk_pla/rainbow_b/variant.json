@@ -1,0 +1,17 @@
+{
+  "uuid": "cea42c41-be56-44cb-b918-810e2300800d",
+  "id": "rainbow_b",
+  "name": "Rainbow B",
+  "color_hex": [
+    "#C80181",
+    "#EEEA44",
+    "#3D9441",
+    "#00A594",
+    "#0353BA"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

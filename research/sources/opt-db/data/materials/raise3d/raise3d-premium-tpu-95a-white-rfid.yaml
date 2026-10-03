@@ -1,0 +1,15 @@
+uuid: 04694b22-3e5a-56b9-a9a4-854b2aaf59bf
+slug: raise3d-premium-tpu-95a-white-rfid
+brand:
+  slug: raise3d
+name: Premium TPU-95A White - RFID
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#ffffffff'
+properties:
+  hardness_shore_a: 95.0
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-premium-tpu-95a-white-rfid/raise3d-premium-tpu-95a-white-rfid-0-80cfaced.jpg
+  type: unspecified

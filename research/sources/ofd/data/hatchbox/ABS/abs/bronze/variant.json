@@ -1,0 +1,9 @@
+{
+  "uuid": "b282e7dd-be61-43bf-9484-ec9cfb077862",
+  "id": "bronze",
+  "name": "Bronze",
+  "color_hex": "#A18D5A",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

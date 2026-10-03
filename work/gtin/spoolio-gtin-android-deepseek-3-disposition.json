@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-android-deepseek-3",
+  "disposition": "REJECTED",
+  "reason": "DISPUTED: the app-private sidecar and temporary file share one Android/Linux directory, where rename replaces the destination atomically. Both host regression and actual Razr instrumentation now corrupt, replace, validate the SQLite header, and recover known results; delete-first fallback would reduce crash safety.",
+  "evidence_reference": "app/src/test/kotlin/net/jamesjennison/spoolio/GtinIndexTest.kt; app/src/androidTest/kotlin/net/jamesjennison/spoolio/DeviceGtinAcceptanceTest.kt; work/gtin/device-instrumentation-final.log",
+  "resolved": true
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "uuid": "aa85314c-6c6a-43d6-afdf-37e825e6c2a2",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "article_number": "CA04045",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "polymaker",
+        "url": "https://us.polymaker.com/products/panchroma-dual-matte?variant=43613087825977?"
+      }
+    ]
+  }
+]

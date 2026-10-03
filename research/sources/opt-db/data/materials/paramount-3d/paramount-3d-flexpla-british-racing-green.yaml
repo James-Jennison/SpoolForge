@@ -1,0 +1,13 @@
+uuid: 49e5097a-28a9-5c2a-a5d0-cb3602e56394
+slug: paramount-3d-flexpla-british-racing-green
+brand:
+  slug: paramount-3d
+name: FlexPLA (British Racing Green)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#1e5a4fff'
+tags:
+- industrially_compostable
+properties: {}

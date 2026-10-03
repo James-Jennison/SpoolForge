@@ -1,0 +1,14 @@
+uuid: 819a694f-ccc6-5cce-b247-67d4fa11cb98
+slug: tinmorry-galaxy-petg-green-gold
+brand:
+  slug: tinmorry
+name: Galaxy PETG Green Gold
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#555846ff'
+tags:
+- glitter
+- iridescent
+properties: {}

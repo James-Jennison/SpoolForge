@@ -1,0 +1,19 @@
+uuid: 0ca75bfe-7131-5861-b57b-dcd3989429a4
+slug: filamentpm-petg-black
+brand:
+  slug: filamentpm
+name: PETG - Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#373d3eff'
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-petg-black/6b0fe71e36f3.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 90

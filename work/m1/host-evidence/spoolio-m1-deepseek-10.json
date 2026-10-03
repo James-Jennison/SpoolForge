@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-deepseek-10",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Runtime acceptance",
+  "summary": "Physical NTAG215/PAXX/independent-reader and on-device p95 acceptance are not yet met; source-only/mocked success does not prove runtime.",
+  "claim": "Physical NTAG215/PAXX/independent-reader and on-device p95 acceptance are not yet met; source-only/mocked success does not prove runtime.",
+  "evidence": {
+    "source": "Evidence states 'No physical tag test' and 'Physical NTAG215/PAXX/independent-reader and on-device p95 acceptance are not yet met.' Package contains only compile/lint/unit test output, no real NFC hardware logs.",
+    "response_sha256": "9ce1f17a15210414355a99fa316c46989f28239b61a329155699d55078adf435"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Execute the required physical human gate: test on the Android2023 Razr with actual NTAG215 and PAXX tags, verify with an independent reader, and collect p95 acceptance metrics.",
+  "suggested_validation": "Physical test passes all hardware acceptance criteria, including on-device p95.",
+  "reviewer_confidence": "HIGH"
+}

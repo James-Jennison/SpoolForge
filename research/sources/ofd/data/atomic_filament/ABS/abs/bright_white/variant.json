@@ -1,0 +1,9 @@
+{
+  "uuid": "07a8f4bb-a0c6-4c6b-acb0-c06b7d7b2a99",
+  "id": "bright_white",
+  "name": "Bright White",
+  "color_hex": "#F5F5F4",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

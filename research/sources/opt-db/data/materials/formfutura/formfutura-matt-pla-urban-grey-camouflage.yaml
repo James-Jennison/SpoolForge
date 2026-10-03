@@ -1,0 +1,21 @@
+uuid: 626f4fc2-6669-5f1a-920d-90f0da3fb9fc
+slug: formfutura-matt-pla-urban-grey-camouflage
+brand:
+  slug: formfutura
+name: Matt PLA Urban Grey Camouflage
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#acb1baff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-matt-pla-urban-grey-camouflage/b51d5db36267.png
+    type: unspecified
+properties:
+  density: 1.38
+  min_print_temperature: 215
+  max_print_temperature: 235
+  min_bed_temperature: 50
+  max_bed_temperature: 60

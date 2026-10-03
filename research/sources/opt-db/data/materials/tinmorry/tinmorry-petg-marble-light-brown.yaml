@@ -1,0 +1,13 @@
+uuid: 10841ba2-45f7-52c4-9e71-3456d2f04c34
+slug: tinmorry-petg-marble-light-brown
+brand:
+  slug: tinmorry
+name: PETG Marble Light Brown
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e8dfd4ff'
+tags:
+- imitates_marble
+properties: {}

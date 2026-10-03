@@ -1,0 +1,19 @@
+uuid: 3e0a3f99-92a4-5337-9e0e-b52ca4af46e1
+slug: spectrum-greenypro-light-gray
+brand:
+  slug: spectrum
+name: GreenyPro Light Gray
+class: FFF
+abbreviation: BIO
+primary_color:
+  color_rgba: '#c5c5bfff'
+properties:
+  density: 1.34
+  min_print_temperature: 190
+  max_print_temperature: 220
+  max_bed_temperature: 45
+tags:
+- high_temperature
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-greenypro-light-gray/spectrum-greenypro-light-gray-0-08920a4f.jpg
+  type: unspecified

@@ -1,0 +1,21 @@
+uuid: 0f79a9c1-33a9-5b41-951b-f7a43dc82599
+slug: filamentpm-petg-metalic-edition-froggy-gold
+brand:
+  slug: filamentpm
+name: PETG metalic edition - Froggy Gold
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#6b665cff'
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-petg-metalic-edition-froggy-gold/dc0147593b64.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 90
+tags:
+  - imitates_metal

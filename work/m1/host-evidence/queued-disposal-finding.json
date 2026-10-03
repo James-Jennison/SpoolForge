@@ -1,0 +1,17 @@
+{
+  "finding_id": "spoolio-m1-lifecycle-deepseek-queued-disposal",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-cac82d6622a8",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Concurrency/Lifecycle",
+  "summary": "The shutdown fix only silences RejectedExecutionException for calls made after shutdown; it does not prevent tasks that were submitted before shutdown from executing after disposal and mutating state. shutdown() calls io.shutdown() but does not await termination or set a disposed flag checked inside tasks.",
+  "claim": "A tag scan or UI command that occurs just before disposal can still execute handle() or dispatch() after shutdown() returns. This may mutate WriteStateMachine, update journal, and post state/lastRead to the main looper after the ViewModel is cleared, causing a stale state update or an unexpected persisted journal entry in the next session.",
+  "evidence": {
+    "source": "NfcCoordinator.kt: shutdown(){io.shutdown()} and execute(){ try { io.execute { block() } } catch (_: RejectedExecutionException) { /* Callback arrived after ViewModel disposal. */ } }. Neither onTag() nor dispatch() checks a disposed flag. The Robolectric test allUiCommandsAfterCoordinatorDisposalAreHarmless calls shutdown() first, then arm/approveOverwrite/cancel/archiveUnknown, so it only proves new submissions are rejected; it does not cover a task queued before shutdown (e.g., onTag is submitted on the main thread, then ViewModel.onCleared calls shutdown before the single-thread executor starts the task). Java ExecutorService.shutdown() allows already-submitted tasks to run.",
+    "response_sha256": "a7ca939663491f79fc1f9261ef69f26c12e4a6c1485bf365d1f6dea249165ca3"
+  },
+  "suggested_remediation": "Introduce an explicit disposed flag (e.g., @Volatile private var disposed = false) set to true in shutdown(), and check it at the beginning of every task submitted to the executor, returning immediately if disposed. Additionally or alternatively, call shutdownNow() and/or awaitTermination() to cancel queued tasks, and ensure any post-disposal side effects are blocked.",
+  "suggested_validation": "Add a Robolectric test that queues a task (e.g., call onTag or arm) before calling shutdown(), then call shutdown() immediately before the executor thread runs the task. Wait for executor termination or main looper idle, then assert state remains DRAFT, journal has no new entries, and no main-posted state/lastRead change occurs.",
+  "reviewer_confidence": "HIGH"
+}

@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-gtin-import-deepseek-2",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-2ca7f46e3193",
+  "reviewer": "deepseek",
+  "severity": "LOW",
+  "category": "Provenance path retention",
+  "summary": "The record_pointer for community candidates omits the 'spoolmandb' subdirectory, making the path incomplete and not fully retained as required.",
+  "claim": "The provenance path is not unique if multiple compiled.json files exist in different subdirectories; auditability and exact source-path retention are weakened.",
+  "evidence": {
+    "source": "Community file is read from SRC/'spoolmandb/compiled.json' (community = read(SRC / 'spoolmandb/compiled.json')). In the community loop, pointer = f'compiled.json#/{i}'. This yields record_pointer values like 'compiled.json#/0' instead of 'spoolmandb/compiled.json#/0'. Other sources use relative paths from their source root (e.g., OFD pointer is relative to SRC/'ofd', OPT relative to SRC/'opt-db').",
+    "response_sha256": "64d105d73a84b284852947a2b0870cf62a4e6379c891f9c17d254457c4ba672f"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "tools"
+  ],
+  "suggested_remediation": "Change the pointer to include the subdirectory, e.g., pointer = str((SRC/'spoolmandb/compiled.json').relative_to(ROOT)) + f'#/{i}' or at least 'spoolmandb/compiled.json#/{i}'.",
+  "suggested_validation": "After build, query any community candidate's evidence_json.record_pointer and assert it starts with 'spoolmandb/compiled.json#'.",
+  "reviewer_confidence": "HIGH"
+}

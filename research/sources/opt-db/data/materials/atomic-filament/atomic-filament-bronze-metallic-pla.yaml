@@ -1,0 +1,15 @@
+uuid: 77b1ffd4-db73-543d-8333-b9d1c223cef7
+slug: atomic-filament-bronze-metallic-pla
+brand:
+  slug: atomic-filament
+name: Bronze Metallic PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://atomicfilament.com/products/bronze-metallic-pla-filament
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-bronze-metallic-pla/0ec6189f3c48.png
+  type: unspecified
+properties: {}

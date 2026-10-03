@@ -1,0 +1,23 @@
+uuid: 654e1986-665a-56b0-9f4f-6ca0e1fd15fe
+slug: fiberlogy-abs-yellow
+brand:
+  slug: fiberlogy
+name: ABS Yellow
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#fbe200ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-abs-yellow/3234e2ff1a4a.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 250
+  max_print_temperature: 265
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 240

@@ -1,0 +1,21 @@
+uuid: a138c201-80b5-5fa5-a64e-3ae13b910a7c
+slug: spectrum-asa-275-forest-green
+brand:
+  slug: spectrum
+name: ASA 275™ Forest Green
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#1daf5eff'
+properties:
+  density: 1.07
+  min_print_temperature: 200
+  max_print_temperature: 240
+  min_bed_temperature: 40
+  max_bed_temperature: 60
+tags:
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-asa-275-forest-green/spectrum-asa-275-forest-green-0-3edf6d01.jpg
+  type: unspecified

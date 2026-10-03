@@ -1,0 +1,15 @@
+uuid: df4fe09b-d6f3-5d84-a5fa-59a9ecd8d470
+slug: winkle-pla-hd-texture-marble
+brand:
+  slug: winkle
+name: PLA HD Texture Marble
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ecefedff'
+tags:
+- imitates_marble
+- industrially_compostable
+properties:
+  density: 1.24

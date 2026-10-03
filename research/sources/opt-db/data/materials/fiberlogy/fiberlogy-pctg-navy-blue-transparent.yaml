@@ -1,0 +1,23 @@
+uuid: 2a863e35-57d7-50cc-80c4-361bb3fa73ba
+slug: fiberlogy-pctg-navy-blue-transparent
+brand:
+  slug: fiberlogy
+name: PCTG Navy Blue Transparent
+class: FFF
+type: PCTG
+abbreviation: PCTG
+primary_color:
+  color_rgba: '#09048eff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-pctg-navy-blue-transparent/5d27775342cb.png
+    type: unspecified
+properties:
+  density: 1.23
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 240

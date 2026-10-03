@@ -1,0 +1,11 @@
+{
+  "uuid": "6485a090-4cf9-4a2a-aff2-7317b542b254",
+  "id": "silk_petg",
+  "name": "Silk PETG",
+  "diameter_tolerance": 0.02,
+  "density": 1.27,
+  "min_print_temperature": 220,
+  "max_print_temperature": 250,
+  "min_bed_temperature": 70,
+  "max_bed_temperature": 90
+}

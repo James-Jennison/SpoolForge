@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-closure-claude-3",
+  "disposition": "CONFIRMED",
+  "reason": "Actual migrated database summary and post-restart scoped UI output are included in lifecycle-closure-review.json. Prior package omission corrected; no physical RF claim.",
+  "evidence_reference": "work/m1/lifecycle-closure-review.json; work/m1/host-evidence/lifecycle-closure-build.log",
+  "resolved": true
+}

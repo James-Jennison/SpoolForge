@@ -1,0 +1,14 @@
+{
+  "uuid": "5bab7ca2-a6f0-45a2-b755-72e38a801873",
+  "id": "multicolor_polarlicht",
+  "name": "Multicolor Polarlicht",
+  "color_hex": [
+    "#97D7D0",
+    "#39B9DB",
+    "#0353BA"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "model": "motorola razr 2023",
+  "app_version": "0.7.0-m7",
+  "apk_sha256": "28ae6f09a2eca743ca91c69bd8fa5288c1bab7b48298afc01965edf482097fd7",
+  "migration_v5_to_v6": "PASS",
+  "progressive_disclosure_ui": "PASS",
+  "role_and_suitability_persistence": "PASS",
+  "nfc_payload_regression": "PASS",
+  "portable_identity_v1_regression": "PASS",
+  "spoolman_export_regression": "PASS",
+  "foreign_key_check": "PASS"
+}

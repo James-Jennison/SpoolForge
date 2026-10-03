@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-import-deepseek-1",
+  "disposition": "CONFIRMED",
+  "reason": "Community snapshot currently has no dual-scope row, but the identity collision was real for a valid future row. Community package identity now includes scope and the oracle asserts spool and refill identities differ.",
+  "evidence_reference": "tools/build_gtin_index.py; tools/verify_gtin_index.py; work/gtin/bundle-verification-final.log",
+  "resolved": true
+}

@@ -1,0 +1,14 @@
+uuid: 94302e80-d953-5d15-97e8-fdf0261ef8fe
+slug: tinmorry-silk-pla-iron-black
+brand:
+  slug: tinmorry
+name: Silk PLA Iron Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#4c4e56ff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

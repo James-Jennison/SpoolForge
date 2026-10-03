@@ -1,0 +1,19 @@
+uuid: cbaea7ee-fdc8-5e5b-b04d-9efa79e10570
+slug: hatchbox-brown-petg
+brand:
+  slug: hatchbox
+name: Brown PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#a54830ff'
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-brown-petg/79d179b0b79d.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 0
+  max_bed_temperature: 85

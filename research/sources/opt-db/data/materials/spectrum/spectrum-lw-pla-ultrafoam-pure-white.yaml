@@ -1,0 +1,21 @@
+uuid: df9d307d-c0de-5fcd-a20b-d4149914ef93
+slug: spectrum-lw-pla-ultrafoam-pure-white
+brand:
+  slug: spectrum
+name: LW-PLA UltraFoam Pure White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+  - foaming
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  min_bed_temperature: 40
+  max_bed_temperature: 50
+photos:
+  - url: https://files.openprinttag.org/spectrum/spectrum-lw-pla-ultrafoam-pure-white/spectrum-lw-pla-ultrafoam-pure-white-0-b2b649c3.jpg
+    type: unspecified

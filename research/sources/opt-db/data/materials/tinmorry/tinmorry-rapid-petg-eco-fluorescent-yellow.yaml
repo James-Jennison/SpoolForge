@@ -1,0 +1,13 @@
+uuid: 3182a52c-c930-55c1-b280-132ccf5b4887
+slug: tinmorry-rapid-petg-eco-fluorescent-yellow
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Fluorescent Yellow
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f2de00ff'
+tags:
+- neon
+properties: {}

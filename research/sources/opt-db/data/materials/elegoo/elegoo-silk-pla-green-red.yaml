@@ -1,0 +1,27 @@
+uuid: be4229ce-dc69-5d78-88af-b6f40963bfa4
+slug: elegoo-silk-pla-green-red
+brand:
+  slug: elegoo
+name: Silk PLA Green Red
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#3d9441ff'
+- color_rgba: '#ed1536ff'
+tags:
+- silk
+- industrially_compostable
+- coextruded
+photos:
+- url: https://files.openprinttag.org/elegoo/elegoo-silk-pla-green-red/a883807d34b8.png
+  type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 65
+  drying_temperature: 50
+  drying_time: 480
+  min_nozzle_diameter: 400

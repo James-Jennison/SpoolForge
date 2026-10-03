@@ -1,0 +1,10 @@
+{
+  "uuid": "54780129-3ec6-4cd7-857d-3745589ef2a8",
+  "id": "marble_grey",
+  "name": "Marble Grey",
+  "color_hex": "#8C9099",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

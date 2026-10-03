@@ -1,0 +1,21 @@
+uuid: 058f4345-7b56-5307-b14b-b36550b86fec
+slug: hatchbox-pastel-green-pla
+brand:
+  slug: hatchbox
+name: Pastel Green PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c0feabff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-pastel-green-pla/3c286e394cba.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 180
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 60

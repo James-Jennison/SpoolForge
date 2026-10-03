@@ -1,0 +1,21 @@
+uuid: 2f969cc5-4c08-5f5e-a386-f28694c342d6
+slug: formfutura-hdglass-see-through-black
+brand:
+  slug: formfutura
+name: HDglass See Through Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-hdglass-see-through-black/93de86d1c259.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 195
+  max_print_temperature: 225
+  min_bed_temperature: 80
+  max_bed_temperature: 90

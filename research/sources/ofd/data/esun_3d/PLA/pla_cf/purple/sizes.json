@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "1ddb6c7c-fe5d-4c54-b9ae-c501828df754",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/epla-cf"
+      }
+    ]
+  }
+]

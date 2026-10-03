@@ -1,0 +1,14 @@
+uuid: b5f6f827-61a7-538c-aca4-366b35c1ca4b
+slug: winkle-pla-hd-interference-dark-bronze
+brand:
+  slug: winkle
+name: PLA HD Interference Dark Bronze
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#573f35ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

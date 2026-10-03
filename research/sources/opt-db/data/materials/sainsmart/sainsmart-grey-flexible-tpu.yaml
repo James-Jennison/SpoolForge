@@ -1,0 +1,12 @@
+uuid: fb7a2ef0-45bb-5a93-ae1a-7f9ee2df2980
+slug: sainsmart-grey-flexible-tpu
+brand:
+  slug: sainsmart
+name: Grey, Flexible TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#6f727eff'
+properties:
+  hardness_shore_a: 95

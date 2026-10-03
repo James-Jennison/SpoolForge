@@ -1,0 +1,20 @@
+uuid: d8651733-cafe-5229-968c-557485d8e4a4
+slug: spectrum-pla-high-speed-telegrey
+brand:
+  slug: spectrum
+name: PLA High Speed Telegrey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#d6d7d8ff'
+tags:
+- high_speed
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-high-speed-telegrey/spectrum-pla-high-speed-telegrey-0-e9cbfb35.jpg
+  type: unspecified

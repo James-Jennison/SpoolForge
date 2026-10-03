@@ -1,0 +1,13 @@
+{
+  "uuid": "da09ff2c-2c71-46fb-a851-08863177a23f",
+  "id": "pink_ombr",
+  "name": "Pink Ombré",
+  "color_hex": [
+    "#F09BB5",
+    "#FF5786"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

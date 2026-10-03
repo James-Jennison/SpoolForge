@@ -1,0 +1,15 @@
+uuid: 22522f3e-7617-589e-921a-5f5064748607
+slug: smart-materials-3d-innovatefil-pa-ht
+brand:
+  slug: smart-materials-3d
+name: INNOVATEFIL® PA HT
+class: FFF
+abbreviation: PA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- high_temperature
+photos:
+- url: https://files.openprinttag.org/smart-materials-3d/smart-materials-3d-innovatefil-pa-ht/a24c5ce13b40.png
+  type: unspecified
+properties: {}

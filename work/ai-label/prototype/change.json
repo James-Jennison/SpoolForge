@@ -1,0 +1,21 @@
+{
+  "change_id": "filamajig-label-prototype-20260907",
+  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "summary": "Add debug-only hybrid camera label scanning with deterministic local code evidence, a loopback OpenAI Terra extraction service, provenance-aware merge, and mandatory field review before local save.",
+  "classification": "SUBSTANTIVE",
+  "affected_components": [
+    "android-camera",
+    "android-ui",
+    "label-service",
+    "local-provenance"
+  ],
+  "required_capabilities": [
+    "architecture",
+    "platform",
+    "adversarial"
+  ],
+  "provenance": {
+    "branch": "codex/m1-offline-openspool",
+    "scope": "Local development prototype and 2023 Razr acceptance; no production service, release, store submission, or NFC write"
+  }
+}

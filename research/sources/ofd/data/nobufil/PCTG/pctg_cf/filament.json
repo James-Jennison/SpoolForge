@@ -1,0 +1,11 @@
+{
+  "uuid": "86cb5394-4646-40e7-83b1-e6aaca99e474",
+  "id": "pctg_cf",
+  "name": "PCTG CF",
+  "diameter_tolerance": 0.02,
+  "density": 1.23,
+  "min_print_temperature": 230,
+  "max_print_temperature": 260,
+  "min_bed_temperature": 70,
+  "max_bed_temperature": 90
+}

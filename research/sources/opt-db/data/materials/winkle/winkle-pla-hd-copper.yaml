@@ -1,0 +1,14 @@
+uuid: bb66ad70-488a-5d6b-b6b7-86c0924d3e9a
+slug: winkle-pla-hd-copper
+brand:
+  slug: winkle
+name: PLA HD Copper
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#845239ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

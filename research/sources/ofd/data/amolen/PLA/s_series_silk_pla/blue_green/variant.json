@@ -1,0 +1,14 @@
+{
+  "uuid": "fe6d40df-9c8e-49b3-ab12-7e76a02b42ab",
+  "id": "blue_green",
+  "name": "Blue Green",
+  "color_hex": [
+    "#485CC7",
+    "#04A584",
+    "#F5F5F5"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

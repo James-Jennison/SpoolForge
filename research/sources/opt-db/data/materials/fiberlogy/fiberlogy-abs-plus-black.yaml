@@ -1,0 +1,23 @@
+uuid: 9adf46f6-3318-58ac-8b13-a512d95887c5
+slug: fiberlogy-abs-plus-black
+brand:
+  slug: fiberlogy
+name: ABS PLUS Black
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-abs-plus-black/242422122139.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 240

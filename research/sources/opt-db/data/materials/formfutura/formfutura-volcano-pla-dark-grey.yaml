@@ -1,0 +1,21 @@
+uuid: 81b1b9cd-d0c1-5dcd-8394-3a7408fda219
+slug: formfutura-volcano-pla-dark-grey
+brand:
+  slug: formfutura
+name: Volcano PLA Dark Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6a6c6eff'
+tags:
+  - matte
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-volcano-pla-dark-grey/8250e5e9061c.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 220
+  max_print_temperature: 255
+  max_bed_temperature: 60

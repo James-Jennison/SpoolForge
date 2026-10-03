@@ -1,0 +1,20 @@
+{
+  "change_id": "filamajig-full-spectrum-m7-20260908",
+  "cycle_id": "review-cycle-1cb8ed9895da",
+  "reviewer_job_id": "deepseek-250ad0cefdcc",
+  "reviewer": "deepseek",
+  "evidence": {
+    "reviewer": "DeepSeek INITIAL_REVIEW",
+    "response_sha256": "aa5e9afc99f1159920f4043e53a7548e3aab388b176df7470b89ad2a83ef7f9a"
+  },
+  "affected_components": [],
+  "immutable": true,
+  "finding_id": "m7-deepseek-migration-matrix",
+  "severity": "LOW",
+  "category": "migration-edge-cases",
+  "summary": "The review package did not enumerate evidence for all migration edge cases.",
+  "claim": "Less common upgrade and deletion paths could regress without visible evidence.",
+  "suggested_validation": "Exercise direct v5-to-v6, chained v4-to-v6, shared profiles, deletion, rollback retention, and foreign keys.",
+  "suggested_remediation": "Add or identify explicit migration-matrix tests and report them.",
+  "reviewer_confidence": "MEDIUM"
+}

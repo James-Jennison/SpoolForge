@@ -1,0 +1,11 @@
+uuid: 65a031e8-0742-56c5-a2b1-3b38b7137a26
+slug: tinmorry-asa-purple
+brand:
+  slug: tinmorry
+name: ASA Purple
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#7142a3ff'
+properties: {}

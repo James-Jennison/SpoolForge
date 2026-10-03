@@ -1,0 +1,24 @@
+uuid: 3675a641-5915-5010-8f43-bea0e9f2e964
+slug: esun-pla-matte-deep-black
+brand:
+  slug: esun
+name: PLA Matte Deep Black
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://esun3dstoreeu.com/products/epla-matte?VariantsId=12576
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - matte
+properties:
+  density: 1.329
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 45
+  max_bed_temperature: 60
+  drying_temperature: 50
+  drying_time: 480
+photos:
+  - url: https://files.openprinttag.org/esun/esun-pla-matte-deep-black/esun-pla-matte-deep-black-0-a8b31158.jpg
+    type: unspecified

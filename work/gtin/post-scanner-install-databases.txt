@@ -1,0 +1,9 @@
+total 6624
+-rw-rw---- 1 u0_a829 u0_a829 6615040 2026-09-07 03:56 catalog-e3888b68.db
+-rw-rw---- 1 u0_a829 u0_a829   32768 2026-09-07 07:01 catalog-e3888b68.db-shm
+-rw-rw---- 1 u0_a829 u0_a829       0 2026-09-07 04:17 catalog-e3888b68.db-wal
+-rw-rw---- 1 u0_a829 u0_a829   40960 2026-09-07 06:33 com.google.android.datatransport.events
+-rw------- 1 u0_a829 u0_a829       0 2026-09-07 06:33 com.google.android.datatransport.events-journal
+-rw-rw---- 1 u0_a829 u0_a829   32768 2026-09-07 06:09 user.db
+-rw-rw---- 1 u0_a829 u0_a829   32768 2026-09-07 07:01 user.db-shm
+-rw-rw---- 1 u0_a829 u0_a829   20632 2026-09-07 06:10 user.db-wal

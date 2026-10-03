@@ -1,0 +1,14 @@
+{
+  "uuid": "970809d1-487a-40d3-8581-fed6df91bc1c",
+  "id": "shadow_orange_orange_black",
+  "name": "Shadow Orange Orange Black",
+  "color_hex": [
+    "#F67405",
+    "#000000"
+  ],
+  "traits": {
+    "matte": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

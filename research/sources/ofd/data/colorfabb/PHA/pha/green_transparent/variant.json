@@ -1,0 +1,10 @@
+{
+  "uuid": "a12d1b48-51f6-4430-b586-69775748be0b",
+  "id": "green_transparent",
+  "name": "Green Transparent",
+  "color_hex": "#267F67",
+  "traits": {
+    "translucent": true,
+    "home_compostable": true
+  }
+}

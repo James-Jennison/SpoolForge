@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-empty-reconciliation-wording",
+  "disposition": "CONFIRMED",
+  "reason": "Fixed wording only; new regression passes. Targeted review pending; physical contradiction remains open.",
+  "evidence_reference": "work/m1/host-evidence/reconciliation-wording-build.log",
+  "resolved": false
+}

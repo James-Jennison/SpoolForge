@@ -1,0 +1,22 @@
+uuid: cda1a0ee-d036-582b-8ad9-1ea30d10dcb0
+slug: esun-super-tough-pla-grey
+brand:
+  slug: esun
+name: Super Tough PLA Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://esun3dstoreeu.com/products/epla-st?VariantsId=12136
+primary_color:
+  color_rgba: '#737282ff'
+tags:
+  - industrially_compostable
+properties:
+  density: 1.25
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 45
+  max_bed_temperature: 60
+photos:
+  - url: https://files.openprinttag.org/esun/esun-super-tough-pla-grey/a4a276d950ee.jpg
+    type: unspecified

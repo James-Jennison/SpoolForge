@@ -1,0 +1,67 @@
+[
+  {
+    "uuid": "14823a18-af54-4586-ac46-440120393469",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5905991404262",
+    "article_number": "81359",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1855-Filament-Spectrum-ReFill-PET-G-Premium-1-75mm-NAVY-BLUE-1kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "3c3e5b6f-f168-4a81-b85a-ae894a8e3512",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5903175652119",
+    "article_number": "80309",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1218-Filament-Spectrum-PET-G-Premium-1-75mm-NAVY-BLUE-1kg-RAL-5002.html"
+      }
+    ]
+  },
+  {
+    "uuid": "f8cb0bdf-9e44-49db-a688-79c7a23bf2b4",
+    "filament_weight": 2000,
+    "diameter": 1.75,
+    "ean": "5903175654281",
+    "article_number": "80640",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1474-Filament-Spectrum-Premium-PET-G-1-75mm-NAVY-BLUE-2kg-RAL-5002.html"
+      }
+    ]
+  },
+  {
+    "uuid": "6427f00c-715c-4d89-9a26-0aebc505077a",
+    "filament_weight": 4500,
+    "diameter": 1.75,
+    "ean": "5903175654243",
+    "article_number": "80632",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1430-Filament-Spectrum-Premium-PET-G-1-75mm-NAVY-BLUE-4-5kg-RAL-5002.html"
+      }
+    ]
+  },
+  {
+    "uuid": "7677879b-ec81-49a5-9a7a-775006c39f5e",
+    "filament_weight": 8000,
+    "diameter": 1.75,
+    "ean": "5903175654632",
+    "article_number": "80685",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1470-Filament-Spectrum-Premium-PET-G-1-75mm-NAVY-BLUE-8kg-RAL-5002.html"
+      }
+    ]
+  }
+]

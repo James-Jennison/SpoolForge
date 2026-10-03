@@ -1,0 +1,22 @@
+uuid: b23a91e6-5a07-5c0a-b028-336c4b818180
+slug: formfutura-hdglass-pastel-green-stained
+brand:
+  slug: formfutura
+name: HDglass Pastel Green Stained
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#98aa7aff'
+tags:
+  - silk
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-hdglass-pastel-green-stained/434edcf43419.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 195
+  max_print_temperature: 225
+  min_bed_temperature: 80
+  max_bed_temperature: 90

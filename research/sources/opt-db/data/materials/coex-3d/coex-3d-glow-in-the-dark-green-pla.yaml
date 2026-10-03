@@ -1,0 +1,21 @@
+uuid: 491810a9-96ae-53cd-b186-d0a7439bc504
+slug: coex-3d-glow-in-the-dark-green-pla
+brand:
+  slug: coex-3d
+name: Glow in the Dark Green PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#06b100ff'
+secondary_colors:
+- color_rgba: '#f0ebe5ff'
+tags:
+- glow_in_the_dark
+- illuminescent_color_change
+- abrasive
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/coex-3d/coex-3d-glow-in-the-dark-green-pla/63ae2bb666c8.png
+  type: unspecified
+properties: {}

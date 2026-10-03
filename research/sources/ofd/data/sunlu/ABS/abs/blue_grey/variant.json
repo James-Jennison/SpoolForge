@@ -1,0 +1,9 @@
+{
+  "uuid": "f24ca53e-e295-4866-831f-f0b9e781503b",
+  "id": "blue_grey",
+  "name": "Blue Grey",
+  "color_hex": "#6299DF",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

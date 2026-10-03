@@ -1,0 +1,15 @@
+uuid: 21b4eb14-767f-5d7c-9914-5f8a0e478e53
+slug: coex-3d-black-coexflex-60d-tpe
+brand:
+  slug: coex-3d
+name: Black CoexFlex™ 60D TPE
+class: FFF
+type: TPE
+abbreviation: TPE
+primary_color:
+  color_rgba: '#000000ff'
+photos:
+- url: https://files.openprinttag.org/coex-3d/coex-3d-black-coexflex-60d-tpe/cff5821e5b14.png
+  type: unspecified
+properties:
+  hardness_shore_d: 60

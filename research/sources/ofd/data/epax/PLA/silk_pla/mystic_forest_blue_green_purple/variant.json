@@ -1,0 +1,14 @@
+{
+  "uuid": "5b71f501-eed5-4fc3-bb95-d83a9a90a74b",
+  "id": "mystic_forest_blue_green_purple",
+  "name": "Mystic Forest (Blue / Green / Purple)",
+  "color_hex": [
+    "#4921C1",
+    "#008059",
+    "#A000CA"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

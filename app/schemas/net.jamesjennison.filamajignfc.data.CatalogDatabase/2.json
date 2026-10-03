@@ -1,0 +1,220 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "b51ed4534e9fae315e5fc331a3d9f542",
+    "entities": [
+      {
+        "tableName": "catalog_entries",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`package_id` TEXT NOT NULL, `variant_id` TEXT NOT NULL, `product_id` TEXT NOT NULL, `brand` TEXT NOT NULL, `material` TEXT NOT NULL, `product` TEXT NOT NULL, `color_name` TEXT NOT NULL, `color_hex` TEXT NOT NULL, `diameter_mm` TEXT NOT NULL, `mass_g` INTEGER NOT NULL, `nozzle_min_c` INTEGER, `nozzle_max_c` INTEGER, `bed_min_c` INTEGER, `bed_max_c` INTEGER, `gtin` TEXT, `sku` TEXT, `source_revision` TEXT NOT NULL, `additional_color_hexes` TEXT NOT NULL, PRIMARY KEY(`package_id`))",
+        "fields": [
+          {
+            "fieldPath": "packageId",
+            "columnName": "package_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "productId",
+            "columnName": "product_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "brand",
+            "columnName": "brand",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "material",
+            "columnName": "material",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "product",
+            "columnName": "product",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorName",
+            "columnName": "color_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorHex",
+            "columnName": "color_hex",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diameterMm",
+            "columnName": "diameter_mm",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "massG",
+            "columnName": "mass_g",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nozzleMinC",
+            "columnName": "nozzle_min_c",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "nozzleMaxC",
+            "columnName": "nozzle_max_c",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "bedMinC",
+            "columnName": "bed_min_c",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "bedMaxC",
+            "columnName": "bed_max_c",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "gtin",
+            "columnName": "gtin",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sku",
+            "columnName": "sku",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceRevision",
+            "columnName": "source_revision",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "additionalColorHexes",
+            "columnName": "additional_color_hexes",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "package_id"
+          ]
+        }
+      },
+      {
+        "tableName": "catalog_fts",
+        "createSql": "CREATE VIRTUAL TABLE IF NOT EXISTS `${TABLE_NAME}` USING FTS4(`brand` TEXT NOT NULL, `material` TEXT NOT NULL, `product` TEXT NOT NULL, `color_name` TEXT NOT NULL, content=`catalog_entries`)",
+        "fields": [
+          {
+            "fieldPath": "brand",
+            "columnName": "brand",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "material",
+            "columnName": "material",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "product",
+            "columnName": "product",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorName",
+            "columnName": "color_name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": []
+        },
+        "ftsVersion": "FTS4",
+        "ftsOptions": {
+          "tokenizer": "simple",
+          "tokenizerArgs": [],
+          "contentTable": "catalog_entries",
+          "languageIdColumnName": "",
+          "matchInfo": "FTS4",
+          "notIndexedColumns": [],
+          "prefixSizes": [],
+          "preferredOrder": "ASC"
+        },
+        "contentSyncTriggers": [
+          "CREATE TRIGGER IF NOT EXISTS room_fts_content_sync_catalog_fts_BEFORE_UPDATE BEFORE UPDATE ON `catalog_entries` BEGIN DELETE FROM `catalog_fts` WHERE `docid`=OLD.`rowid`; END",
+          "CREATE TRIGGER IF NOT EXISTS room_fts_content_sync_catalog_fts_BEFORE_DELETE BEFORE DELETE ON `catalog_entries` BEGIN DELETE FROM `catalog_fts` WHERE `docid`=OLD.`rowid`; END",
+          "CREATE TRIGGER IF NOT EXISTS room_fts_content_sync_catalog_fts_AFTER_UPDATE AFTER UPDATE ON `catalog_entries` BEGIN INSERT INTO `catalog_fts`(`docid`, `brand`, `material`, `product`, `color_name`) VALUES (NEW.`rowid`, NEW.`brand`, NEW.`material`, NEW.`product`, NEW.`color_name`); END",
+          "CREATE TRIGGER IF NOT EXISTS room_fts_content_sync_catalog_fts_AFTER_INSERT AFTER INSERT ON `catalog_entries` BEGIN INSERT INTO `catalog_fts`(`docid`, `brand`, `material`, `product`, `color_name`) VALUES (NEW.`rowid`, NEW.`brand`, NEW.`material`, NEW.`product`, NEW.`color_name`); END"
+        ]
+      },
+      {
+        "tableName": "catalog_metadata",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `revision` TEXT NOT NULL, `asset_sha256` TEXT NOT NULL, `content_sha256` TEXT NOT NULL, `package_count` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "revision",
+            "columnName": "revision",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "assetSha256",
+            "columnName": "asset_sha256",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contentSha256",
+            "columnName": "content_sha256",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "packageCount",
+            "columnName": "package_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b51ed4534e9fae315e5fc331a3d9f542')"
+    ]
+  }
+}

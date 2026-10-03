@@ -1,0 +1,21 @@
+uuid: 1f4f064c-f3b7-5611-bd71-ec73c06a0855
+slug: spectrum-pet-g-glitter-stardust-blue
+brand:
+  slug: spectrum
+name: PET-G Glitter Stardust Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#436176ff'
+tags:
+- glitter
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pet-g-glitter-stardust-blue/spectrum-pet-g-glitter-stardust-blue-0-3f65bc96.jpg
+  type: unspecified

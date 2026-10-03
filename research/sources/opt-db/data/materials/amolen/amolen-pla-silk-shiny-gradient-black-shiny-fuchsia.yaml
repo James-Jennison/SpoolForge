@@ -1,0 +1,27 @@
+uuid: 23b89810-65da-54e1-8dcc-4c0809c56c02
+slug: amolen-pla-silk-shiny-gradient-black-shiny-fuchsia
+brand:
+  slug: amolen
+name: PLA Silk Shiny Gradient Black & Shiny Fuchsia
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://www.amolen.com/products/pla-silk-shiny
+secondary_colors:
+- color_rgba: '#000000ff'
+- color_rgba: '#d200a5ff'
+tags:
+- silk
+- gradual_color_change
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-silk-shiny-gradient-black-shiny-fuchsia/DSC01904.jpg
+  type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

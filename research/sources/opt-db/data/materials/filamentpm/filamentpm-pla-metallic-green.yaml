@@ -1,0 +1,22 @@
+uuid: 1ae31c65-3d7f-573f-9ed2-759dece543ca
+slug: filamentpm-pla-metallic-green
+brand:
+  slug: filamentpm
+name: PLA - Metallic Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#18332fff'
+tags:
+  - imitates_metal
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-pla-metallic-green/91a32e6703cc.png
+    type: unspecified
+properties:
+  density: 1.24
+  hardness_shore_d: 78.3
+  min_print_temperature: 200
+  max_print_temperature: 220
+  min_bed_temperature: 20
+  max_bed_temperature: 60

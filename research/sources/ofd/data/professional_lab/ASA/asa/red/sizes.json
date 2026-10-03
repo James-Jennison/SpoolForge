@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "16d79a2b-fbd3-41a8-b75b-4ff0517ca19a",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 180,
+    "spool_core_diameter": 75,
+    "gtin": "5903707922284",
+    "article_number": "FG-P138-E1",
+    "discontinued": false
+  }
+]

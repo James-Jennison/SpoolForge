@@ -1,0 +1,16 @@
+{
+  "uuid": "cecb77cd-ebc1-44f9-96f6-267a1f1e5280",
+  "id": "purple_yellow_green",
+  "name": "Purple, Yellow, Green",
+  "color_hex": [
+    "#00A594",
+    "#EA9E3F",
+    "#583061",
+    "#E72F1D"
+  ],
+  "traits": {
+    "glitter": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

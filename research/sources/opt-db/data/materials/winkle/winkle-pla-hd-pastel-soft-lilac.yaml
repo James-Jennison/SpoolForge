@@ -1,0 +1,14 @@
+uuid: 76effa7c-1b93-5ef3-8341-22d0f4db3911
+slug: winkle-pla-hd-pastel-soft-lilac
+brand:
+  slug: winkle
+name: PLA HD Pastel Soft Lilac
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#dabcc8ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

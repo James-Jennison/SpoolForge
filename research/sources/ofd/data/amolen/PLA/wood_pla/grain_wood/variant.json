@@ -1,0 +1,14 @@
+{
+  "uuid": "9580f9b2-0ba4-4fa4-8cec-de32a190d9ad",
+  "id": "grain_wood",
+  "name": "Grain Wood",
+  "color_hex": [
+    "#C65E0A",
+    "#BD917E"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "contains_wood": true
+  }
+}

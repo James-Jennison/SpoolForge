@@ -1,0 +1,19 @@
+uuid: 8562d8ed-46ea-5c61-ada4-17ee85f3d387
+slug: formfutura-python-flex-tpu-90a-skin-tone-id4
+brand:
+  slug: formfutura
+name: Python Flex TPU 90A Skin Tone ID4
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#e6be92ff'
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-python-flex-tpu-90a-skin-tone-id4/44b4bbcda068.png
+    type: unspecified
+properties:
+  density: 1.22
+  hardness_shore_a: 90.0
+  min_print_temperature: 220
+  max_print_temperature: 250
+  max_bed_temperature: 60

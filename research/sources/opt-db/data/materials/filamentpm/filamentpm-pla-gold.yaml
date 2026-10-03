@@ -1,0 +1,22 @@
+uuid: c8ab1b1f-8d7b-5d16-8a2c-0993c9820528
+slug: filamentpm-pla-gold
+brand:
+  slug: filamentpm
+name: PLA - Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#cb8e00ff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-pla-gold/e15b916ca786.png
+    type: unspecified
+properties:
+  density: 1.24
+  hardness_shore_d: 78.3
+  min_print_temperature: 200
+  max_print_temperature: 220
+  min_bed_temperature: 20
+  max_bed_temperature: 60

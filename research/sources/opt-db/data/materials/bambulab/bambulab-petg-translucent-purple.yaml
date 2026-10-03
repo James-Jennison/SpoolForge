@@ -1,0 +1,23 @@
+uuid: d23624f4-a5f3-5b2a-9a82-38842ca17545
+slug: bambulab-petg-translucent-purple
+brand:
+  slug: bambulab
+name: PETG Translucent Purple
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#d6abffff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-translucent-purple/834dbbc03ca2.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

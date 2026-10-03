@@ -1,0 +1,21 @@
+uuid: 9d3850d4-4a24-564a-8e0e-36d509ae438f
+slug: formfutura-volcano-pla-light-grey
+brand:
+  slug: formfutura
+name: Volcano PLA Light Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c3ccd5ff'
+tags:
+  - matte
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-volcano-pla-light-grey/e6cdacb1dc0a.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 220
+  max_print_temperature: 255
+  max_bed_temperature: 60

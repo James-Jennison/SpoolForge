@@ -1,0 +1,22 @@
+uuid: 4858f6d4-df76-52bc-8494-1e48d666d3ef
+slug: filamentpm-pla-metallic-violet
+brand:
+  slug: filamentpm
+name: PLA - Metallic Violet
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#8d6e97ff'
+tags:
+  - imitates_metal
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-pla-metallic-violet/fd8a984670f7.png
+    type: unspecified
+properties:
+  density: 1.24
+  hardness_shore_d: 78.3
+  min_print_temperature: 200
+  max_print_temperature: 220
+  min_bed_temperature: 20
+  max_bed_temperature: 60

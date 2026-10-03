@@ -1,0 +1,77 @@
+[
+  {
+    "uuid": "540da7be-da26-4f56-967e-d54111a2d8ee",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "PLAE-175UBLU-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epla"
+      }
+    ]
+  },
+  {
+    "uuid": "014af02d-9a17-4f8a-b450-23cfac3a2e2e",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "empty_spool_weight": 20,
+    "article_number": "PLAE-175UBLU-B1000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epla"
+      }
+    ]
+  },
+  {
+    "uuid": "9c5c5307-d90b-4237-97e9-77755fb504f5",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "PLAE-175UBLU-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epla"
+      }
+    ]
+  },
+  {
+    "uuid": "7504246c-bf5e-43e8-9078-34e26c90ccc1",
+    "filament_weight": 4500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "PLAE-175UBLU-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epla"
+      }
+    ]
+  },
+  {
+    "uuid": "aa3c23fa-9f06-48f7-a87a-9caee08b5aa5",
+    "filament_weight": 8000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 1040,
+    "article_number": "PLAE-175UBLU-08000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epla"
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+uuid: e1d1017e-5d98-527c-81ff-13e8eab5b44e
+slug: spectrum-huracan-pla-fresh-green
+brand:
+  slug: spectrum
+name: Huracan PLA Fresh Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#26a648ff'
+tags:
+- silk
+- industrially_compostable
+properties:
+  density: 1.22
+  min_print_temperature: 190
+  max_print_temperature: 230
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-huracan-pla-fresh-green/spectrum-huracan-pla-fresh-green-0-7991ceb4.jpg
+  type: unspecified

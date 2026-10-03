@@ -1,0 +1,17 @@
+uuid: feff46a9-a5bc-5f0b-a272-35ff9367a643
+slug: ziro-3d-stripes-matte-pla-fast-color-change-lava-stripes
+brand:
+  slug: ziro-3d
+name: Stripes Matte PLA Fast Color Change Lava Stripes
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#da445aff'
+- color_rgba: '#ff9d5bff'
+- color_rgba: '#7a838eff'
+tags:
+- matte
+- coextruded
+- industrially_compostable
+properties: {}

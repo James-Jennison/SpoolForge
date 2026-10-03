@@ -1,0 +1,23 @@
+uuid: 501723f5-6b5c-5602-9b73-6e71a9ed7915
+slug: spectrum-abs-kevlar-black
+brand:
+  slug: spectrum
+name: ABS Kevlar Black
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- contains_kevlar
+- abrasive
+- filtration_recommended
+properties:
+  density: 1.05
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 100
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-abs-kevlar-black/spectrum-abs-kevlar-black-0-81c83ba5.jpg
+  type: unspecified

@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-closure-deepseek-3",
+  "disposition": "CONFIRMED",
+  "reason": "Community identity now derives from its unique upstream ID and package scope, independent of row pointer. The build fails if Community IDs cease to be unique, and the oracle asserts row movement does not change identity.",
+  "evidence_reference": "tools/build_gtin_index.py; tools/verify_gtin_index.py; work/gtin/bundle-verification-stable-id.log",
+  "resolved": true
+}

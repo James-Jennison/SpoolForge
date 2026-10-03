@@ -1,0 +1,16 @@
+{
+  "uuid": "0913e31d-7527-48d2-a0dd-b3341dd410eb",
+  "id": "transparent_multicolor_rainbow",
+  "name": "Transparent Multicolor Rainbow",
+  "color_hex": [
+    "#0095FF",
+    "#00CC00",
+    "#FF8400",
+    "#FFFB00",
+    "#ED2602"
+  ],
+  "traits": {
+    "translucent": true,
+    "gradual_color_change": true
+  }
+}

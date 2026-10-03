@@ -1,0 +1,13 @@
+{
+  "uuid": "454222ee-cf0a-4d25-b460-8e14b2159d84",
+  "id": "golden_ember",
+  "name": "Golden Ember",
+  "color_hex": [
+    "#DA445A",
+    "#DDB95D"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

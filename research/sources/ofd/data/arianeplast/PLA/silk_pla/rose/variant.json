@@ -1,0 +1,9 @@
+{
+  "uuid": "7d096323-3fdc-49fc-ab42-4a6328236576",
+  "id": "rose",
+  "name": "Rose",
+  "color_hex": "#F79DBC",
+  "traits": {
+    "silk": true
+  }
+}

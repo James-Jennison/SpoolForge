@@ -1,0 +1,12 @@
+uuid: 77e4563f-b55a-53e3-adcc-5ef3c37d6d1b
+slug: sainsmart-white-flexible-tpu
+brand:
+  slug: sainsmart
+name: White, Flexible TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#ffffffff'
+properties:
+  hardness_shore_a: 90

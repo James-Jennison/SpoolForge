@@ -1,0 +1,18 @@
+uuid: a0a8542d-ec57-5a61-9a0e-b2992afa6c25
+slug: addnorth-e-pla-white
+brand:
+  slug: addnorth
+name: E-PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-e-pla-white/999b2cba9ceb.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 205
+  max_print_temperature: 225
+  max_bed_temperature: 60

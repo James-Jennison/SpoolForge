@@ -1,0 +1,24 @@
+uuid: 4381f1b0-7875-58b2-ae5d-33e18ac5cf04
+slug: polymaker-panchroma-matte-pla-wine-burgundy
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Wine Burgundy
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#753e4cff'
+tags:
+- matte
+photos:
+- url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-wine-burgundy/polymaker-panchroma-matte-pla-wine-burgundy-0-25d3482a.jpg
+  type: unspecified
+transmission_distance: 0.1
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

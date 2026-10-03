@@ -1,0 +1,11 @@
+uuid: 0f610e48-90e0-58c4-b5bb-fcf116b96584
+slug: tinmorry-rapid-petg-eco-olive-green
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Olive Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#857c00ff'
+properties: {}

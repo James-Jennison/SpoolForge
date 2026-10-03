@@ -1,0 +1,9 @@
+{
+  "uuid": "9e60e382-e9bb-46b7-b0bb-e2fa08401209",
+  "id": "red",
+  "name": "Red",
+  "color_hex": "#D32941",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

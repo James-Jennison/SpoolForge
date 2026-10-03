@@ -1,0 +1,24 @@
+uuid: 90711041-d453-5104-bd0a-2c15fee37978
+slug: fiberlogy-fiberwood-black
+brand:
+  slug: fiberlogy
+name: FiberWood Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - imitates_wood
+  - contains_wood
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-fiberwood-black/91c978623bc2.png
+    type: unspecified
+properties:
+  density: 1.3
+  min_print_temperature: 180
+  max_print_temperature: 200
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 360

@@ -1,0 +1,21 @@
+uuid: 6c2697b4-2c40-5037-bf07-ea1bea3e7e82
+slug: spectrum-pet-g-premium-glassy
+brand:
+  slug: spectrum
+name: PET-G Premium Glassy
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e4e7e5ff'
+tags:
+- transparent
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pet-g-premium-glassy/spectrum-pet-g-premium-glassy-0-212e3c25.jpg
+  type: unspecified

@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-codex-catalog-colors",
+  "disposition": "CONFIRMED",
+  "reason": "Measured independently against pinned source; remediation is assigned in HOST_REMEDIATION_DIRECTION.md.",
+  "evidence_reference": "work/m1/host-evidence/catalog-source-oracle.json",
+  "resolved": false
+}

@@ -1,0 +1,17 @@
+uuid: 4ca9ca0b-d857-56c7-b779-f97ad9937e47
+slug: qidi-petg-rapido-yellow
+brand:
+  slug: qidi
+name: PETG Rapido Yellow
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#fce300ff'
+tags:
+- high_speed
+properties:
+  density: 1.31
+photos:
+- url: https://files.openprinttag.org/qidi/qidi-petg-rapido-yellow/qidi-petg-rapido-yellow-0-5198e957.jpg
+  type: unspecified

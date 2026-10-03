@@ -1,0 +1,11 @@
+uuid: 6dedf9ed-33b3-5e73-924f-e6076bafd391
+slug: print-with-smile-pet-g-metallic-blue
+brand:
+  slug: print-with-smile
+name: PET-G Metallic BLUE
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#2c3294ff'
+properties: {}

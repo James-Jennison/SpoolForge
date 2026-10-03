@@ -1,0 +1,15 @@
+uuid: 2c6e1762-f3c6-526a-8b2a-cbc1793fa562
+slug: tinmorry-carbon-fiber-pet-matt-black
+brand:
+  slug: tinmorry
+name: Carbon Fiber PET Matt Black
+class: FFF
+type: PET
+abbreviation: PET
+primary_color:
+  color_rgba: '#26272bff'
+tags:
+- matte
+- contains_carbon_fiber
+- abrasive
+properties: {}

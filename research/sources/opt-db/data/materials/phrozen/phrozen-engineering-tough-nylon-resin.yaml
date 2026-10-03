@@ -1,0 +1,12 @@
+uuid: a858155b-2fca-5076-bc3b-6972e3667256
+slug: phrozen-engineering-tough-nylon-resin
+brand:
+  slug: phrozen
+name: Engineering Tough Nylon Resin
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#b3df3aff'
+tags:
+- transparent
+properties: {}

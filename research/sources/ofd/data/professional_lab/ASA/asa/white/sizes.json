@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "f88be69d-06c1-41d5-a08d-06f4ba3aea4f",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 180,
+    "spool_core_diameter": 75,
+    "gtin": "5903707922239",
+    "article_number": "FG-P133-E1",
+    "discontinued": false
+  }
+]

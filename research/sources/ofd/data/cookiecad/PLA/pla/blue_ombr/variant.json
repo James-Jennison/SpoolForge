@@ -1,0 +1,13 @@
+{
+  "uuid": "5712b9e8-fce2-49e0-b819-f49c2b20275d",
+  "id": "blue_ombr",
+  "name": "Blue Ombré",
+  "color_hex": [
+    "#39B9DB",
+    "#0066D9"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

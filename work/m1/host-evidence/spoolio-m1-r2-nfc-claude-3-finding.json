@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-nfc-claude-3",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-d04a66d06bba",
+  "reviewer": "claude",
+  "severity": "LOW",
+  "category": "NFC write coordinator / dead code",
+  "summary": "The `existingOpenSpool.size>1` ambiguity check in NfcCoordinator.handle() is unreachable: the preceding `records.size>1 || (records.isNotEmpty() && existingOpenSpool.size!=1)` check already returns for any tag with more than one record, so `existingOpenSpool.size` (a subset of `records`) can never exceed 1 by the time the second check runs.",
+  "claim": "No functional defect (the tag is still correctly rejected before writing), but the more specific 'Multiple OpenSpool records' diagnostic message can never be shown to the user, and the dead branch may mislead a future maintainer into thinking it handles a case the first check doesn't already cover.",
+  "evidence": {
+    "source": "NfcCoordinator.kt: `if(records.size>1||records.isNotEmpty()&&existingOpenSpool.size!=1){...\"ambiguous and will not be overwritten\"...return}` followed immediately by `if(existingOpenSpool.size>1){...\"Multiple OpenSpool records are ambiguous\"...return}`, where both `records` and `existingOpenSpool` are derived from the same `current?.records`.",
+    "response_sha256": "d6d71aae2d028242a00be48b5f18e4566107f046cfee292ddd5d03a59e223f5e"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "Remove the unreachable branch, or reorder the checks if a more specific message for the multi-OpenSpool-record case is actually desired.",
+  "suggested_validation": "Code coverage/branch-coverage check confirming the second condition is never true in any test scenario, or a unit test constructing a tag with >1 OpenSpool records to show which message actually surfaces today.",
+  "reviewer_confidence": "HIGH"
+}

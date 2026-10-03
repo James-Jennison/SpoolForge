@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-claude-7",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "claude",
+  "severity": "LOW",
+  "category": "Resource lifecycle",
+  "summary": "NfcCoordinator's single-thread executor is never shut down; `MainViewModel` has no `onCleared()` override to release it.",
+  "claim": "NfcCoordinator's single-thread executor is never shut down; `MainViewModel` has no `onCleared()` override to release it.",
+  "evidence": {
+    "source": "NfcCoordinator (NfcCoordinator.kt) creates `io = Executors.newSingleThreadExecutor()` with no exposed shutdown method; MainViewModel.kt defines no `onCleared()` override.",
+    "response_sha256": "24d3990562d67e978414fe65adda6f7e9777b1af1f8ae914bef77ccc315c4478"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Add `NfcCoordinator.shutdown()` (calling `io.shutdown()`) invoked from `MainViewModel.onCleared()`.",
+  "suggested_validation": "Instrumented test confirming background thread count returns to baseline after the ViewModel is cleared.",
+  "reviewer_confidence": "MEDIUM \u2014 leak mechanics are standard, but real-world severity in this single-Activity app is minor."
+}

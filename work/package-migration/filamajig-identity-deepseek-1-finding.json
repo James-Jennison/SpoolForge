@@ -1,0 +1,21 @@
+{
+  "finding_id": "filamajig-identity-deepseek-1",
+  "change_id": "filamajig-identity-camera-20260907",
+  "cycle_id": "review-cycle-f05713ab14ba",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Barcode scanning normalization / input validation",
+  "summary": "The implemented barcode normalizer applies GTIN normalization to any checksum-valid numeric payload from any decoded barcode format, not just QR codes. The architecture decision states 'Only checksum-valid all-numeric QR payloads normalize as GTIN; URLs, arbitrary text and Amazon FNSKU values are rejected,' but the code path `normalizeDecodedBarcode` calls `Gtin.normalize(text)` unconditionally for all formats except UPC_E, including linear formats such as ITF, CODE_39, and CODABAR. This can accept a non-GTIN numeric barcode that happens to have a valid GTIN length and check digit, contradicting the constrained scanning objective.",
+  "claim": "A package label with a linear numeric barcode (e.g., an internal code or marketplace barcode that is not a retail GTIN) will be misclassified as a GTIN, leading to incorrect exact-barcode lookup, wrong barcode evidence, and potential erroneous GTIN data written to a tag. This undermines the requirement to reject non-GTIN marketplace barcodes and may cause user confusion or data corruption.",
+  "evidence": {
+    "source": "Source `camera.kt` in `normalizeDecodedBarcode`: after the UPC_E special case, the code executes `Gtin.normalize(text)?.let { return it }` without checking `result.barcodeFormat == BarcodeFormat.QR_CODE` or applying FNSKU pattern rejection. The `barcodeReader()` hints enable EAN_13, EAN_8, UPC_A, UPC_E, ITF, CODE_128, CODE_39, CODABAR, and QR_CODE. Existing unit tests only reject an alphanumeric FNSKU and URL; no test for a numeric non-GTIN payload from a non-QR format. The architecture decision bullet explicitly limits normalization to QR payloads, but the code does not.",
+    "response_sha256": "a719b73c040844c136e6b7eb71370dd0e62eca5bbadb2e0ac630b20a64b175fe"
+  },
+  "affected_components": [
+    "app",
+    "docs"
+  ],
+  "suggested_remediation": "Enforce that only QR_CODE format with all-numeric payload and valid GTIN normalization is accepted as a direct GTIN, or explicitly define and restrict which linear formats are allowed and use format-specific extraction (e.g., only EAN/UPC and GS1 AI (01) from CODE_128). Update the architecture decision to match the actual intended behavior. Add explicit rejection for known Amazon FNSKU patterns if required.",
+  "suggested_validation": "Add unit tests that feed a checksum-valid numeric string of GTIN length from CODE_39, CODABAR, or ITF and assert rejection unless the format is explicitly allowed by policy. Also test numeric FNSKU-like values are rejected. Verify live scanning still accepts valid EAN/UPC and numeric QR payloads as intended.",
+  "reviewer_confidence": "MEDIUM"
+}

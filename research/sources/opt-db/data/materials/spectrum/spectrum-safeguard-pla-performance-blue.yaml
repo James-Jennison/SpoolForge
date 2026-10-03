@@ -1,0 +1,20 @@
+uuid: 6fc33989-e2e4-5e3e-adeb-21e80e403e67
+slug: spectrum-safeguard-pla-performance-blue
+brand:
+  slug: spectrum
+name: Safeguard PLA Performance Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0066d9ff'
+tags:
+- antibacterial
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-safeguard-pla-performance-blue/spectrum-safeguard-pla-performance-blue-0-95b7af06.jpg
+  type: unspecified

@@ -1,0 +1,13 @@
+uuid: dbef32ac-bb1e-5152-9017-3e142851f555
+slug: tinmorry-rapid-pla-yellow
+brand:
+  slug: tinmorry
+name: Rapid PLA Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f2de00ff'
+tags:
+- industrially_compostable
+properties: {}

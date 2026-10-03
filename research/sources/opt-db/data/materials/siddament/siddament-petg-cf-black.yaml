@@ -1,0 +1,14 @@
+uuid: d82aab77-65ce-5153-b93e-62efa26e1c21
+slug: siddament-petg-cf-black
+brand:
+  slug: siddament
+name: PETG CF Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#232323ff'
+tags:
+- contains_carbon_fiber
+- abrasive
+properties: {}

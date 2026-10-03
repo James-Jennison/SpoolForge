@@ -1,0 +1,13 @@
+uuid: 03ff6cb6-bf08-5e08-b232-03ec994b7f86
+slug: paramount-3d-pla-stealth-gray
+brand:
+  slug: paramount-3d
+name: PLA (Stealth Gray)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#616469ff'
+tags:
+- industrially_compostable
+properties: {}

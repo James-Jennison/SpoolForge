@@ -1,0 +1,11 @@
+uuid: d7dd1857-1f4d-5c21-bab9-e6103245bfea
+slug: tinmorry-asa-orange
+brand:
+  slug: tinmorry
+name: ASA Orange
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#fa8423ff'
+properties: {}

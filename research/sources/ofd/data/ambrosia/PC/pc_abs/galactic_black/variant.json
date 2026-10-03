@@ -1,0 +1,9 @@
+{
+  "uuid": "400dd0b7-7ffc-42e3-81e4-8aae60b6cd7c",
+  "id": "galactic_black",
+  "name": "Galactic Black",
+  "color_hex": "#000002",
+  "traits": {
+    "glitter": true
+  }
+}

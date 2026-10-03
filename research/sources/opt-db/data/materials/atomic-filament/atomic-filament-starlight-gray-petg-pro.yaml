@@ -1,0 +1,17 @@
+uuid: 4cf5bc50-a1f6-5f1d-836e-685c10c3de2c
+slug: atomic-filament-starlight-gray-petg-pro
+brand:
+  slug: atomic-filament
+name: Starlight Gray PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/starlight-gray-petg-pro
+primary_color:
+  color_rgba: '#26272bff'
+tags:
+- glitter
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-starlight-gray-petg-pro/1dba292d54a9.png
+  type: unspecified
+properties: {}

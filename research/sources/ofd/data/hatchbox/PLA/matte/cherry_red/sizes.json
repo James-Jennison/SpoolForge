@@ -1,0 +1,16 @@
+[
+  {
+    "uuid": "855db169-a0a5-447e-bef5-6c48854baff5",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 244,
+    "spool_core_diameter": 55,
+    "gtin": "191314042708",
+    "purchase_links": [
+      {
+        "store_id": "amazon",
+        "url": "https://www.amazon.co.uk/dp/B0CK9GY627"
+      }
+    ]
+  }
+]

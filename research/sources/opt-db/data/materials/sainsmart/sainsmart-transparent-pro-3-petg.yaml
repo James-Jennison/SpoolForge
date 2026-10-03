@@ -1,0 +1,13 @@
+uuid: ca50676d-b884-5bcc-b003-7d4cb3bd30e1
+slug: sainsmart-transparent-pro-3-petg
+brand:
+  slug: sainsmart
+name: Transparent PRO-3 PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e4e7e5ff'
+tags:
+- translucent
+properties: {}

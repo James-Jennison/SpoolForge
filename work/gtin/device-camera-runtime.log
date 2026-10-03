@@ -1,0 +1,52 @@
+--------- beginning of main
+09-07 06:42:00.360 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:00.359 11966 11966 W ennison.spoolio: type=1400 audit(0.0:1468067): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=489 scontext=u:r:untrusted_app:s0:c61,c259,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=net.jamesjennison.spoolio
+09-07 06:42:00.362 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:00.359 11966 11966 W ennison.spoolio: type=1400 audit(0.0:1468068): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=489 scontext=u:r:untrusted_app:s0:c61,c259,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=net.jamesjennison.spoolio
+09-07 06:42:02.898 11966 11966 W ennison.spoolio: Unable to open libdolphin.so: dlopen failed: library "libdolphin.so" not found.
+09-07 06:42:03.042 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:03.039 11966 11966 W ennison.spoolio: type=1400 audit(0.0:1468072): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=489 scontext=u:r:untrusted_app:s0:c61,c259,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=net.jamesjennison.spoolio
+09-07 06:42:03.043 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:03.039 11966 11966 W ennison.spoolio: type=1400 audit(0.0:1468073): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=489 scontext=u:r:untrusted_app:s0:c61,c259,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=net.jamesjennison.spoolio
+09-07 06:42:03.125 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:03.123 11966 11966 W ennison.spoolio: type=1400 audit(0.0:1468074): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=489 scontext=u:r:untrusted_app:s0:c61,c259,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=net.jamesjennison.spoolio
+09-07 06:42:03.126 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:03.123 11966 11966 W ennison.spoolio: type=1400 audit(0.0:1468075): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=489 scontext=u:r:untrusted_app:s0:c61,c259,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=net.jamesjennison.spoolio
+09-07 06:42:03.127 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:03.123 11966 11966 W ennison.spoolio: type=1400 audit(0.0:1468076): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=489 scontext=u:r:untrusted_app:s0:c61,c259,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=net.jamesjennison.spoolio
+09-07 06:42:03.127 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:03.156 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:03.156 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:03.157 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:03.770 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:03.839 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:03.854 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:03.938 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:04.006 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:04.022 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:04.137 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:04.254 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:13.087 11966 11966 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=androidx.activity.OnBackPressedDispatcher$Api34Impl$createOnBackAnimationCallback$1@9384634
+09-07 06:42:24.059 11966 11966 W ennison.spoolio: type=1400 audit(0.0:1470342): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=489 scontext=u:r:untrusted_app:s0:c61,c259,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=net.jamesjennison.spoolio
+09-07 06:42:24.063 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:24.064 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:24.059 11966 11966 W ennison.spoolio: type=1400 audit(0.0:1470343): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=489 scontext=u:r:untrusted_app:s0:c61,c259,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=net.jamesjennison.spoolio
+09-07 06:42:24.111 11966 11966 W ennison.spoolio: type=1400 audit(0.0:1470344): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=489 scontext=u:r:untrusted_app:s0:c61,c259,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=net.jamesjennison.spoolio
+09-07 06:42:24.111 11966 11966 W ennison.spoolio: type=1400 audit(0.0:1470345): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=489 scontext=u:r:untrusted_app:s0:c61,c259,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=net.jamesjennison.spoolio
+09-07 06:42:24.115 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:24.115 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:24.116 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:24.116 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:24.111 11966 11966 W ennison.spoolio: type=1400 audit(0.0:1470346): avc:  denied  { read } for  name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=489 scontext=u:r:untrusted_app:s0:c61,c259,c512,c768 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 app=net.jamesjennison.spoolio
+09-07 06:42:24.146 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:24.146 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:24.146 11966 11966 W libc    : Access denied finding property "vendor.display.enable_optimal_refresh_rate"
+09-07 06:42:24.486 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:24.550 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:24.583 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:24.616 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:24.650 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:24.683 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:24.783 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0
+09-07 06:42:25.397 11966 11975 W ennison.spoolio: Cleared Reference was only reachable from finalizer (only reported once)
+09-07 06:42:28.829 11966 11997 W qdgralloc: getInterlacedFlag: getMetaData returned -22, defaulting to interlaced_flag = 0

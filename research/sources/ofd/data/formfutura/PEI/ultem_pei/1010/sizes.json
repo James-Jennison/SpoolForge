@@ -1,0 +1,17 @@
+[
+  {
+    "uuid": "7e453aee-72f4-43ee-a541-102978a570ee",
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 140,
+    "article_number": "PEI1-175NTRL-00500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/pei-ultem-1010"
+      }
+    ]
+  }
+]

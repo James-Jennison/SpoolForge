@@ -1,0 +1,20 @@
+uuid: 3767c754-1edc-5d14-aa6b-507160d2c784
+slug: esun-petg-solid-yellow
+brand:
+  slug: esun
+name: PETG Solid Yellow
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://esun3dstoreeu.com/products/petg?VariantsId=12121
+primary_color:
+  color_rgba: '#fbe200ff'
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 75
+  max_bed_temperature: 90
+photos:
+  - url: https://files.openprinttag.org/esun/esun-petg-solid-yellow/fcc25574039a.jpg
+    type: unspecified

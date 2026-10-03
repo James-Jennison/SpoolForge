@@ -1,0 +1,19 @@
+uuid: 9184d3c5-c2f6-5237-8f61-52da535111de
+slug: overture-pla-glow-white-green-in-dark
+brand:
+  slug: overture
+name: PLA Glow White (Green in Dark)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#4dff64ff'
+secondary_colors:
+- color_rgba: '#efeadfff'
+tags:
+- industrially_compostable
+- glow_in_the_dark
+- illuminescent_color_change
+- abrasive
+photos: []
+properties: {}

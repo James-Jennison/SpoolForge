@@ -1,0 +1,13 @@
+uuid: e325972b-2692-5fb0-ad11-91a8fb11d78a
+slug: paramount-3d-pla-iron-red
+brand:
+  slug: paramount-3d
+name: PLA (Iron Red)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#932721ff'
+tags:
+- industrially_compostable
+properties: {}

@@ -1,0 +1,9 @@
+{
+  "uuid": "cce1f063-9c2e-4bee-b5d2-174a2d092db4",
+  "id": "rouge_alumine",
+  "name": "Rouge alumine",
+  "color_hex": "#AB2614",
+  "traits": {
+    "contains_aluminium": true
+  }
+}

@@ -1,0 +1,21 @@
+uuid: c943fe05-5021-58cf-954a-241f15541c17
+slug: filamentpm-petg-transparent-yellow
+brand:
+  slug: filamentpm
+name: PETG - Transparent Yellow
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ad841fff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-petg-transparent-yellow/b901a7025653.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 90

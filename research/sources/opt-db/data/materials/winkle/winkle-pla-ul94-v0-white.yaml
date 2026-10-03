@@ -1,0 +1,15 @@
+uuid: f026901e-d8d6-52c4-bfa5-9e0ea5e44706
+slug: winkle-pla-ul94-v0-white
+brand:
+  slug: winkle
+name: PLA UL94 V0 White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f5f5f5ff'
+tags:
+- self_extinguishing
+- industrially_compostable
+properties:
+  density: 1.31

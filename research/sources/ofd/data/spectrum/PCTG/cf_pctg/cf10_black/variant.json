@@ -1,0 +1,10 @@
+{
+  "uuid": "156229fb-c002-4a38-b9a9-b3043c80ab57",
+  "id": "cf10_black",
+  "name": "CF10 Black",
+  "color_hex": "#000000",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

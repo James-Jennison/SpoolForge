@@ -1,0 +1,23 @@
+uuid: 55e03152-90af-513f-8da7-d66fa88512f3
+slug: fiberlogy-abs-green
+brand:
+  slug: fiberlogy
+name: ABS Green
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#58c91bff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-abs-green/b2e72274c207.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 250
+  max_print_temperature: 265
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 240

@@ -1,0 +1,22 @@
+uuid: d9bb7467-df40-5384-8467-13ecefadfa25
+slug: formfutura-reform-rpet-dark-blue
+brand:
+  slug: formfutura
+name: ReForm – rPET Dark Blue
+class: FFF
+abbreviation: PETG
+primary_color:
+  color_rgba: '#003287ff'
+tags:
+  - recycled
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-reform-rpet-dark-blue/8413fe5a6a70.png
+    type: unspecified
+properties:
+  density: 1.23
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+  drying_temperature: 60
+  drying_time: 720

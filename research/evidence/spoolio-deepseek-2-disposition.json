@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-deepseek-2",
+  "disposition": "CONFIRMED",
+  "reason": "ALREADY MITIGATED: Original mapping already required decimal1.75 and never175. M1 regression wording reinforced. No app exists to patch and no upstream changes authorized.",
+  "evidence_reference": "docs/FEASIBILITY.md revised; research/evidence/ofd-snapshot-validation.json; remediation review-cycle-5ac84cff9d4b",
+  "resolved": true
+}

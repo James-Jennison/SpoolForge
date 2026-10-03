@@ -1,0 +1,13 @@
+{
+  "uuid": "7c19b88f-9116-4ecb-810f-e1e3878745d8",
+  "material": "PETG",
+  "default_max_dry_temperature": 70,
+  "default_slicer_settings": {
+    "generic": {
+      "bed_temp": 80,
+      "first_layer_bed_temp": 80,
+      "first_layer_nozzle_temp": 230,
+      "nozzle_temp": 230
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 2959,
+    "input_tokens_details": {
+      "cache_write_tokens": 2956,
+      "cached_tokens": 0
+    },
+    "output_tokens": 490,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 3449
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "KINGROON 3D",
+      "confidence": 0.99,
+      "evidence": "\u201cKINGROON 3D\u201d printed at the bottom of the label",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": null,
+      "confidence": 0.96,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "product": {
+      "value": "3D printer consumable",
+      "confidence": 0.96,
+      "evidence": "\u201c3d\u6253\u5370\u673a\u8017\u6750\u201d printed at the top of the label",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PETG Basic",
+      "confidence": 0.99,
+      "evidence": "\u201c\u6750\u8d28: PETG Basic 1.75mm\u201d",
+      "basis": "printed"
+    },
+    "color": {
+      "value": "Gray",
+      "confidence": 0.99,
+      "evidence": "\u201cColour: Gray\u201d",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": 1.75,
+      "confidence": 0.99,
+      "evidence": "\u201cPETG Basic 1.75mm\u201d",
+      "basis": "printed"
+    },
+    "net_weight_g": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_min_c": {
+      "value": 230,
+      "confidence": 0.99,
+      "evidence": "\u201cPrinting Temp: 230-250\u00b0C\u201d",
+      "basis": "printed"
+    },
+    "nozzle_max_c": {
+      "value": 250,
+      "confidence": 0.99,
+      "evidence": "\u201cPrinting Temp: 230-250\u00b0C\u201d",
+      "basis": "printed"
+    },
+    "bed_min_c": {
+      "value": 70,
+      "confidence": 0.99,
+      "evidence": "\u201cHotbed Temp: 70-90\u00b0C\u201d",
+      "basis": "printed"
+    },
+    "bed_max_c": {
+      "value": 90,
+      "confidence": 0.99,
+      "evidence": "\u201cHotbed Temp: 70-90\u00b0C\u201d",
+      "basis": "printed"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "sku": {
+      "value": "HC098",
+      "confidence": 0.95,
+      "evidence": "\u201cHC098\u201d printed prominently at the upper right of the label",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": "04034",
+      "confidence": 0.99,
+      "evidence": "\u201c\u6279\u6b21: 04034\u201d",
+      "basis": "printed"
+    },
+    "other_codes": [],
+    "needs_user_review": [
+      "The QR code is visible, but its encoded data was not reliably decoded from the image."
+    ]
+  }
+}

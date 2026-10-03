@@ -1,0 +1,25 @@
+uuid: 713f175d-28f9-58c7-abf4-269903a716d7
+slug: formfutura-carbonfil-black
+brand:
+  slug: formfutura
+name: CarbonFil Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-carbonfil-black/9bc058baa8f3.png
+    type: unspecified
+properties:
+  density: 1.32
+  min_print_temperature: 230
+  max_print_temperature: 275
+  min_bed_temperature: 80
+  max_bed_temperature: 90
+  drying_temperature: 60
+  drying_time: 720

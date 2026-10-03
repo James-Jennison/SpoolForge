@@ -1,0 +1,20 @@
+{
+  "change_id": "spoolio-m1-20260906",
+  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "summary": "Approved M1 native Android offline OFD catalog and verified OpenSpool NTAG215 workflow; physical acceptance not yet met.",
+  "classification": "SUBSTANTIVE",
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "required_capabilities": [
+    "architecture",
+    "platform",
+    "adversarial"
+  ],
+  "provenance": {
+    "branch": "codex/m1-offline-openspool",
+    "scope": "Owner approved M1 and explicitly resumed background execution; no deployment/firmware changes."
+  }
+}

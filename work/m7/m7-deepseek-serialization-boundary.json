@@ -1,0 +1,20 @@
+{
+  "change_id": "filamajig-full-spectrum-m7-20260908",
+  "cycle_id": "review-cycle-1cb8ed9895da",
+  "reviewer_job_id": "deepseek-250ad0cefdcc",
+  "reviewer": "deepseek",
+  "evidence": {
+    "reviewer": "DeepSeek INITIAL_REVIEW",
+    "response_sha256": "aa5e9afc99f1159920f4043e53a7548e3aab388b176df7470b89ad2a83ef7f9a"
+  },
+  "affected_components": [],
+  "immutable": true,
+  "finding_id": "m7-deepseek-serialization-boundary",
+  "severity": "LOW",
+  "category": "serialization-boundary",
+  "summary": "M7 isolation from established export and wire formats lacked explicit byte-comparison evidence.",
+  "claim": "Local evidence could accidentally affect OpenSpool, PAXX, portable identity, or Spoolman output.",
+  "suggested_validation": "Add M7 data and compare all established output bytes before and after.",
+  "suggested_remediation": "Add explicit boundary regression coverage.",
+  "reviewer_confidence": "MEDIUM"
+}

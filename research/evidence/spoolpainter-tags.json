@@ -1,0 +1,52 @@
+[
+  {
+    "name": "v2.4.1",
+    "zipball_url": "https://api.github.com/repos/ni4223/SpoolPainter/zipball/refs/tags/v2.4.1",
+    "tarball_url": "https://api.github.com/repos/ni4223/SpoolPainter/tarball/refs/tags/v2.4.1",
+    "commit": {
+      "sha": "a0826664c89934001bb10d1f9bb263a4e2cf968c",
+      "url": "https://api.github.com/repos/ni4223/SpoolPainter/commits/a0826664c89934001bb10d1f9bb263a4e2cf968c"
+    },
+    "node_id": "REF_kwDOQzsJmbByZWZzL3RhZ3MvdjIuNC4x"
+  },
+  {
+    "name": "v2.4.0",
+    "zipball_url": "https://api.github.com/repos/ni4223/SpoolPainter/zipball/refs/tags/v2.4.0",
+    "tarball_url": "https://api.github.com/repos/ni4223/SpoolPainter/tarball/refs/tags/v2.4.0",
+    "commit": {
+      "sha": "1cf77fbc1c5e7017eec7396aa13e6bf6e0b120ec",
+      "url": "https://api.github.com/repos/ni4223/SpoolPainter/commits/1cf77fbc1c5e7017eec7396aa13e6bf6e0b120ec"
+    },
+    "node_id": "REF_kwDOQzsJmbByZWZzL3RhZ3MvdjIuNC4w"
+  },
+  {
+    "name": "v2.3.0",
+    "zipball_url": "https://api.github.com/repos/ni4223/SpoolPainter/zipball/refs/tags/v2.3.0",
+    "tarball_url": "https://api.github.com/repos/ni4223/SpoolPainter/tarball/refs/tags/v2.3.0",
+    "commit": {
+      "sha": "bcc6b5a871e461379dbbfa2b3a20fe68a453b895",
+      "url": "https://api.github.com/repos/ni4223/SpoolPainter/commits/bcc6b5a871e461379dbbfa2b3a20fe68a453b895"
+    },
+    "node_id": "REF_kwDOQzsJmbByZWZzL3RhZ3MvdjIuMy4w"
+  },
+  {
+    "name": "v2.2.1",
+    "zipball_url": "https://api.github.com/repos/ni4223/SpoolPainter/zipball/refs/tags/v2.2.1",
+    "tarball_url": "https://api.github.com/repos/ni4223/SpoolPainter/tarball/refs/tags/v2.2.1",
+    "commit": {
+      "sha": "805bbbaac3fce50d927360a2045d04bfd380870a",
+      "url": "https://api.github.com/repos/ni4223/SpoolPainter/commits/805bbbaac3fce50d927360a2045d04bfd380870a"
+    },
+    "node_id": "REF_kwDOQzsJmbByZWZzL3RhZ3MvdjIuMi4x"
+  },
+  {
+    "name": "v2.2.0",
+    "zipball_url": "https://api.github.com/repos/ni4223/SpoolPainter/zipball/refs/tags/v2.2.0",
+    "tarball_url": "https://api.github.com/repos/ni4223/SpoolPainter/tarball/refs/tags/v2.2.0",
+    "commit": {
+      "sha": "050c1a6f11262e6c3fbb3b990d6c0929eec365d1",
+      "url": "https://api.github.com/repos/ni4223/SpoolPainter/commits/050c1a6f11262e6c3fbb3b990d6c0929eec365d1"
+    },
+    "node_id": "REF_kwDOQzsJmbByZWZzL3RhZ3MvdjIuMi4w"
+  }
+]

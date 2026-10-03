@@ -1,0 +1,23 @@
+uuid: 8c715a2c-7f83-59ea-aa64-6e235c5399f5
+slug: spectrum-pla-premium-wizard-charcoal
+brand:
+  slug: spectrum
+name: PLA Premium Wizard Charcoal
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#394658ff'
+- color_rgba: '#1e5a4fff'
+tags:
+- iridescent
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+primary_color:
+  color_rgba: '#595959ff'
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-premium-wizard-charcoal/spectrum-pla-premium-wizard-charcoal-0-87043e6d.jpg
+  type: unspecified

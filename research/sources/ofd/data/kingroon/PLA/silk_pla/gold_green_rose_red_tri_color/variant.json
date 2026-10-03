@@ -1,0 +1,14 @@
+{
+  "uuid": "3f2080d4-4571-46c4-93b7-1ebd66bc8643",
+  "id": "gold_green_rose_red_tri_color",
+  "name": "Gold Green Rose Red tri-color",
+  "color_hex": [
+    "#DDB95D",
+    "#3D9441",
+    "#BF7473"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

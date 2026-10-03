@@ -1,0 +1,14 @@
+uuid: 216c4474-7229-5532-b710-ad7e063c89e6
+slug: tinmorry-matte-pla-orange
+brand:
+  slug: tinmorry
+name: Matte PLA Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffb031ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

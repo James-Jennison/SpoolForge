@@ -1,0 +1,13 @@
+{
+  "uuid": "6c195ee0-b6fe-4d8d-8bc5-172c7a320bc0",
+  "id": "military_green",
+  "name": "Military Green",
+  "color_hex": "#4C645B",
+  "color_standards": {
+    "ral": "6003"
+  },
+  "traits": {
+    "matte": true,
+    "industrially_compostable": true
+  }
+}

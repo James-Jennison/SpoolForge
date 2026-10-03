@@ -1,0 +1,23 @@
+uuid: 7ea2f69d-853e-5dd5-aa99-d5a63f758e84
+slug: fiberlogy-easy-pla-neon-yellow
+brand:
+  slug: fiberlogy
+name: Easy PLA Neon Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ebff57ff'
+tags:
+  - neon
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-easy-pla-neon-yellow/674241eabdc9.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 240

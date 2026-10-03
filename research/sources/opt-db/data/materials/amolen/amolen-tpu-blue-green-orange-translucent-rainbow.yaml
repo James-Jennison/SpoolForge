@@ -1,0 +1,22 @@
+uuid: 900561dd-3a12-535c-bc5f-44e7086bdeb1
+slug: amolen-tpu-blue-green-orange-translucent-rainbow
+brand:
+  slug: amolen
+name: TPU Blue Green Orange Translucent Rainbow
+class: FFF
+type: TPU
+abbreviation: TPU
+url: https://www.amolen.com/products/tpu-rainbow?variant=42103865049111
+secondary_colors:
+- color_rgba: '#1adafbff'
+- color_rgba: '#ff8400ff'
+- color_rgba: '#9aed51ff'
+tags:
+- translucent
+- gradual_color_change
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-tpu-blue-green-orange-translucent-rainbow/78e47d4322fb.png
+  type: unspecified
+properties:
+  density: 1.19
+  hardness_shore_a: 95

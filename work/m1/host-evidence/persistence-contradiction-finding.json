@@ -1,0 +1,15 @@
+{
+  "finding_id": "spoolio-m1-persistence-contradiction",
+  "change_id": "spoolio-m1-20260906",
+  "reviewer": "codex",
+  "severity": "HIGH",
+  "category": "NFC physical persistence",
+  "summary": "Transient Verified followed by an empty NDEF read after process restart",
+  "claim": "Durable physical write persistence is not established. Root cause and original tag UID are unknown.",
+  "evidence": {
+    "source": "first-write-unknown.json; first-ntag-write-verified.json; after-write-process-restart.json; Owner reported tag read as blank after restart"
+  },
+  "suggested_remediation": "Investigate using same-tag identity and active versus discovery metadata; do not automatically rewrite.",
+  "suggested_validation": "Same UID, removal from RF field and process restart, fresh complete read matches intended payload; independent reader confirms.",
+  "reviewer_confidence": "HIGH"
+}

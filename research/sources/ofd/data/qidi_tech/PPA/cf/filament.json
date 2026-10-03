@@ -1,0 +1,11 @@
+{
+  "uuid": "d080ad31-afcc-4078-b739-92c0b6905d56",
+  "id": "cf",
+  "name": "PAHT-CF",
+  "diameter_tolerance": 0.02,
+  "density": 1.2,
+  "min_print_temperature": 300,
+  "max_print_temperature": 320,
+  "min_bed_temperature": 70,
+  "max_bed_temperature": 90
+}

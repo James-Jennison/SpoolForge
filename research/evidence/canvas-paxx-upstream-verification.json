@@ -1,0 +1,22 @@
+{
+  "verified_at": "2026-09-29",
+  "paxx": {
+    "repository": "https://github.com/paxx12-snapmaker-u1/SnapmakerU1-Extended-Firmware",
+    "branch": "develop",
+    "commit": "87df4f1356ffebb7e22e18c62441333c1c440eb4",
+    "openrfid_pin": "1a6f605d0334157b532afdd14f89fc182d9000f6",
+    "user_config": "/oem/printer_data/config/extended/openrfid_user.cfg",
+    "processor_section": "[elegoo_tag_processor]",
+    "enabled_by_default": false,
+    "documented_limitation": "Elegoo factory tag placement can read unreliably on Snapmaker U1"
+  },
+  "openrfid": {
+    "repository": "https://github.com/suchmememanyskill/OpenRFID",
+    "paxx_pinned_commit": "1a6f605d0334157b532afdd14f89fc182d9000f6",
+    "inspected_head_commit": "a13bc9e181374e182f61db4e69abf9fa1786cc29",
+    "processor": "ElegooTagProcessor",
+    "raw_filament_range": "0x40..0x68",
+    "ntag215_physical_pages": 135
+  },
+  "conclusion": "Current source supports an implementation-level rule in which a single NTAG215 carrying only the ELEGOO CANVAS raw format is parsed by PAXX/OpenRFID when OpenRFID is selected and the disabled-by-default Elegoo processor is enabled. Stock Snapmaker U1 firmware is outside this rule. Physical CANVAS and U1/PAXX acceptance remains pending."
+}

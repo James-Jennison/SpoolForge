@@ -1,0 +1,5 @@
+17fa4b119df9a81a4b4cabc43ab3db79771ded6fdbe4881818c672e1c70b6ad8  work/package-migration/user.db
+7b5afa97b5ddbe8086c199e7cd6dbb5a31ee47176412435f4adfbe70ad1c72b5  work/package-migration/user.db-shm
+46fd5f21d4b05a83e8baceb0b0ca97fde77bafcb5570547aa99482fc28008092  work/package-migration/user.db-wal
+c5d749ae5f3cddfd39f2b8201022bc492599e587806e55dbb9d402a01a0d04d8  work/package-migration/nfc-read-diagnostics.xml
+380f4a8d2b76f8e83016d0634c7023297af035c0bf46ae669a140f3302064b6d  work/package-migration/nfc-write-journal.xml

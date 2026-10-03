@@ -1,0 +1,14 @@
+{
+  "uuid": "38e91bb3-c077-4b69-a85e-deec3ecb7a08",
+  "id": "blue_rosered",
+  "name": "Blue-RoseRed",
+  "color_hex": [
+    "#0099E6",
+    "#C80181"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

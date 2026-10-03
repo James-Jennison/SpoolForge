@@ -1,0 +1,21 @@
+uuid: 08c91c17-dbd3-57f6-96e3-1f3384079208
+slug: addnorth-petg-red
+brand:
+  slug: addnorth
+name: PETG Red
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e72f1dff'
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-petg-red/cc2af9f84079.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 225
+  max_print_temperature: 260
+  max_bed_temperature: 80
+  drying_temperature: 65
+  drying_time: 360
+url: https://addnorth.com/product/PETG/PETG%20-%201.75mm%20-%20750g%20-%20Red

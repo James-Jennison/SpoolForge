@@ -1,0 +1,13 @@
+{
+  "uuid": "fa250f34-193a-40e7-9175-926e265696d7",
+  "id": "blue_to_white",
+  "name": "Blue to White",
+  "color_hex": [
+    "#0353BA",
+    "#F5F5F5"
+  ],
+  "traits": {
+    "temperature_color_change": true,
+    "filtration_recommended": true
+  }
+}

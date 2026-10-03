@@ -1,0 +1,27 @@
+{
+  "phase": "REMEDIATION_REVIEW",
+  "objective": "Verify the M4 binding-recovery correction and determine whether any source defect remains before physical NFC/U1 acceptance.",
+  "material_change_since_initial_review": [
+    "Verified-binding finalization now keeps the exact payload, spool ID, codec ID, UID, and tag position in journal v3 when the Room binding callback fails",
+    "A restart restores verification-pending at the original position and requires a matching read-only re-tap before retrying the local binding; it never invokes an NFC write",
+    "Added explicit callback-failure/success, restored second-position, and failed-second-tag tests; existing tests already cover null read, restart, duplicate first-tag UID, no rewrite reconciliation, and one-tag completion",
+    "Added persistent UI display of zero, one, or two verified tag bindings without displaying UIDs; unknown legacy codec IDs render safely",
+    "Final current protected gate passes 101 tests, lint, app APK, and Android-test APK; exact 2023 Razr passes all five device tests in 12.337 seconds"
+  ],
+  "finding_dispositions": [
+    {"finding_id": "filamajig-m4-deepseek-recovery-coverage", "classification": "CONFIRMED WITH NARROWER SCOPE", "status": "RESOLVED", "evidence": "NfcCoordinator.kt finalization; StorageAcceptanceTest callback recovery; WriteStateMachineTest restored position and failed second tag; 101 tests PASS"},
+    {"finding_id": "filamajig-m4-deepseek-physical-gate", "classification": "CONFIRMED", "status": "OPEN", "evidence": "Physical NTAG215 and U1 acceptance is the next gate and remains explicitly unclaimed"}
+  ],
+  "objective_evidence": {
+    "host": "101 tests, zero failures/errors/skips; lint and both APK assemblies PASS",
+    "device": "motorola razr 2023 Android 16: five instrumentation tests PASS in 12.337 seconds; current APK installed",
+    "ui": "Visible 2023 Razr inspection shows selectable OpenSpool and PAXX U1 contracts, exact targets, JSON field types, omissions, total NDEF/message capacity, and write button without overlap",
+    "diff": "work/codec-m4/m4-review.diff"
+  },
+  "review_questions": [
+    "Does callback failure now retain enough durable state for a safe read-only retry without creating a false binding or automatic rewrite?",
+    "Do the tests directly cover the narrowed recovery finding?",
+    "Apart from the deliberately open physical hardware gate, does any BLOCKER, HIGH, or MEDIUM source defect remain?"
+  ],
+  "sanitization": "No credentials, environment values, user database values, NFC UIDs, device serials, network addresses, photos, or account data are included."
+}

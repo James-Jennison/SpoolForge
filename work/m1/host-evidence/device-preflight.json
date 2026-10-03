@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-09-06 PDT",
+  "device": "Motorola Razr 2026",
+  "android_release": "16",
+  "api_level": 36,
+  "nfc_feature_present": true,
+  "nfc_enabled": true,
+  "screen_pixels": [
+    1080,
+    2640
+  ],
+  "density_dpi": 420,
+  "data_available_kib": 50459596,
+  "paxx_installed_version": null,
+  "ntag215_physically_inspected": false,
+  "evidence": "Targeted read-only adb getprop, pm list features, cmd nfc status, wm size/density and df. No tag or printer tested. Other attached TV excluded.",
+  "target_status": "SUPERSEDED: Owner selected2023 Razr;2026 is not target evidence or authorized for installation"
+}

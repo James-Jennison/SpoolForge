@@ -1,0 +1,23 @@
+uuid: 8d3a203a-9e26-5d7f-8e78-ebdf787ce8e8
+slug: formfutura-easywood-olive
+brand:
+  slug: formfutura
+name: EasyWood Olive
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#8c7547ff'
+tags:
+  - contains_wood
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easywood-olive/98fc5fecd3f4.png
+    type: unspecified
+properties:
+  density: 1.15
+  min_print_temperature: 190
+  max_print_temperature: 240
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 40
+  drying_time: 360

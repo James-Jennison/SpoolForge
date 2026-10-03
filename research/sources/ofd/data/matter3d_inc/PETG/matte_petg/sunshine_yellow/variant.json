@@ -1,0 +1,9 @@
+{
+  "uuid": "9825f7dc-f22b-489e-a69d-9c72b18ef71b",
+  "id": "sunshine_yellow",
+  "name": "Sunshine Yellow",
+  "color_hex": "#FFE900",
+  "traits": {
+    "matte": true
+  }
+}

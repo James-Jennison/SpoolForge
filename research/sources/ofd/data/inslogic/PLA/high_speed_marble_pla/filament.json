@@ -1,0 +1,11 @@
+{
+  "uuid": "b9a93abf-70a0-4eb2-a6a5-9749b99e0014",
+  "id": "high_speed_marble_pla",
+  "name": "High Speed Marble PLA",
+  "diameter_tolerance": 0.02,
+  "density": 1.26,
+  "min_print_temperature": 190,
+  "max_print_temperature": 230,
+  "min_bed_temperature": 50,
+  "max_bed_temperature": 60
+}

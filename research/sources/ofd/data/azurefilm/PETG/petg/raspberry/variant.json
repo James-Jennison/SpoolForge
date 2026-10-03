@@ -1,0 +1,9 @@
+{
+  "uuid": "cc738580-7fb6-4b3b-804a-601e2c18491e",
+  "id": "raspberry",
+  "name": "Raspberry",
+  "color_hex": "#bf2533",
+  "traits": {
+    "recyclable": true
+  }
+}

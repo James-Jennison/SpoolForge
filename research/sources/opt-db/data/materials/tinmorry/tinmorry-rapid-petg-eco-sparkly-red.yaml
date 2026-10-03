@@ -1,0 +1,13 @@
+uuid: d776cc5a-241d-503c-8ed0-d4d7860c5d54
+slug: tinmorry-rapid-petg-eco-sparkly-red
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Sparkly Red
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#a6464eff'
+tags:
+- glitter
+properties: {}

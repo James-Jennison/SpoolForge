@@ -1,0 +1,16 @@
+{
+  "uuid": "30950050-411e-49e6-b141-065dbcd1a436",
+  "id": "rainbow",
+  "name": "Rainbow",
+  "color_hex": [
+    "#A67DFF",
+    "#D33D3D",
+    "#9CBF60",
+    "#99B2DE"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,19 @@
+uuid: b53ea32e-e0f2-5f68-a2a4-712617a38466
+slug: sovb-3d-fil-abs-rouge
+brand:
+  slug: sovb-3d
+name: Fil ABS Rouge
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#ec0000ff'
+  color_ral: '3020'
+tags:
+- filtration_recommended
+properties:
+  density: 1.03
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 90
+  max_bed_temperature: 100

@@ -1,0 +1,11 @@
+uuid: 300c799b-e9a8-55b3-9879-26d309c55ecd
+slug: print-with-smile-pet-g-gold-shine
+brand:
+  slug: print-with-smile
+name: PET-G GOLD Shine
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f4ac23ff'
+properties: {}

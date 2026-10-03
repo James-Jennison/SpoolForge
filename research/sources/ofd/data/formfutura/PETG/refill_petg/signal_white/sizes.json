@@ -1,0 +1,32 @@
+[
+  {
+    "uuid": "29a9e023-24e9-454d-afa3-c3e56d8590d5",
+    "filament_weight": 750,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "empty_spool_weight": 20,
+    "article_number": "RFPE-175SIWH-00750",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/refill-petg"
+      }
+    ]
+  },
+  {
+    "uuid": "c3101010-4a7d-4ade-a4e9-a0e59feda636",
+    "filament_weight": 2000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "empty_spool_weight": 40,
+    "article_number": "RFPE-175SIWH-02000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/refill-petg"
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "uuid": "69ddce15-0bf3-42eb-8abb-c8b1fd0861f1",
+  "id": "travertine_effect",
+  "name": "Travertine Effect",
+  "color_hex": "#EADAC2",
+  "traits": {
+    "imitates_stone": true
+  }
+}

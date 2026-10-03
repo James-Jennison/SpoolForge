@@ -1,0 +1,13 @@
+{
+  "uuid": "92b70b56-fd10-42fd-b990-9cd47c0ddd27",
+  "id": "red_black",
+  "name": "Red & Black",
+  "color_hex": [
+    "#000000",
+    "#ED1536"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

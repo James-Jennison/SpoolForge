@@ -1,0 +1,24 @@
+uuid: a4dfbc8c-a588-51b5-b15b-24851e1051ed
+slug: spectrum-pla-metal-bronze
+brand:
+  slug: spectrum
+name: PLA Metal Bronze
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#8c7354ff'
+tags:
+- contains_bronze
+- abrasive
+- contains_metal
+- imitates_metal
+properties:
+  density: 2.28
+  min_print_temperature: 195
+  max_print_temperature: 230
+  min_bed_temperature: 40
+  max_bed_temperature: 50
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-metal-bronze/spectrum-pla-metal-bronze-0-0e8ede50.jpg
+  type: unspecified

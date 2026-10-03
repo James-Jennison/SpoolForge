@@ -1,0 +1,15 @@
+[
+  {
+    "uuid": "688fa058-8a92-4248-a05f-84b9e79f6b83",
+    "filament_weight": 4010,
+    "diameter": 2.85,
+    "empty_spool_weight": 810,
+    "spool_core_diameter": 50,
+    "purchase_links": [
+      {
+        "store_id": "proteorprint",
+        "url": "https://www.proteordigital.com/product-page/cpx-km"
+      }
+    ]
+  }
+]

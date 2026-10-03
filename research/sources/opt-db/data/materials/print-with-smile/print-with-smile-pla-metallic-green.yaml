@@ -1,0 +1,14 @@
+uuid: 66361595-98b3-5313-abfc-04a6ecc78b33
+slug: print-with-smile-pla-metallic-green
+brand:
+  slug: print-with-smile
+name: PLA Metallic GREEN
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#244852ff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

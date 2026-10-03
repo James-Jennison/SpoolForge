@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-final-v2-deepseek-1",
+  "disposition": "CONFIRMED",
+  "reason": "The verifier now refuses optimized Python before validation; python -O exits nonzero and cannot emit PASS.",
+  "evidence_reference": "tools/verify_gtin_index.py; work/gtin/verify-optimized-rejection.log",
+  "resolved": true
+}

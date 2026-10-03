@@ -1,0 +1,15 @@
+{
+  "uuid": "2cf22162-8430-4174-b2c0-e63e3b8d67b7",
+  "id": "sunrise_elixir",
+  "name": "Sunrise Elixir",
+  "color_hex": [
+    "#FA8423",
+    "#FADB24",
+    "#EC0000"
+  ],
+  "traits": {
+    "iridescent": true,
+    "gradual_color_change": true,
+    "filtration_recommended": true
+  }
+}

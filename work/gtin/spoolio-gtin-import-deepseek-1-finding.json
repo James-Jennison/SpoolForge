@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-gtin-import-deepseek-1",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-2ca7f46e3193",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Candidate deduplication / package-scope provenance",
+  "summary": "Community candidates that list the same GTIN in both 'eans' and 'eans_refill' for the same row with 'is_refill' omitted are silently collapsed; the spooled/refill distinction is lost.",
+  "claim": "A barcode asserted by the community source as both spooled and refill loses one package assignment, violating the owner requirement to keep every conflicting package assignment and the design's package/refill scope retention. Downstream lookups may only expose one scope and mislead package confirmation.",
+  "evidence": {
+    "source": "In build_gtin_index.py, the community loop emits records for kind in ['eans','eans_refill'] with scope set to 'refill' if kind=='eans_refill' else 'spooled package'. Deduplication uses k=r[:3] where r[:3]=(gtin14, source, package_id) and only compares values_json. For community, package_id is source + ':' + identity + ':' + sha256(pointer).hexdigest()[:12]; pointer is f'compiled.json#/{i}' and is identical for both kinds. Therefore two emissions for the same raw barcode have identical k and identical values (values are computed from the same row independent of kind), so the second is discarded via 'continue'.",
+    "response_sha256": "64d105d73a84b284852947a2b0870cf62a4e6379c891f9c17d254457c4ba672f"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "tools"
+  ],
+  "suggested_remediation": "Include scope or kind in the deduplication key or package_id for community records, or compare evidence and do not deduplicate when scope/flags differ. For example, extend package_id with the kind or hash of the scope.",
+  "suggested_validation": "Inject a community row with id='test-row', eans=['07340002119380'], eans_refill=['07340002119380'], and is_refill omitted. Run the build and assert that the candidates table contains two rows for source='community', gtin14='07340002119380' with evidence_json.scope equal to 'spooled package' and 'refill' respectively.",
+  "reviewer_confidence": "MEDIUM"
+}

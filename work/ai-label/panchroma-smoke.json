@@ -1,0 +1,109 @@
+{
+  "model": "gpt-5.6-luna",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 2391,
+    "input_tokens_details": {
+      "cache_write_tokens": 2388,
+      "cached_tokens": 0
+    },
+    "output_tokens": 475,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 2866
+  },
+  "extracted": {
+    "brand": {
+      "value": "Bambu Lab",
+      "confidence": 0.95,
+      "evidence": "Panchroma\u2122 PLA packaging; product branding visible on label",
+      "basis": "printed"
+    },
+    "product": {
+      "value": "Panchroma PLA Gradient",
+      "confidence": 0.98,
+      "evidence": "\u201cPanchroma\u2122 PLA\u201d and \u201cPanchroma\u2122 PLA Gradient Starl...\u201d printed on label",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PLA",
+      "confidence": 0.99,
+      "evidence": "\u201cPanchroma\u2122 PLA\u201d printed on label",
+      "basis": "printed"
+    },
+    "color": {
+      "value": "Starlight Purple-Red",
+      "confidence": 0.99,
+      "evidence": "\u201cSTARLIGHT PURPLE-RED\u201d printed prominently",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": 1.75,
+      "confidence": 0.99,
+      "evidence": "\u201c(1.75mm, 1kg)\u201d printed on label",
+      "basis": "printed"
+    },
+    "net_weight_g": {
+      "value": 1000,
+      "confidence": 0.99,
+      "evidence": "\u201c(1.75mm, 1kg)\u201d printed on label",
+      "basis": "printed"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 1,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 1,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 1,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 1,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": "6938936717461",
+      "confidence": 0.99,
+      "evidence": "EAN: 6938936717461",
+      "basis": "printed"
+    },
+    "sku": {
+      "value": "CA09019",
+      "confidence": 0.99,
+      "evidence": "SKU: CA09019",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 1,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [
+      {
+        "value": "X004QSH4ZH",
+        "kind": "marketplace identifier",
+        "evidence": "Alphanumeric code printed below the barcode"
+      },
+      {
+        "value": "QR code present",
+        "kind": "QR code",
+        "evidence": "QR symbol visible on package; encoded data not readable from image"
+      }
+    ],
+    "needs_user_review": []
+  }
+}

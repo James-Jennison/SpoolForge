@@ -1,0 +1,21 @@
+uuid: 6e90b6f5-84a2-506c-b5d9-f5dd40c2fec1
+slug: hatchbox-white-pla-filament
+brand:
+  slug: hatchbox
+name: White PLA Filament
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-white-pla-filament/0f13d0266896.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 180
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 60

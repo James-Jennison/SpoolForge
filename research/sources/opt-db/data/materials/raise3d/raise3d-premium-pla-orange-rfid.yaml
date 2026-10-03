@@ -1,0 +1,17 @@
+uuid: da215317-c0b2-5a31-a855-48290058d06d
+slug: raise3d-premium-pla-orange-rfid
+brand:
+  slug: raise3d
+name: Premium PLA Orange - RFID
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ff9a44ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.2
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-premium-pla-orange-rfid/raise3d-premium-pla-orange-rfid-0-021145c5.jpg
+  type: unspecified

@@ -1,0 +1,23 @@
+uuid: 0f8b6286-7ae7-5ba1-af19-73e903d334e7
+slug: sunlu-pla-bone-white
+brand:
+  slug: sunlu
+name: PLA Bone White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e3e0d3ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/sunlu/sunlu-pla-bone-white/f29a150ba926.jpg
+  type: unspecified
+properties:
+  density: 1.23
+  hardness_shore_d: 80
+  min_print_temperature: 190
+  max_print_temperature: 260
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50

@@ -1,0 +1,20 @@
+{
+  "finding_id": "filamajig-label-gemini-invalid-color",
+  "change_id": "filamajig-label-prototype-20260907",
+  "cycle_id": "review-cycle-b283c5a2aa6c",
+  "reviewer": "gemini",
+  "severity": "HIGH",
+  "category": "provenance",
+  "summary": "Invalid nonblank color_hex could label the 808080 fallback as AI-derived and omit review.",
+  "claim": "The displayed fallback could carry false provenance.",
+  "evidence": {
+    "source": "review-cycle-b283c5a2aa6c"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "Use placeholder provenance and require review whenever color_hex is blank or invalid.",
+  "suggested_validation": "Unit test invalid nonblank color_hex and assert placeholder provenance plus review note.",
+  "reviewer_confidence": "HIGH"
+}

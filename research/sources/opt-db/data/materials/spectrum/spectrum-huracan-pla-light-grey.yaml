@@ -1,0 +1,21 @@
+uuid: f91b1d80-a2f0-5cc6-a37b-2269a711dee0
+slug: spectrum-huracan-pla-light-grey
+brand:
+  slug: spectrum
+name: Huracan PLA Light Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ccccccff'
+tags:
+- silk
+- industrially_compostable
+properties:
+  density: 1.22
+  min_print_temperature: 190
+  max_print_temperature: 230
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-huracan-pla-light-grey/spectrum-huracan-pla-light-grey-0-9d04610a.jpg
+  type: unspecified

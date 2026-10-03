@@ -1,0 +1,13 @@
+uuid: 2d6d57c1-240f-5c4a-b6ed-c786c8c2e20a
+slug: paramount-3d-abs-primordial-earth
+brand:
+  slug: paramount-3d
+name: ABS (Primordial Earth)
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#ae9d7eff'
+tags:
+- filtration_recommended
+properties: {}

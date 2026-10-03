@@ -1,0 +1,15 @@
+{
+  "uuid": "cb69ad6c-3595-4d11-9c84-402708bbbdbd",
+  "id": "red_yellow_blue",
+  "name": "Red Yellow Blue",
+  "color_hex": [
+    "#FFFB00",
+    "#ED2602",
+    "#2C3294"
+  ],
+  "traits": {
+    "matte": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

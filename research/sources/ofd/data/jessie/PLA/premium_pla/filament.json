@@ -1,0 +1,8 @@
+{
+  "uuid": "32bac841-3c47-459c-8429-3338a80eea9c",
+  "id": "premium_pla",
+  "name": "Premium PLA",
+  "diameter_tolerance": 0.02,
+  "density": 1.19,
+  "max_dry_temperature": 55
+}

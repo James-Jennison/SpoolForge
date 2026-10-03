@@ -1,0 +1,19 @@
+uuid: 086b3fc5-8685-5e36-80cc-5e4d1d04ed51
+slug: fiberlogy-pp-light-green
+brand:
+  slug: fiberlogy
+name: PP Light Green
+class: FFF
+type: PP
+abbreviation: PP
+primary_color:
+  color_rgba: '#b3df3aff'
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-pp-light-green/e9bcc8816311.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 220
+  max_print_temperature: 250
+  drying_temperature: 50
+  drying_time: 240

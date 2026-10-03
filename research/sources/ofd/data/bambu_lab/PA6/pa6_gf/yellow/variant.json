@@ -1,0 +1,10 @@
+{
+  "uuid": "0e762f14-4ec8-46c0-ae3b-72b8520db4bf",
+  "id": "yellow",
+  "name": "Yellow",
+  "color_hex": "#FFCE00",
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

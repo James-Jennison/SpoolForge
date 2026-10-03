@@ -1,0 +1,22 @@
+uuid: 98393ab6-1e41-593b-ac16-930cd9d25626
+slug: bambulab-tpu-85a-flesh
+brand:
+  slug: bambulab
+name: TPU 85A Flesh
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#f3cfb2ff'
+properties:
+  density: 1.18
+  hardness_shore_a: 85.0
+  min_print_temperature: 200
+  max_print_temperature: 250
+  min_bed_temperature: 30
+  max_bed_temperature: 35
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45
+photos:
+- url: https://files.openprinttag.org/bambulab/bambulab-tpu-85a-flesh/bambulab-tpu-85a-flesh-0-5c5c286b.png
+  type: unspecified

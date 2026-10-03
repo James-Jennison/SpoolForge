@@ -1,0 +1,14 @@
+{
+  "uuid": "d964aac4-e194-4f87-aecf-de2628ffa410",
+  "id": "black_to_red_to_yellow",
+  "name": "Black to Red to Yellow",
+  "color_hex": [
+    "#000000",
+    "#FFE15B",
+    "#CB4726"
+  ],
+  "traits": {
+    "temperature_color_change": true,
+    "industrially_compostable": true
+  }
+}

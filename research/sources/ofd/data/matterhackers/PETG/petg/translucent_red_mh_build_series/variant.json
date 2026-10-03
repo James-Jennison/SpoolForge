@@ -1,0 +1,9 @@
+{
+  "uuid": "9241f705-789e-4d62-aa0e-8564aac7d603",
+  "id": "translucent_red_mh_build_series",
+  "name": "Translucent Red MH Build Series",
+  "color_hex": "#D21B31",
+  "traits": {
+    "translucent": true
+  }
+}

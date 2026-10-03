@@ -1,0 +1,46 @@
+{
+  "phase": "INITIAL_REVIEW",
+  "objective": "Review the Filamajig NFC pivot foundation for architectural integrity, market-claim discipline, platform/protocol compatibility, and failure modes.",
+  "owner_requirements": [
+    "Preserve existing working implementation and evidence",
+    "Validate rather than assume the proposed product gap",
+    "Separate catalog schemas, canonical data, provenance, physical spools, codecs, and NFC I/O",
+    "Treat PAXX v1.5.2-paxx12-21 as distinct from generic OpenSpool",
+    "Implement only bounded foundation changes"
+  ],
+  "change_summary": [
+    "Added durable competitive teardown dated 2026-09-07 and candidly narrowed differentiation because Spool Hoarder and SimplyPrint cover much of the broad workflow",
+    "Added product definition, architecture, pivot ADR, mapped roadmap, and superseded-status notes",
+    "Added immutable-source canonical profile/spool/provenance types, a suspend catalog provider contract, and explicit Standard OpenSpool versus PAXX codec adapters",
+    "Kept legacy FilamentRecord, Room schema, app UI, OpenSpoolCodec, NfcCoordinator and WriteStateMachine unchanged"
+  ],
+  "key_evidence": {
+    "build": "heavy-gradle :core:test :app:testDebugUnitTest :app:lintDebug :app:assembleDebug -> BUILD SUCCESSFUL",
+    "data": "python3 tools/verify_gtin_index.py -> PASS, 44991 input files, 14706 candidates, 8219 keys",
+    "focused_tests": "New PivotFoundationTest covers profile/spool separation, validation, source disagreement retention, distinct codecs, decode and byte capacity",
+    "known_stale_check": "work/package-migration/verify_rename.py fails only because it asserts INTERNET permission is absent; approved debug AI label scanning now requires it"
+  },
+  "review_files": [
+    "docs/research/competitive-filament-app-teardown.md",
+    "docs/PRODUCT.md",
+    "docs/ARCHITECTURE.md",
+    "docs/ROADMAP.md",
+    "docs/decisions/ADR-001-portable-filament-identity-pivot.md",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/DomainModels.kt",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/CatalogProvider.kt",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/TagCodec.kt",
+    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/PivotFoundationTest.kt"
+  ],
+  "limitations": [
+    "Competitor features are source/site/store evidence, not comparative runtime tests",
+    "3D Filament Profiles rejected the research client with HTTP 403 and was not scraped",
+    "New canonical types are not persisted or wired into UI in this bounded foundation",
+    "No physical NFC or printer operation was performed for this change"
+  ],
+  "questions": [
+    "Are the new boundaries minimal and safe alongside the legacy model?",
+    "Does any documentation overclaim competitor or PAXX behavior?",
+    "What concrete failure must be fixed before this pivot foundation can close?"
+  ],
+  "sanitization": "No credentials, environment values, private user data, or tag UIDs are included."
+}

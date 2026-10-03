@@ -1,0 +1,12 @@
+uuid: 49ba58ec-c6cc-5d1f-bf95-0f47f70c4f9a
+slug: winkle-petg-silver
+brand:
+  slug: winkle
+name: PETG Silver
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#aeb8c1ff'
+properties:
+  density: 1.23

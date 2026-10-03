@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "milestone": "M5 open ecosystem adapters",
+  "app_version": "0.5.0-m5",
+  "device": {
+    "model": "motorola razr 2023",
+    "transport": "wireless-adb",
+    "android_api": 36
+  },
+  "host": {
+    "python_tests": 16,
+    "core_tests": 61,
+    "app_tests": 57,
+    "lint": "PASS",
+    "app_assemble": "PASS",
+    "test_apk_assemble": "PASS"
+  },
+  "device_tests": {
+    "tests": 6,
+    "failures": 0,
+    "duration_seconds": 14.723,
+    "external_adapter_test": "PASS"
+  },
+  "installed_apk_sha256": "92ecb721b12ef0d55ef9b1df7f3073390dbb8eb154303a5369bfcce61a56c48b",
+  "test_apk_sha256": "4c1e2303da57e7db9d8625afe79c6392c05ef85b0dee321716a405fe9524df2c",
+  "data_preservation": {
+    "custom_records": "6 -> 6",
+    "filament_profiles": "6 -> 6",
+    "physical_spools": "6 -> 6",
+    "recents": "6 -> 6",
+    "tag_bindings": "1 -> 1",
+    "content_hashes": "PASS - all user tables have identical canonical ordered-row SHA-256 before and after final APK reinstall",
+    "artifact": "work/open-ecosystem-m5/data-content-preservation.json"
+  },
+  "visible_ui": {
+    "home": "PASS",
+    "spoolman_import_dialog": "PASS"
+  },
+  "physical_external_tags": {
+    "OpenTag3D": "NOT RUN - no physical formatted tag supplied",
+    "OpenPrintTag": "NOT RUN - no physical NFC-V tag supplied"
+  },
+  "live_spoolman_server": "NOT RUN - no server URL supplied; mock transport create/update/failure tests pass",
+  "unrelated_state": "A user editor swap file beside .env.local was preserved and excluded."
+}

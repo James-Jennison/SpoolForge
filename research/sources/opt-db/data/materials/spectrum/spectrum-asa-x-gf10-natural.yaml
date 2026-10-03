@@ -1,0 +1,24 @@
+uuid: a668276e-5c9f-58ee-a38a-c47985f32cbe
+slug: spectrum-asa-x-gf10-natural
+brand:
+  slug: spectrum
+name: ASA-X GF10 Natural
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#dfdfd3ff'
+tags:
+- contains_glass_fiber
+- abrasive
+- contains_glass
+- filtration_recommended
+properties:
+  density: 1.11
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 100
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-asa-x-gf10-natural/spectrum-asa-x-gf10-natural-0-e8c75b58.jpg
+  type: unspecified

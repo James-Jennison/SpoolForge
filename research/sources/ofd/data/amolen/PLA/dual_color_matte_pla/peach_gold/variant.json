@@ -1,0 +1,14 @@
+{
+  "uuid": "f98a2ee6-6bd4-422a-b180-619037d8e24d",
+  "id": "peach_gold",
+  "name": "Peach Gold",
+  "color_hex": [
+    "#EB5274",
+    "#F7D979"
+  ],
+  "traits": {
+    "matte": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "uuid": "d7b8695f-39e4-4655-92dd-5693f5cf7782",
+  "id": "black_shiny_red_gold",
+  "name": "Black & Shiny Red Gold",
+  "color_hex": [
+    "#000000",
+    "#98282F",
+    "#DDB95D"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "finding_id": "spoolio-m1-wording-closure-1",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-eb391ae1703f",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Physical write verification / persistence",
+  "summary": "The remediation changes only reconciliation detail text; it does not address the previously identified physical persistence contradiction. The state machine transitions to VERIFIED solely on a single logical NDEF read match (one record, tnf=2, mime=OpenSpoolCodec.MIME, semanticallyMatches). There is no physical persistence confirmation, post-write delay, or read-back durability check.",
+  "claim": "A tag that returns a matching record on a single read can be marked VERIFIED even if the physical write is not durable or the read is transient, risking false confidence and data loss if the tag later loses content.",
+  "evidence": {
+    "source": "Package evidence explicitly states 'Physical persistence contradiction remains open.' WriteStateMachine.kt reconciled(): matches=record!=null && record.tnf==2 && record.mime==OpenSpoolCodec.MIME && (intent!=null ? OpenSpoolCodec.semanticallyMatches(intent,record.payloadUnsafe()) : expectedPayload?.let{ expected->semanticPayloadsMatch(expected,record.payloadUnsafe())}==true); if(matches) state=state.copy(phase=WritePhase.VERIFIED,...). No physical persistence check is present."
+  },
+  "suggested_remediation": "Implement a defined physical persistence verification (e.g., multiple reads over time, NDEF signature/check, or a required re-present after a delay) before VERIFIED, or clearly document VERIFIED as logical-only and add a separate durable-write state if persistence cannot be guaranteed.",
+  "suggested_validation": "Simulate a tag that returns a matching record immediately but fails a subsequent delayed read; the state must not enter VERIFIED unless the persistence check is performed, or a documented logical-only limitation must be explicitly asserted.",
+  "reviewer_confidence": "HIGH"
+}

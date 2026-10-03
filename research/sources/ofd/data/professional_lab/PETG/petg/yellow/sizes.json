@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "6c1435b5-3594-4e42-9995-edc1edefcf96",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 180,
+    "spool_core_diameter": 75,
+    "gtin": "5903707918584",
+    "article_number": "FG-P34-E1",
+    "discontinued": false
+  }
+]

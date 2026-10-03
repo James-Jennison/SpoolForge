@@ -1,0 +1,22 @@
+uuid: bcad684b-24e7-5c74-939a-d41703b35e57
+slug: polymaker-polylite-metallic-pla-pro-bronze
+brand:
+  slug: polymaker
+name: PolyLite™ Metallic PLA Pro Bronze
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ae6840ff'
+tags:
+  - imitates_metal
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polylite-metallic-pla-pro-bronze/6fa12cc60d41.png
+    type: unspecified
+properties:
+  density: 1.22
+  min_print_temperature: 190
+  max_print_temperature: 220
+  min_bed_temperature: 30
+  max_bed_temperature: 60

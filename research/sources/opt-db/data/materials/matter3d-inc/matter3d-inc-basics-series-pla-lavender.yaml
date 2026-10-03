@@ -1,0 +1,13 @@
+uuid: e609c829-e592-54d2-8a33-d8a4cc97d7b1
+slug: matter3d-inc-basics-series-pla-lavender
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA Lavender
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#845cd6ff'
+tags:
+- industrially_compostable
+properties: {}

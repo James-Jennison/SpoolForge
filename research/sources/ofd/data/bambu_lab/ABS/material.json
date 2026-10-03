@@ -1,0 +1,12 @@
+{
+  "uuid": "2b3ee592-328e-4f81-819d-b28815d1c87a",
+  "material": "ABS",
+  "default_slicer_settings": {
+    "bambustudio": {
+      "profile_name": "Bambu ABS"
+    },
+    "orcaslicer": {
+      "profile_name": "Bambu ABS"
+    }
+  }
+}

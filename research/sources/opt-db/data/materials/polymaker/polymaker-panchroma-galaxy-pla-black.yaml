@@ -1,0 +1,23 @@
+uuid: db279fe8-b4ac-5a2c-be3d-d7cd00675c2a
+slug: polymaker-panchroma-galaxy-pla-black
+brand:
+  slug: polymaker
+name: Panchroma™ Galaxy PLA Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#161617ff'
+tags:
+  - glitter
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-galaxy-pla-black/572d12561987.png
+    type: unspecified
+properties:
+  density: 1.17
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

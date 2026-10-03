@@ -1,0 +1,15 @@
+uuid: 772ff94b-5b0f-51ea-bd18-7654945d05cb
+slug: print-with-smile-bicolor-metallic-pet-g-violet-silver
+brand:
+  slug: print-with-smile
+name: BICOLOR METALLIC PET-G VIOLET SILVER
+class: FFF
+type: PETG
+abbreviation: PETG
+secondary_colors:
+- color_rgba: '#4e486aff'
+- color_rgba: '#a8b0bdff'
+tags:
+- iridescent
+- coextruded
+properties: {}

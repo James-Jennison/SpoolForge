@@ -1,0 +1,22 @@
+uuid: 26a2bd05-0aa9-59a5-bcf5-c82f8e81bea0
+slug: spectrum-lw-asa-ultrafoam-bloody-red
+brand:
+  slug: spectrum
+name: LW-ASA UltraFoam Bloody Red
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#ec0000ff'
+tags:
+- foaming
+- filtration_recommended
+properties:
+  density: 1.08
+  min_print_temperature: 220
+  max_print_temperature: 285
+  min_bed_temperature: 60
+  max_bed_temperature: 90
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-lw-asa-ultrafoam-bloody-red/spectrum-lw-asa-ultrafoam-bloody-red-0-467e5de7.jpg
+  type: unspecified

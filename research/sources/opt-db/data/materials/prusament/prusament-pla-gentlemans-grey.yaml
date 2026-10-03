@@ -1,0 +1,30 @@
+uuid: 0064fd61-3ab1-54ef-84b2-613b398c8f1f
+slug: prusament-pla-gentlemans-grey
+brand:
+  slug: prusament
+name: PLA Gentleman's Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#294748ff'
+  color_lab: [25.7298, -9.9367, -3.8667]
+transmission_distance: 0.3
+tags:
+- industrially_compostable
+certifications:
+- ul_2904
+photos:
+- url: https://files.openprinttag.org/prusament/prusament-pla-gentlemans-grey/d19db8f9580b.png
+  type: unspecified
+properties:
+  density: 1.24
+  hardness_shore_d: 81
+  min_print_temperature: 205
+  max_print_temperature: 225
+  preheat_temperature: 170
+  min_bed_temperature: 40
+  max_bed_temperature: 60
+  chamber_temperature: 20
+  min_chamber_temperature: 18
+  max_chamber_temperature: 40

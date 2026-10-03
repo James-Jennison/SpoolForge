@@ -1,0 +1,49 @@
+{
+  "phase": "REMEDIATION_REVIEW",
+  "objective": "Close the remaining disputed CANVAS plus U1/PAXX findings using exact source and test evidence.",
+  "change_id": "filamajig-canvas-u1-paxx-20260929",
+  "source_snapshot_sha256": "d44431b9e4aa4934a1c4d12859bbb8807388ad8b633a215dd436fb284861f66e",
+  "changes_since_remediation_review": [
+    "CANVAS exclusivity now reads the complete NTAG215 user area, pages 4-129 / 504 bytes, in 32 four-page RF reads before discovery or write arming. Tests place competing bytes at page 4, page 15, page 32, and the final user byte.",
+    "The standard delivery-state empty NDEF TLV is allowed because it contains no record and is preserved; a non-empty TLV is rejected.",
+    "A pinned factory profile is re-encoded and compared against every byte actually consumed by pinned ElegooTagProcessor, offsets 0-31. Factory production metadata at offsets 32-40 is explicitly not consumed upstream and remains zero rather than being invented.",
+    "NTAG213 and NTAG216 are rejected before lock inspection. NTAG215 dynamic-lock byte 0 bit 0 and block-lock byte 2 bit 0 are rejected for pages 16-31; later-range bits are exhaustively accepted. Reserved byte 1 / upper byte 2 values and the fixed byte-3 value other than BD fail closed. AUTH0 <= 31 is rejected."
+  ],
+  "primary_spec_evidence": {
+    "source": "NXP NTAG213/215/216 data sheet Rev. 3.2",
+    "facts": [
+      "NTAG215 has 504 user bytes at pages 4-129.",
+      "NTAG215 dynamic-lock granularity is 16 pages.",
+      "Figure 11 maps dynamic-lock byte 0 bit 0 to pages 16-31 and dynamic block-lock byte 2 bit 0 to pages 16-47.",
+      "Dynamic-lock byte 3 always reads BD.",
+      "GET_VERSION storage byte 11h identifies NTAG215."
+    ]
+  },
+  "objective_evidence": {
+    "build_host": "gthost-build01",
+    "remote_directory": "/tmp/filamajig-canvas-final-v3.a5oIzX",
+    "jdk": "Temurin 17.0.20.1",
+    "core_tests": {"tests": 92, "failures": 0, "errors": 0, "skipped": 0},
+    "app_tests": {"tests": 74, "failures": 0, "errors": 0, "skipped": 0},
+    "lint_debug": "PASS",
+    "assemble_debug": "PASS",
+    "apk_sha256": "86c7dfea754a5eaec48da6e5fb542d7bed9a88c2ee2d07c578fef67875646fa0"
+  },
+  "requested_dispositions": [
+    {"finding": "Incomplete user-area exclusivity scan", "disposition": "CONFIRMED AND FIXED"},
+    {"finding": "Encoder not tied to pinned processor fixture", "disposition": "CONFIRMED WITH NARROWER SCOPE AND FIXED for every upstream-consumed field; ignored production metadata remains intentionally unset"},
+    {"finding": "NTAG215 pages 16-31 lock mapping incomplete", "disposition": "NOT APPLICABLE after exact NXP mapping and fail-closed reserved-state validation; NTAG213 is explicitly rejected"}
+  ],
+  "known_limits": [
+    "No physical NTAG215, CANVAS, or U1/PAXX acceptance was performed.",
+    "PAXX documents unreliable factory Elegoo tag placement on U1.",
+    "The pre-existing dirty working tree was preserved; the exact source snapshot excluding review-ledger files was validated remotely."
+  ],
+  "review_questions": [
+    "Does the complete pages 4-129 scan close the competing-payload finding?",
+    "Does exact equality over all pinned ElegooTagProcessor-consumed bytes establish the correct encoder contract without inventing ignored production metadata?",
+    "Does the NTAG215-only gate plus exact NXP Figure 11 mapping close the lock-coverage finding?",
+    "Are any BLOCKER or HIGH findings still materially open?"
+  ],
+  "sanitization": "No credentials, tokens, keys, private network addresses, NFC UIDs, user data, device serials, photos, or account data are included."
+}

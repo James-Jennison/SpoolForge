@@ -1,0 +1,21 @@
+uuid: 9e9da7ba-73c3-516a-9486-ce7054a1d929
+slug: spectrum-asa-275-polar-white
+brand:
+  slug: spectrum
+name: ASA 275™ Polar White
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#e6dddbff'
+properties:
+  density: 1.07
+  min_print_temperature: 200
+  max_print_temperature: 240
+  min_bed_temperature: 40
+  max_bed_temperature: 60
+tags:
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-asa-275-polar-white/spectrum-asa-275-polar-white-0-94a67e71.jpg
+  type: unspecified

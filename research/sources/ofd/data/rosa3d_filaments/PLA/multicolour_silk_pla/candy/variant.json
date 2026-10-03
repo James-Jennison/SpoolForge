@@ -1,0 +1,15 @@
+{
+  "uuid": "a7f1edee-067e-44e8-9565-841e1f01532f",
+  "id": "candy",
+  "name": "Candy",
+  "color_hex": [
+    "#FCAFC0",
+    "#0066D9",
+    "#8ED9F9",
+    "#8D65C7"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

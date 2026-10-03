@@ -1,0 +1,20 @@
+{
+  "finding_id": "filamajig-label-deepseek-multi-gtin",
+  "change_id": "filamajig-label-prototype-20260907",
+  "cycle_id": "review-cycle-b283c5a2aa6c",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "gtin-conflict",
+  "summary": "Multiple distinct local GTINs were silently reduced to the first code.",
+  "claim": "The wrong retail identifier could be selected without explicit review.",
+  "evidence": {
+    "source": "review-cycle-b283c5a2aa6c"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "Leave GTIN unset when multiple distinct local GTINs exist and add a review warning.",
+  "suggested_validation": "Unit test two local GTINs and require null selected GTIN.",
+  "reviewer_confidence": "HIGH"
+}

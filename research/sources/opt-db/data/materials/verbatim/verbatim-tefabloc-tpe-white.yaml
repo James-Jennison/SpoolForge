@@ -1,0 +1,11 @@
+uuid: 78a56c4a-01ae-555a-91ec-1d7d0e2574dd
+slug: verbatim-tefabloc-tpe-white
+brand:
+  slug: verbatim
+name: Tefabloc TPE White
+class: FFF
+type: TPE
+abbreviation: TPE
+primary_color:
+  color_rgba: '#ffffffff'
+properties: {}

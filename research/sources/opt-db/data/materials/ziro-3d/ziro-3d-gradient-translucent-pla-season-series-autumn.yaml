@@ -1,0 +1,18 @@
+uuid: d2729d7e-1fcc-5cd3-b9b7-8c11bfcb3448
+slug: ziro-3d-gradient-translucent-pla-season-series-autumn
+brand:
+  slug: ziro-3d
+name: Gradient Translucent PLA Season Series Autumn
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#bad663ff'
+- color_rgba: '#a79e82ff'
+- color_rgba: '#aa6500ff'
+- color_rgba: '#6e694dff'
+tags:
+- translucent
+- gradual_color_change
+- industrially_compostable
+properties: {}

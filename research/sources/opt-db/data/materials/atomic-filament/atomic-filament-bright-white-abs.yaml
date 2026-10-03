@@ -1,0 +1,17 @@
+uuid: 6e1336cd-6940-502e-b1b4-5bc060fd9cfd
+slug: atomic-filament-bright-white-abs
+brand:
+  slug: atomic-filament
+name: Bright White ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+url: https://atomicfilament.com/products/bright-white-abs-filament
+primary_color:
+  color_rgba: '#e8e8e6ff'
+tags:
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-bright-white-abs/732103d34fd7.png
+  type: unspecified
+properties: {}

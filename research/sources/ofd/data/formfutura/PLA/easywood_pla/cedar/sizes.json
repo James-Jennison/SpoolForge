@@ -1,0 +1,77 @@
+[
+  {
+    "uuid": "06e23a48-5c00-4374-a772-525d78298748",
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 140,
+    "article_number": "EWOD-175CEDR-00500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easywood"
+      }
+    ]
+  },
+  {
+    "uuid": "fdd1fb5f-9bf2-407b-be5a-bba8d5f24df7",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "EWOD-175CEDR-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easywood"
+      }
+    ]
+  },
+  {
+    "uuid": "44534aca-ee26-4838-98e4-afbb0ee0f508",
+    "filament_weight": 4500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "EWOD-175CEDR-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easywood"
+      }
+    ]
+  },
+  {
+    "uuid": "786fde51-e35f-4f1b-89c3-97f02ec9ea4d",
+    "filament_weight": 8000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 1040,
+    "article_number": "EWOD-175CEDR-08000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easywood"
+      }
+    ]
+  },
+  {
+    "uuid": "e9618e2a-32dc-4616-89f0-9e343490c745",
+    "filament_weight": 500,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 140,
+    "article_number": "EWOD-285CEDR-00500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easywood"
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-claude-3",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "claude",
+  "severity": "HIGH",
+  "category": "NFC write-state machine / crash safety",
+  "summary": "A transient NFC read failure (e.g. tag lifted early) occurring during read-only reconciliation from WRITE_OUTCOME_UNKNOWN throws an uncaught exception instead of degrading safely, because the catch-block's fallback call violates the callee's own precondition.",
+  "claim": "A transient NFC read failure (e.g. tag lifted early) occurring during read-only reconciliation from WRITE_OUTCOME_UNKNOWN throws an uncaught exception instead of degrading safely, because the catch-block's fallback call violates the callee's own precondition.",
+  "evidence": {
+    "source": "NfcCoordinator.handle()'s catch block (NfcCoordinator.kt): `if(phase==WRITING||phase==VERIFYING) writeInterrupted(...) else if(phase!=DRAFT) machine.rejectBeforeWrite(...)`. WriteStateMachine.rejectBeforeWrite() (WriteStateMachine.kt) declares `require(state.phase !in setOf(WRITING,VERIFYING,WRITE_OUTCOME_UNKNOWN))`. When `phase==WRITE_OUTCOME_UNKNOWN` (the state entered after process death or an interrupted write, per restoreUnknown()/writeInterrupted()), the reconciliation read happens inside the same try block; any exception there (e.g. from `ndef.connect()`/`ndef.ndefMessage`) is neither WRITING nor VERIFYING, so it falls to the `else if` branch and calls `rejectBeforeWrite`, whose own `require` then throws a new, unhandled IllegalArgumentException from inside the catch block, propagating uncaught out of the `io` executor's Runnable.",
+    "response_sha256": "24d3990562d67e978414fe65adda6f7e9777b1af1f8ae914bef77ccc315c4478"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Exclude WRITE_OUTCOME_UNKNOWN (and ideally VERIFYING) from the `else if` branch's call to `rejectBeforeWrite`; on read failure while already WRITE_OUTCOME_UNKNOWN, leave the phase unchanged and only update the detail message.",
+  "suggested_validation": "Simulate/inject an I/O exception during the reconciliation read while `machine.state.phase==WRITE_OUTCOME_UNKNOWN` (unit test on WriteStateMachine/NfcCoordinator or instrumented test forcing TagLostException) and assert no exception escapes and phase remains WRITE_OUTCOME_UNKNOWN.",
+  "reviewer_confidence": "HIGH for the code-level precondition conflict, traceable exactly in the two supplied files; the real-world trigger (tag lost mid-reconciliation) is plausible but not yet physically exercised, which the package itself discloses ('No physical tag test')."
+}

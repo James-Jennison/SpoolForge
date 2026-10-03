@@ -1,0 +1,24 @@
+uuid: faf6e792-123d-56c3-af2d-4efd61530670
+slug: filamentpm-peijet-1010-ultem-natur
+brand:
+  slug: filamentpm
+name: PEIJet 1010 Ultem - Natur
+class: FFF
+type: PEI
+abbreviation: PEI
+primary_color:
+  color_rgba: '#a77f0eff'
+tags:
+  - low_outgassing
+  - translucent
+  - without_pigments
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-peijet-1010-ultem-natur/ede98b040360.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 350
+  max_print_temperature: 370
+  min_bed_temperature: 140
+  max_bed_temperature: 150

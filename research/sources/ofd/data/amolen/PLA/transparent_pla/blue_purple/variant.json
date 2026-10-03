@@ -1,0 +1,14 @@
+{
+  "uuid": "bc7cecd5-8fe0-453a-843c-60077ad89efe",
+  "id": "blue_purple",
+  "name": "Blue Purple",
+  "color_hex": [
+    "#AE00FF",
+    "#0353BA"
+  ],
+  "traits": {
+    "translucent": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

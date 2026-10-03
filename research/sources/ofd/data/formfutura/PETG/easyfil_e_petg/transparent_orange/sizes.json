@@ -1,0 +1,32 @@
+[
+  {
+    "uuid": "d61dd645-ab51-414b-b462-a0274e7b72df",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "PTGE-175TORA-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epetg"
+      }
+    ]
+  },
+  {
+    "uuid": "d371111e-b386-4f39-a375-7b4598d1494d",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "PTGE-175TORA-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epetg"
+      }
+    ]
+  }
+]

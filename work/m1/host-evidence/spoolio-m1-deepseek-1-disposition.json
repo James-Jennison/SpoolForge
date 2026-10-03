@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-deepseek-1",
+  "disposition": "CONFIRMED",
+  "reason": "Confirmed local implementation gap; remediation and acceptance pending. See work/m1/HOST_REMEDIATION_DIRECTION.md.",
+  "evidence_reference": "work/m1/HOST_REMEDIATION_DIRECTION.md; host initial source snapshot review-cycle-38636c32948d",
+  "resolved": false
+}

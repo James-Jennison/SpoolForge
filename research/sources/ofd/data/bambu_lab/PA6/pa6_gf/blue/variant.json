@@ -1,0 +1,10 @@
+{
+  "uuid": "34ffd7f5-a6c5-4f80-856e-bfb3495dcc79",
+  "id": "blue",
+  "name": "Blue",
+  "color_hex": "#75AED8",
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

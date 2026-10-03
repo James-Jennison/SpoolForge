@@ -1,0 +1,11 @@
+{
+  "uuid": "d4421e91-f407-41c6-ac4d-9b24a4081f53",
+  "id": "air",
+  "name": "PLA Air",
+  "diameter_tolerance": 0.02,
+  "density": 1.16,
+  "min_print_temperature": 190,
+  "max_print_temperature": 230,
+  "min_bed_temperature": 50,
+  "max_bed_temperature": 70
+}

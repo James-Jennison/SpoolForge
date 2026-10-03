@@ -1,0 +1,20 @@
+{
+  "finding_id": "spoolio-deepseek-1",
+  "change_id": "spoolio-feasibility-20260906",
+  "cycle_id": "review-cycle-511bc96fa65d",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "Data-source availability and V1 source decision",
+  "summary": "The recommendation to use OFD as the sole V1 catalog source depends on published API/download artifacts that were not verified; direct downloads returned HTTP 403 and only the Git repository was directly accessible. This leaves the core offline catalog and update path materially unproven.",
+  "claim": "The recommendation to use OFD as the sole V1 catalog source depends on published API/download artifacts that were not verified; direct downloads returned HTTP 403 and only the Git repository was directly accessible. This leaves the core offline catalog and update path materially unproven.",
+  "evidence": {
+    "source": "Report sections 2 and 3 state: \"The OFD hosted API returned HTTP 403 ... for index, manifest, compressed JSON, and SQLite. ... Published binary sizes, validators and successful bulk-client behavior are therefore unverified.\" It still recommends \"Use OFD alone, importing a pinned source revision.\"",
+    "response_sha256": "14940ade81683577086eff6f20c1f63e0fab8d59722f737536c2d459e73d8747"
+  },
+  "affected_components": [
+    "docs/FEASIBILITY.md"
+  ],
+  "suggested_remediation": "Before M1 approval or implementation, verify that the documented bulk endpoints or the pinned source repository can produce a reproducible, licensed data snapshot usable by the app. Record exact endpoint/commit, content digest, and a fallback plan if the API remains inaccessible. Do not treat source-repository accessibility as equivalent to published artifacts.",
+  "suggested_validation": "In a controlled network environment, download or generate the pinned OFD snapshot from the documented source without credentials, validate record counts against the report's measured counts, and import into a staging catalog. The update flow must complete with a documented fallback if the endpoint returns 403.",
+  "reviewer_confidence": "HIGH"
+}

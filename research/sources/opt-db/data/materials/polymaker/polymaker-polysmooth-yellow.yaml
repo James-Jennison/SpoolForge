@@ -1,0 +1,23 @@
+uuid: fd59e969-af3b-52af-b25c-438348c52662
+slug: polymaker-polysmooth-yellow
+brand:
+  slug: polymaker
+name: PolySmooth™ Yellow
+class: FFF
+type: PVB
+abbreviation: PVB
+primary_color:
+  color_rgba: '#f5bd00ff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polysmooth-yellow/0201d51da901.png
+    type: unspecified
+properties:
+  density: 1.1
+  min_print_temperature: 190
+  max_print_temperature: 220
+  min_bed_temperature: 25
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 720
+tags:
+  - ipa_soluble

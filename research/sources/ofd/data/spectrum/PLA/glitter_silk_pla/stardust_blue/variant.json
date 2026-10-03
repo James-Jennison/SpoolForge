@@ -1,0 +1,11 @@
+{
+  "uuid": "8a1f69d4-9146-4258-bad0-e9ffa483c449",
+  "id": "stardust_blue",
+  "name": "Stardust Blue",
+  "color_hex": "#375680",
+  "traits": {
+    "silk": true,
+    "glitter": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,21 @@
+uuid: 35b88267-70b9-5193-a628-d29aa8c34c5a
+slug: formfutura-matt-pla-blue-camouflage
+brand:
+  slug: formfutura
+name: Matt PLA Blue Camouflage
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#23668cff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-matt-pla-blue-camouflage/b211ae35dd83.png
+    type: unspecified
+properties:
+  density: 1.38
+  min_print_temperature: 215
+  max_print_temperature: 235
+  min_bed_temperature: 50
+  max_bed_temperature: 60

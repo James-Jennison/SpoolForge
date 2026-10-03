@@ -1,0 +1,13 @@
+uuid: cb34a10e-c213-51ba-aa48-b2013f430ed5
+slug: print-with-smile-re-petg-army-green
+brand:
+  slug: print-with-smile
+name: RE-PETG Army GREEN
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#6e8451ff'
+tags:
+- recycled
+properties: {}

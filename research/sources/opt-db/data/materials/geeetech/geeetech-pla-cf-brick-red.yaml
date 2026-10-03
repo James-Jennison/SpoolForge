@@ -1,0 +1,17 @@
+uuid: 23709961-0202-5a99-939b-9512be7b011c
+slug: geeetech-pla-cf-brick-red
+brand:
+  slug: geeetech
+name: PLA-CF Brick Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#462b2eff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+photos:
+  - url: https://files.openprinttag.org/geeetech/geeetech-pla-cf-brick-red/becd9e4387bc.jpg
+    type: unspecified
+properties: {}

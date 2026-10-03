@@ -1,0 +1,14 @@
+uuid: b1ac8ed9-157f-5552-8ed6-7757da3d43dd
+slug: overture-matte-pla-turquoise
+brand:
+  slug: overture
+name: Matte PLA Turquoise
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#40e0d0ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

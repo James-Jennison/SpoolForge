@@ -1,0 +1,9 @@
+{
+  "uuid": "ab317a1c-a258-4393-ad19-f97a31fdcaa4",
+  "id": "white",
+  "name": "White",
+  "color_hex": "#FFFFFF",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

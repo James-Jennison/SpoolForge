@@ -1,0 +1,12 @@
+uuid: 469755f7-7cde-5b8f-a2b1-499b6e99118e
+slug: spectrum-the-filament-petg-lite-red
+brand:
+  slug: spectrum
+name: The Filament PETG Lite Red
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ec0000ff'
+properties:
+  density: 1.29

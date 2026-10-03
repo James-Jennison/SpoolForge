@@ -1,0 +1,24 @@
+uuid: fa4d6ac5-04b1-5980-9b4f-69dba1a17ce4
+slug: polymaker-panchroma-dual-matte-pla-chameleon-teal-yellow
+brand:
+  slug: polymaker
+name: Panchroma™ Dual Matte PLA Chameleon (Teal-Yellow)
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+  - color_rgba: '#61bcc3ff'
+  - color_rgba: '#f3c432ff'
+tags:
+  - matte
+  - coextruded
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-dual-matte-pla-chameleon-teal-yellow/1432e7da840c.png
+    type: unspecified
+properties:
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

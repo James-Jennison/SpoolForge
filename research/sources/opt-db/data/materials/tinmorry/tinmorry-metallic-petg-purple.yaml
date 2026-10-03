@@ -1,0 +1,11 @@
+uuid: 88a01f0c-78fa-5601-8fa4-7e6df193ca9a
+slug: tinmorry-metallic-petg-purple
+brand:
+  slug: tinmorry
+name: Metallic PETG Purple
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#835476ff'
+properties: {}

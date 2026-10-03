@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-gtin-ui-deepseek-2",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-da0678d34a11",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "UI Robustness / Provenance Dialog",
+  "summary": "The BarcodeEvidence dialog uses unguarded JSONObject.getString/opt accesses for provenance keys that are not covered by the test suite, risking runtime crash if those keys are missing from persisted barcodeEvidence.",
+  "claim": "If a legitimate barcodeEvidence JSON lacks any of these keys (for example, due to an older schema or partial import), opening the Barcode provenance dialog will throw a JSONException during composition and crash the Activity, degrading user trust and preventing access to edit/save the record.",
+  "evidence": {
+    "source": "MainActivity.kt BarcodeEvidence calls ev.getString(\"source_record\"), ev.get(\"raw_identifier\"), snapshot.getString(\"source\"), snapshot.getString(\"revision\"), and snapshot.getString(\"url\") inside the AlertDialog. The only test validating barcodeEvidence content (GtinIndexTest.ambiguousBarcodePreservesPackageCandidatesAndSnapshotProvenance) asserts presence of gtin14, record_pointer, snapshot.license, and fields.brand.origin, but not source_record, raw_identifier, snapshot.source, snapshot.revision, or snapshot.url. No schema migration evidence is supplied to guarantee these keys exist on all existing records.",
+    "response_sha256": "2349eae0bfc131cd0d3d8c90701cb20a70f7be767ad01223d1429ee0a5f298d3"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "tools"
+  ],
+  "suggested_remediation": "Replace getString/get with optString/opt and provide fallback strings for all optional provenance fields, or enforce a complete schema at write/read time and add a test that asserts every key accessed by the dialog is present.",
+  "suggested_validation": "Construct a FilamentItem with barcodeEvidence JSON missing 'source_record' or 'snapshot.url'; render the BarcodeEvidence dialog and verify it shows a fallback such as 'Unavailable' without crashing. Add a schema completeness unit test for all keys accessed in the dialog.",
+  "reviewer_confidence": "MEDIUM"
+}

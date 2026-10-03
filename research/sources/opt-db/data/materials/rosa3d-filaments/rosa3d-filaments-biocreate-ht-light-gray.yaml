@@ -1,0 +1,12 @@
+uuid: 897314bf-9cc8-5322-a72e-91dbeb8ab94c
+slug: rosa3d-filaments-biocreate-ht-light-gray
+brand:
+  slug: rosa3d-filaments
+name: BioCREATE HT Light Gray
+class: FFF
+abbreviation: Bio
+primary_color:
+  color_rgba: '#ecefedff'
+tags:
+- high_temperature
+properties: {}

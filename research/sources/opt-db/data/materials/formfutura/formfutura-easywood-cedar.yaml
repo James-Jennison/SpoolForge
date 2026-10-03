@@ -1,0 +1,23 @@
+uuid: 5b51fad3-39cc-572b-b71c-435b82d0f7a0
+slug: formfutura-easywood-cedar
+brand:
+  slug: formfutura
+name: EasyWood Cedar
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c37c4fff'
+tags:
+  - contains_wood
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easywood-cedar/220f817bb446.png
+    type: unspecified
+properties:
+  density: 1.15
+  min_print_temperature: 190
+  max_print_temperature: 240
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 40
+  drying_time: 360

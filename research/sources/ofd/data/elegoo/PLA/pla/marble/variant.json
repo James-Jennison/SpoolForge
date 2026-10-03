@@ -1,0 +1,10 @@
+{
+  "uuid": "37bec360-d254-4336-8a57-1192a882fca4",
+  "id": "marble",
+  "name": "Marble",
+  "color_hex": "#acb1b1",
+  "traits": {
+    "imitates_marble": true,
+    "industrially_compostable": true
+  }
+}

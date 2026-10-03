@@ -1,0 +1,9 @@
+{
+  "uuid": "be1af943-b7e0-4785-869d-d05ae0089384",
+  "id": "olive",
+  "name": "Olive",
+  "color_hex": "#789D4A",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

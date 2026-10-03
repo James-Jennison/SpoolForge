@@ -1,0 +1,16 @@
+uuid: 9df026f3-827b-5034-8bea-bc5d4678d79f
+slug: liqcreate-premium-white
+brand:
+  slug: liqcreate
+name: Premium White
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#d6d7d8ff'
+properties:
+  density: 1.18
+  cure_wavelength: 405
+  viscosity_18c: 898
+  viscosity_25c: 406
+  viscosity_40c: 128
+  viscosity_60c: 42

@@ -1,0 +1,13 @@
+uuid: 723d0452-2d3a-5bbe-ba33-ca6caa92a47d
+slug: paramount-3d-pla-enzo-red
+brand:
+  slug: paramount-3d
+name: PLA (Enzo Red)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fc496dff'
+tags:
+- industrially_compostable
+properties: {}

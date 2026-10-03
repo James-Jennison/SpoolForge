@@ -1,0 +1,21 @@
+uuid: bf62bb58-148b-5fd2-a657-b3b595d8b875
+slug: formfutura-hdglass-blinded-bronze
+brand:
+  slug: formfutura
+name: HDglass Blinded Bronze
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#c2b56aff'
+tags:
+  - silk
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-hdglass-blinded-bronze/b4312be0132d.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 195
+  max_print_temperature: 225
+  min_bed_temperature: 80
+  max_bed_temperature: 90

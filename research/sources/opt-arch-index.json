@@ -1,0 +1,668 @@
+{
+  "repo": "OpenPrintTag/openprinttag-architecture",
+  "branch": "main",
+  "sha": "9b7a9d92e8eb8276345ccac1cb0e86db5fb19961",
+  "date": "2026-09-04T13:36:37Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "652a943726cf31a0d76ffeef58f95b8ce09ddb30",
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/trees/652a943726cf31a0d76ffeef58f95b8ce09ddb30"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e97b76f173f1e2d5548ff7c7ac8506ef36f177c8",
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/trees/e97b76f173f1e2d5548ff7c7ac8506ef36f177c8"
+    },
+    {
+      "path": ".github/workflows/check-schemas.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c2727e9b0b980a24866c2eb3d667e165a9e282d",
+      "size": 990,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/1c2727e9b0b980a24866c2eb3d667e165a9e282d"
+    },
+    {
+      "path": ".github/workflows/generate-documentation.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae7beb771f6e0323c2de1d6d893beb30b7becc17",
+      "size": 1115,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/ae7beb771f6e0323c2de1d6d893beb30b7becc17"
+    },
+    {
+      "path": ".github/workflows/pre-commit.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b11178bf94488981c908e0ea131be45bb3b5593",
+      "size": 231,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/2b11178bf94488981c908e0ea131be45bb3b5593"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7286a103577032f9904d5d1a70e31b34f5333897",
+      "size": 38,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/7286a103577032f9904d5d1a70e31b34f5333897"
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2597161e67aef0f2afcc4a49dfd7f5a343de707a",
+      "size": 317,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/2597161e67aef0f2afcc4a49dfd7f5a343de707a"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c363069cdb84f7dcaf1898fe79bd4ee26b3d2f66",
+      "size": 1059,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/c363069cdb84f7dcaf1898fe79bd4ee26b3d2f66"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7147ff7072b269db79b401123b5f1adbd30d271f",
+      "size": 669,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/7147ff7072b269db79b401123b5f1adbd30d271f"
+    },
+    {
+      "path": "data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0af573536a0ab592aa16d20d4ec17ccf12133f6f",
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/trees/0af573536a0ab592aa16d20d4ec17ccf12133f6f"
+    },
+    {
+      "path": "data/auxiliary_media.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "851b191f3ffd9e1510b57e243a9dd24c04913557",
+      "size": 1102,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/851b191f3ffd9e1510b57e243a9dd24c04913557"
+    },
+    {
+      "path": "data/brand_link_pattern_types.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88011c77807d793eec9b77ab92ff684056d74c3c",
+      "size": 129,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/88011c77807d793eec9b77ab92ff684056d74c3c"
+    },
+    {
+      "path": "data/brands.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "415c8812efa797db509da4a5b665c15cd4456d43",
+      "size": 2987,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/415c8812efa797db509da4a5b665c15cd4456d43"
+    },
+    {
+      "path": "data/countries.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab020b3fa4f1a450f187e0afaa246a3aeeca8ffb",
+      "size": 11889,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/ab020b3fa4f1a450f187e0afaa246a3aeeca8ffb"
+    },
+    {
+      "path": "data/fff_material_types.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "80f52d2195d983c06e1598ccdea4928b63639df4",
+      "size": 11155,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/80f52d2195d983c06e1598ccdea4928b63639df4"
+    },
+    {
+      "path": "data/material_certifications.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5e4357f5f2d9f6981d9aa4623dea3aee2c8074d",
+      "size": 612,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/f5e4357f5f2d9f6981d9aa4623dea3aee2c8074d"
+    },
+    {
+      "path": "data/material_photo_types.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "713ed3e42aa969ff9921b5e191dac2d2a21dcd63",
+      "size": 706,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/713ed3e42aa969ff9921b5e191dac2d2a21dcd63"
+    },
+    {
+      "path": "data/material_tag_categories.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa321651d8f9fbee1c0b44c7b2f84cb166d70947",
+      "size": 618,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/fa321651d8f9fbee1c0b44c7b2f84cb166d70947"
+    },
+    {
+      "path": "data/material_tags.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8ee032db2b8bb6cddbe4344b7c241b34c650e60",
+      "size": 16140,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/b8ee032db2b8bb6cddbe4344b7c241b34c650e60"
+    },
+    {
+      "path": "data/materials.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea27855dd358c45e402431c45d6a9151014e6d32",
+      "size": 14641,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/ea27855dd358c45e402431c45d6a9151014e6d32"
+    },
+    {
+      "path": "data/packaging.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0681751e7730bb508e3972d54e15044c197c95aa",
+      "size": 9731,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/0681751e7730bb508e3972d54e15044c197c95aa"
+    },
+    {
+      "path": "docs_src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f10f99faecd29f9d8ca2997ab5fa3837eb0732ba",
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/trees/f10f99faecd29f9d8ca2997ab5fa3837eb0732ba"
+    },
+    {
+      "path": "docs_src/generate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "350800c9260a5473fbcccc1a57f36284c7acfbbe",
+      "size": 666,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/350800c9260a5473fbcccc1a57f36284c7acfbbe"
+    },
+    {
+      "path": "docs_src/generate_common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05639c78d0548fde31d0a4ef3be72bdb9532d955",
+      "size": 13762,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/05639c78d0548fde31d0a4ef3be72bdb9532d955"
+    },
+    {
+      "path": "docs_src/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91f9c3e7385ecab9fff451c096368ba4433636f0",
+      "size": 959,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/91f9c3e7385ecab9fff451c096368ba4433636f0"
+    },
+    {
+      "path": "docs_src/markdown",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "759e2e0118123fba14e4d65cf8f4c1cf6c8573a6",
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/trees/759e2e0118123fba14e4d65cf8f4c1cf6c8573a6"
+    },
+    {
+      "path": "docs_src/markdown/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dc4b0d2f9f2886aa1272129b45934eb191de091",
+      "size": 1137,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/1dc4b0d2f9f2886aa1272129b45934eb191de091"
+    },
+    {
+      "path": "docs_src/markdown/_navbar.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e10dc9600a208b1470743ceda64790a0ad1d4978",
+      "size": 271,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/e10dc9600a208b1470743ceda64790a0ad1d4978"
+    },
+    {
+      "path": "docs_src/markdown/auxiliary_media.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3732b8e73a355668ffd7a012289d44e9749a580",
+      "size": 173,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/d3732b8e73a355668ffd7a012289d44e9749a580"
+    },
+    {
+      "path": "docs_src/markdown/brands.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d363ef2978776c3f8c1041c601aa599e157f8f1",
+      "size": 786,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/1d363ef2978776c3f8c1041c601aa599e157f8f1"
+    },
+    {
+      "path": "docs_src/markdown/fff_material_types.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "424072e45454354585406dc2ebf730467426655e",
+      "size": 155,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/424072e45454354585406dc2ebf730467426655e"
+    },
+    {
+      "path": "docs_src/markdown/material_certifications.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb6368edd6e7076d1af902c892d3ba3bdd6eb5ee",
+      "size": 176,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/bb6368edd6e7076d1af902c892d3ba3bdd6eb5ee"
+    },
+    {
+      "path": "docs_src/markdown/material_tags.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d1943768b09607115ce902adf4d5d5e2d0e8406",
+      "size": 1099,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/0d1943768b09607115ce902adf4d5d5e2d0e8406"
+    },
+    {
+      "path": "docs_src/markdown/materials.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efdd4b5566f8cb9f931b0174de2748aebeb97b1d",
+      "size": 815,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/efdd4b5566f8cb9f931b0174de2748aebeb97b1d"
+    },
+    {
+      "path": "docs_src/markdown/packaging.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e284b9f0fd0dfe9736641f55ebe7e4da3ba118b6",
+      "size": 683,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/e284b9f0fd0dfe9736641f55ebe7e4da3ba118b6"
+    },
+    {
+      "path": "docs_src/markdown/uuid.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5ed31dd7542b08386ca37c2bb6640b23bccecfa6",
+      "size": 3111,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/5ed31dd7542b08386ca37c2bb6640b23bccecfa6"
+    },
+    {
+      "path": "docs_src/plantuml",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed4ac7eb2d9b1e5bca2e46e1b405bc20cd412a8a",
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/trees/ed4ac7eb2d9b1e5bca2e46e1b405bc20cd412a8a"
+    },
+    {
+      "path": "docs_src/plantuml/_common.plantuml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "408d855d21e10b0a1b58d70a90f446879c0bf863",
+      "size": 266,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/408d855d21e10b0a1b58d70a90f446879c0bf863"
+    },
+    {
+      "path": "docs_src/plantuml/auxiliary_media.plantuml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecce9be30a8930b32a39126d1ea7a200b1ee6136",
+      "size": 336,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/ecce9be30a8930b32a39126d1ea7a200b1ee6136"
+    },
+    {
+      "path": "docs_src/plantuml/brands.plantuml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2640dd8d91dcfd9f9cc5b92d3f0c9a17c3854b7c",
+      "size": 576,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/2640dd8d91dcfd9f9cc5b92d3f0c9a17c3854b7c"
+    },
+    {
+      "path": "docs_src/plantuml/materials.plantuml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b541107c1fd4ae3de0205dc7b83908d773c3670d",
+      "size": 967,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/b541107c1fd4ae3de0205dc7b83908d773c3670d"
+    },
+    {
+      "path": "docs_src/plantuml/packaging.plantuml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53dd981397281f2feb40e0d7ba511e6230abf49f",
+      "size": 1584,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/53dd981397281f2feb40e0d7ba511e6230abf49f"
+    },
+    {
+      "path": "docs_src/tables.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f61be24f7c88aab7308888ce4c947e1db09c92dc",
+      "size": 1491,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/f61be24f7c88aab7308888ce4c947e1db09c92dc"
+    },
+    {
+      "path": "docs_src/vars.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f54644b39319686f42f6e0e7ec1d2e3f92747b59",
+      "size": 224,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/f54644b39319686f42f6e0e7ec1d2e3f92747b59"
+    },
+    {
+      "path": "generate_docs.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4e61b3c9a1442980915411a708daa4518974f6d5",
+      "size": 42,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/4e61b3c9a1442980915411a708daa4518974f6d5"
+    },
+    {
+      "path": "generate_schemas.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "64fc83dfa9410377d4e64fb7192c2c0f186271ad",
+      "size": 188,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/64fc83dfa9410377d4e64fb7192c2c0f186271ad"
+    },
+    {
+      "path": "pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0f60ab3ee7dfeff65ee93e08179129de09734a8",
+      "size": 30,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/a0f60ab3ee7dfeff65ee93e08179129de09734a8"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3c65efd6021dee36d9ef8b4aad60d1f2881f249",
+      "size": 47,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/a3c65efd6021dee36d9ef8b4aad60d1f2881f249"
+    },
+    {
+      "path": "schema",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e3bba2b2c79a16f70fcc56f607f4e438d39e3d8a",
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/trees/e3bba2b2c79a16f70fcc56f607f4e438d39e3d8a"
+    },
+    {
+      "path": "schema/generate_db_schema.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b353d2273e6e58fb2a9829e9dcd723f65dab71d",
+      "size": 7316,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/9b353d2273e6e58fb2a9829e9dcd723f65dab71d"
+    },
+    {
+      "path": "schema/generate_schema_common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6f88d28f79c05f76dc3515f281ccfedac4be08d",
+      "size": 7424,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/f6f88d28f79c05f76dc3515f281ccfedac4be08d"
+    },
+    {
+      "path": "schema/generated",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6780e00eb416f1a00ea582936b3e0bdcea4036a",
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/trees/e6780e00eb416f1a00ea582936b3e0bdcea4036a"
+    },
+    {
+      "path": "schema/generated/opt_db_schema",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5431836a8df785e1ac721def2b51a181800f6e92",
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/trees/5431836a8df785e1ac721def2b51a181800f6e92"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/brand.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e1d6dfe6db54959ede73262fbbf020d2ec1a5d7",
+      "size": 3328,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/5e1d6dfe6db54959ede73262fbbf020d2ec1a5d7"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/country.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6af912232da9326cf42d286d60df11a482bcb38",
+      "size": 812,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/a6af912232da9326cf42d286d60df11a482bcb38"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/fff_material.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ccec91753af6fe841338baf1fea7760dbd2e10f",
+      "size": 1068,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/9ccec91753af6fe841338baf1fea7760dbd2e10f"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/fff_material_container.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e4895592a3b453898e9348290df9922a63ed5e2",
+      "size": 985,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/5e4895592a3b453898e9348290df9922a63ed5e2"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/fff_material_package.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e40eafa57def7c91ecbf029bf399cb69f071745",
+      "size": 766,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/6e40eafa57def7c91ecbf029bf399cb69f071745"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/fff_material_properties.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65a7dc54582db179effa161efe0db66208b6deef",
+      "size": 3460,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/65a7dc54582db179effa161efe0db66208b6deef"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/material.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "110fdc34eff592b9c36337264d4774446ee97eff",
+      "size": 8113,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/110fdc34eff592b9c36337264d4774446ee97eff"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/material_color.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8357ad38c4651ec97a023319bc153e1a0e32323b",
+      "size": 2080,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/8357ad38c4651ec97a023319bc153e1a0e32323b"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/material_container.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "207a6134c76e622d1a083d26baff3b5f0e4e9e12",
+      "size": 2282,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/207a6134c76e622d1a083d26baff3b5f0e4e9e12"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/material_package.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d7aa66325e477b2ac04079a1ab8af48f5ae8e7c",
+      "size": 2810,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/4d7aa66325e477b2ac04079a1ab8af48f5ae8e7c"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/material_properties.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a1ed0d20467a8d4ccb892aceb1e64f5a0ef451c",
+      "size": 639,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/7a1ed0d20467a8d4ccb892aceb1e64f5a0ef451c"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/material_type.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18f4553e3f25c8fd761873d127f9e3e0ff5be7e5",
+      "size": 1001,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/18f4553e3f25c8fd761873d127f9e3e0ff5be7e5"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/sla_material_container.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acd2f62c9524e560a1306940e36964ec924556a5",
+      "size": 1050,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/acd2f62c9524e560a1306940e36964ec924556a5"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/sla_material_container_connector.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "508dfd20610c79a6a26a7efd405eb9ced4ec69fa",
+      "size": 409,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/508dfd20610c79a6a26a7efd405eb9ced4ec69fa"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/sla_material_package.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30da1e8a84b4e4bf476be648e46c619a42a2a440",
+      "size": 212,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/30da1e8a84b4e4bf476be648e46c619a42a2a440"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/sla_material_properties.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e727b8e8e3c0165e965fc75a535807f9b72e167e",
+      "size": 1187,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/e727b8e8e3c0165e965fc75a535807f9b72e167e"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/sla_wash_medium_container.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38ba4f98e2080efa5cdcaea0f51797ef336c877a",
+      "size": 1485,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/38ba4f98e2080efa5cdcaea0f51797ef336c877a"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/slug_reference.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb86daf1151a9923b8b47e887c8a8174d8fe06c1",
+      "size": 344,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/eb86daf1151a9923b8b47e887c8a8174d8fe06c1"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/uuid_reference.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "08a06e1e042a7e5e60e7fe3764de137c8a406208",
+      "size": 316,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/08a06e1e042a7e5e60e7fe3764de137c8a406208"
+    },
+    {
+      "path": "schema/generated/opt_db_schema/wash_medium.schema.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22a56e3d5239f36236db8860296ad93b490fec95",
+      "size": 1388,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/22a56e3d5239f36236db8860296ad93b490fec95"
+    },
+    {
+      "path": "schema/tests",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fefb1ce9c26281b02eba57696920d05cbed94669",
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/trees/fefb1ce9c26281b02eba57696920d05cbed94669"
+    },
+    {
+      "path": "schema/tests/opt_db_schema",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb45ea20ff3bf73a7166e06de40b33079a07d791",
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/trees/cb45ea20ff3bf73a7166e06de40b33079a07d791"
+    },
+    {
+      "path": "schema/tests/opt_db_schema/brand.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2118dd0d9b744ab064f7ae947952b0eaf17cc7c0",
+      "size": 97,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/2118dd0d9b744ab064f7ae947952b0eaf17cc7c0"
+    },
+    {
+      "path": "schema/tests/opt_db_schema/material.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73f1876062eef4ed2672f0a092e6726b4bf96964",
+      "size": 743,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/73f1876062eef4ed2672f0a092e6726b4bf96964"
+    },
+    {
+      "path": "schema/tests/opt_db_schema/material_container.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a0b4472a8fe54bf57ac61b6cdd82eb3324ec9e4",
+      "size": 125,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/0a0b4472a8fe54bf57ac61b6cdd82eb3324ec9e4"
+    },
+    {
+      "path": "schema/tests/opt_db_schema/material_package.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69da5b2e2a8c40a97875c7e3e5d10dc4209cd3e0",
+      "size": 266,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/69da5b2e2a8c40a97875c7e3e5d10dc4209cd3e0"
+    },
+    {
+      "path": "schema/tests/opt_db_schema/wash_medium.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e29f8c99388cc06a448a29effb609f7c9bf2275a",
+      "size": 196,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/e29f8c99388cc06a448a29effb609f7c9bf2275a"
+    },
+    {
+      "path": "schema/tests/schema_test_common.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "691c702d3993560b90fa948db2eb29c958be597a",
+      "size": 665,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/691c702d3993560b90fa948db2eb29c958be597a"
+    },
+    {
+      "path": "schema/tests/test_fff_material_default_properties.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4eab1afa921be930045296b7665211e60b3297a",
+      "size": 837,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/f4eab1afa921be930045296b7665211e60b3297a"
+    },
+    {
+      "path": "schema/tests/test_opt_db_schema.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a5ff289b75676d33b4b2f077a12f92afbbce950",
+      "size": 528,
+      "url": "https://api.github.com/repos/OpenPrintTag/openprinttag-architecture/git/blobs/0a5ff289b75676d33b4b2f077a12f92afbbce950"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+uuid: 2916fa10-bb88-5d55-853e-8ddf4a12c148
+slug: filamentpm-petg-orange
+brand:
+  slug: filamentpm
+name: PETG - Orange
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f93822ff'
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-petg-orange/df093bd6413c.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 90

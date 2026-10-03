@@ -1,0 +1,14 @@
+uuid: 33dc5d27-7a6b-5715-a348-fa9d85aa0f46
+slug: print-with-smile-asa-kevlar-black
+brand:
+  slug: print-with-smile
+name: ASA KEVLAR BLACK
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- contains_kevlar
+- abrasive
+properties: {}

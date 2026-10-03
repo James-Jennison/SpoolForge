@@ -1,0 +1,11 @@
+uuid: 4a9f65d7-a527-51f9-aa2e-b469cf86e0b4
+slug: paramount-3d-asa-black
+brand:
+  slug: paramount-3d
+name: ASA (Black)
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#545252ff'
+properties: {}

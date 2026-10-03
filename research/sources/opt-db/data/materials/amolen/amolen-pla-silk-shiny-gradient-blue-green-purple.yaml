@@ -1,0 +1,28 @@
+uuid: b18265fc-6f4e-59da-a057-a419cef4355b
+slug: amolen-pla-silk-shiny-gradient-blue-green-purple
+brand:
+  slug: amolen
+name: PLA Silk Shiny Gradient Blue Green Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://www.amolen.com/products/pla-silk-shiny
+secondary_colors:
+- color_rgba: '#00a594ff'
+- color_rgba: '#6802bcff'
+- color_rgba: '#0378d0ff'
+tags:
+- silk
+- gradual_color_change
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-silk-shiny-gradient-blue-green-purple/DSC01918.jpg
+  type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

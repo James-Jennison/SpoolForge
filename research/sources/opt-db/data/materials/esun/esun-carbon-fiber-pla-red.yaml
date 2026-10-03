@@ -1,0 +1,20 @@
+uuid: 029100ab-9664-5a06-9b8c-a9c93effabed
+slug: esun-carbon-fiber-pla-red
+brand:
+  slug: esun
+name: Carbon Fiber PLA Red
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://esun3dstoreeu.com/products/epla-cf?VariantsId=12176
+primary_color:
+  color_rgba: '#4f3638ff'
+tags:
+  - matte
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+properties: {}
+photos:
+  - url: https://files.openprinttag.org/esun/esun-carbon-fiber-pla-red/8451fe2b3261.jpg
+    type: unspecified

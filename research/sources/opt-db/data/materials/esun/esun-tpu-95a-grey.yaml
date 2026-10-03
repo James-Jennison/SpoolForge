@@ -1,0 +1,17 @@
+uuid: 31a21a04-b513-561b-ac05-3b546436bf72
+slug: esun-tpu-95a-grey
+brand:
+  slug: esun
+name: TPU 95A Grey
+class: FFF
+type: TPU
+abbreviation: TPU
+url: https://esun3dstoreeu.com/products/tpu-95a?VariantsId=12075
+primary_color:
+  color_rgba: '#737282ff'
+properties:
+  density: 1.21
+  hardness_shore_a: 95.0
+photos:
+  - url: https://files.openprinttag.org/esun/esun-tpu-95a-grey/5921a94fe103.jpg
+    type: unspecified

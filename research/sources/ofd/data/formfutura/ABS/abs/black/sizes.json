@@ -1,0 +1,32 @@
+[
+  {
+    "uuid": "83ebdab8-b59a-41f3-a05e-a98ee2f1a1a0",
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 140,
+    "article_number": "APRO-175BLCK-00500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/abspro"
+      }
+    ]
+  },
+  {
+    "uuid": "797dcd14-20ba-44a8-a452-3d0de163b616",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "APRO-175BLCK-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/abspro"
+      }
+    ]
+  }
+]

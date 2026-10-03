@@ -1,0 +1,23 @@
+uuid: 937978d9-82e0-51d2-8eb2-0e6f97b8ed3c
+slug: formfutura-apollox-natural
+brand:
+  slug: formfutura
+name: ApolloX Natural
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#f2efe9ff'
+tags:
+  - without_pigments
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-apollox-natural/28a786d9f562.png
+    type: unspecified
+properties:
+  density: 1.11
+  min_print_temperature: 235
+  max_print_temperature: 255
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  chamber_temperature: 40

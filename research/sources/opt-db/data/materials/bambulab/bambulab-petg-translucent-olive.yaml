@@ -1,0 +1,23 @@
+uuid: 7f6e7255-636d-51f5-aacd-0503d69cb30b
+slug: bambulab-petg-translucent-olive
+brand:
+  slug: bambulab
+name: PETG Translucent Olive
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#748c45ff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-translucent-olive/57d9e40540d0.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

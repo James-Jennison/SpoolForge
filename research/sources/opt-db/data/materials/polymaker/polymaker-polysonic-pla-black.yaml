@@ -1,0 +1,24 @@
+uuid: fbc9230f-689f-5100-b1bb-01280fd4433b
+slug: polymaker-polysonic-pla-black
+brand:
+  slug: polymaker
+name: PolySonic™ PLA Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#2d2b28ff'
+tags:
+  - high_speed
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polysonic-pla-black/e88f69f7e146.png
+    type: unspecified
+properties:
+  density: 1.23
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

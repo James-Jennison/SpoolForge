@@ -1,0 +1,14 @@
+uuid: 970699ce-85ec-5879-b40d-1189fc9fc8eb
+slug: tinmorry-carbon-fiber-petg-peacock-green
+brand:
+  slug: tinmorry
+name: Carbon Fiber PETG Peacock Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#2b5d66ff'
+tags:
+- contains_carbon_fiber
+- abrasive
+properties: {}

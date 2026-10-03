@@ -1,0 +1,24 @@
+uuid: 756d881d-1bd3-5480-affc-d5745f30be01
+slug: polymaker-polylite-neon-abs-yellow
+brand:
+  slug: polymaker
+name: PolyLite™ Neon ABS Yellow
+class: FFF
+type: ABS
+abbreviation: ABS
+tags:
+  - neon
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polylite-neon-abs-yellow/ee3d59570674.png
+    type: unspecified
+properties:
+  density: 1.04
+  min_print_temperature: 245
+  max_print_temperature: 265
+  min_bed_temperature: 90
+  max_bed_temperature: 100
+  drying_temperature: 70
+  drying_time: 360
+primary_color:
+  color_rgba: '#ffc001ff'

@@ -1,0 +1,11 @@
+uuid: bf65cd33-a8bf-550e-882f-40120fc20ae9
+slug: print-with-smile-asa-white
+brand:
+  slug: print-with-smile
+name: ASA WHITE
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#ffffffff'
+properties: {}

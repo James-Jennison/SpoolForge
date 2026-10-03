@@ -1,0 +1,11 @@
+uuid: b99d6037-509d-5dec-9e23-b139f4c719b1
+slug: siddament-pc-white
+brand:
+  slug: siddament
+name: PC White
+class: FFF
+type: PC
+abbreviation: PC
+primary_color:
+  color_rgba: '#f5f5f5ff'
+properties: {}

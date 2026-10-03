@@ -1,0 +1,23 @@
+uuid: c6b8be9e-d650-5087-9f40-c95caf0dfb87
+slug: fiberlogy-easy-pla-white
+brand:
+  slug: fiberlogy
+name: Easy PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-easy-pla-white/d44e7673b1d6.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 240

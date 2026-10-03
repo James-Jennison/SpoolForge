@@ -1,0 +1,14 @@
+{
+  "uuid": "cd669d60-b66e-4194-a5be-6701c0dd6478",
+  "id": "dual_colour_black_rose_red",
+  "name": "Dual colour Black-Rose Red",
+  "color_hex": [
+    "#000000",
+    "#BB264D"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

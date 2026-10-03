@@ -1,0 +1,13 @@
+uuid: b4cf1b8d-0694-5207-9adf-ff894e6b7dd7
+slug: matter3d-inc-petg-hf-royal-purple
+brand:
+  slug: matter3d-inc
+name: PETg HF Royal Purple
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#4b006eff'
+tags:
+- high_speed
+properties: {}

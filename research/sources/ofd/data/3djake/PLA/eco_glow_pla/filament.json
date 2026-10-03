@@ -1,0 +1,11 @@
+{
+  "uuid": "b7727f35-1ff8-4f77-b25e-6ddf5ddf4ff3",
+  "id": "eco_glow_pla",
+  "name": "eco Glow PLA",
+  "diameter_tolerance": 0.02,
+  "density": 1.24,
+  "min_print_temperature": 190,
+  "max_print_temperature": 230,
+  "min_bed_temperature": 50,
+  "max_bed_temperature": 70
+}

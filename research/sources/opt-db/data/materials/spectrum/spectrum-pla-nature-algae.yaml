@@ -1,0 +1,21 @@
+uuid: 5f6dce23-f3aa-5ab9-b47d-3c5a65a3f3b5
+slug: spectrum-pla-nature-algae
+brand:
+  slug: spectrum
+name: PLA Nature Algae
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#efe8d8ff'
+tags:
+- contains_algae
+- contains_organic_material
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-nature-algae/spectrum-pla-nature-algae-0-1a70d19e.jpg
+  type: unspecified

@@ -1,0 +1,12 @@
+uuid: 55121859-160f-58a6-a97b-0eaf51d031cb
+slug: paramount-3d-tpu-black
+brand:
+  slug: paramount-3d
+name: TPU (Black)
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#000000ff'
+properties:
+  hardness_shore_a: 92

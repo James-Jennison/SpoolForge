@@ -1,0 +1,14 @@
+{
+  "uuid": "ce08d61c-8762-410b-8e67-1f343bf56d9c",
+  "id": "silver_black",
+  "name": "Silver Black",
+  "color_hex": [
+    "#C9D0D4",
+    "#000000"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

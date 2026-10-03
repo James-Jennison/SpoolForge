@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "baseline": [
+    {
+      "id": "provider-fixture-and-asset-integrity",
+      "type": "data-integrity",
+      "severity": "HIGH",
+      "command": ["bash", "-lc", "python3 tools/test_build_community_catalog.py && python3 tools/verify_provider_assets.py"]
+    },
+    {
+      "id": "provider-build-tests-lint",
+      "type": "build-test-static",
+      "severity": "HIGH",
+      "command": ["heavy-gradle", ":core:test", ":app:testDebugUnitTest", ":app:lintDebug", ":app:assembleDebug", ":app:assembleDebugAndroidTest", "--console=plain"]
+    }
+  ],
+  "substantive": [],
+  "conditional": {}
+}

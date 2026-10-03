@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-gtin-ui-deepseek-1",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-da0678d34a11",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Test / Verification",
+  "summary": "The corruption-repair test does not prove the sidecar file is actually repaired because it may pass via in-memory caching of the known GTIN and an uncached GTIN expected to be empty.",
+  "claim": "The remediation disposition claiming renameTo same-directory replacement is covered by this test is unsubstantiated. A regression that fails to repair corruption could still pass CI, causing silent data loss for users.",
+  "evidence": {
+    "source": "In GtinIndexTest.alteredInstalledSidecarIsRepairedBeforeLookup, the test calls index.lookup(\"7340002119380\") before corrupting the file, then after corruption calls index.lookup for the same GTIN. If GtinIndex caches parsed data after first successful lookup, the assertion on the known GTIN may return cached results without re-reading the corrupt file. The second assertion uses a different GTIN (\"00036000291452\") and expects isEmpty(), which is also the result if the corrupted file is treated as an empty database or if repair produces an empty database; therefore no assertion proves the corrupt file was replaced with valid data for a known entry. The file content is never checked after the test.",
+    "response_sha256": "2349eae0bfc131cd0d3d8c90701cb20a70f7be767ad01223d1429ee0a5f298d3"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "tools"
+  ],
+  "suggested_remediation": "Strengthen the test to force a cache miss after corruption by using a new GtinIndex instance or an explicit invalidate/reload API, and assert a known non-empty result. Additionally assert the file is valid SQLite (e.g., header bytes) and no longer contains the corrupted text.",
+  "suggested_validation": "After corrupting the sidecar, instantiate a fresh GtinIndex and lookup the known GTIN; assert the expected package IDs are returned; read the file bytes and assert they start with the SQLite magic header 'SQLite format 3' and are longer than 0.",
+  "reviewer_confidence": "HIGH"
+}

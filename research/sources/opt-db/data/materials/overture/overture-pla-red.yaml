@@ -1,0 +1,14 @@
+uuid: e2143130-a62f-5061-af38-a1753644ced3
+slug: overture-pla-red
+brand:
+  slug: overture
+name: PLA Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e72f1dff'
+tags:
+- industrially_compostable
+photos: []
+properties: {}

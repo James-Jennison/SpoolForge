@@ -1,0 +1,11 @@
+{
+  "uuid": "7ba68443-802f-4d7b-afdf-8a0a8833fea2",
+  "id": "cpe",
+  "name": "CPE",
+  "diameter_tolerance": 0.02,
+  "density": 1.25,
+  "min_print_temperature": 240,
+  "max_print_temperature": 270,
+  "min_bed_temperature": 70,
+  "max_bed_temperature": 90
+}

@@ -1,0 +1,111 @@
+{
+  "provider": "openai",
+  "model": "gpt-5.6-terra",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 2959,
+    "input_tokens_details": {
+      "cache_write_tokens": 2956,
+      "cached_tokens": 0
+    },
+    "output_tokens": 517,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 3476
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "ANYCUBIC",
+      "confidence": 0.99,
+      "evidence": "ANYCUBIC is prominently printed on the lower product label.",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": "ANYCUBIC",
+      "confidence": 0.98,
+      "evidence": "ANYCUBIC name/logo is visibly printed on the lower product label.",
+      "basis": "printed"
+    },
+    "product": {
+      "value": "PLA",
+      "confidence": 0.99,
+      "evidence": "PLA is prominently printed on the lower label; upper label also reads \u201cANYCUBIC PLA 3D ...\u201d.",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PLA",
+      "confidence": 0.99,
+      "evidence": "PLA is printed on the product label.",
+      "basis": "printed"
+    },
+    "color": {
+      "value": "Magenta",
+      "confidence": 0.99,
+      "evidence": "Color: Magenta is printed on the lower label and Magenta appears on the upper label.",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": 1.75,
+      "confidence": 0.99,
+      "evidence": "Diameter: 1.75\u00b10.02mm.",
+      "basis": "printed"
+    },
+    "net_weight_g": {
+      "value": 1000,
+      "confidence": 0.99,
+      "evidence": "Net Weight: 1 kg.",
+      "basis": "printed"
+    },
+    "nozzle_min_c": {
+      "value": 190,
+      "confidence": 0.99,
+      "evidence": "Printing Temp: 190\u2013230\u00b0C.",
+      "basis": "printed"
+    },
+    "nozzle_max_c": {
+      "value": 230,
+      "confidence": 0.99,
+      "evidence": "Printing Temp: 190\u2013230\u00b0C.",
+      "basis": "printed"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.91,
+      "evidence": "A barcode is visible, but no retail GTIN digits are visibly printed or decodable from the image.",
+      "basis": "absent"
+    },
+    "sku": {
+      "value": "AHPLMG-107",
+      "confidence": 0.99,
+      "evidence": "AHPLMG-107 is printed on both labels.",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 0.96,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [
+      {
+        "value": "X004LDC21N",
+        "kind": "marketplace identifier",
+        "evidence": "Printed beneath the barcode on the upper label."
+      }
+    ],
+    "needs_user_review": []
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "uuid": "28cfafed-1816-4db3-8de6-797e7fcb0648",
+  "id": "arctic_white",
+  "name": "Arctic White",
+  "color_hex": "#FFFFFF",
+  "color_standards": {
+    "ral": "9003"
+  },
+  "traits": {
+    "silk": true,
+    "industrially_compostable": true
+  }
+}

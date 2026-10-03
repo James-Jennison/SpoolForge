@@ -1,0 +1,15 @@
+{
+  "uuid": "5aaf5903-6f8a-4ccb-82ff-937fe755e8ec",
+  "id": "fusion",
+  "name": "Fusion",
+  "color_hex": [
+    "#FFC946",
+    "#D41754",
+    "#63D6D6",
+    "#0CCF81"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

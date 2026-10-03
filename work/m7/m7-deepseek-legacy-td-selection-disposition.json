@@ -1,0 +1,7 @@
+{
+  "finding_id": "m7-deepseek-legacy-td-selection",
+  "disposition": "REJECTED",
+  "resolved": true,
+  "reason": "The approved evidence model requires valid conflicting measurements to coexist visibly and forbids silently selecting a winner. A focused migration test now proves both valid values remain and the UI reports Conflicting evidence with both values.",
+  "evidence_reference": "StorageAcceptanceTest.fullSpectrumMigrationPreservesValidConflictsAndUiDoesNotSelectAWinner and FullSpectrumUiTest.conflictingAndSupersededTdEvidenceIsExplainedWithoutSelectingAWinner"
+}

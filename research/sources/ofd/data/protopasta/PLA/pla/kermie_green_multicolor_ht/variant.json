@@ -1,0 +1,14 @@
+{
+  "uuid": "3f2a4b09-d087-4be4-99c6-b38e983b6398",
+  "id": "kermie_green_multicolor_ht",
+  "name": "Kermie Green Multicolor HT",
+  "color_hex": [
+    "#41A840",
+    "#B3DF3A"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "high_temperature": true
+  }
+}

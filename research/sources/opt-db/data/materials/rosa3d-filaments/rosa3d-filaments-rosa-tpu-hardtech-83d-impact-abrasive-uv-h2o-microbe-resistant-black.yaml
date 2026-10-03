@@ -1,0 +1,12 @@
+uuid: e0246d9b-fff6-5f9b-80d7-9a262a90981f
+slug: rosa3d-filaments-rosa-tpu-hardtech-83d-impact-abrasive-uv-h2o-microbe-resistant-black
+brand:
+  slug: rosa3d-filaments
+name: ROSA TPU HardTech+ 83D, Impact - Abrasive - UV - H2O - microbe- resistant Black
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#545252ff'
+properties:
+  hardness_shore_d: 83

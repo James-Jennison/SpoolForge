@@ -1,0 +1,13 @@
+{
+  "uuid": "0ac80848-1f10-440c-9f9b-75674ff2df5b",
+  "id": "dual_dark_red_super_violet",
+  "name": "DUAL DARK RED + SUPER VIOLET",
+  "color_hex": [
+    "#CC393F",
+    "#0353BA"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

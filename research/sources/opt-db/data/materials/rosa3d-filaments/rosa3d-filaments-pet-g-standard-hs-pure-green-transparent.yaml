@@ -1,0 +1,14 @@
+uuid: aa50921f-c23e-5394-a4d2-f2e7a7a0caec
+slug: rosa3d-filaments-pet-g-standard-hs-pure-green-transparent
+brand:
+  slug: rosa3d-filaments
+name: PET-G Standard HS Pure Green Transparent
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#26a648ff'
+tags:
+- translucent
+- high_speed
+properties: {}

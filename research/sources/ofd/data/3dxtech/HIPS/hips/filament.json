@@ -1,0 +1,11 @@
+{
+  "uuid": "c1d1eaaa-3895-4121-9e46-1d6d147225d1",
+  "id": "hips",
+  "name": "HIPS",
+  "diameter_tolerance": 0.02,
+  "density": 1.04,
+  "min_print_temperature": 220,
+  "max_print_temperature": 250,
+  "min_bed_temperature": 90,
+  "max_bed_temperature": 110
+}

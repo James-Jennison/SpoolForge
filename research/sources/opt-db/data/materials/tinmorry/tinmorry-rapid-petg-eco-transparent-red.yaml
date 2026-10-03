@@ -1,0 +1,11 @@
+uuid: 1cae7a36-d455-5d48-875f-e7303fc066fb
+slug: tinmorry-rapid-petg-eco-transparent-red
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Transparent Red
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e72f1dff'
+properties: {}

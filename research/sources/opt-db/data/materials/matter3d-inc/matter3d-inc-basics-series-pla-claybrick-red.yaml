@@ -1,0 +1,13 @@
+uuid: bdeae06a-58e6-534d-9fba-5b479bbce813
+slug: matter3d-inc-basics-series-pla-claybrick-red
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA Clay/Brick Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#853523ff'
+tags:
+- industrially_compostable
+properties: {}

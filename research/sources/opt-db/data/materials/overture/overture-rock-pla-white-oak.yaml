@@ -1,0 +1,13 @@
+uuid: 62e7e18d-ddd4-55f0-930b-39ed80f42b38
+slug: overture-rock-pla-white-oak
+brand:
+  slug: overture
+name: Rock PLA White Oak
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#d4b6a3ff'
+tags:
+- industrially_compostable
+properties: {}

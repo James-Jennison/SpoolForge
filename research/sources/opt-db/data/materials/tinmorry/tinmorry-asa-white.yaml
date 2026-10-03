@@ -1,0 +1,11 @@
+uuid: c7db1e8d-0fe7-5c86-babc-4330e5a53f4d
+slug: tinmorry-asa-white
+brand:
+  slug: tinmorry
+name: ASA White
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#ffffffff'
+properties: {}

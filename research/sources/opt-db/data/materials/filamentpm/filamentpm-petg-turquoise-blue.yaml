@@ -1,0 +1,19 @@
+uuid: 4b57f811-80d6-5d3a-b5f7-c5620efa88bf
+slug: filamentpm-petg-turquoise-blue
+brand:
+  slug: filamentpm
+name: PETG - Turquoise Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#3eb1c8ff'
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-petg-turquoise-blue/8e651bb16427.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 90

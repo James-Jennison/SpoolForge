@@ -1,0 +1,23 @@
+uuid: 36c1054b-98b7-54eb-938e-15f4dbafe2bc
+slug: bambulab-petg-hf-peanut-brown
+brand:
+  slug: bambulab
+name: PETG HF Peanut Brown
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#875718ff'
+tags:
+  - high_speed
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-hf-peanut-brown/d0e58d1af12a.png
+    type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

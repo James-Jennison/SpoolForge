@@ -1,0 +1,14 @@
+uuid: 84b8a170-67b7-514a-84e9-ba9f4a065967
+slug: amolen-petg-basic-blue
+brand:
+  slug: amolen
+name: PETG Basic Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0095ffff'
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-petg-basic-blue/231d3c31ea7f.png
+  type: unspecified
+properties: {}

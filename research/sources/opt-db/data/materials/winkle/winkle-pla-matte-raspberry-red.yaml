@@ -1,0 +1,15 @@
+uuid: 785947c7-a5fa-5003-ab72-30f94e8d6240
+slug: winkle-pla-matte-raspberry-red
+brand:
+  slug: winkle
+name: PLA Matte Raspberry Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#b7293eff'
+tags:
+- matte
+- industrially_compostable
+properties:
+  density: 1.24

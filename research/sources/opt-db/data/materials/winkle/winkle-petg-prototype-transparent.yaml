@@ -1,0 +1,14 @@
+uuid: 0bff2b7a-c0e6-5804-98dd-6f6afea358c4
+slug: winkle-petg-prototype-transparent
+brand:
+  slug: winkle
+name: PETG Prototype Transparent
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f2ece9ff'
+tags:
+- transparent
+properties:
+  density: 1.23

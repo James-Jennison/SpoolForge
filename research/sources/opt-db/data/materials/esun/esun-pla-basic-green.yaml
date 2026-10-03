@@ -1,0 +1,24 @@
+uuid: aa2b5223-7e02-5767-aa6a-66613b995f89
+slug: esun-pla-basic-green
+brand:
+  slug: esun
+name: PLA Basic Green
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://esun3dstoreeu.com/products/epla?VariantsId=13418
+primary_color:
+  color_rgba: '#58c91bff'
+tags:
+  - industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 210
+  max_print_temperature: 230
+  min_bed_temperature: 45
+  max_bed_temperature: 60
+  drying_temperature: 50
+  drying_time: 480
+photos:
+  - url: https://files.openprinttag.org/esun/esun-pla-basic-green/da668c90af94.jpg
+    type: unspecified

@@ -1,0 +1,9 @@
+{
+  "uuid": "ac7d31c9-db2e-444b-b511-4339882c8754",
+  "id": "silver",
+  "name": "Silver",
+  "color_hex": "#A8B0BD",
+  "color_standards": {
+    "ral": "9006"
+  }
+}

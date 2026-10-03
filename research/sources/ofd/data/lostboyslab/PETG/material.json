@@ -1,0 +1,14 @@
+{
+  "uuid": "5f7e5a64-909a-4d6f-9cb3-22d7b6c8e6ed",
+  "material": "PETG",
+  "default_max_dry_temperature": 55,
+  "default_slicer_settings": {
+    "prusaslicer": {
+      "bed_temp": 80,
+      "first_layer_bed_temp": 85,
+      "first_layer_nozzle_temp": 240,
+      "nozzle_temp": 235,
+      "profile_name": "LBL/PETG/matte"
+    }
+  }
+}

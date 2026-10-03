@@ -1,0 +1,14 @@
+{
+  "uuid": "21b73834-17a1-4054-9b8a-f1260f05b9a0",
+  "id": "kings_cake_dual_color",
+  "name": "Kings Cake Dual Color",
+  "color_hex": [
+    "#B645A9",
+    "#06B100"
+  ],
+  "traits": {
+    "matte": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

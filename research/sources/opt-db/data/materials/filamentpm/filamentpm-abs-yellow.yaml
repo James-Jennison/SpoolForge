@@ -1,0 +1,21 @@
+uuid: 008a2b80-2331-5466-ab40-b9bf4daee5af
+slug: filamentpm-abs-yellow
+brand:
+  slug: filamentpm
+name: ABS - Yellow
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#f7b500ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-abs-yellow/6ec35066ee1f.png
+    type: unspecified
+properties:
+  density: 1.04
+  min_print_temperature: 220
+  max_print_temperature: 250
+  min_bed_temperature: 100
+  max_bed_temperature: 110

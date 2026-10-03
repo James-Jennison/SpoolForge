@@ -1,0 +1,10 @@
+uuid: 1e721e97-e7fd-5b04-8a81-4c63cf39b212
+slug: phrozen-standard-aqua-mist-gray-resin
+brand:
+  slug: phrozen
+name: Standard Aqua Mist Gray Resin
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#7d8eaaff'
+properties: {}

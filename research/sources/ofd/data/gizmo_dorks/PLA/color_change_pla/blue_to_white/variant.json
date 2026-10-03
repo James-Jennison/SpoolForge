@@ -1,0 +1,13 @@
+{
+  "uuid": "e622b4e3-7db1-4c96-906d-4a6ec1fb8a8d",
+  "id": "blue_to_white",
+  "name": "Blue to White",
+  "color_hex": [
+    "#FFFFFF",
+    "#0378D0"
+  ],
+  "traits": {
+    "temperature_color_change": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,23 @@
+uuid: ade9cbb4-319e-5eda-9ff3-7b2894db99db
+slug: fiberlogy-abs-navy-blue
+brand:
+  slug: fiberlogy
+name: ABS Navy Blue
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#0e21aeff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-abs-navy-blue/3f296af67ad8.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 250
+  max_print_temperature: 265
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 240

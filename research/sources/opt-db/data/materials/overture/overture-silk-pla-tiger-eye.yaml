@@ -1,0 +1,17 @@
+uuid: 3b24328a-1312-5a97-80cd-78cb60d29980
+slug: overture-silk-pla-tiger-eye
+brand:
+  slug: overture
+name: Silk PLA Tiger Eye
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#545252ff'
+- color_rgba: '#a78403ff'
+- color_rgba: '#c25c56ff'
+tags:
+- gradual_color_change
+- silk
+- industrially_compostable
+properties: {}

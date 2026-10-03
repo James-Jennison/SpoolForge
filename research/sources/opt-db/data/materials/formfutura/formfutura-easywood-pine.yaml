@@ -1,0 +1,23 @@
+uuid: 0467c2e0-a710-5cd6-b3ac-01875dfc8ae1
+slug: formfutura-easywood-pine
+brand:
+  slug: formfutura
+name: EasyWood Pine
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c6ad74ff'
+tags:
+  - contains_wood
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easywood-pine/e6d18ecb1d1b.png
+    type: unspecified
+properties:
+  density: 1.15
+  min_print_temperature: 190
+  max_print_temperature: 240
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 40
+  drying_time: 360

@@ -1,0 +1,10 @@
+{
+  "model": "motorola razr 2023",
+  "schema": "filamajig.spool",
+  "version": 1,
+  "payload_bytes": 575,
+  "profile_id_distinct_from_spool_id": true,
+  "qr_decode": "PASS",
+  "unicode_round_trip": "PASS",
+  "network_required": false
+}

@@ -1,0 +1,17 @@
+uuid: 95acd9f9-2c45-5c00-90e9-74105f79b87d
+slug: atomic-filament-bug-eyes-shade-shifting-petg-pro
+brand:
+  slug: atomic-filament
+name: Bug Eyes Shade-Shifting PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/bug-eyes-petg-pro
+primary_color:
+  color_rgba: '#217165ff'
+tags:
+- iridescent
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-bug-eyes-shade-shifting-petg-pro/807ab0eac2a0.png
+  type: unspecified
+properties: {}

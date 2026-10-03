@@ -1,0 +1,11 @@
+{
+  "uuid": "8cffff2e-06fe-413e-97a5-ea31e17fee9f",
+  "id": "industrial_grey",
+  "name": "Industrial Grey",
+  "color_hex": "#5A696C",
+  "traits": {
+    "silk": true,
+    "industrially_compostable": true,
+    "self_extinguishing": true
+  }
+}

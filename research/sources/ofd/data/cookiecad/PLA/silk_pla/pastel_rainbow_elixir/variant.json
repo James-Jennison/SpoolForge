@@ -1,0 +1,18 @@
+{
+  "uuid": "1bb1599f-3b77-4716-881e-f338edbf454e",
+  "id": "pastel_rainbow_elixir",
+  "name": "Pastel Rainbow Elixir",
+  "color_hex": [
+    "#FD9191",
+    "#FCE575",
+    "#69EBB6",
+    "#9CD0DB",
+    "#C1648E"
+  ],
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

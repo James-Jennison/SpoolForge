@@ -1,0 +1,21 @@
+uuid: 71fac686-b398-5f7a-b5e9-6bf8de67a828
+slug: spectrum-huracan-pla-anthracite-grey
+brand:
+  slug: spectrum
+name: Huracan PLA Anthracite Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#3f4647ff'
+tags:
+- silk
+- industrially_compostable
+properties:
+  density: 1.22
+  min_print_temperature: 190
+  max_print_temperature: 230
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-huracan-pla-anthracite-grey/spectrum-huracan-pla-anthracite-grey-0-3850b528.jpg
+  type: unspecified

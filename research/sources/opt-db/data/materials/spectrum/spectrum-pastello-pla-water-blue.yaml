@@ -1,0 +1,20 @@
+uuid: e81548e6-b53b-597c-bcb5-f456431fd92e
+slug: spectrum-pastello-pla-water-blue
+brand:
+  slug: spectrum
+name: Pastello PLA Water Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c2efe8ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.3
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pastello-pla-water-blue/spectrum-pastello-pla-water-blue-0-715a4c22.jpg
+  type: unspecified

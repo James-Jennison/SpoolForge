@@ -1,0 +1,35 @@
+[
+  {
+    "uuid": "f1de8203-596a-44a5-9f09-766be16e89e2",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/rapid-petg-filament-1-75mm-colored-1kg"
+      }
+    ]
+  },
+  {
+    "uuid": "704b80f8-95f8-443f-9009-714b0ebad8fb",
+    "filament_weight": 250,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/multi-color-250-g-filament-bundle?variant=51093424767252"
+      }
+    ]
+  },
+  {
+    "uuid": "c118cdb4-a5a2-4451-af5c-3503aea7289c",
+    "filament_weight": 3000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/orangestorm-giga-large-3kg-filament?variant=51052659147028"
+      }
+    ]
+  }
+]

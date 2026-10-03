@@ -1,0 +1,137 @@
+[
+  {
+    "uuid": "43272579-c1c1-4702-8c8b-157a013e4c3c",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "RPET-175ORAN-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "58e49c0b-ddf8-45eb-9552-02ca6c0edeb7",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "RPET-175ORAN-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "a709a7cb-9c75-482e-9bf4-8701c4c2332a",
+    "filament_weight": 3500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 705,
+    "article_number": "RPET-175ORAN-03500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "068fae1f-68e6-4dfa-8ebf-bbe34a611ec7",
+    "filament_weight": 4500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "RPET-175ORAN-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "c69f9020-62d7-463a-ac95-53117850bc46",
+    "filament_weight": 750,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "RPET-285ORAN-00750",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "50368a01-e15b-4284-976e-3145a6f61e64",
+    "filament_weight": 1000,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "RPET-285ORAN-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "aa5254c4-df77-4814-91fc-8b78546cd8be",
+    "filament_weight": 2300,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "RPET-285ORAN-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "5a87cbec-fc09-46dd-987a-894aa54f11ba",
+    "filament_weight": 3500,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 705,
+    "article_number": "RPET-285ORAN-03500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  },
+  {
+    "uuid": "aa0e507e-8225-4352-b1f6-d5d3e3d8f93a",
+    "filament_weight": 4500,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "RPET-285ORAN-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rpet"
+      }
+    ]
+  }
+]

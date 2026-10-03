@@ -1,0 +1,21 @@
+uuid: 6649b55e-13b1-5657-af07-99315202b1fb
+slug: spectrum-pla-silk-sapphire-blue
+brand:
+  slug: spectrum
+name: PLA SILK Sapphire Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#436176ff'
+tags:
+- silk
+properties:
+  density: 1.22
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 40
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-silk-sapphire-blue/spectrum-pla-silk-sapphire-blue-0-f091218b.jpg
+  type: unspecified

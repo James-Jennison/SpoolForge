@@ -1,0 +1,14 @@
+uuid: 0bbdfe93-d879-5aa7-b065-22674e4b468e
+slug: print-with-smile-rec-pla-just-yellow
+brand:
+  slug: print-with-smile
+name: REC-PLA Just YELLOW
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f2de00ff'
+tags:
+- recycled
+- industrially_compostable
+properties: {}

@@ -1,0 +1,26 @@
+uuid: 3d0c77fc-34c9-5661-8139-25fbba9cd818
+slug: bambulab-pla-basic-gradient-dusk-glare
+brand:
+  slug: bambulab
+name: PLA Basic Gradient Dusk Glare
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+  - color_rgba: '#ed9558ff'
+  - color_rgba: '#ce4406ff'
+tags:
+  - gradual_color_change
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-basic-gradient-dusk-glare/e142b54237f5.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45
+url: https://us.store.bambulab.com/products/pla-basic-gradient?id=43176275312776

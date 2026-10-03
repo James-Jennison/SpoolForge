@@ -1,0 +1,59 @@
+{
+  "phase": "INITIAL_REVIEW",
+  "objective": "Independently review the owner-approved Filamajig NFC M7 Full Spectrum foundation for architectural integrity, Android and Room compatibility, failure modes, evidence fidelity, and regressions in established NFC and portable identity behavior.",
+  "owner_requirements": [
+    "Add canonical richer transmission-distance and optical characterization with explicit provenance, uncertainty, method, geometry, thickness, environmental, instrument, confidence, and supersession fields",
+    "Add extensible appearance and Full Spectrum role assertions with canonical C, M, Y, G mixing roles and White and Black anchors",
+    "Keep recommended suitability distinct from observed suitability and preserve UNKNOWN and UNTESTED without automatic numeric TD thresholds",
+    "Use an additive Room user database v5-to-v6 migration, retain compatibility tables, copy valid legacy TD once, and quarantine malformed legacy TD without promoting it to numeric evidence",
+    "Expose Full Spectrum only through progressive disclosure on saved local profiles",
+    "Preserve existing Standard OpenSpool and PAXX payload bytes and portable identity v1",
+    "Do not implement sets, recipes, automatic best-set scoring, private NFC fields, or slicer project generation"
+  ],
+  "change_summary": [
+    "Added typed M7 core domain vocabulary and validation for TD origins, optical characterization, appearances, roles, authorities, assertion states, suitability kinds, ratings, and scopes",
+    "Added six Room v6 evidence and Full Spectrum tables with profile/evidence foreign keys, query indices, assessment scope check, DAO reads and writes, and an exported v6 schema",
+    "Added additive v5-to-v6 migration that retains legacy tables, conservatively maps legacy origins, copies valid 0.1-to-100 decimal TD values, and retains malformed values only as quarantined non-TD optical evidence",
+    "Made optical_characterizations authoritative for post-v6 TD writes while leaving transmission_distance_measurements read-only for rollback and export compatibility",
+    "Added repository APIs for aggregate profile reads, user-confirmed role assertions, and observed suitability",
+    "Added collapsed Full Spectrum profile UI with explicit local-only boundary, unknown and untested states, conflict-visible TD evidence, roles, and separate recommended and observed suitability",
+    "Kept codec and portable identity source unchanged from baseline 0dac497b4",
+    "TD replacement and clearing now supersede every prior active TD characterization transactionally; a clear writes a null tombstone so the effective UI state is Unknown without erasing history",
+    "Persistence uses layer_height_mm consistently with the approved layerHeightMm domain contract"
+  ],
+  "objective_evidence": {
+    "protected_host_validation": "PASS: heavy-gradle core tests, app tests, lintDebug, debug APK, unsigned release APK, and debug Android-test APK; 66 core plus 71 app tests, zero failures",
+    "artifact": "debug APK SHA-256 5b9fcbf7285c03b4011355ab1f1bbfe31b7ddf2353b4a9af08bf9e7b125ab9e9; installed version 0.7.0-m7",
+    "database_runtime": "PASS on connected Android 16 device: existing app database opened at user_version 6, integrity_check ok, foreign_key_check empty, and all six M7 tables present",
+    "exact_2023_device": "PENDING: the currently USB-connected phone identifies as motorola razr 2026; the discovered motorola razr 2023 wireless endpoint did not accept its saved ADB connection and exact-model tests correctly refused to claim evidence"
+  },
+  "review_files": [
+    "docs/FULL_SPECTRUM_PRODUCT_DIRECTION.md",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/FullSpectrum.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/data/FullSpectrumPersistence.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/data/Databases.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/FullSpectrumUi.kt",
+    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/FullSpectrumTest.kt",
+    "app/src/test/kotlin/net/jamesjennison/filamajignfc/FullSpectrumUiTest.kt",
+    "app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt",
+    "app/schemas/net.jamesjennison.filamajignfc.data.UserDatabase/6.json",
+    "work/m7/evidence-profile.json"
+  ],
+  "known_limits": [
+    "Exact motorola razr 2023 acceptance remains pending because that device is not currently connected; current artifact installation and database-runtime checks used a motorola razr 2026 on Android 16",
+    "M7 records user-confirmed profile roles and profile-level observed suitability; role-specific assessment UI and richer optical capture controls are intentionally limited to the approved foundation scope",
+    "No automatic suitability policy exists, so recommended suitability remains UNKNOWN unless future reviewed policy evidence is added"
+  ],
+  "review_questions": [
+    "Can malformed, zero, out-of-range, missing, duplicated, or conflicting legacy TD data be promoted, lost, or silently selected during v5-to-v6 migration or later saves?",
+    "Do domain validation, Room schema, migration behavior, DAO APIs, and UI terminology represent the same origin, role category, assertion state, suitability kind, rating, and scope contracts?",
+    "Can repeated role or suitability actions create misleading active duplicates, ID collisions, cross-profile references, or false current-state displays?",
+    "Does the progressive-disclosure UI accurately preserve unknown, untested, conflicting, recommended, observed, local-only, and catalog-unsaved states without implying automatic scoring?",
+    "Is any M7 evidence serialized into OpenSpool, PAXX, portable identity v1, Spoolman export, labels, or another compatibility boundary contrary to scope?",
+    "Does the migration remain additive and safe for empty, v4-to-v5-to-v6, direct v5-to-v6, shared-profile, deleted-record, rollback/export, and foreign-key scenarios?"
+  ],
+  "sanitization": "No credentials, environment values, private database contents, NFC UIDs, device serials, network addresses, account data, or reviewer output are included."
+}

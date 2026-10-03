@@ -1,0 +1,14 @@
+uuid: fa5ea436-637a-5d68-a72e-85136233f4db
+slug: overture-pla-olive-green
+brand:
+  slug: overture
+name: PLA Olive Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#97a014ff'
+tags:
+- industrially_compostable
+photos: []
+properties: {}

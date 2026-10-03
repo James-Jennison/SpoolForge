@@ -1,0 +1,15 @@
+[
+  {
+    "uuid": "d18d2671-15c1-4e17-b3c3-a219f933dcfd",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 125,
+    "spool_core_diameter": 52,
+    "purchase_links": [
+      {
+        "store_id": "anycubic",
+        "url": "https://store.anycubic.com/products/pla-filament?variant=44831256969405"
+      }
+    ]
+  }
+]

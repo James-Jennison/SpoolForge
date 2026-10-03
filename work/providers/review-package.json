@@ -1,0 +1,50 @@
+{
+  "phase": "INITIAL_REVIEW",
+  "objective": "Review Filamajig NFC M2 offline provider-backed identification for deterministic data integrity, provider boundaries, ranking and conflict behavior, provenance, Android packaging, and failure recovery.",
+  "owner_requirements": [
+    "Use a merged local GTIN index from OFD, OpenPrintTag, and SpoolmanDB Community with provenance on every match",
+    "Prefer exact identifiers, fall back to structured fields and text, retain ambiguous candidates, and never silently merge conflicting rows",
+    "Operate offline on the Motorola Razr 2023",
+    "Build and refresh the bundled Community catalog deterministically",
+    "Preserve existing records and unrelated NFC behavior"
+  ],
+  "change_summary": [
+    "Expanded the core CatalogProvider contract with structured queries, match tiers, deterministic ranking, conflict annotations, and evidence",
+    "Added OFD, local, merged-GTIN, and SpoolmanDB Community adapters and wired normal and exact-identifier search through them",
+    "Added a deterministic SQLite plus FTS4 Community sidecar containing 53,355 records and 30,161 identifier associations, with manifest and retained MIT license",
+    "Added malformed and ambiguous identifier fixtures, asset integrity checks, coverage reporting, host tests, and a real-device provider test",
+    "Changed Room code generation from KAPT processor arguments to the Room Gradle plugin and KSP, eliminating the unrecognized processor-option warning"
+  ],
+  "objective_evidence": {
+    "host": "Builder fixtures PASS; asset verification PASS with 53,355 records, 30,161 identifiers and four ambiguous fixture candidates; 97 Gradle tasks PASS for core tests, app unit tests, lint, app APK and Android-test APK; forced KSP run emits neither room.schemaLocation nor kapt.kotlin.generated warning",
+    "device": "Final app and test APKs installed only on motorola razr 2023; DeviceProviderAcceptanceTest PASS in 0.721 seconds; result records four ambiguous GTIN candidates, three Community SKU candidates, one structured text result, 619.35 ms initial setup plus lookup and 6.61 ms warm p95",
+    "artifacts": "app-debug.apk sha256 ba2ebeef9a019249afe072b738850439476e99c6caf2843e9b2fddec706ad5c4; androidTest APK sha256 ec398b90072b562470c00941e464073fba6ff6061b110e820b35b78a14f98e2d"
+  },
+  "review_files": [
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/CatalogProvider.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CatalogProviders.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/data/GtinIndex.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt",
+    "tools/build_community_catalog.py",
+    "tools/verify_provider_assets.py",
+    "tools/test_build_community_catalog.py",
+    "app/src/test/kotlin/net/jamesjennison/filamajignfc/CatalogProvidersTest.kt",
+    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/CatalogProviderTest.kt",
+    "app/src/androidTest/kotlin/net/jamesjennison/filamajignfc/DeviceProviderAcceptanceTest.kt",
+    "docs/PROVIDERS.md",
+    "work/providers/BARCODE_COVERAGE.md",
+    "work/providers/device-provider-acceptance.json"
+  ],
+  "known_limits": [
+    "The Community source is a retained hash-pinned snapshot; this change does not fetch live upstream data",
+    "The 91.22 percent barcode miss figure measures missing valid GTINs within the retained Community rows, not camera performance or the full filament market",
+    "Timing excludes Compose rendering and has no predefined acceptance threshold",
+    "Provider results expose one canonical color even when an upstream record contains multiple colors"
+  ],
+  "review_questions": [
+    "Is any architecture, data-integrity, platform, packaging, provenance, ranking, ambiguity, or recovery defect release-blocking for M2?",
+    "Do the tests objectively cover malformed identifiers, ambiguous exact matches, conflict retention, deterministic output, corruption repair, and real-device execution?"
+  ],
+  "sanitization": "No credentials, environment values, user records, tag UIDs, device serials, network addresses, or private data are included."
+}

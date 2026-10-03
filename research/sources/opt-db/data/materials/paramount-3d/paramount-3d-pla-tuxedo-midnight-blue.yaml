@@ -1,0 +1,13 @@
+uuid: 3724099e-21ab-5c31-822f-500817368a44
+slug: paramount-3d-pla-tuxedo-midnight-blue
+brand:
+  slug: paramount-3d
+name: PLA (Tuxedo Midnight Blue)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#1e2c73ff'
+tags:
+- industrially_compostable
+properties: {}

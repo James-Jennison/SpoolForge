@@ -1,0 +1,17 @@
+[
+  {
+    "uuid": "b95e2929-f265-4cc3-a833-f1e8875acb5d",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "gtin": "6938936714675",
+    "article_number": "CA02025",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "polymaker",
+        "url": "https://us.polymaker.com/products/panchroma-galaxy"
+      }
+    ]
+  }
+]

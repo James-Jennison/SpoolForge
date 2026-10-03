@@ -1,0 +1,113 @@
+{
+  "provider": "xai",
+  "model": "grok-4.6",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 4024,
+    "input_tokens_details": {
+      "cached_tokens": 512
+    },
+    "output_tokens": 928,
+    "output_tokens_details": {
+      "reasoning_tokens": 422
+    },
+    "total_tokens": 4952,
+    "num_sources_used": 0,
+    "num_server_side_tools_used": 0,
+    "cost_in_usd_ticks": 128480000,
+    "context_details": {
+      "input_tokens": 4024,
+      "output_tokens": 928
+    }
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "KINGROON 3D",
+      "confidence": 0.95,
+      "evidence": "Printed KINGROON 3D at bottom right of the white label",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": "KINGROON 3D",
+      "confidence": 0.92,
+      "evidence": "Company/brand name KINGROON 3D printed on the label",
+      "basis": "printed"
+    },
+    "product": {
+      "value": "PETG Basic",
+      "confidence": 0.9,
+      "evidence": "\u6750\u8d28:PETG Basic 1.75mm on the label",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PETG Basic",
+      "confidence": 0.93,
+      "evidence": "\u6750\u8d28:PETG Basic 1.75mm",
+      "basis": "printed"
+    },
+    "color": {
+      "value": "Gray",
+      "confidence": 0.98,
+      "evidence": "Colour:Gray and \u989c\u8272\uff1a\u7070\u8272",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": 1.75,
+      "confidence": 0.98,
+      "evidence": "PETG Basic 1.75mm",
+      "basis": "printed"
+    },
+    "net_weight_g": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_min_c": {
+      "value": 230,
+      "confidence": 0.98,
+      "evidence": "Printing Temp:230-250\u2103",
+      "basis": "printed"
+    },
+    "nozzle_max_c": {
+      "value": 250,
+      "confidence": 0.98,
+      "evidence": "Printing Temp:230-250\u2103",
+      "basis": "printed"
+    },
+    "bed_min_c": {
+      "value": 70,
+      "confidence": 0.98,
+      "evidence": "Hotbed Temp:70-90\u2103",
+      "basis": "printed"
+    },
+    "bed_max_c": {
+      "value": 90,
+      "confidence": 0.98,
+      "evidence": "Hotbed Temp:70-90\u2103",
+      "basis": "printed"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.88,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "sku": {
+      "value": "HC098",
+      "confidence": 0.9,
+      "evidence": "HC098 printed at top right of the label",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": "0403-4",
+      "confidence": 0.96,
+      "evidence": "\u6279\u6b21:0403-4",
+      "basis": "printed"
+    },
+    "other_codes": [],
+    "needs_user_review": [
+      "sku"
+    ]
+  }
+}

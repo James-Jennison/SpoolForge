@@ -1,0 +1,9 @@
+{
+  "uuid": "3e9cba6a-eee4-4099-a5ee-9d6ff3419bba",
+  "id": "wood",
+  "name": "Wood",
+  "color_hex": "#B1874F",
+  "traits": {
+    "contains_wood": true
+  }
+}

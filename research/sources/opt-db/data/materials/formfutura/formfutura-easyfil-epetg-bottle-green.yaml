@@ -1,0 +1,19 @@
+uuid: d25b8394-eb6f-53bf-88de-66b80d306858
+slug: formfutura-easyfil-epetg-bottle-green
+brand:
+  slug: formfutura
+name: EasyFil ePETG Bottle Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#364429ff'
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easyfil-epetg-bottle-green/39d51baa7ac9.png
+    type: unspecified
+properties:
+  density: 1.29
+  min_print_temperature: 235
+  max_print_temperature: 275
+  min_bed_temperature: 70
+  max_bed_temperature: 90

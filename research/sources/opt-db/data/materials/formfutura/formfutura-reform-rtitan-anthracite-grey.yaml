@@ -1,0 +1,22 @@
+uuid: fe7db809-4f1b-522f-81f1-0cbaded1d58e
+slug: formfutura-reform-rtitan-anthracite-grey
+brand:
+  slug: formfutura
+name: ReForm – rTitan Anthracite Grey
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#3f4647ff'
+tags:
+  - recycled
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-reform-rtitan-anthracite-grey/09adf15ae7e2.png
+    type: unspecified
+properties:
+  density: 1.1
+  min_print_temperature: 240
+  max_print_temperature: 260
+  min_bed_temperature: 80
+  max_bed_temperature: 90

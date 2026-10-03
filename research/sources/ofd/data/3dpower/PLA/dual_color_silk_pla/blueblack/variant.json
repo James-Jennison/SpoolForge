@@ -1,0 +1,13 @@
+{
+  "uuid": "7e07dd3b-8c41-43a2-bfa5-ab46dfabe448",
+  "id": "blueblack",
+  "name": "Blue&Black",
+  "color_hex": [
+    "#232323",
+    "#0353BA"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

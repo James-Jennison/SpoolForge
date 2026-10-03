@@ -1,0 +1,21 @@
+uuid: 2cdaa47b-61de-5306-aa1d-bf89eff5b021
+slug: filamentpm-petg-frjet-self-extinguishing-white
+brand:
+  slug: filamentpm
+name: PETG FRJet self-extinguishing - White
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ecece7ff'
+tags:
+  - self_extinguishing
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-petg-frjet-self-extinguishing-white/447171796407.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 220
+  max_print_temperature: 250
+  min_bed_temperature: 80
+  max_bed_temperature: 90

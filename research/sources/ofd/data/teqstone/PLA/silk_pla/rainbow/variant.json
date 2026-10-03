@@ -1,0 +1,11 @@
+{
+  "uuid": "d4e75b45-590d-402e-b32c-317d8b1d089a",
+  "id": "rainbow",
+  "name": "Rainbow",
+  "color_hex": "#FF0000",
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "gradual_color_change": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "uuid": "a8659f96-0552-4ef5-add3-23f6f8887475",
+  "id": "black",
+  "name": "Black",
+  "color_hex": "#000000",
+  "traits": {
+    "recyclable": true
+  }
+}

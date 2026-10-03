@@ -1,0 +1,23 @@
+uuid: 171cf7e4-410a-5306-8b1b-7c8773ce78bc
+slug: fiberlogy-abs-plus-red
+brand:
+  slug: fiberlogy
+name: ABS PLUS Red
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#e20010ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-abs-plus-red/37ec89f84605.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 240

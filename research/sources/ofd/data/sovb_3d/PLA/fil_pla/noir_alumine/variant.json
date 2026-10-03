@@ -1,0 +1,9 @@
+{
+  "uuid": "6991582f-9cc1-4fc0-a7fc-83d92fd82ea9",
+  "id": "noir_alumine",
+  "name": "Noir alumine",
+  "color_hex": "#000000",
+  "traits": {
+    "contains_aluminium": true
+  }
+}

@@ -1,0 +1,14 @@
+uuid: 24cd7ef1-a865-52f9-ac10-e30683a5fca8
+slug: winkle-petg-cristal-amber-orange
+brand:
+  slug: winkle
+name: PETG Cristal Amber Orange
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f55928ff'
+tags:
+- translucent
+properties:
+  density: 1.23

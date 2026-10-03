@@ -1,0 +1,24 @@
+uuid: c16dcca3-0e3e-5a9d-a46c-502dcd51c3bd
+slug: bambulab-tpu-95a-hf-red
+brand:
+  slug: bambulab
+name: TPU 95A HF Red
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#c8102eff'
+tags:
+  - high_speed
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-tpu-95a-hf-red/13cb6771f5e4.png
+    type: unspecified
+properties:
+  density: 1.22
+  hardness_shore_a: 95.0
+  min_print_temperature: 220
+  max_print_temperature: 240
+  min_bed_temperature: 30
+  max_bed_temperature: 35
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45

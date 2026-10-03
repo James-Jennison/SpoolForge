@@ -1,0 +1,13 @@
+uuid: 441b506a-df98-57d5-bdfd-c86dd5f6ee5a
+slug: matter3d-inc-basics-series-pla-darkforest-green
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA Dark/Forest Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#44693dff'
+tags:
+- industrially_compostable
+properties: {}

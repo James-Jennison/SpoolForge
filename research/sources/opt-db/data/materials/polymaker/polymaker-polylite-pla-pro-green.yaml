@@ -1,0 +1,16 @@
+uuid: 3e751e2e-b790-5343-9664-6b188b720b3a
+slug: polymaker-polylite-pla-pro-green
+brand:
+  slug: polymaker
+name: PolyLite™ PLA Pro Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#06924dff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/polymaker/polymaker-polylite-pla-pro-green/4dfebdc9b890.png
+  type: unspecified
+properties: {}

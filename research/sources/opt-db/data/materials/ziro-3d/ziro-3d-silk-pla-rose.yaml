@@ -1,0 +1,14 @@
+uuid: 88a17c11-1685-5ad6-87fd-0c12f88634cd
+slug: ziro-3d-silk-pla-rose
+brand:
+  slug: ziro-3d
+name: Silk PLA Rose
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ff0086ff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

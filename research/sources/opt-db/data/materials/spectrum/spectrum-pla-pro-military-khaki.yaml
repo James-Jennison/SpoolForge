@@ -1,0 +1,21 @@
+uuid: 5fa5330f-6f20-5962-9397-90d49d570132
+slug: spectrum-pla-pro-military-khaki
+brand:
+  slug: spectrum
+name: PLA Pro Military Khaki
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#8c7547ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.22
+  min_print_temperature: 185
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-pro-military-khaki/spectrum-pla-pro-military-khaki-0-d27777a6.jpg
+  type: unspecified

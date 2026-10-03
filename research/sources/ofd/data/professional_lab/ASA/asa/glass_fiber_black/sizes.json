@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "ce5f0d04-8625-493b-bacf-8615e235d745",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 180,
+    "spool_core_diameter": 75,
+    "gtin": "5903707922291",
+    "article_number": "FG-P139-E1",
+    "discontinued": false
+  }
+]

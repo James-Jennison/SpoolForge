@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "8bb17a98-e5eb-4dee-9d97-96994a832e59",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/pla-matte-filament-1-75mm-colored-1kg"
+      }
+    ]
+  }
+]

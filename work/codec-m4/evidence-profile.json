@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "baseline": [
+    {
+      "id": "codec-m4-final-build-tests-lint",
+      "type": "build-test-static",
+      "severity": "HIGH",
+      "command": ["heavy-gradle", ":core:test", ":app:testDebugUnitTest", ":app:lintDebug", ":app:assembleDebug", ":app:assembleDebugAndroidTest", "--console=plain"]
+    },
+    {
+      "id": "codec-m4-final-device-and-hardware-artifact",
+      "type": "device-evidence",
+      "severity": "HIGH",
+      "command": ["python3", "tools/verify_codec_m4_evidence.py"]
+    }
+  ],
+  "substantive": [],
+  "conditional": {}
+}

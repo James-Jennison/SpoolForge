@@ -1,0 +1,11 @@
+uuid: 41772205-3174-509e-9350-439d347831d1
+slug: rosa3d-filaments-asa-blue
+brand:
+  slug: rosa3d-filaments
+name: ASA Blue
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#2a4552ff'
+properties: {}

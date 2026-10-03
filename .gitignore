@@ -1,0 +1,12 @@
+.gradle/
+build/
+**/build/
+local.properties
+.env.local
+*.iml
+# Kept locally only: copies of a device's inventory database, and upstream snapshots that carry no licence.
+work/**/user.db
+research/sources/anycubic/
+research/sources/elegoo/
+research/sources/printtag-web/
+research/sources/u1-rfid/

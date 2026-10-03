@@ -1,0 +1,9 @@
+{
+  "uuid": "c3faed17-4866-496c-87a8-6263341116cf",
+  "id": "orinoco",
+  "name": "Orinoco",
+  "color_hex": "#FBE200",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

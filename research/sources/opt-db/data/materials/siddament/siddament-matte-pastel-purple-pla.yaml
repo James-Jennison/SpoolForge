@@ -1,0 +1,14 @@
+uuid: c79c8ec9-af01-5bdf-94bf-d30ff22e4c36
+slug: siddament-matte-pastel-purple-pla
+brand:
+  slug: siddament
+name: Matte Pastel Purple PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e0baffff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

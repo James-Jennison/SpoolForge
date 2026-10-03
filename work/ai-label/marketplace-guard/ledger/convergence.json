@@ -1,0 +1,14 @@
+{
+  "summary": "Identifier merge now distinguishes exact evidence from verified identity. X00-shaped values from any local symbology or AI-only SKU claim are labeled Amazon-style candidates, preserved for review, and withheld from manufacturer SKU until confirmation; noncandidate X0 SKUs remain intact.",
+  "initial_review_cycle": "review-cycle-888c11ecf079",
+  "intermediate_review_cycles": [
+    "review-cycle-6f2e05dc94fc",
+    "review-cycle-5037cd18b671"
+  ],
+  "closure_review_cycle": "review-cycle-cd73e6825341",
+  "closure_result": "Grok, Gemini, and DeepSeek each returned NO_FINDINGS.",
+  "latest_evidence_cycle": "evidence-cycle-d958dceae5ca",
+  "evidence_result": "Android tests, lint, APK assembly, Python service tests, and benchmark-integrity validation all PASS.",
+  "apk_sha256": "6e34c88053a7462946bc7e38f9a66bba666b8701c2afadf6cc32131b6f9a4db8",
+  "device": "Installed successfully on verified motorola razr 2023 over Wireless ADB."
+}

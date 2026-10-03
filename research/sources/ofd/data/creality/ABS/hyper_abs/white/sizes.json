@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "b7fa24de-a26d-4a10-86d3-710db3c0e941",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "crealitystore",
+        "url": "https://store.creality.com/products/hyper-abs"
+      }
+    ]
+  }
+]

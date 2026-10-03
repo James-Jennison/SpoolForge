@@ -1,0 +1,13 @@
+uuid: 985ad659-e55f-55c7-8e82-488af4364aa5
+slug: overture-pla-professional-champagne
+brand:
+  slug: overture
+name: PLA Professional Champagne
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c0c4bbff'
+tags:
+- industrially_compostable
+properties: {}

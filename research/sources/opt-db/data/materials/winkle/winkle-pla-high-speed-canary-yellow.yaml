@@ -1,0 +1,15 @@
+uuid: 71ca7ab2-b4b0-5f2c-946c-4415b603bc39
+slug: winkle-pla-high-speed-canary-yellow
+brand:
+  slug: winkle
+name: PLA High Speed Canary Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fadb24ff'
+tags:
+- high_speed
+- industrially_compostable
+properties:
+  density: 1.24

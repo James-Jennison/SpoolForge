@@ -1,0 +1,262 @@
+"""Functions for syncing data from an external database of manufacturers, filaments, materials, etc."""
+
+import datetime
+import logging
+import os
+from collections.abc import Iterator
+from enum import Enum
+from pathlib import Path
+from urllib.parse import urljoin
+
+import hishel
+from pydantic import BaseModel, Field, RootModel
+from scheduler.asyncio.scheduler import Scheduler
+
+from spoolman import filecache
+from spoolman.env import get_cache_dir
+
+logger = logging.getLogger(__name__)
+
+
+DEFAULT_EXTERNAL_DB_URL = "https://donkie.github.io/SpoolmanDB/"
+DEFAULT_EXTERNAL_DB_NAME = "SpoolmanDB"
+DEFAULT_SYNC_INTERVAL = 3600
+
+controller = hishel.Controller(allow_stale=True)
+try:
+    cache_path = get_cache_dir() / "hishel"
+    cache_storage = hishel.AsyncFileStorage(base_path=cache_path)
+except PermissionError as exc:
+    # Take the path from the exception rather than from cache_path: the data
+    # directory is created while cache_path is being evaluated, so when that is
+    # what fails, cache_path is never bound.
+    logger.warning(
+        "Failed to setup disk-based cache due to permission error. Ensure the path %s is writable. "
+        "Using in-memory cache instead as fallback.",
+        exc.filename or "of the Spoolman data directory",
+    )
+    cache_storage = hishel.AsyncInMemoryStorage()
+
+
+class SpoolType(Enum):
+    PLASTIC = "plastic"
+    CARDBOARD = "cardboard"
+    METAL = "metal"
+
+
+class Finish(Enum):
+    MATTE = "matte"
+    GLOSSY = "glossy"
+
+
+class MultiColorDirection(Enum):
+    COAXIAL = "coaxial"
+    LONGITUDINAL = "longitudinal"
+
+
+class Pattern(Enum):
+    MARBLE = "marble"
+    SPARKLE = "sparkle"
+
+
+class ExternalFilament(BaseModel):
+    id: str = Field(description="A unique ID for this filament.", examples=["polymaker_pla_polysonicblack_1000_175"])
+    manufacturer: str = Field(description="Filament manufacturer.", examples=["Polymaker"])
+    name: str = Field(description="Filament name.", examples=["Polysonic\u2122 Black"])
+    material: str = Field(description="Filament material.", examples=["PLA"])
+    density: float = Field(description="Density in g/cm3.", examples=[1.23])
+    weight: float = Field(description="Net weight of a single spool.", examples=[1000])
+    spool_weight: float | None = Field(default=None, description="Weight of an empty spool.", examples=[140])
+    spool_type: SpoolType | None = Field(None, description="Type of spool.", examples=[SpoolType.PLASTIC])
+    diameter: float = Field(description="Filament in mm.", examples=[1.75])
+    color_hex: str | None = Field(
+        default=None,
+        description="Filament color code in hex format, for single-color filaments.",
+        examples=["2c3232"],
+    )
+    color_hexes: list[str] | None = Field(
+        default=None,
+        description="For multi-color filaments. List of hex color codes in hex format.",
+        examples=[["2c3232", "5f5f5f"]],
+    )
+    extruder_temp: int | None = Field(default=None, description="Extruder/nozzle temperature in °C.", examples=[210])
+    bed_temp: int | None = Field(default=None, description="Bed temperature in °C.", examples=[50])
+    finish: Finish | None = Field(default=None, description="Finish of the filament.", examples=[Finish.MATTE])
+    multi_color_direction: MultiColorDirection | None = Field(
+        default=None,
+        description="Direction of multi-color filaments.",
+        examples=[MultiColorDirection.COAXIAL],
+    )
+    pattern: Pattern | None = Field(default=None, description="Pattern of the filament.", examples=[Pattern.MARBLE])
+    translucent: bool = Field(default=False, description="Whether the filament is translucent.")
+    glow: bool = Field(default=False, description="Whether the filament is glow-in-the-dark.")
+
+
+class ExternalFilamentsFile(RootModel):
+    root: list[ExternalFilament]
+
+    def __iter__(self) -> Iterator[ExternalFilament]:
+        """Iterate over the filaments."""
+        return iter(self.root)
+
+    def __getitem__(self, index: int) -> ExternalFilament:
+        """Get a specific filament by index."""
+        return self.root[index]
+
+
+class ExternalMaterial(BaseModel):
+    material: str = Field(examples=["PLA"])
+    density: float = Field(examples=[1.24])
+    extruder_temp: int | None = Field(default=None, description="Extruder/nozzle temperature in °C.", examples=[210])
+    bed_temp: int | None = Field(default=None, description="Bed temperature in °C.", examples=[50])
+
+
+class ExternalMaterialsFile(RootModel):
+    root: list[ExternalMaterial]
+
+    def __iter__(self) -> Iterator[ExternalMaterial]:
+        """Iterate over the materials."""
+        return iter(self.root)
+
+    def __getitem__(self, index: int) -> ExternalMaterial:
+        """Get a specific material by index."""
+        return self.root[index]
+
+
+def get_external_db_url() -> str:
+    """Get the external database URL from environment variables. Defaults to DEFAULT_EXTERNAL_DB_URL."""
+    return os.getenv("EXTERNAL_DB_URL", DEFAULT_EXTERNAL_DB_URL)
+
+
+def get_external_db_name() -> str:
+    """Get the display name for the external filament library. Defaults to DEFAULT_EXTERNAL_DB_NAME.
+
+    Operators can point EXTERNAL_DB_URL at their own catalog; this lets them label it accordingly
+    in the UI instead of showing the "SpoolmanDB" default.
+    """
+    return os.getenv("EXTERNAL_DB_NAME", DEFAULT_EXTERNAL_DB_NAME)
+
+
+def get_external_db_sync_interval() -> int:
+    """Get the external database sync interval from environment variables. Defaults to DEFAULT_SYNC_INTERVAL."""
+    return int(os.getenv("EXTERNAL_DB_SYNC_INTERVAL", DEFAULT_SYNC_INTERVAL))
+
+
+async def _download_file(url: str) -> bytes:
+    """Download a file from a URL and return the contents as a string.
+
+    Uses a file-based cache.
+    """
+    async with hishel.AsyncCacheClient(storage=cache_storage, controller=controller) as client:
+        response = await client.get(url)
+        response.raise_for_status()
+        return response.read()
+
+
+def _parse_filaments_from_bytes(data: bytes) -> ExternalFilamentsFile:
+    """Parse a bytes string into a list of ExternalFilament objects."""
+    return ExternalFilamentsFile.parse_raw(data)
+
+
+def _parse_materials_from_bytes(data: bytes) -> ExternalMaterialsFile:
+    """Parse a bytes string into a list of ExternalMaterial objects."""
+    return ExternalMaterialsFile.parse_raw(data)
+
+
+def _write_to_local_cache(filename: str, data: bytes) -> None:
+    """Write data to the local cache."""
+    filecache.update_file(filename, data)
+
+
+def get_filaments_file() -> Path:
+    """Get the path to the filaments file."""
+    return filecache.get_file("filaments.json")
+
+
+def get_materials_file() -> Path:
+    """Get the path to the materials file."""
+    return filecache.get_file("materials.json")
+
+
+# In-memory cache of the parsed filament catalog, keyed by (mtime, size) of the cache
+# file so it is only re-parsed when a sync rewrites the file. Size is part of the key
+# because mtime alone can miss a rewrite: filesystems with 1-second mtime granularity
+# report the same stamp for two writes within the same second, which would leave us
+# serving the previous catalog until the next sync.
+_filaments_cache: tuple[tuple[float, int], list[ExternalFilament]] | None = None
+
+
+def _load_filaments() -> list[ExternalFilament]:
+    """Load and parse the cached filament catalog, memoized by the file's mtime and size."""
+    global _filaments_cache  # noqa: PLW0603
+    path = get_filaments_file()
+    if not path.exists():
+        return []
+    stat = path.stat()
+    key = (stat.st_mtime, stat.st_size)
+    if _filaments_cache is None or _filaments_cache[0] != key:
+        _filaments_cache = (key, _parse_filaments_from_bytes(path.read_bytes()).root)
+    return _filaments_cache[1]
+
+
+def search_filaments(query: str, limit: int) -> list[ExternalFilament]:
+    """Search the external filament catalog server-side.
+
+    Keeps the same semantics as the client-side search it replaces: the query is split
+    into whitespace-separated words and every word must appear (case-insensitively) as a
+    substring of the filament's "manufacturer name material" text. Results preserve
+    catalog order and are capped at `limit`, so the entire catalog never has to be sent
+    to the client.
+    """
+    words = query.lower().split()
+    if not words:
+        return []
+    results: list[ExternalFilament] = []
+    for filament in _load_filaments():
+        haystack = f"{filament.manufacturer} {filament.name} {filament.material}".lower()
+        if all(word in haystack for word in words):
+            results.append(filament)
+            if len(results) >= limit:
+                break
+    return results
+
+
+async def _sync() -> None:
+    logger.info("Syncing external DB.")
+
+    url = get_external_db_url()
+
+    filaments = _parse_filaments_from_bytes(await _download_file(urljoin(url, "filaments.json")))
+    materials = _parse_materials_from_bytes(await _download_file(urljoin(url, "materials.json")))
+
+    _write_to_local_cache("filaments.json", filaments.json().encode())
+    _write_to_local_cache("materials.json", materials.json().encode())
+
+    logger.info(
+        "External DB synced. Filaments: %d, Materials: %d",
+        len(filaments.root),
+        len(materials.root),
+    )
+
+
+def schedule_tasks(scheduler: Scheduler) -> None:
+    """Schedule tasks to be executed by the provided scheduler.
+
+    Args:
+        scheduler: The scheduler to use for scheduling tasks.
+
+    """
+    if len(get_external_db_url().strip()) == 0:
+        logger.info("External DB URL is empty. Skipping sync.")
+        return
+
+    logger.info("Scheduling external DB sync.")
+
+    # Run once on startup
+    scheduler.once(datetime.timedelta(seconds=0), _sync)  # type: ignore[arg-type]
+
+    sync_interval = get_external_db_sync_interval()
+    if sync_interval > 0:
+        scheduler.cyclic(datetime.timedelta(seconds=sync_interval), _sync)  # type: ignore[arg-type]
+    else:
+        logger.info("Sync interval is 0, skipping periodic sync of external db.")

@@ -1,0 +1,13 @@
+{
+  "uuid": "8bec25be-ba8f-4f4a-8064-98e0ddd3e6f5",
+  "id": "lagoon",
+  "name": "Lagoon",
+  "color_hex": [
+    "#0378D0",
+    "#58C91B"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

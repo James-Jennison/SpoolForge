@@ -1,0 +1,13 @@
+{
+  "uuid": "2c215891-68c0-430c-bf48-f67623ae0443",
+  "id": "red_gold",
+  "name": "Red & Gold",
+  "color_hex": [
+    "#FF0505",
+    "#F6C500"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

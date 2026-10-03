@@ -1,0 +1,13 @@
+uuid: 36fa2cae-4276-5e0a-9eca-cefab3f06c65
+slug: print-with-smile-pla-lemon-drop
+brand:
+  slug: print-with-smile
+name: PLA Lemon Drop
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ebff57ff'
+tags:
+- industrially_compostable
+properties: {}

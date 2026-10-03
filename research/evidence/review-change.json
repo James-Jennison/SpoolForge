@@ -1,0 +1,18 @@
+{
+  "change_id": "spoolio-feasibility-20260906",
+  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "summary": "Research-only vendor-neutral filament catalog and NFC feasibility; owner NTAG215 hardware constraint. No application implementation.",
+  "classification": "SUBSTANTIVE",
+  "affected_components": [
+    "feasibility report and evidence"
+  ],
+  "required_capabilities": [
+    "architecture",
+    "platform",
+    "adversarial"
+  ],
+  "provenance": {
+    "scope": "investigation only; unborn repository; report content hash",
+    "artifact_sha256": "47e967d8f941ce265cad9260e95347cc9a870be805580c4fb5d8b179948d5bf7"
+  }
+}

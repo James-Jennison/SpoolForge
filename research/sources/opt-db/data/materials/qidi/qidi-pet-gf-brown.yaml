@@ -1,0 +1,19 @@
+uuid: 90fae767-20c4-539f-973c-8247686fe95f
+slug: qidi-pet-gf-brown
+brand:
+  slug: qidi
+name: PET-GF Brown
+class: FFF
+type: PET
+abbreviation: PET
+primary_color:
+  color_rgba: '#946037ff'
+tags:
+- contains_glass_fiber
+- abrasive
+- contains_glass
+properties:
+  density: 1.38
+photos:
+- url: https://files.openprinttag.org/qidi/qidi-pet-gf-brown/qidi-pet-gf-brown-0-fb65081d.jpg
+  type: unspecified

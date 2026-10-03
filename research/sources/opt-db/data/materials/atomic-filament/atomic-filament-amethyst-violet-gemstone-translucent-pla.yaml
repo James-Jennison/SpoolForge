@@ -1,0 +1,18 @@
+uuid: 1d7d33c7-3204-5ad1-b7f3-9e878a446ca7
+slug: atomic-filament-amethyst-violet-gemstone-translucent-pla
+brand:
+  slug: atomic-filament
+name: Amethyst Violet Gemstone Translucent PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://atomicfilament.com/products/amethyst-violet-gemstone-translucent-pla
+primary_color:
+  color_rgba: '#c80181ff'
+tags:
+- industrially_compostable
+- translucent
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-amethyst-violet-gemstone-translucent-pla/f50ed7ba57aa.png
+  type: unspecified
+properties: {}

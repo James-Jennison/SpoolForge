@@ -1,0 +1,20 @@
+uuid: 061a3128-b0e9-571e-bf6a-6d33bcab49eb
+slug: spectrum-pla-premium-navy-blue
+brand:
+  slug: spectrum
+name: PLA Premium Navy Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#09048eff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-premium-navy-blue/spectrum-pla-premium-navy-blue-0-1117cec1.jpg
+  type: unspecified

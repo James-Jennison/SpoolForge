@@ -1,0 +1,9 @@
+{
+  "uuid": "d0b08ea9-11c4-404b-8a58-2b15e9d5bb25",
+  "id": "naturalmilky",
+  "name": "Natural/Milky",
+  "color_hex": "#DFDFD3",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

@@ -1,0 +1,13 @@
+uuid: 7f6503a5-2b8a-53eb-8074-c8e520a19fd4
+slug: print-with-smile-pla-coral-pink
+brand:
+  slug: print-with-smile
+name: PLA Coral PINK
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f092b3ff'
+tags:
+- industrially_compostable
+properties: {}

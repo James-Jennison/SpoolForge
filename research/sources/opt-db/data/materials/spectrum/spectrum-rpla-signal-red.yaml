@@ -1,0 +1,21 @@
+uuid: 431052ca-9737-5912-af6b-952e10a621a4
+slug: spectrum-rpla-signal-red
+brand:
+  slug: spectrum
+name: rPLA Signal Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e72f1dff'
+tags:
+- recycled
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 215
+  min_bed_temperature: 40
+  max_bed_temperature: 50
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-rpla-signal-red/spectrum-rpla-signal-red-0-60f3d391.jpg
+  type: unspecified

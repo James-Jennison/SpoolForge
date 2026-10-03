@@ -1,0 +1,13 @@
+uuid: f8529cd5-126b-5614-8557-db3ccb4c53e4
+slug: paramount-3d-flexpla-graphite-gray
+brand:
+  slug: paramount-3d
+name: FlexPLA (Graphite Gray)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#55555eff'
+tags:
+- industrially_compostable
+properties: {}

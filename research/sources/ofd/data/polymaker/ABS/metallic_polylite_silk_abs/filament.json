@@ -1,0 +1,11 @@
+{
+  "uuid": "a40b779e-9710-4966-8bf5-9d106ee6a964",
+  "id": "metallic_polylite_silk_abs",
+  "name": "Metallic Polylite Silk ABS",
+  "diameter_tolerance": 0.02,
+  "density": 1.04,
+  "min_print_temperature": 230,
+  "max_print_temperature": 260,
+  "min_bed_temperature": 90,
+  "max_bed_temperature": 110
+}

@@ -1,0 +1,14 @@
+{
+  "uuid": "d8f95b9b-80da-414c-8b1e-05c6ebe70e88",
+  "id": "flower",
+  "name": "Flower",
+  "color_hex": [
+    "#FF00A2",
+    "#FCAFC0",
+    "#8D65C7"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

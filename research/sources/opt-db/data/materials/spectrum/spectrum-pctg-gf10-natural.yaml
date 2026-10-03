@@ -1,0 +1,23 @@
+uuid: 11e192b2-32ec-5c0a-a8e2-f3049fbfeeff
+slug: spectrum-pctg-gf10-natural
+brand:
+  slug: spectrum
+name: PCTG GF10 Natural
+class: FFF
+type: PCTG
+abbreviation: PCTG
+primary_color:
+  color_rgba: '#dfdfd3ff'
+tags:
+- contains_glass_fiber
+- abrasive
+- contains_glass
+properties:
+  density: 1.31
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 50
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pctg-gf10-natural/spectrum-pctg-gf10-natural-0-4f5049a1.jpg
+  type: unspecified

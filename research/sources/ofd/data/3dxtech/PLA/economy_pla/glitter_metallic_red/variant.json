@@ -1,0 +1,10 @@
+{
+  "uuid": "e1cf7f49-d942-4a3c-a4b1-9c2e4d265644",
+  "id": "glitter_metallic_red",
+  "name": "Glitter metallic-red",
+  "color_hex": "#8A2D40",
+  "traits": {
+    "glitter": true,
+    "industrially_compostable": true
+  }
+}

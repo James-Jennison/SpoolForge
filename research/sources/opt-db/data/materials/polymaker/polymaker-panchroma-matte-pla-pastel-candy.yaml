@@ -1,0 +1,24 @@
+uuid: 0e9c9db7-9c12-5512-a742-2d9832980a11
+slug: polymaker-panchroma-matte-pla-pastel-candy
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Pastel Candy
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f0d6d9ff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-pastel-candy/bc84079534c6.png
+    type: unspecified
+transmission_distance: 2.9
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

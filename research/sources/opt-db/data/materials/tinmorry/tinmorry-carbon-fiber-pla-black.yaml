@@ -1,0 +1,14 @@
+uuid: 60f11cbd-6e84-5627-9a77-3d36a26b8791
+slug: tinmorry-carbon-fiber-pla-black
+brand:
+  slug: tinmorry
+name: Carbon Fiber PLA Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+properties: {}

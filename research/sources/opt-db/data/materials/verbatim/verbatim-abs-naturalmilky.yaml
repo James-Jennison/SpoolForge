@@ -1,0 +1,13 @@
+uuid: 9f296e01-5845-56ff-b82e-62269c911a7f
+slug: verbatim-abs-naturalmilky
+brand:
+  slug: verbatim
+name: ABS Natural/Milky
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#dfdfd3ff'
+tags:
+- filtration_recommended
+properties: {}

@@ -1,0 +1,14 @@
+uuid: 20367eb7-2254-55c4-a853-be29dba131e9
+slug: coex-3d-cobalt-blue-asa-prime
+brand:
+  slug: coex-3d
+name: Cobalt Blue ASA Prime
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#0353baff'
+photos:
+- url: https://files.openprinttag.org/coex-3d/coex-3d-cobalt-blue-asa-prime/38394bd46d68.png
+  type: unspecified
+properties: {}

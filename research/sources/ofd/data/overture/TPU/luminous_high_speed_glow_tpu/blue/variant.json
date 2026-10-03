@@ -1,0 +1,14 @@
+{
+  "uuid": "a626c060-c6e1-4c72-8c0b-dbae7bb8f6ed",
+  "id": "blue",
+  "name": "Blue",
+  "color_hex": [
+    "#0099E6",
+    "#E4E7E5"
+  ],
+  "traits": {
+    "glow": true,
+    "illuminescent_color_change": true,
+    "high_flow": true
+  }
+}

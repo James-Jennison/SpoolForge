@@ -1,0 +1,21 @@
+uuid: 6db116b5-eb79-5fe8-8fd6-a7514d0e2205
+slug: spectrum-petg-premium-high-speed-deep-black
+brand:
+  slug: spectrum
+name: PETG Premium High Speed Deep Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- high_speed
+properties:
+  density: 1.29
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-petg-premium-high-speed-deep-black/spectrum-petg-premium-high-speed-deep-black-0-bc63a0df.jpg
+  type: unspecified

@@ -1,0 +1,11 @@
+uuid: b6ea9cc5-79ab-5e5a-9e23-41ff17ea6559
+slug: print-with-smile-pet-g-cobalt-blue
+brand:
+  slug: print-with-smile
+name: PET-G Cobalt BLUE
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0353baff'
+properties: {}

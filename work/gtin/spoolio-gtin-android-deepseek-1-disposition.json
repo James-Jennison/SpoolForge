@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-android-deepseek-1",
+  "disposition": "CONFIRMED",
+  "reason": "CONFIRMED WITH NARROWER SCOPE: full hashing is measurable work, but actual target p95 is 95.45 ms and no Owner latency gate is exceeded. Retaining content verification protects the offline index; slower-device performance remains observable rather than weakening integrity.",
+  "evidence_reference": "work/gtin/device-gtin-acceptance-final.json",
+  "resolved": true
+}

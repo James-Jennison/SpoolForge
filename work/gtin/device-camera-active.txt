@@ -1,0 +1,2 @@
+(Camera ID: 0, Cost: 51, PID: 11966, Score: 0, State: 2User Id: 0, Client Package Name: net.jamesjennison.spoolio, Conflicting Client Devices: {})
+    Device status: ACTIVE

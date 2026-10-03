@@ -1,0 +1,23 @@
+uuid: 7a64ec95-003b-54f9-9bcf-051e068cc711
+slug: esun-pla-uv-color-change-purple
+brand:
+  slug: esun
+name: PLA UV Color Change Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://esun3dstoreeu.com/products/pla-uv-color-change?VariantsId=12883
+secondary_colors:
+  - color_rgba: '#8d5984ff'
+  - color_rgba: '#e5e9e3ff'
+tags:
+  - illuminescent_color_change
+properties:
+  density: 1.25
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 45
+  max_bed_temperature: 60
+photos:
+  - url: https://files.openprinttag.org/esun/esun-pla-uv-color-change-purple/esun-pla-uv-color-change-purple-0-71808e76.jpg
+    type: unspecified

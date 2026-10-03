@@ -1,0 +1,14 @@
+{
+  "uuid": "7798fd0a-6ed8-4e91-8199-eb408cf10df1",
+  "id": "white_to_glow_blue",
+  "name": "White To Glow Blue",
+  "color_hex": [
+    "#1ADAFB",
+    "#F5F5F5"
+  ],
+  "traits": {
+    "glow": true,
+    "illuminescent_color_change": true,
+    "abrasive": true
+  }
+}

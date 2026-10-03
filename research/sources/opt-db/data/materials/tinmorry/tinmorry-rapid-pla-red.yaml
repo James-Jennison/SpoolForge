@@ -1,0 +1,13 @@
+uuid: 188e915b-727e-5db7-b88b-b358920b95ac
+slug: tinmorry-rapid-pla-red
+brand:
+  slug: tinmorry
+name: Rapid PLA Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e72f1dff'
+tags:
+- industrially_compostable
+properties: {}

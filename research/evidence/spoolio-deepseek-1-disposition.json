@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-deepseek-1",
+  "disposition": "CONFIRMED",
+  "reason": "CONFIRMED WITH NARROWER SCOPE: Fresh source validation parses32107 files and matches measured166/714/2089/14569/22347 hierarchy counts. Hashed source build input is proven; normalized app artifact still must be built in M1. No live refresh promised.",
+  "evidence_reference": "docs/FEASIBILITY.md revised; research/evidence/ofd-snapshot-validation.json; remediation review-cycle-5ac84cff9d4b",
+  "resolved": true
+}

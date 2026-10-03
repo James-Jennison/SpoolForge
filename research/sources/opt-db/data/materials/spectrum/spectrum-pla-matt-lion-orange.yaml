@@ -1,0 +1,20 @@
+uuid: af700219-186d-5db8-8cb7-29a444ee42a3
+slug: spectrum-pla-matt-lion-orange
+brand:
+  slug: spectrum
+name: PLA MATT Lion Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fa8423ff'
+tags:
+- matte
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-matt-lion-orange/spectrum-pla-matt-lion-orange-0-a8985a91.jpg
+  type: unspecified

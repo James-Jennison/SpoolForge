@@ -1,0 +1,15 @@
+uuid: 52b65f35-2f48-5184-9d6e-a8ae112184d2
+slug: atomic-filament-perfect-purple-petg-pro
+brand:
+  slug: atomic-filament
+name: Perfect Purple PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/perfect-purple-petg-pro
+primary_color:
+  color_rgba: '#be2ed6ff'
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-perfect-purple-petg-pro/6a9078f3b4b4.png
+  type: unspecified
+properties: {}

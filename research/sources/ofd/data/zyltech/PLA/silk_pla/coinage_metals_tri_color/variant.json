@@ -1,0 +1,15 @@
+{
+  "uuid": "0653bda5-6921-4102-8fd7-014090e9eb09",
+  "id": "coinage_metals_tri_color",
+  "name": "Coinage Metals Tri-Color",
+  "color_hex": [
+    "#E0E0DC",
+    "#724E3D",
+    "#FF9C66"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

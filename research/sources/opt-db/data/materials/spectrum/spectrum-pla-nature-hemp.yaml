@@ -1,0 +1,20 @@
+uuid: 25dda67b-bf03-5fe9-946d-ad58f44dbb2a
+slug: spectrum-pla-nature-hemp
+brand:
+  slug: spectrum
+name: PLA Nature Hemp
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5e6345ff'
+tags:
+- contains_organic_material
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-nature-hemp/spectrum-pla-nature-hemp-0-2ef18933.jpg
+  type: unspecified

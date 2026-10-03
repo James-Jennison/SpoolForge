@@ -1,0 +1,23 @@
+uuid: 9cc6b9d4-36b0-5fc0-9728-b2a5f63c8269
+slug: polymaker-panchroma-metallic-pla-blue
+brand:
+  slug: polymaker
+name: Panchroma™ Metallic PLA Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#2c3449ff'
+tags:
+  - glitter
+  - imitates_metal
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-metallic-pla-blue/1cfb8eeb495e.png
+    type: unspecified
+properties:
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

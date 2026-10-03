@@ -1,0 +1,15 @@
+uuid: a6fc73a2-1e21-518f-8cbb-74b4dd830486
+slug: winkle-pla-silk-snow-white
+brand:
+  slug: winkle
+name: PLA Silk Snow White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#edf0f2ff'
+tags:
+- silk
+- industrially_compostable
+properties:
+  density: 1.24

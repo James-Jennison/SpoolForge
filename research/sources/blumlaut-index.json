@@ -1,0 +1,894 @@
+{
+  "repo": "Blumlaut/filament-rfid-writer",
+  "sha": "26086675b5fe55d2e78c16e75e987335aa3669aa",
+  "date": "2026-08-01T13:35:46Z",
+  "license": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5064a1b7121985994f6641bb88c51c53201e8dbe",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/5064a1b7121985994f6641bb88c51c53201e8dbe"
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51fbf4da6026c32742c8d24ade72e30ad9508630",
+      "size": 2142,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/51fbf4da6026c32742c8d24ade72e30ad9508630"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24654a90ff98e32eac836a70ffb0213e79978198",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/24654a90ff98e32eac836a70ffb0213e79978198"
+    },
+    {
+      "path": ".github/workflows/build-release.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56d0b8443016f78c9a40e076308136d9e4904ce2",
+      "size": 2348,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/56d0b8443016f78c9a40e076308136d9e4904ce2"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3500a222022b2c34df088510045493d610009fde",
+      "size": 270,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/3500a222022b2c34df088510045493d610009fde"
+    },
+    {
+      "path": "AGENTS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "745fc6010b47ed85d428fc52cfd8d66df81e4cb5",
+      "size": 5063,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/745fc6010b47ed85d428fc52cfd8d66df81e4cb5"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4717e4286faf4a309f28e76e3dbb29ccff85d26",
+      "size": 1065,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/a4717e4286faf4a309f28e76e3dbb29ccff85d26"
+    },
+    {
+      "path": "PRIVACY_POLICY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d48ca67fcb506e3ab9b365f894a8ff38d4318fa",
+      "size": 2033,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/2d48ca67fcb506e3ab9b365f894a8ff38d4318fa"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb3f91bc766a5fd236dd0c7a2fb249849657c1b8",
+      "size": 2885,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/fb3f91bc766a5fd236dd0c7a2fb249849657c1b8"
+    },
+    {
+      "path": "app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "596c8ceef59cee70ccb1c305b04070648800a177",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/596c8ceef59cee70ccb1c305b04070648800a177"
+    },
+    {
+      "path": "app/build.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41ed402d3b518120656c5c7c33257c5ed056ba00",
+      "size": 5157,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/41ed402d3b518120656c5c7c33257c5ed056ba00"
+    },
+    {
+      "path": "app/proguard-rules.pro",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a82fa7b671918fe0b94e0a1f64730cc9f86a01e0",
+      "size": 168,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/a82fa7b671918fe0b94e0a1f64730cc9f86a01e0"
+    },
+    {
+      "path": "app/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f2bf4c52c98270ad61bf4b545acb28af7f81a075",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/f2bf4c52c98270ad61bf4b545acb28af7f81a075"
+    },
+    {
+      "path": "app/src/androidTest",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4b19e6643acdf871f917f3942059a9f6d3aed765",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/4b19e6643acdf871f917f3942059a9f6d3aed765"
+    },
+    {
+      "path": "app/src/androidTest/java",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "301e408ef97605fff07a9b315b6910c472a28d66",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/301e408ef97605fff07a9b315b6910c472a28d66"
+    },
+    {
+      "path": "app/src/androidTest/java/com",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f588de430a10da1d500ab58b0a874df46e12822d",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/f588de430a10da1d500ab58b0a874df46e12822d"
+    },
+    {
+      "path": "app/src/androidTest/java/com/blumlaut",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "850ebe0b7b1a6e937517428d04ece57dad46f44f",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/850ebe0b7b1a6e937517428d04ece57dad46f44f"
+    },
+    {
+      "path": "app/src/androidTest/java/com/blumlaut/filamenttagwriter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4912bce9776fbd71eeec2a054a429dc22ceec12",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/c4912bce9776fbd71eeec2a054a429dc22ceec12"
+    },
+    {
+      "path": "app/src/androidTest/java/com/blumlaut/filamenttagwriter/ScreenshotTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3a2c850629fa3c1760a17c11b76efeacc653d6a",
+      "size": 14303,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/f3a2c850629fa3c1760a17c11b76efeacc653d6a"
+    },
+    {
+      "path": "app/src/main",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "648b64aa4ef86b95e1afc87bc86430a9f1a148f4",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/648b64aa4ef86b95e1afc87bc86430a9f1a148f4"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "611f79309da79677da0b7c372099756b92469ec4",
+      "size": 1666,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/611f79309da79677da0b7c372099756b92469ec4"
+    },
+    {
+      "path": "app/src/main/java",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73b2a78a6c59b444f3987ec42b3aec843713ed7c",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/73b2a78a6c59b444f3987ec42b3aec843713ed7c"
+    },
+    {
+      "path": "app/src/main/java/com",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e0b8ec397780956b4f7357f81099f8d27fd638d9",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/e0b8ec397780956b4f7357f81099f8d27fd638d9"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b6a07e2b1ecf1e5ec84563730e617cc12612932",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/5b6a07e2b1ecf1e5ec84563730e617cc12612932"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c035575d688421975626f2b8331c1d32d555c995",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/c035575d688421975626f2b8331c1d32d555c995"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/FilamentTagApp.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd4080510c3f25c0442c80062b5e6b15d5d2d963",
+      "size": 730,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/cd4080510c3f25c0442c80062b5e6b15d5d2d963"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/FilamentViewModel.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a4bcab64f136d2a338bcdb39530300b93555e94",
+      "size": 11319,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/3a4bcab64f136d2a338bcdb39530300b93555e94"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/MainActivity.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "113f2d7fea910101c9226e2b35f9c48caac37446",
+      "size": 10776,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/113f2d7fea910101c9226e2b35f9c48caac37446"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/PrinterViewModel.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e55e1840c9f04ffd42625a7ff3cbd7f35277b91",
+      "size": 14995,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/9e55e1840c9f04ffd42625a7ff3cbd7f35277b91"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "74d388208b3c92534ea3529dabfb792490cbb42e",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/74d388208b3c92534ea3529dabfb792490cbb42e"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/local",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "788094231b67a26012c9f70e3b4b0fb10333a730",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/788094231b67a26012c9f70e3b4b0fb10333a730"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/local/FilamentDao.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0292dae86736fa19752a990635ecba3045d13716",
+      "size": 498,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/0292dae86736fa19752a990635ecba3045d13716"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/local/FilamentDatabase.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "143a3facc1f0d778b5222d2d2eababa4ebd1f50a",
+      "size": 983,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/143a3facc1f0d778b5222d2d2eababa4ebd1f50a"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/local/FilamentEntity.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4523c96adcf877a035568dbf2c6a7f40af1e7ee",
+      "size": 518,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/e4523c96adcf877a035568dbf2c6a7f40af1e7ee"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/local/PrinterDao.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a610d3670c02d40ea2f9f7382f2158ffa5a09412",
+      "size": 489,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/a610d3670c02d40ea2f9f7382f2158ffa5a09412"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/local/PrinterEntity.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c971854d60a8ebcd12d416535edc581c4a972617",
+      "size": 307,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/c971854d60a8ebcd12d416535edc581c4a972617"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "034b7a5ff9b7ccc0f807d0f5b1cb6dd355b469b2",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/034b7a5ff9b7ccc0f807d0f5b1cb6dd355b469b2"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/model/CanvasData.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebf14ad85a5633ad7f01b4897fc3a8b186bc765b",
+      "size": 2596,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/ebf14ad85a5633ad7f01b4897fc3a8b186bc765b"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/model/Epc256Encoder.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "812cbacc2958517d67ed069ebd6db922027982b5",
+      "size": 11637,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/812cbacc2958517d67ed069ebd6db922027982b5"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/model/Filament.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e19bd057776803efab91391c555b096c8c7c60c",
+      "size": 3403,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/5e19bd057776803efab91391c555b096c8c7c60c"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/model/Materials.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "462b762d90427874e62bbe1626ad5cc2b226d319",
+      "size": 6597,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/462b762d90427874e62bbe1626ad5cc2b226d319"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/model/NameParser.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a98a09e41b614d11d3fb3b03140fe40610428c56",
+      "size": 4960,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/a98a09e41b614d11d3fb3b03140fe40610428c56"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/model/Printer.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba07f236853d0d0c4f9e5b23a0cd5288171ab7d6",
+      "size": 400,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/ba07f236853d0d0c4f9e5b23a0cd5288171ab7d6"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/model/PrinterStatus.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bb244c2c693c5a5e2925017df80314c360d75f3",
+      "size": 3851,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/1bb244c2c693c5a5e2925017df80314c360d75f3"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/model/SpoolmanFilament.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44bd1a7e8518c71322d771cd34f94f7f06dbb580",
+      "size": 5345,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/44bd1a7e8518c71322d771cd34f94f7f06dbb580"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/data/model/SpoolmanLoader.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de82c043c71138f6ae5a8c304e0fe28b056cb6e8",
+      "size": 9298,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/de82c043c71138f6ae5a8c304e0fe28b056cb6e8"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/network",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "372cb4d132c6a6bafef68b74031be7528a15760c",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/372cb4d132c6a6bafef68b74031be7528a15760c"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/network/CanvasWebSocket.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b26aa433ff36e418207d0aaca29465fb862a320",
+      "size": 27798,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/5b26aa433ff36e418207d0aaca29465fb862a320"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/nfc",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "338c3b357d26a02511542b801c6807e4d3a3a071",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/338c3b357d26a02511542b801c6807e4d3a3a071"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/nfc/NfcManager.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96d1432171e0bf5a96647c14590547029fd8df55",
+      "size": 3234,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/96d1432171e0bf5a96647c14590547029fd8df55"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/nfc/NfcReaderWriter.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4f76fea7125cd7d38f8b789afcfa6fcd6bff38d",
+      "size": 11381,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/a4f76fea7125cd7d38f8b789afcfa6fcd6bff38d"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c188048d8f45f979ab574d1d1da825a339a054d8",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/c188048d8f45f979ab574d1d1da825a339a054d8"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e37f6b3382b43a6306536e79a3535e73759d1f92",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/e37f6b3382b43a6306536e79a3535e73759d1f92"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/components/ColorHelpers.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31ff9faa18af755f384f171abd88bf9fea1775ac",
+      "size": 1899,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/31ff9faa18af755f384f171abd88bf9fea1775ac"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/components/GenericDropdown.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d4ac098bcf53c7ac0561aa852f1e6e3cd719bd1",
+      "size": 2224,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/2d4ac098bcf53c7ac0561aa852f1e6e3cd719bd1"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/components/NfcStatusCard.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0efb9aae7235a1d5f25e59a626640c24441452b",
+      "size": 1847,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/a0efb9aae7235a1d5f25e59a626640c24441452b"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/components/SearchBar.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e296d9f7de034cb90f07c47b0be58a77eb5197c4",
+      "size": 1426,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/e296d9f7de034cb90f07c47b0be58a77eb5197c4"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/components/Skeleton.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42d4b3162f40eba1a9c04898565e72fed35e21fc",
+      "size": 8749,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/42d4b3162f40eba1a9c04898565e72fed35e21fc"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/screens",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dbb6a36637480f658e2234f999aa252e4e6315b9",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/dbb6a36637480f658e2234f999aa252e4e6315b9"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/screens/CatalogScreen.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d536c73177be0eefad598676478b7750a211f1b1",
+      "size": 11925,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/d536c73177be0eefad598676478b7750a211f1b1"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/screens/FilamentFormScreen.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc69360f62e5b0ccc0e65196107818c14b98c81f",
+      "size": 27448,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/bc69360f62e5b0ccc0e65196107818c14b98c81f"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/screens/PrinterScreen.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "564c10159854c4b0da2f1f8e2d89d4e4643f5405",
+      "size": 39047,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/564c10159854c4b0da2f1f8e2d89d4e4643f5405"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/screens/ReadScreen.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c184f4965fc594c046fbd2e4496a44b39816bb0c",
+      "size": 22166,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/c184f4965fc594c046fbd2e4496a44b39816bb0c"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/screens/WriteScreen.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "824d2dcfd118592a6b9e9a97768dfcf662cdfa11",
+      "size": 11525,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/824d2dcfd118592a6b9e9a97768dfcf662cdfa11"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/theme",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ade293d83be5c2007ae344dad28cdec27c55e37f",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/ade293d83be5c2007ae344dad28cdec27c55e37f"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/theme/Color.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae4effe2dbd63a0be0165d314da4195f0fe103f1",
+      "size": 3099,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/ae4effe2dbd63a0be0165d314da4195f0fe103f1"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/theme/Theme.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3e8ddd1a5bc4a9030e47a06adf0be9e1d3953ac",
+      "size": 4570,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/d3e8ddd1a5bc4a9030e47a06adf0be9e1d3953ac"
+    },
+    {
+      "path": "app/src/main/java/com/blumlaut/filamenttagwriter/ui/theme/Type.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1677863022008d47b54462ea4c79e2890f6d4569",
+      "size": 972,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/1677863022008d47b54462ea4c79e2890f6d4569"
+    },
+    {
+      "path": "app/src/main/res",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b984b5891db72e7ea7e242839f3a10dccf82d7e5",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/b984b5891db72e7ea7e242839f3a10dccf82d7e5"
+    },
+    {
+      "path": "app/src/main/res/drawable",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c8c2dd7bc9f38cd037d981c8bae55415d59e0210",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/c8c2dd7bc9f38cd037d981c8bae55415d59e0210"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_background.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53b55bd983bd7c502ff94f82643cc555859b3cbe",
+      "size": 330,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/53b55bd983bd7c502ff94f82643cc555859b3cbe"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84f654fd7f00fc6d57821d2bb47efa1a6deb83cf",
+      "size": 1408,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/84f654fd7f00fc6d57821d2bb47efa1a6deb83cf"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3cdae0b376691a6efd96725cc7ad7b51ceb62f2a",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/3cdae0b376691a6efd96725cc7ad7b51ceb62f2a"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a6fee87a487dd4e66c5b3189369036ca3b81493",
+      "size": 274,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/2a6fee87a487dd4e66c5b3189369036ca3b81493"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a6fee87a487dd4e66c5b3189369036ca3b81493",
+      "size": 274,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/2a6fee87a487dd4e66c5b3189369036ca3b81493"
+    },
+    {
+      "path": "app/src/main/res/values",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "27d7c6ead81bbdd96c64378980e135bc20e9e346",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/27d7c6ead81bbdd96c64378980e135bc20e9e346"
+    },
+    {
+      "path": "app/src/main/res/values/strings.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "953a3741e0502d117b36e223bae21f6bddcafb6f",
+      "size": 3993,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/953a3741e0502d117b36e223bae21f6bddcafb6f"
+    },
+    {
+      "path": "app/src/main/res/values/themes.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e76d7dc9d01f6452f374d03073835dfe72372f6a",
+      "size": 159,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/e76d7dc9d01f6452f374d03073835dfe72372f6a"
+    },
+    {
+      "path": "app/src/main/res/xml",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e6dca55367f6cba671621d5025d495cc5ab8b9cf",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/e6dca55367f6cba671621d5025d495cc5ab8b9cf"
+    },
+    {
+      "path": "app/src/main/res/xml/network_security_config.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a35b23cc724c7280c5499b2b9435facae005b339",
+      "size": 540,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/a35b23cc724c7280c5499b2b9435facae005b339"
+    },
+    {
+      "path": "app/src/main/res/xml/nfc_tech_filter.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ea1a78c403aeacbe9933306f4a71e200e8897ce",
+      "size": 410,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/7ea1a78c403aeacbe9933306f4a71e200e8897ce"
+    },
+    {
+      "path": "build.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86133973a2086b87186c12ff2e076a6c61baf2ca",
+      "size": 226,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/86133973a2086b87186c12ff2e076a6c61baf2ca"
+    },
+    {
+      "path": "detekt.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1be7f500bc68a6105962018c503bfce54e55a973",
+      "size": 2958,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/1be7f500bc68a6105962018c503bfce54e55a973"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95743dfa9c594b559f462c69c5a8d9a334ea9e26",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/95743dfa9c594b559f462c69c5a8d9a334ea9e26"
+    },
+    {
+      "path": "docs/canvas-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad263e21973964320c19dc2111df46e8131eadce",
+      "size": 3557,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/ad263e21973964320c19dc2111df46e8131eadce"
+    },
+    {
+      "path": "docs/demo.mp4",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4973b5ca0bf31fe943284af433935dd791676b8",
+      "size": 648314,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/d4973b5ca0bf31fe943284af433935dd791676b8"
+    },
+    {
+      "path": "docs/feature-graphic-1024x500.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "352a28bf5fd1d2b4b6ce74752f992a773bd3d45e",
+      "size": 104928,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/352a28bf5fd1d2b4b6ce74752f992a773bd3d45e"
+    },
+    {
+      "path": "docs/generate_feature_graphic.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "530e65c4aa210c92f446959fd81eac563a4b0292",
+      "size": 7367,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/530e65c4aa210c92f446959fd81eac563a4b0292"
+    },
+    {
+      "path": "docs/logo.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "097d77634bd69c456321a4d9ffe68b7fbb01b8b2",
+      "size": 19331,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/097d77634bd69c456321a4d9ffe68b7fbb01b8b2"
+    },
+    {
+      "path": "docs/logo.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "822209222fddfcec66c24437aca5846eb22794d0",
+      "size": 1012,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/822209222fddfcec66c24437aca5846eb22794d0"
+    },
+    {
+      "path": "docs/logo.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c65d2ae7a1064cf65eddb95fd35dbd53d0be3323",
+      "size": 949,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/c65d2ae7a1064cf65eddb95fd35dbd53d0be3323"
+    },
+    {
+      "path": "docs/logo_512.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5445be7e65b7effdfccb0434454d4cae54e6352b",
+      "size": 24855,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/5445be7e65b7effdfccb0434454d4cae54e6352b"
+    },
+    {
+      "path": "docs/printer-api.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2edf82830b42d606a078acdbae634956e9e70cc1",
+      "size": 7470,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/2edf82830b42d606a078acdbae634956e9e70cc1"
+    },
+    {
+      "path": "docs/screenshot_catalog_dark.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce0b4b49110a4e6ddf3ed81f68a2fe4bd1dbc28b",
+      "size": 161292,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/ce0b4b49110a4e6ddf3ed81f68a2fe4bd1dbc28b"
+    },
+    {
+      "path": "docs/screenshot_catalog_light.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3206ae0baebe5525d15bae8c35d822644bb8556",
+      "size": 162632,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/c3206ae0baebe5525d15bae8c35d822644bb8556"
+    },
+    {
+      "path": "docs/screenshot_form_dark.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "331fff07a5d9cb4395b9f603d1fba955e06514a7",
+      "size": 126908,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/331fff07a5d9cb4395b9f603d1fba955e06514a7"
+    },
+    {
+      "path": "docs/screenshot_form_light.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90522080b9dd7dc946b1a8ac0d33aeac55d87c4c",
+      "size": 125766,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/90522080b9dd7dc946b1a8ac0d33aeac55d87c4c"
+    },
+    {
+      "path": "docs/screenshot_printer_dark.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ea6c5bf5e69d223be264202a78dd2630e9dd7b0",
+      "size": 167830,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/3ea6c5bf5e69d223be264202a78dd2630e9dd7b0"
+    },
+    {
+      "path": "docs/screenshot_printer_light.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57af72c83d4b37a32c971ace812834f4fe5801d1",
+      "size": 164517,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/57af72c83d4b37a32c971ace812834f4fe5801d1"
+    },
+    {
+      "path": "docs/screenshot_read_dark.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "57684340bbbd6cd1c5568c66b4cfc6b3601d48f1",
+      "size": 133620,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/57684340bbbd6cd1c5568c66b4cfc6b3601d48f1"
+    },
+    {
+      "path": "docs/screenshot_read_light.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b3e807f066443c86070557943c28ef7adab660e",
+      "size": 132656,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/9b3e807f066443c86070557943c28ef7adab660e"
+    },
+    {
+      "path": "docs/screenshot_write_dark.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c9438483bf58478e7c8795ce1401e839f4402ee",
+      "size": 48886,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/4c9438483bf58478e7c8795ce1401e839f4402ee"
+    },
+    {
+      "path": "docs/screenshot_write_light.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2eeb0f1f74c0145c51fdcac8001061820123ed2c",
+      "size": 47865,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/2eeb0f1f74c0145c51fdcac8001061820123ed2c"
+    },
+    {
+      "path": "gradle.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "161757317ed5fae127be5793e9e5abb14d9b86b3",
+      "size": 302,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/161757317ed5fae127be5793e9e5abb14d9b86b3"
+    },
+    {
+      "path": "gradle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9016e2e7a8fe02d61e4e99abbe0e838b9f93bb6d",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/9016e2e7a8fe02d61e4e99abbe0e838b9f93bb6d"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d499e68bfa32f7e35745ae4b613d136e99dda988",
+      "size": 2417,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/d499e68bfa32f7e35745ae4b613d136e99dda988"
+    },
+    {
+      "path": "gradle/wrapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1e991aaf08b1e4b97fe1d4d89cc3736f3e12dac",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/b1e991aaf08b1e4b97fe1d4d89cc3736f3e12dac"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bbc975c742b298b441bfb90dbc124400a3751b9",
+      "size": 43705,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/9bbc975c742b298b441bfb90dbc124400a3751b9"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5dd3c0121b39a12d2e64dc76e5ed49b822a375ad",
+      "size": 252,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/5dd3c0121b39a12d2e64dc76e5ed49b822a375ad"
+    },
+    {
+      "path": "gradlew",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "faf93008b77e7b52e18c44e4eef257fc2f8fd76d",
+      "size": 8752,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/faf93008b77e7b52e18c44e4eef257fc2f8fd76d"
+    },
+    {
+      "path": "gradlew.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b42019c7915b971238526075306ffba3b666dd5",
+      "size": 2966,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/9b42019c7915b971238526075306ffba3b666dd5"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1d810e74117b28483a0abf4710baf13ffbd3b78a",
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/trees/1d810e74117b28483a0abf4710baf13ffbd3b78a"
+    },
+    {
+      "path": "scripts/capture-screenshots.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "b8b2a86d3d16381eebfe48518d7aba9220900b62",
+      "size": 2211,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/b8b2a86d3d16381eebfe48518d7aba9220900b62"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "060dbb94b5005e7d0943ad4d68a375312127e08c",
+      "size": 724,
+      "url": "https://api.github.com/repos/Blumlaut/filament-rfid-writer/git/blobs/060dbb94b5005e7d0943ad4d68a375312127e08c"
+    }
+  ]
+}

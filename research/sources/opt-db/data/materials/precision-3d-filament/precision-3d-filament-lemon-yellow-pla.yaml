@@ -1,0 +1,16 @@
+uuid: 7825edf6-1366-53c9-8647-cab731a8bf48
+slug: precision-3d-filament-lemon-yellow-pla
+brand:
+  slug: precision-3d-filament
+name: Lemon Yellow PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#efdc4cff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/precision-3d-filament/precision-3d-filament-lemon-yellow-pla/a4eafce2ad72.png
+  type: unspecified
+properties: {}

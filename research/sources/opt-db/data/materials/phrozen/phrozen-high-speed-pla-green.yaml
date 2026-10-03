@@ -1,0 +1,14 @@
+uuid: 347bf7d1-b900-569d-a0da-0ce39e52f3da
+slug: phrozen-high-speed-pla-green
+brand:
+  slug: phrozen
+name: High-Speed PLA Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#67c993ff'
+tags:
+- high_speed
+- industrially_compostable
+properties: {}

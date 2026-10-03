@@ -1,0 +1,13 @@
+uuid: ea02bb1b-f6ab-512b-8ca7-4f0cb414cb03
+slug: tinmorry-rapid-pla-regular-silver
+brand:
+  slug: tinmorry
+name: Rapid PLA Regular Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#a8b0bdff'
+tags:
+- industrially_compostable
+properties: {}

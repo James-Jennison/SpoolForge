@@ -1,0 +1,11 @@
+{
+  "uuid": "447fc403-9d66-49e5-aa07-2679176996d0",
+  "id": "wood_filament",
+  "name": "Wood Filament",
+  "color_hex": "#CAAC78",
+  "traits": {
+    "imitates_wood": true,
+    "industrially_compostable": true,
+    "contains_wood": true
+  }
+}

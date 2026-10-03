@@ -1,0 +1,31 @@
+{
+  "basis": "Owner screenshots: overwrite consent, immediate Spoolio verification, fresh Spoolio read, independent NFC Tools payload. JSON transcribed from screenshot; not direct binary dump.",
+  "uid": "04A2FEA68D2681",
+  "change": {
+    "min_temp": {
+      "before": "230",
+      "after": "235"
+    }
+  },
+  "payload": {
+    "protocol": "openspool",
+    "version": "1.0",
+    "type": "ABS",
+    "color_hex": "FF8E24",
+    "brand": "SUNLU",
+    "min_temp": "235",
+    "max_temp": "260",
+    "subtype": "ABS",
+    "bed_min_temp": "90",
+    "bed_max_temp": "110",
+    "diameter": "1.75",
+    "weight": 1000
+  },
+  "payload_bytes": 213,
+  "message_bytes": 232,
+  "reconstructed_sha256": "44acc9da80d25fd5fa536a05ed14ab17979d9b36235cb99ddae862d4457da0ba",
+  "matches_spoolio_post_write_and_fresh_read": true,
+  "independent_reader": "NFC Tools",
+  "screenshot": "/tmp/codex-remote-attachments/01a07a11-67c4-7ba1-a054-604da591a14a/5e8efaa3-b059-4174-ba50-2232eecc3d5f/1-Photo-1.jpg",
+  "remaining": "Intentional interruption/process-death UNKNOWN acceptance and earlier blank investigation remain open; no full M1 closure."
+}

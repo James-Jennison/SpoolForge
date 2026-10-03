@@ -1,0 +1,26 @@
+uuid: cf3eaacf-1516-560f-b737-de5d167b1364
+slug: bambulab-pla-basic-gradient-blueberry-bubblegum
+brand:
+  slug: bambulab
+name: PLA Basic Gradient Blueberry Bubblegum
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+  - color_rgba: '#6fcaefff'
+  - color_rgba: '#8573ddff'
+tags:
+  - gradual_color_change
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-basic-gradient-blueberry-bubblegum/324e4477be48.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45
+url: https://us.store.bambulab.com/products/pla-basic-gradient?id=43158301212808

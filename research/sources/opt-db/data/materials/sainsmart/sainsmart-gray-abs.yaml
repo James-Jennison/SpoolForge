@@ -1,0 +1,13 @@
+uuid: f9b32cbe-3394-5ca1-bf40-709eae7261a6
+slug: sainsmart-gray-abs
+brand:
+  slug: sainsmart
+name: Gray ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#ccccccff'
+tags:
+- filtration_recommended
+properties: {}

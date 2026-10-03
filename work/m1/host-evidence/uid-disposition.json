@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-closure-deepseek-uid",
+  "disposition": "REJECTED",
+  "reason": "NOT APPLICABLE: Kotlin Byte is boxed as java.lang.Byte in this Formatter vararg; it is not widened to int. Exact Kotlin expression tested with AB FF 00 returns ABFF00. Java control shows Byte AB vs explicitly widened int FFFFFFAB. Regression assertion added to existing Android test; all6 tests pass. No production source change required.",
+  "evidence_reference": "app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt; work/m1/host-evidence/uid-byte-regression.log",
+  "resolved": true
+}

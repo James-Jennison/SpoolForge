@@ -1,0 +1,14 @@
+{
+  "uuid": "8d76ce39-c473-4e9c-8d40-25358c85d059",
+  "id": "darkblue_darkgreen",
+  "name": "DarkBlue-DarkGreen",
+  "color_hex": [
+    "#0E21AE",
+    "#206233"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

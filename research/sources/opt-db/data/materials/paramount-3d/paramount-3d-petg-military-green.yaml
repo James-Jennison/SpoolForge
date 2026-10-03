@@ -1,0 +1,11 @@
+uuid: 7410cefa-66bf-54a8-bc60-1f40355aaf55
+slug: paramount-3d-petg-military-green
+brand:
+  slug: paramount-3d
+name: PETG (Military Green)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#6e8451ff'
+properties: {}

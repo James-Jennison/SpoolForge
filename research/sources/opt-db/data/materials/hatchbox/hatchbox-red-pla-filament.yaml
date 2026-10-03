@@ -1,0 +1,21 @@
+uuid: dfd8b624-0c80-59dc-9a0a-09e136391953
+slug: hatchbox-red-pla-filament
+brand:
+  slug: hatchbox
+name: Red PLA Filament
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ed1536ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-red-pla-filament/617bb3286502.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 180
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 60

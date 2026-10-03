@@ -1,0 +1,14 @@
+{
+  "uuid": "fbaefc56-8108-4184-9eab-7170b17adc0f",
+  "id": "black_green",
+  "name": "Black Green",
+  "color_hex": [
+    "#11784F",
+    "#000000"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

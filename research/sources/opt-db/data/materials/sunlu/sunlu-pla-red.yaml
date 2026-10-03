@@ -1,0 +1,23 @@
+uuid: f5ccc423-bc68-53e5-b043-b112908a50d0
+slug: sunlu-pla-red
+brand:
+  slug: sunlu
+name: PLA Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e20010ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/sunlu/sunlu-pla-red/889ab8153203.jpg
+  type: unspecified
+properties:
+  density: 1.23
+  hardness_shore_d: 80
+  min_print_temperature: 190
+  max_print_temperature: 260
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50

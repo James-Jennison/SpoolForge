@@ -1,0 +1,14 @@
+uuid: 194de674-7c5e-58ed-817c-13deaf350a96
+slug: tinmorry-matte-pla-khaki
+brand:
+  slug: tinmorry
+name: Matte PLA Khaki
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ceb378ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

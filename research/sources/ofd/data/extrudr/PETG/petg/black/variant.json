@@ -1,0 +1,9 @@
+{
+  "uuid": "02383ab1-a47d-4b18-9d52-670d6151f2b1",
+  "id": "black",
+  "name": "Black",
+  "color_hex": "#000000",
+  "color_standards": {
+    "ral": "9017"
+  }
+}

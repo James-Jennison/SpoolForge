@@ -1,0 +1,9 @@
+{
+  "uuid": "39e6c7bd-9583-4f1e-88ae-d39de4a50ae3",
+  "id": "transparent_clear",
+  "name": "Transparent Clear",
+  "color_hex": "#EFE8D8",
+  "traits": {
+    "translucent": true
+  }
+}

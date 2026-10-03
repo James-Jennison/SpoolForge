@@ -1,0 +1,25 @@
+uuid: 4f786f76-6c31-512d-ae8e-38e3964a4649
+slug: bambulab-petg-cf-black
+brand:
+  slug: bambulab
+name: PETG-CF Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-cf-black/644ac98977aa.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

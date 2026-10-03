@@ -1,0 +1,11 @@
+uuid: ce2234cb-492a-5b6f-932c-8d5cc644c68c
+slug: siddament-pva
+brand:
+  slug: siddament
+name: PVA
+class: FFF
+type: PVA
+abbreviation: PVA
+primary_color:
+  color_rgba: '#d0dcaaff'
+properties: {}

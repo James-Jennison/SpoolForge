@@ -1,0 +1,19 @@
+uuid: bc6fe003-4f9d-52eb-bbc0-3b3b8ab1283c
+slug: overture-tpu-high-speed-luminous-green
+brand:
+  slug: overture
+name: TPU High Speed Luminous Green
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#00fa9aff'
+secondary_colors:
+- color_rgba: '#e4e7e5ff'
+tags:
+- glow_in_the_dark
+- illuminescent_color_change
+- high_speed
+- abrasive
+properties:
+  hardness_shore_a: 95

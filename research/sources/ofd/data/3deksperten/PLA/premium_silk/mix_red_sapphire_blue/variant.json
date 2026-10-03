@@ -1,0 +1,13 @@
+{
+  "uuid": "04922d72-7160-4a6d-88a1-0be16b88aed0",
+  "id": "mix_red_sapphire_blue",
+  "name": "Mix Red-Sapphire Blue",
+  "color_hex": [
+    "#7a2f2c",
+    "#2c4275"
+  ],
+  "traits": {
+    "silk": true,
+    "industrially_compostable": true
+  }
+}

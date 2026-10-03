@@ -1,0 +1,11 @@
+uuid: 50bc1169-91bf-58fc-a709-ca2594350924
+slug: tinmorry-rapid-petg-eco-apricot
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Apricot
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#d8c094ff'
+properties: {}

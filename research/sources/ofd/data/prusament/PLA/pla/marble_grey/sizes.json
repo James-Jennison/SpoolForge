@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "97122ff9-3451-4c72-afee-a7c769465f3e",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-pla-marble-grey-1kg/"
+      }
+    ]
+  }
+]

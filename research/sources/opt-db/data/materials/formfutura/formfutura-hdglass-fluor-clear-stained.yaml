@@ -1,0 +1,22 @@
+uuid: eb2f366e-1bc8-5bb2-93a9-95c529801b13
+slug: formfutura-hdglass-fluor-clear-stained
+brand:
+  slug: formfutura
+name: HDglass Fluor Clear Stained
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e4e7e5ff'
+tags:
+  - silk
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-hdglass-fluor-clear-stained/23bbc75a6d29.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 195
+  max_print_temperature: 225
+  min_bed_temperature: 80
+  max_bed_temperature: 90

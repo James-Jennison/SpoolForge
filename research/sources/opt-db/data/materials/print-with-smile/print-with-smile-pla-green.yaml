@@ -1,0 +1,13 @@
+uuid: 6a74b86c-0d70-5a03-b7f2-29faf95f4f0b
+slug: print-with-smile-pla-green
+brand:
+  slug: print-with-smile
+name: PLA GREEN
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#00cc00ff'
+tags:
+- industrially_compostable
+properties: {}

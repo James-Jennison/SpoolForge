@@ -1,0 +1,14 @@
+{
+  "uuid": "d148ccc1-4ebf-448d-86d9-bef28a3322d3",
+  "id": "abs",
+  "name": "ABSpro",
+  "diameter_tolerance": 0.02,
+  "density": 1.05,
+  "min_print_temperature": 230,
+  "max_print_temperature": 255,
+  "min_bed_temperature": 100,
+  "max_bed_temperature": 110,
+  "data_sheet_url": "https://www.formfutura.com/web/content/254657?download=true",
+  "safety_sheet_url": "https://www.formfutura.com/web/content/254658?download=true",
+  "discontinued": false
+}

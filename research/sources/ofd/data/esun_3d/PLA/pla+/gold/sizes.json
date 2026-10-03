@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "48c515e7-ebbd-4910-985e-7b18b6089165",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/pla-pro"
+      }
+    ]
+  }
+]

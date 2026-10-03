@@ -1,0 +1,10 @@
+{
+  "uuid": "52886b5c-f01f-4d5b-9914-1cd45855d33e",
+  "id": "grass_green",
+  "name": "Grass Green",
+  "color_hex": "#4E7642",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

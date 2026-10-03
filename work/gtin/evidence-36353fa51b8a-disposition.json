@@ -1,0 +1,6 @@
+{
+  "evidence_id": "evidence-36353fa51b8a",
+  "disposition": "ENVIRONMENT_FAILURE",
+  "reason": "The protected Android command exited 75 because another evidence cycle held the repository heavy-build lock. Later sequential protected Android evidence passed on the same source lineage.",
+  "evidence_reference": "evidence-cycle-6df6ae61b12b; evidence-cycle-11c97fbd2db0"
+}

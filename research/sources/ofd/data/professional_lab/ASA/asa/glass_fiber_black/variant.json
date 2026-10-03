@@ -1,0 +1,11 @@
+{
+  "uuid": "019ab879-0dd9-4827-9cbd-fa74ac5ab9ca",
+  "id": "glass_fiber_black",
+  "name": "glass fiber black",
+  "color_hex": "#050B11",
+  "discontinued": false,
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

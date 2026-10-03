@@ -1,0 +1,117 @@
+{
+  "provider": "claude",
+  "model": "claude-sonnet-5",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 3153,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 2015,
+    "output_tokens_details": {
+      "thinking_tokens": 885
+    },
+    "service_tier": "standard",
+    "inference_geo": "global"
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "3DHoJor",
+      "confidence": 0.75,
+      "evidence": "'3DHoJor' printed at top of shipping label text block",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": null,
+      "confidence": 0.85,
+      "evidence": "No distinct manufacturer name or logo separate from product/brand text is visible",
+      "basis": "absent"
+    },
+    "product": {
+      "value": "3D Printing Filament",
+      "confidence": 0.8,
+      "evidence": "'3D Printing Filament' text visible on label alongside 'FDM Printer' reference",
+      "basis": "printed"
+    },
+    "material": {
+      "value": null,
+      "confidence": 0.6,
+      "evidence": "Text is partially obscured/cut off ('...D FDM Printer'); no clear material abbreviation (e.g., PLA/PETG) legible",
+      "basis": "absent"
+    },
+    "color": {
+      "value": "Fire Engine Red",
+      "confidence": 0.85,
+      "evidence": "'Fire Engine Red' printed at end of product description line",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": "No diameter value visible on this label",
+      "basis": "absent"
+    },
+    "net_weight_g": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": "No net weight value visible on this label",
+      "basis": "absent"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 0.92,
+      "evidence": "No nozzle temperature printed on visible label",
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 0.92,
+      "evidence": "No nozzle temperature printed on visible label",
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 0.92,
+      "evidence": "No bed temperature printed on visible label",
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 0.92,
+      "evidence": "No bed temperature printed on visible label",
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.6,
+      "evidence": "Barcode present but the alphanumeric code 'X0044MZE3' matches an Amazon ASIN format (10 chars, starts with letter), not a standard GTIN/UPC/EAN numeric format",
+      "basis": "absent"
+    },
+    "sku": {
+      "value": null,
+      "confidence": 0.7,
+      "evidence": "No separate manufacturer SKU distinct from the marketplace code is visible",
+      "basis": "absent"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": "No lot or batch number visible on this label",
+      "basis": "absent"
+    },
+    "other_codes": [
+      {
+        "value": "X0044MZE3",
+        "kind": "marketplace_identifier_ASIN",
+        "evidence": "Barcode label text 'X0044MZE3' printed above barcode, consistent with Amazon ASIN format"
+      }
+    ],
+    "needs_user_review": [
+      "Product description text is partially cut off/ambiguous ('...D FDM Printer'), material type could not be confidently determined",
+      "A second, unrelated filament box (labeled 'GIZMO', white, 1.75mm, 1.0kg, Made in China) is visible in the background but was excluded as it is a separate item outside the primary package being labeled"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+uuid: 0c3dca2c-5d01-54aa-af1d-acf7be83564a
+slug: winkle-pla-wood-pine
+brand:
+  slug: winkle
+name: PLA Wood Pine
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#9d733eff'
+tags:
+- contains_wood
+- industrially_compostable
+properties:
+  density: 1.27

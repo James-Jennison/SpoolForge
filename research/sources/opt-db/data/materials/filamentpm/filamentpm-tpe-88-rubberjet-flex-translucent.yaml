@@ -1,0 +1,20 @@
+uuid: ccfccd35-996d-58a9-9f9c-c13ff2b6a87c
+slug: filamentpm-tpe-88-rubberjet-flex-translucent
+brand:
+  slug: filamentpm
+name: TPE 88 RubberJet Flex - Translucent
+class: FFF
+type: TPE
+abbreviation: TPE
+primary_color:
+  color_rgba: '#dfdfd3ff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-tpe-88-rubberjet-flex-translucent/2e0bb5e5717f.png
+    type: unspecified
+properties:
+  density: 0.89
+  hardness_shore_a: 88.0
+  min_print_temperature: 220
+  max_print_temperature: 240

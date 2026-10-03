@@ -1,0 +1,47 @@
+[
+  {
+    "uuid": "6f11c2ff-aaca-41a1-ae51-eea48d3f0129",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 200,
+    "article_number": "BPLA-175SLVR-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/bulk-pla"
+      }
+    ]
+  },
+  {
+    "uuid": "fb6cb72c-d8de-4f0a-8fda-406a58aabdc4",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "BPLA-175SLVR-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/bulk-pla"
+      }
+    ]
+  },
+  {
+    "uuid": "a653a175-87a8-4ee7-9954-874a32dce46f",
+    "filament_weight": 8000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 1040,
+    "article_number": "BPLA-175SLVR-08000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/bulk-pla"
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+uuid: 4ec9a5c6-c89e-56b2-9103-7d23d68b60df
+slug: spectrum-pla-matt-deep-black
+brand:
+  slug: spectrum
+name: PLA MATT Deep Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- matte
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-matt-deep-black/spectrum-pla-matt-deep-black-0-541c2336.jpg
+  type: unspecified

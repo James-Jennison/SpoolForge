@@ -1,0 +1,7 @@
+{
+  "finding_id": "filamajig-closure-deepseek-1",
+  "disposition": "CONFIRMED",
+  "reason": "Scanner now requires ZXing SYMBOLOGY_IDENTIFIER ]C1 plus exactly AI 01 and 14 digits; plain Code128 and malformed GS1 tests reject, while a generated FNC1 GS1-128 decodes.",
+  "evidence_reference": "app/src/main/kotlin/net/jamesjennison/filamajignfc/BarcodeCamera.kt; app/src/test/kotlin/net/jamesjennison/filamajignfc/BarcodeCameraTest.kt",
+  "resolved": true
+}

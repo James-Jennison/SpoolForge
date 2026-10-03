@@ -1,0 +1,17 @@
+{
+  "finding_id": "spoolio-m1-closure-claude-4",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8531a942e791",
+  "reviewer": "claude",
+  "severity": "LOW",
+  "category": "Per-field provenance accuracy",
+  "summary": "Unchanged: reverting an edited field to its pristine catalog value still displays 'Edited locally' rather than reverting to 'OFD <revision>'.",
+  "claim": "Same minor, low-impact display inaccuracy.",
+  "evidence": {
+    "source": "Identical to prior submission; `saveCustom()`'s sources logic is untouched by this diff.",
+    "response_sha256": "c7030a186661ce81c2b1dfdb22aea7bb623d554953ba7e0d64102b6162b2da39"
+  },
+  "suggested_remediation": "As previously stated.",
+  "suggested_validation": "As previously stated.",
+  "reviewer_confidence": "MEDIUM"
+}

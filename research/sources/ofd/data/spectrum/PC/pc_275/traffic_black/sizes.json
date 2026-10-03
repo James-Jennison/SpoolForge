@@ -1,0 +1,28 @@
+[
+  {
+    "uuid": "c912171e-1db7-44b6-b967-25a073f82933",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5905991400042",
+    "article_number": "80946",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1618-Filament-Spectrum-PC-275-1-75mm-TRAFFIC-BLACK-1kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "229e2d8a-b10b-4db5-96c4-8383af7e9332",
+    "filament_weight": 250,
+    "diameter": 1.75,
+    "ean": "5905991400554",
+    "article_number": "80992",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1625-Filament-Spectrum-PC-275-1-75mm-TRAFFIC-BLACK-0-25kg.html"
+      }
+    ]
+  }
+]

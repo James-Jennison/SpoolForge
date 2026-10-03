@@ -1,0 +1,18 @@
+uuid: 3e88ee28-515b-5c94-9a0c-e3afa99f5a77
+slug: filamentpm-tpe-32-rubberjet-flex-black
+brand:
+  slug: filamentpm
+name: TPE 32 RubberJet Flex - Black
+class: FFF
+type: TPE
+abbreviation: TPE
+primary_color:
+  color_rgba: '#101820ff'
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-tpe-32-rubberjet-flex-black/9c75a83b23ba.png
+    type: unspecified
+properties:
+  density: 1.1
+  hardness_shore_d: 32.0
+  min_print_temperature: 220
+  max_print_temperature: 240

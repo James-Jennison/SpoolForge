@@ -1,0 +1,13 @@
+{
+  "uuid": "b3cf3b77-5780-4e08-a1ab-d0634345e0d6",
+  "id": "dual_color_blue_pink",
+  "name": "Dual Color Blue-Pink",
+  "color_hex": [
+    "#1f4296",
+    "#c8569c"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

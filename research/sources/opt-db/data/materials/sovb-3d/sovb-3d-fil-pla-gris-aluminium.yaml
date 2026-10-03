@@ -1,0 +1,21 @@
+uuid: ea13fe59-f6fc-5a0a-b44c-03174acadb22
+slug: sovb-3d-fil-pla-gris-aluminium
+brand:
+  slug: sovb-3d
+name: Fil PLA Gris aluminium
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#b1b3c5ff'
+  color_ral: '9007'
+tags:
+- contains_aluminium
+- abrasive
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 180
+  max_print_temperature: 200
+  min_bed_temperature: 0
+  max_bed_temperature: 60

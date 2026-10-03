@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "aa95bc95-ac88-454d-9bdf-7e83a21ac81c",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/pla-basic-filament-1-75mm-colored-1kg"
+      }
+    ]
+  }
+]

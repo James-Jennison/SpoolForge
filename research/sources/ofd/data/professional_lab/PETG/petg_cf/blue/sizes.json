@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "541ebbfb-b0fb-4a25-afba-4f820737a13b",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 250,
+    "spool_core_diameter": 75,
+    "gtin": "5903707923922",
+    "article_number": "FG-P209-E1",
+    "discontinued": false
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "uuid": "e7d3a9a9-d061-4b0b-96f5-1551507a53eb",
+  "id": "fluorescent_green",
+  "name": "Fluorescent Green",
+  "color_hex": "#39FF14",
+  "traits": {
+    "neon": true
+  }
+}

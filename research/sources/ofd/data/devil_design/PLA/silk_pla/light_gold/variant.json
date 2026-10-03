@@ -1,0 +1,9 @@
+{
+  "uuid": "5cccbf74-c0db-48a9-a09f-9f4a90022118",
+  "id": "light_gold",
+  "name": "LIGHT GOLD",
+  "color_hex": "#F6C500",
+  "traits": {
+    "silk": true
+  }
+}

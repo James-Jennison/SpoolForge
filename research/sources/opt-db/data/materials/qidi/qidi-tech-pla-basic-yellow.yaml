@@ -1,0 +1,17 @@
+uuid: de5bb896-0225-5693-bcbe-3e0e21106a5e
+slug: qidi-tech-pla-basic-yellow
+brand:
+  slug: qidi
+name: PLA Basic Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f8c711ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.17
+photos:
+- url: https://files.openprinttag.org/qidi/qidi-tech-pla-basic-yellow/qidi-tech-pla-basic-yellow-0-b6a8f1bb.jpg
+  type: unspecified

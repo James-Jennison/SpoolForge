@@ -1,0 +1,11 @@
+{
+  "uuid": "7fcd911a-d9fe-4065-8f73-78af6ab84267",
+  "id": "3dxmax",
+  "name": "ABS 3DXMax",
+  "diameter_tolerance": 0.02,
+  "density": 1.04,
+  "min_print_temperature": 230,
+  "max_print_temperature": 260,
+  "min_bed_temperature": 90,
+  "max_bed_temperature": 110
+}

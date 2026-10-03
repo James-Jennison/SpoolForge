@@ -1,0 +1,13 @@
+uuid: 9a898b2a-bd1b-5987-8859-91a27f5db886
+slug: paramount-3d-abs-decepticon-purple
+brand:
+  slug: paramount-3d
+name: ABS (Decepticon Purple)
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#431e33ff'
+tags:
+- filtration_recommended
+properties: {}

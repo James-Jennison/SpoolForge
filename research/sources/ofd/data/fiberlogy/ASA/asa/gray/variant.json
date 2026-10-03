@@ -1,0 +1,9 @@
+{
+  "uuid": "47c9af86-ff59-4143-ab27-88f2c087448c",
+  "id": "gray",
+  "name": "Gray",
+  "color_hex": "#BBBCBC",
+  "traits": {
+    "recyclable": true
+  }
+}

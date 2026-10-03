@@ -1,0 +1,1879 @@
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+index f75656bc2..2641bea77 100644
+--- a/app/build.gradle.kts
++++ b/app/build.gradle.kts
+@@ -27,8 +27,8 @@ android {
+         applicationId = "net.jamesjennison.filamajignfc"
+         minSdk = 28
+         targetSdk = 36
+-        versionCode = 1
+-        versionName = "0.4.0-m4"
++        versionCode = 5
++        versionName = "0.5.0-m5"
+         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+         buildConfigField("String", "OPENAI_API_KEY", "\"\"")
+     }
+@@ -51,6 +51,7 @@ dependencies {
+     implementation("androidx.camera:camera-lifecycle:1.5.3")
+     implementation("androidx.camera:camera-view:1.5.3")
+     implementation("com.google.zxing:core:3.5.4")
++    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+     implementation("androidx.core:core-ktx:1.16.0")
+     implementation("androidx.activity:activity-compose:1.11.0")
+     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.9.4")
+diff --git a/app/src/androidTest/assets/openprinttag-01-payload.bin b/app/src/androidTest/assets/openprinttag-01-payload.bin
+new file mode 100644
+index 0000000000000000000000000000000000000000..96735eb5c39f2ebd29211ee2fc22bc3a89c084ab
+GIT binary patch
+literal 245
+zcmZ3;Bynj!i!=iR`-MNNU4OD>85^4<o0_B<SXgi{a58X}1^75B1QeAPCn~rn<|I~B
+zDmdjNCTDYJg2i%E^Gf)nGA<v#E+EPLLQs<Vi;yIvgs_XPo$Y@Knfc=XC1iive3MX;
+zI4hwn@lZlVVwHrdgocEggpGu{5RjoEp(!GvCE*~UEpb9ZM<PW+SHeWXVm<@oe+lbm
+m38P<*CTGt6a%S{7D`AsqWNx5fY@lFd@Sg!MSb$d+EC~P{n>HT+
+
+literal 0
+HcmV?d00001
+
+diff --git a/app/src/androidTest/kotlin/net/jamesjennison/filamajignfc/DeviceExternalAdaptersAcceptanceTest.kt b/app/src/androidTest/kotlin/net/jamesjennison/filamajignfc/DeviceExternalAdaptersAcceptanceTest.kt
+new file mode 100644
+index 000000000..64a45254b
+--- /dev/null
++++ b/app/src/androidTest/kotlin/net/jamesjennison/filamajignfc/DeviceExternalAdaptersAcceptanceTest.kt
+@@ -0,0 +1,35 @@
++package net.jamesjennison.filamajignfc
++
++import android.os.Build
++import androidx.test.ext.junit.runners.AndroidJUnit4
++import androidx.test.platform.app.InstrumentationRegistry
++import net.jamesjennison.filamajignfc.core.*
++import org.junit.Assert.*
++import org.junit.Test
++import org.junit.runner.RunWith
++
++@RunWith(AndroidJUnit4::class)
++class DeviceExternalAdaptersAcceptanceTest {
++    @Test fun externalFormatsConvertOfflineOnRazr2023() {
++        assertEquals("motorola razr 2023", Build.MODEL)
++        val context = InstrumentationRegistry.getInstrumentation().context
++        val optPayload = context.assets.open("openprinttag-01-payload.bin").use { it.readBytes() }
++        val opt = OpenPrintTagAdapter.decode(optPayload) as DecodeResult.Supported
++        assertEquals("Prusament", opt.convertedRecord?.brand?.value)
++        assertEquals("1.75", opt.convertedRecord?.diameterMm?.value)
++
++        val tag = ByteArray(224)
++        putUInt(tag,0,2,2000); putText(tag,2,5,"PLA"); putText(tag,12,16,"Example")
++        tag[0x3c]=1; tag[0x3d]=2; tag[0x3e]=3; tag[0x3f]=-1
++        putUInt(tag,0x8c,2,1750); putUInt(tag,0x9e,2,1000)
++        val ot3d = OpenTag3dV2Adapter.decode(tag) as DecodeResult.Supported
++        assertEquals("Example", ot3d.convertedRecord?.brand?.value)
++
++        val export = SpoolmanCodec.encodeExport(checkNotNull(opt.convertedRecord), 1012, 800)
++        val roundTrip = SpoolmanCodec.decodeExport(export).single()
++        assertEquals(800, roundTrip.remainingQuantityG)
++        assertEquals("Prusament", roundTrip.filament.brand.value)
++    }
++    private fun putText(out:ByteArray,offset:Int,length:Int,value:String)=value.encodeToByteArray().take(length).forEachIndexed{i,b->out[offset+i]=b}
++    private fun putUInt(out:ByteArray,offset:Int,length:Int,value:Long){repeat(length){i->out[offset+length-1-i]=(value ushr (i*8)).toByte()}}
++}
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+index 2e96982fe..684205095 100644
+--- a/app/src/main/AndroidManifest.xml
++++ b/app/src/main/AndroidManifest.xml
+@@ -4,7 +4,7 @@
+     <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+     <uses-permission android:name="android.permission.INTERNET" />
+     <uses-feature android:name="android.hardware.nfc" android:required="false" />
+-    <application android:name=".FilamajigApplication" android:allowBackup="false" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/Theme.FilamajigNfc">
++    <application android:name=".FilamajigApplication" android:allowBackup="false" android:usesCleartextTraffic="true" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/Theme.FilamajigNfc">
+         <activity android:name=".MainActivity" android:exported="true">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt
+index 0cfc05cef..a106f334c 100644
+--- a/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt
+@@ -46,7 +46,7 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
+         WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
+         setContent { FilamajigTheme { FilamajigApp(model, adapter != null) } }
+     }
+-    override fun onResume() { super.onResume(); adapter?.enableReaderMode(this, this, NfcAdapter.FLAG_READER_NFC_A, null) }
++    override fun onResume() { super.onResume(); adapter?.enableReaderMode(this, this, NfcAdapter.FLAG_READER_NFC_A or NfcAdapter.FLAG_READER_NFC_V, null) }
+     override fun onPause() { adapter?.disableReaderMode(this); super.onPause() }
+     override fun onTagDiscovered(tag: Tag) = model.nfc.onTag(tag)
+ }
+@@ -60,6 +60,7 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
+     var custom by remember { mutableStateOf<CustomSeed?>(null) }
+     var showLabelScanner by rememberSaveable { mutableStateOf(false) }
+     var showPortableImport by rememberSaveable { mutableStateOf(false) }
++    var showSpoolmanImport by rememberSaveable { mutableStateOf(false) }
+     var showCustom by remember { mutableStateOf(false) }
+     var labelReview by remember { mutableStateOf<List<String>>(emptyList()) }
+     var labelCodes by remember { mutableStateOf<List<LabelCode>>(emptyList()) }
+@@ -99,6 +100,7 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
+                             modifier = Modifier.fillMaxWidth(),
+                         ) { Text("Scan label or QR with AI") }
+                         OutlinedButton(onClick = { showPortableImport = true }, modifier = Modifier.fillMaxWidth()) { Text("Import portable spool bundle") }
++                        OutlinedButton(onClick = { showSpoolmanImport = true }, modifier = Modifier.fillMaxWidth()) { Text("Import Spoolman JSON") }
+                         labelAnalysis.message?.let { Notice(it, it.startsWith("Label scan failed")) }
+                         model.searchNotice?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
+                     }
+@@ -129,9 +131,52 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
+         dismiss = { showPortableImport = false },
+         import = { text -> model.importPortableBundle(text); showPortableImport = false },
+     )
++    if (showSpoolmanImport) SpoolmanImportDialog(
++        dismiss = { showSpoolmanImport = false },
++        import = { text -> model.importSpoolmanJson(text); showSpoolmanImport = false },
++    )
++    if (model.spoolmanImports.isNotEmpty() && !showCustom) SpoolmanImportReviewDialog(
++        imports = model.spoolmanImports,
++        dismiss = model::clearSpoolmanImports,
++        review = { imported ->
++            custom = model.consumeSpoolmanImport(imported)
++            labelReview = imported.warnings + "Provider: Spoolman JSON export"
++            labelCodes = emptyList()
++            showCustom = true
++        },
++    )
+     if (showCustom) CustomDialog(custom ?: CustomSeed(), labelReview, labelCodes, onDismiss = { showCustom = false; labelReview = emptyList(); labelCodes = emptyList(); model.clearLabelAnalysis() }, onSave = { values -> model.saveCustom(custom ?: CustomSeed(), values); showCustom = false; labelReview = emptyList(); labelCodes = emptyList(); model.clearLabelAnalysis() })
+ }
+
++@Composable private fun SpoolmanImportDialog(dismiss: () -> Unit, import: (String) -> Unit) {
++    var text by rememberSaveable { mutableStateOf("") }
++    AlertDialog(
++        onDismissRequest = dismiss, title = { Text("Import Spoolman JSON") },
++        text = { Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
++            Text("Paste a Spoolman spool or filament JSON export. Every selected record opens for review before it is saved locally.")
++            OutlinedTextField(text, { if (it.length <= 2_000_000) text = it }, Modifier.fillMaxWidth().heightIn(min = 180.dp), label = { Text("Spoolman JSON") })
++        } },
++        dismissButton = { TextButton(onClick = dismiss) { Text("Cancel") } },
++        confirmButton = { TextButton(onClick = { import(text) }, enabled = text.isNotBlank()) { Text("Read export") } },
++    )
++}
++
++@Composable private fun SpoolmanImportReviewDialog(imports: List<SpoolmanImport>, dismiss: () -> Unit, review: (SpoolmanImport) -> Unit) {
++    AlertDialog(
++        onDismissRequest = dismiss, title = { Text("Review Spoolman records") },
++        text = { LazyColumn(Modifier.heightIn(max = 460.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
++            item { Text("${imports.size} record(s) remain. Select one to review and save; source and physical-spool quantities are preserved.") }
++            items(imports) { imported ->
++                val f = imported.filament
++                OutlinedButton(onClick = { review(imported) }, modifier = Modifier.fillMaxWidth()) {
++                    Column(Modifier.fillMaxWidth()) { Text("${f.brand.value} · ${f.product.value.ifBlank { f.material.value }}", fontWeight = FontWeight.Bold); Text("${f.material.value} · ${f.colorName.value.ifBlank { "#${f.colorHex.value}" }} · ${imported.remainingQuantityG ?: imported.initialQuantityG} g") }
++                }
++            }
++        } },
++        confirmButton = { TextButton(onClick = dismiss) { Text("Close") } },
++    )
++}
++
+ @Composable private fun PortableImportDialog(dismiss: () -> Unit, import: (String) -> Unit) {
+     var text by rememberSaveable { mutableStateOf("") }
+     AlertDialog(
+@@ -182,7 +227,12 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
+
+ @Composable private fun ReadResult(result: DecodeResult?, edit: () -> Unit) {
+     when (result) {
+-        is DecodeResult.Supported -> Card(Modifier.fillMaxWidth().padding(top = 8.dp)) { Column(Modifier.padding(12.dp)) { Text("Supported OpenSpool tag read", fontWeight = FontWeight.Bold); Text("Fields were decoded without rewriting the tag."); TextButton(onClick = edit) { Text("Edit as a local record") } } }
++        is DecodeResult.Supported -> Card(Modifier.fillMaxWidth().padding(top = 8.dp)) { Column(Modifier.padding(12.dp)) {
++            Text("Supported ${result.formatName} tag read", fontWeight = FontWeight.Bold)
++            Text("Fields were decoded without rewriting the tag.")
++            result.warnings.forEach { Text(it, style = MaterialTheme.typography.bodySmall) }
++            TextButton(onClick = edit) { Text(if (result.convertedRecord == null) "Edit as a local record" else "Convert to a local record") }
++        } }
+         is DecodeResult.ReadOnly -> Notice("Read-only tag: ${result.reason}", false)
+         is DecodeResult.Rejected -> Notice("Tag read: ${result.reason}", false)
+         null -> Unit
+@@ -225,9 +275,11 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
+
+ @Composable private fun Detail(model: MainViewModel, item: FilamentItem, edit: () -> Unit, back: () -> Unit) {
+     val e = item.entry
++    val context = LocalContext.current
+     val uriHandler = LocalUriHandler.current
+     var confirmDelete by remember(item.entry.packageId) { mutableStateOf(false) }
+     var showPortable by remember(item.entry.packageId) { mutableStateOf(false) }
++    var showSpoolmanSync by remember(item.entry.packageId) { mutableStateOf(false) }
+     var portableIdentity by remember(item.entry.packageId) { mutableStateOf<PortableSpoolIdentity?>(null) }
+     val hasCatalogBarcodeEvidence = isCatalogBarcodeEvidence(item.barcodeEvidence)
+     val hasProviderEvidence = isProviderCandidateEvidence(item.barcodeEvidence)
+@@ -253,6 +305,14 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
+         if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = {
+             model.loadPortableIdentity(item) { portableIdentity = it; showPortable = true }
+         }, modifier = Modifier.fillMaxWidth()) { Text("Portable QR and export") }
++        if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = {
++            context.startActivity(Intent.createChooser(Intent(Intent.ACTION_SEND).apply {
++                type = "application/json"
++                putExtra(Intent.EXTRA_TEXT, model.spoolmanExport(item))
++            }, "Export for Spoolman"))
++        }, modifier = Modifier.fillMaxWidth()) { Text("Share Spoolman JSON") }
++        if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = { showSpoolmanSync = true }, modifier = Modifier.fillMaxWidth(), enabled = !model.spoolmanSync.busy) { Text("Sync filament profile to Spoolman") }
++        model.spoolmanSync.message?.let { Notice(it, model.spoolmanSync.outcomeUnknown || it.contains("failed", ignoreCase = true) || it.contains("rejected", ignoreCase = true)) }
+         if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = { confirmDelete = true }, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.error)) { Text("Delete local record") }
+         OutlinedButton(onClick = { uriHandler.openUri(FILAMENT_PROFILES_CATALOG_URL) }, modifier = Modifier.fillMaxWidth()) { Text("Search 3D Filament Profiles") }
+         Text("Tag compatibility", fontWeight = FontWeight.Bold)
+@@ -279,6 +339,23 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
+         confirmButton = { TextButton(onClick = { confirmDelete = false; model.deleteLocal(item) }, colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error)) { Text("Delete") } },
+     )
+     if (showPortable && portableIdentity != null) PortableIdentityDialog(portableIdentity!!) { showPortable = false }
++    if (showSpoolmanSync) SpoolmanSyncDialog(model.spoolmanServer, model.spoolmanSync.busy, dismiss = { showSpoolmanSync = false }, sync = { server, density -> model.syncSpoolmanProfile(item, server, density); showSpoolmanSync = false })
++}
++
++@Composable private fun SpoolmanSyncDialog(initialServer: String, busy: Boolean, dismiss: () -> Unit, sync: (String, String?) -> Unit) {
++    var server by rememberSaveable { mutableStateOf(initialServer) }
++    var density by rememberSaveable { mutableStateOf("") }
++    AlertDialog(
++        onDismissRequest = dismiss, title = { Text("Sync filament profile") },
++        text = { Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
++            Text("Filamajig will find or create the vendor, then find or create this filament by stable external ID. It will not create a physical spool during live sync.")
++            OutlinedTextField(server, { server = it }, Modifier.fillMaxWidth(), label = { Text("Spoolman server URL") }, placeholder = { Text("http://192.168.1.10:7912") }, singleLine = true)
++            OutlinedTextField(density, { density = it }, Modifier.fillMaxWidth(), label = { Text("Density g/cm³ (optional)") }, supportingText = { Text("Leave blank to review the material-based value shown after sync.") }, singleLine = true)
++            Text("Tapping Sync changes the named Spoolman server. A connection loss after a request is reported as an unknown outcome and is never retried automatically.", style = MaterialTheme.typography.bodySmall)
++        } },
++        dismissButton = { TextButton(onClick = dismiss) { Text("Cancel") } },
++        confirmButton = { TextButton(onClick = { sync(server, density.ifBlank { null }) }, enabled = server.isNotBlank() && !busy) { Text("Sync") } },
++    )
+ }
+
+ @Composable private fun PortableIdentityDialog(identity: PortableSpoolIdentity, dismiss: () -> Unit) {
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt
+index 1ec297e91..7fc0397d3 100644
+--- a/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt
+@@ -22,6 +22,7 @@ internal fun withPhysicalDefaults(values: Map<String, String>) = values + mapOf(
+     "mass" to values["mass"].orEmpty().ifBlank { DEFAULT_NOMINAL_MASS_G },
+ )
+ data class LabelAnalysisUiState(val busy: Boolean = false, val result: LabelScanResult? = null, val message: String? = null)
++data class SpoolmanSyncUiState(val busy: Boolean = false, val message: String? = null, val outcomeUnknown: Boolean = false)
+ data class FilamentItem(val entry: CatalogEntry, val provenance: Provenance, val sources: Map<String, String>, val originalPackageId: String? = null, val barcodeEvidence: String = "", val transmissionDistance: String? = null) { fun source(field: String) = sources[field].orEmpty() }
+ data class CustomSeed(
+     val id: String? = null, val originalPackageId: String? = null, val barcodeEvidence: String = "",
+@@ -64,8 +65,13 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
+     private val communityProvider = CommunityCatalogProvider(app)
+     private val gtinProvider = MergedGtinCatalogProvider(gtinIndex)
+     private val labelClient = LabelScanClient()
++    private val spoolmanClient = SpoolmanSyncClient()
++    private val spoolmanPrefs = app.getSharedPreferences("spoolman-settings", 0)
++    var spoolmanServer by mutableStateOf(spoolmanPrefs.getString("server", "").orEmpty()); private set
++    var spoolmanSync by mutableStateOf(SpoolmanSyncUiState()); private set
+     var labelAnalysis by mutableStateOf(LabelAnalysisUiState()); private set
+     var portableImport by mutableStateOf<CustomSeed?>(null); private set
++    var spoolmanImports by mutableStateOf<List<SpoolmanImport>>(emptyList()); private set
+     var labelPhotos by mutableStateOf<List<LabelPhoto>>(emptyList()); private set
+     var barcodeMode by mutableStateOf(false); private set
+     var searchNotice by mutableStateOf<String?>(null); private set
+@@ -158,6 +164,44 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
+     }
+     fun clearLabelAnalysis() { labelAnalysis = LabelAnalysisUiState(); labelPhotos = emptyList() }
+     fun consumePortableImport() { portableImport = null }
++
++    fun importSpoolmanJson(text: String) {
++        runCatching { SpoolmanCodec.decodeExport(text.encodeToByteArray()) }
++            .onSuccess { spoolmanImports = it; error = null }
++            .onFailure { error = it.message ?: "Spoolman JSON could not be imported" }
++    }
++
++    fun consumeSpoolmanImport(item: SpoolmanImport): CustomSeed {
++        spoolmanImports = spoolmanImports - item
++        return item.filament.toCustomSeed().copy(
++            portableInitialQuantityG = item.initialQuantityG,
++            portableRemainingQuantityG = item.remainingQuantityG,
++        )
++    }
++
++    fun clearSpoolmanImports() { spoolmanImports = emptyList() }
++
++    fun spoolmanExport(item: FilamentItem): String = SpoolmanCodec.encodeExport(item.toRecord()).decodeToString()
++
++    fun syncSpoolmanProfile(item: FilamentItem, server: String, density: String?) {
++        if (spoolmanSync.busy) return
++        spoolmanSync = SpoolmanSyncUiState(busy = true, message = "Connecting to Spoolman…")
++        viewModelScope.launch {
++            runCatching { withContext(Dispatchers.IO) { spoolmanClient.syncProfile(server, item.toRecord(), density) } }
++                .onSuccess { result ->
++                    spoolmanServer = server.trim()
++                    spoolmanPrefs.edit().putString("server", spoolmanServer).apply()
++                    spoolmanSync = SpoolmanSyncUiState(message = "Spoolman filament profile ${if (result.created) "created" else "updated"} as ID ${result.filamentId}. " + result.warnings.first())
++                }
++                .onFailure { failure ->
++                    val unknown = (failure as? SpoolmanSyncException)?.outcomeUnknown == true
++                    val recovery = if (unknown) " Run Sync again to reconcile safely using the same stable external ID." else ""
++                    spoolmanSync = SpoolmanSyncUiState(message = (failure.message ?: "Spoolman sync failed") + recovery, outcomeUnknown = unknown)
++                }
++        }
++    }
++
++    fun clearSpoolmanSyncMessage() { spoolmanSync = SpoolmanSyncUiState() }
+     fun importPortableBundle(text: String) {
+         if (text.toByteArray().size > 65_536) { error = "Portable bundle is limited to 64 KiB"; return }
+         handlePortableDecode(PortableIdentityCodec.decode(text.encodeToByteArray()), "bundle")
+@@ -297,12 +341,34 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
+     }
+
+     fun decodedSeed(): CustomSeed? {
+-        val values = (nfc.lastRead as? DecodeResult.Supported)?.values ?: return null
+-        return decodedSeedFromValues(values)
++        val decoded = nfc.lastRead as? DecodeResult.Supported ?: return null
++        return decoded.convertedRecord?.toCustomSeed() ?: decodedSeedFromValues(decoded.values)
+     }
+     override fun onCleared() { nfc.shutdown(); super.onCleared() }
+ }
+
++private fun FilamentRecord.toCustomSeed(): CustomSeed {
++    fun source(value: FieldValue<*>?) = value?.source.orEmpty()
++    val values = mapOf(
++        "brand" to brand.value, "material" to material.value, "product" to product.value, "colorName" to colorName.value,
++        "colorHex" to colorHex.value, "diameter" to diameterMm.value, "mass" to nominalMassG.value.toString(),
++        "nozzleMin" to nozzleMinC?.value?.toString().orEmpty(), "nozzleMax" to nozzleMaxC?.value?.toString().orEmpty(),
++        "bedMin" to bedMinC?.value?.toString().orEmpty(), "bedMax" to bedMaxC?.value?.toString().orEmpty(),
++        "transmissionDistance" to transmissionDistance?.value.orEmpty(),
++    )
++    return CustomSeed(
++        id = packageId, variantId = variantId.orEmpty(), productId = productId.orEmpty(), gtin = gtin, articleNumber = sku,
++        additionalColorHexes = additionalColors.joinToString(","), brand = brand.value, material = material.value, product = product.value,
++        color = colorName.value, hex = colorHex.value, diameter = diameterMm.value, mass = nominalMassG.value.toString(),
++        nozzleMin = values.getValue("nozzleMin"), nozzleMax = values.getValue("nozzleMax"), bedMin = values.getValue("bedMin"), bedMax = values.getValue("bedMax"),
++        transmissionDistance = values.getValue("transmissionDistance"), sourceRevision = sourceRevision, provenance = provenance,
++        sources = mapOf("brand" to brand.source, "material" to material.source, "product" to product.source, "colorName" to colorName.source,
++            "colorHex" to colorHex.source, "diameter" to diameterMm.source, "mass" to nominalMassG.source,
++            "nozzleMin" to source(nozzleMinC), "nozzleMax" to source(nozzleMaxC), "bedMin" to source(bedMinC), "bedMax" to source(bedMaxC),
++            "transmissionDistance" to source(transmissionDistance)), originalValues = values,
++    )
++}
++
+ internal fun decodedSeedFromValues(values: Map<String, JsonValue>): CustomSeed {
+     fun text(key: String) = (values[key] as? JsonValue.Str)?.value.orEmpty()
+     fun number(key: String) = when (val value = values[key]) { is JsonValue.Num -> value.lexical; is JsonValue.Str -> value.value; else -> "" }
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt
+index ecaf7b6a4..d17e2a553 100644
+--- a/app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt
+@@ -74,9 +74,9 @@ class NfcCoordinator(
+             val records=current?.records?.map{TagRecord(it.tnf.toInt(),it.type.toString(Charsets.US_ASCII),it.payload)}?:emptyList()
+             val snapshot=TagSnapshot(tag.id.copyOf(),ndef.isWritable,ndef.maxSize,records)
+             if(machine.state.phase in setOf(WritePhase.VERIFYING,WritePhase.VERIFICATION_PENDING,WritePhase.WRITE_OUTCOME_UNKNOWN)){
+-                reconcile(snapshot);post{lastRead=decodeSingleOpenSpool(current)};publish();return
++                reconcile(snapshot);post{lastRead=decodeSingleTag(current)};publish();return
+             }
+-            if(!awaitingWrite()){post{lastRead=decodeSingleOpenSpool(current)};return}
++            if(!awaitingWrite()){post{lastRead=decodeSingleTag(current)};return}
+             val intent=machine.state.intent ?: return
+             val message=NdefMessage(arrayOf(NdefRecord.createMime(OpenSpoolCodec.MIME,intent.payload)))
+             val existingOpenSpool=current?.records?.filter{it.tnf==NdefRecord.TNF_MIME_MEDIA&&it.type.toString(Charsets.US_ASCII)==OpenSpoolCodec.MIME}.orEmpty()
+@@ -94,7 +94,7 @@ class NfcCoordinator(
+             val fresh=readFreshNdefWithRetries { ndef.ndefMessage }
+             completedReads.add("post-write" to fresh)
+             val freshRecords=fresh?.records?.map{TagRecord(it.tnf.toInt(),it.type.toString(Charsets.US_ASCII),it.payload)}?:emptyList()
+-            reconcile(TagSnapshot(tag.id.copyOf(),ndef.isWritable,ndef.maxSize,freshRecords));post{lastRead=decodeSingleOpenSpool(fresh)};publish()
++            reconcile(TagSnapshot(tag.id.copyOf(),ndef.isWritable,ndef.maxSize,freshRecords));post{lastRead=decodeSingleTag(fresh)};publish()
+         } catch(e:Exception){
+             if(machine.state.phase==WritePhase.WRITING)machine.writeInterrupted("Tag connection lost during write")
+             else if(machine.state.phase==WritePhase.VERIFYING)machine.verificationDeferred("Android lost the tag connection during verification")
+@@ -124,7 +124,20 @@ class NfcCoordinator(
+         val digest = java.security.MessageDigest.getInstance("SHA-256").digest(bytes).joinToString("") { "%02x".format(it) }
+         return "${message.records.size} record(s), ${bytes.size} bytes, SHA256 $digest"
+     }
+-    internal fun decodeSingleOpenSpool(message:NdefMessage?):DecodeResult {val records=message?.records?:emptyArray();if(records.isEmpty())return DecodeResult.Rejected("No NDEF message returned by this read. This does not establish whether an earlier write persisted.");if(records.size!=1)return DecodeResult.Rejected("Multiple NDEF records found; existing contents will not be overwritten.");val record=records.single();if(record.tnf!=NdefRecord.TNF_MIME_MEDIA||record.type.toString(Charsets.US_ASCII)!=OpenSpoolCodec.MIME)return DecodeResult.Rejected("No OpenSpool MIME record found");return OpenSpoolCodec.decode(record.payload)}
++    internal fun decodeSingleTag(message:NdefMessage?):DecodeResult {
++        val records=message?.records?:emptyArray()
++        if(records.isEmpty())return DecodeResult.Rejected("No NDEF message returned by this read. This does not establish whether an earlier write persisted.")
++        val supported = records.mapNotNull { record ->
++            if(record.tnf!=NdefRecord.TNF_MIME_MEDIA) null else {
++                val mime=record.type.toString(Charsets.US_ASCII).lowercase()
++                when(mime) { OpenSpoolCodec.MIME -> OpenSpoolCodec.decode(record.payload); else -> ExternalTagRegistry.decode(mime,record.payload) }
++            }
++        }
++        if(supported.isEmpty())return DecodeResult.Rejected("No supported filament MIME record found")
++        if(supported.size>1)return DecodeResult.Rejected("Multiple NDEF records found; filament conversion is ambiguous")
++        return supported.single()
++    }
++    internal fun decodeSingleOpenSpool(message:NdefMessage?):DecodeResult = decodeSingleTag(message)
+ }
+
+ internal data class BindingFinalization(val persistence: BindingPersistence, val errorMessage: String?=null)
+diff --git a/app/src/main/kotlin/net/jamesjennison/filamajignfc/SpoolmanSyncClient.kt b/app/src/main/kotlin/net/jamesjennison/filamajignfc/SpoolmanSyncClient.kt
+new file mode 100644
+index 000000000..e421a59b3
+--- /dev/null
++++ b/app/src/main/kotlin/net/jamesjennison/filamajignfc/SpoolmanSyncClient.kt
+@@ -0,0 +1,91 @@
++package net.jamesjennison.filamajignfc
++
++import net.jamesjennison.filamajignfc.core.*
++import java.net.URI
++import java.net.URLEncoder
++import okhttp3.MediaType.Companion.toMediaType
++import okhttp3.OkHttpClient
++import okhttp3.Request
++import okhttp3.RequestBody.Companion.toRequestBody
++
++data class SpoolmanHttpResponse(val code: Int, val body: ByteArray)
++fun interface SpoolmanTransport { fun request(method: String, url: String, body: ByteArray?): SpoolmanHttpResponse }
++data class SpoolmanSyncResult(val vendorId: Int, val filamentId: Int, val created: Boolean, val warnings: List<String>)
++class SpoolmanSyncException(message: String, val outcomeUnknown: Boolean = false) : Exception(message)
++
++class SpoolmanSyncClient(private val transport: SpoolmanTransport = SpoolmanTransport(::httpRequest)) {
++    fun syncProfile(server: String, record: FilamentRecord, density: String?): SpoolmanSyncResult {
++        val base = normalizeServer(server)
++        val requests = SpoolmanCodec.syncRequests(record, density = density)
++        val vendorExternal = "filamajig:${record.brand.value}"
++        val existingVendor = findId("$base/vendor?external_id=${encoded(vendorExternal)}")
++        val vendorId = existingVendor ?: createId("$base/vendor", requests.vendorJson, "vendor")
++        val filamentExternal = "filamajig:${record.packageId}"
++        val existing = findId("$base/filament?external_id=${encoded(filamentExternal)}", priorChange = existingVendor == null)
++        val filamentBody = SpoolmanCodec.filamentRequest(record, vendorId, density)
++        val filamentId = if (existing == null) createId("$base/filament", filamentBody, "filament") else {
++            mutate("PATCH", "$base/filament/$existing", filamentBody, "filament update")
++            existing
++        }
++        return SpoolmanSyncResult(vendorId, filamentId, existing == null, requests.warnings)
++    }
++
++    private fun findId(url: String, priorChange: Boolean = false): Int? {
++        val stage = if (priorChange) "after the vendor step; retry is safe because external IDs are stable" else "before any change"
++        val response = runCatching { transport.request("GET", url, null) }.getOrElse { throw SpoolmanSyncException("Spoolman lookup failed $stage: ${it.message}") }
++        if (response.code !in 200..299) throw SpoolmanSyncException("Spoolman lookup returned HTTP ${response.code} $stage")
++        val array = StrictJson(256_000, 16).parse(response.body) as? JsonValue.Arr ?: throw SpoolmanSyncException("Spoolman lookup response was not an array")
++        if (array.values.size > 1) throw SpoolmanSyncException("Spoolman returned multiple records for a unique Filamajig external ID")
++        return (array.values.singleOrNull() as? JsonValue.Obj)?.int("id")
++            ?: if (array.values.isEmpty()) null else throw SpoolmanSyncException("Spoolman lookup result had no numeric id")
++    }
++    private fun createId(url: String, body: ByteArray, kind: String): Int {
++        val response = mutate("POST", url, body, "$kind creation")
++        return (StrictJson(256_000, 16).parse(response.body) as? JsonValue.Obj)?.int("id")
++            ?: throw SpoolmanSyncException("Spoolman $kind response had no numeric id", outcomeUnknown = true)
++    }
++    private fun mutate(method: String, url: String, body: ByteArray, action: String): SpoolmanHttpResponse {
++        val response = runCatching { transport.request(method, url, body) }.getOrElse {
++            throw SpoolmanSyncException("Spoolman $action outcome is unknown because the connection ended: ${it.message}", outcomeUnknown = true)
++        }
++        if (response.code !in 200..299) throw SpoolmanSyncException("Spoolman rejected $action with HTTP ${response.code}")
++        return response
++    }
++    private fun normalizeServer(input: String): String {
++        val uri = runCatching { URI(input.trim()) }.getOrElse { throw SpoolmanSyncException("Spoolman server URL is invalid") }
++        if (uri.scheme !in setOf("http", "https") || uri.host.isNullOrBlank() || uri.userInfo != null || uri.query != null || uri.fragment != null) throw SpoolmanSyncException("Use an http(s) Spoolman server URL without credentials, query, or fragment")
++        if (uri.scheme == "http" && !isLocalHost(uri.host)) throw SpoolmanSyncException("Use HTTPS for a Spoolman server outside the local network")
++        val root = input.trim().trimEnd('/').removeSuffix("/api/v1")
++        return "$root/api/v1"
++    }
++    private fun isLocalHost(host: String): Boolean {
++        val value = host.trim('[', ']').lowercase()
++        if (value == "localhost" || value.endsWith(".local")) return true
++        val octets = value.split('.').map { it.toIntOrNull() }
++        if (octets.size == 4 && octets.all { it != null && it in 0..255 }) {
++            val first = octets[0]!!
++            val second = octets[1]!!
++            return first == 10 || first == 127 || first == 192 && second == 168 || first == 172 && second in 16..31 || first == 169 && second == 254
++        }
++        return value == "::1" || value.startsWith("fc") || value.startsWith("fd") || value.startsWith("fe8") || value.startsWith("fe9") || value.startsWith("fea") || value.startsWith("feb")
++    }
++    private fun encoded(value: String) = URLEncoder.encode(value, Charsets.UTF_8.name())
++}
++
++private val spoolmanHttpClient = OkHttpClient.Builder().connectTimeout(8, java.util.concurrent.TimeUnit.SECONDS).readTimeout(12, java.util.concurrent.TimeUnit.SECONDS).build()
++private fun httpRequest(method: String, url: String, body: ByteArray?): SpoolmanHttpResponse {
++    val requestBody = body?.toRequestBody("application/json; charset=utf-8".toMediaType())
++    val request = Request.Builder().url(url).header("Accept", "application/json").method(method, requestBody).build()
++    spoolmanHttpClient.newCall(request).execute().use { response ->
++        val stream = response.body?.byteStream() ?: return SpoolmanHttpResponse(response.code, ByteArray(0))
++        val out = java.io.ByteArrayOutputStream()
++        val buffer = ByteArray(8192)
++        while (out.size() <= 256_000) {
++            val count = stream.read(buffer)
++            if (count < 0) break
++            out.write(buffer, 0, count)
++        }
++        if (out.size() > 256_000) throw SpoolmanSyncException("Spoolman response exceeded 256 KB", outcomeUnknown = method != "GET")
++        return SpoolmanHttpResponse(response.code, out.toByteArray())
++    }
++}
+diff --git a/app/src/test/kotlin/net/jamesjennison/filamajignfc/ExternalNdefRoutingTest.kt b/app/src/test/kotlin/net/jamesjennison/filamajignfc/ExternalNdefRoutingTest.kt
+new file mode 100644
+index 000000000..fe08bc717
+--- /dev/null
++++ b/app/src/test/kotlin/net/jamesjennison/filamajignfc/ExternalNdefRoutingTest.kt
+@@ -0,0 +1,44 @@
++package net.jamesjennison.filamajignfc
++
++import android.app.Application
++import android.nfc.NdefMessage
++import android.nfc.NdefRecord
++import net.jamesjennison.filamajignfc.core.*
++import org.junit.Assert.*
++import org.junit.Test
++import org.junit.runner.RunWith
++import org.robolectric.RobolectricTestRunner
++import org.robolectric.RuntimeEnvironment
++import org.robolectric.annotation.Config
++
++@RunWith(RobolectricTestRunner::class)
++@Config(sdk = [35], application = Application::class)
++class ExternalNdefRoutingTest {
++    @Test fun openTag3dMimeRoutesToReadOnlyConversionWithoutRequiringSingleNdefRecord() {
++        val payload = ByteArray(224)
++        putUInt(payload, 0, 2, 2000); putText(payload, 2, 5, "PLA"); putText(payload, 12, 16, "Example")
++        payload[0x3c] = 1; payload[0x3d] = 2; payload[0x3e] = 3; payload[0x3f] = -1
++        putUInt(payload, 0x8c, 2, 1750); putUInt(payload, 0x9e, 2, 1000)
++        val uri = NdefRecord.createUri("https://opentag3d.info")
++        val mime = NdefRecord.createMime(OpenTag3dV2Adapter.format.mimeType, payload)
++        val nfc = NfcCoordinator(RuntimeEnvironment.getApplication())
++        try {
++            val decoded = nfc.decodeSingleTag(NdefMessage(arrayOf(uri, mime))) as DecodeResult.Supported
++            assertEquals("OpenTag3D 2.000", decoded.formatName)
++            assertEquals("Example", decoded.convertedRecord?.brand?.value)
++        } finally { nfc.shutdown() }
++    }
++
++    @Test fun twoSupportedFilamentRecordsRemainAmbiguous() {
++        val first = NdefRecord.createMime("application/json", "{}".encodeToByteArray())
++        val second = NdefRecord.createMime(OpenPrintTagAdapter.format.mimeType, byteArrayOf(0xa0.toByte(), 0xa0.toByte()))
++        val nfc = NfcCoordinator(RuntimeEnvironment.getApplication())
++        try {
++            val result = nfc.decodeSingleTag(NdefMessage(arrayOf(first, second))) as DecodeResult.Rejected
++            assertTrue(result.reason.startsWith("Multiple NDEF records"))
++        } finally { nfc.shutdown() }
++    }
++
++    private fun putText(out: ByteArray, offset: Int, length: Int, value: String) = value.encodeToByteArray().take(length).forEachIndexed { i, b -> out[offset + i] = b }
++    private fun putUInt(out: ByteArray, offset: Int, length: Int, value: Long) { repeat(length) { i -> out[offset + length - 1 - i] = (value ushr (i * 8)).toByte() } }
++}
+diff --git a/app/src/test/kotlin/net/jamesjennison/filamajignfc/SpoolmanSyncClientTest.kt b/app/src/test/kotlin/net/jamesjennison/filamajignfc/SpoolmanSyncClientTest.kt
+new file mode 100644
+index 000000000..977bf5e49
+--- /dev/null
++++ b/app/src/test/kotlin/net/jamesjennison/filamajignfc/SpoolmanSyncClientTest.kt
+@@ -0,0 +1,89 @@
++package net.jamesjennison.filamajignfc
++
++import net.jamesjennison.filamajignfc.core.*
++import kotlin.test.*
++
++class SpoolmanSyncClientTest {
++    private val record = FilamentRecord("local 1",null,null,FieldValue("SUNLU","test"),FieldValue("PLA","test"),FieldValue("Basic","test"),FieldValue("Orange","test"),FieldValue("FF8E24","test"),FieldValue("1.75","test"),FieldValue(1000,"test"),FieldValue(200,"test"),FieldValue(220,"test"),FieldValue(55,"test"),FieldValue(65,"test"),null,"PLA-ORANGE","test",Provenance.CUSTOM)
++
++    @Test fun createsMissingVendorAndFilamentUsingStableExternalIds() {
++        val calls = mutableListOf<Triple<String,String,String?>>()
++        val replies = ArrayDeque(listOf(
++            SpoolmanHttpResponse(200, "[]".encodeToByteArray()),
++            SpoolmanHttpResponse(200, "{\"id\":3}".encodeToByteArray()),
++            SpoolmanHttpResponse(200, "[]".encodeToByteArray()),
++            SpoolmanHttpResponse(200, "{\"id\":7}".encodeToByteArray()),
++        ))
++        val result = SpoolmanSyncClient { method, url, body -> calls += Triple(method,url,body?.decodeToString()); replies.removeFirst() }.syncProfile("http://spoolman.local:7912/", record, null)
++        assertEquals(3, result.vendorId); assertEquals(7, result.filamentId); assertTrue(result.created)
++        assertEquals(listOf("GET","POST","GET","POST"), calls.map { it.first })
++        assertTrue(calls[0].second.contains("/api/v1/vendor?external_id=filamajig%3ASUNLU"))
++        assertTrue(calls[2].second.contains("filamajig%3Alocal+1"))
++        assertTrue(calls[3].third.orEmpty().contains("\"vendor_id\":3"))
++    }
++
++    @Test fun updatesExistingFilamentInsteadOfCreatingDuplicate() {
++        val methods = mutableListOf<String>()
++        val replies = ArrayDeque(listOf(
++            SpoolmanHttpResponse(200, "[{\"id\":3}]".encodeToByteArray()),
++            SpoolmanHttpResponse(200, "[{\"id\":7}]".encodeToByteArray()),
++            SpoolmanHttpResponse(200, "{\"id\":7}".encodeToByteArray()),
++        ))
++        val result = SpoolmanSyncClient { method, _, _ -> methods += method; replies.removeFirst() }.syncProfile("https://example.test/api/v1", record, "1.25")
++        assertFalse(result.created); assertEquals(7, result.filamentId)
++        assertEquals(listOf("GET","GET","PATCH"), methods)
++    }
++
++    @Test fun mutationTransportFailureIsAnUnknownOutcomeAndIsNotRetried() {
++        var calls = 0
++        val client = SpoolmanSyncClient { method, _, _ ->
++            calls++
++            if (method == "GET") SpoolmanHttpResponse(200, "[]".encodeToByteArray()) else throw java.io.IOException("lost")
++        }
++        val failure = assertFailsWith<SpoolmanSyncException> { client.syncProfile("http://localhost:7912", record, null) }
++        assertTrue(failure.outcomeUnknown)
++        assertEquals(2, calls)
++    }
++
++    @Test fun invalidServerIsRejectedBeforeNetworkUse() {
++        var called = false
++        val client = SpoolmanSyncClient { _,_,_ -> called = true; error("unexpected") }
++        assertFailsWith<SpoolmanSyncException> { client.syncProfile("ftp://user:pass@example.test/x", record, null) }
++        assertFalse(called)
++    }
++
++    @Test fun cleartextIsLimitedToLocalNetworkAddresses() {
++        val client = SpoolmanSyncClient { _,_,_ -> error("unexpected") }
++        assertFailsWith<SpoolmanSyncException> { client.syncProfile("http://example.test:7912", record, null) }
++        assertFailsWith<SpoolmanSyncException> { client.syncProfile("http://8.8.8.8:7912", record, null) }
++        assertFailsWith<SpoolmanSyncException> { client.syncProfile("http://spoolman:7912", record, null) }
++        val localAddresses = listOf("http://localhost:7912", "http://spoolman.local:7912", "http://192.168.1.9:7912", "http://10.0.0.2:7912", "http://172.31.0.2:7912", "http://[::1]:7912")
++        localAddresses.forEach { address ->
++            var called = false
++            val local = SpoolmanSyncClient { _,_,_ -> called = true; throw java.io.IOException("stop") }
++            assertFailsWith<SpoolmanSyncException>(address) { local.syncProfile(address, record, null) }
++            assertTrue(called, address)
++        }
++    }
++
++    @Test fun retryAfterLostFilamentCreateReconcilesWithoutDuplicateCreate() {
++        var filamentLookup = 0
++        val methods = mutableListOf<String>()
++        val client = SpoolmanSyncClient { method, url, _ ->
++            methods += method
++            when {
++                url.contains("/vendor?") -> SpoolmanHttpResponse(200, "[{\"id\":3}]".encodeToByteArray())
++                url.contains("/filament?") && filamentLookup++ == 0 -> SpoolmanHttpResponse(200, "[]".encodeToByteArray())
++                url.contains("/filament?") -> SpoolmanHttpResponse(200, "[{\"id\":7}]".encodeToByteArray())
++                method == "POST" -> throw java.io.IOException("response lost after commit")
++                method == "PATCH" -> SpoolmanHttpResponse(200, "{\"id\":7}".encodeToByteArray())
++                else -> error("unexpected $method $url")
++            }
++        }
++        assertTrue(assertFailsWith<SpoolmanSyncException> { client.syncProfile("https://example.test", record, null) }.outcomeUnknown)
++        val recovered = client.syncProfile("https://example.test", record, null)
++        assertEquals(7, recovered.filamentId)
++        assertEquals(1, methods.count { it == "POST" })
++        assertEquals(1, methods.count { it == "PATCH" })
++    }
++}
+diff --git a/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/ExternalTagAdapters.kt b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/ExternalTagAdapters.kt
+new file mode 100644
+index 000000000..6135a4950
+--- /dev/null
++++ b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/ExternalTagAdapters.kt
+@@ -0,0 +1,247 @@
++package net.jamesjennison.filamajignfc.core
++
++import java.math.BigDecimal
++import java.math.BigInteger
++import java.nio.ByteBuffer
++import java.nio.ByteOrder
++import java.nio.charset.CodingErrorAction
++import java.security.MessageDigest
++
++data class ExternalTagFormat(
++    val id: String,
++    val displayName: String,
++    val mimeType: String,
++    val radioTechnology: String,
++    val sourceRevision: String,
++)
++
++object ExternalTagRegistry {
++    val formats = listOf(OpenTag3dV2Adapter.format, OpenPrintTagAdapter.format)
++
++    fun decode(mimeType: String, payload: ByteArray): DecodeResult? = when (mimeType.lowercase()) {
++        OpenTag3dV2Adapter.format.mimeType -> OpenTag3dV2Adapter.decode(payload)
++        OpenPrintTagAdapter.format.mimeType -> OpenPrintTagAdapter.decode(payload)
++        else -> null
++    }
++}
++
++object OpenTag3dV2Adapter {
++    val format = ExternalTagFormat(
++        id = "opentag3d-2.000",
++        displayName = "OpenTag3D 2.000",
++        mimeType = "application/opentag3d",
++        radioTechnology = "NFC-A / NDEF Type 2",
++        sourceRevision = "d0f706896e772663404edab8aa814633ba3c6543",
++    )
++    private const val CORE_SIZE = 0xE0
++
++    fun decode(payload: ByteArray): DecodeResult {
++      return try {
++        if (payload.size < CORE_SIZE) return DecodeResult.Rejected("OpenTag3D payload is shorter than its 224-byte core")
++        val version = uint(payload, 0x00, 2).toInt()
++        val major = version / 1000
++        if (major > 2) return DecodeResult.ReadOnly("OpenTag3D major version ${versionText(version)} is newer than supported 2.000", payload.copyOf())
++        if (major < 1) return DecodeResult.Rejected("Invalid OpenTag3D version ${versionText(version)}")
++
++        val source = "${format.displayName} tag (${format.sourceRevision.take(8)})"
++        val materialBase = text(payload, 0x02, 5).required("material")
++        val modifier = text(payload, 0x07, 5)
++        val brand = text(payload, 0x0C, 16).required("manufacturer")
++        val colorName = text(payload, 0x1C, 32)
++        val primary = rgba(payload, 0x3C, required = true)!!
++        val colors = listOfNotNull(rgba(payload, 0x40), rgba(payload, 0x44), rgba(payload, 0x48))
++        val sku = text(payload, 0x6C, 16).ifBlank { null }
++        val barcode = uint(payload, 0x7C, 6).takeIf { it != BigInteger.ZERO }?.toString()
++        val diameterMicrons = uint(payload, 0x8C, 2).toInt()
++        val mass = uint(payload, 0x9E, 2).toInt()
++        if (diameterMicrons <= 0) throw ValidationException("OpenTag3D diameter is missing")
++        if (mass <= 0) throw ValidationException("OpenTag3D target weight is missing")
++        val material = listOf(materialBase, modifier).filter(String::isNotBlank).joinToString(" ")
++        val nozzleTarget = scaledTemp(payload[0x90])
++        val bedTarget = scaledTemp(payload[0x94])
++        val nozzleMin = scaledTemp(payload[0x91]) ?: nozzleTarget
++        val nozzleMax = scaledTemp(payload[0x92]) ?: nozzleTarget
++        val bedMin = scaledTemp(payload[0x95]) ?: bedTarget
++        val bedMax = scaledTemp(payload[0x96]) ?: bedTarget
++        val tdRaw = payload[0xA7].toInt() and 0xff
++        val record = FilamentRecord(
++            packageId = stableId("opentag3d", payload), variantId = sku, productId = barcode,
++            brand = FieldValue(brand, source), material = FieldValue(material, source), product = FieldValue(modifier, source),
++            colorName = FieldValue(colorName, source), colorHex = FieldValue(primary, source),
++            diameterMm = FieldValue(BigDecimal(diameterMicrons).movePointLeft(3).stripTrailingZeros().toPlainString(), source),
++            nominalMassG = FieldValue(mass, source), nozzleMinC = nozzleMin?.let { FieldValue(it, source) },
++            nozzleMaxC = nozzleMax?.let { FieldValue(it, source) }, bedMinC = bedMin?.let { FieldValue(it, source) },
++            bedMaxC = bedMax?.let { FieldValue(it, source) }, gtin = barcode, sku = sku,
++            sourceRevision = format.sourceRevision, provenance = Provenance.CUSTOM, additionalColors = colors,
++            transmissionDistance = tdRaw.takeIf { it > 0 }?.let { FieldValue(BigDecimal(it).movePointLeft(1).stripTrailingZeros().toPlainString(), source) },
++        )
++        validateRecord(record)
++        val warnings = buildList {
++            if (version > 2000 && major == 2) add("OpenTag3D minor version ${versionText(version)} is newer than supported 2.000; known fields were converted")
++            if (payload.size > CORE_SIZE) add("${payload.size - CORE_SIZE} extension byte(s) remain preserved in the read-only source payload")
++        }
++        DecodeResult.Supported(record.toOpenSpoolValues(), payload.copyOf(), format.displayName, record, warnings)
++      } catch (e: ValidationException) {
++        DecodeResult.Rejected(e.message ?: "Malformed OpenTag3D payload")
++      }
++    }
++
++    private fun scaledTemp(value: Byte): Int? = (value.toInt() and 0xff).takeIf { it > 0 }?.times(5)
++    private fun versionText(version: Int) = "%d.%03d".format(version / 1000, version % 1000)
++    private fun text(data: ByteArray, offset: Int, length: Int): String {
++        val bytes = data.copyOfRange(offset, offset + length).let { b -> b.copyOf(b.indexOf(0).takeIf { it >= 0 } ?: b.size) }
++        return decodeUtf8(bytes).trim()
++    }
++    private fun String.required(name: String) = also { if (isBlank()) throw ValidationException("OpenTag3D $name is missing") }
++    private fun rgba(data: ByteArray, offset: Int, required: Boolean = false): String? {
++        val alpha = data[offset + 3].toInt() and 0xff
++        if (alpha == 0) {
++            if (required) throw ValidationException("OpenTag3D primary color is transparent or missing")
++            return null
++        }
++        return (0..2).joinToString("") { "%02X".format(data[offset + it].toInt() and 0xff) }
++    }
++}
++
++object OpenPrintTagAdapter {
++    val format = ExternalTagFormat(
++        id = "openprinttag-current-read",
++        displayName = "OpenPrintTag",
++        mimeType = "application/vnd.openprinttag",
++        radioTechnology = "NFC-V / ISO 15693",
++        sourceRevision = "7e09cc38df1c8e7824a67f5b1ae93071f52519ad",
++    )
++    private val materialTypes = mapOf(0L to "PLA", 1L to "PETG", 2L to "TPU", 3L to "ABS", 4L to "ASA", 5L to "PC", 6L to "PCTG", 7L to "PP", 8L to "PA6", 9L to "PA11", 10L to "PA12", 11L to "PA66", 12L to "CPE", 13L to "TPE", 14L to "HIPS", 15L to "PHA", 16L to "PET", 17L to "PEI", 18L to "PBT", 19L to "PVB", 20L to "PVA", 21L to "PEKK", 22L to "PEEK", 23L to "BVOH", 24L to "TPC", 25L to "PPS", 26L to "PPSU", 27L to "PVC", 28L to "PEBA", 29L to "PVDF", 30L to "PPA", 31L to "PCL", 32L to "PES", 33L to "PMMA", 34L to "POM", 35L to "PPE", 36L to "PS", 37L to "PSU", 38L to "TPI", 39L to "SBS", 40L to "OBC", 41L to "EVA", 42L to "PA612")
++    private val knownKeys = setOf(0L,1L,2L,3L,4L,5L,6L,7L,8L,9L,10L,11L,13L,14L,15L,16L,17L,18L,19L,20L,21L,22L,23L,24L,27L,28L,29L,30L,31L,32L,33L,34L,35L,36L,37L,38L,39L,40L,41L,42L,43L,44L,45L,46L,47L,48L,49L,50L,51L,52L,53L,54L,55L,56L,57L,58L,59L,60L,61L,62L)
++
++    fun decode(payload: ByteArray): DecodeResult = try {
++        val parser = CborReader(payload)
++        val meta = parser.read() as? Map<*, *> ?: throw ValidationException("OpenPrintTag meta region must be a CBOR map")
++        val mainOffset = (meta[0L] as? Number)?.toInt() ?: parser.offset
++        if (mainOffset !in parser.offset..payload.lastIndex) throw ValidationException("OpenPrintTag main region offset is invalid")
++        parser.offset = mainOffset
++        val main = parser.read() as? Map<*, *> ?: throw ValidationException("OpenPrintTag main region must be a CBOR map")
++        val keyed = main.entries.mapNotNull { (k, v) -> (k as? Number)?.toLong()?.let { it to v } }.toMap()
++        val source = "OpenPrintTag tag (${format.sourceRevision.take(8)})"
++        val brand = keyed.text(11).required("brand_name")
++        val materialName = keyed.text(10)
++        val type = (keyed[9] as? Number)?.toLong()?.let(materialTypes::get).orEmpty()
++        val material = materialName.ifBlank { type }.required("material_name or material_type")
++        val color = (keyed[19] as? ByteArray)?.takeIf { it.size in 3..4 }?.take(3)?.joinToString("") { "%02X".format(it.toInt() and 0xff) } ?: "808080"
++        val diameter = when {
++            keyed[61] is Number -> BigDecimal((keyed[61] as Number).toString()).movePointLeft(3)
++            keyed[30] is Number -> BigDecimal((keyed[30] as Number).toString())
++            else -> BigDecimal("1.75")
++        }.stripTrailingZeros().toPlainString()
++        val mass = number(keyed[17]) ?: number(keyed[16]) ?: 1000
++        val gtin = (keyed[4] as? Number)?.let { numberText(it) }
++        val sku = keyed.text(6).ifBlank { null }
++        val record = FilamentRecord(
++            packageId = stableId("openprinttag", payload), variantId = sku, productId = gtin,
++            brand = FieldValue(brand, source), material = FieldValue(material, source), product = FieldValue(materialName, source),
++            colorName = FieldValue("", source), colorHex = FieldValue(color, source), diameterMm = FieldValue(diameter, source),
++            nominalMassG = FieldValue(mass, source), nozzleMinC = number(keyed[34])?.let { FieldValue(it, source) },
++            nozzleMaxC = number(keyed[35])?.let { FieldValue(it, source) }, bedMinC = number(keyed[37])?.let { FieldValue(it, source) },
++            bedMaxC = number(keyed[38])?.let { FieldValue(it, source) }, gtin = gtin, sku = sku,
++            sourceRevision = format.sourceRevision, provenance = Provenance.CUSTOM,
++            additionalColors = (20L..24L).mapNotNull { key -> (keyed[key] as? ByteArray)?.takeIf { it.size in 3..4 }?.take(3)?.joinToString("") { "%02X".format(it.toInt() and 0xff) } },
++            transmissionDistance = decimal(keyed[27])?.let { FieldValue(it, source) },
++        )
++        validateRecord(record)
++        val unknown = keyed.keys.filter { it !in knownKeys }.sorted()
++        val warnings = buildList {
++            if (61L !in keyed && 30L !in keyed) add("Filament diameter was absent; OpenPrintTag's 1.75 mm default was applied")
++            if (61L in keyed && 30L in keyed) add("Both diameter keys were present; current micrometre key 61 was preferred")
++            if (19L !in keyed) add("Primary color was absent; neutral gray was used for local review")
++            if (unknown.isNotEmpty()) add("Unknown CBOR field key(s) ${unknown.joinToString()} remain preserved in the read-only source payload")
++        }
++        DecodeResult.Supported(record.toOpenSpoolValues(), payload.copyOf(), format.displayName, record, warnings)
++    } catch (e: ValidationException) {
++        DecodeResult.Rejected(e.message ?: "Malformed OpenPrintTag payload")
++    }
++
++    private fun Map<Long, Any?>.text(key: Long) = this[key] as? String ?: ""
++    private fun String.required(name: String) = also { if (isBlank()) throw ValidationException("OpenPrintTag $name is missing") }
++    private fun number(value: Any?): Int? = (value as? Number)?.let { runCatching { BigDecimal(it.toString()).intValueExact() }.getOrNull() }
++    private fun decimal(value: Any?): String? = (value as? Number)?.let { BigDecimal(it.toString()).stripTrailingZeros().toPlainString() }
++    private fun numberText(value: Number) = BigDecimal(value.toString()).stripTrailingZeros().toPlainString()
++}
++
++private fun FilamentRecord.toOpenSpoolValues(): Map<String, JsonValue> = linkedMapOf<String, JsonValue>().apply {
++    put("brand", JsonValue.Str(brand.value)); put("type", JsonValue.Str(material.value)); put("subtype", JsonValue.Str(product.value))
++    put("color_hex", JsonValue.Str(colorHex.value)); put("diameter", JsonValue.Num(diameterMm.value)); put("weight", JsonValue.Num(nominalMassG.value.toString()))
++    nozzleMinC?.let { put("min_temp", JsonValue.Num(it.value.toString())) }; nozzleMaxC?.let { put("max_temp", JsonValue.Num(it.value.toString())) }
++    bedMinC?.let { put("bed_min_temp", JsonValue.Num(it.value.toString())) }; bedMaxC?.let { put("bed_max_temp", JsonValue.Num(it.value.toString())) }
++    transmissionDistance?.let { put("transmission_distance", JsonValue.Num(it.value)) }
++    if (additionalColors.isNotEmpty()) put("additional_color_hexes", JsonValue.Arr(additionalColors.map(JsonValue::Str)))
++}
++
++private fun stableId(prefix: String, bytes: ByteArray): String = "$prefix:" + MessageDigest.getInstance("SHA-256").digest(bytes).take(12).joinToString("") { "%02x".format(it) }
++private fun uint(data: ByteArray, offset: Int, length: Int) = BigInteger(1, data.copyOfRange(offset, offset + length))
++private fun decodeUtf8(bytes: ByteArray): String = try {
++    Charsets.UTF_8.newDecoder().onMalformedInput(CodingErrorAction.REPORT).onUnmappableCharacter(CodingErrorAction.REPORT).decode(ByteBuffer.wrap(bytes)).toString()
++} catch (_: Exception) { throw ValidationException("Tag contains invalid UTF-8") }
++
++internal class CborReader(private val data: ByteArray, private val maxDepth: Int = 16) {
++    var offset: Int = 0
++    fun read(): Any? = value(0)
++    private fun value(depth: Int): Any? {
++        if (depth > maxDepth) fail("CBOR nesting limit exceeded")
++        val initial = byte()
++        val major = initial ushr 5
++        val info = initial and 31
++        return when (major) {
++            0 -> length(info)
++            1 -> -1L - length(info)
++            2 -> byteString(info, depth)
++            3 -> textString(info, depth)
++            4 -> array(info, depth)
++            5 -> map(info, depth)
++            6 -> { length(info); value(depth + 1) }
++            7 -> simple(info)
++            else -> fail("Unsupported CBOR major type")
++        }
++    }
++    private fun byteString(info: Int, depth: Int): ByteArray {
++        if (info != 31) return take(length(info).checkedLength())
++        val chunks = mutableListOf<ByteArray>()
++        while (!breakAhead()) chunks += value(depth + 1) as? ByteArray ?: fail("Indefinite byte string contains a non-byte chunk")
++        return chunks.fold(ByteArray(0)) { a, b -> a + b }
++    }
++    private fun textString(info: Int, depth: Int): String {
++        if (info != 31) return decodeUtf8(take(length(info).checkedLength()))
++        val out = StringBuilder()
++        while (!breakAhead()) out.append(value(depth + 1) as? String ?: fail("Indefinite text string contains a non-text chunk"))
++        return out.toString()
++    }
++    private fun array(info: Int, depth: Int): List<Any?> {
++        val out = mutableListOf<Any?>()
++        if (info == 31) while (!breakAhead()) out += value(depth + 1) else repeat(length(info).checkedLength()) { out += value(depth + 1) }
++        return out
++    }
++    private fun map(info: Int, depth: Int): Map<Any?, Any?> {
++        val out = linkedMapOf<Any?, Any?>()
++        fun pair() { val key = value(depth + 1); if (key in out) fail("Duplicate CBOR map key"); out[key] = value(depth + 1) }
++        if (info == 31) while (!breakAhead()) pair() else repeat(length(info).checkedLength()) { pair() }
++        return out
++    }
++    private fun simple(info: Int): Any? = when (info) {
++        in 0..19 -> info.toLong(); 20 -> false; 21 -> true; 22, 23 -> null
++        24 -> byte().toLong(); 25 -> half(uint16()); 26 -> Float.fromBits(uint32().toInt()).toDouble(); 27 -> Double.fromBits(uint64())
++        31 -> fail("Unexpected CBOR break"); else -> fail("Unsupported CBOR simple value")
++    }
++    private fun half(bits: Int): Double {
++        val sign = if (bits and 0x8000 == 0) 1.0 else -1.0
++        val exp = bits ushr 10 and 0x1f; val frac = bits and 0x3ff
++        return when (exp) { 0 -> sign * Math.scalb(frac.toDouble(), -24); 31 -> if (frac == 0) sign * Double.POSITIVE_INFINITY else Double.NaN; else -> sign * Math.scalb((frac + 1024).toDouble(), exp - 25) }
++    }
++    private fun length(info: Int): Long = when (info) { in 0..23 -> info.toLong(); 24 -> byte().toLong(); 25 -> uint16().toLong(); 26 -> uint32(); 27 -> uint64().also { if (it < 0) fail("CBOR integer exceeds signed range") }; 31 -> fail("Indefinite length is invalid here"); else -> fail("Reserved CBOR additional information") }
++    private fun Long.checkedLength(): Int = takeIf { it in 0..minOf(Int.MAX_VALUE.toLong(), data.size.toLong()) }?.toInt() ?: fail("CBOR length exceeds payload")
++    private fun breakAhead(): Boolean = if (offset < data.size && (data[offset].toInt() and 0xff) == 0xff) { offset++; true } else false
++    private fun take(count: Int): ByteArray { if (offset + count > data.size) fail("Unexpected end of CBOR"); return data.copyOfRange(offset, offset + count).also { offset += count } }
++    private fun byte(): Int { if (offset >= data.size) fail("Unexpected end of CBOR"); return data[offset++].toInt() and 0xff }
++    private fun uint16() = (byte() shl 8) or byte()
++    private fun uint32() = (byte().toLong() shl 24) or (byte().toLong() shl 16) or (byte().toLong() shl 8) or byte().toLong()
++    private fun uint64(): Long { var result = 0L; repeat(8) { result = (result shl 8) or byte().toLong() }; return result }
++    private fun fail(message: String): Nothing = throw ValidationException("$message at offset $offset")
++}
+diff --git a/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/Filament.kt b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/Filament.kt
+index ce9b6e180..9fbfd1ffd 100644
+--- a/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/Filament.kt
++++ b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/Filament.kt
+@@ -47,7 +47,13 @@ class OpenSpoolIntent(
+ }
+
+ sealed interface DecodeResult {
+-    data class Supported(val values: Map<String, JsonValue>, val raw: ByteArray) : DecodeResult
++    data class Supported(
++        val values: Map<String, JsonValue>,
++        val raw: ByteArray,
++        val formatName: String = "OpenSpool",
++        val convertedRecord: FilamentRecord? = null,
++        val warnings: List<String> = emptyList(),
++    ) : DecodeResult
+     data class ReadOnly(val reason: String, val raw: ByteArray) : DecodeResult
+     data class Rejected(val reason: String) : DecodeResult
+ }
+diff --git a/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/SpoolmanCodec.kt b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/SpoolmanCodec.kt
+new file mode 100644
+index 000000000..5ca7929af
+--- /dev/null
++++ b/core/src/main/kotlin/net/jamesjennison/filamajignfc/core/SpoolmanCodec.kt
+@@ -0,0 +1,158 @@
++package net.jamesjennison.filamajignfc.core
++
++import java.math.BigDecimal
++import java.security.MessageDigest
++
++const val SPOOLMAN_SOURCE_REVISION = "81636f253ecd6ac76fcfe5d13fe2cbb417095823"
++
++data class SpoolmanImport(
++    val filament: FilamentRecord,
++    val spoolmanFilamentId: Int?,
++    val spoolmanSpoolId: Int?,
++    val initialQuantityG: Int,
++    val remainingQuantityG: Int?,
++    val warnings: List<String>,
++)
++
++data class SpoolmanSyncRequests(
++    val vendorJson: ByteArray,
++    val filamentJson: ByteArray,
++    val spoolJson: (filamentId: Int) -> ByteArray,
++    val warnings: List<String>,
++)
++
++object SpoolmanCodec {
++    fun encodeExport(record: FilamentRecord, initialQuantityG: Int = record.nominalMassG.value, remainingQuantityG: Int? = null): ByteArray {
++        validateRecord(record)
++        if (remainingQuantityG != null && remainingQuantityG !in 0..initialQuantityG) throw ValidationException("Remaining quantity must be between zero and initial quantity")
++        val values = linkedMapOf<String, Any?>(
++            "filament.name" to listOf(record.product.value, record.colorName.value).filter(String::isNotBlank).joinToString(" — ").ifBlank { record.material.value },
++            "filament.vendor.name" to record.brand.value, "filament.vendor.external_id" to "filamajig:${record.brand.value}",
++            "filament.material" to record.material.value, "filament.diameter" to record.diameterMm.value.toBigDecimal(), "filament.weight" to record.nominalMassG.value,
++            "filament.article_number" to (record.sku ?: record.gtin), "filament.settings_extruder_temp" to record.nozzleMaxC?.value,
++            "filament.settings_bed_temp" to record.bedMaxC?.value, "filament.color_hex" to normalizeHex(record.colorHex.value).takeIf { record.additionalColors.isEmpty() },
++            "filament.multi_color_hexes" to record.additionalColors.takeIf { it.isNotEmpty() }?.joinToString(",") { normalizeHex(it) },
++            "filament.external_id" to "filamajig:${record.packageId}", "initial_weight" to initialQuantityG, "remaining_weight" to remainingQuantityG,
++        )
++        return json(listOf(values)).encodeToByteArray()
++    }
++
++    fun decodeExport(bytes: ByteArray): List<SpoolmanImport> {
++        val root = try { StrictJson(2_000_000, 24).parse(bytes) } catch (e: Exception) { throw ValidationException("Invalid Spoolman JSON: ${e.message}") }
++        val objects = when (root) {
++            is JsonValue.Arr -> root.values.mapIndexed { index, value -> value as? JsonValue.Obj ?: throw ValidationException("Spoolman item $index must be an object") }
++            is JsonValue.Obj -> listOf(root)
++            else -> throw ValidationException("Spoolman export must be a JSON object or array")
++        }
++        if (objects.isEmpty()) throw ValidationException("Spoolman export contains no records")
++        return objects.mapIndexed { index, obj -> decodeItem(obj, index) }
++    }
++
++    fun syncRequests(record: FilamentRecord, initialQuantityG: Int = record.nominalMassG.value, remainingQuantityG: Int? = null, density: String? = null): SpoolmanSyncRequests {
++        validateRecord(record)
++        if (remainingQuantityG != null && remainingQuantityG !in 0..initialQuantityG) throw ValidationException("Remaining quantity must be between zero and initial quantity")
++        val normalizedDensity = density?.toBigDecimalOrNull()?.takeIf { it > BigDecimal.ZERO }
++        val inferredDensity = normalizedDensity ?: materialDensity(record.material.value)
++        val warnings = buildList {
++            if (normalizedDensity == null) add("Spoolman requires density; ${inferredDensity.stripTrailingZeros().toPlainString()} g/cm3 was inferred from material and must be reviewed")
++            add("Generated requests do not update a server until the user explicitly runs a sync")
++        }
++        val vendor = linkedMapOf<String, Any?>("name" to record.brand.value, "external_id" to "filamajig:${record.brand.value}")
++        fun filament(vendorId: Int?) = linkedMapOf<String, Any?>(
++            "name" to listOf(record.product.value, record.colorName.value).filter(String::isNotBlank).joinToString(" — ").ifBlank { record.material.value },
++            "vendor_id" to vendorId, "material" to record.material.value, "density" to inferredDensity,
++            "diameter" to record.diameterMm.value.toBigDecimal(), "weight" to record.nominalMassG.value,
++            "article_number" to (record.sku ?: record.gtin), "settings_extruder_temp" to record.nozzleMaxC?.value,
++            "settings_bed_temp" to record.bedMaxC?.value, "color_hex" to normalizeHex(record.colorHex.value).takeIf { record.additionalColors.isEmpty() },
++            "multi_color_hexes" to record.additionalColors.takeIf { it.isNotEmpty() }?.joinToString(",") { normalizeHex(it) },
++            "multi_color_direction" to record.additionalColors.takeIf { it.isNotEmpty() }?.let { "longitudinal" },
++            "external_id" to "filamajig:${record.packageId}",
++        )
++        val spool: (Int) -> ByteArray = { filamentId -> json(linkedMapOf("filament_id" to filamentId, "initial_weight" to initialQuantityG, "remaining_weight" to remainingQuantityG)).encodeToByteArray() }
++        return SpoolmanSyncRequests(json(vendor).encodeToByteArray(), json(filament(null)).encodeToByteArray(), spool, warnings)
++    }
++
++    fun filamentRequest(record: FilamentRecord, vendorId: Int, density: String? = null): ByteArray {
++        val request = syncRequests(record, density = density)
++        val obj = StrictJson().parse(request.filamentJson) as JsonValue.Obj
++        val values = obj.values.toMutableMap()
++        values["vendor_id"] = JsonValue.Num(vendorId.toString())
++        return jsonValue(JsonValue.Obj(LinkedHashMap(values))).encodeToByteArray()
++    }
++
++    private fun decodeItem(obj: JsonValue.Obj, index: Int): SpoolmanImport {
++        val nestedFilament = obj.values["filament"] as? JsonValue.Obj
++        val flatSpool = obj.values.keys.any { it.startsWith("filament.") }
++        val filament = nestedFilament ?: if (flatSpool) obj.unprefix("filament.") else obj
++        val vendor = (filament.values["vendor"] as? JsonValue.Obj) ?: if (flatSpool || filament.values.keys.any { it.startsWith("vendor.") }) filament.unprefix("vendor.") else null
++        val source = "Spoolman JSON export (${SPOOLMAN_SOURCE_REVISION.take(8)})"
++        val brand = vendor?.string("name").orEmpty().ifBlank { "Unknown vendor" }
++        val material = filament.string("material").orEmpty().ifBlank { throw ValidationException("Spoolman item $index has no material") }
++        val name = filament.string("name").orEmpty()
++        val colors = filament.string("multi_color_hexes").orEmpty().split(',').map(String::trim).filter(String::isNotBlank)
++        val primary = filament.string("color_hex").orEmpty().take(6).ifBlank { colors.firstOrNull()?.take(6) ?: "808080" }
++        val diameter = filament.number("diameter")?.stripTrailingZeros()?.toPlainString() ?: "1.75"
++        val mass = filament.number("weight")?.intExact() ?: 1000
++        val filamentId = filament.int("id")
++        val isSpool = nestedFilament != null || flatSpool
++        val spoolId = if (isSpool) obj.int("id") else null
++        val initial = obj.number("initial_weight")?.intExact() ?: mass
++        val remaining = obj.number("remaining_weight")?.intExact()
++        val article = filament.string("article_number")
++        val record = FilamentRecord(
++            packageId = "spoolman:" + (spoolId?.toString() ?: filamentId?.toString() ?: digest(obj)),
++            variantId = filamentId?.toString(), productId = spoolId?.toString(), brand = FieldValue(brand, source),
++            material = FieldValue(material, source), product = FieldValue(name, source), colorName = FieldValue(name, source),
++            colorHex = FieldValue(primary, source), diameterMm = FieldValue(diameter, source), nominalMassG = FieldValue(mass, source),
++            nozzleMinC = filament.int("settings_extruder_temp")?.let { FieldValue(it, source) },
++            nozzleMaxC = filament.int("settings_extruder_temp")?.let { FieldValue(it, source) },
++            bedMinC = filament.int("settings_bed_temp")?.let { FieldValue(it, source) },
++            bedMaxC = filament.int("settings_bed_temp")?.let { FieldValue(it, source) },
++            gtin = article?.filter(Char::isDigit)?.takeIf { it.length in setOf(8,12,13,14) }, sku = article,
++            sourceRevision = SPOOLMAN_SOURCE_REVISION, provenance = Provenance.CUSTOM,
++            additionalColors = colors.drop(if (filament.string("color_hex").isNullOrBlank()) 1 else 0).map { it.take(6) },
++        )
++        validateRecord(record)
++        val warnings = buildList {
++            if (vendor == null) add("Vendor was absent; review the placeholder brand")
++            if (filament.string("color_hex").isNullOrBlank() && colors.isEmpty()) add("Color was absent; neutral gray was used for local review")
++            if (filament.values["diameter"] == null) add("Diameter was absent; Filamajig's 1.75 mm default was applied")
++            if (filament.values["weight"] == null) add("Weight was absent; Filamajig's 1000 g default was applied")
++            if (isSpool) add("Spoolman physical spool ${spoolId ?: "unknown"} was imported separately from filament type ${filamentId ?: "unknown"}")
++        }
++        return SpoolmanImport(record, filamentId, spoolId, initial, remaining, warnings)
++    }
++
++    private fun JsonValue.Obj.number(key: String) = when (val v = values[key]) { is JsonValue.Num -> v.lexical.toBigDecimalOrNull(); else -> null }
++    private fun JsonValue.Obj.unprefix(prefix: String) = JsonValue.Obj(LinkedHashMap(values.filterKeys { it.startsWith(prefix) }.mapKeys { it.key.removePrefix(prefix) }))
++    private fun BigDecimal.intExact() = runCatching { intValueExact() }.getOrElse { throw ValidationException("Spoolman weight must be a whole number of grams") }
++    private fun materialDensity(material: String): BigDecimal = when {
++        "PETG" in material.uppercase() -> BigDecimal("1.27")
++        "ABS" in material.uppercase() -> BigDecimal("1.04")
++        "ASA" in material.uppercase() -> BigDecimal("1.07")
++        "TPU" in material.uppercase() -> BigDecimal("1.21")
++        "PLA" in material.uppercase() -> BigDecimal("1.24")
++        else -> throw ValidationException("Spoolman sync requires a reviewed density for material '$material'")
++    }
++    private fun digest(obj: JsonValue.Obj) = MessageDigest.getInstance("SHA-256").digest(jsonValue(obj).encodeToByteArray()).take(8).joinToString("") { "%02x".format(it) }
++}
++
++private fun json(value: Any?): String = when (value) {
++    null -> "null"
++    is String -> jsonString(value)
++    is BigDecimal -> value.stripTrailingZeros().toPlainString()
++    is Number, is Boolean -> value.toString()
++    is Map<*, *> -> value.entries.filter { it.value != null }.joinToString(",", "{", "}") { jsonString(it.key.toString()) + ":" + json(it.value) }
++    is Iterable<*> -> value.joinToString(",", "[", "]") { json(it) }
++    else -> throw ValidationException("Unsupported Spoolman JSON value")
++}
++private fun jsonValue(value: JsonValue): String = when (value) {
++    is JsonValue.Obj -> value.values.entries.joinToString(",", "{", "}") { jsonString(it.key) + ":" + jsonValue(it.value) }
++    is JsonValue.Arr -> value.values.joinToString(",", "[", "]", transform = ::jsonValue)
++    is JsonValue.Str -> jsonString(value.value); is JsonValue.Num -> value.lexical
++    is JsonValue.Bool -> value.value.toString(); JsonValue.Null -> "null"
++}
++private fun jsonString(value: String) = buildString { append('"'); value.forEach { c -> when (c) {
++    '"' -> append("\\\""); '\\' -> append("\\\\"); '\b' -> append("\\b"); '\u000C' -> append("\\f")
++    '\n' -> append("\\n"); '\r' -> append("\\r"); '\t' -> append("\\t"); else -> if (c.code < 0x20) append("\\u%04x".format(c.code)) else append(c)
++} }; append('"') }
+diff --git a/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/ExternalTagAdaptersTest.kt b/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/ExternalTagAdaptersTest.kt
+new file mode 100644
+index 000000000..9244af708
+--- /dev/null
++++ b/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/ExternalTagAdaptersTest.kt
+@@ -0,0 +1,103 @@
++package net.jamesjennison.filamajignfc.core
++
++import java.io.ByteArrayOutputStream
++import kotlin.test.*
++
++class ExternalTagAdaptersTest {
++    @Test fun `decodes official OpenPrintTag fixture and applies documented diameter fallback`() {
++        val payload = checkNotNull(javaClass.getResourceAsStream("/external/openprinttag-01-payload.bin")).readBytes()
++        val decoded = OpenPrintTagAdapter.decode(payload) as DecodeResult.Supported
++        val record = assertNotNull(decoded.convertedRecord)
++        assertEquals("Prusament", record.brand.value)
++        assertEquals("PLA Prusa Galaxy Black", record.material.value)
++        assertEquals("3D3E3D", record.colorHex.value)
++        assertEquals("1.75", record.diameterMm.value)
++        assertEquals(1012, record.nominalMassG.value)
++        assertEquals(205, record.nozzleMinC?.value)
++        assertEquals(225, record.nozzleMaxC?.value)
++        assertEquals(40, record.bedMinC?.value)
++        assertEquals(60, record.bedMaxC?.value)
++        assertEquals("8594173675001", record.gtin)
++        assertTrue(decoded.warnings.any { "1.75 mm default" in it })
++        assertContentEquals(payload, decoded.raw)
++    }
++
++    @Test fun `decodes current OPT diameter and preserves unknown fields as a warning`() {
++        val main = cborMap(linkedMapOf(
++            9L to 1L, 10L to "PETG Basic", 11L to "Example", 16L to 1000L,
++            19L to byteArrayOf(1, 2, 3, -1), 27L to 2.7, 34L to 230L, 35L to 250L,
++            37L to 70L, 38L to 90L, 61L to 2850L, 99L to "future",
++        ), indefinite = true)
++        val payload = cborMap(emptyMap()) + main
++        val decoded = OpenPrintTagAdapter.decode(payload) as DecodeResult.Supported
++        val record = assertNotNull(decoded.convertedRecord)
++        assertEquals("2.85", record.diameterMm.value)
++        assertEquals("010203", record.colorHex.value)
++        assertEquals("2.7", record.transmissionDistance?.value)
++        assertTrue(decoded.warnings.any { "99" in it })
++    }
++
++    @Test fun `rejects truncated and malformed OPT payloads`() {
++        assertIs<DecodeResult.Rejected>(OpenPrintTagAdapter.decode(byteArrayOf()))
++        assertIs<DecodeResult.Rejected>(OpenPrintTagAdapter.decode(byteArrayOf(0xa1.toByte(), 0x00)))
++    }
++
++    @Test fun `decodes OpenTag3D version 2 core`() {
++        val payload = ByteArray(224)
++        putUInt(payload, 0x00, 2, 2000)
++        putText(payload, 0x02, 5, "PLA")
++        putText(payload, 0x07, 5, "Basic")
++        putText(payload, 0x0C, 16, "Anycubic")
++        putText(payload, 0x1C, 32, "Magenta")
++        payload[0x3C] = 0xCE.toByte(); payload[0x3D] = 0x4F; payload[0x3E] = 0x80.toByte(); payload[0x3F] = 0xFF.toByte()
++        putText(payload, 0x6C, 16, "AHPLMG-107")
++        putUInt(payload, 0x7C, 6, 6938936700173)
++        putUInt(payload, 0x8C, 2, 1750)
++        payload[0x91] = 38; payload[0x92] = 46; payload[0x95] = 11; payload[0x96] = 13
++        putUInt(payload, 0x9E, 2, 1000)
++        payload[0xA7] = 27
++
++        val decoded = OpenTag3dV2Adapter.decode(payload) as DecodeResult.Supported
++        val record = assertNotNull(decoded.convertedRecord)
++        assertEquals("Anycubic", record.brand.value)
++        assertEquals("PLA Basic", record.material.value)
++        assertEquals("CE4F80", record.colorHex.value)
++        assertEquals("1.75", record.diameterMm.value)
++        assertEquals(190, record.nozzleMinC?.value)
++        assertEquals(230, record.nozzleMaxC?.value)
++        assertEquals("2.7", record.transmissionDistance?.value)
++        assertEquals("6938936700173", record.gtin)
++    }
++
++    @Test fun `new OpenTag3D major is retained read-only and truncation is rejected`() {
++        val future = ByteArray(224).also { putUInt(it, 0, 2, 3000) }
++        assertIs<DecodeResult.ReadOnly>(OpenTag3dV2Adapter.decode(future))
++        assertIs<DecodeResult.Rejected>(OpenTag3dV2Adapter.decode(ByteArray(223)))
++    }
++
++    private fun putText(out: ByteArray, offset: Int, length: Int, value: String) = value.encodeToByteArray().take(length).forEachIndexed { i, b -> out[offset + i] = b }
++    private fun putUInt(out: ByteArray, offset: Int, length: Int, value: Long) { repeat(length) { i -> out[offset + length - 1 - i] = (value ushr (i * 8)).toByte() } }
++
++    private fun cborMap(values: Map<Long, Any?>, indefinite: Boolean = false): ByteArray {
++        val out = ByteArrayOutputStream()
++        if (indefinite) out.write(0xbf) else head(out, 5, values.size.toLong())
++        values.forEach { (key, value) -> head(out, 0, key); writeValue(out, value) }
++        if (indefinite) out.write(0xff)
++        return out.toByteArray()
++    }
++    private fun writeValue(out: ByteArrayOutputStream, value: Any?) = when (value) {
++        is Long -> head(out, 0, value)
++        is String -> { val bytes = value.encodeToByteArray(); head(out, 3, bytes.size.toLong()); out.write(bytes) }
++        is ByteArray -> { head(out, 2, value.size.toLong()); out.write(value) }
++        is Double -> { out.write(0xfb); val bits = value.toBits(); repeat(8) { i -> out.write((bits ushr (56 - i * 8)).toInt()) } }
++        else -> error("unsupported fixture value")
++    }
++    private fun head(out: ByteArrayOutputStream, major: Int, value: Long) {
++        when {
++            value < 24 -> out.write((major shl 5) or value.toInt())
++            value <= 0xff -> { out.write((major shl 5) or 24); out.write(value.toInt()) }
++            value <= 0xffff -> { out.write((major shl 5) or 25); out.write((value ushr 8).toInt()); out.write(value.toInt()) }
++            else -> { out.write((major shl 5) or 27); repeat(8) { i -> out.write((value ushr (56 - i * 8)).toInt()) } }
++        }
++    }
++}
+diff --git a/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/SpoolmanCodecTest.kt b/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/SpoolmanCodecTest.kt
+new file mode 100644
+index 000000000..31047c6ff
+--- /dev/null
++++ b/core/src/test/kotlin/net/jamesjennison/filamajignfc/core/SpoolmanCodecTest.kt
+@@ -0,0 +1,53 @@
++package net.jamesjennison.filamajignfc.core
++
++import kotlin.test.*
++
++class SpoolmanCodecTest {
++    @Test fun `imports official Spoolman spool export shape with provenance`() {
++        val json = """[{"id":42,"initial_weight":1000,"remaining_weight":625,
++          "filament.id":7,"filament.name":"PolyLite Orange","filament.vendor.id":3,"filament.vendor.name":"Polymaker",
++          "filament.material":"PLA","filament.density":1.24,"filament.diameter":1.75,"filament.weight":1000,
++          "filament.article_number":"6938936700173","filament.settings_extruder_temp":220,"filament.settings_bed_temp":60,
++          "filament.color_hex":"FF8E24","used_weight":375,"archived":false}]""".encodeToByteArray()
++        val imported = SpoolmanCodec.decodeExport(json).single()
++        assertEquals(42, imported.spoolmanSpoolId)
++        assertEquals(7, imported.spoolmanFilamentId)
++        assertEquals(625, imported.remainingQuantityG)
++        assertEquals("Polymaker", imported.filament.brand.value)
++        assertEquals("PLA", imported.filament.material.value)
++        assertEquals("FF8E24", imported.filament.colorHex.value)
++        assertEquals("6938936700173", imported.filament.gtin)
++        assertTrue(imported.filament.brand.source.startsWith("Spoolman JSON export"))
++    }
++
++    @Test fun `imports filament-only export and marks safe review defaults`() {
++        val imported = SpoolmanCodec.decodeExport("""[{"id":8,"name":"Mystery","material":"PETG","vendor":null,"density":1.27}]""".encodeToByteArray()).single()
++        assertEquals("Unknown vendor", imported.filament.brand.value)
++        assertEquals("1.75", imported.filament.diameterMm.value)
++        assertEquals(1000, imported.filament.nominalMassG.value)
++        assertTrue(imported.warnings.any { "Vendor" in it })
++        assertTrue(imported.warnings.any { "Diameter" in it })
++    }
++
++    @Test fun `builds reviewed Spoolman create requests without performing sync`() {
++        val source = "test"
++        val record = FilamentRecord("local-1", null, null, FieldValue("SUNLU",source),FieldValue("PLA",source),FieldValue("Meta",source),FieldValue("Orange",source),FieldValue("FF8E24",source),FieldValue("1.75",source),FieldValue(1000,source),FieldValue(200,source),FieldValue(220,source),FieldValue(55,source),FieldValue(65,source),"6938936700173","PLA-ORANGE","test",Provenance.CUSTOM)
++        val requests = SpoolmanCodec.syncRequests(record, remainingQuantityG = 900)
++        assertTrue(requests.vendorJson.decodeToString().contains("\"name\":\"SUNLU\""))
++        val filament = requests.filamentJson.decodeToString()
++        assertTrue(filament.contains("\"density\":1.24"))
++        assertFalse(filament.contains("vendor_id"))
++        assertTrue(requests.spoolJson(12).decodeToString().contains("\"filament_id\":12"))
++        assertTrue(requests.warnings.any { "reviewed" in it })
++        val withVendor = SpoolmanCodec.filamentRequest(record, 9).decodeToString()
++        assertTrue(withVendor.contains("\"vendor_id\":9"))
++    }
++
++    @Test fun `rejects unsupported density inference and invalid exports`() {
++        val source = "test"
++        val record = FilamentRecord("local-2",null,null,FieldValue("Brand",source),FieldValue("PEEK",source),FieldValue("",source),FieldValue("Black",source),FieldValue("000000",source),FieldValue("1.75",source),FieldValue(1000,source),null,null,null,null,null,null,"test",Provenance.CUSTOM)
++        assertFailsWith<ValidationException> { SpoolmanCodec.syncRequests(record) }
++        assertFailsWith<ValidationException> { SpoolmanCodec.decodeExport("[]".encodeToByteArray()) }
++        assertFailsWith<ValidationException> { SpoolmanCodec.decodeExport("not json".encodeToByteArray()) }
++    }
++}
+diff --git a/core/src/test/resources/external/README.md b/core/src/test/resources/external/README.md
+new file mode 100644
+index 000000000..062ecd500
+--- /dev/null
++++ b/core/src/test/resources/external/README.md
+@@ -0,0 +1,6 @@
++# External tag fixtures
++
++`openprinttag-01-payload.bin` is the NDEF MIME payload reconstructed byte-for-byte from `tests/encode_decode/01_info.yaml` in the official OpenPrintTag specification at revision `7e09cc38df1c8e7824a67f5b1ae93071f52519ad`.
++
++Source: https://github.com/OpenPrintTag/openprinttag-specification
++License: Apache-2.0 (see the upstream repository).
+diff --git a/core/src/test/resources/external/openprinttag-01-payload.bin b/core/src/test/resources/external/openprinttag-01-payload.bin
+new file mode 100644
+index 0000000000000000000000000000000000000000..96735eb5c39f2ebd29211ee2fc22bc3a89c084ab
+GIT binary patch
+literal 245
+zcmZ3;Bynj!i!=iR`-MNNU4OD>85^4<o0_B<SXgi{a58X}1^75B1QeAPCn~rn<|I~B
+zDmdjNCTDYJg2i%E^Gf)nGA<v#E+EPLLQs<Vi;yIvgs_XPo$Y@Knfc=XC1iive3MX;
+zI4hwn@lZlVVwHrdgocEggpGu{5RjoEp(!GvCE*~UEpb9ZM<PW+SHeWXVm<@oe+lbm
+m38P<*CTGt6a%S{7D`AsqWNx5fY@lFd@Sg!MSb$d+EC~P{n>HT+
+
+literal 0
+HcmV?d00001
+
+diff --git a/docs/OPEN_ECOSYSTEM_ADAPTERS.md b/docs/OPEN_ECOSYSTEM_ADAPTERS.md
+new file mode 100644
+index 000000000..82dc04581
+--- /dev/null
++++ b/docs/OPEN_ECOSYSTEM_ADAPTERS.md
+@@ -0,0 +1,42 @@
++# Open ecosystem adapters
++
++Filamajig NFC 0.5.0-m5 reads external tag formats before offering any conversion. The original NDEF payload is retained in memory for the read result, known fields receive a source string tied to an upstream revision, and conversion always opens the normal local-record review dialog. External tags are never rewritten by these adapters.
++
++## Compatibility matrix
++
++| Format | Radio / NDEF | Detect | Decode | Convert to local | Write | Fresh verify | Physical evidence in M5 |
++|---|---|---:|---:|---:|---:|---:|---|
++| OpenSpool 1.0 | NFC-A / NDEF Type 2, `application/json` | Yes | Yes | Yes | Yes | Yes | Existing NTAG215 acceptance |
++| PAXX U1 Extended | NFC-A / NDEF Type 2, `application/json` | Yes | Yes | Yes | Yes | Yes | Existing NTAG215 and U1 Bay 1 acceptance |
++| OpenTag3D 2.000 | NFC-A / NDEF Type 2, `application/opentag3d` | Yes | Yes | Yes | No | Not applicable | Decoder/Android NDEF tests; no physical OpenTag3D tag supplied |
++| OpenPrintTag current | NFC-V / ISO 15693 NDEF, `application/vnd.openprinttag` | Yes | Yes | Yes | No | Not applicable | Official fixture/Android routing tests; no physical NFC-V tag supplied |
++| Spoolman JSON | File/text JSON | Yes | Yes | Yes | Export only | Round-trip tests | Host tests |
++| Spoolman server | HTTP(S) API v1 | Yes | Yes | Profile sync | Vendor/profile create or profile update | Response plus stable-ID lookup | Mock transport tests; no server URL supplied |
++
++A lack of physical OpenTag3D or OpenPrintTag evidence is not reported as hardware compatibility. Android reader mode enables both `FLAG_READER_NFC_A` and `FLAG_READER_NFC_V`; a real tag remains the acceptance gate for each radio path.
++
++## OpenTag3D
++
++The adapter is pinned to OpenTag3D revision `d0f706896e772663404edab8aa814633ba3c6543`, format 2.000. It decodes the 224-byte core as unsigned big-endian fields, including manufacturer, material and modifier, four RGBA colors, SKU, six-byte barcode, diameter in micrometres, target weight, temperature values scaled by five, and HueForge transmission distance scaled by one tenth. A newer major version remains read-only. Known fields from a newer 2.x minor version can be converted with a warning, while extension bytes remain preserved in the source payload.
++
++Source: <https://github.com/GooborgStudios/OpenTag3D> and <https://opentag3d.info/spec.html>
++
++## OpenPrintTag
++
++The adapter is pinned to specification revision `7e09cc38df1c8e7824a67f5b1ae93071f52519ad`. It uses a bounded CBOR reader, honors the meta-region main offset, supports definite and indefinite containers, skips unknown values, and reports unknown numeric field keys while retaining the complete payload. Diameter key 61 is interpreted in micrometres. Removed legacy key 30 is accepted in millimetres for old tags; if both are present, key 61 wins with a warning. If neither exists, the specification's 1.75 mm default is applied. Actual net weight falls back to nominal net weight, and missing local-only values are surfaced for review rather than written back.
++
++The test corpus includes the exact 245-byte payload reconstructed from the official `tests/encode_decode/01_info.yaml` fixture. Its Apache-2.0 attribution is recorded beside the fixture.
++
++Source: <https://github.com/OpenPrintTag/openprinttag-specification>
++
++## Spoolman
++
++Filamajig accepts the official flattened JSON export shapes from `/api/v1/export/spools?fmt=json` and `/api/v1/export/filaments?fmt=json`, including keys such as `filament.vendor.name`. It also accepts nested Spoolman API response objects. A spool import keeps separate Spoolman spool and filament IDs, initial and remaining weights, vendor data, and a revision-bound field source. Each record is reviewed before local save. Local records can be shared in the same flattened spool-export shape.
++
++Live sync is intentionally profile-scoped. It looks up vendor and filament records using stable `filamajig:` external IDs, creates missing records, and updates an existing filament instead of duplicating it. Spoolman's filament create contract requires density, so Filamajig either uses the reviewed value entered for the sync or shows the standard material value it inferred. A transport interruption after POST/PATCH produces an unknown outcome and is never retried automatically. The UI tells the user to run Sync again; the repeated lookup uses the same stable external ID, finds a creation whose response was lost, and updates it instead of issuing a duplicate create.
++
++The current Spoolman spool API has no external-ID field. Filamajig therefore does not create a physical spool during live sync because a lost response could otherwise create a duplicate on retry. Physical spool data remains available through import/export until a durable server-side idempotency key or a persisted explicit mapping is designed and tested.
++
++Local Spoolman commonly uses cleartext HTTP, so the prototype accepts HTTP only for loopback, private/link-local address literals, and reserved `.local` names. Other server names require HTTPS. The app does not collect or embed Spoolman credentials.
++
++Source: <https://github.com/Donkie/Spoolman>, inspected at revision `81636f253ecd6ac76fcfe5d13fe2cbb417095823`.
+diff --git a/docs/ROADMAP.md b/docs/ROADMAP.md
+index 55de86f5c..677e244a7 100644
+--- a/docs/ROADMAP.md
++++ b/docs/ROADMAP.md
+@@ -102,6 +102,8 @@ Completed with an explicit Standard OpenSpool/PAXX codec registry; exact include
+
+ Add read/convert support before write support for OpenPrintTag and OpenTag3D, then Spoolman import/export/sync. Acceptance is format-specific and separates radio hardware, read, write, verify and conversion. No printer control.
+
++Implemented in 0.5.0-m5 with revision-pinned, read-only OpenTag3D 2.000 and OpenPrintTag adapters; NFC-A/NFC-V Android routing; loss-aware local conversion; official OpenPrintTag fixture coverage; Spoolman spool/filament JSON import and export; and stable-external-ID live vendor/profile sync with no automatic retry after an uncertain mutation. Physical OpenTag3D and NFC-V reads remain format-specific hardware acceptance gates because no such tags were supplied. External-format writing remains intentionally unsupported. See [`OPEN_ECOSYSTEM_ADAPTERS.md`](OPEN_ECOSYSTEM_ADAPTERS.md).
++
+ ### M6 — Identification and UX hardening
+
+ Refine the existing one-photo AI and retail-code paths, landscape/task restoration, latency transition, accessibility, bulk entry and one-minute workflow benchmarks. AI remains optional. Acceptance: real-device rotations, interruptions, network failure, obscure/manual filament, and side-by-side workflow timing.
+@@ -118,4 +120,4 @@ Refine the existing one-photo AI and retail-code paths, landscape/task restorati
+ | Label/QR prototype | M3 | Completed with versioned offline identity and configurable rendering |
+ | Amazon/Icecat trials | None | Research retained; product dependency removed |
+
+-The next coherent milestone is **M5 open ecosystem adapters**: read and conversion support for OpenPrintTag and OpenTag3D, followed by Spoolman interoperability.
++The next coherent milestone is **M6 identification and UX hardening**: real-device rotation, interruption, network-failure and workflow-time acceptance for the optional AI and retail-code paths.
+diff --git a/research/sources/opentag3d-index.json b/research/sources/opentag3d-index.json
+new file mode 100644
+index 000000000..ef1f2c76e
+--- /dev/null
++++ b/research/sources/opentag3d-index.json
+@@ -0,0 +1,9 @@
++{
++  "source": "OpenTag3D",
++  "repository": "https://github.com/GooborgStudios/OpenTag3D",
++  "specification": "https://opentag3d.info/spec.html",
++  "revision": "d0f706896e772663404edab8aa814633ba3c6543",
++  "format_version": "2.000",
++  "retrieved_utc": "2026-09-08T06:00:00Z",
++  "usage": "Read-only format contract and test-derived implementation; upstream source is not vendored"
++}
+diff --git a/tools/verify_m5_evidence.py b/tools/verify_m5_evidence.py
+new file mode 100755
+index 000000000..ba2139aec
+--- /dev/null
++++ b/tools/verify_m5_evidence.py
+@@ -0,0 +1,30 @@
++#!/usr/bin/env python3
++import hashlib
++import json
++from pathlib import Path
++
++
++root = Path(__file__).resolve().parents[1]
++evidence = json.loads((root / "work/open-ecosystem-m5/device-acceptance.json").read_text())
++content = json.loads((root / "work/open-ecosystem-m5/data-content-preservation.json").read_text())
++
++assert evidence["milestone"] == "M5 open ecosystem adapters"
++assert evidence["app_version"] == "0.5.0-m5"
++assert evidence["device"] == {"model": "motorola razr 2023", "transport": "wireless-adb", "android_api": 36}
++assert evidence["host"]["python_tests"] == 16
++assert evidence["host"]["core_tests"] == 61
++assert evidence["host"]["app_tests"] == 57
++assert evidence["host"]["lint"] == "PASS"
++assert evidence["device_tests"]["tests"] == 6
++assert evidence["device_tests"]["failures"] == 0
++assert evidence["device_tests"]["external_adapter_test"] == "PASS"
++assert evidence["visible_ui"]["home"] == "PASS"
++assert content["all_tables_identical"] is True
++assert all(table["identical"] for table in content["tables"].values())
++
++app_apk = root / "app/build/outputs/apk/debug/app-debug.apk"
++test_apk = root / "app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk"
++assert hashlib.sha256(app_apk.read_bytes()).hexdigest() == evidence["installed_apk_sha256"]
++assert hashlib.sha256(test_apk.read_bytes()).hexdigest() == evidence["test_apk_sha256"]
++
++print("M5 host, artifact, device adapter, UI, and content-preservation evidence: PASS")
+diff --git a/work/open-ecosystem-m5/change.json b/work/open-ecosystem-m5/change.json
+new file mode 100644
+index 000000000..114bb4a55
+--- /dev/null
++++ b/work/open-ecosystem-m5/change.json
+@@ -0,0 +1,12 @@
++{
++  "change_id": "filamajig-open-ecosystem-m5-20260907",
++  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
++  "summary": "Add revision-pinned read and conversion adapters for OpenTag3D and OpenPrintTag, plus Spoolman JSON import/export and idempotent filament-profile sync.",
++  "classification": "SUBSTANTIVE",
++  "affected_components": ["android", "nfc", "ndef", "cbor", "external-formats", "spoolman", "network", "ui", "documentation"],
++  "required_capabilities": ["architecture", "platform", "adversarial"],
++  "provenance": {
++    "branch": "codex/m1-offline-openspool",
++    "scope": "Local M5 external tag read/conversion and Spoolman interoperability; no external tag writing, printer control, production release, or live server mutation by Codex"
++  }
++}
+diff --git a/work/open-ecosystem-m5/closure-deepseek-response.json b/work/open-ecosystem-m5/closure-deepseek-response.json
+new file mode 100644
+index 000000000..c9f52acdf
+--- /dev/null
++++ b/work/open-ecosystem-m5/closure-deepseek-response.json
+@@ -0,0 +1 @@
++{"response": {"model": "deepseek-v4-pro", "phase": "REMEDIATION_REVIEW", "provider": "deepseek", "response": {"findings": [{"ACCEPTANCE TEST": "Unit/integration test: configure a single-label hostname to resolve to a public IP (e.g., 203.0.113.10) via DNS search suffix; the Spoolman URL validation must reject HTTP for that hostname and require HTTPS.", "AREA": "Spoolman HTTP URL validation / Network security", "CONFIDENCE": "MEDIUM", "CONSEQUENCE": "A user entering a single-label hostname such as 'spoolman' could have cleartext Spoolman credentials/API data sent to a non-local public host if DNS resolution points outside the local network, defeating the non-local cleartext mitigation.", "EVIDENCE": "Remediation states: 'HTTP Spoolman URLs are now accepted only for loopback, private/link-local IPs, .local names, and single-label LAN hostnames; non-local names require HTTPS.' This accepts 'single-label LAN hostnames' based on name shape only. No evidence in the package shows that resolved IP addresses for single-label names are verified before allowing HTTP. The listed host test suites do not include a case where a single-label name resolves to a public IP.", "FINDING": "The HTTP cleartext Spoolman URL policy still allows any single-label hostname without verifying that its resolved IP address is loopback, private, or link-local. Single-label names can resolve via DNS search domains or malicious DNS to public addresses.", "REQUIRED CORRECTION": "Before allowing HTTP for any hostname, resolve it and require every resolved IP address to be loopback/private/link-local; otherwise reject HTTP or require HTTPS. Alternatively remove the single-label exception and allow only IP literals in local ranges or .local mDNS names.", "SEVERITY": "MEDIUM"}]}, "role": "Adversarial Systems Engineer", "status": "COMPLETED", "transport": "deepseek-v4-pro-api"}, "response_sha256": "36414457e7f48fd765bbfee62641b369129d8c25c957c3cce11e80103af10f63", "reviewer": "deepseek", "state": "COMPLETE"}
+diff --git a/work/open-ecosystem-m5/closure-final-deepseek-response.json b/work/open-ecosystem-m5/closure-final-deepseek-response.json
+new file mode 100644
+index 000000000..dd3bd8547
+--- /dev/null
++++ b/work/open-ecosystem-m5/closure-final-deepseek-response.json
+@@ -0,0 +1 @@
++{"response": {"model": "deepseek-v4-pro", "phase": "REMEDIATION_REVIEW", "provider": "deepseek", "response": {"evidence": "The remediation package resolves all CONFIRMED, CONFIRMED WITH NARROWER SCOPE, and ALREADY MITIGATED findings. Evidence includes: removal of the single-label HTTP hostname exception with tests rejecting http://spoolman and permitting only localhost, reserved .local names, and literal loopback/private/link-local addresses; a stateful retry test proving a lost filament-create response followed by retry performs one POST total and updates the discovered stable-ID record without duplicate creation; preservation evidence using canonical ordered-row SHA-256 hashes for all 10 user database tables with identical results across final APK reinstall; UI and documentation explicitly stating live sync does not create a physical spool and import/export retains physical spool quantities and IDs; and objective test/hash evidence showing all device instrumentation tests, host tests, lint, APK assemblies, and external adapter conversion pass. The three external physical/interoperability gates remain explicitly open and are not claimed as passed. No concrete source, artifact, or evidence-consistency defect remains.", "result": "NO FINDINGS"}, "role": "Adversarial Systems Engineer", "status": "COMPLETED", "transport": "deepseek-v4-pro-api"}, "response_sha256": "dd8b058ecfbecabe65e8e7ab0ca8b32648be9a2b1c2863b0c4715254a641c3d2", "reviewer": "deepseek", "state": "COMPLETE"}
+diff --git a/work/open-ecosystem-m5/closure-final-gemini-response.json b/work/open-ecosystem-m5/closure-final-gemini-response.json
+new file mode 100644
+index 000000000..057bb8145
+--- /dev/null
++++ b/work/open-ecosystem-m5/closure-final-gemini-response.json
+@@ -0,0 +1 @@
++{"response": {"model": "gemini-3.6-flash", "phase": "REMEDIATION_REVIEW", "provider": "gemini", "provider_attempts": [{"completed_at": 1788851136.8525238, "model": "gemini-3.6-flash", "route_id": "vertex-ai-global", "started_at": 1788851124.7655487, "state": "READY", "transport": "vertex-ai"}], "response": {"change_id": "filamajig-open-ecosystem-m5-20260907", "evidence": "All identified remediation items in filamajig-open-ecosystem-m5-20260907 have been resolved with concrete evidence. Single-label HTTP hostnames are verified rejected by code, tests, and documentation; cleartext HTTP is restricted strictly to local addresses (.local, localhost, private/loopback/link-local IPs). Stateful mutation retry idempotency with stable IDs is verified by automated tests. User database preservation across final reinstall is verified by canonical ordered-row SHA-256 hashes for all 10 user tables. All 134 host tests, 6 device instrumentation tests on Android API 36, lint checks, and APK assemblies pass. The three unperformed external hardware/server acceptance gates remain explicitly open and are not claimed as passed.", "findings": [], "phase": "REMEDIATION_REVIEW", "result": "NO FINDINGS"}, "role": "Platform & Integration Engineer", "status": "COMPLETED", "transport": "vertex-ai"}, "response_sha256": "b5f83e377f08389fb52616f0d39840247d78f854557367000d62ea211fe0cf4e", "reviewer": "gemini", "state": "COMPLETE"}
+diff --git a/work/open-ecosystem-m5/closure-final-grok-response.json b/work/open-ecosystem-m5/closure-final-grok-response.json
+new file mode 100644
+index 000000000..536b85a32
+--- /dev/null
++++ b/work/open-ecosystem-m5/closure-final-grok-response.json
+@@ -0,0 +1 @@
++{"response": {"model": "grok-4.20", "phase": "REMEDIATION_REVIEW", "provider": "grok", "response": {"review_result": "NO FINDINGS; REMEDIATION_REVIEW; No concrete source, artifact, or evidence-consistency defect remains in supplied evidence set; All prior findings dispositioned as CONFIRMED/RESOLVED (single-label HTTP exception removed with code/test/doc updates per new_finding_disposition and evidence_correction; mutation retry now user-reconcilable with added stateful test; per-table canonical SHA-256 preservation hashes identical across reinstall; HTTP restricted to local addresses/names with unit coverage; live sync docs clarified); objective_evidence confirms 16+61+57 host tests PASS, 6 device instrumentation tests PASS, APK SHA256s listed, content_preservation matches on all 10 tables, visible UI retains required features; known_open_external_gates explicitly listed and unclaimed per objective and closure_question; None; None; Supplied package review (remediation list, dispositions, objective_evidence, review_files); 70"}, "role": "Principal Software Architect", "session_id": "codex-durable-architecture-reviewer", "status": "COMPLETED", "transport": "xai-chat-completions-api"}, "response_sha256": "f52ea347ba7ef4eadd282db0fbb2c2149d7eafd29be1ac447f62fb560740441d", "reviewer": "grok", "state": "COMPLETE"}
+diff --git a/work/open-ecosystem-m5/closure-gemini-response.json b/work/open-ecosystem-m5/closure-gemini-response.json
+new file mode 100644
+index 000000000..cb6049c7a
+--- /dev/null
++++ b/work/open-ecosystem-m5/closure-gemini-response.json
+@@ -0,0 +1 @@
++{"response": {"model": "gemini-3.6-flash", "phase": "REMEDIATION_REVIEW", "provider": "gemini", "provider_attempts": [{"completed_at": 1788850646.4176211, "model": "gemini-3.6-flash", "route_id": "vertex-ai-global", "started_at": 1788850631.6801596, "state": "READY", "transport": "vertex-ai"}], "response": {"change_id": "filamajig-open-ecosystem-m5-20260907", "evidence": {"artifact_verification": "App APK SHA-256 (69012b78c5db8adba84ceea99a33f3b4e68fb343afc4a2997d47820ad3139c91) and Test APK SHA-256 (4c1e2303da57e7db9d8625afe79c6392c05ef85b0dee321716a405fe9524df2c) assembled and passed device execution.", "cleartext_spoolman_remediation": "HTTP Spoolman endpoints are rejected for non-local hostnames, requiring HTTPS except for loopback, private/link-local IPs, .local names, and single-label LAN hostnames, backed by unit test coverage.", "database_preservation": "All 10 user DB tables maintain identical canonical ordered-row SHA-256 content hashes across the final APK reinstall.", "host_and_device_tests": "16 Python tests, 61 core tests, 57 app tests, lint, and 6 instrumentation tests on Motorola Razr 2023 (Android API 36) all PASS.", "open_external_gates": "Physical OpenTag3D tag, physical OpenPrintTag tag, and live Spoolman server integration tests remain explicitly bounded as open external acceptance gates with no ungrounded claims.", "retry_reconciliation_test": "Stateful test confirms a lost filament-create response followed by retry executes exactly 1 POST and updates the discovered stable-ID record without creating duplicates."}, "review_phase": "REMEDIATION_REVIEW", "status": "NO FINDINGS", "summary": "All concrete source and artifact defects identified in prior cycles have been successfully remediated and verified. Non-local Spoolman HTTP communication is restricted to HTTPS while permitting local network classes, stateful retry logic reconciles stable IDs without duplicate mutations, database content preservation is verified via canonical per-table SHA-256 hashes, and UI/documentation accurately specify sync boundaries. Unperformed external hardware and live-server tests remain explicitly documented open scope boundaries."}, "role": "Platform & Integration Engineer", "status": "COMPLETED", "transport": "vertex-ai"}, "response_sha256": "4ba24da68150e85bd6a263d5117788d5a85f678aeae509705c7bc5f41904e9a5", "reviewer": "gemini", "state": "COMPLETE"}
+diff --git a/work/open-ecosystem-m5/closure-grok-response.json b/work/open-ecosystem-m5/closure-grok-response.json
+new file mode 100644
+index 000000000..84808bbcf
+--- /dev/null
++++ b/work/open-ecosystem-m5/closure-grok-response.json
+@@ -0,0 +1 @@
++{"response": {"model": "grok-4.20", "phase": "REMEDIATION_REVIEW", "provider": "grok", "response": {"NO FINDINGS": "All host (16 Py/61 core/57 app tests + lint + APKs), device (6 instrumentation + adapter conversion), and canonical per-table ordered-content hash preservation tests PASS per objective_evidence; final APK SHA-256 values recorded. Remediation items (local-only HTTP Spoolman, stable-ID retry reconciliation with stateful test, ordered-row SHA-256 preservation, UI/doc clarification of physical-spool exclusion) directly close prior findings within scope. Three known_open_external_gates (no physical OpenTag3D/NFC-V tag, no live Spoolman URL) explicitly treated as unperformed boundaries per closure_question and not claimed; no concrete source or artifact defect remains in supplied evidence set.", "closure": "No concrete source or artifact defect remains after these changes within defined scope."}, "role": "Principal Software Architect", "session_id": "codex-durable-architecture-reviewer", "status": "COMPLETED", "transport": "xai-chat-completions-api"}, "response_sha256": "d3b6bf13dfaa01ddd719454f03b62bef90ba9da4be10d0ecf38c15595f0c510e", "reviewer": "grok", "state": "COMPLETE"}
+diff --git a/work/open-ecosystem-m5/closure-review-package.json b/work/open-ecosystem-m5/closure-review-package.json
+new file mode 100644
+index 000000000..6e7da8879
+--- /dev/null
++++ b/work/open-ecosystem-m5/closure-review-package.json
+@@ -0,0 +1,79 @@
++{
++  "phase": "REMEDIATION_REVIEW",
++  "objective": "Verify the final M5 source and artifact after remediation. Determine whether any concrete source defect remains. Physical OpenTag3D/OpenPrintTag radio tests and a live Spoolman server test are separate external acceptance gates and are not claimed as passed.",
++  "change_id": "filamajig-open-ecosystem-m5-20260907",
++  "initial_cycle": "review-cycle-f3f38d19dea1",
++  "owner_requirements": [
++    "Read-first OpenTag3D/OpenPrintTag conversion with provenance and no external tag writing",
++    "Spoolman JSON import/export and profile-only sync",
++    "Preserve NFC write safety, AI scanner, local data, and no printer control"
++  ],
++  "remediation": [
++    "HTTP Spoolman URLs are accepted only for localhost, reserved .local names, and literal loopback/private/link-local IPv4/IPv6 addresses; single-label and other non-local names require HTTPS.",
++    "Unknown mutation outcomes now tell the user to run Sync again for stable-ID reconciliation.",
++    "A stateful test proves a lost filament-create response followed by a retry performs one POST total and updates the discovered stable-ID record without duplicate creation.",
++    "Final APK reinstall preservation now compares canonical ordered-row SHA-256 for every user database table, not counts alone; all tables are identical.",
++    "The UI and documentation already state that live sync excludes physical spool creation; physical spool data remains in import/export.",
++    "Single-label HTTP hostnames are rejected; only local address literals, localhost, and reserved .local names can use cleartext."
++  ],
++  "finding_dispositions": [
++    {
++      "finding": "Physical OpenTag3D/OpenPrintTag interoperability not run",
++      "classification": "CONFIRMED",
++      "result": "External hardware acceptance gate remains open because no formatted OpenTag3D or NFC-V OpenPrintTag tag was supplied. No hardware compatibility claim is made."
++    },
++    {
++      "finding": "Live Spoolman server not run",
++      "classification": "CONFIRMED",
++      "result": "External integration acceptance gate remains open because no server URL was supplied. Mock create, update, error, and reconciliation tests pass; no live-server claim is made."
++    },
++    {
++      "finding": "Unknown mutation may duplicate on retry",
++      "classification": "CONFIRMED WITH NARROWER SCOPE",
++      "result": "Stable external IDs already made user-initiated retry reconcilable. UI recovery wording and a no-duplicate lost-response retry test now make and verify that contract."
++    },
++    {
++      "finding": "Preservation evidence used counts only",
++      "classification": "CONFIRMED",
++      "result": "Resolved with canonical per-table ordered-content hashes for the final reinstall; every table is identical."
++    },
++    {
++      "finding": "Non-local cleartext Spoolman exposure",
++      "classification": "CONFIRMED",
++      "result": "Resolved by rejecting HTTP outside local address/name classes, with unit coverage."
++    },
++    {
++      "finding": "Physical spool live sync omission may confuse users",
++      "classification": "ALREADY MITIGATED",
++      "result": "Sync dialog and compatibility documentation explicitly say live sync does not create a physical spool; import/export retains physical spool quantities and IDs."
++    }
++  ],
++  "objective_evidence": {
++    "host": "16 Python, 61 core, 57 app tests; lint; app and Android-test APK assemblies all PASS",
++    "device": "All 6 installed instrumentation tests PASS on Motorola Razr 2023 Android API 36; external adapter conversion PASS",
++    "content_preservation": "All 10 user DB tables have identical canonical content hashes across final APK reinstall",
++    "visible_ui": "Final installed 0.5.0-m5 home UI visibly retains AI scanner and shows Spoolman JSON import",
++    "app_apk_sha256": "92ecb721b12ef0d55ef9b1df7f3073390dbb8eb154303a5369bfcce61a56c48b",
++    "test_apk_sha256": "4c1e2303da57e7db9d8625afe79c6392c05ef85b0dee321716a405fe9524df2c"
++  },
++  "review_files": [
++    "work/open-ecosystem-m5/m5-final-review.diff",
++    "work/open-ecosystem-m5/device-acceptance.json",
++    "work/open-ecosystem-m5/data-content-preservation.json",
++    "docs/OPEN_ECOSYSTEM_ADAPTERS.md"
++  ],
++  "known_open_external_gates": [
++    "No physical OpenTag3D-formatted tag was supplied",
++    "No physical NFC-V OpenPrintTag tag was supplied",
++    "No live Spoolman server URL was supplied"
++  ],
++  "sanitization": "No credentials, environment values, network addresses, tag UIDs, private database contents, or unrelated user data are included.",
++  "closure_question": "Does any concrete source, artifact, or evidence-consistency defect remain? The three unperformed external gates remain explicitly open and are not claimed.",
++  "prior_remediation_cycle": "review-cycle-a4905b2fb107",
++  "new_finding_disposition": {
++    "finding": "Single-label HTTP hostname may resolve outside the local network",
++    "classification": "CONFIRMED",
++    "result": "Resolved by removing the single-label exception. HTTP now permits only localhost, .local names, and literal loopback/private/link-local IPv4/IPv6 addresses; tests reject http://spoolman."
++  },
++  "evidence_correction": "Removed the obsolete review-package sentence permitting single-label LAN hostnames. Production code, tests, and docs already rejected them."
++}
+diff --git a/work/open-ecosystem-m5/convergence.json b/work/open-ecosystem-m5/convergence.json
+new file mode 100644
+index 000000000..77d6ca46a
+--- /dev/null
++++ b/work/open-ecosystem-m5/convergence.json
+@@ -0,0 +1,21 @@
++{
++  "change_id": "filamajig-open-ecosystem-m5-20260907",
++  "initial_review_cycle": "review-cycle-f3f38d19dea1",
++  "remediation_review_cycles": [
++    "review-cycle-08d4228ec090",
++    "review-cycle-a4905b2fb107",
++    "review-cycle-7c081cf7be43"
++  ],
++  "latest_evidence_cycle": "evidence-cycle-6d299f69be99",
++  "review_result": "Grok, Gemini, and DeepSeek each returned NO FINDINGS on the final corrected evidence package.",
++  "evidence_result": "16 Python tests, 61 core tests, 57 app tests, lint, both APK builds, all 6 installed device tests, visible UI, artifact hashes, and canonical content preservation passed.",
++  "dispositions": {
++    "physical_external_tag_acceptance": "CONFIRMED external gate open; no hardware compatibility claim",
++    "live_spoolman_acceptance": "CONFIRMED external gate open; no live-server claim",
++    "mutation_reconciliation": "CONFIRMED WITH NARROWER SCOPE and resolved with stable-ID retry instruction/test",
++    "content_preservation": "CONFIRMED and resolved with per-table canonical hashes",
++    "cleartext_http": "CONFIRMED and resolved; non-local and single-label HTTP rejected",
++    "physical_spool_live_sync": "ALREADY MITIGATED by explicit UI/docs and import/export support"
++  },
++  "codex_conclusion": "SOURCE_READY_WITH_EXTERNAL_ACCEPTANCE_GATES_OPEN"
++}
+diff --git a/work/open-ecosystem-m5/data-content-preservation.json b/work/open-ecosystem-m5/data-content-preservation.json
+new file mode 100644
+index 000000000..4d1c04399
+--- /dev/null
++++ b/work/open-ecosystem-m5/data-content-preservation.json
+@@ -0,0 +1,76 @@
++{
++  "method": "Canonical ordered row serialization; BLOB values represented only by SHA-256; record values omitted",
++  "all_tables_identical": true,
++  "tables": {
++    "android_metadata": {
++      "rows_before": 1,
++      "rows_after": 1,
++      "sha256_before": "f2986903ad07c4759d558edd9ca00f918abb07ad6b005fc7861f541956a5aef7",
++      "sha256_after": "f2986903ad07c4759d558edd9ca00f918abb07ad6b005fc7861f541956a5aef7",
++      "identical": true
++    },
++    "custom_records": {
++      "rows_before": 6,
++      "rows_after": 6,
++      "sha256_before": "2fd2a7b9d23224f4edaa18d6c14ee13a8169facec5cfd915a0e87aa7577791f4",
++      "sha256_after": "2fd2a7b9d23224f4edaa18d6c14ee13a8169facec5cfd915a0e87aa7577791f4",
++      "identical": true
++    },
++    "filament_profiles": {
++      "rows_before": 6,
++      "rows_after": 6,
++      "sha256_before": "5ea25a04bedc2065102ca7207e4d6757a83bb1ea1dbebe09a1443e742413fb48",
++      "sha256_after": "5ea25a04bedc2065102ca7207e4d6757a83bb1ea1dbebe09a1443e742413fb48",
++      "identical": true
++    },
++    "physical_spools": {
++      "rows_before": 6,
++      "rows_after": 6,
++      "sha256_before": "efa824d1f8d14fb24be12ed30c677a3a6b18f936059f7fb964ec05f8b643ac5f",
++      "sha256_after": "efa824d1f8d14fb24be12ed30c677a3a6b18f936059f7fb964ec05f8b643ac5f",
++      "identical": true
++    },
++    "profile_identifiers": {
++      "rows_before": 1,
++      "rows_after": 1,
++      "sha256_before": "23df55c675154813f46ecea03863818b4e9ce033cc128f357a2278cb2d2d8e6a",
++      "sha256_after": "23df55c675154813f46ecea03863818b4e9ce033cc128f357a2278cb2d2d8e6a",
++      "identical": true
++    },
++    "profile_observations": {
++      "rows_before": 72,
++      "rows_after": 72,
++      "sha256_before": "e14e5ffb734fafdc19bb0384ebd4e8cf5613eea94ecdc0284d7540ba3391b7df",
++      "sha256_after": "e14e5ffb734fafdc19bb0384ebd4e8cf5613eea94ecdc0284d7540ba3391b7df",
++      "identical": true
++    },
++    "profile_overrides": {
++      "rows_before": 72,
++      "rows_after": 72,
++      "sha256_before": "f7ad8313d46d80b15a7056a9ae2996ba187aa3aac5d2c494ac8d90835d426d1d",
++      "sha256_after": "f7ad8313d46d80b15a7056a9ae2996ba187aa3aac5d2c494ac8d90835d426d1d",
++      "identical": true
++    },
++    "recents": {
++      "rows_before": 6,
++      "rows_after": 6,
++      "sha256_before": "a6b6245a294e983a24a8e6c1d788fa2190b6dcb19c53c1339e41db650ba2e89a",
++      "sha256_after": "a6b6245a294e983a24a8e6c1d788fa2190b6dcb19c53c1339e41db650ba2e89a",
++      "identical": true
++    },
++    "tag_bindings": {
++      "rows_before": 1,
++      "rows_after": 1,
++      "sha256_before": "4bf60b6cbda158cd5a7a3ef5bf72af9d6762d4ad9e6d29e49c5fc67568b9a08b",
++      "sha256_after": "4bf60b6cbda158cd5a7a3ef5bf72af9d6762d4ad9e6d29e49c5fc67568b9a08b",
++      "identical": true
++    },
++    "transmission_distance_measurements": {
++      "rows_before": 0,
++      "rows_after": 0,
++      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
++      "identical": true
++    }
++  }
++}
+diff --git a/work/open-ecosystem-m5/deepseek-response.json b/work/open-ecosystem-m5/deepseek-response.json
+new file mode 100644
+index 000000000..fca9ddd8e
+--- /dev/null
++++ b/work/open-ecosystem-m5/deepseek-response.json
+@@ -0,0 +1 @@
++{"response": {"model": "deepseek-v4-pro", "phase": "INITIAL_REVIEW", "provider": "deepseek", "response": {"findings": [{"ACCEPTANCE TEST": "Each supported tag type is physically read by the app on the target device and converted without errors, with warnings handled.", "AREA": "Physical tag interoperability", "CONFIDENCE": "HIGH", "CONSEQUENCE": "Actual Android NFC-A/NFC-V RF behavior, NDEF parsing, tag memory layout, and read success on real tags remain unverified, potentially leading to field failures or unsupported tags.", "EVIDENCE": "objective_evidence.physical_external_tags.OpenTag3D = 'NOT RUN - no physical formatted tag supplied'; OpenPrintTag = 'NOT RUN - no physical NFC-V tag supplied'; known_limits states no physical tag was available, radio-path acceptance remains open.", "FINDING": "OpenTag3D and OpenPrintTag read-only conversion has not been validated against any physical tag hardware. The device test suite only exercises adapter code; official hardware/fixtures were not used.", "REQUIRED CORRECTION": "Execute acceptance tests with official OpenTag3D/OpenPrintTag physical tags or certified fixtures before release; include real NFC interaction.", "SEVERITY": "HIGH"}, {"ACCEPTANCE TEST": "Live sync against real Spoolman server passes all existing mock test scenarios and no unexpected 4xx/5xx occur.", "AREA": "Spoolman live sync", "CONFIDENCE": "HIGH", "CONSEQUENCE": "Actual API contract, authentication (if any), TLS, error handling, and server-side behavior at the pinned revision are unverified, risking sync failures or data corruption in production.", "EVIDENCE": "objective_evidence.live_spoolman_server = 'NOT RUN - no server URL supplied; mock transport create/update/failure tests pass'; known_limits states no live Spoolman server URL was supplied.", "FINDING": "Spoolman profile sync has only been tested against mocks; no real Spoolman server interaction was performed.", "REQUIRED CORRECTION": "Run sync tests against a pinned Spoolman server revision (or recorded HTTP interactions) covering create, update, failure, and edge cases.", "SEVERITY": "HIGH"}, {"ACCEPTANCE TEST": "Simulate dropped response after server mutation; verify no duplicate records and local state eventually matches server or user is prompted.", "AREA": "Sync idempotency/retry", "CONFIDENCE": "MEDIUM", "CONSEQUENCE": "If a create/update request is committed server-side but the response is lost, the client may report failure and retry, causing duplicate profiles; or may report success without knowing server state, leading to inconsistent local/remote state.", "EVIDENCE": "architecture_decisions item: 'Mutation transport loss is UNKNOWN and never automatically retried'; no idempotency or reconciliation mechanism is mentioned.", "FINDING": "Mutation transport loss is explicitly UNKNOWN and is never automatically retried, so partial failures can produce duplicates or false failure/success.", "REQUIRED CORRECTION": "Implement idempotent operations (client-generated ID or conflict-free update) and/or automatic retry with response validation; or clearly surface uncertain status and provide manual reconciliation.", "SEVERITY": "HIGH"}, {"ACCEPTANCE TEST": "All preserved records match expected content exactly after installation, import, and conversion.", "AREA": "Data preservation validation", "CONFIDENCE": "MEDIUM", "CONSEQUENCE": "Silent corruption, field truncation, or incorrect conversion could occur while counts remain identical, giving false confidence in preservation.", "EVIDENCE": "objective_evidence.data_preservation shows counts (e.g., custom_records 6->6, filament_profiles 6->6, physical_spools 6->6, tag_bindings 1->1), but no content equality or checksum evidence is provided.", "FINDING": "Data preservation evidence consists only of entity counts before/after, not content integrity; no hashes or field-level comparison are reported.", "REQUIRED CORRECTION": "Add content-level verification (e.g., compare serialized fields, hashes, or key attributes) for all preserved datasets and report results.", "SEVERITY": "MEDIUM"}, {"ACCEPTANCE TEST": "Non-local HTTP configuration is blocked or requires explicit user warning; local loopback HTTP remains permitted.", "AREA": "Cleartext HTTP exposure", "CONFIDENCE": "MEDIUM", "CONSEQUENCE": "If a user points the app at a remote Spoolman instance over HTTP, all sync traffic (profiles, potential metadata) is unencrypted and susceptible to interception or tampering.", "EVIDENCE": "architecture_decisions item: 'Cleartext HTTP is enabled for local Spoolman prototypes and disclosed; no Spoolman credentials are handled'.", "FINDING": "Cleartext HTTP is enabled for Spoolman connections; although disclosed and no credentials handled, synced profile data may be exposed if a non-local server is configured.", "REQUIRED CORRECTION": "Restrict cleartext HTTP to loopback/private addresses only, or enforce HTTPS for non-local endpoints and show prominent warning before allowing insecure connections.", "SEVERITY": "LOW"}, {"ACCEPTANCE TEST": "After sync, physical spool data is either synced or the user is explicitly informed of the limitation without data loss.", "AREA": "Physical spool sync omission", "CONFIDENCE": "MEDIUM", "CONSEQUENCE": "Users may expect full two-way sync of all data, but physical spools remain unsynced, leading to data divergence or confusion.", "EVIDENCE": "architecture_decisions item: 'Live sync is profile-only and uses stable external IDs; physical spool creation is excluded because Spoolman has no spool external ID'; objective_evidence.data_preservation shows 6 physical_spools preserved, but no sync path for them.", "FINDING": "Live sync deliberately excludes physical spool creation because Spoolman has no spool external ID, but the objective includes Spoolman sync and import/export may cover physical spools.", "REQUIRED CORRECTION": "If not supported, clearly communicate this limitation in UI/docs; otherwise explore a stable local mapping or Spoolman spool ID mapping to enable sync.", "SEVERITY": "LOW"}]}, "role": "Adversarial Systems Engineer", "status": "COMPLETED", "transport": "deepseek-v4-pro-api"}, "response_sha256": "c62a8b77f14ebfe951114a9df2d261e8f44d76a88307cbefc897c1cb7e9713e9", "reviewer": "deepseek", "state": "COMPLETE"}
+diff --git a/work/open-ecosystem-m5/device-acceptance.json b/work/open-ecosystem-m5/device-acceptance.json
+new file mode 100644
+index 000000000..98b350592
+--- /dev/null
++++ b/work/open-ecosystem-m5/device-acceptance.json
+@@ -0,0 +1,45 @@
++{
++  "schema_version": 1,
++  "milestone": "M5 open ecosystem adapters",
++  "app_version": "0.5.0-m5",
++  "device": {
++    "model": "motorola razr 2023",
++    "transport": "wireless-adb",
++    "android_api": 36
++  },
++  "host": {
++    "python_tests": 16,
++    "core_tests": 61,
++    "app_tests": 57,
++    "lint": "PASS",
++    "app_assemble": "PASS",
++    "test_apk_assemble": "PASS"
++  },
++  "device_tests": {
++    "tests": 6,
++    "failures": 0,
++    "duration_seconds": 14.723,
++    "external_adapter_test": "PASS"
++  },
++  "installed_apk_sha256": "92ecb721b12ef0d55ef9b1df7f3073390dbb8eb154303a5369bfcce61a56c48b",
++  "test_apk_sha256": "4c1e2303da57e7db9d8625afe79c6392c05ef85b0dee321716a405fe9524df2c",
++  "data_preservation": {
++    "custom_records": "6 -> 6",
++    "filament_profiles": "6 -> 6",
++    "physical_spools": "6 -> 6",
++    "recents": "6 -> 6",
++    "tag_bindings": "1 -> 1",
++    "content_hashes": "PASS - all user tables have identical canonical ordered-row SHA-256 before and after final APK reinstall",
++    "artifact": "work/open-ecosystem-m5/data-content-preservation.json"
++  },
++  "visible_ui": {
++    "home": "PASS",
++    "spoolman_import_dialog": "PASS"
++  },
++  "physical_external_tags": {
++    "OpenTag3D": "NOT RUN - no physical formatted tag supplied",
++    "OpenPrintTag": "NOT RUN - no physical NFC-V tag supplied"
++  },
++  "live_spoolman_server": "NOT RUN - no server URL supplied; mock transport create/update/failure tests pass",
++  "unrelated_state": "A user editor swap file beside .env.local was preserved and excluded."
++}
+diff --git a/work/open-ecosystem-m5/evidence-profile.json b/work/open-ecosystem-m5/evidence-profile.json
+new file mode 100644
+index 000000000..fd188c53e
+--- /dev/null
++++ b/work/open-ecosystem-m5/evidence-profile.json
+@@ -0,0 +1,25 @@
++{
++  "version": 1,
++  "baseline": [
++    {
++      "id": "open-ecosystem-m5-python-tests",
++      "type": "unit-test",
++      "severity": "HIGH",
++      "command": ["python3", "-m", "unittest", "discover", "-s", "tools", "-p", "test_*.py"]
++    },
++    {
++      "id": "open-ecosystem-m5-build-tests-lint",
++      "type": "build-test-static",
++      "severity": "HIGH",
++      "command": ["heavy-gradle", ":core:test", ":app:testDebugUnitTest", ":app:lintDebug", ":app:assembleDebug", ":app:assembleDebugAndroidTest", "--console=plain"]
++    },
++    {
++      "id": "open-ecosystem-m5-device-and-artifact",
++      "type": "device-evidence",
++      "severity": "HIGH",
++      "command": ["python3", "tools/verify_m5_evidence.py"]
++    }
++  ],
++  "substantive": [],
++  "conditional": {}
++}
+diff --git a/work/open-ecosystem-m5/final-deepseek-response.json b/work/open-ecosystem-m5/final-deepseek-response.json
+new file mode 100644
+index 000000000..9f26fab97
+--- /dev/null
++++ b/work/open-ecosystem-m5/final-deepseek-response.json
+@@ -0,0 +1 @@
++{"response": {"model": "deepseek-v4-pro", "phase": "REMEDIATION_REVIEW", "provider": "deepseek", "response": {"ACCEPTANCE TEST": "Search final diff, remediation text, and docs/OPEN_ECOSYSTEM_ADAPTERS.md for any phrase permitting single-label LAN hostnames or non-local names with HTTP; all occurrences must reject single-label and require HTTPS for non-local names. Confirm existing tests reject http://spoolman and all host/device tests pass.", "AREA": "Remediation evidence consistency / Documentation", "CONFIDENCE": "HIGH", "CONSEQUENCE": "Review evidence is ambiguous about the final cleartext policy. It may reflect stale documentation or an uncommitted code path if item 1 is not corrected, undermining confidence that the single-label exception was actually removed everywhere.", "EVIDENCE": "Package remediation array includes: 'HTTP Spoolman URLs are now accepted only for loopback, private/link-local IPs, .local names, and single-label LAN hostnames; non-local names require HTTPS.' and later 'Single-label HTTP hostnames are rejected; only local address literals, localhost, and reserved .local names can use cleartext.' The new_finding_disposition says 'Resolved by removing the single-label exception... tests reject http://spoolman.'", "FINDING": "The remediation summary contains mutually exclusive statements about whether single-label HTTP hostnames are permitted for cleartext Spoolman connections. Item 1 states they are accepted along with loopback/private/link-local/.local; item 6 and the new finding disposition state single-label HTTP hostnames are rejected.", "REQUIRED CORRECTION": "Align all remediation documentation and any related docs/OPEN_ECOSYSTEM_ADAPTERS.md with the final policy: no single-label HTTP hostnames; only localhost, .local, and literal loopback/private/link-local IPv4/IPv6 may use HTTP cleartext. Remove or correct the obsolete item 1 statement.", "SEVERITY": "LOW"}, "role": "Adversarial Systems Engineer", "status": "COMPLETED", "transport": "deepseek-v4-pro-api"}, "response_sha256": "2274bdf5b38d3bb25459b1ff369558648558494bb3e190d5b761475feb1530c6", "reviewer": "deepseek", "state": "COMPLETE"}
+diff --git a/work/open-ecosystem-m5/final-gemini-response.json b/work/open-ecosystem-m5/final-gemini-response.json
+new file mode 100644
+index 000000000..f35d999be
+--- /dev/null
++++ b/work/open-ecosystem-m5/final-gemini-response.json
+@@ -0,0 +1 @@
++{"response": {"model": "gemini-3.6-flash", "phase": "REMEDIATION_REVIEW", "provider": "gemini", "provider_attempts": [{"completed_at": 1788851014.0686736, "model": "gemini-3.6-flash", "route_id": "vertex-ai-global", "started_at": 1788851004.6181743, "state": "READY", "transport": "vertex-ai"}], "response": {"change_id": "filamajig-open-ecosystem-m5-20260907", "closure_decision": "PASS", "evidence": "Remediation of the single-label HTTP exception was verified; non-local cleartext Spoolman URLs (including single-label hostnames like http://spoolman) are rejected, restricting cleartext HTTP solely to localhost, .local names, and explicit loopback/private/link-local IPv4/IPv6 literals. All 16 Python, 61 core, and 57 app host tests, lint checks, APK assemblies, and 6 device instrumentation tests on Android API 36 PASS. Canonical SHA-256 ordered-content hashes confirm full DB preservation across all 10 user tables during final reinstall. The three known external acceptance gates (physical OpenTag3D tag, physical NFC-V OpenPrintTag, and live Spoolman server) remain explicitly open and unclaimed.", "review_phase": "REMEDIATION_REVIEW", "status": "NO FINDINGS"}, "role": "Platform & Integration Engineer", "status": "COMPLETED", "transport": "vertex-ai"}, "response_sha256": "803fb74acf4ed06c4ab6f0b8e6b8b702267f09c492433cb0aa35144eab34b1e6", "reviewer": "gemini", "state": "COMPLETE"}
+diff --git a/work/open-ecosystem-m5/final-grok-response.json b/work/open-ecosystem-m5/final-grok-response.json
+new file mode 100644
+index 000000000..c678e784a
+--- /dev/null
++++ b/work/open-ecosystem-m5/final-grok-response.json
+@@ -0,0 +1 @@
++{"response": {"model": "grok-4.20", "phase": "REMEDIATION_REVIEW", "provider": "grok", "response": {"closure": "No concrete source or artifact defect remains after the single-label HTTP remediation", "evidence": "objective_evidence confirms all 16+61+57 host tests, lint, APK builds, 6 device instrumentation tests, adapter conversion, and visible UI all PASS; content_preservation verifies identical canonical per-table ordered-content SHA-256 hashes for all 10 user DB tables on final APK reinstall; new_finding_disposition and remediation confirm single-label HTTP exception fully removed with updated restriction to localhost/.local/literal loopback/private/link-local only plus unit tests rejecting http://spoolman; all listed finding_dispositions are CONFIRMED as resolved/mitigated with narrower scope or explicit non-claims; known_open_external_gates remain explicitly open/unclaimed per closure_question and owner_requirements; review_files and sanitization establish complete evidence set with no other defects", "findings": "NO FINDINGS"}, "role": "Principal Software Architect", "session_id": "codex-durable-architecture-reviewer", "status": "COMPLETED", "transport": "xai-chat-completions-api"}, "response_sha256": "640f7157f46447423103c0e50f2be734291d0ed70ef561ebf84c582d150018c1", "reviewer": "grok", "state": "COMPLETE"}
+diff --git a/work/open-ecosystem-m5/gemini-response.json b/work/open-ecosystem-m5/gemini-response.json
+new file mode 100644
+index 000000000..1bc938c20
+--- /dev/null
++++ b/work/open-ecosystem-m5/gemini-response.json
+@@ -0,0 +1 @@
++{"response": {"model": "gemini-3.6-flash", "phase": "INITIAL_REVIEW", "provider": "gemini", "provider_attempts": [{"completed_at": 1788849602.4979367, "model": "gemini-3.6-flash", "route_id": "vertex-ai-global", "started_at": 1788849593.1000764, "state": "READY", "transport": "vertex-ai"}], "response": {"findings": [], "phase": "INITIAL_REVIEW", "status": "PASS", "summary": "NO FINDINGS. All host tests (55 app tests, 61 core tests, 16 python tests, lint PASS) and device integration tests (6/6 PASS, 0 failures) passed on Android API 36 (motorola razr 2023). Data preservation checks confirmed complete integrity across custom records (6->6), filament profiles (6->6), physical spools (6->6), recents (6->6), and tag bindings (1->1). The implementation complies with all owner requirements and architectural decisions for M5: read-only conversion of pinned OpenTag3D (v2.000 d0f70689) and OpenPrintTag (7e09cc38) formats, provenance preservation, write-safety preservation, and Spoolman profile-only import/export/sync."}, "role": "Platform & Integration Engineer", "status": "COMPLETED", "transport": "vertex-ai"}, "response_sha256": "9e10a47a69b9053177f686db32ed729c2daecf843d20c1f1cdd2c73d9e5a029e", "reviewer": "gemini", "state": "COMPLETE"}
+diff --git a/work/open-ecosystem-m5/grok-response.json b/work/open-ecosystem-m5/grok-response.json
+new file mode 100644
+index 000000000..47d83c33b
+--- /dev/null
++++ b/work/open-ecosystem-m5/grok-response.json
+@@ -0,0 +1 @@
++{"response": {"model": "grok-4.20", "phase": "INITIAL_REVIEW", "provider": "grok", "response": {"findings": "NO FINDINGS; EVIDENCE: architecture_decisions confirm read-only external adapters returning full raw payload+warnings, pinned OpenTag3D/OpenPrintTag revisions with malformed/future/unknown tests, Spoolman flattened import/export and profile-only sync excluding physical spools, UNKNOWN mutation loss with no auto-retry, local cleartext disclosed and no credentials; objective_evidence shows host lint/app_tests/core_tests/python_tests all PASS, device_tests 6/6 PASS with external_adapter_test PASS, data_preservation ratios identical (6->6 filament_profiles/physical_spools/recents/custom_records, 1->1 tag_bindings), visible_ui PASS, installed/test APK SHAs recorded, known_limits explicitly document missing physical tags/live server; change_summary and review_files cover format registry/NFC/Spoolman/UI; upstream_contracts pinned to exact revisions matching owner_requirements for read-first, provenance, no printer control, no weakening of write safety; all review_questions satisfied with no material risks to binary/CBOR semantics, NFC-A/NFC-V routing, partial-failure duplicates, cleartext/UI/lifecycle/performance/accessibility/provenance", "phase": "INITIAL_REVIEW"}, "role": "Principal Software Architect", "session_id": "codex-durable-architecture-reviewer", "status": "COMPLETED", "transport": "xai-chat-completions-api"}, "response_sha256": "1040da1959a63ca82d42a9434b49268806cda9bbf05f79a52d6e3195eeab7445", "reviewer": "grok", "state": "COMPLETE"}
+diff --git a/work/open-ecosystem-m5/review-package.json b/work/open-ecosystem-m5/review-package.json
+new file mode 100644
+index 000000000..7ce737319
+--- /dev/null
++++ b/work/open-ecosystem-m5/review-package.json
+@@ -0,0 +1,114 @@
++{
++  "phase": "INITIAL_REVIEW",
++  "objective": "Validate M5 revision-pinned OpenTag3D/OpenPrintTag read-only conversion and Spoolman import/export/profile-sync implementation.",
++  "owner_requirements": [
++    "Read and convert OpenPrintTag and OpenTag3D before considering writes",
++    "Add Spoolman import/export/sync",
++    "Preserve provenance on every conversion",
++    "No printer control",
++    "Do not weaken existing OpenSpool/PAXX write safety or user data preservation"
++  ],
++  "change_summary": [
++    "Format registry and decoders",
++    "Android NFC routing and conversion UI",
++    "Official fixture plus malformed/future/unknown tests",
++    "Spoolman JSON review/import/share export",
++    "OkHttp server profile sync with create/update/failure tests",
++    "0.5.0-m5 device installation and preservation check"
++  ],
++  "architecture_decisions": [
++    "External tag adapters are read-only and return the complete raw payload plus warnings",
++    "OpenTag3D pinned to 2.000 revision d0f70689; newer major is read-only",
++    "OpenPrintTag pinned to 7e09cc38 with bounded CBOR, key 61 micrometres, legacy key 30 millimetres, and official fixture",
++    "Android reader enables NFC-A and NFC-V; NDEF may contain unrelated URI records but multiple filament MIME records are rejected",
++    "Spoolman imports official flattened exports and nested API responses; exports flattened shape",
++    "Live sync is profile-only and uses stable external IDs; physical spool creation is excluded because Spoolman has no spool external ID",
++    "Mutation transport loss is UNKNOWN and never automatically retried",
++    "Cleartext HTTP is enabled for local Spoolman prototypes and disclosed; no Spoolman credentials are handled"
++  ],
++  "upstream_contracts": {
++    "OpenTag3D": {
++      "url": "https://github.com/GooborgStudios/OpenTag3D",
++      "revision": "d0f706896e772663404edab8aa814633ba3c6543",
++      "version": "2.000"
++    },
++    "OpenPrintTag": {
++      "url": "https://github.com/OpenPrintTag/openprinttag-specification",
++      "revision": "7e09cc38df1c8e7824a67f5b1ae93071f52519ad"
++    },
++    "Spoolman": {
++      "url": "https://github.com/Donkie/Spoolman",
++      "revision": "81636f253ecd6ac76fcfe5d13fe2cbb417095823"
++    }
++  },
++  "objective_evidence": {
++    "schema_version": 1,
++    "milestone": "M5 open ecosystem adapters",
++    "app_version": "0.5.0-m5",
++    "device": {
++      "model": "motorola razr 2023",
++      "transport": "wireless-adb",
++      "android_api": 36
++    },
++    "host": {
++      "python_tests": 16,
++      "core_tests": 61,
++      "app_tests": 55,
++      "lint": "PASS",
++      "app_assemble": "PASS",
++      "test_apk_assemble": "PASS"
++    },
++    "device_tests": {
++      "tests": 6,
++      "failures": 0,
++      "duration_seconds": 11.559,
++      "external_adapter_test": "PASS"
++    },
++    "installed_apk_sha256": "d58f637c603935d4f7e10bfcee14f0fc63170edd26ed5a91d11533019daa0f75",
++    "test_apk_sha256": "4c1e2303da57e7db9d8625afe79c6392c05ef85b0dee321716a405fe9524df2c",
++    "data_preservation": {
++      "custom_records": "6 -> 6",
++      "filament_profiles": "6 -> 6",
++      "physical_spools": "6 -> 6",
++      "recents": "6 -> 6",
++      "tag_bindings": "1 -> 1"
++    },
++    "visible_ui": {
++      "home": "PASS",
++      "spoolman_import_dialog": "PASS"
++    },
++    "physical_external_tags": {
++      "OpenTag3D": "NOT RUN - no physical formatted tag supplied",
++      "OpenPrintTag": "NOT RUN - no physical NFC-V tag supplied"
++    },
++    "live_spoolman_server": "NOT RUN - no server URL supplied; mock transport create/update/failure tests pass",
++    "unrelated_state": "A user editor swap file beside .env.local was preserved and excluded."
++  },
++  "review_files": [
++    "work/open-ecosystem-m5/m5-review.diff",
++    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/ExternalTagAdapters.kt",
++    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/SpoolmanCodec.kt",
++    "app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt",
++    "app/src/main/kotlin/net/jamesjennison/filamajignfc/SpoolmanSyncClient.kt",
++    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt",
++    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt",
++    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/ExternalTagAdaptersTest.kt",
++    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/SpoolmanCodecTest.kt",
++    "app/src/test/kotlin/net/jamesjennison/filamajignfc/SpoolmanSyncClientTest.kt",
++    "docs/OPEN_ECOSYSTEM_ADAPTERS.md"
++  ],
++  "known_limits": [
++    "No physical OpenTag3D or OpenPrintTag tag was available, so radio-path hardware acceptance remains open and documented",
++    "No live Spoolman server URL was supplied, so real server mutation was not run",
++    "External format write/verify is unsupported by design"
++  ],
++  "review_questions": [
++    "Are binary/CBOR semantics and future/unknown preservation correct?",
++    "Does NFC routing preserve existing write safety and actual Android NFC-A/NFC-V behavior?",
++    "Are Spoolman flattened export and API sync contracts correct at the pinned revision?",
++    "Can partial failures create duplicates or false success?",
++    "Are cleartext, UI, lifecycle, performance, accessibility, or provenance risks material?",
++    "Report normalized findings with severity, evidence, correction, acceptance test and confidence."
++  ],
++  "sanitization": "No credentials, environment values, user database contents, NFC UIDs, device serials, network addresses, photos, or account data are included."
++}

@@ -1,0 +1,15 @@
+{
+  "uuid": "df585562-7814-427f-a6c8-3543ea9cba35",
+  "id": "red_green",
+  "name": "Red Green",
+  "color_hex": [
+    "#4E7642",
+    "#D33D3D"
+  ],
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

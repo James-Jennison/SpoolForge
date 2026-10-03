@@ -1,0 +1,27 @@
+uuid: 2e5a0810-955a-55a4-abc1-971bf61df83f
+slug: amolen-pla-matte-sunset-rainbow
+brand:
+  slug: amolen
+name: PLA Matte Sunset Rainbow
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#fd9191ff'
+- color_rgba: '#dbfc00ff'
+- color_rgba: '#bba0daff'
+tags:
+- matte
+- industrially_compostable
+- gradual_color_change
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-matte-sunset-rainbow/c7133be90d8f.png
+  type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

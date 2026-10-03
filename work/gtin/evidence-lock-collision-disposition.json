@@ -1,0 +1,6 @@
+{
+  "evidence_id": "evidence-16aae6ac88af",
+  "disposition": "ENVIRONMENT_FAILURE",
+  "reason": "The Android check exited 75 because a separate evidence cycle held the repository heavy-build lock. The identical protected command passed in the concurrently running Filamajig cycle and in later sequential GTIN evidence cycles.",
+  "evidence_reference": "evidence-cycle-89df2b30878d; evidence-cycle-afd87d6c9ec4; evidence-cycle-11c97fbd2db0"
+}

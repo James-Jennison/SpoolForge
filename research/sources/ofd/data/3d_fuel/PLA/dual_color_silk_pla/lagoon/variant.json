@@ -1,0 +1,11 @@
+{
+  "uuid": "18408ad8-0463-44cd-b391-27758a011111",
+  "id": "lagoon",
+  "name": "Lagoon",
+  "color_hex": "#000000",
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

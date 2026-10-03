@@ -1,0 +1,18 @@
+uuid: a1145067-c53d-52f5-94a2-06c1642ce445
+slug: raise3d-hyper-core-abs-cf15-black-rfid
+brand:
+  slug: raise3d
+name: Hyper Core ABS CF15 Black - RFID
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#3e4342ff'
+tags:
+- contains_carbon_fiber
+- abrasive
+- contains_carbon
+properties: {}
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-hyper-core-abs-cf15-black-rfid/raise3d-hyper-core-abs-cf15-black-rfid-0-84bf3782.jpg
+  type: unspecified

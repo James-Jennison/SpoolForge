@@ -1,0 +1,15 @@
+uuid: d54d193c-3b3d-516c-8bd1-bb431c09bc2f
+slug: tectonic-3d-kratir-pp-cf
+brand:
+  slug: tectonic-3d
+name: KRATIR PP CF
+class: FFF
+type: PP
+abbreviation: PP
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- contains_carbon_fiber
+- esd_safe
+- abrasive
+properties: {}

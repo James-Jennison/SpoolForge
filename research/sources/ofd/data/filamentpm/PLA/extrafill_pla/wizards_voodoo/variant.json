@@ -1,0 +1,10 @@
+{
+  "uuid": "e1fce5ca-a918-4982-9fec-ebaf06da819b",
+  "id": "wizards_voodoo",
+  "name": "Wizard's Voodoo",
+  "color_hex": "#003287",
+  "traits": {
+    "glitter": true,
+    "industrially_compostable": true
+  }
+}

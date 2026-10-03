@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-claude-2",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8b02c7b33686",
+  "reviewer": "claude",
+  "severity": "MEDIUM",
+  "category": "Unresolved-write archive retention",
+  "summary": "Unchanged: no eviction cap is evidenced for archived unresolved write results, and there is no UI to review/clear them beyond a passive count.",
+  "claim": "Unbounded local-history growth over device lifetime with no confirmed cap or user recourse.",
+  "evidence": {
+    "source": "`StorageAcceptanceTest.unresolvedArchiveRetainsEveryEntryBeyondTwenty` (identical to prior submission) retains all 25/25 archived entries; `NfcPanel` still only shows a count with no list/clear affordance.",
+    "response_sha256": "b2edd4f8158ecbdbe0fa40ccdfef0d865615410fedc3b04319bbf019f759f765"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "Confirm/implement a retention policy in the complementary package; add a review/clear UI here.",
+  "suggested_validation": "Archive beyond the intended ceiling and confirm eviction; add per-entry delete UI.",
+  "reviewer_confidence": "MEDIUM"
+}

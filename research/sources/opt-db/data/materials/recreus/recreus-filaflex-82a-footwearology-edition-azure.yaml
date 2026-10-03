@@ -1,0 +1,12 @@
+uuid: 189019ac-b03a-5bb1-b167-bc70d7490933
+slug: recreus-filaflex-82a-footwearology-edition-azure
+brand:
+  slug: recreus
+name: Filaflex 82A Footwearology edition Azure
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#d3e5e2ff'
+properties:
+  hardness_shore_a: 82

@@ -1,0 +1,11 @@
+uuid: a5fe7073-a4ab-5366-ab09-daf809df77d1
+slug: tinmorry-rapid-petg-eco-orange
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Orange
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#fa8423ff'
+properties: {}

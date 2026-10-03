@@ -1,0 +1,18 @@
+{
+  "uuid": "a381175f-8739-4fae-8a08-3f8e88976121",
+  "id": "citrus_sunrise_orange_multicolor_ht",
+  "name": "Citrus Sunrise Orange Multicolor HT",
+  "color_hex": [
+    "#FF5F2E",
+    "#FF8E24",
+    "#FFD342",
+    "#E72F1D"
+  ],
+  "traits": {
+    "translucent": true,
+    "glitter": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "high_temperature": true
+  }
+}

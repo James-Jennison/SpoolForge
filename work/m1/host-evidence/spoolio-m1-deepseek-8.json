@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-deepseek-8",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Catalog parsing",
+  "summary": "Bundled catalog rows lack strict field validation.",
+  "claim": "Bundled catalog rows lack strict field validation.",
+  "evidence": {
+    "source": "In DataStore.ensureCatalog(), TSV parsing only checks `f.size==17` and later package ID uniqueness/count. No validation is performed on color_hex format, diameter_mm numeric/range, mass_g positivity, temperature ranges, or non-empty required fields. `f[9].toInt()` can throw on invalid mass.",
+    "response_sha256": "9ce1f17a15210414355a99fa316c46989f28239b61a329155699d55078adf435"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Validate each field using core validators (normalizeHex, BigDecimal, range checks) during import; reject the batch or invalid rows with clear errors.",
+  "suggested_validation": "Feed a modified catalog fixture containing an invalid hex color or negative mass; confirm import fails cleanly or rejects the invalid record.",
+  "reviewer_confidence": "MEDIUM"
+}

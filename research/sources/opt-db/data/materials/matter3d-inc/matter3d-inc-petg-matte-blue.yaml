@@ -1,0 +1,13 @@
+uuid: 44c1a6ed-08a9-53b4-9441-63ca2b4a945d
+slug: matter3d-inc-petg-matte-blue
+brand:
+  slug: matter3d-inc
+name: PETg Matte Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0353baff'
+tags:
+- matte
+properties: {}

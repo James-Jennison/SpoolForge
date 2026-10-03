@@ -1,0 +1,18 @@
+uuid: 89d33e59-fa56-5f77-aae2-dcac5df3b294
+slug: sovb-3d-fil-pla-gris-argent
+brand:
+  slug: sovb-3d
+name: Fil PLA Gris argent
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#737282ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 180
+  max_print_temperature: 200
+  min_bed_temperature: 0
+  max_bed_temperature: 60

@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "ea66a564-e697-45a9-b2f5-187645711567",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/abs-pro"
+      }
+    ]
+  }
+]

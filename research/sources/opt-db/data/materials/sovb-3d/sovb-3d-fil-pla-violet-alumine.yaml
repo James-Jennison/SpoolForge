@@ -1,0 +1,21 @@
+uuid: edb59cc5-628a-58f5-93b3-1228fefb4461
+slug: sovb-3d-fil-pla-violet-alumine
+brand:
+  slug: sovb-3d
+name: Fil PLA Violet alumine
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#7f068cff'
+  color_ral: '3020'
+tags:
+- contains_aluminium
+- abrasive
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 180
+  max_print_temperature: 200
+  min_bed_temperature: 0
+  max_bed_temperature: 60

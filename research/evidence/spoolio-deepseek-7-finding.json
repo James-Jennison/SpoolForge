@@ -1,0 +1,20 @@
+{
+  "finding_id": "spoolio-deepseek-7",
+  "change_id": "spoolio-feasibility-20260906",
+  "cycle_id": "review-cycle-511bc96fa65d",
+  "reviewer": "deepseek",
+  "severity": "LOW",
+  "category": "Storage and performance planning",
+  "summary": "The report's catalog storage and transient space budgets (15\u201350 MB catalog, 100\u2013200 MB transient) are not measured; they are planning allowances. Search latency under 100 ms p95 is a target, not benchmarked.",
+  "claim": "The report's catalog storage and transient space budgets (15\u201350 MB catalog, 100\u2013200 MB transient) are not measured; they are planning allowances. Search latency under 100 ms p95 is a target, not benchmarked.",
+  "evidence": {
+    "source": "Report section 12: \"Actual normalized Room+FTS size is unknown. Planning allowance: 15\u201350 MB catalog per generation and roughly 100\u2013200 MB transient free space, to be replaced by measurements in M1. These are budgets, not measured requirements.\" Search target: \"under 100 ms p95 warm query latency ... not benchmarked here.\"",
+    "response_sha256": "14940ade81683577086eff6f20c1f63e0fab8d59722f737536c2d459e73d8747"
+  },
+  "affected_components": [
+    "docs/FEASIBILITY.md"
+  ],
+  "suggested_remediation": "In M1, measure the actual bundled normalized Room+FTS database size, compressed download size, decompression/transient peak, and warm p95 search latency on the owner's phone. Replace budgets with measured values before release.",
+  "suggested_validation": "Build the normalized catalog DB and run updates on candidate devices. Record actual sizes and latencies; confirm they fit within the agreed budget and the 100 ms p95 search target on the owner's phone.",
+  "reviewer_confidence": "MEDIUM"
+}

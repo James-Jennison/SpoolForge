@@ -1,0 +1,10 @@
+{
+  "uuid": "a0cc92d1-320f-4431-ab70-21dd131a7c9e",
+  "id": "extrafill_transparent",
+  "name": "Extrafill \"Transparent\"",
+  "color_hex": "#F2EFE9",
+  "traits": {
+    "translucent": true,
+    "filtration_recommended": true
+  }
+}

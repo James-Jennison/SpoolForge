@@ -1,0 +1,20 @@
+uuid: e83cbd83-11f7-5fe2-a5c6-653dc654c93d
+slug: addnorth-textura-flare-sparkling-green
+brand:
+  slug: addnorth
+name: Textura™ Flare Sparkling Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#77a54bff'
+tags:
+  - glitter
+  - matte
+  - contains_organic_material
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-textura-flare-sparkling-green/7b88226cea9f.png
+    type: unspecified
+properties:
+  min_print_temperature: 200
+  max_print_temperature: 220

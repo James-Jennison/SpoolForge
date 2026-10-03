@@ -1,0 +1,13 @@
+uuid: ab10cd56-41f9-5d35-8127-560d58dbe6dc
+slug: overture-rock-pla-jarrah
+brand:
+  slug: overture
+name: Rock PLA Jarrah
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c36561ff'
+tags:
+- industrially_compostable
+properties: {}

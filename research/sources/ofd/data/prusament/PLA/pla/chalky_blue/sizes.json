@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "80e97e65-61fd-4761-b72c-c70dd3b89cc3",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-pla-chalky-blue-1kg/"
+      }
+    ]
+  }
+]

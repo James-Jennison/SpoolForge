@@ -1,0 +1,10 @@
+{
+  "uuid": "cadf65ae-f68d-47bc-b8f5-200b1aa6d93c",
+  "id": "translucent_fluorescent_neon_green",
+  "name": "Translucent Fluorescent Neon Green",
+  "color_hex": "#7FE200",
+  "traits": {
+    "translucent": true,
+    "neon": true
+  }
+}

@@ -1,0 +1,11 @@
+uuid: 9a4fa882-ef47-584e-b8e7-f1ab0e3bbec2
+slug: paramount-3d-petg-black
+brand:
+  slug: paramount-3d
+name: PETG (Black)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+properties: {}

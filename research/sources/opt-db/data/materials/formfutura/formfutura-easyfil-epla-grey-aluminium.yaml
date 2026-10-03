@@ -1,0 +1,23 @@
+uuid: cc5c1f63-6338-5a59-ac92-07d8a810ac50
+slug: formfutura-easyfil-epla-grey-aluminium
+brand:
+  slug: formfutura
+name: EasyFil ePLA Grey Aluminium
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#8c9099ff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easyfil-epla-grey-aluminium/eb6df08ad0a5.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 275
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 40
+  drying_time: 360

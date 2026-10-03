@@ -1,0 +1,13 @@
+uuid: bb6a8db3-9b93-507f-9f2f-34233cf7c889
+slug: matter3d-inc-basics-series-pla-white
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- industrially_compostable
+properties: {}

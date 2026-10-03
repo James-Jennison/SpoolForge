@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "oracle": "Independent comparison of every retained pinned OFD package with regenerated TSV v2; first declared color is primary, remaining colors are retained in order, and sizes.article_number is retained.",
+  "expected_packages": 22347,
+  "actual_packages": 22347,
+  "missing_packages": 0,
+  "extra_packages": 0,
+  "primary_color_mismatches": 0,
+  "secondary_color_mismatches": 0,
+  "article_number_mismatches": 0,
+  "asset_sha256": "231a05698811fbbedbce91f6b18e193957102ac94f612a151702e1e853af8965",
+  "content_sha256": "989ca922284fb0fba1e45bae83e4a70e8356da68a8556b9ee96400c8d5dfefd8"
+}

@@ -1,0 +1,23 @@
+uuid: ffef7764-4c6b-53d9-892b-7ca2e94c4982
+slug: formfutura-high-gloss-pla-copper
+brand:
+  slug: formfutura
+name: High Gloss PLA Copper
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#8d5d4fff'
+tags:
+  - silk
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-high-gloss-pla-copper/c680a55bf9ec.png
+    type: unspecified
+properties:
+  density: 1.22
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 40
+  max_bed_temperature: 60
+  drying_temperature: 60
+  drying_time: 360

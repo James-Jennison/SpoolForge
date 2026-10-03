@@ -1,0 +1,19 @@
+uuid: ab9d0531-324e-5cc5-a691-4cf4f64cdb92
+slug: hatchbox-midnight-purple-petg
+brand:
+  slug: hatchbox
+name: Midnight Purple PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#7142a3ff'
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-midnight-purple-petg/260ab1c5266a.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 0
+  max_bed_temperature: 85

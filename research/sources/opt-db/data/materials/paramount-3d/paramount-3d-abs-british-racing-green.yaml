@@ -1,0 +1,13 @@
+uuid: c2462ee4-6d95-52aa-8554-1ea4854a3234
+slug: paramount-3d-abs-british-racing-green
+brand:
+  slug: paramount-3d
+name: ABS (British Racing Green)
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#1e5a4fff'
+tags:
+- filtration_recommended
+properties: {}

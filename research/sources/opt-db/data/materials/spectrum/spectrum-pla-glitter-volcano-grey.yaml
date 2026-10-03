@@ -1,0 +1,20 @@
+uuid: 76166de9-a654-58bc-b248-0ae228009078
+slug: spectrum-pla-glitter-volcano-grey
+brand:
+  slug: spectrum
+name: PLA Glitter Volcano Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#3f4647ff'
+tags:
+- glitter
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-glitter-volcano-grey/spectrum-pla-glitter-volcano-grey-0-97fb8072.jpg
+  type: unspecified

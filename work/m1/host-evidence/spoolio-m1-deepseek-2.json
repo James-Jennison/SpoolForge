@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-deepseek-2",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "Recents UI and persistence",
+  "summary": "Recents are recorded but never exposed in UI, and the stored snapshot is insufficient for catalog removal.",
+  "claim": "Recents are recorded but never exposed in UI, and the stored snapshot is insufficient for catalog removal.",
+  "evidence": {
+    "source": "UserDao.recents() is defined in Databases.kt but never called by any ViewModel or Composable. MainViewModel has no recents state and the UI (SpoolioApp in MainActivity.kt) shows only search, results, and detail. Recent.snapshotJson in MainViewModel.select() stores only package_id and source_revision, not full record data.",
+    "response_sha256": "9ce1f17a15210414355a99fa316c46989f28239b61a329155699d55078adf435"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Expose recents in a dedicated UI section (e.g., list or menu). Store full record snapshot or join with current catalog/custom records while preserving provenance and temperatures.",
+  "suggested_validation": "Select several items, navigate to a recents screen, verify they are listed. Delete the corresponding catalog entries, then confirm recents still show the original metadata from snapshot.",
+  "reviewer_confidence": "HIGH"
+}

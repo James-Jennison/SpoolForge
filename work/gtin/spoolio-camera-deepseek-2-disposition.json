@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-camera-deepseek-2",
+  "disposition": "CONFIRMED",
+  "reason": "The cross-thread disposed state is now AtomicBoolean; analyzer, camera-provider listener, main callback and disposal all use atomic visibility.",
+  "evidence_reference": "app/src/main/kotlin/net/jamesjennison/spoolio/BarcodeCamera.kt; work/gtin/camera-remediation-build.log",
+  "resolved": true
+}

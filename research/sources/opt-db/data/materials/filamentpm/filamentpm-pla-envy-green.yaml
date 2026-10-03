@@ -1,0 +1,22 @@
+uuid: b9bfc2f9-8fe6-5abc-bc0d-e36e649992eb
+slug: filamentpm-pla-envy-green
+brand:
+  slug: filamentpm
+name: PLA - Envy Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5d6439ff'
+tags:
+  - iridescent
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-pla-envy-green/78295c443e56.png
+    type: unspecified
+properties:
+  density: 1.24
+  hardness_shore_d: 78.3
+  min_print_temperature: 200
+  max_print_temperature: 220
+  min_bed_temperature: 20
+  max_bed_temperature: 60

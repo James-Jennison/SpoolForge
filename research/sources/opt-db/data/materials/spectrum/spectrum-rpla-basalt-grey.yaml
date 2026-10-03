@@ -1,0 +1,21 @@
+uuid: 17dbbbf5-ca35-5746-b1ab-5f59020b4abd
+slug: spectrum-rpla-basalt-grey
+brand:
+  slug: spectrum
+name: rPLA Basalt Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#9c9d9dff'
+tags:
+- recycled
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 215
+  min_bed_temperature: 40
+  max_bed_temperature: 50
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-rpla-basalt-grey/spectrum-rpla-basalt-grey-0-494cf270.jpg
+  type: unspecified

@@ -1,0 +1,11 @@
+{
+  "uuid": "7e2365f5-c2ad-44bf-aa88-9e2851a576e3",
+  "id": "gf20",
+  "name": "PPS-GF20",
+  "diameter_tolerance": 0.02,
+  "density": 1.36,
+  "min_print_temperature": 300,
+  "max_print_temperature": 350,
+  "min_bed_temperature": 80,
+  "max_bed_temperature": 100
+}

@@ -1,0 +1,23 @@
+uuid: 2c7179dd-cd12-53bb-8354-7b22295e3b47
+slug: bambulab-petg-hf-white
+brand:
+  slug: bambulab
+name: PETG HF White
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+  - high_speed
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-hf-white/bd0446c804a1.png
+    type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

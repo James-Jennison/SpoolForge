@@ -1,0 +1,13 @@
+uuid: adb4efe4-85a9-5f65-a2b3-47e026cac220
+slug: verbatim-pp-natural
+brand:
+  slug: verbatim
+name: PP Natural
+class: FFF
+type: PP
+abbreviation: PP
+primary_color:
+  color_rgba: '#dfdfd3ff'
+tags:
+- translucent
+properties: {}

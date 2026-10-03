@@ -1,0 +1,18 @@
+{
+  "uuid": "b06829d9-6a9a-4305-b5bd-78c23e416c52",
+  "id": "forest_fantasy_green_multicolor_ht",
+  "name": "Forest Fantasy Green Multicolor HT",
+  "color_hex": [
+    "#91C500",
+    "#39B9DB",
+    "#15817B",
+    "#00A594"
+  ],
+  "traits": {
+    "translucent": true,
+    "glitter": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "high_temperature": true
+  }
+}

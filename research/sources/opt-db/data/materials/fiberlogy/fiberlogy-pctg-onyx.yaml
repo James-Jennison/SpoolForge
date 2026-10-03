@@ -1,0 +1,23 @@
+uuid: dc698548-2523-5761-b780-c7980182b2d0
+slug: fiberlogy-pctg-onyx
+brand:
+  slug: fiberlogy
+name: PCTG Onyx
+class: FFF
+type: PCTG
+abbreviation: PCTG
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - glitter
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-pctg-onyx/89a8871600a8.png
+    type: unspecified
+properties:
+  density: 1.23
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 240

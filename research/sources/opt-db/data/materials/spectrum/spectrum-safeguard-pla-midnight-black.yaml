@@ -1,0 +1,20 @@
+uuid: 253c82c2-93b7-5877-b3bf-ec41d0e1f292
+slug: spectrum-safeguard-pla-midnight-black
+brand:
+  slug: spectrum
+name: Safeguard PLA Midnight Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- antibacterial
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-safeguard-pla-midnight-black/spectrum-safeguard-pla-midnight-black-0-e805bbea.jpg
+  type: unspecified

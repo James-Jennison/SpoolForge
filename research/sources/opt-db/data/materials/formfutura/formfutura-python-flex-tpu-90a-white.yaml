@@ -1,0 +1,19 @@
+uuid: b72eae9c-dd29-5ed4-ae0b-8addd943ef76
+slug: formfutura-python-flex-tpu-90a-white
+brand:
+  slug: formfutura
+name: Python Flex TPU 90A White
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#ffffffff'
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-python-flex-tpu-90a-white/460f0f4abb24.png
+    type: unspecified
+properties:
+  density: 1.22
+  hardness_shore_a: 90.0
+  min_print_temperature: 220
+  max_print_temperature: 250
+  max_bed_temperature: 60

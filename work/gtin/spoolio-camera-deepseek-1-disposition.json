@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-camera-deepseek-1",
+  "disposition": "CONFIRMED",
+  "reason": "Camera decoding now returns the canonical 14-digit value directly. The existing GtinIndex also normalizes input, and tests cover raw EAN-13 equivalence through both boundaries.",
+  "evidence_reference": "app/src/main/kotlin/net/jamesjennison/spoolio/BarcodeCamera.kt; app/src/test/kotlin/net/jamesjennison/spoolio/BarcodeCameraTest.kt; app/src/test/kotlin/net/jamesjennison/spoolio/GtinIndexTest.kt",
+  "resolved": true
+}

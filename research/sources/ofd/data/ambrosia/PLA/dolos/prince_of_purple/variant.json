@@ -1,0 +1,9 @@
+{
+  "uuid": "fd0bc48c-e525-46e5-9e07-1bea242ff3f4",
+  "id": "prince_of_purple",
+  "name": "Prince of Purple",
+  "color_hex": "#A368D5",
+  "traits": {
+    "coextruded": true
+  }
+}

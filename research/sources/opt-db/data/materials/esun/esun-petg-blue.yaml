@@ -1,0 +1,17 @@
+uuid: f853448f-b686-5890-abeb-2e9411457c12
+slug: esun-petg-blue
+brand:
+  slug: esun
+name: PETG Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://www.amazon.com/eSUN-1-75mm-Filament-Printer-Semi-Transparent/dp/B00PRY1792
+primary_color:
+  color_rgba: '#0353baff'
+tags:
+  - translucent
+properties: {}
+photos:
+  - url: https://files.openprinttag.org/esun/esun-petg-blue/21e28cd4fa18.jpg
+    type: unspecified

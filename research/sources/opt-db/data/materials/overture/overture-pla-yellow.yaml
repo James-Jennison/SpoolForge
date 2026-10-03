@@ -1,0 +1,14 @@
+uuid: c9e7aec7-be96-5daf-b1a7-01f8c30065a2
+slug: overture-pla-yellow
+brand:
+  slug: overture
+name: PLA Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e6b535ff'
+tags:
+- industrially_compostable
+photos: []
+properties: {}

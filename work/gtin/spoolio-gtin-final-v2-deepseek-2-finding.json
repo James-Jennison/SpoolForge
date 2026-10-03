@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-gtin-final-v2-deepseek-2",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-7e324a5f3168",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "Scope provenance / verification",
+  "summary": "The verifier does not independently prove candidate scope against the original source record. For OFD and OPT, `source_binding_valid` ignores `e['scope']` entirely; any scope value would pass as long as UUID and GTIN match. For community, it chooses the EAN array based solely on `e['scope']` but never checks `row['is_refill']`, so a refill-only GTIN could be verified as spooled (or vice versa), and invalid scope values default to 'eans'.",
+  "claim": "A candidate could be assigned to the wrong product scope (e.g., refill vs spooled package) and still pass verification, violating owner requirement for correct source-record and scope provenance. End users could pair a refill tag with spooled data or vice versa.",
+  "evidence": {
+    "source": "In `source_binding_valid`: for 'ofd' returns `e['source_record']==o['size'].get('uuid') and normalize_source_gtin(raw)==gtin`; for 'opt' returns `e['source_record']==o['package'].get('uuid') and normalize_source_gtin(o['package'].get('gtin'))==gtin`; for 'community' sets `kind='eans_refill' if e.get('scope')=='refill' else 'eans'` and only tests membership. There is no assertion that `e['scope']=='package'` for OFD/OPT, nor that `row.get('is_refill')` is compatible with the scope. The builder's community condition `if refill is not None and (kind == 'eans_refill') != refill: continue` is not mirrored.",
+    "response_sha256": "964a15670621e3c9b422b701411c7242e61613d026b2db884499462755cbed26"
+  },
+  "affected_components": [
+    "tools",
+    "app"
+  ],
+  "suggested_remediation": "In `source_binding_valid`, require `e['scope']=='package'` for OFD and OPT (or reject any other scope). For community, require `e['scope']` in {'spooled package','refill'}; if scope is 'refill', `row.get('is_refill')` must not be `False`; if scope is 'spooled package', `row.get('is_refill')` must not be `True`; and the selected EAN array must contain the GTIN.",
+  "suggested_validation": "Create a test candidate with `e['scope']='refill'` for an OFD source_record; verifier must reject. Create a community candidate with `row['is_refill']=True`, `scope='spooled package'`, and GTIN present in `eans`; verifier must reject. Mutate `e['scope']` to an invalid string; verifier must reject.",
+  "reviewer_confidence": "HIGH"
+}

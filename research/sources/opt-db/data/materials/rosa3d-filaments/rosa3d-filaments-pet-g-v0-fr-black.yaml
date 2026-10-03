@@ -1,0 +1,13 @@
+uuid: 5dc0dc68-c279-5186-9e1f-0c3f3ca9979b
+slug: rosa3d-filaments-pet-g-v0-fr-black
+brand:
+  slug: rosa3d-filaments
+name: PET-G V0 FR Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#292824ff'
+tags:
+- self_extinguishing
+properties: {}

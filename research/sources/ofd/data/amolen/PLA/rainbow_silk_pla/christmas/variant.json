@@ -1,0 +1,16 @@
+{
+  "uuid": "312faf5a-9f66-4867-a5d3-27150e158446",
+  "id": "christmas",
+  "name": "Christmas",
+  "color_hex": [
+    "#EB5274",
+    "#4F60B9",
+    "#4BB27A",
+    "#F092B3",
+    "#9684CB"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

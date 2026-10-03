@@ -1,0 +1,13 @@
+uuid: 36036f57-2b31-574a-bb1e-d5cefb41a573
+slug: print-with-smile-pet-g-v0-white
+brand:
+  slug: print-with-smile
+name: PET-G V0 WHITE
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#efefefff'
+tags:
+- self_extinguishing
+properties: {}

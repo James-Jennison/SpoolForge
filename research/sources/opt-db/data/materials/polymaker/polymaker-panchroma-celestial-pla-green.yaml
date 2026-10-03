@@ -1,0 +1,23 @@
+uuid: 8083e7cc-d8dc-56f0-a13d-341153362e26
+slug: polymaker-panchroma-celestial-pla-green
+brand:
+  slug: polymaker
+name: Panchroma™ Celestial PLA Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6fe2d2ff'
+tags:
+  - glitter
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-celestial-pla-green/705e70c40884.png
+    type: unspecified
+properties:
+  density: 1.17
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

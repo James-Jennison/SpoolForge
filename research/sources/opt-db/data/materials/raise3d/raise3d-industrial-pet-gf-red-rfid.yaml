@@ -1,0 +1,19 @@
+uuid: fa40caa6-0787-5e84-9a37-ec5212381d13
+slug: raise3d-industrial-pet-gf-red-rfid
+brand:
+  slug: raise3d
+name: Industrial PET GF Red - RFID
+class: FFF
+type: PET
+abbreviation: PET
+primary_color:
+  color_rgba: '#ff2d21ff'
+tags:
+- contains_glass_fiber
+- abrasive
+- contains_glass
+properties:
+  density: 1.38
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-industrial-pet-gf-red-rfid/raise3d-industrial-pet-gf-red-rfid-0-e87b0114.jpg
+  type: unspecified

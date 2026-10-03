@@ -1,0 +1,21 @@
+uuid: 955ed223-5467-5bc7-80e6-241850483952
+slug: spectrum-asa-275-pacific-blue
+brand:
+  slug: spectrum
+name: ASA 275™ Pacific Blue
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#0099e6ff'
+properties:
+  density: 1.07
+  min_print_temperature: 200
+  max_print_temperature: 240
+  min_bed_temperature: 40
+  max_bed_temperature: 60
+tags:
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-asa-275-pacific-blue/spectrum-asa-275-pacific-blue-0-ce1a683f.jpg
+  type: unspecified

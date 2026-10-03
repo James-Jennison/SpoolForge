@@ -1,0 +1,14 @@
+{
+  "uuid": "67cf4b69-67c0-4c1b-bc90-452696d91d48",
+  "id": "sterling_wave",
+  "name": "Sterling Wave",
+  "color_hex": [
+    "#4C5051",
+    "#E0E0DC"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

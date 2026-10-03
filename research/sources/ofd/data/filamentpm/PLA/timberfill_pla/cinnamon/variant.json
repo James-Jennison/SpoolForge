@@ -1,0 +1,11 @@
+{
+  "uuid": "c9cb09b1-3959-4eea-a108-4dca24e7c1e5",
+  "id": "cinnamon",
+  "name": "Cinnamon",
+  "color_hex": "#C38C7B",
+  "traits": {
+    "imitates_wood": true,
+    "industrially_compostable": true,
+    "contains_wood": true
+  }
+}

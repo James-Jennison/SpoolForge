@@ -1,0 +1,14 @@
+uuid: 04fa81ca-4e00-58a2-ae8b-5266137b3ead
+slug: overture-pla-light-gray
+brand:
+  slug: overture
+name: PLA Light Gray
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c5c7c4ff'
+tags:
+- industrially_compostable
+photos: []
+properties: {}

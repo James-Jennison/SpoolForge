@@ -1,0 +1,14 @@
+{
+  "uuid": "ae7a2ddc-59a0-4a8a-9b89-8e0fcc9e257f",
+  "id": "galaxy_pla",
+  "name": "Galaxy PLA",
+  "diameter_tolerance": 0.02,
+  "density": 1.24,
+  "min_print_temperature": 185,
+  "max_print_temperature": 215,
+  "min_bed_temperature": 50,
+  "max_bed_temperature": 60,
+  "data_sheet_url": "https://www.formfutura.com/web/content/256560?download=true",
+  "safety_sheet_url": "https://www.formfutura.com/web/content/256559?download=true",
+  "discontinued": false
+}

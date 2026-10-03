@@ -1,0 +1,9 @@
+{
+  "uuid": "cd5da610-4f68-44ad-a3d8-ca9cabe7f36d",
+  "id": "silver",
+  "name": "Silver",
+  "color_hex": "#9C9D9D",
+  "traits": {
+    "matte": true
+  }
+}

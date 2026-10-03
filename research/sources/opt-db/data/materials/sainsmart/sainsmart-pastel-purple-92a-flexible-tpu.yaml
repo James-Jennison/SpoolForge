@@ -1,0 +1,12 @@
+uuid: 14ad4875-c116-57e6-a78b-fecef38844ba
+slug: sainsmart-pastel-purple-92a-flexible-tpu
+brand:
+  slug: sainsmart
+name: Pastel Purple 92A Flexible TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#8d65c7ff'
+properties:
+  hardness_shore_a: 92

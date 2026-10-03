@@ -1,0 +1,21 @@
+uuid: b4c967c6-6ebc-561d-9201-22ecddd68b62
+slug: spectrum-pla-pro-bahama-yellow
+brand:
+  slug: spectrum
+name: PLA Pro Bahama Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fad61bff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.22
+  min_print_temperature: 185
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-pro-bahama-yellow/spectrum-pla-pro-bahama-yellow-0-457c9c6a.jpg
+  type: unspecified

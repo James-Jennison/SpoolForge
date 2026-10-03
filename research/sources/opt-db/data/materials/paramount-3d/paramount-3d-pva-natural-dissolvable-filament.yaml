@@ -1,0 +1,13 @@
+uuid: 4c886afc-6221-5bde-8703-8fd097ef7f1f
+slug: paramount-3d-pva-natural-dissolvable-filament
+brand:
+  slug: paramount-3d
+name: PVA (Natural) Dissolvable Filament
+class: FFF
+type: PVA
+abbreviation: PVA
+primary_color:
+  color_rgba: '#dfdfd3ff'
+tags:
+- without_pigments
+properties: {}

@@ -1,0 +1,24 @@
+uuid: c10719da-2aca-5bc5-b024-359a4dc6890b
+slug: formfutura-stonefil-concrete
+brand:
+  slug: formfutura
+name: StoneFil Concrete
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#b6b9bdff'
+tags:
+  - contains_stone
+  - imitates_stone
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-stonefil-concrete/1204af883b53.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 225
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 40
+  drying_time: 360

@@ -1,0 +1,18 @@
+uuid: edfff2cf-7b10-5765-9a13-a95dc8b135c1
+slug: sovb-3d-fil-pla-vert-militaire
+brand:
+  slug: sovb-3d
+name: Fil PLA Vert militaire
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6e8451ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 180
+  max_print_temperature: 200
+  min_bed_temperature: 0
+  max_bed_temperature: 60

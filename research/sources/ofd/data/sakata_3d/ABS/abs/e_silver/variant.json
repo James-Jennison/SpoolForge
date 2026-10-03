@@ -1,0 +1,9 @@
+{
+  "uuid": "0217287a-a3e5-4615-84fd-aec7290e6821",
+  "id": "e_silver",
+  "name": "E Silver",
+  "color_hex": "#CACACA",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

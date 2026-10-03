@@ -1,0 +1,13 @@
+{
+  "uuid": "adc83357-b5f6-4d9e-a290-2f81669347ce",
+  "id": "magic_red_gold",
+  "name": "Magic Red Gold",
+  "color_hex": [
+    "#EC0000",
+    "#F6C500"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

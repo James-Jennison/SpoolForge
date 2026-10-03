@@ -1,0 +1,17 @@
+uuid: e2a3cf5a-9897-5f96-961c-0d4d1d77a363
+slug: esun-petg-orange
+brand:
+  slug: esun
+name: PETG Orange
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://www.amazon.com/eSUN-Filament-Dimensional-Accuracy-Printing/dp/B07FXC7GWH
+primary_color:
+  color_rgba: '#f67405ff'
+tags:
+  - translucent
+properties: {}
+photos:
+  - url: https://files.openprinttag.org/esun/esun-petg-orange/9886f7520bc6.jpg
+    type: unspecified

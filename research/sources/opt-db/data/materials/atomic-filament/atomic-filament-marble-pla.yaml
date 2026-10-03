@@ -1,0 +1,18 @@
+uuid: b933ddf0-ea2e-56f7-b887-e27abbae7f81
+slug: atomic-filament-marble-pla
+brand:
+  slug: atomic-filament
+name: Marble PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://atomicfilament.com/products/marble-pla-filament
+primary_color:
+  color_rgba: '#edf0f2ff'
+tags:
+- imitates_marble
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-marble-pla/a393b1272660.png
+  type: unspecified
+properties: {}

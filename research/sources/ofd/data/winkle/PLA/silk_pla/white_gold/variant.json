@@ -1,0 +1,9 @@
+{
+  "uuid": "d0b10f93-41fd-40f5-b4bf-0c0bb60481b7",
+  "id": "white_gold",
+  "name": "White Gold",
+  "color_hex": "#D6D7D8",
+  "traits": {
+    "silk": true
+  }
+}

@@ -1,0 +1,23 @@
+uuid: 3c205126-8eab-5b48-abf9-886ef76f519a
+slug: formfutura-easyfil-abs-silver
+brand:
+  slug: formfutura
+name: EasyFil ABS Silver
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#abacb0ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easyfil-abs-silver/9057d9bd26bf.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 100
+  max_bed_temperature: 100
+  drying_temperature: 40
+  drying_time: 360

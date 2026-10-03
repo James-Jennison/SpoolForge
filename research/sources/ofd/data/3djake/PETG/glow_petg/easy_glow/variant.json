@@ -1,0 +1,13 @@
+{
+  "uuid": "46be756d-0edc-406d-b42c-8baebd6286d4",
+  "id": "easy_glow",
+  "name": "easy Glow",
+  "color_hex": [
+    "#62E480",
+    "#EFEADF"
+  ],
+  "traits": {
+    "glow": true,
+    "illuminescent_color_change": true
+  }
+}

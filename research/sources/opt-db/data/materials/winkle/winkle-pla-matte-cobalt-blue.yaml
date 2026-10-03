@@ -1,0 +1,15 @@
+uuid: cea63356-25f6-5b1c-8f38-fbe82031c16f
+slug: winkle-pla-matte-cobalt-blue
+brand:
+  slug: winkle
+name: PLA Matte Cobalt Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0066d9ff'
+tags:
+- matte
+- industrially_compostable
+properties:
+  density: 1.24

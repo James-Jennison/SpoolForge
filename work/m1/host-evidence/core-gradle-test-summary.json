@@ -1,0 +1,23 @@
+[
+  {
+    "name": "net.jamesjennison.spoolio.core.CatalogGenerationStoreTest",
+    "tests": "2",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  {
+    "name": "net.jamesjennison.spoolio.core.OpenSpoolCodecTest",
+    "tests": "10",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  {
+    "name": "net.jamesjennison.spoolio.core.WriteStateMachineTest",
+    "tests": "9",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  }
+]

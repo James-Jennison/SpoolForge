@@ -1,0 +1,13 @@
+uuid: f2c9a404-1025-52f4-8907-a19dcd87b311
+slug: matter3d-inc-basics-series-pla-aqua
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA Aqua
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#74e5eaff'
+tags:
+- industrially_compostable
+properties: {}

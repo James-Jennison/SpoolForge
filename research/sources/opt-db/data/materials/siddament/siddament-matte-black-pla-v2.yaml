@@ -1,0 +1,14 @@
+uuid: abf26b49-3c3a-543c-ad0c-f005c0112e69
+slug: siddament-matte-black-pla-v2
+brand:
+  slug: siddament
+name: Matte Black PLA V2
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

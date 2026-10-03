@@ -1,0 +1,17 @@
+uuid: e317b2ad-d75a-5b3e-bfbb-367539e0e480
+slug: qidi-tech-pla-basic-white
+brand:
+  slug: qidi
+name: PLA Basic White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f2f0ebff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.17
+photos:
+- url: https://files.openprinttag.org/qidi/qidi-tech-pla-basic-white/qidi-tech-pla-basic-white-0-f68943a7.jpg
+  type: unspecified

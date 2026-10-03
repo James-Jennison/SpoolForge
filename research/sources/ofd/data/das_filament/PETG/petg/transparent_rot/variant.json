@@ -1,0 +1,9 @@
+{
+  "uuid": "1fb63f9e-bd37-481a-b640-2a9b50c51ea7",
+  "id": "transparent_rot",
+  "name": "Transparent Rot",
+  "color_hex": "#AC1A17",
+  "traits": {
+    "translucent": true
+  }
+}

@@ -1,0 +1,13 @@
+uuid: 6f4f6861-e94d-5cd1-9d47-047efb2f52a4
+slug: tinmorry-rapid-pla-black
+brand:
+  slug: tinmorry
+name: Rapid PLA Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- industrially_compostable
+properties: {}

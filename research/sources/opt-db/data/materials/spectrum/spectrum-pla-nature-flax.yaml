@@ -1,0 +1,20 @@
+uuid: 06f5c033-8408-53cf-8d24-77958d340a14
+slug: spectrum-pla-nature-flax
+brand:
+  slug: spectrum
+name: PLA Nature Flax
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ad7441ff'
+tags:
+- contains_organic_material
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-nature-flax/spectrum-pla-nature-flax-0-d6966ef1.jpg
+  type: unspecified

@@ -1,0 +1,13 @@
+{
+  "uuid": "e18e7a0f-7f15-4728-99fc-117a256f58f6",
+  "id": "mermaid_mixer",
+  "name": "Mermaid Mixer",
+  "color_hex": [
+    "#E65FE2",
+    "#97D7D0"
+  ],
+  "traits": {
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

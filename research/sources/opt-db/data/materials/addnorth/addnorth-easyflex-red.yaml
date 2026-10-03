@@ -1,0 +1,18 @@
+uuid: f83d5305-d4c1-5b98-b267-2abf0101e33b
+slug: addnorth-easyflex-red
+brand:
+  slug: addnorth
+name: EasyFlex Red
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#c01616ff'
+properties:
+  hardness_shore_a: 95.0
+  min_print_temperature: 230
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-easyflex-red/009b7645b64e.png
+    type: unspecified

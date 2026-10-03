@@ -1,0 +1,21 @@
+uuid: e60464b2-1905-5225-8849-1d1ddc801b13
+slug: spectrum-pctg-premium-transparent-green
+brand:
+  slug: spectrum
+name: PCTG Premium Transparent Green
+class: FFF
+type: PCTG
+abbreviation: PCTG
+primary_color:
+  color_rgba: '#9fec41ff'
+tags:
+- translucent
+properties:
+  density: 1.23
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 60
+  max_bed_temperature: 100
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pctg-premium-transparent-green/spectrum-pctg-premium-transparent-green-0-3361c92d.jpg
+  type: unspecified

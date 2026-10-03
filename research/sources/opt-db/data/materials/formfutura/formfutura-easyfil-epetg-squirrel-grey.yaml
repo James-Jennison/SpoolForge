@@ -1,0 +1,19 @@
+uuid: fdf4c004-6f79-56b8-8aba-bc9b6bfb8a58
+slug: formfutura-easyfil-epetg-squirrel-grey
+brand:
+  slug: formfutura
+name: EasyFil ePETG Squirrel Grey
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#6f727eff'
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easyfil-epetg-squirrel-grey/ee5a1ba659b4.png
+    type: unspecified
+properties:
+  density: 1.29
+  min_print_temperature: 235
+  max_print_temperature: 275
+  min_bed_temperature: 70
+  max_bed_temperature: 90

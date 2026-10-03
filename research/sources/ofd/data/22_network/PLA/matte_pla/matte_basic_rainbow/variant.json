@@ -1,0 +1,10 @@
+{
+  "uuid": "c7e3c23b-2a7e-4e24-89e2-5bd5c9fb4560",
+  "id": "matte_basic_rainbow",
+  "name": "Matte Basic Rainbow",
+  "color_hex": "#FF0000",
+  "traits": {
+    "matte": true,
+    "gradual_color_change": true
+  }
+}

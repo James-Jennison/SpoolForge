@@ -1,0 +1,20 @@
+{
+  "finding_id": "filamajig-label-gemini-ai-fallback-conflict",
+  "change_id": "filamajig-label-prototype-20260907",
+  "cycle_id": "review-cycle-ac300cbe1801",
+  "reviewer": "gemini",
+  "severity": "HIGH",
+  "category": "gtin-conflict",
+  "summary": "After the first conflict fix, multiple local GTINs could still fall back to a populated AI GTIN.",
+  "claim": "The review warned that no GTIN was selected while a GTIN was actually populated.",
+  "evidence": {
+    "source": "review-cycle-ac300cbe1801"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "Force selected GTIN null whenever more than one distinct local GTIN exists.",
+  "suggested_validation": "Regression covers multiple local GTINs with populated AI GTIN and zero-local AI fallback.",
+  "reviewer_confidence": "HIGH"
+}

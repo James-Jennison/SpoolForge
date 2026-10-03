@@ -1,0 +1,108 @@
+{
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 2959,
+    "input_tokens_details": {
+      "cache_write_tokens": 2956,
+      "cached_tokens": 0
+    },
+    "output_tokens": 500,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 3459
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "Zew",
+      "confidence": 0.99,
+      "evidence": "\u201cZew\u201d is visibly printed on the main package label.",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "product": {
+      "value": "3D Printing Filament for D FEM Printer / Fire Engine Red",
+      "confidence": 0.88,
+      "evidence": "Main label visibly reads \u201c3D Color 3D Printing Filament ... D FEM Printer-Fire Engine Red\u201d; some wording is partially unclear.",
+      "basis": "printed"
+    },
+    "material": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "color": {
+      "value": "Fire Engine Red",
+      "confidence": 0.99,
+      "evidence": "\u201cFire Engine Red\u201d is visibly printed on the main label.",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "net_weight_g": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.91,
+      "evidence": "A barcode is visible, but no legible retail GTIN digits are printed alongside it.",
+      "basis": "absent"
+    },
+    "sku": {
+      "value": "X004444MZE3",
+      "confidence": 0.99,
+      "evidence": "The alphanumeric code \u201cX004444MZE3\u201d is printed beneath the main barcode.",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [],
+    "needs_user_review": [
+      "The product-description text between \u201cFilament\u201d and \u201cFire Engine Red\u201d is partially unclear; verify if an exact transcription is needed.",
+      "The barcode may encode a marketplace identifier, but it was not decoded from the image."
+    ]
+  }
+}

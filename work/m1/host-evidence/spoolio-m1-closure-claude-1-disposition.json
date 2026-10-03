@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-closure-claude-1",
+  "disposition": "CONFIRMED",
+  "reason": "Shared execute() now guards every command and onTag; all four UI command paths tested after shutdown. Pending focused closure review.",
+  "evidence_reference": "work/m1/lifecycle-closure-review.json; work/m1/host-evidence/lifecycle-closure-build.log",
+  "resolved": false
+}

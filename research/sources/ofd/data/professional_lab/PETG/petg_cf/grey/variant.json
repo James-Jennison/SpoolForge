@@ -1,0 +1,11 @@
+{
+  "uuid": "9e0e8dcd-4c5d-4199-a595-31c0cef1e622",
+  "id": "grey",
+  "name": "Grey",
+  "color_hex": "#6F7074",
+  "discontinued": false,
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

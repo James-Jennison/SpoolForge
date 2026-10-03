@@ -1,0 +1,23 @@
+uuid: 52cb6d53-5f64-5d5a-a3d7-50b72e96ba34
+slug: polymaker-polylite-pla-teal
+brand:
+  slug: polymaker
+name: PolyLite™ PLA Teal
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#48b9c2ff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polylite-pla-teal/95f2df57812e.png
+    type: unspecified
+properties:
+  density: 1.17
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

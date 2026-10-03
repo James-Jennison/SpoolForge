@@ -1,0 +1,19 @@
+uuid: 3f49e519-21ed-5c77-81f3-bba5eee3d38d
+slug: hatchbox-pink-petg
+brand:
+  slug: hatchbox
+name: Pink PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#fc6d8eff'
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-pink-petg/8b0e4143cf14.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 0
+  max_bed_temperature: 85

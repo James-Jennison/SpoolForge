@@ -1,0 +1,21 @@
+uuid: ce11ca9f-a3a8-5c62-a105-203af615e60c
+slug: formfutura-volcano-pla-red
+brand:
+  slug: formfutura
+name: Volcano PLA Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e72f1dff'
+tags:
+  - matte
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-volcano-pla-red/89d1bc02c601.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 220
+  max_print_temperature: 255
+  max_bed_temperature: 60

@@ -1,0 +1,10 @@
+{
+  "uuid": "dff64e23-b928-4bf9-8f98-4327bffc6cd1",
+  "id": "recycled_translucent_honey",
+  "name": "Recycled Translucent Honey",
+  "color_hex": "#FF9A14",
+  "traits": {
+    "translucent": true,
+    "recycled": true
+  }
+}

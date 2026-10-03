@@ -1,0 +1,13 @@
+{
+  "uuid": "86fe3594-3a76-4fff-94f8-8da062a6885c",
+  "id": "black_gold",
+  "name": "Black & Gold",
+  "color_hex": [
+    "#000000",
+    "#F6C500"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

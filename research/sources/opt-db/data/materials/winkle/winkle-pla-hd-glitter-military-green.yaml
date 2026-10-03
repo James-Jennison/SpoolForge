@@ -1,0 +1,15 @@
+uuid: b37671c5-7fcd-5294-90fd-01d1de6e1415
+slug: winkle-pla-hd-glitter-military-green
+brand:
+  slug: winkle
+name: PLA HD Glitter Military Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6e8451ff'
+tags:
+- glitter
+- industrially_compostable
+properties:
+  density: 1.24

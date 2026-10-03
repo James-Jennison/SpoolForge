@@ -1,0 +1,13 @@
+{
+  "uuid": "20f1357c-b525-47b7-887d-ecd67d823c3a",
+  "id": "bluegreen",
+  "name": "Bluegreen",
+  "color_hex": [
+    "#32A584",
+    "#3292B2"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

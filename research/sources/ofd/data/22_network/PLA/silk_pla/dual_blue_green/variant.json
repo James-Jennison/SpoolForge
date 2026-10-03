@@ -1,0 +1,10 @@
+{
+  "uuid": "d80de28a-ae32-432f-b720-1ce7f9e6a314",
+  "id": "dual_blue_green",
+  "name": "Dual Blue Green",
+  "color_hex": "#0000FF",
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

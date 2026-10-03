@@ -1,0 +1,13 @@
+uuid: 25350842-3fb1-5e6f-a721-346410ebc972
+slug: print-with-smile-pla-fresh-mint
+brand:
+  slug: print-with-smile
+name: PLA Fresh MINT
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#97d7d0ff'
+tags:
+- industrially_compostable
+properties: {}

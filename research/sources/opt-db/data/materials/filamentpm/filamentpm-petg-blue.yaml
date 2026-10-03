@@ -1,0 +1,19 @@
+uuid: 19ae19c8-e1d3-58ef-bdd6-85262219237d
+slug: filamentpm-petg-blue
+brand:
+  slug: filamentpm
+name: PETG - Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#1b3373ff'
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-petg-blue/ed2d0514a163.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 90

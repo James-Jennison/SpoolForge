@@ -1,0 +1,14 @@
+uuid: 3f951691-43d6-5b89-9d97-eef6062102c7
+slug: matter3d-inc-performance-pla-white
+brand:
+  slug: matter3d-inc
+name: Performance PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- high_temperature
+- industrially_compostable
+properties: {}

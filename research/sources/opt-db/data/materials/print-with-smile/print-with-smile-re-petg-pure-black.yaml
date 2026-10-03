@@ -1,0 +1,13 @@
+uuid: 22c7e5dc-141a-57a2-9036-40f5136c8bfa
+slug: print-with-smile-re-petg-pure-black
+brand:
+  slug: print-with-smile
+name: RE-PETG Pure BLACK
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- recycled
+properties: {}

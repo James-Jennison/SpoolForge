@@ -1,0 +1,21 @@
+{
+  "finding_id": "filamajig-identity-deepseek-2",
+  "change_id": "filamajig-identity-camera-20260907",
+  "cycle_id": "review-cycle-f05713ab14ba",
+  "reviewer": "deepseek",
+  "severity": "LOW",
+  "category": "Product identity / Store metadata",
+  "summary": "The Google Play Store listing name requirement 'Filamajig NFC: Spool Tagger' is not evidenced as applied to the actual store listing; only a string resource exists in the APK. The verification script checks the presence of the string but does not verify the external store state.",
+  "claim": "The public store listing may still display the old prototype name or an inconsistent name, causing user confusion and failing the product identity requirement from the owner.",
+  "evidence": {
+    "source": "`strings.xml` contains `<string name=\"store_listing_name\">Filamajig NFC: Spool Tagger</string>`. The `verification` script asserts this string exists, but does not query the Play Store listing. The package evidence does not include Play Console screenshots or API responses. Owner requirement explicitly states 'Store name Filamajig NFC: Spool Tagger'.",
+    "response_sha256": "a719b73c040844c136e6b7eb71370dd0e62eca5bbadb2e0ac630b20a64b175fe"
+  },
+  "affected_components": [
+    "app",
+    "docs"
+  ],
+  "suggested_remediation": "Provide evidence from Google Play Console that the store listing name has been updated, or if not possible within this review, add a post-submission acceptance criterion that the store name is verified externally.",
+  "suggested_validation": "Retrieve the Play Store listing (e.g., via API, web scraping, or console screenshot) and assert the title equals 'Filamajig NFC: Spool Tagger'.",
+  "reviewer_confidence": "MEDIUM"
+}

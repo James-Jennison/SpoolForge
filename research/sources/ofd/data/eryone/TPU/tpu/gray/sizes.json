@@ -1,0 +1,24 @@
+[
+  {
+    "uuid": "c4665185-d202-45c0-a939-e402c7dc905b",
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "eryone",
+        "url": "https://eryone3d.com/products/tpu"
+      }
+    ]
+  },
+  {
+    "uuid": "20f46441-756f-4943-b1cd-e5f56d97759f",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "eryone",
+        "url": "https://eryone3d.com/products/tpu"
+      }
+    ]
+  }
+]

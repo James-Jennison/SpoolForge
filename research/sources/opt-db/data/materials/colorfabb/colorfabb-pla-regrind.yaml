@@ -1,0 +1,18 @@
+uuid: 705b0e35-d8aa-5dbc-96ba-e7b38af1963e
+slug: colorfabb-pla-regrind
+brand:
+  slug: colorfabb
+name: PLA Regrind
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://colorfabb.com/pla-regrind?_gl=1*1tl4lxw*_up*MQ..*_gs*MQ..&gclid=EAIaIQobChMI88_m6fuXkgMVR4KDBx24VBIJEAAYASAAEgJzBPD_BwE&gbraid=0AAAAADn-1hRSsWdKOKuS9wep7_VM9u0XX
+primary_color:
+  color_rgba: '#6a6c6eff'
+tags:
+- recycled
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/colorfabb/colorfabb-pla-regrind/97adeb2ab293.png
+  type: unspecified
+properties: {}

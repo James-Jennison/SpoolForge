@@ -1,0 +1,20 @@
+uuid: 4b8fed01-dace-5575-bcd4-f3a1cde2584e
+slug: filamentpm-ppjet-polypropylene-natur
+brand:
+  slug: filamentpm
+name: PPJet (polypropylene) - Natur
+class: FFF
+type: PP
+abbreviation: PP
+primary_color:
+  color_rgba: '#d9d8deff'
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-ppjet-polypropylene-natur/78ac9f371cf0.png
+    type: unspecified
+properties:
+  density: 0.89
+  hardness_shore_d: 41.0
+  min_print_temperature: 210
+  max_print_temperature: 230
+  min_bed_temperature: 100
+  max_bed_temperature: 110

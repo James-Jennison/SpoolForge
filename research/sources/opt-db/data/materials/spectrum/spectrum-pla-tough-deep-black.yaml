@@ -1,0 +1,20 @@
+uuid: 5f82efaf-ec4f-50ff-831a-914795bf4851
+slug: spectrum-pla-tough-deep-black
+brand:
+  slug: spectrum
+name: PLA Tough Deep Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.2
+  min_print_temperature: 190
+  max_print_temperature: 230
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-tough-deep-black/spectrum-pla-tough-deep-black-0-2fa6acd9.jpg
+  type: unspecified

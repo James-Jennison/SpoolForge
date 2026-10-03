@@ -1,0 +1,9 @@
+{
+  "uuid": "5eba6344-565c-4956-9994-1dd939394105",
+  "id": "transparent_green",
+  "name": "Transparent Green",
+  "color_hex": "#70FA00",
+  "traits": {
+    "translucent": true
+  }
+}

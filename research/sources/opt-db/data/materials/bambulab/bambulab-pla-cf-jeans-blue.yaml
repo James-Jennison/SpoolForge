@@ -1,0 +1,25 @@
+uuid: 2478147c-bb93-5a9d-8d2d-10e24a7a64c0
+slug: bambulab-pla-cf-jeans-blue
+brand:
+  slug: bambulab
+name: PLA-CF Jeans Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6e88bcff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-cf-jeans-blue/002c160e3713.png
+    type: unspecified
+properties:
+  density: 1.22
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45

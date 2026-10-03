@@ -1,0 +1,12 @@
+{
+  "uuid": "8c47d5f5-8854-4025-88cd-55cab77c965b",
+  "id": "brass_filled_metal_composite_ht",
+  "name": "Brass-filled Metal Composite HT",
+  "color_hex": "#A6884C",
+  "traits": {
+    "imitates_metal": true,
+    "industrially_compostable": true,
+    "abrasive": true,
+    "high_temperature": true
+  }
+}

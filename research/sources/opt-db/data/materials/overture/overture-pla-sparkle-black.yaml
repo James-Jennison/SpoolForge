@@ -1,0 +1,14 @@
+uuid: 262a3e34-2029-58e1-bb21-1fb86521e4c4
+slug: overture-pla-sparkle-black
+brand:
+  slug: overture
+name: PLA Sparkle Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- glitter
+- industrially_compostable
+properties: {}

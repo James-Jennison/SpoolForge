@@ -1,0 +1,17 @@
+uuid: fc4c1a9a-07cd-5fc4-9b87-41fd26961b0e
+slug: henkel-loctite-3d-3843
+brand:
+  slug: henkel
+name: LOCTITE 3D 3843
+class: SLA
+abbreviation: ''
+url: https://www.loctiteam.com/3843_tough/
+primary_color:
+  color_rgba: '#595959ff'
+properties:
+  density: 1.07
+  cure_wavelength: 405
+  viscosity_18c: 863
+  viscosity_25c: 510
+  viscosity_40c: 204
+  viscosity_60c: 81

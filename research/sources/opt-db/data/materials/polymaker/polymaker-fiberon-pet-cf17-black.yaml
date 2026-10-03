@@ -1,0 +1,25 @@
+uuid: d1695a8a-9888-5fcd-a244-2b8d618573e7
+slug: polymaker-fiberon-pet-cf17-black
+brand:
+  slug: polymaker
+name: Fiberon™ PET-CF17 Black
+class: FFF
+type: PET
+abbreviation: PET
+primary_color:
+  color_rgba: '#302e2fff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-fiberon-pet-cf17-black/f1c532f9d16f.png
+    type: unspecified
+properties:
+  density: 1.34
+  min_print_temperature: 270
+  max_print_temperature: 300
+  min_bed_temperature: 70
+  max_bed_temperature: 80
+  drying_temperature: 100
+  drying_time: 600

@@ -1,0 +1,311 @@
+{
+  "repo": "Molodos/anycubic-nfc-filament",
+  "sha": "df50f8a896eb43c2b15d0f7cd716c8dcb5e8b1e8",
+  "date": "2025-05-24T11:06:23Z",
+  "license": null,
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "584611c3abd9153c5b6369a3d17f5e6fbc6a1e25",
+      "size": 45,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/584611c3abd9153c5b6369a3d17f5e6fbc6a1e25"
+    },
+    {
+      "path": "AnycubicNFCApp.spec",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99c9bb93cf856383a1764506826dd4f200d8a6c5",
+      "size": 1804,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/99c9bb93cf856383a1764506826dd4f200d8a6c5"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c216888b88540731a040e487dbaac5712e6c2f63",
+      "size": 8433,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/c216888b88540731a040e487dbaac5712e6c2f63"
+    },
+    {
+      "path": "anycubic_nfc_app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec54d5fc903aa9320941645ebf9c1510cffe57e0",
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/trees/ec54d5fc903aa9320941645ebf9c1510cffe57e0"
+    },
+    {
+      "path": "anycubic_nfc_app/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "anycubic_nfc_app/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9fbb2912ba43795bb4821c34850641f11ba51f1",
+      "size": 138,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/d9fbb2912ba43795bb4821c34850641f11ba51f1"
+    },
+    {
+      "path": "anycubic_nfc_app/nfc_manager",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31be7b4c1861980fd4cc0088013a7eac9c9f3f2c",
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/trees/31be7b4c1861980fd4cc0088013a7eac9c9f3f2c"
+    },
+    {
+      "path": "anycubic_nfc_app/nfc_manager/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19b6df1287c568a87ed46f3d712c6bc2a0c30a5a",
+      "size": 72,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/19b6df1287c568a87ed46f3d712c6bc2a0c30a5a"
+    },
+    {
+      "path": "anycubic_nfc_app/nfc_manager/nfc_reader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d9b34842bbdefdceb228fa55daf5ae505a7d987",
+      "size": 6096,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/0d9b34842bbdefdceb228fa55daf5ae505a7d987"
+    },
+    {
+      "path": "anycubic_nfc_app/nfc_manager/spool_reader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c04a465f2572dadd830c038610207d7e1a591d67",
+      "size": 12719,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/c04a465f2572dadd830c038610207d7e1a591d67"
+    },
+    {
+      "path": "anycubic_nfc_app/static",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5350fb770ef1a635f7a2952aaabd7a2d86554f8e",
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/trees/5350fb770ef1a635f7a2952aaabd7a2d86554f8e"
+    },
+    {
+      "path": "anycubic_nfc_app/static/images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd96712554f2d282ff9bd453fd93bf466e507023",
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/trees/fd96712554f2d282ff9bd453fd93bf466e507023"
+    },
+    {
+      "path": "anycubic_nfc_app/static/images/favicon",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0b4129523b604a172f2ddf44eed425608d80b9a1",
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/trees/0b4129523b604a172f2ddf44eed425608d80b9a1"
+    },
+    {
+      "path": "anycubic_nfc_app/static/images/favicon/apple-touch-icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "219cfb83a63db2be84c6b6f9a59d3f1f64672dd2",
+      "size": 11720,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/219cfb83a63db2be84c6b6f9a59d3f1f64672dd2"
+    },
+    {
+      "path": "anycubic_nfc_app/static/images/favicon/favicon-96x96.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac3f965c9c41e948be377ee5b210492441fbc950",
+      "size": 7076,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/ac3f965c9c41e948be377ee5b210492441fbc950"
+    },
+    {
+      "path": "anycubic_nfc_app/static/images/favicon/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12413a584e6aad7b29a2c466a12577f2f34d44e2",
+      "size": 15086,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/12413a584e6aad7b29a2c466a12577f2f34d44e2"
+    },
+    {
+      "path": "anycubic_nfc_app/static/images/favicon/favicon.svg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "361ec269d377e87adce1c07466190e71b5ffb13b",
+      "size": 24683,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/361ec269d377e87adce1c07466190e71b5ffb13b"
+    },
+    {
+      "path": "anycubic_nfc_app/static/images/favicon/site.webmanifest",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b67675e4dc01c1664e0f43650662c0727c31fcd3",
+      "size": 453,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/b67675e4dc01c1664e0f43650662c0727c31fcd3"
+    },
+    {
+      "path": "anycubic_nfc_app/static/images/favicon/web-app-manifest-192x192.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4a4bf4b2b7cd38bd1da4082b7fbdaf469155b5e",
+      "size": 11770,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/d4a4bf4b2b7cd38bd1da4082b7fbdaf469155b5e"
+    },
+    {
+      "path": "anycubic_nfc_app/static/images/favicon/web-app-manifest-512x512.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c60b76f4e321cb4015de6007f96d23a03a02a312",
+      "size": 36755,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/c60b76f4e321cb4015de6007f96d23a03a02a312"
+    },
+    {
+      "path": "anycubic_nfc_app/static/images/nfc.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9be9c7c2d570e407118731a3f349c5476a4e4dad",
+      "size": 10313,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/9be9c7c2d570e407118731a3f349c5476a4e4dad"
+    },
+    {
+      "path": "anycubic_nfc_app/static/script",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5204a7f145f96423d9691e0095b3b5b2c84aad01",
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/trees/5204a7f145f96423d9691e0095b3b5b2c84aad01"
+    },
+    {
+      "path": "anycubic_nfc_app/static/script/color-picker.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e10ca8e470a7decdbe4c217b9fb9fb3e3ff971ff",
+      "size": 1248,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/e10ca8e470a7decdbe4c217b9fb9fb3e3ff971ff"
+    },
+    {
+      "path": "anycubic_nfc_app/static/script/optional-fields.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3aba40bfa05dcc83e2fa8e11bf3d4ca98ae9bc9",
+      "size": 392,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/b3aba40bfa05dcc83e2fa8e11bf3d4ca98ae9bc9"
+    },
+    {
+      "path": "anycubic_nfc_app/static/script/presets.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c41f9c7e608486ecd25c705b62356995e6c66fa",
+      "size": 3235,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/7c41f9c7e608486ecd25c705b62356995e6c66fa"
+    },
+    {
+      "path": "anycubic_nfc_app/static/script/websocket.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f8a7fd278edb0697896f799cbdc2349e28c5674",
+      "size": 3033,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/0f8a7fd278edb0697896f799cbdc2349e28c5674"
+    },
+    {
+      "path": "anycubic_nfc_app/static/style.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f104c1b73aabd97fabe3d2dc4ca593aa25d55f4f",
+      "size": 749,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/f104c1b73aabd97fabe3d2dc4ca593aa25d55f4f"
+    },
+    {
+      "path": "anycubic_nfc_app/templates",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a6c0c58ae585376a0575e5556e9262ae3dfe7c5",
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/trees/9a6c0c58ae585376a0575e5556e9262ae3dfe7c5"
+    },
+    {
+      "path": "anycubic_nfc_app/templates/components",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "08b4cf557fbd07a2866c75569e116fb96a0db4ca",
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/trees/08b4cf557fbd07a2866c75569e116fb96a0db4ca"
+    },
+    {
+      "path": "anycubic_nfc_app/templates/components/foot.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6b8150025e2f4c5fc683b04d2082f5fbae0a4eb",
+      "size": 1319,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/d6b8150025e2f4c5fc683b04d2082f5fbae0a4eb"
+    },
+    {
+      "path": "anycubic_nfc_app/templates/components/head.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0e0501aef9ceb6bf3d3adda7196703d4c90e8fc",
+      "size": 1029,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/c0e0501aef9ceb6bf3d3adda7196703d4c90e8fc"
+    },
+    {
+      "path": "anycubic_nfc_app/templates/root.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45fa761a8ca69412222fb21f1f820e159b608f84",
+      "size": 12347,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/45fa761a8ca69412222fb21f1f820e159b608f84"
+    },
+    {
+      "path": "anycubic_nfc_app/web_app.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18878874aced805775a87a22e5b9cf8c5d8d1d8a",
+      "size": 7591,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/18878874aced805775a87a22e5b9cf8c5d8d1d8a"
+    },
+    {
+      "path": "format.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e21a86b04f70baf863857e6307576d5690727526",
+      "size": 6897,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/e21a86b04f70baf863857e6307576d5690727526"
+    },
+    {
+      "path": "readme_images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cdd466f0381e70d112e8ddd9ac1e1b5bfacdf0be",
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/trees/cdd466f0381e70d112e8ddd9ac1e1b5bfacdf0be"
+    },
+    {
+      "path": "readme_images/nfc_app_main.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "957e22a3e6b394d869e12c940e456ae95dbe1dad",
+      "size": 75452,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/957e22a3e6b394d869e12c940e456ae95dbe1dad"
+    },
+    {
+      "path": "readme_images/nfc_app_write.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "042cf97d9f942031c20a5422d4b04714c57bb71e",
+      "size": 99325,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/042cf97d9f942031c20a5422d4b04714c57bb71e"
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bc3db908d6e6265776afd0a34a4d7853075ee46",
+      "size": 58,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/2bc3db908d6e6265776afd0a34a4d7853075ee46"
+    },
+    {
+      "path": "run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9fbb2912ba43795bb4821c34850641f11ba51f1",
+      "size": 138,
+      "url": "https://api.github.com/repos/Molodos/anycubic-nfc-filament/git/blobs/d9fbb2912ba43795bb4821c34850641f11ba51f1"
+    }
+  ]
+}

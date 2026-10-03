@@ -1,0 +1,23 @@
+uuid: 5322e1ee-35fc-5d15-82b3-7371ac376633
+slug: formfutura-easyfil-abs-magenta
+brand:
+  slug: formfutura
+name: EasyFil ABS Magenta
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#c80181ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easyfil-abs-magenta/7193c6e00c25.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 100
+  max_bed_temperature: 100
+  drying_temperature: 40
+  drying_time: 360

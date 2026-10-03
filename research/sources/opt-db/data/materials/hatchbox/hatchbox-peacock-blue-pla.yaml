@@ -1,0 +1,21 @@
+uuid: 2aedf715-f9ac-533f-93f3-d5c13392a54f
+slug: hatchbox-peacock-blue-pla
+brand:
+  slug: hatchbox
+name: Peacock Blue PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0099e6ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-peacock-blue-pla/d80fba0f3f5a.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 180
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 60

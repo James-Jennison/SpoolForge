@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-gtin-final-v2-deepseek-4",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-7e324a5f3168",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Package identity / OPT package_id",
+  "summary": "For OPT candidates, the verifier only asserts that `package_id` starts with 'opt:' and does not recompute or verify the exact `package_id` hash derived from the `record_pointer`. Therefore, an OPT `package_id` can be altered without failing verification.",
+  "claim": "OPT package identity is not independently proven, so candidate uniqueness and provenance could be broken if `package_id` is corrupted. For example, two candidates with the same `source_record` UUID but different `record_pointer`s could be merged or duplicated.",
+  "evidence": {
+    "source": "Verifier code: `else: assert pid.startswith(source+':')` applies to opt; for community it later asserts exact `pid==community_package_id(...)`, but for opt there is no exact check. Builder's `package_identity` for OPT is `source + ':' + identity + ':' + hashlib.sha256(pointer).hexdigest()[:12]`, a deterministic function of pointer. Verifier never recomputes it.",
+    "response_sha256": "964a15670621e3c9b422b701411c7242e61613d026b2db884499462755cbed26"
+  },
+  "affected_components": [
+    "tools",
+    "app"
+  ],
+  "suggested_remediation": "Add explicit verification for OPT: recompute expected `package_id` from source='opt', identity=`e['source_record']`, pointer=`e['record_pointer']` (using the builder's `package_identity` logic) and assert equality with the stored `pid`. Similarly enforce exact `package_id` for any new sources.",
+  "suggested_validation": "Mutate an OPT candidate's `package_id` suffix (e.g., change one hex character) while leaving `source_record` and GTIN unchanged; verifier must reject. Verify that two OPT candidates with same `source_record` UUID but different `record_pointer` produce different expected `package_id`s.",
+  "reviewer_confidence": "MEDIUM"
+}

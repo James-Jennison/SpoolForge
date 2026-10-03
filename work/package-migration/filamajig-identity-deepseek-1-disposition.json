@@ -1,0 +1,7 @@
+{
+  "finding_id": "filamajig-identity-deepseek-1",
+  "disposition": "CONFIRMED",
+  "reason": "Scanner policy now accepts only EAN-8, EAN-13, UPC-A, expanded UPC-E, ITF-14, GS1-128 AI (01), and checksum-valid numeric QR. Code39, Codabar, plain Code128, short ITF, arbitrary QR, URLs, and FNSKU are rejected with focused tests.",
+  "evidence_reference": "app/src/main/kotlin/net/jamesjennison/filamajignfc/BarcodeCamera.kt; app/src/test/kotlin/net/jamesjennison/filamajignfc/BarcodeCameraTest.kt",
+  "resolved": true
+}

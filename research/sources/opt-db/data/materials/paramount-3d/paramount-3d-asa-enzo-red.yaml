@@ -1,0 +1,11 @@
+uuid: 1d63a4b0-bec3-55e3-915f-b7f514661665
+slug: paramount-3d-asa-enzo-red
+brand:
+  slug: paramount-3d
+name: ASA (Enzo Red)
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#e72f1dff'
+properties: {}

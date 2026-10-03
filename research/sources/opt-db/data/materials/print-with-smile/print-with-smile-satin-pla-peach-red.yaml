@@ -1,0 +1,13 @@
+uuid: 79cd6d0a-3e53-54b1-aa2a-7c7bf9394165
+slug: print-with-smile-satin-pla-peach-red
+brand:
+  slug: print-with-smile
+name: SATIN PLA Peach RED
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fc496dff'
+tags:
+- industrially_compostable
+properties: {}

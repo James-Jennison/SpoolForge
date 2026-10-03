@@ -1,0 +1,11 @@
+uuid: 04bdf7e2-951f-5b53-a247-2ffef14eec34
+slug: paramount-3d-petg-enzo-red
+brand:
+  slug: paramount-3d
+name: PETG (Enzo Red)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e03f26ff'
+properties: {}

@@ -1,0 +1,13 @@
+uuid: be20ccde-6e03-5217-8fc9-422b7376550d
+slug: recreus-pet-g-hf-transparent
+brand:
+  slug: recreus
+name: PET-G HF Transparent
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e4e7e5ff'
+tags:
+- transparent
+properties: {}

@@ -1,0 +1,25 @@
+uuid: dc2f1c28-df13-5c46-b26a-4c129ce1f2e6
+slug: bambulab-petg-cf-titan-gray
+brand:
+  slug: bambulab
+name: PETG-CF Titan Gray
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#565656ff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-cf-titan-gray/6d1b612e2b48.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

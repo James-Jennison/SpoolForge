@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-deepseek-1",
+  "disposition": "REJECTED",
+  "reason": "NOT APPLICABLE: Owner requires exact package selection, not equality-only search. Prefix discovery plus exact package identity is intentional; observed SUNLU Orange selection is exact.",
+  "evidence_reference": "work/m1/host-evidence/remediation-round3-build.log; app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt; work/m1/host-evidence/migrated-user-data/summary.json",
+  "resolved": true
+}

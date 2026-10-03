@@ -1,0 +1,18 @@
+uuid: 6918724c-ca98-576e-837b-279c927b19e5
+slug: atomic-filament-dark-blue-carbon-fiber-extreme-petg-pro
+brand:
+  slug: atomic-filament
+name: Dark Blue CARBON FIBER Extreme PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/dark-blue-carbon-fiber-extreme-petg
+primary_color:
+  color_rgba: '#3b3f6bff'
+tags:
+- contains_carbon_fiber
+- abrasive
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-dark-blue-carbon-fiber-extreme-petg-pro/4c033a0e8445.png
+  type: unspecified
+properties: {}

@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "90936c8e-4f72-4495-9d2e-5a6f7c738369",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/epla-pro-hs"
+      }
+    ]
+  }
+]

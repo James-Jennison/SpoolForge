@@ -1,0 +1,12 @@
+uuid: 88f25039-137d-5f5d-9fe5-c09542c2949b
+slug: sainsmart-galaxy-blue-flexible-tpu
+brand:
+  slug: sainsmart
+name: Galaxy Blue, Flexible TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#4921c1ff'
+properties:
+  hardness_shore_a: 95

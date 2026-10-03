@@ -1,0 +1,17 @@
+uuid: 56e80620-ddb6-50c0-b969-b76d5af0bdf8
+slug: primacreator-primaselect-pla-carbon-dark-brown
+brand:
+  slug: primacreator
+name: PrimaSelect PLA Carbon Dark Brown
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6e4325ff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+photos:
+  - url: https://files.openprinttag.org/primacreator/primacreator-primaselect-pla-carbon-dark-brown/b328bfd227a7.png
+    type: unspecified
+properties: {}

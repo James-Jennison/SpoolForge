@@ -1,0 +1,7 @@
+{
+  "uuid": "beddcab8-9099-4d43-abdf-018b9069b4f6",
+  "id": "basic_pla",
+  "name": "Basic PLA",
+  "diameter_tolerance": 0.03,
+  "density": 1.24
+}

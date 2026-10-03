@@ -1,0 +1,9 @@
+{
+  "uuid": "16a327b5-2975-452e-a2eb-c81b07d84915",
+  "id": "green_mh_build_series",
+  "name": "Green MH Build Series",
+  "color_hex": "#668C80",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

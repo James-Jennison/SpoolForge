@@ -1,0 +1,46 @@
+{
+  "model": "motorola razr 2023",
+  "sdk": 36,
+  "ensure_existing_catalog_ms": 1579.251301,
+  "catalog_packages": 22347,
+  "queries": [
+    {
+      "query": "SUNLU ABS Orange",
+      "samples": 40,
+      "p95_ms": 3.444687,
+      "max_ms": 4.586927
+    },
+    {
+      "query": "PLA Black",
+      "samples": 40,
+      "p95_ms": 7.965,
+      "max_ms": 10.480469
+    },
+    {
+      "query": "PETG",
+      "samples": 40,
+      "p95_ms": 9.954844,
+      "max_ms": 10.576562
+    },
+    {
+      "query": "Bambu",
+      "samples": 40,
+      "p95_ms": 4.668177,
+      "max_ms": 5.188489
+    },
+    {
+      "query": "Polymaker",
+      "samples": 40,
+      "p95_ms": 5.937604,
+      "max_ms": 12.464323
+    },
+    {
+      "query": "eSUN",
+      "samples": 40,
+      "p95_ms": 4.861666,
+      "max_ms": 5.372239
+    }
+  ],
+  "catalog_files_bytes_including_wal": 6647808,
+  "measurement": "Debug APK, actual Room DAO and device SQLite; excludes Compose rendering and keyboard latency; existing-catalog integrity time excludes Activity startup"
+}

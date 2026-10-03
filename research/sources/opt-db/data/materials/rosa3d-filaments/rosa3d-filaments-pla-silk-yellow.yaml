@@ -1,0 +1,14 @@
+uuid: a1550d19-f804-5e33-9d1d-8e21f5266c2e
+slug: rosa3d-filaments-pla-silk-yellow
+brand:
+  slug: rosa3d-filaments
+name: PLA-Silk Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f8cc00ff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

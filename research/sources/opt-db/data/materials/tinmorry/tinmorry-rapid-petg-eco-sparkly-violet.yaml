@@ -1,0 +1,13 @@
+uuid: b9442312-6dca-5d0d-8d70-be04a09a445b
+slug: tinmorry-rapid-petg-eco-sparkly-violet
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Sparkly Violet
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#6000b0ff'
+tags:
+- glitter
+properties: {}

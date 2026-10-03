@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-final-v2-deepseek-4",
+  "disposition": "CONFIRMED",
+  "reason": "OpenPrintTag package IDs are now recomputed exactly from source UUID and record pointer; a changed ID is rejected.",
+  "evidence_reference": "tools/verify_gtin_index.py; work/gtin/verify-pointer-verification.log",
+  "resolved": true
+}

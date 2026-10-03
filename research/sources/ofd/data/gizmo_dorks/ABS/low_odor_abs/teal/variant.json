@@ -1,0 +1,9 @@
+{
+  "uuid": "75854809-1cd0-49bb-ad62-0c32abfeed2b",
+  "id": "teal",
+  "name": "Teal",
+  "color_hex": "#00B4BC",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

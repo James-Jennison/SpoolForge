@@ -1,0 +1,23 @@
+uuid: b868e8b4-bf85-51df-bb7e-8284da8d63ac
+slug: fiberlogy-pla-mineral-marble
+brand:
+  slug: fiberlogy
+name: PLA Mineral Marble
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e0e0dcff'
+tags:
+  - imitates_marble
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-pla-mineral-marble/pasted-image-1742931411507.png
+    type: unspecified
+properties:
+  density: 1.38
+  min_print_temperature: 190
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 360

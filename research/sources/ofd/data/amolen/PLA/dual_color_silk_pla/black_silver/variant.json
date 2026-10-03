@@ -1,0 +1,13 @@
+{
+  "uuid": "50222866-9934-412c-a9f8-ec3667987f08",
+  "id": "black_silver",
+  "name": "Black & Silver",
+  "color_hex": [
+    "#000000",
+    "#818184"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

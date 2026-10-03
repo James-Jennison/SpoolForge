@@ -1,0 +1,9 @@
+{
+  "uuid": "a4a59b03-0d87-478f-bf94-40bece588ee6",
+  "id": "dark_grey",
+  "name": "Dark Grey",
+  "color_hex": "#595959",
+  "traits": {
+    "matte": true
+  }
+}

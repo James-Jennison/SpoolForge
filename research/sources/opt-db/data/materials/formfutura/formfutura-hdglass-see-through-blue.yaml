@@ -1,0 +1,21 @@
+uuid: 311bd7bb-3fec-55fa-9953-8d9bedeebdfc
+slug: formfutura-hdglass-see-through-blue
+brand:
+  slug: formfutura
+name: HDglass See Through Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0e21aeff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-hdglass-see-through-blue/6a8b12956238.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 195
+  max_print_temperature: 225
+  min_bed_temperature: 80
+  max_bed_temperature: 90

@@ -1,0 +1,13 @@
+uuid: 900cfe2e-1c20-5c00-874f-e78872b6687b
+slug: paramount-3d-pla-military-green
+brand:
+  slug: paramount-3d
+name: PLA (Military Green)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6e8451ff'
+tags:
+- industrially_compostable
+properties: {}

@@ -1,0 +1,4 @@
+package:net.jamesjennison.filamajignfc
+package:net.jamesjennison.filamajignfc.test
+package:net.jamesjennison.spoolio
+package:net.jamesjennison.spoolio.test

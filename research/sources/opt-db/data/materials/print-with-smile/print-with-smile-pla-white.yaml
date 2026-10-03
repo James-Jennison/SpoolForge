@@ -1,0 +1,13 @@
+uuid: 65f3e9c9-c974-5c4b-86f5-81d820f739fe
+slug: print-with-smile-pla-white
+brand:
+  slug: print-with-smile
+name: PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- industrially_compostable
+properties: {}

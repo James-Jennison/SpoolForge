@@ -1,0 +1,38 @@
+{
+  "status": "FAIL",
+  "oracle": "Independently compare retained pinned OFD JSON with built TSV; primary is first declared color for array-valued color_hex, with secondary preservation also required.",
+  "color_mismatch_packages": 2785,
+  "article_number_omissions": 2479,
+  "examples": [
+    {
+      "package_id": "902e1fa5-2cff-400a-ab79-fcf1cdf68e16",
+      "expected_primary": "#005DA4",
+      "actual": "#000000",
+      "source": "research/sources/ofd/data/eryone/PLA/pla/burnt_titanium_galaxy/variant.json"
+    },
+    {
+      "package_id": "61fa5ad4-6e68-4065-8b0f-5b92208d4211",
+      "expected_primary": "#008059",
+      "actual": "#000000",
+      "source": "research/sources/ofd/data/eryone/PLA/pla/burnt_titanium_nebula/variant.json"
+    },
+    {
+      "package_id": "4ad9c9cc-ccc3-46ab-91ec-4d8a70611c46",
+      "expected_primary": "#09048E",
+      "actual": "#000000",
+      "source": "research/sources/ofd/data/eryone/PLA/pla/burnt_titanium_interstellar/variant.json"
+    },
+    {
+      "package_id": "bccd4cf0-3a45-45cd-818d-ae1ecdd1da15",
+      "expected_primary": "#008059",
+      "actual": "#000000",
+      "source": "research/sources/ofd/data/eryone/PLA/pla/burnt_titanium_wormhole/variant.json"
+    },
+    {
+      "package_id": "515b7c06-7d5e-44f1-8313-3bae4d99dccc",
+      "expected_primary": "#87366B",
+      "actual": "#000000",
+      "source": "research/sources/ofd/data/eryone/PLA/pla/burnt_titanium_constellation/variant.json"
+    }
+  ]
+}

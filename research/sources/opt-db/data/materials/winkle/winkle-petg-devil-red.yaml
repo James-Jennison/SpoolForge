@@ -1,0 +1,12 @@
+uuid: cbee8cd3-6a26-515b-badd-53f1d0a1a923
+slug: winkle-petg-devil-red
+brand:
+  slug: winkle
+name: PETG Devil Red
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#cc2616ff'
+properties:
+  density: 1.23

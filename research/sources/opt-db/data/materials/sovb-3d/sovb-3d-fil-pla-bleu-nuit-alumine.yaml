@@ -1,0 +1,21 @@
+uuid: 80c0f7da-505f-5fa6-b410-d6813dd4db42
+slug: sovb-3d-fil-pla-bleu-nuit-alumine
+brand:
+  slug: sovb-3d
+name: Fil PLA Bleu nuit alumine
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#09048eff'
+  color_ral: '5013'
+tags:
+- contains_aluminium
+- abrasive
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 180
+  max_print_temperature: 200
+  min_bed_temperature: 0
+  max_bed_temperature: 60

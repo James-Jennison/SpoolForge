@@ -1,0 +1,11 @@
+uuid: 6788fc14-2c4f-5673-bb28-dd70d1cf06f0
+slug: tinmorry-asa-olive-green
+brand:
+  slug: tinmorry
+name: ASA Olive Green
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#748c45ff'
+properties: {}

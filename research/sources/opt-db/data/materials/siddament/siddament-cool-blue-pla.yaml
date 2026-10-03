@@ -1,0 +1,13 @@
+uuid: 75325d0a-03ab-581e-a947-6e86cc090311
+slug: siddament-cool-blue-pla
+brand:
+  slug: siddament
+name: Cool Blue PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#01a3ffff'
+tags:
+- industrially_compostable
+properties: {}

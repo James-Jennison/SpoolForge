@@ -1,0 +1,24 @@
+uuid: df478ea5-4523-5bb6-9245-281a38750f64
+slug: polymaker-panchroma-matte-pla-sakura-pink
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Sakura Pink
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#eaadbdff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-sakura-pink/8c6b5d4dc5c6.png
+    type: unspecified
+transmission_distance: 2.3
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

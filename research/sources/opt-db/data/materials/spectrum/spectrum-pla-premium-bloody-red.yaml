@@ -1,0 +1,20 @@
+uuid: 3b1bb4bd-cdea-500a-8d1b-e552b99602ce
+slug: spectrum-pla-premium-bloody-red
+brand:
+  slug: spectrum
+name: PLA Premium Bloody Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#db3e14ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-premium-bloody-red/spectrum-pla-premium-bloody-red-0-3601b4ae.jpg
+  type: unspecified

@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "97da1869-4efe-409f-9cba-d7b55349fa84",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/epla-lw"
+      }
+    ]
+  }
+]

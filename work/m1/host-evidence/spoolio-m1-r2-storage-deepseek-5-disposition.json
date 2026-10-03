@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-deepseek-5",
+  "disposition": "CONFIRMED",
+  "reason": "Unused store and tests removed; real Android Room coverage retained.",
+  "evidence_reference": "work/m1/host-evidence/remediation-round3-build.log; app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt; work/m1/host-evidence/migrated-user-data/summary.json",
+  "resolved": false
+}

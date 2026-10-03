@@ -1,0 +1,21 @@
+uuid: 8ae53f15-3a32-573d-8460-953268c25ab8
+slug: formfutura-hdglass-clear
+brand:
+  slug: formfutura
+name: HDglass Clear
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e4e7e5ff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-hdglass-clear/1f468a0b0d57.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 195
+  max_print_temperature: 225
+  min_bed_temperature: 80
+  max_bed_temperature: 90

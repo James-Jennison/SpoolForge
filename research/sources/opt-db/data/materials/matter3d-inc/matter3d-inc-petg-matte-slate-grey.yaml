@@ -1,0 +1,13 @@
+uuid: 16dc9f60-64eb-5340-901b-8c9407242c0b
+slug: matter3d-inc-petg-matte-slate-grey
+brand:
+  slug: matter3d-inc
+name: PETg Matte Slate Grey
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#7b7b7bff'
+tags:
+- matte
+properties: {}

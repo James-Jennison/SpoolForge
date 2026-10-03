@@ -1,0 +1,25 @@
+uuid: 1c34bedb-61e5-5f98-b7f2-c07d1f3a096d
+slug: bambulab-pla-cf-iris-purple
+brand:
+  slug: bambulab
+name: PLA-CF Iris Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#69398eff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-cf-iris-purple/6f3ec397c647.png
+    type: unspecified
+properties:
+  density: 1.22
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45

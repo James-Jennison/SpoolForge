@@ -1,0 +1,24 @@
+uuid: c192f1e0-6cf8-59d4-b020-cebb030cdb81
+slug: polymaker-panchroma-matte-pla-arctic-teal
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Arctic Teal
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#61bcc3ff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-arctic-teal/d764ec7cb7a4.png
+    type: unspecified
+transmission_distance: 0.6
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

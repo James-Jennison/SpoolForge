@@ -1,0 +1,13 @@
+uuid: 3fc73d9c-76d0-5dea-a120-4487ce0687aa
+slug: print-with-smile-re-petg-canary-yellow
+brand:
+  slug: print-with-smile
+name: RE-PETG Canary YELLOW
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f2de00ff'
+tags:
+- recycled
+properties: {}

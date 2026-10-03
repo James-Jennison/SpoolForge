@@ -1,0 +1,23 @@
+uuid: 47555dda-bd66-5419-bc91-fa95ed2c0a6a
+slug: bambulab-petg-translucent-clear
+brand:
+  slug: bambulab
+name: PETG Translucent Clear
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e4e7e5ff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-translucent-clear/d2dbb2ec049e.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

@@ -1,0 +1,14 @@
+{
+  "uuid": "3916b5c0-d562-4e8b-9c78-82dbd2945aa6",
+  "id": "shiny_gradient_blue_black",
+  "name": "Shiny Gradient-Blue-Black",
+  "color_hex": [
+    "#033877",
+    "#000000"
+  ],
+  "traits": {
+    "glitter": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

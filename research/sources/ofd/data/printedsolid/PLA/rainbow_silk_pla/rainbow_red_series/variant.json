@@ -1,0 +1,17 @@
+{
+  "uuid": "ea92a610-6bb1-428d-8f2e-4fb0cf796c55",
+  "id": "rainbow_red_series",
+  "name": "Rainbow-Red Series",
+  "color_hex": [
+    "#1E5A4F",
+    "#EBFF57",
+    "#95D05C",
+    "#FF72B6",
+    "#ED1536"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

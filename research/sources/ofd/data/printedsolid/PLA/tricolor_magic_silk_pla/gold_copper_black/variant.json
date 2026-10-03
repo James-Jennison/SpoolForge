@@ -1,0 +1,15 @@
+{
+  "uuid": "79bb6bf2-9015-4761-9b24-c5c8f1942289",
+  "id": "gold_copper_black",
+  "name": "Gold-Copper-Black",
+  "color_hex": [
+    "#FFCB47",
+    "#000000",
+    "#904029"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

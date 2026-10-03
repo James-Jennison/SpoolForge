@@ -1,0 +1,18 @@
+{
+  "uuid": "bb45eac5-b261-4545-bee4-75d9cc093b46",
+  "id": "luminous_rainbow",
+  "name": "Luminous Rainbow",
+  "color_hex": [
+    "#FF67F5",
+    "#7659B5",
+    "#0095FF",
+    "#BBDB4B",
+    "#FBE200"
+  ],
+  "traits": {
+    "glow": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "abrasive": true
+  }
+}

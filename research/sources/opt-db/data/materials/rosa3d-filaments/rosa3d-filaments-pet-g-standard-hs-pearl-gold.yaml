@@ -1,0 +1,13 @@
+uuid: f702daec-64a4-58c6-a740-106f66b9b904
+slug: rosa3d-filaments-pet-g-standard-hs-pearl-gold
+brand:
+  slug: rosa3d-filaments
+name: PET-G Standard HS Pearl Gold
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#9a8066ff'
+tags:
+- high_speed
+properties: {}

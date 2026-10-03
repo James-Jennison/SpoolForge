@@ -1,0 +1,13 @@
+uuid: 008aa791-7516-50af-8037-4c59e6e6004e
+slug: tinmorry-petg-marble-magic-pink
+brand:
+  slug: tinmorry
+name: PETG Marble Magic Pink
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ece0eaff'
+tags:
+- imitates_marble
+properties: {}

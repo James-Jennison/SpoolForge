@@ -1,0 +1,10 @@
+{
+  "uuid": "ba4c693a-aa71-4d40-a49b-95a8dbbef783",
+  "id": "green",
+  "name": "Green",
+  "color_hex": "#58C91B",
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

@@ -1,0 +1,20 @@
+uuid: 2158e5d1-000e-508b-b2c5-38cc14928cec
+slug: spectrum-pla-high-speed-dark-grey
+brand:
+  slug: spectrum
+name: PLA High Speed Dark Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5a696cff'
+tags:
+- high_speed
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-high-speed-dark-grey/spectrum-pla-high-speed-dark-grey-0-07146032.jpg
+  type: unspecified

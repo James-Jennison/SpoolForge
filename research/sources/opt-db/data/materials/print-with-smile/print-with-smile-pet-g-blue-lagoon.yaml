@@ -1,0 +1,11 @@
+uuid: d3b4db1c-4243-59f5-b677-3a4a82ecc1a2
+slug: print-with-smile-pet-g-blue-lagoon
+brand:
+  slug: print-with-smile
+name: PET-G Blue Lagoon
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0066d9ff'
+properties: {}

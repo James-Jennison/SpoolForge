@@ -1,0 +1,17 @@
+uuid: d6c1a6ae-cef5-56d1-89f8-d3c66d303ab3
+slug: amolen-pla-matte-navy-blue
+brand:
+  slug: amolen
+name: PLA Matte Navy Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#003b80ff'
+tags:
+- matte
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-matte-navy-blue/4edc9dd5add9.png
+  type: unspecified
+properties: {}

@@ -1,0 +1,17 @@
+uuid: 5bcb4ece-5793-5200-96ef-7ae548dbe36e
+slug: raise3d-hyper-speed-abs-grey-rfid
+brand:
+  slug: raise3d
+name: Hyper Speed ABS Grey - RFID
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#888b8dff'
+tags:
+- high_speed
+properties:
+  density: 1.04
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-hyper-speed-abs-grey-rfid/raise3d-hyper-speed-abs-grey-rfid-0-49ecc39d.jpg
+  type: unspecified

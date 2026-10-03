@@ -1,0 +1,150 @@
+{
+    "type": "array",
+    "definitions": {
+        "string_limit": {
+            "maxLength": 1000
+        }
+    },
+    "items": {
+        "type": "object",
+        "properties": {
+            "uuid": {
+                "type": "string",
+                "title": "UUID",
+                "description": "Canonical UUID (UUIDv4), assigned automatically by CI on merge. Leave empty when creating.",
+                "readOnly": true,
+                "pattern": "^$|^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+            },
+            "moved_from": {
+                "type": "array",
+                "title": "Moved From",
+                "description": "Former canonical UUIDv4(s) this entity previously had (before a merge or move). Lets old UUID references resolve here. Managed by tooling/CI — leave empty when creating.",
+                "readOnly": true,
+                "items": {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+                }
+            },
+            "filament_weight": {
+                "type": "number",
+                "description": "The weight of the filament alone (in grams)",
+                "default": 1000
+            },
+            "diameter": {
+                "type": "number",
+                "description": "The diameter of the filament (in mm)",
+                "default": 1.75
+            },
+            "spool_refill": {
+                "type": "boolean",
+                "description": "Indicates if this size is a refill for a reusable spool (applies to all purchase links)",
+                "default": false
+            },
+            "empty_spool_weight": {
+                "type": "number",
+                "description": "The weight of a spool with no filament (in grams)"
+            },
+            "spool_core_diameter": {
+                "type": "number",
+                "description": "The diameter of the core of the spool"
+            },
+            "container_width": {
+                "type": "integer",
+                "description": "Width of the filament spool (in mm)"
+            },
+            "container_outer_diameter": {
+                "type": "integer",
+                "description": "Diameter of the spool (in mm)"
+            },
+            "container_hole_diameter": {
+                "type": "integer",
+                "description": "Diameter of the center hole of the spool (in mm)"
+            },
+            "gtin": {
+                "type": "string",
+                "description": "Global Trade Item Number (GTIN-12 or GTIN-13)"
+            },
+            "ean": {
+                "type": "string",
+                "$ref": "#/definitions/string_limit",
+                "description": "(deprecated) legacy EAN alias for gtin"
+            },
+            "article_number": {
+                "type": "string",
+                "$ref": "#/definitions/string_limit"
+            },
+            "barcode_identifier": {
+                "type": "string",
+                "$ref": "#/definitions/string_limit"
+            },
+            "nfc_identifier": {
+                "type": "string",
+                "$ref": "#/definitions/string_limit"
+            },
+            "qr_identifier": {
+                "type": "string",
+                "$ref": "#/definitions/string_limit"
+            },
+            "discontinued": {
+                "type": "boolean"
+            },
+            "purchase_links": {
+                "type": "array",
+                "description": "A list of places to purchase this filament",
+                "$comment": "The key for the pattern should be the name of the store",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "store_id": {
+                            "type": "string",
+                            "$ref": "#/definitions/string_limit"
+                        },
+                        "url": {
+                            "type": "string",
+                            "$ref": "#/definitions/string_limit"
+                        },
+                        "spool_refill": {
+                            "type": "boolean",
+                            "description": "(deprecated) Previously indicated a refill per purchase link. Use parent size.spool_refill now.",
+                            "default": false
+                        },
+                        "ships_from": {
+                            "type": [
+                                "array",
+                                "string"
+                            ],
+                            "description": "A list of locations the shop ships from. Defining this here will override the definition from the shop.",
+                            "items": {
+                                "type": "string",
+                                "$ref": "#/definitions/string_limit"
+                            },
+                            "$ref": "#/definitions/string_limit"
+                        },
+                        "ships_to": {
+                            "type": [
+                                "array",
+                                "string"
+                            ],
+                            "description": "A list of locations the shop ships to. Defining this here will override the definition from the shop.",
+                            "items": {
+                                "type": "string",
+                                "$ref": "#/definitions/string_limit"
+                            },
+                            "$ref": "#/definitions/string_limit"
+                        }
+                    },
+                    "required": [
+                        "store_id",
+                        "url"
+                    ]
+                }
+            }
+        },
+        "additionalProperties": false,
+        "required": [
+            "filament_weight",
+            "diameter"
+        ]
+    },
+    "minItems": 1
+}

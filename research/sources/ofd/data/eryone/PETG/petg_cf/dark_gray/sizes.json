@@ -1,0 +1,24 @@
+[
+  {
+    "uuid": "d0255713-94bd-44c0-a46b-5918e2f2ef56",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "eryone",
+        "url": "https://eryone3d.com/collections/carbon-fiber-petg/products/petg-carbon-fiber-filament"
+      }
+    ]
+  },
+  {
+    "uuid": "fe7bfc6d-3ae1-4539-bbac-1e532fea1052",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "eryone",
+        "url": "https://eryone3d.com/collections/petg-standard/products/petg"
+      }
+    ]
+  }
+]

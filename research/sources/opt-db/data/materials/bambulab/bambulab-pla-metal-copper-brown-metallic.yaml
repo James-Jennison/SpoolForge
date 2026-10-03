@@ -1,0 +1,24 @@
+uuid: 29a6be67-5981-5492-8d03-1387b09dccde
+slug: bambulab-pla-metal-copper-brown-metallic
+brand:
+  slug: bambulab
+name: PLA Metal Copper Brown Metallic
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#aa6443ff'
+tags:
+  - imitates_metal
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-metal-copper-brown-metallic/5d5d6cdbace6.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45

@@ -1,0 +1,11 @@
+{
+  "uuid": "88fda0b9-5e69-48c8-b2b1-7a063819c22a",
+  "id": "metal_gold",
+  "name": "Metal Gold",
+  "color_hex": "#FFCB47",
+  "traits": {
+    "silk": true,
+    "imitates_metal": true,
+    "industrially_compostable": true
+  }
+}

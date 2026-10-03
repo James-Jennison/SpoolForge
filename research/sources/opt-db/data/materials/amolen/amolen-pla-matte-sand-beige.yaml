@@ -1,0 +1,17 @@
+uuid: c2dd3582-d7bc-5cc9-8cf2-8f29964c6f2f
+slug: amolen-pla-matte-sand-beige
+brand:
+  slug: amolen
+name: PLA Matte Sand Beige
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e0dabbff'
+tags:
+- matte
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-matte-sand-beige/34344737e575.png
+  type: unspecified
+properties: {}

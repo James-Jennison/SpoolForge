@@ -1,0 +1,23 @@
+uuid: 51428f2e-b00a-5d5e-8caf-6d76966f7212
+slug: fiberlogy-fiberflex-40d-brown
+brand:
+  slug: fiberlogy
+name: FiberFlex 40D Brown
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#503529ff'
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-fiberflex-40d-brown/eb620f53305f.png
+    type: unspecified
+properties:
+  density: 1.16
+  hardness_shore_d: 40.0
+  hardness_shore_a: 91.0
+  min_print_temperature: 200
+  max_print_temperature: 220
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 60
+  drying_time: 240

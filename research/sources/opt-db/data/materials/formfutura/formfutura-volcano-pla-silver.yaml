@@ -1,0 +1,21 @@
+uuid: c8effa40-4cb6-52c7-9d53-9fe48f8716ec
+slug: formfutura-volcano-pla-silver
+brand:
+  slug: formfutura
+name: Volcano PLA Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#949597ff'
+tags:
+  - matte
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-volcano-pla-silver/aeee58fbc533.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 220
+  max_print_temperature: 255
+  max_bed_temperature: 60

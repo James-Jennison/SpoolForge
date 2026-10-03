@@ -1,0 +1,31 @@
+uuid: d11b914a-95be-5f7b-a28d-dc0d155e0aa1
+slug: prusament-pla-marble-grey
+brand:
+  slug: prusament
+name: PLA Marble Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c2c2c5ff'
+  color_lab: [74.0107, 0.1733, -1.4267]
+transmission_distance: 3.5
+tags:
+- imitates_marble
+- industrially_compostable
+certifications:
+- ul_2904
+photos:
+- url: https://files.openprinttag.org/prusament/prusament-pla-marble-grey/d331167b8306.png
+  type: unspecified
+properties:
+  density: 1.24
+  hardness_shore_d: 81
+  min_print_temperature: 205
+  max_print_temperature: 225
+  preheat_temperature: 170
+  min_bed_temperature: 40
+  max_bed_temperature: 60
+  chamber_temperature: 20
+  min_chamber_temperature: 18
+  max_chamber_temperature: 40

@@ -1,0 +1,17 @@
+uuid: 2dc92c2a-e711-5d23-afdd-a4d7f1561e98
+slug: amolen-pla-carbon-fiber-burgundy
+brand:
+  slug: amolen
+name: PLA Carbon Fiber Burgundy
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#833f4dff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+photos:
+  - url: https://files.openprinttag.org/amolen/amolen-pla-carbon-fiber-burgundy/b58305be01d1.png
+    type: unspecified
+properties: {}

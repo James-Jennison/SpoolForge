@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "6308a1cd-f162-4bf7-9d64-bc31d16446f7",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "overture3d",
+        "url": "https://overture3d.com/products/overture-rock-pla-filament-1-75mm?variant=46202186399998",
+        "affiliate": false
+      }
+    ]
+  }
+]

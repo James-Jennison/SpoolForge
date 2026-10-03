@@ -1,0 +1,13 @@
+uuid: 8457ae6b-722c-5844-be44-5a36fb6570c8
+slug: tinmorry-rapid-pla-pure-green
+brand:
+  slug: tinmorry
+name: Rapid PLA Pure Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#509f45ff'
+tags:
+- industrially_compostable
+properties: {}

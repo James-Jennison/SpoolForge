@@ -1,0 +1,23 @@
+uuid: 2406933f-5625-5f04-bbc1-4a23172b9975
+slug: polymaker-panchroma-silk-pla-light-blue
+brand:
+  slug: polymaker
+name: Panchroma™ Silk PLA Light Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#4cc1cbff'
+tags:
+  - silk
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-silk-pla-light-blue/d6ba233d8a46.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

@@ -1,0 +1,19 @@
+uuid: 24d75305-cbce-55c3-859a-c77cf67e19bf
+slug: spectrum-pctg-premium-traffic-black
+brand:
+  slug: spectrum
+name: PCTG Premium Traffic Black
+class: FFF
+type: PCTG
+abbreviation: PCTG
+primary_color:
+  color_rgba: '#000000ff'
+properties:
+  density: 1.23
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 60
+  max_bed_temperature: 100
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pctg-premium-traffic-black/spectrum-pctg-premium-traffic-black-0-1e14cd0f.jpg
+  type: unspecified

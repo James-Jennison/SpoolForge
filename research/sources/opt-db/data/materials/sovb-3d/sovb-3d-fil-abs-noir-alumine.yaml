@@ -1,0 +1,20 @@
+uuid: 0957bf9f-aa05-5dcd-9d89-a0784a8b01cc
+slug: sovb-3d-fil-abs-noir-alumine
+brand:
+  slug: sovb-3d
+name: Fil ABS Noir Alumine
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#2a3940ff'
+tags:
+- contains_aluminium
+- abrasive
+- filtration_recommended
+properties:
+  density: 1.03
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 90
+  max_bed_temperature: 100

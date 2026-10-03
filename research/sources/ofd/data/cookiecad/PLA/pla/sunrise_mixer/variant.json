@@ -1,0 +1,13 @@
+{
+  "uuid": "acd1c795-c65f-4e83-84bf-b8e8449c6893",
+  "id": "sunrise_mixer",
+  "name": "Sunrise Mixer",
+  "color_hex": [
+    "#EB0075",
+    "#E8BD00"
+  ],
+  "traits": {
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

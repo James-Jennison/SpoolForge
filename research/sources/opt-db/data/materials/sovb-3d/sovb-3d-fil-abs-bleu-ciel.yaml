@@ -1,0 +1,19 @@
+uuid: 6ee656b7-b4ff-5089-a773-1901ac729f37
+slug: sovb-3d-fil-abs-bleu-ciel
+brand:
+  slug: sovb-3d
+name: Fil ABS Bleu Ciel
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#0099e6ff'
+  color_ral: '5015'
+tags:
+- filtration_recommended
+properties:
+  density: 1.03
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 90
+  max_bed_temperature: 100

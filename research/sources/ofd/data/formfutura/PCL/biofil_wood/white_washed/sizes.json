@@ -1,0 +1,32 @@
+[
+  {
+    "uuid": "9bb0f073-653a-415c-8c09-2eb285be3cf6",
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "empty_spool_weight": 20,
+    "article_number": "BFWD-175WHTW-00500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/biofil-wood"
+      }
+    ]
+  },
+  {
+    "uuid": "f7e2fedc-6eb2-4695-a55c-7b619d032a83",
+    "filament_weight": 2000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "empty_spool_weight": 40,
+    "article_number": "BFWD-175WHTW-02000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/biofil-wood"
+      }
+    ]
+  }
+]

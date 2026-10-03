@@ -1,0 +1,24 @@
+uuid: cba77d9a-8390-5cd9-b4cc-bd5b2ea20705
+slug: polymaker-panchroma-dual-matte-pla-foggy-purple-grey-purple
+brand:
+  slug: polymaker
+name: Panchroma™ Dual Matte PLA Foggy Purple (Grey-Purple)
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+  - color_rgba: '#8a8c94ff'
+  - color_rgba: '#9572bfff'
+tags:
+  - matte
+  - coextruded
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-dual-matte-pla-foggy-purple-grey-purple/6ce0203306bf.png
+    type: unspecified
+properties:
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

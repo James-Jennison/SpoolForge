@@ -1,0 +1,11 @@
+{
+  "uuid": "ffe5bb1a-e2db-4645-ac71-a0d9164b9d7a",
+  "id": "semi_pla",
+  "name": "Semi PLA",
+  "diameter_tolerance": 0.02,
+  "density": 1.24,
+  "min_print_temperature": 190,
+  "max_print_temperature": 230,
+  "min_bed_temperature": 50,
+  "max_bed_temperature": 70
+}

@@ -1,0 +1,9 @@
+{
+  "uuid": "7f7355d3-c242-42bd-9ff3-026a3c691436",
+  "id": "natural",
+  "name": "Natural",
+  "color_hex": "#EADAC2",
+  "traits": {
+    "without_pigments": true
+  }
+}

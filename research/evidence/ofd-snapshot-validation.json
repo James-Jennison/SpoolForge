@@ -1,0 +1,14 @@
+{
+  "source_commit": "e3888b68f1684f49ec1683022e66b9753d9db3cf",
+  "json_files": 32107,
+  "counts_by_filename": {
+    "sizes.json": 14569,
+    "variant.json": 14569,
+    "filament.json": 2089,
+    "material.json": 714,
+    "brand.json": 166
+  },
+  "package_records": 22347,
+  "manifest_sha256": "8239ed3ef80de30b34ba79745b20cdca32f7a55856b018d99bca09571f841128",
+  "scope": "All retained source JSON parsed and hashed; not normalized application database or hosted export."
+}

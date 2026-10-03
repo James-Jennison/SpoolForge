@@ -1,0 +1,7 @@
+{
+  "finding_id": "filamajig-m4-deepseek-recovery-coverage",
+  "disposition": "CONFIRMED",
+  "reason": "Null read, restart, duplicate UID, and one-tag completion already had direct state-machine tests. The callback-failure gap was real: verified NFC state cleared the journal even when the Room binding failed. Finalization now retains payload, spool, codec, and tag position as verification-pending for read-only retry. New tests cover callback failure and success, restored position two, and second-tag failure after first-tag success.",
+  "evidence_reference": "app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt; app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt; core/src/test/kotlin/net/jamesjennison/filamajignfc/core/WriteStateMachineTest.kt; protected suite 101 tests PASS",
+  "resolved": true
+}

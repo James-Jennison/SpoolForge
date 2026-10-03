@@ -1,0 +1,15 @@
+{
+  "uuid": "85cc3962-f228-428c-bafe-0188999d1581",
+  "id": "rainbow_sunrise",
+  "name": "Rainbow Sunrise",
+  "color_hex": [
+    "#FCE575",
+    "#F67405",
+    "#E03F26"
+  ],
+  "traits": {
+    "matte": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,23 @@
+uuid: 78dbb2b9-2340-5b30-831e-6c021645028a
+slug: formfutura-premium-pla-dutch-orange
+brand:
+  slug: formfutura
+name: Premium PLA Dutch Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e0493eff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-premium-pla-dutch-orange/2379ffd56cda.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50
+  drying_time: 360

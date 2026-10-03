@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-gtin-final-deepseek-1",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-fe0f80e7443f",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "License Validation",
+  "summary": "The implemented license validation only checks for two substrings, not the full MIT license text. The independent verifier also checks only the same two substrings in shipped notices and never compares them against the original source LICENSE files. This means a non-MIT license containing those phrases plus additional restrictions would be accepted as MIT, and the verifier would not catch a build that bypasses identify_license or alters the shipped notices.",
+  "claim": "A source file with a license that includes the two phrases but adds restrictive clauses (e.g., 'commercial use prohibited') would be erroneously labeled MIT and shipped. An attacker could also modify the build to skip identify_license and copy a non-MIT source LICENSE to the notices, and the verifier would still pass because it never checks the original source files.",
+  "evidence": {
+    "source": "In build_gtin_index.py, identify_license does: text = data.decode('utf-8').replace('\u201c','\"').replace('\u201d','\"'); required = ('Permission is hereby granted, free of charge', 'THE SOFTWARE IS PROVIDED \"AS IS\"'); if not all(phrase in text for phrase in required): raise ValueError...; return 'MIT'. In verify_gtin_index.py, the license check is: text=(a/f'GTIN-{source}-LICENSE.txt').read_text().replace(...); assert 'Permission is hereby granted, free of charge' in text and 'THE SOFTWARE IS PROVIDED \"AS IS\"' in text; licenses[source]='MIT'. There is no comparison to the source LICENSE files under research/sources/*/LICENSE and no full canonical MIT text match.",
+    "response_sha256": "e63a05213b528087735e1b93bd768f3ffb84b9dd39d4524640f95b7657fb59ad"
+  },
+  "affected_components": [
+    "tools",
+    "app"
+  ],
+  "suggested_remediation": "Replace the substring check with an exact match against a canonical MIT license text after whitespace/punctuation normalization, or use a trustworthy license detection library. The verifier must independently read the original source LICENSE files (not just shipped copies) and verify they exactly match canonical MIT, or at minimum compare the shipped notices byte-for-byte with the source LICENSE files and then validate that combined text is canonical MIT.",
+  "suggested_validation": "Add a test LICENSE file containing both required sentences plus an extra restrictive clause; the build must fail and the verifier must fail. Also test that modifying build_gtin_index.py to bypass identify_license while copying a non-MIT source LICENSE into the shipped notices causes the verifier to fail.",
+  "reviewer_confidence": "HIGH"
+}

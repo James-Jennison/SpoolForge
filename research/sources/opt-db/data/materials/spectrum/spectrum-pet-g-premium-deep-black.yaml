@@ -1,0 +1,19 @@
+uuid: f7471c09-3631-54eb-8377-e5c072fa99c6
+slug: spectrum-pet-g-premium-deep-black
+brand:
+  slug: spectrum
+name: PET-G Premium Deep Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pet-g-premium-deep-black/spectrum-pet-g-premium-deep-black-0-a0f0bab3.jpg
+  type: unspecified

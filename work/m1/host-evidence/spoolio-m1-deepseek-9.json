@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-deepseek-9",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Tag-to-local record editing",
+  "summary": "Saving a decoded canonical tag as a local record fails because required product and color name are blank.",
+  "claim": "Saving a decoded canonical tag as a local record fails because required product and color name are blank.",
+  "evidence": {
+    "source": "MainViewModel.decodedSeed() returns CustomSeed with product = text(\"subtype\") (empty for canonical OpenSpool records) and color = \"\" always. Filament.kt validateRecord() requires brand, material, product, and colorName to be non-blank. CustomDialog pre-populates these blanks, and saveCustom will set an error, preventing save.",
+    "response_sha256": "9ce1f17a15210414355a99fa316c46989f28239b61a329155699d55078adf435"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Make color name and/or product optional for custom records or derive a safe default while preserving original tag fields; do not block save on missing label-only fields.",
+  "suggested_validation": "Read a canonical tag, tap 'Edit as a local record', then save with only brand, type, color_hex, diameter, and weight populated. Verify the record saves and product/colorName are optionally blank or defaulted without validation error.",
+  "reviewer_confidence": "HIGH"
+}

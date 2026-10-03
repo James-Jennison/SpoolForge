@@ -1,0 +1,12 @@
+uuid: 08b5b66b-893b-55bf-bd65-e87eeda37712
+slug: ziro-3d-shore-95a-hardness-tpu-skin
+brand:
+  slug: ziro-3d
+name: Shore 95A Hardness TPU Skin
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#f5d494ff'
+properties:
+  hardness_shore_a: 95

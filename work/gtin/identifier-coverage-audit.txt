@@ -1,0 +1,522 @@
+SOURCE_SUMMARY
+OFD {'total': 22347, 'gtin': 2693, 'sku': 2479, 'both': 1418, 'neither': 18593} brands 149
+OpenPrintTag {'total': 10266, 'gtin': 6155, 'sku': 779, 'both': 50, 'neither': 3382} brands 45
+Community {'total': 53355, 'gtin': 4687, 'sku': 0, 'both': 0, 'neither': 48668} brands 489
+
+NO_GTIN_OR_SKU_BRANDS 462
+{"both": 0, "brand": "SUNLU / Sunlu", "gtin": 0, "neither": 10409, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5990, "sku": 0, "total": 5990}, "OFD": {"both": 0, "gtin": 0, "neither": 4381, "sku": 0, "total": 4381}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 38, "sku": 0, "total": 38}}, "total": 10409}
+{"both": 0, "brand": "Nebula", "gtin": 0, "neither": 3113, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 1623, "sku": 0, "total": 1623}, "OFD": {"both": 0, "gtin": 0, "neither": 1490, "sku": 0, "total": 1490}}, "total": 3113}
+{"both": 0, "brand": "Protopasta", "gtin": 0, "neither": 1329, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 889, "sku": 0, "total": 889}, "OFD": {"both": 0, "gtin": 0, "neither": 440, "sku": 0, "total": 440}}, "total": 1329}
+{"both": 0, "brand": "Extrudr / extrudr", "gtin": 0, "neither": 1302, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 1155, "sku": 0, "total": 1155}, "OFD": {"both": 0, "gtin": 0, "neither": 147, "sku": 0, "total": 147}}, "total": 1302}
+{"both": 0, "brand": "EUMAKERS", "gtin": 0, "neither": 1242, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 1132, "sku": 0, "total": 1132}, "OFD": {"both": 0, "gtin": 0, "neither": 110, "sku": 0, "total": 110}}, "total": 1242}
+{"both": 0, "brand": "Overture", "gtin": 0, "neither": 960, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 582, "sku": 0, "total": 582}, "OFD": {"both": 0, "gtin": 0, "neither": 378, "sku": 0, "total": 378}}, "total": 960}
+{"both": 0, "brand": "Sakata 3D", "gtin": 0, "neither": 930, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 799, "sku": 0, "total": 799}, "OFD": {"both": 0, "gtin": 0, "neither": 131, "sku": 0, "total": 131}}, "total": 930}
+{"both": 0, "brand": "FiloAlfa", "gtin": 0, "neither": 806, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 806, "sku": 0, "total": 806}}, "total": 806}
+{"both": 0, "brand": "Amolen", "gtin": 0, "neither": 722, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 305, "sku": 0, "total": 305}, "OFD": {"both": 0, "gtin": 0, "neither": 300, "sku": 0, "total": 300}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 117, "sku": 0, "total": 117}}, "total": 722}
+{"both": 0, "brand": "3DXTECH / 3DXTech", "gtin": 0, "neither": 533, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 366, "sku": 0, "total": 366}, "OFD": {"both": 0, "gtin": 0, "neither": 167, "sku": 0, "total": 167}}, "total": 533}
+{"both": 0, "brand": "Ambrosia", "gtin": 0, "neither": 525, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 370, "sku": 0, "total": 370}, "OFD": {"both": 0, "gtin": 0, "neither": 155, "sku": 0, "total": 155}}, "total": 525}
+{"both": 0, "brand": "Kexcelled / kexcelled", "gtin": 0, "neither": 516, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}, "OFD": {"both": 0, "gtin": 0, "neither": 3, "sku": 0, "total": 3}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 501, "sku": 0, "total": 501}}, "total": 516}
+{"both": 0, "brand": "add:north", "gtin": 0, "neither": 510, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 283, "sku": 0, "total": 283}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 227, "sku": 0, "total": 227}}, "total": 510}
+{"both": 0, "brand": "PrimaCreator", "gtin": 0, "neither": 501, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 267, "sku": 0, "total": 267}, "OFD": {"both": 0, "gtin": 0, "neither": 234, "sku": 0, "total": 234}}, "total": 501}
+{"both": 0, "brand": "R3D", "gtin": 0, "neither": 483, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 366, "sku": 0, "total": 366}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 117, "sku": 0, "total": 117}}, "total": 483}
+{"both": 0, "brand": "3DJAKE", "gtin": 0, "neither": 481, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 281, "sku": 0, "total": 281}, "OFD": {"both": 0, "gtin": 0, "neither": 200, "sku": 0, "total": 200}}, "total": 481}
+{"both": 0, "brand": "Winkle", "gtin": 0, "neither": 452, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 344, "sku": 0, "total": 344}, "OFD": {"both": 0, "gtin": 0, "neither": 108, "sku": 0, "total": 108}}, "total": 452}
+{"both": 0, "brand": "QIDI Tech", "gtin": 0, "neither": 448, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 156, "sku": 0, "total": 156}, "OFD": {"both": 0, "gtin": 0, "neither": 145, "sku": 0, "total": 145}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 147, "sku": 0, "total": 147}}, "total": 448}
+{"both": 0, "brand": "MatterHackers", "gtin": 0, "neither": 436, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 272, "sku": 0, "total": 272}, "OFD": {"both": 0, "gtin": 0, "neither": 164, "sku": 0, "total": 164}}, "total": 436}
+{"both": 0, "brand": "Gizmo Dorks", "gtin": 0, "neither": 428, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 294, "sku": 0, "total": 294}, "OFD": {"both": 0, "gtin": 0, "neither": 134, "sku": 0, "total": 134}}, "total": 428}
+{"both": 0, "brand": "eSUN 3D", "gtin": 0, "neither": 427, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 427, "sku": 0, "total": 427}}, "total": 427}
+{"both": 0, "brand": "FLASHFORGE / FlashForge", "gtin": 0, "neither": 417, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 240, "sku": 0, "total": 240}, "OFD": {"both": 0, "gtin": 0, "neither": 177, "sku": 0, "total": 177}}, "total": 417}
+{"both": 0, "brand": "Paramount 3D", "gtin": 0, "neither": 410, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 266, "sku": 0, "total": 266}, "OFD": {"both": 0, "gtin": 0, "neither": 144, "sku": 0, "total": 144}}, "total": 410}
+{"both": 0, "brand": "KiwiFil", "gtin": 0, "neither": 407, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 342, "sku": 0, "total": 342}, "OFD": {"both": 0, "gtin": 0, "neither": 65, "sku": 0, "total": 65}}, "total": 407}
+{"both": 0, "brand": "Arianeplast", "gtin": 0, "neither": 396, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 318, "sku": 0, "total": 318}, "OFD": {"both": 0, "gtin": 0, "neither": 78, "sku": 0, "total": 78}}, "total": 396}
+{"both": 0, "brand": "Atomic Filament", "gtin": 0, "neither": 374, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 194, "sku": 0, "total": 194}, "OFD": {"both": 0, "gtin": 0, "neither": 180, "sku": 0, "total": 180}}, "total": 374}
+{"both": 0, "brand": "SMART MATERIALS 3D / Smart Materials 3D", "gtin": 0, "neither": 370, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 199, "sku": 0, "total": 199}, "OFD": {"both": 0, "gtin": 0, "neither": 171, "sku": 0, "total": 171}}, "total": 370}
+{"both": 0, "brand": "Fillamentum", "gtin": 0, "neither": 366, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 244, "sku": 0, "total": 244}, "OFD": {"both": 0, "gtin": 0, "neither": 122, "sku": 0, "total": 122}}, "total": 366}
+{"both": 0, "brand": "Push Plastic", "gtin": 0, "neither": 359, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 280, "sku": 0, "total": 280}, "OFD": {"both": 0, "gtin": 0, "neither": 79, "sku": 0, "total": 79}}, "total": 359}
+{"both": 0, "brand": "Creality", "gtin": 0, "neither": 349, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 202, "sku": 0, "total": 202}, "OFD": {"both": 0, "gtin": 0, "neither": 147, "sku": 0, "total": 147}}, "total": 349}
+{"both": 0, "brand": "colorFabb", "gtin": 0, "neither": 336, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 209, "sku": 0, "total": 209}, "OFD": {"both": 0, "gtin": 0, "neither": 127, "sku": 0, "total": 127}}, "total": 336}
+{"both": 0, "brand": "Filament PM", "gtin": 0, "neither": 327, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 327, "sku": 0, "total": 327}}, "total": 327}
+{"both": 0, "brand": "TINMORRY / Tinmorry", "gtin": 0, "neither": 314, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 158, "sku": 0, "total": 158}, "OFD": {"both": 0, "gtin": 0, "neither": 156, "sku": 0, "total": 156}}, "total": 314}
+{"both": 0, "brand": "EPAX", "gtin": 0, "neither": 292, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 191, "sku": 0, "total": 191}, "OFD": {"both": 0, "gtin": 0, "neither": 101, "sku": 0, "total": 101}}, "total": 292}
+{"both": 0, "brand": "3DPower", "gtin": 0, "neither": 280, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 140, "sku": 0, "total": 140}, "OFD": {"both": 0, "gtin": 0, "neither": 140, "sku": 0, "total": 140}}, "total": 280}
+{"both": 0, "brand": "Filatech", "gtin": 0, "neither": 276, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 228, "sku": 0, "total": 228}, "OFD": {"both": 0, "gtin": 0, "neither": 48, "sku": 0, "total": 48}}, "total": 276}
+{"both": 0, "brand": "Matter3D Inc", "gtin": 0, "neither": 273, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 179, "sku": 0, "total": 179}, "OFD": {"both": 0, "gtin": 0, "neither": 94, "sku": 0, "total": 94}}, "total": 273}
+{"both": 0, "brand": "GST3D", "gtin": 0, "neither": 272, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 186, "sku": 0, "total": 186}, "OFD": {"both": 0, "gtin": 0, "neither": 86, "sku": 0, "total": 86}}, "total": 272}
+{"both": 0, "brand": "Numakers", "gtin": 0, "neither": 271, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 102, "sku": 0, "total": 102}, "OFD": {"both": 0, "gtin": 0, "neither": 33, "sku": 0, "total": 33}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 136, "sku": 0, "total": 136}}, "total": 271}
+{"both": 0, "brand": "GEEETECH / Geeetech", "gtin": 0, "neither": 270, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 161, "sku": 0, "total": 161}, "OFD": {"both": 0, "gtin": 0, "neither": 109, "sku": 0, "total": 109}}, "total": 270}
+{"both": 0, "brand": "Zyltech", "gtin": 0, "neither": 260, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 137, "sku": 0, "total": 137}, "OFD": {"both": 0, "gtin": 0, "neither": 123, "sku": 0, "total": 123}}, "total": 260}
+{"both": 0, "brand": "AURAPOL", "gtin": 0, "neither": 256, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 142, "sku": 0, "total": 142}, "OFD": {"both": 0, "gtin": 0, "neither": 114, "sku": 0, "total": 114}}, "total": 256}
+{"both": 0, "brand": "Das Filament", "gtin": 0, "neither": 248, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 180, "sku": 0, "total": 180}, "OFD": {"both": 0, "gtin": 0, "neither": 68, "sku": 0, "total": 68}}, "total": 248}
+{"both": 0, "brand": "3D4Makers", "gtin": 0, "neither": 238, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 238, "sku": 0, "total": 238}}, "total": 238}
+{"both": 0, "brand": "StrongHero3D / Stronghero3D", "gtin": 0, "neither": 236, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 186, "sku": 0, "total": 186}, "OFD": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 49, "sku": 0, "total": 49}}, "total": 236}
+{"both": 0, "brand": "Filamentree", "gtin": 0, "neither": 234, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 171, "sku": 0, "total": 171}, "OFD": {"both": 0, "gtin": 0, "neither": 63, "sku": 0, "total": 63}}, "total": 234}
+{"both": 0, "brand": "Voolt3D", "gtin": 0, "neither": 230, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 92, "sku": 0, "total": 92}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 138, "sku": 0, "total": 138}}, "total": 230}
+{"both": 0, "brand": "NinjaTek", "gtin": 0, "neither": 226, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 197, "sku": 0, "total": 197}, "OFD": {"both": 0, "gtin": 0, "neither": 29, "sku": 0, "total": 29}}, "total": 226}
+{"both": 0, "brand": "Nobufil", "gtin": 0, "neither": 225, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 119, "sku": 0, "total": 119}, "OFD": {"both": 0, "gtin": 0, "neither": 106, "sku": 0, "total": 106}}, "total": 225}
+{"both": 0, "brand": "Filamentworld", "gtin": 0, "neither": 224, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 143, "sku": 0, "total": 143}, "OFD": {"both": 0, "gtin": 0, "neither": 81, "sku": 0, "total": 81}}, "total": 224}
+{"both": 0, "brand": "3DExpress.my", "gtin": 0, "neither": 219, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 219, "sku": 0, "total": 219}}, "total": 219}
+{"both": 0, "brand": "Recreus", "gtin": 0, "neither": 218, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 134, "sku": 0, "total": 134}, "OFD": {"both": 0, "gtin": 0, "neither": 84, "sku": 0, "total": 84}}, "total": 218}
+{"both": 0, "brand": "Cookiecad", "gtin": 0, "neither": 214, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 113, "sku": 0, "total": 113}, "OFD": {"both": 0, "gtin": 0, "neither": 101, "sku": 0, "total": 101}}, "total": 214}
+{"both": 0, "brand": "Kingroon", "gtin": 0, "neither": 212, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 114, "sku": 0, "total": 114}, "OFD": {"both": 0, "gtin": 0, "neither": 98, "sku": 0, "total": 98}}, "total": 212}
+{"both": 0, "brand": "Threebees", "gtin": 0, "neither": 211, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 211, "sku": 0, "total": 211}}, "total": 211}
+{"both": 0, "brand": "IC3D", "gtin": 0, "neither": 206, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 157, "sku": 0, "total": 157}, "OFD": {"both": 0, "gtin": 0, "neither": 49, "sku": 0, "total": 49}}, "total": 206}
+{"both": 0, "brand": "Generic", "gtin": 0, "neither": 198, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 198, "sku": 0, "total": 198}}, "total": 198}
+{"both": 0, "brand": "American Filament", "gtin": 0, "neither": 197, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 146, "sku": 0, "total": 146}, "OFD": {"both": 0, "gtin": 0, "neither": 51, "sku": 0, "total": 51}}, "total": 197}
+{"both": 0, "brand": "SainSmart", "gtin": 0, "neither": 194, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 99, "sku": 0, "total": 99}, "OFD": {"both": 0, "gtin": 0, "neither": 95, "sku": 0, "total": 95}}, "total": 194}
+{"both": 0, "brand": "Add-North", "gtin": 0, "neither": 191, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 191, "sku": 0, "total": 191}}, "total": 191}
+{"both": 0, "brand": "NOCTUO / Noctuo", "gtin": 0, "neither": 190, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 44, "sku": 0, "total": 44}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 146, "sku": 0, "total": 146}}, "total": 190}
+{"both": 0, "brand": "FilaCube", "gtin": 0, "neither": 186, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 155, "sku": 0, "total": 155}, "OFD": {"both": 0, "gtin": 0, "neither": 31, "sku": 0, "total": 31}}, "total": 186}
+{"both": 0, "brand": "BambuLab", "gtin": 0, "neither": 184, "sku": 0, "sources": {"OpenPrintTag": {"both": 0, "gtin": 0, "neither": 184, "sku": 0, "total": 184}}, "total": 184}
+{"both": 0, "brand": "22 Network", "gtin": 0, "neither": 183, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 153, "sku": 0, "total": 153}, "OFD": {"both": 0, "gtin": 0, "neither": 30, "sku": 0, "total": 30}}, "total": 183}
+{"both": 0, "brand": "Printed Solid", "gtin": 0, "neither": 181, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 181, "sku": 0, "total": 181}}, "total": 181}
+{"both": 0, "brand": "3D-Fuel", "gtin": 0, "neither": 176, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 176, "sku": 0, "total": 176}}, "total": 176}
+{"both": 0, "brand": "ATARAXIA ART / Ataraxia Art", "gtin": 0, "neither": 173, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 110, "sku": 0, "total": 110}, "OFD": {"both": 0, "gtin": 0, "neither": 63, "sku": 0, "total": 63}}, "total": 173}
+{"both": 0, "brand": "Fusion", "gtin": 0, "neither": 158, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 158, "sku": 0, "total": 158}}, "total": 158}
+{"both": 0, "brand": "Polar Filament", "gtin": 0, "neither": 156, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 99, "sku": 0, "total": 99}, "OFD": {"both": 0, "gtin": 0, "neither": 57, "sku": 0, "total": 57}}, "total": 156}
+{"both": 0, "brand": "PrintOnion", "gtin": 0, "neither": 150, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 61, "sku": 0, "total": 61}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 89, "sku": 0, "total": 89}}, "total": 150}
+{"both": 0, "brand": "DuramiC 3D / Duramic 3D", "gtin": 0, "neither": 146, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 27, "sku": 0, "total": 27}, "OFD": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 118, "sku": 0, "total": 118}}, "total": 146}
+{"both": 0, "brand": "IIID MAX", "gtin": 0, "neither": 145, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 139, "sku": 0, "total": 139}, "OFD": {"both": 0, "gtin": 0, "neither": 6, "sku": 0, "total": 6}}, "total": 145}
+{"both": 0, "brand": "TEQStone", "gtin": 0, "neither": 140, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 98, "sku": 0, "total": 98}, "OFD": {"both": 0, "gtin": 0, "neither": 42, "sku": 0, "total": 42}}, "total": 140}
+{"both": 0, "brand": "3D Fuel", "gtin": 0, "neither": 138, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 138, "sku": 0, "total": 138}}, "total": 138}
+{"both": 0, "brand": "3DHoJor", "gtin": 0, "neither": 136, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 118, "sku": 0, "total": 118}, "OFD": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 136}
+{"both": 0, "brand": "SigmaFilament", "gtin": 0, "neither": 135, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 135, "sku": 0, "total": 135}}, "total": 135}
+{"both": 0, "brand": "Kimya", "gtin": 0, "neither": 134, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}, "OFD": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 115, "sku": 0, "total": 115}}, "total": 134}
+{"both": 0, "brand": "PrintedSolid", "gtin": 0, "neither": 134, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 134, "sku": 0, "total": 134}}, "total": 134}
+{"both": 0, "brand": "HariMau3D", "gtin": 0, "neither": 126, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 126, "sku": 0, "total": 126}}, "total": 126}
+{"both": 0, "brand": "Tectonic 3D", "gtin": 0, "neither": 125, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 88, "sku": 0, "total": 88}, "OFD": {"both": 0, "gtin": 0, "neither": 37, "sku": 0, "total": 37}}, "total": 125}
+{"both": 0, "brand": "Filamatrix", "gtin": 0, "neither": 124, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 124, "sku": 0, "total": 124}}, "total": 124}
+{"both": 0, "brand": "Alchemakes", "gtin": 0, "neither": 122, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 122, "sku": 0, "total": 122}}, "total": 122}
+{"both": 0, "brand": "DEEPLEE / Deeplee", "gtin": 0, "neither": 120, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 29, "sku": 0, "total": 29}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 91, "sku": 0, "total": 91}}, "total": 120}
+{"both": 0, "brand": "VANYO", "gtin": 0, "neither": 119, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 119, "sku": 0, "total": 119}}, "total": 119}
+{"both": 0, "brand": "Inslogic", "gtin": 0, "neither": 114, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 59, "sku": 0, "total": 59}, "OFD": {"both": 0, "gtin": 0, "neither": 54, "sku": 0, "total": 54}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}}, "total": 114}
+{"both": 0, "brand": "Nanovia", "gtin": 0, "neither": 114, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 114, "sku": 0, "total": 114}}, "total": 114}
+{"both": 0, "brand": "XZN", "gtin": 0, "neither": 114, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 61, "sku": 0, "total": 61}, "OFD": {"both": 0, "gtin": 0, "neither": 53, "sku": 0, "total": 53}}, "total": 114}
+{"both": 0, "brand": "3DQF", "gtin": 0, "neither": 113, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 113, "sku": 0, "total": 113}}, "total": 113}
+{"both": 0, "brand": "iBOSS", "gtin": 0, "neither": 109, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 109, "sku": 0, "total": 109}}, "total": 109}
+{"both": 0, "brand": "COEX 3D", "gtin": 0, "neither": 108, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 108, "sku": 0, "total": 108}}, "total": 108}
+{"both": 0, "brand": "Aceaddity", "gtin": 0, "neither": 102, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 71, "sku": 0, "total": 71}, "OFD": {"both": 0, "gtin": 0, "neither": 31, "sku": 0, "total": 31}}, "total": 102}
+{"both": 0, "brand": "CaiLab", "gtin": 0, "neither": 102, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 102, "sku": 0, "total": 102}}, "total": 102}
+{"both": 0, "brand": "SmartMaterials", "gtin": 0, "neither": 102, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 102, "sku": 0, "total": 102}}, "total": 102}
+{"both": 0, "brand": "FDplast", "gtin": 0, "neither": 101, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 101, "sku": 0, "total": 101}}, "total": 101}
+{"both": 0, "brand": "GratKit", "gtin": 0, "neither": 98, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 9, "sku": 0, "total": 9}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 89, "sku": 0, "total": 89}}, "total": 98}
+{"both": 0, "brand": "Verbatim", "gtin": 0, "neither": 96, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 70, "sku": 0, "total": 70}, "OFD": {"both": 0, "gtin": 0, "neither": 26, "sku": 0, "total": 26}}, "total": 96}
+{"both": 0, "brand": "Matter3D", "gtin": 0, "neither": 84, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 84, "sku": 0, "total": 84}}, "total": 84}
+{"both": 0, "brand": "OVV3D", "gtin": 0, "neither": 84, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 53, "sku": 0, "total": 53}, "OFD": {"both": 0, "gtin": 0, "neither": 31, "sku": 0, "total": 31}}, "total": 84}
+{"both": 0, "brand": "Dremel", "gtin": 0, "neither": 81, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 59, "sku": 0, "total": 59}, "OFD": {"both": 0, "gtin": 0, "neither": 22, "sku": 0, "total": 22}}, "total": 81}
+{"both": 0, "brand": "CHCKX", "gtin": 0, "neither": 79, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 78, "sku": 0, "total": 78}, "OFD": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}}, "total": 79}
+{"both": 0, "brand": "Ultimaker", "gtin": 0, "neither": 78, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 78, "sku": 0, "total": 78}}, "total": 78}
+{"both": 0, "brand": "Filament Unger", "gtin": 0, "neither": 77, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 77, "sku": 0, "total": 77}}, "total": 77}
+{"both": 0, "brand": "Hellbot", "gtin": 0, "neither": 77, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 77, "sku": 0, "total": 77}}, "total": 77}
+{"both": 0, "brand": "Siraya Tech", "gtin": 0, "neither": 77, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 35, "sku": 0, "total": 35}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 42, "sku": 0, "total": 42}}, "total": 77}
+{"both": 0, "brand": "Dikale", "gtin": 0, "neither": 73, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 73, "sku": 0, "total": 73}}, "total": 73}
+{"both": 0, "brand": "Ampertec", "gtin": 0, "neither": 71, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 71, "sku": 0, "total": 71}}, "total": 71}
+{"both": 0, "brand": "Innofil3D", "gtin": 0, "neither": 71, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 71, "sku": 0, "total": 71}}, "total": 71}
+{"both": 0, "brand": "PolyPrinter", "gtin": 0, "neither": 71, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 71, "sku": 0, "total": 71}}, "total": 71}
+{"both": 0, "brand": "3Dfinity", "gtin": 0, "neither": 69, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 69, "sku": 0, "total": 69}}, "total": 69}
+{"both": 0, "brand": "CRAFTORY", "gtin": 0, "neither": 69, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 69, "sku": 0, "total": 69}}, "total": 69}
+{"both": 0, "brand": "VOXELPLA / Voxelpla", "gtin": 0, "neither": 69, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 35, "sku": 0, "total": 35}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 34, "sku": 0, "total": 34}}, "total": 69}
+{"both": 0, "brand": "EconoFil", "gtin": 0, "neither": 68, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 68, "sku": 0, "total": 68}}, "total": 68}
+{"both": 0, "brand": "IEMAI", "gtin": 0, "neither": 68, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 36, "sku": 0, "total": 36}, "OFD": {"both": 0, "gtin": 0, "neither": 32, "sku": 0, "total": 32}}, "total": 68}
+{"both": 0, "brand": "Printbed", "gtin": 0, "neither": 68, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 68, "sku": 0, "total": 68}}, "total": 68}
+{"both": 0, "brand": "ProtoFil", "gtin": 0, "neither": 67, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 67, "sku": 0, "total": 67}}, "total": 67}
+{"both": 0, "brand": "TECOR", "gtin": 0, "neither": 67, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 67, "sku": 0, "total": 67}}, "total": 67}
+{"both": 0, "brand": "3D AURA", "gtin": 0, "neither": 66, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 66, "sku": 0, "total": 66}}, "total": 66}
+{"both": 0, "brand": "Precision 3D Filament", "gtin": 0, "neither": 66, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 34, "sku": 0, "total": 34}, "OFD": {"both": 0, "gtin": 0, "neither": 32, "sku": 0, "total": 32}}, "total": 66}
+{"both": 0, "brand": "Bavaria Filaments", "gtin": 0, "neither": 64, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 64, "sku": 0, "total": 64}}, "total": 64}
+{"both": 0, "brand": "Eureka", "gtin": 0, "neither": 64, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 64, "sku": 0, "total": 64}}, "total": 64}
+{"both": 0, "brand": "iSANMATE", "gtin": 0, "neither": 64, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 51, "sku": 0, "total": 51}, "OFD": {"both": 0, "gtin": 0, "neither": 13, "sku": 0, "total": 13}}, "total": 64}
+{"both": 0, "brand": "REDLINE FILAMENT", "gtin": 0, "neither": 64, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 64, "sku": 0, "total": 64}}, "total": 64}
+{"both": 0, "brand": "Ujoybio3d", "gtin": 0, "neither": 63, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 63, "sku": 0, "total": 63}}, "total": 63}
+{"both": 0, "brand": "California Filament", "gtin": 0, "neither": 61, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 61, "sku": 0, "total": 61}}, "total": 61}
+{"both": 0, "brand": "COEX", "gtin": 0, "neither": 61, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 61, "sku": 0, "total": 61}}, "total": 61}
+{"both": 0, "brand": "Rosa3D", "gtin": 0, "neither": 61, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 61, "sku": 0, "total": 61}}, "total": 61}
+{"both": 0, "brand": "Filamax", "gtin": 0, "neither": 60, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 60, "sku": 0, "total": 60}}, "total": 60}
+{"both": 0, "brand": "Filamentive", "gtin": 0, "neither": 60, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 49, "sku": 0, "total": 49}, "OFD": {"both": 0, "gtin": 0, "neither": 11, "sku": 0, "total": 11}}, "total": 60}
+{"both": 0, "brand": "KVP", "gtin": 0, "neither": 60, "sku": 0, "sources": {"OpenPrintTag": {"both": 0, "gtin": 0, "neither": 60, "sku": 0, "total": 60}}, "total": 60}
+{"both": 0, "brand": "CR3D", "gtin": 0, "neither": 59, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 59, "sku": 0, "total": 59}}, "total": 59}
+{"both": 0, "brand": "JUSTMAKER", "gtin": 0, "neither": 58, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 58, "sku": 0, "total": 58}}, "total": 58}
+{"both": 0, "brand": "Recycling Fabrik", "gtin": 0, "neither": 58, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 58, "sku": 0, "total": 58}}, "total": 58}
+{"both": 0, "brand": "TM3D", "gtin": 0, "neither": 57, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 57, "sku": 0, "total": 57}}, "total": 57}
+{"both": 0, "brand": "SkyWire", "gtin": 0, "neither": 56, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 56, "sku": 0, "total": 56}}, "total": 56}
+{"both": 0, "brand": "Super-Filament", "gtin": 0, "neither": 56, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 56, "sku": 0, "total": 56}}, "total": 56}
+{"both": 0, "brand": "Likesilk", "gtin": 0, "neither": 55, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 55, "sku": 0, "total": 55}}, "total": 55}
+{"both": 0, "brand": "REC", "gtin": 0, "neither": 52, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 52, "sku": 0, "total": 52}}, "total": 52}
+{"both": 0, "brand": "Gryddle", "gtin": 0, "neither": 51, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 51, "sku": 0, "total": 51}}, "total": 51}
+{"both": 0, "brand": "Voxelab", "gtin": 0, "neither": 51, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 51, "sku": 0, "total": 51}}, "total": 51}
+{"both": 0, "brand": "3DKordo", "gtin": 0, "neither": 50, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 50, "sku": 0, "total": 50}}, "total": 50}
+{"both": 0, "brand": "eono", "gtin": 0, "neither": 50, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 50, "sku": 0, "total": 50}}, "total": 50}
+{"both": 0, "brand": "Tr\u00edade 3D", "gtin": 0, "neither": 50, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 50, "sku": 0, "total": 50}}, "total": 50}
+{"both": 0, "brand": "IndoFilam", "gtin": 0, "neither": 49, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 49, "sku": 0, "total": 49}}, "total": 49}
+{"both": 0, "brand": "MarsWork", "gtin": 0, "neither": 49, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 46, "sku": 0, "total": 46}, "OFD": {"both": 0, "gtin": 0, "neither": 3, "sku": 0, "total": 3}}, "total": 49}
+{"both": 0, "brand": "STLFLIX", "gtin": 0, "neither": 49, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 44, "sku": 0, "total": 44}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 49}
+{"both": 0, "brand": "Filament Hub", "gtin": 0, "neither": 48, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 48, "sku": 0, "total": 48}}, "total": 48}
+{"both": 0, "brand": "NTH Grillon", "gtin": 0, "neither": 48, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 48, "sku": 0, "total": 48}}, "total": 48}
+{"both": 0, "brand": "Polyture", "gtin": 0, "neither": 48, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 48, "sku": 0, "total": 48}}, "total": 48}
+{"both": 0, "brand": "RecyclingFabrik", "gtin": 0, "neither": 48, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 48, "sku": 0, "total": 48}}, "total": 48}
+{"both": 0, "brand": "AmazonBasics", "gtin": 0, "neither": 47, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 43, "sku": 0, "total": 43}, "OFD": {"both": 0, "gtin": 0, "neither": 4, "sku": 0, "total": 4}}, "total": 47}
+{"both": 0, "brand": "Crofil 3D", "gtin": 0, "neither": 47, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 47, "sku": 0, "total": 47}}, "total": 47}
+{"both": 0, "brand": "Toksen3D", "gtin": 0, "neither": 47, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 47, "sku": 0, "total": 47}}, "total": 47}
+{"both": 0, "brand": "Chromatik", "gtin": 0, "neither": 45, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 45, "sku": 0, "total": 45}}, "total": 45}
+{"both": 0, "brand": "Filamentarno!", "gtin": 0, "neither": 45, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 45, "sku": 0, "total": 45}}, "total": 45}
+{"both": 0, "brand": "LOCYFENS", "gtin": 0, "neither": 45, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 29, "sku": 0, "total": 29}, "OFD": {"both": 0, "gtin": 0, "neither": 16, "sku": 0, "total": 16}}, "total": 45}
+{"both": 0, "brand": "yxpolyer", "gtin": 0, "neither": 45, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 45, "sku": 0, "total": 45}}, "total": 45}
+{"both": 0, "brand": "Cubic3", "gtin": 0, "neither": 44, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 44, "sku": 0, "total": 44}}, "total": 44}
+{"both": 0, "brand": "SPOOL3D", "gtin": 0, "neither": 44, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 44, "sku": 0, "total": 44}}, "total": 44}
+{"both": 0, "brand": "3D Filament", "gtin": 0, "neither": 43, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 43, "sku": 0, "total": 43}}, "total": 43}
+{"both": 0, "brand": "BAREfilament", "gtin": 0, "neither": 43, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 43, "sku": 0, "total": 43}}, "total": 43}
+{"both": 0, "brand": "Dancyn 3D Prints", "gtin": 0, "neither": 42, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 42, "sku": 0, "total": 42}}, "total": 42}
+{"both": 0, "brand": "fa768e92-f031-5c7d-a8b4-f7b5b51c4b85", "gtin": 0, "neither": 41, "sku": 0, "sources": {"OpenPrintTag": {"both": 0, "gtin": 0, "neither": 41, "sku": 0, "total": 41}}, "total": 41}
+{"both": 0, "brand": "SA Filament", "gtin": 0, "neither": 41, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 41, "sku": 0, "total": 41}}, "total": 41}
+{"both": 0, "brand": "Phrozen", "gtin": 0, "neither": 40, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 32, "sku": 0, "total": 32}, "OFD": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 40}
+{"both": 0, "brand": "Smartfil", "gtin": 0, "neither": 40, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 40, "sku": 0, "total": 40}}, "total": 40}
+{"both": 0, "brand": "Yuaneang", "gtin": 0, "neither": 40, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 40, "sku": 0, "total": 40}}, "total": 40}
+{"both": 0, "brand": "3D Solutech", "gtin": 0, "neither": 39, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 39, "sku": 0, "total": 39}}, "total": 39}
+{"both": 0, "brand": "Aliz", "gtin": 0, "neither": 39, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 39, "sku": 0, "total": 39}}, "total": 39}
+{"both": 0, "brand": "LDO", "gtin": 0, "neither": 39, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 26, "sku": 0, "total": 26}, "OFD": {"both": 0, "gtin": 0, "neither": 13, "sku": 0, "total": 13}}, "total": 39}
+{"both": 0, "brand": "Ender", "gtin": 0, "neither": 38, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 38, "sku": 0, "total": 38}}, "total": 38}
+{"both": 0, "brand": "Fremover", "gtin": 0, "neither": 38, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 38, "sku": 0, "total": 38}}, "total": 38}
+{"both": 0, "brand": "livingdewise", "gtin": 0, "neither": 38, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 38, "sku": 0, "total": 38}}, "total": 38}
+{"both": 0, "brand": "MatterHackers MH Build", "gtin": 0, "neither": 38, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 38, "sku": 0, "total": 38}}, "total": 38}
+{"both": 0, "brand": "FiberThree", "gtin": 0, "neither": 37, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 22, "sku": 0, "total": 22}, "OFD": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 37}
+{"both": 0, "brand": "FilRight", "gtin": 0, "neither": 37, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 37, "sku": 0, "total": 37}}, "total": 37}
+{"both": 0, "brand": "Forshape", "gtin": 0, "neither": 37, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 37, "sku": 0, "total": 37}}, "total": 37}
+{"both": 0, "brand": "BASF Forward AM", "gtin": 0, "neither": 36, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 36, "sku": 0, "total": 36}}, "total": 36}
+{"both": 0, "brand": "Element3D", "gtin": 0, "neither": 36, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 36, "sku": 0, "total": 36}}, "total": 36}
+{"both": 0, "brand": "Envirolaser 3D", "gtin": 0, "neither": 36, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 36, "sku": 0, "total": 36}}, "total": 36}
+{"both": 0, "brand": "Filkemp", "gtin": 0, "neither": 36, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 25, "sku": 0, "total": 25}, "OFD": {"both": 0, "gtin": 0, "neither": 11, "sku": 0, "total": 11}}, "total": 36}
+{"both": 0, "brand": "Clas Ohlson", "gtin": 0, "neither": 35, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 35, "sku": 0, "total": 35}}, "total": 35}
+{"both": 0, "brand": "H3D", "gtin": 0, "neither": 35, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 35, "sku": 0, "total": 35}}, "total": 35}
+{"both": 0, "brand": "Material4Print", "gtin": 0, "neither": 35, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 35, "sku": 0, "total": 35}}, "total": 35}
+{"both": 0, "brand": "NevsBye", "gtin": 0, "neither": 35, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 35, "sku": 0, "total": 35}}, "total": 35}
+{"both": 0, "brand": "OWL-Filament", "gtin": 0, "neither": 35, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 35, "sku": 0, "total": 35}}, "total": 35}
+{"both": 0, "brand": "Pinball", "gtin": 0, "neither": 35, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 35, "sku": 0, "total": 35}}, "total": 35}
+{"both": 0, "brand": "PRILINE 3D", "gtin": 0, "neither": 35, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 35, "sku": 0, "total": 35}}, "total": 35}
+{"both": 0, "brand": "Torwell", "gtin": 0, "neither": 34, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 34, "sku": 0, "total": 34}}, "total": 34}
+{"both": 0, "brand": "3DFila", "gtin": 0, "neither": 33, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 33, "sku": 0, "total": 33}}, "total": 33}
+{"both": 0, "brand": "Capricorn", "gtin": 0, "neither": 33, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 33, "sku": 0, "total": 33}}, "total": 33}
+{"both": 0, "brand": "LOVOON / Lovoon", "gtin": 0, "neither": 33, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 32, "sku": 0, "total": 32}, "OFD": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}}, "total": 33}
+{"both": 0, "brand": "PolyTerra", "gtin": 0, "neither": 33, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 33, "sku": 0, "total": 33}}, "total": 33}
+{"both": 0, "brand": "Conjure", "gtin": 0, "neither": 32, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 32, "sku": 0, "total": 32}}, "total": 32}
+{"both": 0, "brand": "Fortis Filaments", "gtin": 0, "neither": 32, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 32, "sku": 0, "total": 32}}, "total": 32}
+{"both": 0, "brand": "Jarees", "gtin": 0, "neither": 32, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 32, "sku": 0, "total": 32}}, "total": 32}
+{"both": 0, "brand": "ZKLabs", "gtin": 0, "neither": 32, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 32, "sku": 0, "total": 32}}, "total": 32}
+{"both": 0, "brand": "BIQU", "gtin": 0, "neither": 31, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 27, "sku": 0, "total": 27}, "OFD": {"both": 0, "gtin": 0, "neither": 4, "sku": 0, "total": 4}}, "total": 31}
+{"both": 0, "brand": "D3D Sigma", "gtin": 0, "neither": 31, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 31, "sku": 0, "total": 31}}, "total": 31}
+{"both": 0, "brand": "MG Chemicals", "gtin": 0, "neither": 31, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 31, "sku": 0, "total": 31}}, "total": 31}
+{"both": 0, "brand": "Printomax", "gtin": 0, "neither": 31, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 31, "sku": 0, "total": 31}}, "total": 31}
+{"both": 0, "brand": "QTS", "gtin": 0, "neither": 31, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 31, "sku": 0, "total": 31}}, "total": 31}
+{"both": 0, "brand": "Voxel PLA", "gtin": 0, "neither": 31, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 31, "sku": 0, "total": 31}}, "total": 31}
+{"both": 0, "brand": "ZCL 3D", "gtin": 0, "neither": 31, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 31, "sku": 0, "total": 31}}, "total": 31}
+{"both": 0, "brand": "AGF", "gtin": 0, "neither": 30, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 30, "sku": 0, "total": 30}}, "total": 30}
+{"both": 0, "brand": "DREMC", "gtin": 0, "neither": 30, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 30, "sku": 0, "total": 30}}, "total": 30}
+{"both": 0, "brand": "Fabbxible", "gtin": 0, "neither": 30, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 30, "sku": 0, "total": 30}}, "total": 30}
+{"both": 0, "brand": "HP 3DF", "gtin": 0, "neither": 30, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 30, "sku": 0, "total": 30}}, "total": 30}
+{"both": 0, "brand": "KELEIDI", "gtin": 0, "neither": 30, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 30, "sku": 0, "total": 30}}, "total": 30}
+{"both": 0, "brand": "Prusa", "gtin": 0, "neither": 30, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 30, "sku": 0, "total": 30}}, "total": 30}
+{"both": 0, "brand": "Zortrax", "gtin": 0, "neither": 30, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 30, "sku": 0, "total": 30}}, "total": 30}
+{"both": 0, "brand": "DO3D", "gtin": 0, "neither": 29, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 29, "sku": 0, "total": 29}}, "total": 29}
+{"both": 0, "brand": "Keene Village Plastics", "gtin": 0, "neither": 29, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 29, "sku": 0, "total": 29}}, "total": 29}
+{"both": 0, "brand": "No Brand", "gtin": 0, "neither": 29, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 29, "sku": 0, "total": 29}}, "total": 29}
+{"both": 0, "brand": "Real", "gtin": 0, "neither": 29, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 29, "sku": 0, "total": 29}}, "total": 29}
+{"both": 0, "brand": "Wanhao", "gtin": 0, "neither": 29, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 29, "sku": 0, "total": 29}}, "total": 29}
+{"both": 0, "brand": "Artillery", "gtin": 0, "neither": 28, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 7, "sku": 0, "total": 7}, "OFD": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 16, "sku": 0, "total": 16}}, "total": 28}
+{"both": 0, "brand": "Dream Polymers", "gtin": 0, "neither": 28, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 28, "sku": 0, "total": 28}}, "total": 28}
+{"both": 0, "brand": "PolyFlex", "gtin": 0, "neither": 28, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 28, "sku": 0, "total": 28}}, "total": 28}
+{"both": 0, "brand": "Siddament", "gtin": 0, "neither": 28, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 27, "sku": 0, "total": 27}, "OFD": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}}, "total": 28}
+{"both": 0, "brand": "StarPlast", "gtin": 0, "neither": 28, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 28, "sku": 0, "total": 28}}, "total": 28}
+{"both": 0, "brand": "TECSONAR", "gtin": 0, "neither": 28, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 28, "sku": 0, "total": 28}}, "total": 28}
+{"both": 0, "brand": "Xingtongzhilian", "gtin": 0, "neither": 28, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 28, "sku": 0, "total": 28}}, "total": 28}
+{"both": 0, "brand": "Copymaster3D", "gtin": 0, "neither": 27, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 27, "sku": 0, "total": 27}}, "total": 27}
+{"both": 0, "brand": "F3D", "gtin": 0, "neither": 27, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 27, "sku": 0, "total": 27}}, "total": 27}
+{"both": 0, "brand": "Filalab", "gtin": 0, "neither": 27, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 27, "sku": 0, "total": 27}}, "total": 27}
+{"both": 0, "brand": "InkStation", "gtin": 0, "neither": 27, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 27, "sku": 0, "total": 27}}, "total": 27}
+{"both": 0, "brand": "lostboyslab", "gtin": 0, "neither": 27, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 27, "sku": 0, "total": 27}}, "total": 27}
+{"both": 0, "brand": "Splice3D", "gtin": 0, "neither": 27, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 27, "sku": 0, "total": 27}}, "total": 27}
+{"both": 0, "brand": "TTYT3D", "gtin": 0, "neither": 27, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 26, "sku": 0, "total": 26}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}}, "total": 27}
+{"both": 0, "brand": "Behant", "gtin": 0, "neither": 26, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 26, "sku": 0, "total": 26}}, "total": 26}
+{"both": 0, "brand": "FilamentOne", "gtin": 0, "neither": 26, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 26, "sku": 0, "total": 26}}, "total": 26}
+{"both": 0, "brand": "MKOEM", "gtin": 0, "neither": 26, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 26, "sku": 0, "total": 26}}, "total": 26}
+{"both": 0, "brand": "N-Fillar", "gtin": 0, "neither": 26, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 26, "sku": 0, "total": 26}}, "total": 26}
+{"both": 0, "brand": "3D Sao Vang", "gtin": 0, "neither": 25, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 25, "sku": 0, "total": 25}}, "total": 25}
+{"both": 0, "brand": "BASF", "gtin": 0, "neither": 25, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 25, "sku": 0, "total": 25}}, "total": 25}
+{"both": 0, "brand": "CoLiDo", "gtin": 0, "neither": 25, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 25, "sku": 0, "total": 25}}, "total": 25}
+{"both": 0, "brand": "Sindoh", "gtin": 0, "neither": 25, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 25, "sku": 0, "total": 25}}, "total": 25}
+{"both": 0, "brand": "SpiderMaker", "gtin": 0, "neither": 25, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 25, "sku": 0, "total": 25}}, "total": 25}
+{"both": 0, "brand": "3D Maliang", "gtin": 0, "neither": 24, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 24, "sku": 0, "total": 24}}, "total": 24}
+{"both": 0, "brand": "3D Plast", "gtin": 0, "neither": 24, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 24, "sku": 0, "total": 24}}, "total": 24}
+{"both": 0, "brand": "FilaStation 3D", "gtin": 0, "neither": 24, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 24, "sku": 0, "total": 24}}, "total": 24}
+{"both": 0, "brand": "ICE", "gtin": 0, "neither": 24, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 24, "sku": 0, "total": 24}}, "total": 24}
+{"both": 0, "brand": "Nexaforge", "gtin": 0, "neither": 24, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 24, "sku": 0, "total": 24}}, "total": 24}
+{"both": 0, "brand": "3DACTIVE", "gtin": 0, "neither": 23, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 23, "sku": 0, "total": 23}}, "total": 23}
+{"both": 0, "brand": "Amoybaby", "gtin": 0, "neither": 23, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 23, "sku": 0, "total": 23}}, "total": 23}
+{"both": 0, "brand": "Bblife", "gtin": 0, "neither": 23, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 23, "sku": 0, "total": 23}}, "total": 23}
+{"both": 0, "brand": "BCN3D", "gtin": 0, "neither": 23, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 23, "sku": 0, "total": 23}}, "total": 23}
+{"both": 0, "brand": "Bling3D", "gtin": 0, "neither": 23, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 23, "sku": 0, "total": 23}}, "total": 23}
+{"both": 0, "brand": "Closin", "gtin": 0, "neither": 23, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 23, "sku": 0, "total": 23}}, "total": 23}
+{"both": 0, "brand": "Enotepad", "gtin": 0, "neither": 23, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 23, "sku": 0, "total": 23}}, "total": 23}
+{"both": 0, "brand": "Filaprint", "gtin": 0, "neither": 23, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 23, "sku": 0, "total": 23}}, "total": 23}
+{"both": 0, "brand": "Lotactree", "gtin": 0, "neither": 23, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 23, "sku": 0, "total": 23}}, "total": 23}
+{"both": 0, "brand": "Maker Geeks", "gtin": 0, "neither": 23, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 23, "sku": 0, "total": 23}}, "total": 23}
+{"both": 0, "brand": "Semdon", "gtin": 0, "neither": 23, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 23, "sku": 0, "total": 23}}, "total": 23}
+{"both": 0, "brand": "3Dgenius", "gtin": 0, "neither": 22, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 22, "sku": 0, "total": 22}}, "total": 22}
+{"both": 0, "brand": "BASICFIL", "gtin": 0, "neither": 22, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 22, "sku": 0, "total": 22}}, "total": 22}
+{"both": 0, "brand": "DOWELL 3D", "gtin": 0, "neither": 22, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 22, "sku": 0, "total": 22}}, "total": 22}
+{"both": 0, "brand": "G3D Pro (Grossiste 3D)", "gtin": 0, "neither": 22, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 22, "sku": 0, "total": 22}}, "total": 22}
+{"both": 0, "brand": "Hobby Lobby", "gtin": 0, "neither": 22, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 22, "sku": 0, "total": 22}}, "total": 22}
+{"both": 0, "brand": "I3D Tested", "gtin": 0, "neither": 22, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 22, "sku": 0, "total": 22}}, "total": 22}
+{"both": 0, "brand": "M\u00e9xico Makers", "gtin": 0, "neither": 22, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 22, "sku": 0, "total": 22}}, "total": 22}
+{"both": 0, "brand": "Printalot", "gtin": 0, "neither": 22, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 22, "sku": 0, "total": 22}}, "total": 22}
+{"both": 0, "brand": "AltTab", "gtin": 0, "neither": 21, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 21, "sku": 0, "total": 21}}, "total": 21}
+{"both": 0, "brand": "Bestfilament", "gtin": 0, "neither": 21, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 21, "sku": 0, "total": 21}}, "total": 21}
+{"both": 0, "brand": "BigRep", "gtin": 0, "neither": 21, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 21, "sku": 0, "total": 21}}, "total": 21}
+{"both": 0, "brand": "BING3D", "gtin": 0, "neither": 21, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 21, "sku": 0, "total": 21}}, "total": 21}
+{"both": 0, "brand": "MakerBot", "gtin": 0, "neither": 21, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 21, "sku": 0, "total": 21}}, "total": 21}
+{"both": 0, "brand": "NAGA", "gtin": 0, "neither": 21, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 21, "sku": 0, "total": 21}}, "total": 21}
+{"both": 0, "brand": "Pancolour", "gtin": 0, "neither": 21, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 21, "sku": 0, "total": 21}}, "total": 21}
+{"both": 0, "brand": "Proteor Print", "gtin": 0, "neither": 21, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 11, "sku": 0, "total": 11}, "OFD": {"both": 0, "gtin": 0, "neither": 10, "sku": 0, "total": 10}}, "total": 21}
+{"both": 0, "brand": "SliceWorx", "gtin": 0, "neither": 21, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 21, "sku": 0, "total": 21}}, "total": 21}
+{"both": 0, "brand": "3DFillies", "gtin": 0, "neither": 20, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 20, "sku": 0, "total": 20}}, "total": 20}
+{"both": 0, "brand": "Fiberon", "gtin": 0, "neither": 20, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 20, "sku": 0, "total": 20}}, "total": 20}
+{"both": 0, "brand": "Filaments Depot", "gtin": 0, "neither": 20, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 20, "sku": 0, "total": 20}}, "total": 20}
+{"both": 0, "brand": "Jamg He", "gtin": 0, "neither": 20, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 20, "sku": 0, "total": 20}}, "total": 20}
+{"both": 0, "brand": "Kretrum", "gtin": 0, "neither": 20, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 20, "sku": 0, "total": 20}}, "total": 20}
+{"both": 0, "brand": "Mecpow", "gtin": 0, "neither": 20, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 20, "sku": 0, "total": 20}}, "total": 20}
+{"both": 0, "brand": "Mosaic", "gtin": 0, "neither": 20, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 17, "sku": 0, "total": 17}, "OFD": {"both": 0, "gtin": 0, "neither": 3, "sku": 0, "total": 3}}, "total": 20}
+{"both": 0, "brand": "PINRUI", "gtin": 0, "neither": 20, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 20, "sku": 0, "total": 20}}, "total": 20}
+{"both": 0, "brand": "PolySonic", "gtin": 0, "neither": 20, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 20, "sku": 0, "total": 20}}, "total": 20}
+{"both": 0, "brand": "RS PRO", "gtin": 0, "neither": 20, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 20, "sku": 0, "total": 20}}, "total": 20}
+{"both": 0, "brand": "3DEA", "gtin": 0, "neither": 19, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 19, "sku": 0, "total": 19}}, "total": 19}
+{"both": 0, "brand": "FF SUNSENKJ", "gtin": 0, "neither": 19, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 19, "sku": 0, "total": 19}}, "total": 19}
+{"both": 0, "brand": "Geek Fil/lament", "gtin": 0, "neither": 19, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 19, "sku": 0, "total": 19}}, "total": 19}
+{"both": 0, "brand": "Pangda", "gtin": 0, "neither": 19, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 19, "sku": 0, "total": 19}}, "total": 19}
+{"both": 0, "brand": "PureFil", "gtin": 0, "neither": 19, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 19, "sku": 0, "total": 19}}, "total": 19}
+{"both": 0, "brand": "Tucab Fil3D", "gtin": 0, "neither": 19, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 19, "sku": 0, "total": 19}}, "total": 19}
+{"both": 0, "brand": "3DFILS", "gtin": 0, "neither": 18, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 18}
+{"both": 0, "brand": "Factory Filament", "gtin": 0, "neither": 18, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 18}
+{"both": 0, "brand": "Filaments.ca", "gtin": 0, "neither": 18, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 18}
+{"both": 0, "brand": "Filameon", "gtin": 0, "neither": 18, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 18}
+{"both": 0, "brand": "Filaxix", "gtin": 0, "neither": 18, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 18}
+{"both": 0, "brand": "IkSystem", "gtin": 0, "neither": 18, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 18}
+{"both": 0, "brand": "Machi_go", "gtin": 0, "neither": 18, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 18}
+{"both": 0, "brand": "Monofilament (UA)", "gtin": 0, "neither": 18, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 18}
+{"both": 0, "brand": "Plasticz", "gtin": 0, "neither": 18, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 18}
+{"both": 0, "brand": "Polaroid", "gtin": 0, "neither": 18, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 18}
+{"both": 0, "brand": "The Virtual Foundry", "gtin": 0, "neither": 18, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 18}
+{"both": 0, "brand": "ThriftyMake", "gtin": 0, "neither": 18, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}}, "total": 18}
+{"both": 0, "brand": "3D Printer Filament", "gtin": 0, "neither": 17, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 17, "sku": 0, "total": 17}}, "total": 17}
+{"both": 0, "brand": "Ensinger", "gtin": 0, "neither": 17, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 17, "sku": 0, "total": 17}}, "total": 17}
+{"both": 0, "brand": "HZST3D", "gtin": 0, "neither": 17, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 17, "sku": 0, "total": 17}}, "total": 17}
+{"both": 0, "brand": "Kaisertech", "gtin": 0, "neither": 17, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 17, "sku": 0, "total": 17}}, "total": 17}
+{"both": 0, "brand": "Print-Me", "gtin": 0, "neither": 17, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 17, "sku": 0, "total": 17}}, "total": 17}
+{"both": 0, "brand": "Rambery", "gtin": 0, "neither": 17, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 17, "sku": 0, "total": 17}}, "total": 17}
+{"both": 0, "brand": "RAW3D", "gtin": 0, "neither": 17, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 17, "sku": 0, "total": 17}}, "total": 17}
+{"both": 0, "brand": "Soleyin", "gtin": 0, "neither": 17, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 17, "sku": 0, "total": 17}}, "total": 17}
+{"both": 0, "brand": "Black Forest Filaments", "gtin": 0, "neither": 16, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 16, "sku": 0, "total": 16}}, "total": 16}
+{"both": 0, "brand": "Carbon", "gtin": 0, "neither": 16, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 16, "sku": 0, "total": 16}}, "total": 16}
+{"both": 0, "brand": "CMACAIV", "gtin": 0, "neither": 16, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 16, "sku": 0, "total": 16}}, "total": 16}
+{"both": 0, "brand": "Epelay", "gtin": 0, "neither": 16, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 16, "sku": 0, "total": 16}}, "total": 16}
+{"both": 0, "brand": "Filaform", "gtin": 0, "neither": 16, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 16, "sku": 0, "total": 16}}, "total": 16}
+{"both": 0, "brand": "IWECOLOR", "gtin": 0, "neither": 16, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 16, "sku": 0, "total": 16}}, "total": 16}
+{"both": 0, "brand": "KREAfil", "gtin": 0, "neither": 16, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 16, "sku": 0, "total": 16}}, "total": 16}
+{"both": 0, "brand": "MakerGear", "gtin": 0, "neither": 16, "sku": 0, "sources": {"OpenPrintTag": {"both": 0, "gtin": 0, "neither": 16, "sku": 0, "total": 16}}, "total": 16}
+{"both": 0, "brand": "Plastspaw", "gtin": 0, "neither": 16, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 16, "sku": 0, "total": 16}}, "total": 16}
+{"both": 0, "brand": "PolyMate", "gtin": 0, "neither": 16, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 16, "sku": 0, "total": 16}}, "total": 16}
+{"both": 0, "brand": "3DLAB", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "AICOPYTO", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "AIO Robotics", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "Chitu Systems", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "colorfil", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "Fil X", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "FilaBees", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "Markforged", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "National3d", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "Patron 3D", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "RatRig Punkfil", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "Reflow Filament", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "SA 3D Fusion", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "TAGin3D", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "YOYI", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "YUMI", "gtin": 0, "neither": 15, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 15, "sku": 0, "total": 15}}, "total": 15}
+{"both": 0, "brand": "3DC", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "CCTREE", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "Creator", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "Haosegd", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "Kodak", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "Maertz", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "NXTFAB", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "Sculpto", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "Sovol", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "Sparta3D", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "STEM Mi\u1ec1n Trung", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "Tianse-3D", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "Velleman", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "Wellshow", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "XYZprinting", "gtin": 0, "neither": 14, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 14, "sku": 0, "total": 14}}, "total": 14}
+{"both": 0, "brand": "CREOZONE", "gtin": 0, "neither": 13, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 13, "sku": 0, "total": 13}}, "total": 13}
+{"both": 0, "brand": "Fugacity", "gtin": 0, "neither": 13, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 13, "sku": 0, "total": 13}}, "total": 13}
+{"both": 0, "brand": "Grauts", "gtin": 0, "neither": 13, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 13, "sku": 0, "total": 13}}, "total": 13}
+{"both": 0, "brand": "Hobby King", "gtin": 0, "neither": 13, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 13, "sku": 0, "total": 13}}, "total": 13}
+{"both": 0, "brand": "Ooznest", "gtin": 0, "neither": 13, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 13, "sku": 0, "total": 13}}, "total": 13}
+{"both": 0, "brand": "Princore", "gtin": 0, "neither": 13, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 13, "sku": 0, "total": 13}}, "total": 13}
+{"both": 0, "brand": "AMZ3D", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "Capital 3D", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "EIBOS", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "Filamentos 3D Brasil", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "GNVTNTP", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "GolGeo", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "GTMax", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "LEHVOSS", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "LUME", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "MakerLab", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "Neofil3D", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "NOVAMAKER", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "Xtellar", "gtin": 0, "neither": 12, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 12, "sku": 0, "total": 12}}, "total": 12}
+{"both": 0, "brand": "3D Printz", "gtin": 0, "neither": 11, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 11, "sku": 0, "total": 11}}, "total": 11}
+{"both": 0, "brand": "3D Warhorse", "gtin": 0, "neither": 11, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 11, "sku": 0, "total": 11}}, "total": 11}
+{"both": 0, "brand": "Comgrow", "gtin": 0, "neither": 11, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 11, "sku": 0, "total": 11}}, "total": 11}
+{"both": 0, "brand": "DUDV2", "gtin": 0, "neither": 11, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 11, "sku": 0, "total": 11}}, "total": 11}
+{"both": 0, "brand": "Fused Materials", "gtin": 0, "neither": 11, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 11, "sku": 0, "total": 11}}, "total": 11}
+{"both": 0, "brand": "Octofiber", "gtin": 0, "neither": 11, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 11, "sku": 0, "total": 11}}, "total": 11}
+{"both": 0, "brand": "gembird", "gtin": 0, "neither": 10, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 10, "sku": 0, "total": 10}}, "total": 10}
+{"both": 0, "brand": "JIUFU", "gtin": 0, "neither": 10, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 10, "sku": 0, "total": 10}}, "total": 10}
+{"both": 0, "brand": "Monoprice", "gtin": 0, "neither": 10, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 10, "sku": 0, "total": 10}}, "total": 10}
+{"both": 0, "brand": "Pritonic", "gtin": 0, "neither": 10, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 10, "sku": 0, "total": 10}}, "total": 10}
+{"both": 0, "brand": "rigid.ink", "gtin": 0, "neither": 10, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 10, "sku": 0, "total": 10}}, "total": 10}
+{"both": 0, "brand": "AnkerMake", "gtin": 0, "neither": 9, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 9, "sku": 0, "total": 9}}, "total": 9}
+{"both": 0, "brand": "B2N", "gtin": 0, "neither": 9, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 9, "sku": 0, "total": 9}}, "total": 9}
+{"both": 0, "brand": "Black Magic 3D", "gtin": 0, "neither": 9, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 9, "sku": 0, "total": 9}}, "total": 9}
+{"both": 0, "brand": "Botfeeder", "gtin": 0, "neither": 9, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 9, "sku": 0, "total": 9}}, "total": 9}
+{"both": 0, "brand": "CS3D", "gtin": 0, "neither": 9, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 9, "sku": 0, "total": 9}}, "total": 9}
+{"both": 0, "brand": "KALIGHT", "gtin": 0, "neither": 9, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 9, "sku": 0, "total": 9}}, "total": 9}
+{"both": 0, "brand": "ProRock", "gtin": 0, "neither": 9, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 9, "sku": 0, "total": 9}}, "total": 9}
+{"both": 0, "brand": "Smith3D", "gtin": 0, "neither": 9, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 9, "sku": 0, "total": 9}}, "total": 9}
+{"both": 0, "brand": "StrongHold3D", "gtin": 0, "neither": 9, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 9, "sku": 0, "total": 9}}, "total": 9}
+{"both": 0, "brand": "Terrafilum", "gtin": 0, "neither": 9, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 9, "sku": 0, "total": 9}}, "total": 9}
+{"both": 0, "brand": "Yiwikawi 3D", "gtin": 0, "neither": 9, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 9, "sku": 0, "total": 9}}, "total": 9}
+{"both": 0, "brand": "ALLTIME3D", "gtin": 0, "neither": 8, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 8}
+{"both": 0, "brand": "BQ", "gtin": 0, "neither": 8, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 8}
+{"both": 0, "brand": "DR3D", "gtin": 0, "neither": 8, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 8}
+{"both": 0, "brand": "FilaBlend", "gtin": 0, "neither": 8, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 8}
+{"both": 0, "brand": "GreenGate3D", "gtin": 0, "neither": 8, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 8}
+{"both": 0, "brand": "Handtmann", "gtin": 0, "neither": 8, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 8}
+{"both": 0, "brand": "Kiwi3D", "gtin": 0, "neither": 8, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 8}
+{"both": 0, "brand": "NuNus", "gtin": 0, "neither": 8, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 8}
+{"both": 0, "brand": "PrintMyDesign", "gtin": 0, "neither": 8, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 8}
+{"both": 0, "brand": "RatRig", "gtin": 0, "neither": 8, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 8}
+{"both": 0, "brand": "Tecnikoa", "gtin": 0, "neither": 8, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 8}
+{"both": 0, "brand": "ZIRO 3D", "gtin": 0, "neither": 8, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 8}
+{"both": 0, "brand": "3D BEST-Q", "gtin": 0, "neither": 7, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 7, "sku": 0, "total": 7}}, "total": 7}
+{"both": 0, "brand": "Abaflex", "gtin": 0, "neither": 7, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 7, "sku": 0, "total": 7}}, "total": 7}
+{"both": 0, "brand": "DYAIR", "gtin": 0, "neither": 7, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 7, "sku": 0, "total": 7}}, "total": 7}
+{"both": 0, "brand": "FIROS", "gtin": 0, "neither": 7, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 7, "sku": 0, "total": 7}}, "total": 7}
+{"both": 0, "brand": "Fulament", "gtin": 0, "neither": 7, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 7, "sku": 0, "total": 7}}, "total": 7}
+{"both": 0, "brand": "Hello3D", "gtin": 0, "neither": 7, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 7, "sku": 0, "total": 7}}, "total": 7}
+{"both": 0, "brand": "igus", "gtin": 0, "neither": 7, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 7, "sku": 0, "total": 7}}, "total": 7}
+{"both": 0, "brand": "LBL (UA)", "gtin": 0, "neither": 7, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 7, "sku": 0, "total": 7}}, "total": 7}
+{"both": 0, "brand": "Polyalchemy", "gtin": 0, "neither": 7, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 7, "sku": 0, "total": 7}}, "total": 7}
+{"both": 0, "brand": "Printy Please", "gtin": 0, "neither": 7, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 7, "sku": 0, "total": 7}}, "total": 7}
+{"both": 0, "brand": "AmeLeis", "gtin": 0, "neither": 6, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 6, "sku": 0, "total": 6}}, "total": 6}
+{"both": 0, "brand": "Cerprise", "gtin": 0, "neither": 6, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 6, "sku": 0, "total": 6}}, "total": 6}
+{"both": 0, "brand": "iFilament", "gtin": 0, "neither": 6, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 6, "sku": 0, "total": 6}}, "total": 6}
+{"both": 0, "brand": "Kaaber", "gtin": 0, "neither": 6, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 6, "sku": 0, "total": 6}}, "total": 6}
+{"both": 0, "brand": "Nanocaddo", "gtin": 0, "neither": 6, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 6, "sku": 0, "total": 6}}, "total": 6}
+{"both": 0, "brand": "New Matter", "gtin": 0, "neither": 6, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 6, "sku": 0, "total": 6}}, "total": 6}
+{"both": 0, "brand": "PEAKACE", "gtin": 0, "neither": 6, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 6, "sku": 0, "total": 6}}, "total": 6}
+{"both": 0, "brand": "Plas3D", "gtin": 0, "neither": 6, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 6, "sku": 0, "total": 6}}, "total": 6}
+{"both": 0, "brand": "U3Print", "gtin": 0, "neither": 6, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 6, "sku": 0, "total": 6}}, "total": 6}
+{"both": 0, "brand": "WYZworks", "gtin": 0, "neither": 6, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 6, "sku": 0, "total": 6}}, "total": 6}
+{"both": 0, "brand": "CEL Robox", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "FilaTex 3D", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "Giantarm", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "HuNan Yasin", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "Janbex", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "KINLUOT", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "Menetee", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "PLASPORT", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "RePLAy 3D", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "Reprapper", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "Tronxy", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "TwoTrees", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "YOUSU", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "Ziro", "gtin": 0, "neither": 5, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 5, "sku": 0, "total": 5}}, "total": 5}
+{"both": 0, "brand": "Braskem", "gtin": 0, "neither": 4, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 4, "sku": 0, "total": 4}}, "total": 4}
+{"both": 0, "brand": "deenaja3dprinter", "gtin": 0, "neither": 4, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 4, "sku": 0, "total": 4}}, "total": 4}
+{"both": 0, "brand": "Evonik", "gtin": 0, "neither": 4, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 4, "sku": 0, "total": 4}}, "total": 4}
+{"both": 0, "brand": "FAST 3D", "gtin": 0, "neither": 4, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 4, "sku": 0, "total": 4}}, "total": 4}
+{"both": 0, "brand": "Goto Guard", "gtin": 0, "neither": 4, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 4, "sku": 0, "total": 4}}, "total": 4}
+{"both": 0, "brand": "Noulei", "gtin": 0, "neither": 4, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 4, "sku": 0, "total": 4}}, "total": 4}
+{"both": 0, "brand": "Patron EG", "gtin": 0, "neither": 4, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 4, "sku": 0, "total": 4}}, "total": 4}
+{"both": 0, "brand": "Protech", "gtin": 0, "neither": 4, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 4, "sku": 0, "total": 4}}, "total": 4}
+{"both": 0, "brand": "Colorful", "gtin": 0, "neither": 3, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 3, "sku": 0, "total": 3}}, "total": 3}
+{"both": 0, "brand": "FibReel", "gtin": 0, "neither": 3, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 3, "sku": 0, "total": 3}}, "total": 3}
+{"both": 0, "brand": "FIL-A-GEHR", "gtin": 0, "neither": 3, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 3, "sku": 0, "total": 3}}, "total": 3}
+{"both": 0, "brand": "Floreon3D", "gtin": 0, "neither": 3, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 3, "sku": 0, "total": 3}}, "total": 3}
+{"both": 0, "brand": "Hotty Polymer", "gtin": 0, "neither": 3, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 3, "sku": 0, "total": 3}}, "total": 3}
+{"both": 0, "brand": "Mika3D", "gtin": 0, "neither": 3, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 3, "sku": 0, "total": 3}}, "total": 3}
+{"both": 0, "brand": "PATONA", "gtin": 0, "neither": 3, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 3, "sku": 0, "total": 3}}, "total": 3}
+{"both": 0, "brand": "PolyMide", "gtin": 0, "neither": 3, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 3, "sku": 0, "total": 3}}, "total": 3}
+{"both": 0, "brand": "3DSigmalab", "gtin": 0, "neither": 2, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 2, "sku": 0, "total": 2}}, "total": 2}
+{"both": 0, "brand": "Filabotics", "gtin": 0, "neither": 2, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 2, "sku": 0, "total": 2}}, "total": 2}
+{"both": 0, "brand": "TCPoly", "gtin": 0, "neither": 2, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 2, "sku": 0, "total": 2}}, "total": 2}
+{"both": 0, "brand": "ZEDEX", "gtin": 0, "neither": 2, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 2, "sku": 0, "total": 2}}, "total": 2}
+{"both": 0, "brand": "CooBeen", "gtin": 0, "neither": 1, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}}, "total": 1}
+{"both": 0, "brand": "FOVFO", "gtin": 0, "neither": 1, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}}, "total": 1}
+{"both": 0, "brand": "LayerWorks Solutions", "gtin": 0, "neither": 1, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}}, "total": 1}
+{"both": 0, "brand": "LONENESSL", "gtin": 0, "neither": 1, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}}, "total": 1}
+{"both": 0, "brand": "SHENGTIAN", "gtin": 0, "neither": 1, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}}, "total": 1}
+{"both": 0, "brand": "Victrex", "gtin": 0, "neither": 1, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}}, "total": 1}
+{"both": 0, "brand": "Visdream", "gtin": 0, "neither": 1, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 1, "sku": 0, "total": 1}}, "total": 1}
+
+PARTIAL_TOP 53
+{"both": 0, "brand": "FormFutura / Formfutura", "gtin": 3077, "neither": 2564, "sku": 836, "sources": {"Community": {"both": 0, "gtin": 235, "neither": 2358, "sku": 0, "total": 2593}, "OFD": {"both": 0, "gtin": 0, "neither": 165, "sku": 836, "total": 1001}, "OpenPrintTag": {"both": 0, "gtin": 2842, "neither": 41, "sku": 0, "total": 2883}}, "total": 6477}
+{"both": 237, "brand": "Polymaker", "gtin": 1855, "neither": 1520, "sku": 238, "sources": {"Community": {"both": 0, "gtin": 1178, "neither": 907, "sku": 0, "total": 2085}, "OFD": {"both": 187, "gtin": 187, "neither": 375, "sku": 188, "total": 563}, "OpenPrintTag": {"both": 50, "gtin": 490, "neither": 238, "sku": 50, "total": 728}}, "total": 3376}
+{"both": 676, "brand": "Spectrum", "gtin": 2382, "neither": 1500, "sku": 696, "sources": {"Community": {"both": 0, "gtin": 892, "neither": 1171, "sku": 0, "total": 2063}, "OFD": {"both": 676, "gtin": 677, "neither": 321, "sku": 696, "total": 1018}, "OpenPrintTag": {"both": 0, "gtin": 813, "neither": 8, "sku": 0, "total": 821}}, "total": 3902}
+{"both": 0, "brand": "3DE", "gtin": 113, "neither": 966, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 110, "neither": 961, "sku": 0, "total": 1071}, "OFD": {"both": 0, "gtin": 3, "neither": 5, "sku": 0, "total": 8}}, "total": 1079}
+{"both": 0, "brand": "ERYONE / Eryone", "gtin": 0, "neither": 905, "sku": 64, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 511, "sku": 0, "total": 511}, "OFD": {"both": 0, "gtin": 0, "neither": 391, "sku": 0, "total": 391}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 3, "sku": 64, "total": 67}}, "total": 969}
+{"both": 0, "brand": "ELEGOO", "gtin": 0, "neither": 854, "sku": 64, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 487, "sku": 0, "total": 487}, "OFD": {"both": 0, "gtin": 0, "neither": 355, "sku": 0, "total": 355}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 12, "sku": 64, "total": 76}}, "total": 918}
+{"both": 0, "brand": "Francofil", "gtin": 0, "neither": 779, "sku": 458, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 686, "sku": 0, "total": 686}, "OFD": {"both": 0, "gtin": 0, "neither": 93, "sku": 0, "total": 93}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 0, "sku": 458, "total": 458}}, "total": 1237}
+{"both": 0, "brand": "PolyLite", "gtin": 0, "neither": 706, "sku": 1, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 706, "sku": 1, "total": 707}}, "total": 707}
+{"both": 173, "brand": "Bambu Lab", "gtin": 269, "neither": 674, "sku": 203, "sources": {"Community": {"both": 0, "gtin": 20, "neither": 594, "sku": 0, "total": 614}, "OFD": {"both": 173, "gtin": 249, "neither": 80, "sku": 203, "total": 359}}, "total": 973}
+{"both": 44, "brand": "AzureFilm", "gtin": 301, "neither": 636, "sku": 48, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 496, "sku": 0, "total": 496}, "OFD": {"both": 44, "gtin": 44, "neither": 116, "sku": 48, "total": 164}, "OpenPrintTag": {"both": 0, "gtin": 257, "neither": 24, "sku": 0, "total": 281}}, "total": 941}
+{"both": 0, "brand": "Devil Design", "gtin": 358, "neither": 608, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 608, "sku": 0, "total": 608}, "OFD": {"both": 0, "gtin": 179, "neither": 0, "sku": 0, "total": 179}, "OpenPrintTag": {"both": 0, "gtin": 179, "neither": 0, "sku": 0, "total": 179}}, "total": 966}
+{"both": 0, "brand": "eSUN / eSun", "gtin": 427, "neither": 587, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 75, "neither": 477, "sku": 0, "total": 552}, "OpenPrintTag": {"both": 0, "gtin": 352, "neither": 110, "sku": 0, "total": 462}}, "total": 1014}
+{"both": 1, "brand": "ANYCUBIC / Anycubic", "gtin": 1, "neither": 511, "sku": 27, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 254, "sku": 0, "total": 254}, "OFD": {"both": 1, "gtin": 1, "neither": 116, "sku": 15, "total": 131}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 141, "sku": 12, "total": 153}}, "total": 538}
+{"both": 0, "brand": "Hatchbox", "gtin": 39, "neither": 487, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 297, "sku": 0, "total": 297}, "OFD": {"both": 0, "gtin": 37, "neither": 168, "sku": 0, "total": 205}, "OpenPrintTag": {"both": 0, "gtin": 2, "neither": 22, "sku": 0, "total": 24}}, "total": 526}
+{"both": 0, "brand": "Prusament", "gtin": 366, "neither": 470, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 378, "sku": 0, "total": 378}, "OFD": {"both": 0, "gtin": 81, "neither": 92, "sku": 0, "total": 173}, "OpenPrintTag": {"both": 0, "gtin": 285, "neither": 0, "sku": 0, "total": 285}}, "total": 836}
+{"both": 0, "brand": "Fiberlogy", "gtin": 1004, "neither": 455, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 396, "neither": 199, "sku": 0, "total": 595}, "OFD": {"both": 0, "gtin": 264, "neither": 180, "sku": 0, "total": 444}, "OpenPrintTag": {"both": 0, "gtin": 344, "neither": 76, "sku": 0, "total": 420}}, "total": 1459}
+{"both": 0, "brand": "Print With Smile", "gtin": 432, "neither": 448, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 432, "neither": 327, "sku": 0, "total": 759}, "OFD": {"both": 0, "gtin": 0, "neither": 121, "sku": 0, "total": 121}}, "total": 880}
+{"both": 0, "brand": "PrimaSelect", "gtin": 113, "neither": 404, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 404, "sku": 0, "total": 404}, "OFD": {"both": 0, "gtin": 113, "neither": 0, "sku": 0, "total": 113}}, "total": 517}
+{"both": 0, "brand": "Inland", "gtin": 7, "neither": 349, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 1, "neither": 195, "sku": 0, "total": 196}, "OFD": {"both": 0, "gtin": 6, "neither": 154, "sku": 0, "total": 160}}, "total": 356}
+{"both": 0, "brand": "Filanora", "gtin": 4, "neither": 331, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 4, "neither": 331, "sku": 0, "total": 335}}, "total": 335}
+{"both": 0, "brand": "FilamentPM", "gtin": 126, "neither": 305, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 302, "sku": 0, "total": 302}, "OpenPrintTag": {"both": 0, "gtin": 126, "neither": 3, "sku": 0, "total": 129}}, "total": 431}
+{"both": 5, "brand": "Panchroma", "gtin": 5, "neither": 303, "sku": 11, "sources": {"OFD": {"both": 5, "gtin": 5, "neither": 303, "sku": 11, "total": 314}}, "total": 314}
+{"both": 24, "brand": "SmartPrint", "gtin": 28, "neither": 295, "sku": 24, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 175, "sku": 0, "total": 175}, "OFD": {"both": 24, "gtin": 28, "neither": 120, "sku": 24, "total": 148}}, "total": 323}
+{"both": 40, "brand": "Professional LAB", "gtin": 42, "neither": 276, "sku": 40, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 152, "sku": 0, "total": 152}, "OFD": {"both": 40, "gtin": 42, "neither": 124, "sku": 40, "total": 166}}, "total": 318}
+{"both": 0, "brand": "Snapmaker", "gtin": 21, "neither": 241, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 21, "neither": 134, "sku": 0, "total": 155}, "OFD": {"both": 0, "gtin": 0, "neither": 107, "sku": 0, "total": 107}}, "total": 262}
+{"both": 0, "brand": "SOVB 3D", "gtin": 0, "neither": 240, "sku": 131, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 185, "sku": 0, "total": 185}, "OFD": {"both": 0, "gtin": 0, "neither": 55, "sku": 0, "total": 55}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 0, "sku": 131, "total": 131}}, "total": 371}
+{"both": 0, "brand": "3D Printing Canada", "gtin": 142, "neither": 223, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 138, "neither": 223, "sku": 0, "total": 361}, "OFD": {"both": 0, "gtin": 4, "neither": 0, "sku": 0, "total": 4}}, "total": 365}
+{"both": 0, "brand": "JAYO", "gtin": 0, "neither": 205, "sku": 4, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 146, "sku": 0, "total": 146}, "OFD": {"both": 0, "gtin": 0, "neither": 59, "sku": 4, "total": 63}}, "total": 209}
+{"both": 0, "brand": "CC3D", "gtin": 2, "neither": 168, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 87, "sku": 0, "total": 87}, "OFD": {"both": 0, "gtin": 0, "neither": 80, "sku": 0, "total": 80}, "OpenPrintTag": {"both": 0, "gtin": 2, "neither": 1, "sku": 0, "total": 3}}, "total": 170}
+{"both": 0, "brand": "Fusion Filaments", "gtin": 25, "neither": 158, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 41, "sku": 0, "total": 41}, "OpenPrintTag": {"both": 0, "gtin": 25, "neither": 117, "sku": 0, "total": 142}}, "total": 183}
+{"both": 0, "brand": "Alzament", "gtin": 0, "neither": 152, "sku": 102, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 139, "sku": 0, "total": 139}, "OFD": {"both": 0, "gtin": 0, "neither": 13, "sku": 102, "total": 115}}, "total": 254}
+{"both": 0, "brand": "Eolas Prints", "gtin": 178, "neither": 144, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 178, "neither": 52, "sku": 0, "total": 230}, "OFD": {"both": 0, "gtin": 0, "neither": 92, "sku": 0, "total": 92}}, "total": 322}
+{"both": 0, "brand": "Buddy3D", "gtin": 116, "neither": 138, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 137, "sku": 0, "total": 137}, "OFD": {"both": 0, "gtin": 58, "neither": 1, "sku": 0, "total": 59}, "OpenPrintTag": {"both": 0, "gtin": 58, "neither": 0, "sku": 0, "total": 58}}, "total": 254}
+{"both": 0, "brand": "TECBEARS / Tecbears", "gtin": 0, "neither": 124, "sku": 6, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 85, "sku": 0, "total": 85}, "OFD": {"both": 0, "gtin": 0, "neither": 39, "sku": 6, "total": 45}}, "total": 130}
+{"both": 0, "brand": "Raise3D", "gtin": 38, "neither": 98, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 38, "neither": 30, "sku": 0, "total": 68}, "OpenPrintTag": {"both": 0, "gtin": 0, "neither": 68, "sku": 0, "total": 68}}, "total": 136}
+{"both": 0, "brand": "PolyMax", "gtin": 1, "neither": 73, "sku": 0, "sources": {"OFD": {"both": 0, "gtin": 1, "neither": 73, "sku": 0, "total": 74}}, "total": 74}
+{"both": 0, "brand": "iSANGHU / iSangHu", "gtin": 0, "neither": 71, "sku": 2, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 71, "sku": 0, "total": 71}, "OFD": {"both": 0, "gtin": 0, "neither": 0, "sku": 2, "total": 2}}, "total": 73}
+{"both": 0, "brand": "3DO", "gtin": 15, "neither": 69, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 69, "sku": 0, "total": 69}, "OFD": {"both": 0, "gtin": 15, "neither": 0, "sku": 0, "total": 15}}, "total": 84}
+{"both": 224, "brand": "The Filament", "gtin": 453, "neither": 67, "sku": 224, "sources": {"Community": {"both": 0, "gtin": 229, "neither": 67, "sku": 0, "total": 296}, "OFD": {"both": 224, "gtin": 224, "neither": 0, "sku": 224, "total": 224}}, "total": 520}
+{"both": 0, "brand": "123-3D", "gtin": 0, "neither": 66, "sku": 11, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 66, "sku": 0, "total": 66}, "OFD": {"both": 0, "gtin": 0, "neither": 0, "sku": 11, "total": 11}}, "total": 77}
+{"both": 24, "brand": "L3D", "gtin": 62, "neither": 24, "sku": 24, "sources": {"Community": {"both": 0, "gtin": 38, "neither": 24, "sku": 0, "total": 62}, "OFD": {"both": 24, "gtin": 24, "neither": 0, "sku": 24, "total": 24}}, "total": 86}
+{"both": 0, "brand": "PrimaValue", "gtin": 15, "neither": 23, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 22, "sku": 0, "total": 22}, "OFD": {"both": 0, "gtin": 15, "neither": 1, "sku": 0, "total": 16}}, "total": 38}
+{"both": 1, "brand": "LANDU / Landu", "gtin": 1, "neither": 18, "sku": 1, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 18, "sku": 0, "total": 18}, "OFD": {"both": 1, "gtin": 1, "neither": 0, "sku": 1, "total": 1}}, "total": 19}
+{"both": 15, "brand": "Slic3D", "gtin": 15, "neither": 17, "sku": 21, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 17, "sku": 0, "total": 17}, "OFD": {"both": 15, "gtin": 15, "neither": 0, "sku": 21, "total": 21}}, "total": 38}
+{"both": 0, "brand": "Grilon3", "gtin": 154, "neither": 11, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 154, "neither": 11, "sku": 0, "total": 165}}, "total": 165}
+{"both": 0, "brand": "UniTak3D", "gtin": 0, "neither": 10, "sku": 2, "sources": {"Community": {"both": 0, "gtin": 0, "neither": 10, "sku": 0, "total": 10}, "OFD": {"both": 0, "gtin": 0, "neither": 0, "sku": 2, "total": 2}}, "total": 12}
+{"both": 0, "brand": "3DFOX", "gtin": 57, "neither": 8, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 57, "neither": 0, "sku": 0, "total": 57}, "OFD": {"both": 0, "gtin": 0, "neither": 8, "sku": 0, "total": 8}}, "total": 65}
+{"both": 0, "brand": "Jessie", "gtin": 0, "neither": 5, "sku": 15, "sources": {"OFD": {"both": 0, "gtin": 0, "neither": 5, "sku": 15, "total": 20}}, "total": 20}
+{"both": 0, "brand": "3D Prima Basic", "gtin": 78, "neither": 3, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 75, "neither": 3, "sku": 0, "total": 78}, "OFD": {"both": 0, "gtin": 3, "neither": 0, "sku": 0, "total": 3}}, "total": 81}
+{"both": 0, "brand": "Copper 3D", "gtin": 1, "neither": 3, "sku": 0, "sources": {"Community": {"both": 0, "gtin": 1, "neither": 3, "sku": 0, "total": 4}}, "total": 4}
+
+COMMUNITY_IDENTIFIER_KEYS []

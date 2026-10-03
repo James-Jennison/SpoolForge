@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "91e5d1e5-00d1-4de0-851a-5136e0a28830",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "overture3d",
+        "url": "https://overture3d.com/products/overture-pla"
+      }
+    ]
+  }
+]

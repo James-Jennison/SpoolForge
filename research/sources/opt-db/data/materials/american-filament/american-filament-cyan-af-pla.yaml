@@ -1,0 +1,16 @@
+uuid: 194d233a-f56e-51be-9177-1d469b344f29
+slug: american-filament-cyan-af-pla
+brand:
+  slug: american-filament
+name: Cyan AF PLA+
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#39b9dbff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/american-filament/american-filament-cyan-af-pla/ce3b92afd307.png
+  type: unspecified
+properties: {}

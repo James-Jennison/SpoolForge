@@ -1,0 +1,15 @@
+{
+  "uuid": "42a54dab-f6b4-4f37-b5df-95b3381f09ea",
+  "id": "blue_green_orange",
+  "name": "Blue Green Orange",
+  "color_hex": [
+    "#0353BA",
+    "#3D9441",
+    "#FA8423"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "uuid": "c0477236-e62f-46ab-b573-4748996dce42",
+  "id": "9085_red",
+  "name": "9085 Red",
+  "color_hex": "#C01616",
+  "traits": {
+    "low_outgassing": true
+  }
+}

@@ -1,0 +1,12 @@
+uuid: 34547979-e3f3-575a-b2fb-d28c448c7479
+slug: sainsmart-small-spool-tpu-flexible-green
+brand:
+  slug: sainsmart
+name: Small-Spool TPU Flexible Green
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#4dff64ff'
+properties:
+  hardness_shore_a: 95

@@ -1,0 +1,29 @@
+uuid: 6d61244c-75fc-5a57-9103-2725968559de
+slug: prusament-pp-glass-fiber-natural
+brand:
+  slug: prusament
+name: PP Glass Fiber Natural
+class: FFF
+type: PP
+abbreviation: PPGF
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+  - contains_glass_fiber
+  - without_pigments
+  - abrasive
+  - contains_glass
+properties:
+  density: 1.02
+  hardness_shore_d: 68
+  min_print_temperature: 240
+  max_print_temperature: 250
+  preheat_temperature: 170
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  chamber_temperature: 50
+  min_chamber_temperature: 40
+  max_chamber_temperature: 90
+photos:
+  - url: https://files.openprinttag.org/prusament/prusament-pp-glass-fiber-natural/prusament-pp-glass-fiber-natural-0-88125745.jpg
+    type: unspecified

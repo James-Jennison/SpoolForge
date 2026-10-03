@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-gtin-final-v2-deepseek-3",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-7e324a5f3168",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "Provenance / record pointer & origin verification",
+  "summary": "The verifier does not tie any candidate's `record_pointer` or field origins to the actual indexed source files. It only verifies that all input files have the same hashes as the builder's `input_hashes.json`, and that `e['record_pointer']` is nonempty. It never checks that the pointer path exists in `inputs`, that the original record at that pointer matches `record_sha256`, or that each field origin path is present and consistent with the original record.",
+  "claim": "A fabricated or misattributed `record_pointer`/origin would pass verification, so provenance on every match is not independently proven. This violates the owner requirement 'Provenance on every match' and could mask builder bugs that extract the wrong source record or assign fields from the wrong file.",
+  "evidence": {
+    "source": "The verifier checks global input hashes via `assert hashlib.sha256(json.dumps(inputs,...)).hexdigest()==m['input_manifest_sha256']` and iterates `for name,h in inputs.items(): assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==h,name`. However, in the candidate loop it only does `assert e['snapshot']['license']==licenses[source] and e['record_pointer']`. No code reads the file at `e['record_pointer']` or checks `e['fields'][field]['origin']` against `inputs`. `record_sha256` is checked only against the stored `original_json`, not against the source file content.",
+    "response_sha256": "964a15670621e3c9b422b701411c7242e61613d026b2db884499462755cbed26"
+  },
+  "affected_components": [
+    "tools",
+    "app"
+  ],
+  "suggested_remediation": "For every candidate, resolve `e['record_pointer']` to a file path in `input_hashes` (or source subdir) and verify the file exists and the record at the indicated index/path produces the same `record_sha256`/original JSON. For each nonempty field in `e['fields']`, verify its origin path exists in `input_hashes` and, where feasible, that the extracted value matches.",
+  "suggested_validation": "Take a valid DB candidate and modify `e['record_pointer']` to a non-existent file path; verifier must fail. Modify a field origin to a path not in `input_hashes`; verifier must fail. Provide a source file where the record at the pointer differs but the global input hash remains unchanged; verifier must detect it.",
+  "reviewer_confidence": "MEDIUM"
+}

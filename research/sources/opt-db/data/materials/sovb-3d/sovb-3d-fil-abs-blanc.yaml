@@ -1,0 +1,19 @@
+uuid: de64ceab-ab88-5ad9-a176-6e66807aa462
+slug: sovb-3d-fil-abs-blanc
+brand:
+  slug: sovb-3d
+name: Fil ABS Blanc
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#ffffffff'
+  color_ral: '9003'
+tags:
+- filtration_recommended
+properties:
+  density: 1.03
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 90
+  max_bed_temperature: 100

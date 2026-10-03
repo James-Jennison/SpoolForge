@@ -1,0 +1,27 @@
+uuid: ef488e07-1e39-5f67-b307-7b1327e255c5
+slug: amolen-pla-silk-shiny-gradient-black-shiny-blue
+brand:
+  slug: amolen
+name: PLA Silk Shiny Gradient Black & Shiny Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://www.amolen.com/products/pla-silk-shiny
+secondary_colors:
+- color_rgba: '#000000ff'
+- color_rgba: '#485cc7ff'
+tags:
+- silk
+- gradual_color_change
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-silk-shiny-gradient-black-shiny-blue/DSC01913.jpg
+  type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

@@ -1,0 +1,14 @@
+uuid: 67909b29-0f85-5c10-bd98-62ad262e2feb
+slug: overture-tpu-neon-orange
+brand:
+  slug: overture
+name: TPU Neon Orange
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#ff7a33ff'
+tags:
+- neon
+properties:
+  hardness_shore_a: 95

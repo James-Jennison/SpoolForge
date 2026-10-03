@@ -1,0 +1,13 @@
+uuid: e4ea57e8-8cf1-5879-ada6-8624e64fc98b
+slug: tinmorry-petg-marble-magic-green
+brand:
+  slug: tinmorry
+name: PETG Marble Magic Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#c8d8c4ff'
+tags:
+- imitates_marble
+properties: {}

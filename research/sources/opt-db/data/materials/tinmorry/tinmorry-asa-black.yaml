@@ -1,0 +1,11 @@
+uuid: 75ad478c-d865-502f-a272-0da6469762da
+slug: tinmorry-asa-black
+brand:
+  slug: tinmorry
+name: ASA Black
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#000000ff'
+properties: {}

@@ -1,0 +1,13 @@
+{
+  "uuid": "790c4065-39ca-44c9-adf6-8b5ff8a674c2",
+  "id": "red_blue",
+  "name": "Red & Blue",
+  "color_hex": [
+    "#4921C1",
+    "#C80181"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

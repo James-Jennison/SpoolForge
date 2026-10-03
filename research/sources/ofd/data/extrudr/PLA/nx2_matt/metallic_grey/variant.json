@@ -1,0 +1,13 @@
+{
+  "uuid": "b4026513-2902-4be5-8213-c11751bb5dbc",
+  "id": "metallic_grey",
+  "name": "Metallic Grey",
+  "color_hex": "#6A6C6E",
+  "color_standards": {
+    "ral": "9023"
+  },
+  "traits": {
+    "matte": true,
+    "industrially_compostable": true
+  }
+}

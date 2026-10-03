@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-import-deepseek-2",
+  "disposition": "CONFIRMED",
+  "reason": "Community record pointers now retain the spoolmandb subdirectory and the independent oracle verifies every Community pointer prefix.",
+  "evidence_reference": "tools/build_gtin_index.py; tools/verify_gtin_index.py; work/gtin/bundle-verification-final.log",
+  "resolved": true
+}

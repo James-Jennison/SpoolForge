@@ -1,0 +1,13 @@
+{
+  "uuid": "6ac3b90f-b0cc-4b68-83ac-9b33ed48fa14",
+  "material": "PLA",
+  "default_max_dry_temperature": 50,
+  "default_slicer_settings": {
+    "generic": {
+      "bed_temp": 60,
+      "first_layer_bed_temp": 60,
+      "first_layer_nozzle_temp": 210,
+      "nozzle_temp": 210
+    }
+  }
+}

@@ -1,0 +1,17 @@
+uuid: 841c071d-767b-56f7-89b2-7941586c061c
+slug: amolen-pla-matte-terracotta
+brand:
+  slug: amolen
+name: PLA Matte Terracotta
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#b47d6cff'
+tags:
+- matte
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-matte-terracotta/da3c291b941c.png
+  type: unspecified
+properties: {}

@@ -1,0 +1,16 @@
+{
+  "uuid": "4534d39f-5015-43fd-b223-22c756e2b2ce",
+  "id": "red_purple_blue",
+  "name": "Red-Purple-Blue",
+  "color_hex": [
+    "#AC1A17",
+    "#7142A3",
+    "#033877"
+  ],
+  "traits": {
+    "silk": true,
+    "glitter": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

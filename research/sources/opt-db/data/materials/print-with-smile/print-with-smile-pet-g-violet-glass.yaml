@@ -1,0 +1,11 @@
+uuid: 79f3d5dc-fc38-5cb4-b5d8-5d8d88dde385
+slug: print-with-smile-pet-g-violet-glass
+brand:
+  slug: print-with-smile
+name: PET-G Violet Glass
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0353baff'
+properties: {}

@@ -1,0 +1,11 @@
+{
+  "uuid": "47626acb-03da-4b5c-9567-2a3303b64f23",
+  "id": "pp",
+  "name": "PP",
+  "diameter_tolerance": 0.02,
+  "density": 0.9,
+  "min_print_temperature": 210,
+  "max_print_temperature": 240,
+  "min_bed_temperature": 80,
+  "max_bed_temperature": 100
+}

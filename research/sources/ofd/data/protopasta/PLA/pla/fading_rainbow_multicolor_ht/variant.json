@@ -1,0 +1,17 @@
+{
+  "uuid": "889a2b8c-7dcb-4b0d-955f-b25d5b7cc3f8",
+  "id": "fading_rainbow_multicolor_ht",
+  "name": "Fading Rainbow Multicolor HT",
+  "color_hex": [
+    "#9EF9FF",
+    "#DABCC8",
+    "#ADD8AB",
+    "#8ED9F9"
+  ],
+  "traits": {
+    "translucent": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "high_temperature": true
+  }
+}

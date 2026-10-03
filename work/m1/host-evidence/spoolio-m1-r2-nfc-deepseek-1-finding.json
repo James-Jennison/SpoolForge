@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-nfc-deepseek-1",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-d04a66d06bba",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Durable prewrite journal / unresolved write archive",
+  "summary": "WriteJournal.archive persists every unresolved write to SharedPreferences with no eviction or size limit (other than Int.MAX), despite the remediation claim of eviction after 20 entries. The archive count grows monotonically and archive_$slot keys are never removed.",
+  "claim": "SharedPreferences grows with each unresolved archive, causing storage pressure, slow commits, and potential ANR/IO blocking; unbounded permanent data retention contradicts stated eviction fix and may accumulate sensitive tag payloads.",
+  "evidence": {
+    "source": "WriteJournal.archive: `val count=prefs.getInt(\"archive_count\",0); check(count < Int.MAX_VALUE); val slot=count; return prefs.edit().putInt(\"archive_count\",count+1).putString(\"archive_$slot\",...).commit()`. Only `clear()` removes active version/uid/payload, never archive entries. No `archive_` removal or cap of 20.",
+    "response_sha256": "d3bd1c6eea8c22e7dcc8eb2668b89f870a1883b485e73fd046820115c164fae8"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "Implement fixed-capacity archive, e.g., preserve last 20 entries, delete oldest archive_$slot when count exceeds 20; keep archive_count within bound; ensure atomic eviction semantics.",
+  "suggested_validation": "Unit test archiving 21 unresolved writes and assert archiveCount==20, oldest removed, and active journal unaffected; verify SharedPreferences does not grow beyond bounded keys.",
+  "reviewer_confidence": "HIGH"
+}

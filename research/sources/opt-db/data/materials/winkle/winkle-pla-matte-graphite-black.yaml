@@ -1,0 +1,15 @@
+uuid: 52276989-492e-5010-9c7c-5e34cc4bade2
+slug: winkle-pla-matte-graphite-black
+brand:
+  slug: winkle
+name: PLA Matte Graphite Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#292824ff'
+tags:
+- matte
+- industrially_compostable
+properties:
+  density: 1.24

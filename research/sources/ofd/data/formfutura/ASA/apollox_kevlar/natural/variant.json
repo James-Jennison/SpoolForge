@@ -1,0 +1,11 @@
+{
+  "uuid": "7ab5f70e-bee9-4766-b261-351e44173494",
+  "id": "natural",
+  "name": "Natural",
+  "color_hex": "#EBEFCC",
+  "discontinued": false,
+  "traits": {
+    "without_pigments": true,
+    "contains_kevlar": true
+  }
+}

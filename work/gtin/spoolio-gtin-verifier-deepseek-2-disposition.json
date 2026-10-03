@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-verifier-deepseek-2",
+  "disposition": "CONFIRMED",
+  "reason": "Every Community candidate now independently asserts evidence source_record equals the retained source_json row id before its package ID is recomputed.",
+  "evidence_reference": "tools/verify_gtin_index.py; work/gtin/verify-final-prefix-fix.log",
+  "resolved": true
+}

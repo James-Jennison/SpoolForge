@@ -1,0 +1,14 @@
+uuid: 4d8a67f0-e017-5a8d-9db4-0c6fb1fde512
+slug: tinmorry-matte-pla-brown
+brand:
+  slug: tinmorry
+name: Matte PLA Brown
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#935c34ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

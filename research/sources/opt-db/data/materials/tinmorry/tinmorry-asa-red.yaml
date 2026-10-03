@@ -1,0 +1,11 @@
+uuid: fbcd3629-9f2f-56bb-b6f8-da599f527ce1
+slug: tinmorry-asa-red
+brand:
+  slug: tinmorry
+name: ASA Red
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#d32e1aff'
+properties: {}

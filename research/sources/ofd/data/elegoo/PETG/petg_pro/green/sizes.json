@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "eefc9164-8e55-45e3-8e82-469660e6834c",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/petg-pro-filament-1-75mm-colored-1kg"
+      }
+    ]
+  }
+]

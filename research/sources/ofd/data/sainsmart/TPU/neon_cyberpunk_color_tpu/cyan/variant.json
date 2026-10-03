@@ -1,0 +1,9 @@
+{
+  "uuid": "0937977c-a43e-42aa-884a-cfea01392733",
+  "id": "cyan",
+  "name": "Cyan",
+  "color_hex": "#00E3E2",
+  "traits": {
+    "neon": true
+  }
+}

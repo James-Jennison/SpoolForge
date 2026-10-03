@@ -1,0 +1,14 @@
+uuid: 2aba687b-26d5-552a-a8cd-2bf78be56c98
+slug: siddament-matte-red-pla
+brand:
+  slug: siddament
+name: Matte Red PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#9b2423ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

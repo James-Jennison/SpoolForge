@@ -1,0 +1,14 @@
+uuid: 1326801f-fc70-50a4-bc0f-30b386f03dd8
+slug: tinmorry-glass-fiber-reinforced-petg-frosted-orange
+brand:
+  slug: tinmorry
+name: Glass Fiber Reinforced PETG Frosted Orange
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f78e0eff'
+tags:
+- contains_glass_fiber
+- abrasive
+properties: {}

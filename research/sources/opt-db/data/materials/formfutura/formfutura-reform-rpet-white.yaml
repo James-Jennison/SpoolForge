@@ -1,0 +1,22 @@
+uuid: 63409ef9-ee58-5482-9d90-ee56222c29ab
+slug: formfutura-reform-rpet-white
+brand:
+  slug: formfutura
+name: ReForm – rPET White
+class: FFF
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+  - recycled
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-reform-rpet-white/a0806d5f8b81.png
+    type: unspecified
+properties:
+  density: 1.23
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+  drying_temperature: 60
+  drying_time: 720

@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "ae1ea4e3-eaf2-4965-b8a6-2a256fbb3bee",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://www.esun3d.com/epla-silk-candy-product"
+      }
+    ]
+  }
+]

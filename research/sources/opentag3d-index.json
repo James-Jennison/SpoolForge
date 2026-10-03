@@ -1,0 +1,9 @@
+{
+  "source": "OpenTag3D",
+  "repository": "https://github.com/GooborgStudios/OpenTag3D",
+  "specification": "https://opentag3d.info/spec.html",
+  "revision": "d0f706896e772663404edab8aa814633ba3c6543",
+  "format_version": "2.000",
+  "retrieved_utc": "2026-09-08T06:00:00Z",
+  "usage": "Read-only format contract and test-derived implementation; upstream source is not vendored"
+}

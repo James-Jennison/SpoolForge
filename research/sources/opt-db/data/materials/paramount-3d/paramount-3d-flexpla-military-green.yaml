@@ -1,0 +1,13 @@
+uuid: 25d38fd2-e47d-5eb6-8a2b-8b45175b1ed4
+slug: paramount-3d-flexpla-military-green
+brand:
+  slug: paramount-3d
+name: FlexPLA (Military Green)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#829778ff'
+tags:
+- industrially_compostable
+properties: {}

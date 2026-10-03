@@ -1,0 +1,35 @@
+[
+  {
+    "uuid": "bac317b1-a791-4f8b-b136-496586a54466",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/elegoo-rapid-pla-plus-filament-1-75mm-colored-1kg"
+      }
+    ]
+  },
+  {
+    "uuid": "d10c1235-bdde-4889-b431-5e760e05cc17",
+    "filament_weight": 5000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/rapid-pla-plus-filament-1-75mm-colored-5kg-for-orangestorm-giga"
+      }
+    ]
+  },
+  {
+    "uuid": "5c8dbc9a-63a1-4975-a93a-6c59ce76b031",
+    "filament_weight": 250,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/multi-color-250-g-filament-bundle?variant=51093424668948"
+      }
+    ]
+  }
+]

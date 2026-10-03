@@ -1,0 +1,19 @@
+uuid: 49f349cb-6481-5565-a40f-a413fb97161a
+slug: francofil-pla-pastel-violet-lilac
+brand:
+  slug: francofil
+name: PLA Pastel Violet - Lilac
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://francofil.fr/en/product/pla-violet-pastel-lilas/
+primary_color:
+  color_rgba: '#d3c6ffff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 70

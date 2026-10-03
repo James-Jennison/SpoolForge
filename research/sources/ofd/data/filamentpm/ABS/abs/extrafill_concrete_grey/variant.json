@@ -1,0 +1,9 @@
+{
+  "uuid": "c8b53753-9ebc-4a35-b903-5a8ca6636e3f",
+  "id": "extrafill_concrete_grey",
+  "name": "Extrafill \"Concrete Grey\"",
+  "color_hex": "#C5C5BF",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

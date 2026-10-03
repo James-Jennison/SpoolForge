@@ -1,0 +1,16 @@
+{
+  "uuid": "6b6c9acf-20da-4071-9835-7bab37c1e011",
+  "id": "multicolor_rainbow",
+  "name": "Multicolor Rainbow",
+  "color_hex": [
+    "#A048F2",
+    "#FF9100",
+    "#5AEB90",
+    "#40B6E4"
+  ],
+  "traits": {
+    "matte": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,21 @@
+uuid: e56d73d4-53fa-546e-bb9c-3090c0851800
+slug: formfutura-hdglass-blinded-sapphire-grey
+brand:
+  slug: formfutura
+name: HDglass Blinded Sapphire Grey
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#9db6d4ff'
+tags:
+  - silk
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-hdglass-blinded-sapphire-grey/ad743cc4efcc.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 195
+  max_print_temperature: 225
+  min_bed_temperature: 80
+  max_bed_temperature: 90

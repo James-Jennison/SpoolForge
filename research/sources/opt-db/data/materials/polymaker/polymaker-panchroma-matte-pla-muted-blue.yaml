@@ -1,0 +1,24 @@
+uuid: 6d72ffab-1752-5004-8a45-13b724fd1db4
+slug: polymaker-panchroma-matte-pla-muted-blue
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Muted Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5f778eff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-muted-blue/472696cd51d9.png
+    type: unspecified
+transmission_distance: 0.5
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

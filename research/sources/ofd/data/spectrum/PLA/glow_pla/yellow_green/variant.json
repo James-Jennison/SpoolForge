@@ -1,0 +1,14 @@
+{
+  "uuid": "b85defb9-c4ac-42d2-9aa9-11c597613499",
+  "id": "yellow_green",
+  "name": "Yellow Green",
+  "color_hex": [
+    "#70FA00",
+    "#DFDFD3"
+  ],
+  "traits": {
+    "glow": true,
+    "industrially_compostable": true,
+    "abrasive": true
+  }
+}

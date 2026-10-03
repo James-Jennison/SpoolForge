@@ -1,0 +1,10 @@
+{
+  "uuid": "b0a55e5e-d541-4570-ae64-57ad15eb7d9f",
+  "id": "obsidian_gf_red",
+  "name": "OBSIDIAN GF+ Red",
+  "color_hex": "#B7293E",
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

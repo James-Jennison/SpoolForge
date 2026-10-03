@@ -1,0 +1,20 @@
+uuid: 80acf780-3eae-5d32-81e6-d2bb63639dad
+slug: addnorth-petg-grey
+brand:
+  slug: addnorth
+name: PETG Grey
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#6a6c6eff'
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-petg-grey/0c1ad088450a.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 225
+  max_print_temperature: 260
+  max_bed_temperature: 80
+  drying_temperature: 65
+  drying_time: 360

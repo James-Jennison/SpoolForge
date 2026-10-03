@@ -1,0 +1,54 @@
+[
+  {
+    "uuid": "84dc9a73-9689-4a52-9bd2-7fe2af7cae47",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5903175657879",
+    "article_number": "80043",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-551-Filament-Spectrum-PLA-Premium-1-75mm-NAVY-BLUE-1kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "32569ab9-cacc-4c58-8106-e13636e07cee",
+    "filament_weight": 2000,
+    "diameter": 1.75,
+    "ean": "5903175658593",
+    "article_number": "80417",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1266-Filament-Spectrum-PLA-Premium-1-75mm-NAVY-BLUE-2kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "97883563-e1ee-4eee-96d9-ae6d0aa63e72",
+    "filament_weight": 4500,
+    "diameter": 1.75,
+    "ean": "5903175654083",
+    "article_number": "80608",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1425-Filament-Spectrum-PLA-Premium-1-75mm-NAVY-BLUE-4-5kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "d59d686a-00fe-4a49-81cf-b61dde36c281",
+    "filament_weight": 8000,
+    "diameter": 1.75,
+    "ean": "5903175654489",
+    "article_number": "80670",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1453-Filament-Spectrum-PLA-Premium-1-75mm-NAVY-BLUE-8kg.html"
+      }
+    ]
+  }
+]

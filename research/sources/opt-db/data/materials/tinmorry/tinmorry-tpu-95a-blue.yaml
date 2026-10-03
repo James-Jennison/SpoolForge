@@ -1,0 +1,12 @@
+uuid: 4ebbf7b0-51df-5a89-a332-8f7c15d57a84
+slug: tinmorry-tpu-95a-blue
+brand:
+  slug: tinmorry
+name: TPU 95A Blue
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#0266bbff'
+properties:
+  hardness_shore_a: 95

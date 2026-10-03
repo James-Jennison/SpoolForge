@@ -1,0 +1,9 @@
+{
+  "uuid": "5938178f-0e8f-45fd-aaae-a95b18cdeea7",
+  "id": "red_hood_transparent",
+  "name": "\"Red Hood Transparent\"",
+  "color_hex": "#AA0101",
+  "traits": {
+    "translucent": true
+  }
+}

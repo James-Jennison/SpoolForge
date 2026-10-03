@@ -1,0 +1,12 @@
+uuid: 7fc61ed9-4936-5d86-a11f-8903367354bc
+slug: spectrum-the-filament-petg-snow-white
+brand:
+  slug: spectrum
+name: The Filament PETG Snow White
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#eaecf5ff'
+properties:
+  density: 1.27

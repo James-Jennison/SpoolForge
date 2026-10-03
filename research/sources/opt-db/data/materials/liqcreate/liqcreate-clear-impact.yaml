@@ -1,0 +1,18 @@
+uuid: 477ac9bf-9ab0-5f98-9dd3-b636e763b961
+slug: liqcreate-clear-impact
+brand:
+  slug: liqcreate
+name: Clear Impact
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#f3f6f4ff'
+tags:
+- translucent
+properties:
+  density: 1.12
+  cure_wavelength: 405
+  viscosity_18c: 1822
+  viscosity_25c: 912
+  viscosity_40c: 269
+  viscosity_60c: 83

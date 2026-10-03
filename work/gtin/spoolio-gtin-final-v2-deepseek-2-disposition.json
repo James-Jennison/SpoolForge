@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-final-v2-deepseek-2",
+  "disposition": "CONFIRMED",
+  "reason": "The verifier now requires package scope for OFD/OPT, enumerated Community scopes, compatibility with is_refill, and scope-correct identifier arrays; negative scope tests are included.",
+  "evidence_reference": "tools/verify_gtin_index.py; work/gtin/verify-pointer-verification.log",
+  "resolved": true
+}

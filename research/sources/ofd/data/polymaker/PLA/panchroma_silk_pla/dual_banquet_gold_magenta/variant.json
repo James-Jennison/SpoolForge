@@ -1,0 +1,14 @@
+{
+  "uuid": "643cc4d4-c814-473a-98d1-fccf3b0d2be9",
+  "id": "dual_banquet_gold_magenta",
+  "name": "Dual Banquet Gold Magenta",
+  "color_hex": [
+    "#FFCB47",
+    "#F2306E"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

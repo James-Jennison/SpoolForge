@@ -1,0 +1,24 @@
+uuid: 48a92904-a444-5431-b5c0-c351dcadf59a
+slug: polymaker-polyflex-tpu95-hf-black
+brand:
+  slug: polymaker
+name: PolyFlex™ TPU95-HF Black
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#16161aff'
+tags:
+  - high_speed
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polyflex-tpu95-hf-black/c90f10d2cfd7.png
+    type: unspecified
+properties:
+  density: 1.16
+  hardness_shore_a: 95.0
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 50
+  drying_temperature: 70
+  drying_time: 480

@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "a26f8729-c221-40eb-a958-56497c802011",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/pla-uv-color-change"
+      }
+    ]
+  }
+]

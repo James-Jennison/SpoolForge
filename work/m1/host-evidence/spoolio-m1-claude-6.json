@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-claude-6",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "claude",
+  "severity": "LOW",
+  "category": "Dead code / catalog installation architecture",
+  "summary": "`CatalogGenerationStore` (generation/pointer-based atomic catalog installer) has no call sites; the app's only actual catalog-load path (`DataStore.ensureCatalog()`) uses a different, simpler digest-check-plus-Room-transaction mechanism.",
+  "claim": "`CatalogGenerationStore` (generation/pointer-based atomic catalog installer) has no call sites; the app's only actual catalog-load path (`DataStore.ensureCatalog()`) uses a different, simpler digest-check-plus-Room-transaction mechanism.",
+  "evidence": {
+    "source": "core/CatalogGenerationStore.kt defines `install()`/`active()` with atomic file moves and a pointer file; data/Databases.kt's `DataStore.ensureCatalog()` never references `CatalogGenerationStore`, instead reading `ofd-catalog.tsv.gzip` directly from assets and replacing rows inside a Room `withTransaction`.",
+    "response_sha256": "24d3990562d67e978414fe65adda6f7e9777b1af1f8ae914bef77ccc315c4478"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Either integrate `CatalogGenerationStore` for its intended purpose or remove it to avoid ambiguity about which replacement mechanism is authoritative.",
+  "suggested_validation": "Grep/build-time check confirming zero non-test references, or an end-to-end test if it is retained and wired in.",
+  "reviewer_confidence": "HIGH (presence/absence of call sites is directly verifiable in the fully supplied source)."
+}

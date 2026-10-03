@@ -1,0 +1,24 @@
+uuid: c6a730e1-6953-552e-828b-e4f415e58c1c
+slug: polymaker-panchroma-matte-pla-pastel-watermelon
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Pastel Watermelon
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ee474bff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-pastel-watermelon/fbf0f3125994.png
+    type: unspecified
+transmission_distance: 2.4
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

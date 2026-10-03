@@ -1,0 +1,14 @@
+uuid: 3ef005d0-cf03-5862-980c-8ed7d848a590
+slug: tinmorry-carbon-fiber-petg-olive-green
+brand:
+  slug: tinmorry
+name: Carbon Fiber PETG Olive Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#4d5d4cff'
+tags:
+- contains_carbon_fiber
+- abrasive
+properties: {}

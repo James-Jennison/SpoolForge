@@ -1,0 +1,17 @@
+uuid: 436ed138-08af-5059-8f8a-5e135990dd59
+slug: atomic-filament-perfect-red-abs
+brand:
+  slug: atomic-filament
+name: Perfect Red ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+url: https://atomicfilament.com/products/perfect-red-abs-filament
+primary_color:
+  color_rgba: '#e20010ff'
+tags:
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-perfect-red-abs/4a0029fafc40.png
+  type: unspecified
+properties: {}

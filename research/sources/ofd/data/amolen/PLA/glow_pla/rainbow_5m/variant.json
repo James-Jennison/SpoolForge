@@ -1,0 +1,17 @@
+{
+  "uuid": "5902eca9-e272-4255-a59f-b2219e68b067",
+  "id": "rainbow_5m",
+  "name": "Rainbow 5m",
+  "color_hex": [
+    "#FF67F5",
+    "#AE00FF",
+    "#1ADAFB",
+    "#0095FF"
+  ],
+  "traits": {
+    "glow": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "abrasive": true
+  }
+}

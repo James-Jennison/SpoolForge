@@ -1,0 +1,20 @@
+uuid: e0e2a71a-eda4-5682-9d3b-5b3712c34e42
+slug: francofil-pla-bronze
+brand:
+  slug: francofil
+name: PLA Bronze
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://francofil.fr/en/product/filament-pla-bronze/
+primary_color:
+  color_rgba: '#b26e3eff'
+tags:
+- imitates_metal
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 70

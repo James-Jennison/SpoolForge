@@ -1,0 +1,15 @@
+{
+  "uuid": "28bc142d-216e-4739-b4a5-617b6d890b14",
+  "id": "tri_color_red_yellow_blue",
+  "name": "Tri-Color Red & Yellow & Blue",
+  "color_hex": [
+    "#CF4042",
+    "#EBFF57",
+    "#0353BA"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "phase": "INITIAL_REVIEW",
+  "objective": "Review Filamajig NFC M4 codec registry, pinned PAXX U1 contract, exact preview, guarded NFC lifecycle, restart reconciliation, and verified one/two-tag persistence for correctness and release-blocking defects.",
+  "owner_requirements": [
+    "Support Standard OpenSpool and PAXX U1 as explicit codec choices",
+    "Target exact PAXX firmware v1.5.2-paxx12-21 and do not claim generic compatibility",
+    "Show exactly which fields and JSON types are written or omitted and enforce NTAG215 capacity",
+    "Write one or two tags per physical spool and save bindings only after a fresh matching readback",
+    "Retain conservative unknown-write reconciliation without automatic rewrite across app restart",
+    "Validate on the Motorola Razr 2023 and require separate physical NTAG215 and U1 acceptance"
+  ],
+  "change_summary": [
+    "Added ordered TagCodecRegistry with stable IDs, compatibility targets, frozen write intents, exact included wire fields, and default PAXX selection",
+    "Routed preview and write arming through the selected codec; preview reports compatibility target, field names/types, omissions, JSON bytes, and total NDEF bytes against 492",
+    "Pinned PAXX to v1.5.2-paxx12-21 commit 8d97e83f and verified the retained parser SHA-256 against the exact tag checkout",
+    "Added byte-stable Standard/PAXX fixtures and supported type/subtype matrix tests; unknown fields and alpha remain losslessly read-only",
+    "Added transactional NFC-A binding slots one and two with codec ID, payload SHA-256, verification time, replacement/rebinding, and spool cascade",
+    "Persisted spool ID, codec ID, and tag position in write journal v3 so pending/unknown restart reconciliation can bind the correct tag only after verification",
+    "Added exact compatibility documentation and a real-device Android NDEF/capacity/round-trip acceptance test"
+  ],
+  "objective_evidence": {
+    "host": "Protected full gate PASS: 98 tests, lint, app APK, and Android-test APK. Focused repository/journal tests PASS.",
+    "device": "Exact connected motorola razr 2023 on Android 16: both APKs installed; all five instrumentation tests PASS in 16.281 seconds. M4 payload is 286 JSON bytes and 308 total NDEF bytes against 492.",
+    "paxx_source": "Exact tag refs/tags/v1.5.2-paxx12-21 resolves to 8d97e83f0329b72c512563a8e98305cfbdef7a18; retained parser and exact checkout both hash e34cad67d090ea1978601f819ec89c27e0f4b0be56da0683ac6c279a8c7d2e40.",
+    "physical": "Not yet run. Current hardware acceptance requires owner presentation of NTAG215 tags to the 2023 Razr and the U1 running the pinned firmware. No physical success is claimed."
+  },
+  "review_files": [
+    "work/codec-m4/m4-review.diff",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/TagCodec.kt",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/OpenSpoolCodec.kt",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/WriteStateMachine.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt",
+    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/PaxxPinnedReleaseCodecTest.kt",
+    "app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt",
+    "app/src/androidTest/kotlin/net/jamesjennison/filamajignfc/DeviceCodecAcceptanceTest.kt",
+    "docs/PAXX_COMPATIBILITY.md"
+  ],
+  "known_limits": [
+    "Hardware recognition and radio reliability cannot be proven by unit or instrumentation tests and remain an explicit physical gate",
+    "The pinned PAXX parser ignores transmission_distance; the preview labels it as a Filamajig extension",
+    "Incoming alpha remains read-only because Filamajig does not yet offer lossless alpha editing",
+    "Catalog candidates can be written but must be saved locally before a physical-spool binding can be recorded"
+  ],
+  "review_questions": [
+    "Can a binding be recorded before semantic verification, against the wrong spool, wrong UID, wrong codec, or wrong tag position?",
+    "Can restart, null NDEF reads, callback errors, replacement, duplicate UID, or second-tag flows corrupt or falsely complete state?",
+    "Does the codec output exactly follow the pinned parser's field types, diameter conversion, color count, type/subtype behavior, and capacity limits?",
+    "Does the UI accurately distinguish Standard OpenSpool, pinned PAXX behavior, Filamajig extensions, omissions, and unbound catalog writes?"
+  ],
+  "sanitization": "No credentials, environment values, user database contents, NFC UIDs, device serials, network addresses, photos, or account data are included."
+}

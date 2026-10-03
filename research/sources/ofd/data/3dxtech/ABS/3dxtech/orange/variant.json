@@ -1,0 +1,9 @@
+{
+  "uuid": "43b81a97-d3a0-494e-b827-420f4e4df3f2",
+  "id": "orange",
+  "name": "Orange",
+  "color_hex": "#FF5F2E",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "uuid": "b1203261-e472-4c68-a6e1-1c173df376f2",
+  "id": "burnt_titanium",
+  "name": "Burnt Titanium",
+  "color_hex": [
+    "#663D7E",
+    "#003287"
+  ],
+  "traits": {
+    "iridescent": true
+  }
+}

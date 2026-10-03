@@ -1,0 +1,13 @@
+uuid: 7941d2fb-47e1-524c-83e4-475eb74a7c60
+slug: print-with-smile-pla-sunset-gold
+brand:
+  slug: print-with-smile
+name: PLA Sunset GOLD
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ce8d00ff'
+tags:
+- industrially_compostable
+properties: {}

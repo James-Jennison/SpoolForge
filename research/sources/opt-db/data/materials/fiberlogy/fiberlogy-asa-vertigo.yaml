@@ -1,0 +1,24 @@
+uuid: a04943af-7289-5b55-96a5-77c45136a305
+slug: fiberlogy-asa-vertigo
+brand:
+  slug: fiberlogy
+name: ASA Vertigo
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#55555eff'
+tags:
+  - glitter
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-asa-vertigo/c12738c18e5d.png
+    type: unspecified
+properties:
+  density: 1.07
+  min_print_temperature: 255
+  max_print_temperature: 270
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  drying_temperature: 80
+  drying_time: 240

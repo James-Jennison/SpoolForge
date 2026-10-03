@@ -1,0 +1,1712 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 7,
+    "identityHash": "be10532360033be9777be10972e766b8",
+    "entities": [
+      {
+        "tableName": "custom_records",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `original_package_id` TEXT, `variant_id` TEXT NOT NULL, `product_id` TEXT NOT NULL, `brand` TEXT NOT NULL, `material` TEXT NOT NULL, `product` TEXT NOT NULL, `color_name` TEXT NOT NULL, `color_hex` TEXT NOT NULL, `diameter_mm` TEXT NOT NULL, `mass_g` INTEGER NOT NULL, `nozzle_min_c` INTEGER, `nozzle_max_c` INTEGER, `bed_min_c` INTEGER, `bed_max_c` INTEGER, `gtin` TEXT, `article_number` TEXT, `additional_color_hexes` TEXT NOT NULL, `source_revision` TEXT NOT NULL, `provenance` TEXT NOT NULL, `brand_source` TEXT NOT NULL, `material_source` TEXT NOT NULL, `product_source` TEXT NOT NULL, `color_name_source` TEXT NOT NULL, `color_hex_source` TEXT NOT NULL, `diameter_source` TEXT NOT NULL, `mass_source` TEXT NOT NULL, `nozzle_min_source` TEXT, `nozzle_max_source` TEXT, `bed_min_source` TEXT, `bed_max_source` TEXT, `updated_at` INTEGER NOT NULL, `barcode_evidence` TEXT NOT NULL DEFAULT '', `transmission_distance` TEXT, `transmission_distance_source` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "originalPackageId",
+            "columnName": "original_package_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "variantId",
+            "columnName": "variant_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "productId",
+            "columnName": "product_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "brand",
+            "columnName": "brand",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "material",
+            "columnName": "material",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "product",
+            "columnName": "product",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorName",
+            "columnName": "color_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorHex",
+            "columnName": "color_hex",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diameterMm",
+            "columnName": "diameter_mm",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "massG",
+            "columnName": "mass_g",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nozzleMinC",
+            "columnName": "nozzle_min_c",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "nozzleMaxC",
+            "columnName": "nozzle_max_c",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "bedMinC",
+            "columnName": "bed_min_c",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "bedMaxC",
+            "columnName": "bed_max_c",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "gtin",
+            "columnName": "gtin",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "articleNumber",
+            "columnName": "article_number",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "additionalColorHexes",
+            "columnName": "additional_color_hexes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceRevision",
+            "columnName": "source_revision",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "provenance",
+            "columnName": "provenance",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "brandSource",
+            "columnName": "brand_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "materialSource",
+            "columnName": "material_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "productSource",
+            "columnName": "product_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorNameSource",
+            "columnName": "color_name_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colorHexSource",
+            "columnName": "color_hex_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "diameterSource",
+            "columnName": "diameter_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "massSource",
+            "columnName": "mass_source",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nozzleMinSource",
+            "columnName": "nozzle_min_source",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "nozzleMaxSource",
+            "columnName": "nozzle_max_source",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "bedMinSource",
+            "columnName": "bed_min_source",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "bedMaxSource",
+            "columnName": "bed_max_source",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "barcodeEvidence",
+            "columnName": "barcode_evidence",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "''"
+          },
+          {
+            "fieldPath": "transmissionDistance",
+            "columnName": "transmission_distance",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "transmissionDistanceSource",
+            "columnName": "transmission_distance_source",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "recents",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`record_id` TEXT NOT NULL, `kind` TEXT NOT NULL, `snapshot_json` TEXT NOT NULL, `used_at` INTEGER NOT NULL, PRIMARY KEY(`record_id`))",
+        "fields": [
+          {
+            "fieldPath": "recordId",
+            "columnName": "record_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kind",
+            "columnName": "kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "snapshotJson",
+            "columnName": "snapshot_json",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "usedAt",
+            "columnName": "used_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "record_id"
+          ]
+        }
+      },
+      {
+        "tableName": "filament_profiles",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`profile_id` TEXT NOT NULL, `legacy_record_id` TEXT, `created_at` INTEGER NOT NULL, `updated_at` INTEGER NOT NULL, PRIMARY KEY(`profile_id`))",
+        "fields": [
+          {
+            "fieldPath": "profileId",
+            "columnName": "profile_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legacyRecordId",
+            "columnName": "legacy_record_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "profile_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_filament_profiles_legacy_record_id",
+            "unique": true,
+            "columnNames": [
+              "legacy_record_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_filament_profiles_legacy_record_id` ON `${TABLE_NAME}` (`legacy_record_id`)"
+          }
+        ]
+      },
+      {
+        "tableName": "profile_observations",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`observation_id` TEXT NOT NULL, `profile_id` TEXT NOT NULL, `field_name` TEXT NOT NULL, `value_text` TEXT NOT NULL, `source_provider` TEXT NOT NULL, `source_record_id` TEXT, `source_revision` TEXT, `observed_at` INTEGER, `evidence_kind` TEXT NOT NULL, `confidence` TEXT, `created_at` INTEGER NOT NULL, PRIMARY KEY(`observation_id`), FOREIGN KEY(`profile_id`) REFERENCES `filament_profiles`(`profile_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "observationId",
+            "columnName": "observation_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profileId",
+            "columnName": "profile_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fieldName",
+            "columnName": "field_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valueText",
+            "columnName": "value_text",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceProvider",
+            "columnName": "source_provider",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceRecordId",
+            "columnName": "source_record_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceRevision",
+            "columnName": "source_revision",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "observedAt",
+            "columnName": "observed_at",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "evidenceKind",
+            "columnName": "evidence_kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "confidence",
+            "columnName": "confidence",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "observation_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_profile_observations_profile_id",
+            "unique": false,
+            "columnNames": [
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_profile_observations_profile_id` ON `${TABLE_NAME}` (`profile_id`)"
+          },
+          {
+            "name": "index_profile_observations_profile_id_field_name",
+            "unique": false,
+            "columnNames": [
+              "profile_id",
+              "field_name"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_profile_observations_profile_id_field_name` ON `${TABLE_NAME}` (`profile_id`, `field_name`)"
+          },
+          {
+            "name": "index_profile_observations_field_name_value_text_profile_id",
+            "unique": false,
+            "columnNames": [
+              "field_name",
+              "value_text",
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_profile_observations_field_name_value_text_profile_id` ON `${TABLE_NAME}` (`field_name`, `value_text`, `profile_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "filament_profiles",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "profile_id"
+            ],
+            "referencedColumns": [
+              "profile_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "profile_overrides",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`profile_id` TEXT NOT NULL, `field_name` TEXT NOT NULL, `value_text` TEXT NOT NULL, `source_observation_id` TEXT, `reason` TEXT NOT NULL, `updated_at` INTEGER NOT NULL, PRIMARY KEY(`profile_id`, `field_name`), FOREIGN KEY(`profile_id`) REFERENCES `filament_profiles`(`profile_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "profileId",
+            "columnName": "profile_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fieldName",
+            "columnName": "field_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valueText",
+            "columnName": "value_text",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceObservationId",
+            "columnName": "source_observation_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "reason",
+            "columnName": "reason",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "profile_id",
+            "field_name"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_profile_overrides_profile_id",
+            "unique": false,
+            "columnNames": [
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_profile_overrides_profile_id` ON `${TABLE_NAME}` (`profile_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "filament_profiles",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "profile_id"
+            ],
+            "referencedColumns": [
+              "profile_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "profile_identifiers",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`identifier_id` TEXT NOT NULL, `profile_id` TEXT NOT NULL, `scheme` TEXT NOT NULL, `value` TEXT NOT NULL, `issuer` TEXT, `market` TEXT, `source_provider` TEXT NOT NULL, `source_record_id` TEXT, `source_revision` TEXT, `evidence_kind` TEXT NOT NULL, `confidence` TEXT, `created_at` INTEGER NOT NULL, PRIMARY KEY(`identifier_id`), FOREIGN KEY(`profile_id`) REFERENCES `filament_profiles`(`profile_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "identifierId",
+            "columnName": "identifier_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profileId",
+            "columnName": "profile_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scheme",
+            "columnName": "scheme",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "value",
+            "columnName": "value",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "issuer",
+            "columnName": "issuer",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "market",
+            "columnName": "market",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceProvider",
+            "columnName": "source_provider",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceRecordId",
+            "columnName": "source_record_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceRevision",
+            "columnName": "source_revision",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "evidenceKind",
+            "columnName": "evidence_kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "confidence",
+            "columnName": "confidence",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "identifier_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_profile_identifiers_profile_id",
+            "unique": false,
+            "columnNames": [
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_profile_identifiers_profile_id` ON `${TABLE_NAME}` (`profile_id`)"
+          },
+          {
+            "name": "index_profile_identifiers_scheme_value",
+            "unique": false,
+            "columnNames": [
+              "scheme",
+              "value"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_profile_identifiers_scheme_value` ON `${TABLE_NAME}` (`scheme`, `value`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "filament_profiles",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "profile_id"
+            ],
+            "referencedColumns": [
+              "profile_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "physical_spools",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`spool_id` TEXT NOT NULL, `profile_id` TEXT NOT NULL, `legacy_record_id` TEXT, `initial_quantity_g` INTEGER NOT NULL, `remaining_quantity_g` INTEGER, `purchase_date_epoch_day` INTEGER, `purchase_price_minor_units` INTEGER, `currency_code` TEXT, `vendor` TEXT, `storage_location` TEXT, `opened_at` INTEGER, `notes` TEXT, `custom_metadata_json` TEXT NOT NULL, `created_at` INTEGER NOT NULL, `updated_at` INTEGER NOT NULL, PRIMARY KEY(`spool_id`), FOREIGN KEY(`profile_id`) REFERENCES `filament_profiles`(`profile_id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "spoolId",
+            "columnName": "spool_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profileId",
+            "columnName": "profile_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "legacyRecordId",
+            "columnName": "legacy_record_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "initialQuantityG",
+            "columnName": "initial_quantity_g",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "remainingQuantityG",
+            "columnName": "remaining_quantity_g",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "purchaseDateEpochDay",
+            "columnName": "purchase_date_epoch_day",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "purchasePriceMinorUnits",
+            "columnName": "purchase_price_minor_units",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "currencyCode",
+            "columnName": "currency_code",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "vendor",
+            "columnName": "vendor",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "storageLocation",
+            "columnName": "storage_location",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "openedAt",
+            "columnName": "opened_at",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "notes",
+            "columnName": "notes",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "customMetadataJson",
+            "columnName": "custom_metadata_json",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updated_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "spool_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_physical_spools_profile_id",
+            "unique": false,
+            "columnNames": [
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_physical_spools_profile_id` ON `${TABLE_NAME}` (`profile_id`)"
+          },
+          {
+            "name": "index_physical_spools_legacy_record_id",
+            "unique": true,
+            "columnNames": [
+              "legacy_record_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_physical_spools_legacy_record_id` ON `${TABLE_NAME}` (`legacy_record_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "filament_profiles",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "profile_id"
+            ],
+            "referencedColumns": [
+              "profile_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "tag_bindings",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`tag_binding_id` TEXT NOT NULL, `spool_id` TEXT NOT NULL, `technology` TEXT NOT NULL, `uid_hex` TEXT NOT NULL, `codec_id` TEXT NOT NULL, `payload_sha256` TEXT, `verified_at` INTEGER, `binding_order` INTEGER NOT NULL, `created_at` INTEGER NOT NULL, PRIMARY KEY(`tag_binding_id`), FOREIGN KEY(`spool_id`) REFERENCES `physical_spools`(`spool_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "tagBindingId",
+            "columnName": "tag_binding_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "spoolId",
+            "columnName": "spool_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "technology",
+            "columnName": "technology",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "uidHex",
+            "columnName": "uid_hex",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "codecId",
+            "columnName": "codec_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "payloadSha256",
+            "columnName": "payload_sha256",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "verifiedAt",
+            "columnName": "verified_at",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "bindingOrder",
+            "columnName": "binding_order",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "tag_binding_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_tag_bindings_spool_id",
+            "unique": false,
+            "columnNames": [
+              "spool_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_tag_bindings_spool_id` ON `${TABLE_NAME}` (`spool_id`)"
+          },
+          {
+            "name": "index_tag_bindings_spool_id_binding_order",
+            "unique": true,
+            "columnNames": [
+              "spool_id",
+              "binding_order"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_tag_bindings_spool_id_binding_order` ON `${TABLE_NAME}` (`spool_id`, `binding_order`)"
+          },
+          {
+            "name": "index_tag_bindings_technology_uid_hex",
+            "unique": true,
+            "columnNames": [
+              "technology",
+              "uid_hex"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_tag_bindings_technology_uid_hex` ON `${TABLE_NAME}` (`technology`, `uid_hex`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "physical_spools",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "spool_id"
+            ],
+            "referencedColumns": [
+              "spool_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "transmission_distance_measurements",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`measurement_id` TEXT NOT NULL, `profile_id` TEXT NOT NULL, `value_text` TEXT NOT NULL, `source_provider` TEXT NOT NULL, `source_record_id` TEXT, `source_revision` TEXT, `evidence_kind` TEXT NOT NULL, `measured_at` INTEGER, `instrument` TEXT, `created_at` INTEGER NOT NULL, PRIMARY KEY(`measurement_id`), FOREIGN KEY(`profile_id`) REFERENCES `filament_profiles`(`profile_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "measurementId",
+            "columnName": "measurement_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profileId",
+            "columnName": "profile_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valueText",
+            "columnName": "value_text",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceProvider",
+            "columnName": "source_provider",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceRecordId",
+            "columnName": "source_record_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceRevision",
+            "columnName": "source_revision",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "evidenceKind",
+            "columnName": "evidence_kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "measuredAt",
+            "columnName": "measured_at",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "instrument",
+            "columnName": "instrument",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "measurement_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_transmission_distance_measurements_profile_id",
+            "unique": false,
+            "columnNames": [
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_transmission_distance_measurements_profile_id` ON `${TABLE_NAME}` (`profile_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "filament_profiles",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "profile_id"
+            ],
+            "referencedColumns": [
+              "profile_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "appearance_assertions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`assertion_id` TEXT NOT NULL, `profile_id` TEXT NOT NULL, `appearance_key` TEXT NOT NULL, `assertion_value` TEXT NOT NULL, `evidence_kind` TEXT NOT NULL, `evidence_id` TEXT, `confidence` TEXT, `asserted_at` INTEGER NOT NULL, PRIMARY KEY(`assertion_id`), FOREIGN KEY(`profile_id`) REFERENCES `filament_profiles`(`profile_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`evidence_id`) REFERENCES `evidence_references`(`evidence_id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "assertionId",
+            "columnName": "assertion_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profileId",
+            "columnName": "profile_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "appearanceKey",
+            "columnName": "appearance_key",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "assertionValue",
+            "columnName": "assertion_value",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "evidenceKind",
+            "columnName": "evidence_kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "confidence",
+            "columnName": "confidence",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "assertedAt",
+            "columnName": "asserted_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "assertion_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_appearance_assertions_profile_id",
+            "unique": false,
+            "columnNames": [
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_appearance_assertions_profile_id` ON `${TABLE_NAME}` (`profile_id`)"
+          },
+          {
+            "name": "index_appearance_assertions_evidence_id",
+            "unique": false,
+            "columnNames": [
+              "evidence_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_appearance_assertions_evidence_id` ON `${TABLE_NAME}` (`evidence_id`)"
+          },
+          {
+            "name": "index_appearance_assertions_profile_id_appearance_key",
+            "unique": false,
+            "columnNames": [
+              "profile_id",
+              "appearance_key"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_appearance_assertions_profile_id_appearance_key` ON `${TABLE_NAME}` (`profile_id`, `appearance_key`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "filament_profiles",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "profile_id"
+            ],
+            "referencedColumns": [
+              "profile_id"
+            ]
+          },
+          {
+            "table": "evidence_references",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "evidence_id"
+            ],
+            "referencedColumns": [
+              "evidence_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "full_spectrum_role_assertions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`assertion_id` TEXT NOT NULL, `profile_id` TEXT NOT NULL, `role_key` TEXT NOT NULL, `role_category` TEXT NOT NULL, `authority` TEXT NOT NULL, `assertion_state` TEXT NOT NULL, `superseded_by_assertion_id` TEXT, `evidence_id` TEXT, `confidence` TEXT, `notes` TEXT, `asserted_at` INTEGER NOT NULL, PRIMARY KEY(`assertion_id`), FOREIGN KEY(`profile_id`) REFERENCES `filament_profiles`(`profile_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`evidence_id`) REFERENCES `evidence_references`(`evidence_id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "assertionId",
+            "columnName": "assertion_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profileId",
+            "columnName": "profile_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roleKey",
+            "columnName": "role_key",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roleCategory",
+            "columnName": "role_category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "authority",
+            "columnName": "authority",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "assertionState",
+            "columnName": "assertion_state",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "supersededByAssertionId",
+            "columnName": "superseded_by_assertion_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "confidence",
+            "columnName": "confidence",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "notes",
+            "columnName": "notes",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "assertedAt",
+            "columnName": "asserted_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "assertion_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_full_spectrum_role_assertions_profile_id",
+            "unique": false,
+            "columnNames": [
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_full_spectrum_role_assertions_profile_id` ON `${TABLE_NAME}` (`profile_id`)"
+          },
+          {
+            "name": "index_full_spectrum_role_assertions_evidence_id",
+            "unique": false,
+            "columnNames": [
+              "evidence_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_full_spectrum_role_assertions_evidence_id` ON `${TABLE_NAME}` (`evidence_id`)"
+          },
+          {
+            "name": "index_full_spectrum_role_assertions_profile_id_role_key_assertion_state",
+            "unique": false,
+            "columnNames": [
+              "profile_id",
+              "role_key",
+              "assertion_state"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_full_spectrum_role_assertions_profile_id_role_key_assertion_state` ON `${TABLE_NAME}` (`profile_id`, `role_key`, `assertion_state`)"
+          },
+          {
+            "name": "index_full_spectrum_role_assertions_superseded_by_assertion_id",
+            "unique": false,
+            "columnNames": [
+              "superseded_by_assertion_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_full_spectrum_role_assertions_superseded_by_assertion_id` ON `${TABLE_NAME}` (`superseded_by_assertion_id`)"
+          },
+          {
+            "name": "index_full_spectrum_role_assertions_role_key_assertion_state_superseded_by_assertion_id_profile_id",
+            "unique": false,
+            "columnNames": [
+              "role_key",
+              "assertion_state",
+              "superseded_by_assertion_id",
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_full_spectrum_role_assertions_role_key_assertion_state_superseded_by_assertion_id_profile_id` ON `${TABLE_NAME}` (`role_key`, `assertion_state`, `superseded_by_assertion_id`, `profile_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "filament_profiles",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "profile_id"
+            ],
+            "referencedColumns": [
+              "profile_id"
+            ]
+          },
+          {
+            "table": "evidence_references",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "evidence_id"
+            ],
+            "referencedColumns": [
+              "evidence_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "full_spectrum_assessments",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`assessment_id` TEXT NOT NULL, `profile_id` TEXT NOT NULL, `assessment_kind` TEXT NOT NULL, `rating` TEXT NOT NULL, `scope_kind` TEXT NOT NULL, `role_assertion_id` TEXT, `policy_id` TEXT, `policy_version` TEXT, `factor_refs` TEXT NOT NULL, `rationale` TEXT NOT NULL, `evidence_id` TEXT, `confidence` TEXT, `assessor` TEXT NOT NULL, `assessed_at` INTEGER NOT NULL, `superseded_by_assessment_id` TEXT, PRIMARY KEY(`assessment_id`), FOREIGN KEY(`profile_id`) REFERENCES `filament_profiles`(`profile_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`role_assertion_id`) REFERENCES `full_spectrum_role_assertions`(`assertion_id`) ON UPDATE NO ACTION ON DELETE RESTRICT , FOREIGN KEY(`evidence_id`) REFERENCES `evidence_references`(`evidence_id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "assessmentId",
+            "columnName": "assessment_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profileId",
+            "columnName": "profile_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "assessmentKind",
+            "columnName": "assessment_kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rating",
+            "columnName": "rating",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "scopeKind",
+            "columnName": "scope_kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "roleAssertionId",
+            "columnName": "role_assertion_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "policyId",
+            "columnName": "policy_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "policyVersion",
+            "columnName": "policy_version",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "factorRefs",
+            "columnName": "factor_refs",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rationale",
+            "columnName": "rationale",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "confidence",
+            "columnName": "confidence",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "assessor",
+            "columnName": "assessor",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "assessedAt",
+            "columnName": "assessed_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "supersededByAssessmentId",
+            "columnName": "superseded_by_assessment_id",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "assessment_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_full_spectrum_assessments_profile_id",
+            "unique": false,
+            "columnNames": [
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_full_spectrum_assessments_profile_id` ON `${TABLE_NAME}` (`profile_id`)"
+          },
+          {
+            "name": "index_full_spectrum_assessments_role_assertion_id",
+            "unique": false,
+            "columnNames": [
+              "role_assertion_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_full_spectrum_assessments_role_assertion_id` ON `${TABLE_NAME}` (`role_assertion_id`)"
+          },
+          {
+            "name": "index_full_spectrum_assessments_evidence_id",
+            "unique": false,
+            "columnNames": [
+              "evidence_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_full_spectrum_assessments_evidence_id` ON `${TABLE_NAME}` (`evidence_id`)"
+          },
+          {
+            "name": "index_full_spectrum_assessments_profile_id_assessment_kind_rating",
+            "unique": false,
+            "columnNames": [
+              "profile_id",
+              "assessment_kind",
+              "rating"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_full_spectrum_assessments_profile_id_assessment_kind_rating` ON `${TABLE_NAME}` (`profile_id`, `assessment_kind`, `rating`)"
+          },
+          {
+            "name": "index_full_spectrum_assessments_rating_assessment_kind_superseded_by_assessment_id_profile_id",
+            "unique": false,
+            "columnNames": [
+              "rating",
+              "assessment_kind",
+              "superseded_by_assessment_id",
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_full_spectrum_assessments_rating_assessment_kind_superseded_by_assessment_id_profile_id` ON `${TABLE_NAME}` (`rating`, `assessment_kind`, `superseded_by_assessment_id`, `profile_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "filament_profiles",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "profile_id"
+            ],
+            "referencedColumns": [
+              "profile_id"
+            ]
+          },
+          {
+            "table": "full_spectrum_role_assertions",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "role_assertion_id"
+            ],
+            "referencedColumns": [
+              "assertion_id"
+            ]
+          },
+          {
+            "table": "evidence_references",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "evidence_id"
+            ],
+            "referencedColumns": [
+              "evidence_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "evidence_references",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`evidence_id` TEXT NOT NULL, `kind` TEXT NOT NULL, `provider` TEXT NOT NULL, `record_id` TEXT, `revision` TEXT, `url` TEXT, `retrieved_at` INTEGER, `notes` TEXT, PRIMARY KEY(`evidence_id`))",
+        "fields": [
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kind",
+            "columnName": "kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "provider",
+            "columnName": "provider",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recordId",
+            "columnName": "record_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "revision",
+            "columnName": "revision",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "retrievedAt",
+            "columnName": "retrieved_at",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "notes",
+            "columnName": "notes",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "evidence_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_evidence_references_kind_provider_record_id",
+            "unique": false,
+            "columnNames": [
+              "kind",
+              "provider",
+              "record_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_evidence_references_kind_provider_record_id` ON `${TABLE_NAME}` (`kind`, `provider`, `record_id`)"
+          }
+        ]
+      },
+      {
+        "tableName": "optical_characterizations",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`characterization_id` TEXT NOT NULL, `profile_id` TEXT NOT NULL, `property_key` TEXT NOT NULL, `value_text` TEXT, `unit` TEXT NOT NULL, `method_key` TEXT NOT NULL, `method_version` TEXT, `origin` TEXT NOT NULL, `geometry` TEXT, `wall_thickness_mm` TEXT, `layer_height_mm` TEXT, `evidence_id` TEXT, `confidence` TEXT, `notes` TEXT, `environmental_notes` TEXT, `measured_at` INTEGER, `instrument` TEXT, `superseded_by_characterization_id` TEXT, `created_at` INTEGER NOT NULL, PRIMARY KEY(`characterization_id`), FOREIGN KEY(`profile_id`) REFERENCES `filament_profiles`(`profile_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`evidence_id`) REFERENCES `evidence_references`(`evidence_id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "characterizationId",
+            "columnName": "characterization_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "profileId",
+            "columnName": "profile_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "propertyKey",
+            "columnName": "property_key",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valueText",
+            "columnName": "value_text",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "unit",
+            "columnName": "unit",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "methodKey",
+            "columnName": "method_key",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "methodVersion",
+            "columnName": "method_version",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "origin",
+            "columnName": "origin",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "geometry",
+            "columnName": "geometry",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "wallThicknessMm",
+            "columnName": "wall_thickness_mm",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "layerHeightMm",
+            "columnName": "layer_height_mm",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "confidence",
+            "columnName": "confidence",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "notes",
+            "columnName": "notes",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "environmentalNotes",
+            "columnName": "environmental_notes",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "measuredAt",
+            "columnName": "measured_at",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "instrument",
+            "columnName": "instrument",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "supersededByCharacterizationId",
+            "columnName": "superseded_by_characterization_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "created_at",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "characterization_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_optical_characterizations_profile_id",
+            "unique": false,
+            "columnNames": [
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_optical_characterizations_profile_id` ON `${TABLE_NAME}` (`profile_id`)"
+          },
+          {
+            "name": "index_optical_characterizations_evidence_id",
+            "unique": false,
+            "columnNames": [
+              "evidence_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_optical_characterizations_evidence_id` ON `${TABLE_NAME}` (`evidence_id`)"
+          },
+          {
+            "name": "index_optical_characterizations_profile_id_created_at",
+            "unique": false,
+            "columnNames": [
+              "profile_id",
+              "created_at"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_optical_characterizations_profile_id_created_at` ON `${TABLE_NAME}` (`profile_id`, `created_at`)"
+          },
+          {
+            "name": "index_optical_characterizations_property_key_origin_superseded_by_characterization_id_profile_id",
+            "unique": false,
+            "columnNames": [
+              "property_key",
+              "origin",
+              "superseded_by_characterization_id",
+              "profile_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_optical_characterizations_property_key_origin_superseded_by_characterization_id_profile_id` ON `${TABLE_NAME}` (`property_key`, `origin`, `superseded_by_characterization_id`, `profile_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "filament_profiles",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "profile_id"
+            ],
+            "referencedColumns": [
+              "profile_id"
+            ]
+          },
+          {
+            "table": "evidence_references",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "evidence_id"
+            ],
+            "referencedColumns": [
+              "evidence_id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "full_spectrum_assessment_factors",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`assessment_id` TEXT NOT NULL, `factor_key` TEXT NOT NULL, `value_text` TEXT, `evidence_id` TEXT, `rationale` TEXT, PRIMARY KEY(`assessment_id`, `factor_key`), FOREIGN KEY(`assessment_id`) REFERENCES `full_spectrum_assessments`(`assessment_id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`evidence_id`) REFERENCES `evidence_references`(`evidence_id`) ON UPDATE NO ACTION ON DELETE RESTRICT )",
+        "fields": [
+          {
+            "fieldPath": "assessmentId",
+            "columnName": "assessment_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "factorKey",
+            "columnName": "factor_key",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "valueText",
+            "columnName": "value_text",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "evidenceId",
+            "columnName": "evidence_id",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "rationale",
+            "columnName": "rationale",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "assessment_id",
+            "factor_key"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_full_spectrum_assessment_factors_assessment_id",
+            "unique": false,
+            "columnNames": [
+              "assessment_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_full_spectrum_assessment_factors_assessment_id` ON `${TABLE_NAME}` (`assessment_id`)"
+          },
+          {
+            "name": "index_full_spectrum_assessment_factors_evidence_id",
+            "unique": false,
+            "columnNames": [
+              "evidence_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_full_spectrum_assessment_factors_evidence_id` ON `${TABLE_NAME}` (`evidence_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "full_spectrum_assessments",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "assessment_id"
+            ],
+            "referencedColumns": [
+              "assessment_id"
+            ]
+          },
+          {
+            "table": "evidence_references",
+            "onDelete": "RESTRICT",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "evidence_id"
+            ],
+            "referencedColumns": [
+              "evidence_id"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'be10532360033be9777be10972e766b8')"
+    ]
+  }
+}

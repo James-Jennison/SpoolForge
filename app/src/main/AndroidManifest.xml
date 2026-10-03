@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Only for the short-lived service that keeps the app unfrozen while ChatGPT sign-in is open in the browser. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-feature android:name="android.hardware.nfc" android:required="false" />
+    <application android:name=".FilamajigApplication" android:allowBackup="false" android:usesCleartextTraffic="true" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/Theme.FilamajigNfc">
+        <activity android:name=".MainActivity" android:exported="true" android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name=".ChatGptSignInService" android:exported="false" android:foregroundServiceType="shortService" />
+        <!-- Brings SpoolForge back to the front after ChatGPT sign-in finishes in the browser. Carries no data. -->
+        <activity android:name=".ChatGptReturnActivity" android:exported="true" android:noHistory="true" android:excludeFromRecents="true" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="spoolforge" android:host="chatgpt-signin" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

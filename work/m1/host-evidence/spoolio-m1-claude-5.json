@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-claude-5",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "claude",
+  "severity": "MEDIUM",
+  "category": "Recents / local-scope completion",
+  "summary": "Recents are written to the database but never displayed or otherwise surfaced, leaving the named requirement '...recents usable in UI' unmet at the source level, independent of the pending physical-device gate.",
+  "claim": "Recents are written to the database but never displayed or otherwise surfaced, leaving the named requirement '...recents usable in UI' unmet at the source level, independent of the pending physical-device gate.",
+  "evidence": {
+    "source": "MainViewModel.select() (MainViewModel.kt) calls `store.user.user().recent(Recent(...))` on every selection, but `UserDao.recents()` (data/Databases.kt) is never invoked or collected anywhere in MainViewModel.kt or MainActivity.kt, and there is no 'Recent' UI section/tab in the Compose tree.",
+    "response_sha256": "24d3990562d67e978414fe65adda6f7e9777b1af1f8ae914bef77ccc315c4478"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Add a Recents UI surface backed by `UserDao.recents()`.",
+  "suggested_validation": "Select several catalog/custom entries, open the Recents UI, and confirm they appear ordered by recency.",
+  "reviewer_confidence": "HIGH."
+}

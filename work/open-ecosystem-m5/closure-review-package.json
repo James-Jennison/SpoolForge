@@ -1,0 +1,79 @@
+{
+  "phase": "REMEDIATION_REVIEW",
+  "objective": "Verify the final M5 source and artifact after remediation. Determine whether any concrete source defect remains. Physical OpenTag3D/OpenPrintTag radio tests and a live Spoolman server test are separate external acceptance gates and are not claimed as passed.",
+  "change_id": "filamajig-open-ecosystem-m5-20260907",
+  "initial_cycle": "review-cycle-f3f38d19dea1",
+  "owner_requirements": [
+    "Read-first OpenTag3D/OpenPrintTag conversion with provenance and no external tag writing",
+    "Spoolman JSON import/export and profile-only sync",
+    "Preserve NFC write safety, AI scanner, local data, and no printer control"
+  ],
+  "remediation": [
+    "HTTP Spoolman URLs are accepted only for localhost, reserved .local names, and literal loopback/private/link-local IPv4/IPv6 addresses; single-label and other non-local names require HTTPS.",
+    "Unknown mutation outcomes now tell the user to run Sync again for stable-ID reconciliation.",
+    "A stateful test proves a lost filament-create response followed by a retry performs one POST total and updates the discovered stable-ID record without duplicate creation.",
+    "Final APK reinstall preservation now compares canonical ordered-row SHA-256 for every user database table, not counts alone; all tables are identical.",
+    "The UI and documentation already state that live sync excludes physical spool creation; physical spool data remains in import/export.",
+    "Single-label HTTP hostnames are rejected; only local address literals, localhost, and reserved .local names can use cleartext."
+  ],
+  "finding_dispositions": [
+    {
+      "finding": "Physical OpenTag3D/OpenPrintTag interoperability not run",
+      "classification": "CONFIRMED",
+      "result": "External hardware acceptance gate remains open because no formatted OpenTag3D or NFC-V OpenPrintTag tag was supplied. No hardware compatibility claim is made."
+    },
+    {
+      "finding": "Live Spoolman server not run",
+      "classification": "CONFIRMED",
+      "result": "External integration acceptance gate remains open because no server URL was supplied. Mock create, update, error, and reconciliation tests pass; no live-server claim is made."
+    },
+    {
+      "finding": "Unknown mutation may duplicate on retry",
+      "classification": "CONFIRMED WITH NARROWER SCOPE",
+      "result": "Stable external IDs already made user-initiated retry reconcilable. UI recovery wording and a no-duplicate lost-response retry test now make and verify that contract."
+    },
+    {
+      "finding": "Preservation evidence used counts only",
+      "classification": "CONFIRMED",
+      "result": "Resolved with canonical per-table ordered-content hashes for the final reinstall; every table is identical."
+    },
+    {
+      "finding": "Non-local cleartext Spoolman exposure",
+      "classification": "CONFIRMED",
+      "result": "Resolved by rejecting HTTP outside local address/name classes, with unit coverage."
+    },
+    {
+      "finding": "Physical spool live sync omission may confuse users",
+      "classification": "ALREADY MITIGATED",
+      "result": "Sync dialog and compatibility documentation explicitly say live sync does not create a physical spool; import/export retains physical spool quantities and IDs."
+    }
+  ],
+  "objective_evidence": {
+    "host": "16 Python, 61 core, 57 app tests; lint; app and Android-test APK assemblies all PASS",
+    "device": "All 6 installed instrumentation tests PASS on Motorola Razr 2023 Android API 36; external adapter conversion PASS",
+    "content_preservation": "All 10 user DB tables have identical canonical content hashes across final APK reinstall",
+    "visible_ui": "Final installed 0.5.0-m5 home UI visibly retains AI scanner and shows Spoolman JSON import",
+    "app_apk_sha256": "92ecb721b12ef0d55ef9b1df7f3073390dbb8eb154303a5369bfcce61a56c48b",
+    "test_apk_sha256": "4c1e2303da57e7db9d8625afe79c6392c05ef85b0dee321716a405fe9524df2c"
+  },
+  "review_files": [
+    "work/open-ecosystem-m5/m5-final-review.diff",
+    "work/open-ecosystem-m5/device-acceptance.json",
+    "work/open-ecosystem-m5/data-content-preservation.json",
+    "docs/OPEN_ECOSYSTEM_ADAPTERS.md"
+  ],
+  "known_open_external_gates": [
+    "No physical OpenTag3D-formatted tag was supplied",
+    "No physical NFC-V OpenPrintTag tag was supplied",
+    "No live Spoolman server URL was supplied"
+  ],
+  "sanitization": "No credentials, environment values, network addresses, tag UIDs, private database contents, or unrelated user data are included.",
+  "closure_question": "Does any concrete source, artifact, or evidence-consistency defect remain? The three unperformed external gates remain explicitly open and are not claimed.",
+  "prior_remediation_cycle": "review-cycle-a4905b2fb107",
+  "new_finding_disposition": {
+    "finding": "Single-label HTTP hostname may resolve outside the local network",
+    "classification": "CONFIRMED",
+    "result": "Resolved by removing the single-label exception. HTTP now permits only localhost, .local names, and literal loopback/private/link-local IPv4/IPv6 addresses; tests reject http://spoolman."
+  },
+  "evidence_correction": "Removed the obsolete review-package sentence permitting single-label LAN hostnames. Production code, tests, and docs already rejected them."
+}

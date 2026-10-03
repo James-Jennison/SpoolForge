@@ -1,0 +1,13 @@
+uuid: a25f253e-9f37-532e-97a6-44de441cd48a
+slug: tinmorry-rapid-pla-apple-green
+brand:
+  slug: tinmorry
+name: Rapid PLA Apple Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#bbdb4bff'
+tags:
+- industrially_compostable
+properties: {}

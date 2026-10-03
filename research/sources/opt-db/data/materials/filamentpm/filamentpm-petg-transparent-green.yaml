@@ -1,0 +1,21 @@
+uuid: 99611905-2eef-51fb-acc0-461ad6a6121b
+slug: filamentpm-petg-transparent-green
+brand:
+  slug: filamentpm
+name: PETG - Transparent Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#509e2fff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-petg-transparent-green/b10afed66841.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 80
+  max_bed_temperature: 90

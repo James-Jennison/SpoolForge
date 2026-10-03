@@ -1,0 +1,14 @@
+{
+  "uuid": "b53582a3-bd70-458d-9640-eacf7b9769de",
+  "id": "sunrise_pink_orange_yellow",
+  "name": "Sunrise (pink → orange → yellow)",
+  "color_hex": [
+    "#D85165",
+    "#FF7A33",
+    "#FADB24"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

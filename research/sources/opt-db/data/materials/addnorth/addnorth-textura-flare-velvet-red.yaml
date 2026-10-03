@@ -1,0 +1,20 @@
+uuid: 86878e62-dea1-5fe2-9315-a4ddc6fbc9c7
+slug: addnorth-textura-flare-velvet-red
+brand:
+  slug: addnorth
+name: Textura™ Flare Velvet Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#983b4eff'
+tags:
+  - glitter
+  - matte
+  - contains_organic_material
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-textura-flare-velvet-red/ee737438274f.png
+    type: unspecified
+properties:
+  min_print_temperature: 200
+  max_print_temperature: 220

@@ -1,0 +1,14 @@
+uuid: 468312ce-6992-52e7-8a9f-c75185421e41
+slug: print-with-smile-rec-pla-just-brown
+brand:
+  slug: print-with-smile
+name: REC-PLA Just BROWN
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#be6730ff'
+tags:
+- recycled
+- industrially_compostable
+properties: {}

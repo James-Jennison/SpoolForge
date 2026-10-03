@@ -1,0 +1,28 @@
+uuid: 02504b6a-7909-55c3-af1b-0c046eb1cd8b
+slug: amolen-pla-silk-triple-color-blue-purple-orange
+brand:
+  slug: amolen
+name: PLA Silk Triple Color Blue Purple Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://www.amolen.com/products/pla-silk-triple
+secondary_colors:
+- color_rgba: '#e96a43ff'
+- color_rgba: '#d200a5ff'
+- color_rgba: '#4921c1ff'
+tags:
+- silk
+- coextruded
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-silk-triple-color-blue-purple-orange/SKU-28-B-silkTri-ColorsBluePurpleOrange.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

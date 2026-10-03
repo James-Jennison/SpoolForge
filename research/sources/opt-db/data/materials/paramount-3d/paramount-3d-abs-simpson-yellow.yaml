@@ -1,0 +1,13 @@
+uuid: a65a83ab-2b9b-57d3-aa9c-2b3e7d6803b1
+slug: paramount-3d-abs-simpson-yellow
+brand:
+  slug: paramount-3d
+name: ABS (Simpson Yellow)
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#fadb24ff'
+tags:
+- filtration_recommended
+properties: {}

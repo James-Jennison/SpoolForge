@@ -1,0 +1,16 @@
+uuid: 54a58f7f-7ad0-5e51-aaeb-5a793e51e386
+slug: overture-silk-pla-copper-shore
+brand:
+  slug: overture
+name: Silk PLA Copper Shore
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#af784dff'
+- color_rgba: '#0085caff'
+tags:
+- silk
+- gradual_color_change
+- industrially_compostable
+properties: {}

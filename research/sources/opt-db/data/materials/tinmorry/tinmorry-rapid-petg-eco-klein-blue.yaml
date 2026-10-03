@@ -1,0 +1,11 @@
+uuid: ce093935-1371-59e6-adf6-f40b21f20770
+slug: tinmorry-rapid-petg-eco-klein-blue
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Klein Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0378d0ff'
+properties: {}

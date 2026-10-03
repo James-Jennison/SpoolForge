@@ -1,0 +1,2739 @@
+{
+  "version": 1,
+  "case_count": 6,
+  "run_count": 30,
+  "missing_runs": [],
+  "runs": [
+    {
+      "case": "panchroma-starlight-purple-red",
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "result": "panchroma-terra-v2-smoke.json",
+      "legacy_result_format": true,
+      "score": {
+        "exact_fields": 13,
+        "exact_fields_total": 13,
+        "product_terms": 4,
+        "product_terms_total": 6,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "Panchroma",
+            "actual": "Panchroma"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Starlight Purple-Red",
+            "actual": "Starlight Purple-Red"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": "6938936717461",
+            "actual": "6938936717461"
+          },
+          "sku": {
+            "pass": true,
+            "expected": "CA09019",
+            "actual": "CA09019"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X004QSH4ZH",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "marketplace identifier"
+          }
+        ]
+      }
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "provider": "xai",
+      "model": "grok-4.6",
+      "result": "panchroma-grok-4.6-v2-smoke.json",
+      "legacy_result_format": true,
+      "score": {
+        "exact_fields": 13,
+        "exact_fields_total": 13,
+        "product_terms": 6,
+        "product_terms_total": 6,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "Panchroma",
+            "actual": "Panchroma"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Starlight Purple-Red",
+            "actual": "Starlight Purple-Red"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": "6938936717461",
+            "actual": "6938936717461"
+          },
+          "sku": {
+            "pass": true,
+            "expected": "CA09019",
+            "actual": "CA09019"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X004QSH4ZH",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "marketplace_identifier"
+          }
+        ]
+      }
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "result": "panchroma-gemini-3.8-flash-v2-smoke.json",
+      "legacy_result_format": true,
+      "score": {
+        "exact_fields": 13,
+        "exact_fields_total": 13,
+        "product_terms": 3,
+        "product_terms_total": 6,
+        "identifier_kinds": 1,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "Panchroma",
+            "actual": "Panchroma"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Starlight Purple-Red",
+            "actual": "Starlight Purple-Red"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": "6938936717461",
+            "actual": "6938936717461"
+          },
+          "sku": {
+            "pass": true,
+            "expected": "CA09019",
+            "actual": "CA09019"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X004QSH4ZH",
+            "present": true,
+            "kind_pass": true,
+            "actual_kind": "FNSKU"
+          }
+        ]
+      }
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "result": "panchroma-sol-v2-smoke.json",
+      "legacy_result_format": true,
+      "score": {
+        "exact_fields": 13,
+        "exact_fields_total": 13,
+        "product_terms": 6,
+        "product_terms_total": 6,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "Panchroma",
+            "actual": "Panchroma"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Starlight Purple-Red",
+            "actual": "Starlight Purple-Red"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": "6938936717461",
+            "actual": "6938936717461"
+          },
+          "sku": {
+            "pass": true,
+            "expected": "CA09019",
+            "actual": "CA09019"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X004QSH4ZH",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "marketplace/barcode identifier"
+          }
+        ]
+      }
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "provider": "claude",
+      "model": "claude-sonnet-5",
+      "result": "panchroma-claude-sonnet-5-v2-smoke.json",
+      "legacy_result_format": true,
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 13,
+        "product_terms": 5,
+        "product_terms_total": 6,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "Panchroma",
+            "actual": "Panchroma"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": false,
+            "expected": "Starlight Purple-Red",
+            "actual": "Purple-Red"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": "6938936717461",
+            "actual": "6938936717461"
+          },
+          "sku": {
+            "pass": true,
+            "expected": "CA09019",
+            "actual": "CA09019"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X004QSH4ZH",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "marketplace_id_partial"
+          }
+        ]
+      }
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "result": "results/gizmo-dorks-hips-white--gpt-5.6-terra.json",
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 12,
+        "product_terms": 2,
+        "product_terms_total": 2,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 0,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "Gizmo Dorks",
+            "actual": "GIZMO DORKS"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "HIPS",
+            "actual": "HIPS"
+          },
+          "color": {
+            "pass": true,
+            "expected": "White",
+            "actual": "White"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": "887503120752",
+            "actual": "887503120752"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": []
+      }
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "provider": "xai",
+      "model": "grok-4.6",
+      "result": "results/gizmo-dorks-hips-white--grok-4.6.json",
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 12,
+        "product_terms": 2,
+        "product_terms_total": 2,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 0,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "Gizmo Dorks",
+            "actual": "GIZMO DORKS"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "HIPS",
+            "actual": "HIPS"
+          },
+          "color": {
+            "pass": true,
+            "expected": "White",
+            "actual": "WHITE"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": "887503120752",
+            "actual": "887503120752"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": []
+      }
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "result": "results/gizmo-dorks-hips-white--gemini-3.8-flash.json",
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 12,
+        "product_terms": 0,
+        "product_terms_total": 2,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 0,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "Gizmo Dorks",
+            "actual": "GIZMO DORKS"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "HIPS",
+            "actual": "HIPS"
+          },
+          "color": {
+            "pass": true,
+            "expected": "White",
+            "actual": "WHITE"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": "887503120752",
+            "actual": "887503120752"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": []
+      }
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "result": "results/gizmo-dorks-hips-white--gpt-5.6-sol.json",
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 12,
+        "product_terms": 2,
+        "product_terms_total": 2,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 0,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "Gizmo Dorks",
+            "actual": "GIZMO DORKS"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "HIPS",
+            "actual": "HIPS"
+          },
+          "color": {
+            "pass": true,
+            "expected": "White",
+            "actual": "WHITE"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": "887503120752",
+            "actual": "887503120752"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": []
+      }
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "provider": "claude",
+      "model": "claude-sonnet-5",
+      "result": "results/gizmo-dorks-hips-white--claude-sonnet-5.json",
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 12,
+        "product_terms": 2,
+        "product_terms_total": 2,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 0,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "Gizmo Dorks",
+            "actual": "Gizmo Dorks"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "HIPS",
+            "actual": "HIPS"
+          },
+          "color": {
+            "pass": true,
+            "expected": "White",
+            "actual": "White"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": "887503120752",
+            "actual": "887503120752"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": []
+      }
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "result": "results/kingroon-petg-basic-gray--gpt-5.6-terra.json",
+      "score": {
+        "exact_fields": 13,
+        "exact_fields_total": 13,
+        "product_terms": 2,
+        "product_terms_total": 2,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "KINGROON 3D",
+            "actual": "KINGROON 3D"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "PETG",
+            "actual": "PETG"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Gray",
+            "actual": "Gray"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": 230,
+            "actual": 230
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": 250,
+            "actual": 250
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": 70,
+            "actual": 70
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": 90,
+            "actual": 90
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": "HC098",
+            "actual": "HC098"
+          },
+          "lot": {
+            "pass": true,
+            "expected": "0403-4",
+            "actual": "0403-4"
+          }
+        },
+        "code_checks": [
+          {
+            "value": "https://qr12.cn/CRDd80",
+            "present": false,
+            "kind_pass": false,
+            "actual_kind": null
+          }
+        ]
+      }
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "provider": "xai",
+      "model": "grok-4.6",
+      "result": "results/kingroon-petg-basic-gray--grok-4.6.json",
+      "score": {
+        "exact_fields": 11,
+        "exact_fields_total": 13,
+        "product_terms": 2,
+        "product_terms_total": 2,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "manufacturer"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "KINGROON 3D",
+            "actual": "KINGROON 3D"
+          },
+          "manufacturer": {
+            "pass": false,
+            "expected": null,
+            "actual": "KINGROON 3D"
+          },
+          "material": {
+            "pass": false,
+            "expected": "PETG",
+            "actual": "PETG Basic"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Gray",
+            "actual": "Gray"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": 230,
+            "actual": 230
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": 250,
+            "actual": 250
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": 70,
+            "actual": 70
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": 90,
+            "actual": 90
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": "HC098",
+            "actual": "HC098"
+          },
+          "lot": {
+            "pass": true,
+            "expected": "0403-4",
+            "actual": "0403-4"
+          }
+        },
+        "code_checks": [
+          {
+            "value": "https://qr12.cn/CRDd80",
+            "present": false,
+            "kind_pass": false,
+            "actual_kind": null
+          }
+        ]
+      }
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "result": "results/kingroon-petg-basic-gray--gpt-5.6-sol.json",
+      "score": {
+        "exact_fields": 11,
+        "exact_fields_total": 13,
+        "product_terms": 0,
+        "product_terms_total": 2,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "KINGROON 3D",
+            "actual": "KINGROON 3D"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": false,
+            "expected": "PETG",
+            "actual": "PETG Basic"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Gray",
+            "actual": "Gray"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": 230,
+            "actual": 230
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": 250,
+            "actual": 250
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": 70,
+            "actual": 70
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": 90,
+            "actual": 90
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": "HC098",
+            "actual": "HC098"
+          },
+          "lot": {
+            "pass": false,
+            "expected": "0403-4",
+            "actual": "04034"
+          }
+        },
+        "code_checks": [
+          {
+            "value": "https://qr12.cn/CRDd80",
+            "present": false,
+            "kind_pass": false,
+            "actual_kind": null
+          }
+        ]
+      }
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "result": "results/anycubic-pla-magenta--gpt-5.6-terra.json",
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 13,
+        "product_terms": 1,
+        "product_terms_total": 1,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "manufacturer"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "ANYCUBIC",
+            "actual": "ANYCUBIC"
+          },
+          "manufacturer": {
+            "pass": false,
+            "expected": null,
+            "actual": "ANYCUBIC"
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Magenta",
+            "actual": "Magenta"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": 190,
+            "actual": 190
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": 230,
+            "actual": 230
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": "AHPLMG-107",
+            "actual": "AHPLMG-107"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X004LDC21N",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "marketplace identifier"
+          }
+        ]
+      }
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "result": "results/anycubic-pla-magenta--gpt-5.6-sol.json",
+      "score": {
+        "exact_fields": 13,
+        "exact_fields_total": 13,
+        "product_terms": 1,
+        "product_terms_total": 1,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "ANYCUBIC",
+            "actual": "ANYCUBIC"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Magenta",
+            "actual": "Magenta"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": 190,
+            "actual": 190
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": 230,
+            "actual": 230
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": "AHPLMG-107",
+            "actual": "AHPLMG-107"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X004LDC21N",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "marketplace identifier"
+          }
+        ]
+      }
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "result": "results/3dhojor-fire-engine-red--gpt-5.6-terra.json",
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 13,
+        "product_terms": 8,
+        "product_terms_total": 8,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": false,
+            "expected": "3DHoJor",
+            "actual": "New"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "color": {
+            "pass": true,
+            "expected": "Fire Engine Red",
+            "actual": "Fire Engine Red"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X00444MZE3",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "barcode-associated identifier"
+          }
+        ]
+      }
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "result": "results/3dhojor-fire-engine-red--gpt-5.6-sol.json",
+      "score": {
+        "exact_fields": 11,
+        "exact_fields_total": 13,
+        "product_terms": 7,
+        "product_terms_total": 8,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "sku"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": false,
+            "expected": "3DHoJor",
+            "actual": "Zew"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "color": {
+            "pass": true,
+            "expected": "Fire Engine Red",
+            "actual": "Fire Engine Red"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": false,
+            "expected": null,
+            "actual": "X004444MZE3"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X00444MZE3",
+            "present": false,
+            "kind_pass": false,
+            "actual_kind": null
+          }
+        ]
+      }
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "result": "results/flashforge-pla-city-hide-layer-line--gpt-5.6-terra.json",
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 13,
+        "product_terms": 6,
+        "product_terms_total": 6,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "sku"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "FLASHFORGE",
+            "actual": "FLASHFORGE"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": false,
+            "expected": null,
+            "actual": "X0037RJ695"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X0037RJ695",
+            "present": false,
+            "kind_pass": false,
+            "actual_kind": null
+          }
+        ]
+      }
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "result": "results/flashforge-pla-city-hide-layer-line--gpt-5.6-sol.json",
+      "score": {
+        "exact_fields": 11,
+        "exact_fields_total": 13,
+        "product_terms": 2,
+        "product_terms_total": 6,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "manufacturer",
+          "color"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "FLASHFORGE",
+            "actual": "FLASHFORGE"
+          },
+          "manufacturer": {
+            "pass": false,
+            "expected": null,
+            "actual": "FLASHFORGE"
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": false,
+            "expected": null,
+            "actual": "City Hide The Layer Line"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X0037RJ695",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "barcode-associated marketplace identifier"
+          }
+        ]
+      }
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "provider": "xai",
+      "model": "grok-4.6",
+      "result": "results/anycubic-pla-magenta--grok-4.6.json",
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 13,
+        "product_terms": 1,
+        "product_terms_total": 1,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "manufacturer"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "ANYCUBIC",
+            "actual": "ANYCUBIC"
+          },
+          "manufacturer": {
+            "pass": false,
+            "expected": null,
+            "actual": "ANYCUBIC"
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Magenta",
+            "actual": "Magenta"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": 190,
+            "actual": 190
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": 230,
+            "actual": 230
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": "AHPLMG-107",
+            "actual": "AHPLMG-107"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X004LDC21N",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "marketplace_asin"
+          }
+        ]
+      }
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "provider": "xai",
+      "model": "grok-4.6",
+      "result": "results/3dhojor-fire-engine-red--grok-4.6.json",
+      "score": {
+        "exact_fields": 11,
+        "exact_fields_total": 13,
+        "product_terms": 8,
+        "product_terms_total": 8,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "sku"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": false,
+            "expected": "3DHoJor",
+            "actual": "3DHeIor"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "color": {
+            "pass": true,
+            "expected": "Fire Engine Red",
+            "actual": "Fire Engine Red"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": false,
+            "expected": null,
+            "actual": "X00444MZE3"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X00444MZE3",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "asin"
+          }
+        ]
+      }
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "provider": "xai",
+      "model": "grok-4.6",
+      "result": "results/flashforge-pla-city-hide-layer-line--grok-4.6.json",
+      "score": {
+        "exact_fields": 11,
+        "exact_fields_total": 13,
+        "product_terms": 6,
+        "product_terms_total": 6,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "manufacturer",
+          "sku"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "FLASHFORGE",
+            "actual": "FLASHFORGE"
+          },
+          "manufacturer": {
+            "pass": false,
+            "expected": null,
+            "actual": "FLASHFORGE"
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": false,
+            "expected": null,
+            "actual": "X0037RJ695"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X0037RJ695",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "marketplace_asin"
+          }
+        ]
+      }
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "provider": "claude",
+      "model": "claude-sonnet-5",
+      "result": "results/kingroon-petg-basic-gray--claude-sonnet-5.json",
+      "score": {
+        "exact_fields": 11,
+        "exact_fields_total": 13,
+        "product_terms": 0,
+        "product_terms_total": 2,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "manufacturer"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "KINGROON 3D",
+            "actual": "KINGROON 3D"
+          },
+          "manufacturer": {
+            "pass": false,
+            "expected": null,
+            "actual": "KINGROON 3D"
+          },
+          "material": {
+            "pass": false,
+            "expected": "PETG",
+            "actual": "PETG Basic"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Gray",
+            "actual": "Gray"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": 230,
+            "actual": 230
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": 250,
+            "actual": 250
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": 70,
+            "actual": 70
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": 90,
+            "actual": 90
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": "HC098",
+            "actual": "HC098"
+          },
+          "lot": {
+            "pass": true,
+            "expected": "0403-4",
+            "actual": "0403-4"
+          }
+        },
+        "code_checks": [
+          {
+            "value": "https://qr12.cn/CRDd80",
+            "present": false,
+            "kind_pass": false,
+            "actual_kind": null
+          }
+        ]
+      }
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "provider": "claude",
+      "model": "claude-sonnet-5",
+      "result": "results/anycubic-pla-magenta--claude-sonnet-5.json",
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 13,
+        "product_terms": 1,
+        "product_terms_total": 1,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "manufacturer"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "ANYCUBIC",
+            "actual": "ANYCUBIC"
+          },
+          "manufacturer": {
+            "pass": false,
+            "expected": null,
+            "actual": "ANYCUBIC"
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Magenta",
+            "actual": "Magenta"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": 190,
+            "actual": 190
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": 230,
+            "actual": 230
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": "AHPLMG-107",
+            "actual": "AHPLMG-107"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X004LDC21N",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "marketplace_identifier"
+          }
+        ]
+      }
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "provider": "claude",
+      "model": "claude-sonnet-5",
+      "result": "results/3dhojor-fire-engine-red--claude-sonnet-5.json",
+      "score": {
+        "exact_fields": 13,
+        "exact_fields_total": 13,
+        "product_terms": 3,
+        "product_terms_total": 8,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "3DHoJor",
+            "actual": "3DHoJor"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "color": {
+            "pass": true,
+            "expected": "Fire Engine Red",
+            "actual": "Fire Engine Red"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X00444MZE3",
+            "present": false,
+            "kind_pass": false,
+            "actual_kind": null
+          }
+        ]
+      }
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "provider": "claude",
+      "model": "claude-sonnet-5",
+      "result": "results/flashforge-pla-city-hide-layer-line--claude-sonnet-5.json",
+      "score": {
+        "exact_fields": 11,
+        "exact_fields_total": 13,
+        "product_terms": 2,
+        "product_terms_total": 6,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "manufacturer",
+          "sku"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "FLASHFORGE",
+            "actual": "FlashForge"
+          },
+          "manufacturer": {
+            "pass": false,
+            "expected": null,
+            "actual": "FlashForge"
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": false,
+            "expected": null,
+            "actual": "X0037RJ695"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X0037RJ695",
+            "present": true,
+            "kind_pass": false,
+            "actual_kind": "marketplace_identifier"
+          }
+        ]
+      }
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "result": "results/kingroon-petg-basic-gray--gemini-3.8-flash.json",
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 13,
+        "product_terms": 2,
+        "product_terms_total": 2,
+        "identifier_kinds": 0,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "manufacturer"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "KINGROON 3D",
+            "actual": "KINGROON 3D"
+          },
+          "manufacturer": {
+            "pass": false,
+            "expected": null,
+            "actual": "KINGROON 3D"
+          },
+          "material": {
+            "pass": true,
+            "expected": "PETG",
+            "actual": "PETG"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Gray",
+            "actual": "Gray"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": 230,
+            "actual": 230
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": 250,
+            "actual": 250
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": 70,
+            "actual": 70
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": 90,
+            "actual": 90
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": "HC098",
+            "actual": "HC098"
+          },
+          "lot": {
+            "pass": true,
+            "expected": "0403-4",
+            "actual": "0403-4"
+          }
+        },
+        "code_checks": [
+          {
+            "value": "https://qr12.cn/CRDd80",
+            "present": false,
+            "kind_pass": false,
+            "actual_kind": null
+          }
+        ]
+      }
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "result": "results/anycubic-pla-magenta--gemini-3.8-flash.json",
+      "score": {
+        "exact_fields": 12,
+        "exact_fields_total": 13,
+        "product_terms": 0,
+        "product_terms_total": 1,
+        "identifier_kinds": 1,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [
+          "manufacturer"
+        ],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "ANYCUBIC",
+            "actual": "ANYCUBIC"
+          },
+          "manufacturer": {
+            "pass": false,
+            "expected": null,
+            "actual": "ANYCUBIC"
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": "Magenta",
+            "actual": "Magenta"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": 1.75,
+            "actual": 1.75
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": 1000,
+            "actual": 1000
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": 190,
+            "actual": 190
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": 230,
+            "actual": 230
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": "AHPLMG-107",
+            "actual": "AHPLMG-107"
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X004LDC21N",
+            "present": true,
+            "kind_pass": true,
+            "actual_kind": "FNSKU"
+          }
+        ]
+      }
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "result": "results/3dhojor-fire-engine-red--gemini-3.8-flash.json",
+      "score": {
+        "exact_fields": 13,
+        "exact_fields_total": 13,
+        "product_terms": 3,
+        "product_terms_total": 8,
+        "identifier_kinds": 1,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "3DHoJor",
+            "actual": "3DHoJor"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "color": {
+            "pass": true,
+            "expected": "Fire Engine Red",
+            "actual": "Fire Engine Red"
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X00444MZE3",
+            "present": true,
+            "kind_pass": true,
+            "actual_kind": "FNSKU"
+          }
+        ]
+      }
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "result": "results/flashforge-pla-city-hide-layer-line--gemini-3.8-flash.json",
+      "score": {
+        "exact_fields": 13,
+        "exact_fields_total": 13,
+        "product_terms": 0,
+        "product_terms_total": 6,
+        "identifier_kinds": 1,
+        "identifier_kinds_total": 1,
+        "unsupported_non_null": [],
+        "field_checks": {
+          "label_brand": {
+            "pass": true,
+            "expected": "FLASHFORGE",
+            "actual": "FLASHFORGE"
+          },
+          "manufacturer": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "material": {
+            "pass": true,
+            "expected": "PLA",
+            "actual": "PLA"
+          },
+          "color": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "diameter_mm": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "net_weight_g": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "nozzle_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_min_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "bed_max_c": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "gtin": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "sku": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          },
+          "lot": {
+            "pass": true,
+            "expected": null,
+            "actual": null
+          }
+        },
+        "code_checks": [
+          {
+            "value": "X0037RJ695",
+            "present": true,
+            "kind_pass": true,
+            "actual_kind": "FNSKU"
+          }
+        ]
+      }
+    }
+  ],
+  "models": {
+    "gpt-5.6-terra": {
+      "provider": "openai",
+      "cases": 6,
+      "exact_fields": 74,
+      "exact_fields_total": 77,
+      "product_terms": 23,
+      "product_terms_total": 25,
+      "identifier_kinds": 0,
+      "identifier_kinds_total": 5,
+      "unsupported_non_null": 2
+    },
+    "grok-4.6": {
+      "provider": "xai",
+      "cases": 6,
+      "exact_fields": 70,
+      "exact_fields_total": 77,
+      "product_terms": 25,
+      "product_terms_total": 25,
+      "identifier_kinds": 0,
+      "identifier_kinds_total": 5,
+      "unsupported_non_null": 5
+    },
+    "gemini-3.8-flash": {
+      "provider": "gemini",
+      "cases": 6,
+      "exact_fields": 75,
+      "exact_fields_total": 77,
+      "product_terms": 8,
+      "product_terms_total": 25,
+      "identifier_kinds": 4,
+      "identifier_kinds_total": 5,
+      "unsupported_non_null": 2
+    },
+    "gpt-5.6-sol": {
+      "provider": "openai",
+      "cases": 6,
+      "exact_fields": 71,
+      "exact_fields_total": 77,
+      "product_terms": 18,
+      "product_terms_total": 25,
+      "identifier_kinds": 0,
+      "identifier_kinds_total": 5,
+      "unsupported_non_null": 3
+    },
+    "claude-sonnet-5": {
+      "provider": "claude",
+      "cases": 6,
+      "exact_fields": 71,
+      "exact_fields_total": 77,
+      "product_terms": 13,
+      "product_terms_total": 25,
+      "identifier_kinds": 0,
+      "identifier_kinds_total": 5,
+      "unsupported_non_null": 4
+    }
+  }
+}

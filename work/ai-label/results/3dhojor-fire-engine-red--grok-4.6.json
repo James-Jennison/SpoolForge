@@ -1,0 +1,123 @@
+{
+  "provider": "xai",
+  "model": "grok-4.6",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 4024,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 1066,
+    "output_tokens_details": {
+      "reasoning_tokens": 547
+    },
+    "total_tokens": 5090,
+    "num_sources_used": 0,
+    "num_server_side_tools_used": 0,
+    "cost_in_usd_ticks": 144440000,
+    "context_details": {
+      "input_tokens": 4024,
+      "output_tokens": 1066
+    }
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "3DHeIor",
+      "confidence": 0.86,
+      "evidence": "Printed at the start of the white label title: 3DHeIor 3D Printing Filament",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": null,
+      "confidence": 0.88,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "product": {
+      "value": "3DHeIor 3D Printing Filament D FDM Printer-Fire Engine Red",
+      "confidence": 0.78,
+      "evidence": "White sticker title text: 3DHeIor 3D Printing Filament ... D FDM Printer-Fire Engine Red",
+      "basis": "printed"
+    },
+    "material": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "color": {
+      "value": "Fire Engine Red",
+      "confidence": 0.92,
+      "evidence": "Printed on the white label as Fire Engine Red; red filament visible in the window",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "net_weight_g": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 0.95,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 0.95,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 0.95,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 0.95,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.82,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "sku": {
+      "value": "X00444MZE3",
+      "confidence": 0.93,
+      "evidence": "Human-readable code printed beside the barcode on the white label",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [
+      {
+        "value": "X00444MZE3",
+        "kind": "asin",
+        "evidence": "Printed next to the barcode; Amazon-style marketplace identifier"
+      }
+    ],
+    "needs_user_review": [
+      "label_brand",
+      "product",
+      "gtin",
+      "material",
+      "diameter_mm"
+    ]
+  }
+}

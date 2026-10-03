@@ -1,0 +1,13 @@
+uuid: 6d630bc2-5623-5fb9-8cfe-ca2760e67ef1
+slug: matter3d-inc-basics-series-pla-grape-drink-purple
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA Grape Drink Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#800080ff'
+tags:
+- industrially_compostable
+properties: {}

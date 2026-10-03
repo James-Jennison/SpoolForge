@@ -1,0 +1,18 @@
+uuid: 4653fe9e-06da-5ad5-b34a-5bba9cc20bcb
+slug: winkle-pla-silk-tricolor-dubai-chocolate
+brand:
+  slug: winkle
+name: PLA Silk Tricolor Dubai Chocolate
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#26a648ff'
+- color_rgba: '#f6c500ff'
+- color_rgba: '#a45b27ff'
+tags:
+- silk
+- coextruded
+- industrially_compostable
+properties:
+  density: 1.24

@@ -1,0 +1,13 @@
+{
+  "uuid": "dd051dcf-87c3-4463-9066-5283762d30b4",
+  "id": "techno_fuchsia_blue",
+  "name": "Techno (Fuchsia / Blue)",
+  "color_hex": [
+    "#0066D9",
+    "#F300EA"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

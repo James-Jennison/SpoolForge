@@ -1,0 +1,18 @@
+uuid: 88e2713c-b3ba-554b-b359-1739fb8914ae
+slug: stronghero3d-pla-high-speed-red
+brand:
+  slug: stronghero3d
+name: PLA High Speed Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#bf1d2dff'
+tags:
+- silk
+- high_speed
+- industrially_compostable
+properties: {}
+photos:
+- url: https://files.openprinttag.org/stronghero3d/stronghero3d-pla-high-speed-red/stronghero3d-pla-high-speed-red-0-78956736.jpg
+  type: unspecified

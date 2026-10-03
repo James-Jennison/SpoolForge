@@ -1,0 +1,15 @@
+uuid: b0ce4363-5704-550c-88b0-096c09f2a506
+slug: winkle-pla-high-speed-devil-red
+brand:
+  slug: winkle
+name: PLA High Speed Devil Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#bb2e33ff'
+tags:
+- high_speed
+- industrially_compostable
+properties:
+  density: 1.24

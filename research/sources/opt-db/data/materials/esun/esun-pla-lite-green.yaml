@@ -1,0 +1,22 @@
+uuid: 3fb7e5d8-4e53-5d8b-b753-e410f5769c82
+slug: esun-pla-lite-green
+brand:
+  slug: esun
+name: PLA Lite Green
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://esun3dstoreeu.com/products/epla-lite?VariantsId=12172
+primary_color:
+  color_rgba: '#2e5448ff'
+tags:
+  - industrially_compostable
+properties:
+  density: 1.23
+  min_print_temperature: 220
+  max_print_temperature: 250
+  min_bed_temperature: 45
+  max_bed_temperature: 60
+photos:
+  - url: https://files.openprinttag.org/esun/esun-pla-lite-green/esun-pla-lite-green-0-4a634c6b.jpg
+    type: unspecified

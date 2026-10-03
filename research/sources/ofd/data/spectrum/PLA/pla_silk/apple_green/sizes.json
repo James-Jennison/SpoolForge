@@ -1,0 +1,40 @@
+[
+  {
+    "uuid": "310cf64d-0f95-49aa-b655-4204b30c25a2",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5905991403753",
+    "article_number": "81308",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1886-Filament-Spectrum-ReFill-PLA-SILK-1-75mm-APPLE-GREEN-1kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "7c4011d3-6405-46e7-bbc7-fd23efbb135a",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "article_number": "80511",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1298-Filament-Spectrum-SILK-PLA-1-75mm-APPLE-GREEN-1kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "8d48a48a-6cca-4600-8f5d-fdf13875e93b",
+    "filament_weight": 250,
+    "diameter": 1.75,
+    "ean": "5903175655462",
+    "article_number": "80750",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1542-Filament-Spectrum-5PACK-PLA-SILK-1-75mm-5x-0-25kg.html"
+      }
+    ]
+  }
+]

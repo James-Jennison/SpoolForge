@@ -1,0 +1,17 @@
+{
+  "finding_id": "spoolio-m1-closure-claude-2",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8531a942e791",
+  "reviewer": "claude",
+  "severity": "MEDIUM",
+  "category": "Catalog load performance (on-device, measured)",
+  "summary": "Unchanged: the real-device measured ~2.1s per-launch full-catalog integrity recompute remains with no acceptance threshold set.",
+  "claim": "Same unresolved, now-quantified startup cost tradeoff.",
+  "evidence": {
+    "source": "Identical `device.ensure_existing_catalog_ms: 2096.715208` and identical dispositions text acknowledging no cold-start target.",
+    "response_sha256": "c7030a186661ce81c2b1dfdb22aea7bb623d554953ba7e0d64102b6162b2da39"
+  },
+  "suggested_remediation": "As previously stated: establish a budget and optimize if exceeded.",
+  "suggested_validation": "As previously stated.",
+  "reviewer_confidence": "HIGH"
+}

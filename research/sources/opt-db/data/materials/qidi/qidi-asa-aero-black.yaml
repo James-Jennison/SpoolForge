@@ -1,0 +1,17 @@
+uuid: b4e6fd95-6a92-54be-876f-bc1a3827a418
+slug: qidi-asa-aero-black
+brand:
+  slug: qidi
+name: ASA-Aero Black
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- foaming
+- filtration_recommended
+properties: {}
+photos:
+- url: https://files.openprinttag.org/qidi/qidi-asa-aero-black/qidi-asa-aero-black-0-19a924b5.jpg
+  type: unspecified

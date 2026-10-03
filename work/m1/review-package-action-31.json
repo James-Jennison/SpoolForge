@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "change_id": "spoolio-m1-20260906",
+  "review_type": "targeted-remediation",
+  "objective": "Verify remediation of the completed initial M1 review without treating source-only evidence as physical NFC acceptance.",
+  "owner_requirements": [
+    "Offline vendor-neutral Android app with no Internet permission",
+    "OFD catalog identity and provenance survive local edits and catalog replacement",
+    "Custom and decoded records retain understood temperatures and do not fabricate missing facts",
+    "Recents remain usable after source catalog removal",
+    "Write intent is immutable; ambiguous existing tag data is never silently discarded",
+    "Interrupted or uncertain writes remain UNKNOWN with read-only reconciliation and no automatic retry",
+    "Only Motorola Razr 2023 via wireless ADB may be used for runtime acceptance"
+  ],
+  "prior_cycle": "review-cycle-38636c32948d",
+  "source_digest_sha256": "7c948f3367378f385ac8f27dce4668fd498c0ee50fb3575eff42d6807667d86a",
+  "source_digest_basis": "SHA-256 of work/m1/source-SHA256SUMS; every listed entry was reverified against the final source before handoff",
+  "changed_source": [
+    "app/src/main/kotlin/net/jamesjennison/spoolio/data/Databases.kt",
+    "app/src/main/kotlin/net/jamesjennison/spoolio/MainViewModel.kt",
+    "app/src/main/kotlin/net/jamesjennison/spoolio/MainActivity.kt",
+    "app/src/main/kotlin/net/jamesjennison/spoolio/NfcCoordinator.kt",
+    "core/src/main/kotlin/net/jamesjennison/spoolio/core/Filament.kt",
+    "core/src/main/kotlin/net/jamesjennison/spoolio/core/OpenSpoolCodec.kt",
+    "core/src/main/kotlin/net/jamesjennison/spoolio/core/WriteStateMachine.kt",
+    "core/src/test/kotlin/net/jamesjennison/spoolio/core/OpenSpoolCodecTest.kt",
+    "core/src/test/kotlin/net/jamesjennison/spoolio/core/WriteStateMachineTest.kt",
+    "catalog-tool/src/main/kotlin/net/jamesjennison/spoolio/catalog/CatalogTool.kt",
+    "app/build.gradle.kts"
+  ],
+  "remediation_summary": [
+    "UserDatabase v2 adds a non-destructive v1 migration for temperature values, retained catalog identifiers/colors, record provenance, and per-field sources.",
+    "Catalog edits persist under a stable edited:<original package ID> key with an original-package link. Unchanged field sources remain OFD and changed values become Edited locally.",
+    "Decoded tag seeds retain nozzle, bed, diameter, weight, and additional colors. Product and color-name labels may remain blank; missing diameter or mass blocks write preparation rather than being fabricated.",
+    "Recent snapshots now contain complete understood record values, sources, identifiers, temperatures, and colors and are selectable in the UI.",
+    "CatalogDatabase v2 stores generation metadata and recomputes a deterministic digest across every persisted row before trusting a same-count catalog.",
+    "The generator handles string and array color_hex forms, retains all secondary colors, and maps sizes.article_number explicitly.",
+    "The NFC coordinator rejects multiple records and non-OpenSpool existing content before write, preserves UNKNOWN across reconciliation I/O failures, and provides an explicit durable unresolved archive before a new operation.",
+    "UNKNOWN no longer exposes a no-op Cancel action. The UI uses compact profile labels, non-colliding detail rows, human field names, a light status bar, global NFC status, and selectable recents.",
+    "The coordinator executor is shut down from MainViewModel.onCleared()."
+  ],
+  "worker_evidence": {
+    "core_catalog_compilation": "PASS using cached Kotlin compiler, no Gradle bypass",
+    "core_tests": "PASS 23 tests through JUnit 4",
+    "diff_check": "PASS",
+    "catalog_packages": 22347,
+    "catalog_asset_sha256": "231a05698811fbbedbce91f6b18e193957102ac94f612a151702e1e853af8965",
+    "catalog_content_sha256": "989ca922284fb0fba1e45bae83e4a70e8356da68a8556b9ee96400c8d5dfefd8",
+    "catalog_source_oracle": {
+      "missing_packages": 0,
+      "extra_packages": 0,
+      "primary_color_mismatches": 0,
+      "secondary_color_mismatches": 0,
+      "article_number_mismatches": 0
+    }
+  },
+  "host_evidence_required_before_submission": [
+    "heavy-gradle :core:test :app:testDebugUnitTest :app:lintDebug :app:assembleDebug",
+    "Room exported v2 schema inspection and migration validation from saved installed v1 user.db baseline",
+    "Final source, APK, manifest, test, and lint digests/results"
+  ],
+  "known_unverified": [
+    "Android app compilation and lint after remediation",
+    "UserDatabase and CatalogDatabase v1 to v2 migration on Android",
+    "Razr 2023 UI and persistence behavior",
+    "Physical NTAG215, PAXX, U1, independent-reader, interruption, and p95 acceptance"
+  ],
+  "review_questions": [
+    "Do v1 to v2 migrations exactly preserve installed user data while matching Room v2 schemas?",
+    "Can any edit, restart, catalog reinstall, or recent-snapshot path still lose a temperature, retained identifier/color, or per-field source?",
+    "Can any ambiguous NDEF or reconciliation failure reach a write, false VERIFIED state, erased UNKNOWN state, or automatic retry?",
+    "Does the generated catalog now represent primary colors, secondary colors, and article numbers without fabricated defaults?",
+    "Are the UI flows complete and accessible enough for the required Razr 2023 runtime acceptance?"
+  ]
+}

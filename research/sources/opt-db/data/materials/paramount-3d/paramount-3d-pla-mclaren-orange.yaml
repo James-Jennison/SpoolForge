@@ -1,0 +1,13 @@
+uuid: 6ade19db-b6d5-5ebb-8b4e-4364029d3330
+slug: paramount-3d-pla-mclaren-orange
+brand:
+  slug: paramount-3d
+name: PLA (McLaren Orange)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fa8423ff'
+tags:
+- industrially_compostable
+properties: {}

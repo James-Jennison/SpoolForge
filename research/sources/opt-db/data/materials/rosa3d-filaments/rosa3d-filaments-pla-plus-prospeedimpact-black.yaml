@@ -1,0 +1,13 @@
+uuid: 12d2fe1b-2d67-55ba-b107-6f106c5de59a
+slug: rosa3d-filaments-pla-plus-prospeedimpact-black
+brand:
+  slug: rosa3d-filaments
+name: PLA Plus ProSpeed(Impact) Black
+class: FFF
+type: PLA
+abbreviation: PLA+
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- industrially_compostable
+properties: {}

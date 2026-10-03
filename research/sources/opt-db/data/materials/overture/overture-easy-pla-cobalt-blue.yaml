@@ -1,0 +1,13 @@
+uuid: 011e2483-eac4-5b0e-bc26-cea84d6c01b0
+slug: overture-easy-pla-cobalt-blue
+brand:
+  slug: overture
+name: Easy PLA Cobalt Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#274da0ff'
+tags:
+- industrially_compostable
+properties: {}

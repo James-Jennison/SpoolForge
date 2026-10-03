@@ -1,0 +1,14 @@
+uuid: 69d7d97f-9848-5e32-af72-dd71468e038e
+slug: mosaic-pla-blue
+brand:
+  slug: mosaic
+name: PLA Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#2941bdff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.31

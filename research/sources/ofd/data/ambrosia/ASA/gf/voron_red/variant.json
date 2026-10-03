@@ -1,0 +1,10 @@
+{
+  "uuid": "d3473a96-88ec-4d48-8669-ec2db4d48b2a",
+  "id": "voron_red",
+  "name": "Voron Red",
+  "color_hex": "#A12336",
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

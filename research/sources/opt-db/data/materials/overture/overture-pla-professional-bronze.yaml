@@ -1,0 +1,13 @@
+uuid: ab0471a8-29a7-52d9-af1a-a0dd580c48bf
+slug: overture-pla-professional-bronze
+brand:
+  slug: overture
+name: PLA Professional Bronze
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#693721ff'
+tags:
+- industrially_compostable
+properties: {}

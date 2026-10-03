@@ -1,0 +1,10 @@
+{
+  "uuid": "9f3377c4-5b36-4bae-98e0-a957866eea22",
+  "id": "silver",
+  "name": "Silver",
+  "color_hex": "#BDC8C8",
+  "traits": {
+    "silk": true,
+    "imitates_metal": true
+  }
+}

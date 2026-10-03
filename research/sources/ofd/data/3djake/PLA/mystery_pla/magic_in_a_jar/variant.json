@@ -1,0 +1,14 @@
+{
+  "uuid": "68142081-ed40-40ca-9b7a-1f9bdf197e5b",
+  "id": "magic_in_a_jar",
+  "name": "Magic in a Jar",
+  "color_hex": [
+    "#0066D9",
+    "#70A641",
+    "#F6C500"
+  ],
+  "traits": {
+    "iridescent": true,
+    "coextruded": true
+  }
+}

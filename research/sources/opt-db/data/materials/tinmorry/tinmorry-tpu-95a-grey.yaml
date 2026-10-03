@@ -1,0 +1,12 @@
+uuid: 4ec4f5ea-25ab-54a6-9b52-f3d00560f6d1
+slug: tinmorry-tpu-95a-grey
+brand:
+  slug: tinmorry
+name: TPU 95A Grey
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#b8bab8ff'
+properties:
+  hardness_shore_a: 95

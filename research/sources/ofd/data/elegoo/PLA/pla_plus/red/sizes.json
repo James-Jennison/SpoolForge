@@ -1,0 +1,24 @@
+[
+  {
+    "uuid": "8b2a2953-ca38-43ec-8112-f61fd2b3d3b8",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/elegoo-pla-plus-3d-printer-filament-1-75mm-colored-1kg"
+      }
+    ]
+  },
+  {
+    "uuid": "d294cd30-ff40-4593-a848-11d240b2ae20",
+    "filament_weight": 250,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/multi-color-250-g-filament-bundle?variant=51093424603412"
+      }
+    ]
+  }
+]

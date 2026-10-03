@@ -1,0 +1,15 @@
+{
+  "device": "motorola razr 2023",
+  "transport": "Wireless ADB",
+  "observed_at": "2026-09-07T12:24:08-07:00",
+  "apk_sha256": "3b4c48a09c17678133cb64014674afdc027b2232891236b9b1c377063acc0287",
+  "service_result": "HTTP 200",
+  "screen": "Custom filament review",
+  "assertions": [
+    "No unexpected end of stream error appeared",
+    "Mass value is 1000 g",
+    "Mass source is SpoolmanDB-Community candidate consensus (2 matching rows)",
+    "Review note states the mass was not printed and requires package-size confirmation",
+    "Result remains unsaved pending explicit user review"
+  ]
+}

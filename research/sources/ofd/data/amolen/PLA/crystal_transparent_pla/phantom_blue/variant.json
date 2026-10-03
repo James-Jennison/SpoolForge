@@ -1,0 +1,13 @@
+{
+  "uuid": "451d1721-14b3-4c98-94ce-6d109556db7a",
+  "id": "phantom_blue",
+  "name": "Phantom Blue",
+  "color_hex": [
+    "#C1A7E2",
+    "#81A4D5"
+  ],
+  "traits": {
+    "translucent": true,
+    "gradual_color_change": true
+  }
+}

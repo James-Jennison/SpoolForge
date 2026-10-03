@@ -1,0 +1,11 @@
+{
+  "uuid": "f130c8c1-99e0-4d7a-a49a-31619fce4e42",
+  "id": "witchcraft",
+  "name": "Witchcraft",
+  "color_hex": "#AE00FF",
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "industrially_compostable": true
+  }
+}

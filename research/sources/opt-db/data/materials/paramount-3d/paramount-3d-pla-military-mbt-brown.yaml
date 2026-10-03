@@ -1,0 +1,13 @@
+uuid: c6e20348-8723-53ad-890b-aecb8a4e8ae6
+slug: paramount-3d-pla-military-mbt-brown
+brand:
+  slug: paramount-3d
+name: PLA (Military MBT Brown)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c6ad74ff'
+tags:
+- industrially_compostable
+properties: {}

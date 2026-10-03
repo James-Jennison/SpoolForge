@@ -1,0 +1,28 @@
+[
+  {
+    "uuid": "97458792-7f11-47b3-b0cf-e60f96fbe534",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5903175650252",
+    "article_number": "80402",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1230-Filament-Spectrum-PET-G-HT100-1-75mm-TRANSPARENT-BLUE-0-50kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "408645df-6877-48b0-a215-e12b1d7450c7",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5903175650184",
+    "article_number": "80403",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1236-Filament-Spectrum-PET-G-HT100-1-75mm-TRANSPARENT-BLUE-1kg.html"
+      }
+    ]
+  }
+]

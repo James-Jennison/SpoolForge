@@ -1,0 +1,13 @@
+{
+  "uuid": "2c00af51-d469-4d9e-ae36-218e1479dc5d",
+  "id": "blue_rose_red",
+  "name": "Blue Rose Red",
+  "color_hex": [
+    "#4169E1",
+    "#E8537A"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

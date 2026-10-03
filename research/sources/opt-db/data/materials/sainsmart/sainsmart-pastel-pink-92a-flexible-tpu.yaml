@@ -1,0 +1,12 @@
+uuid: 21646726-7443-592b-a43c-22b3ecfe7fca
+slug: sainsmart-pastel-pink-92a-flexible-tpu
+brand:
+  slug: sainsmart
+name: Pastel Pink 92A Flexible TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#f09bb5ff'
+properties:
+  hardness_shore_a: 92

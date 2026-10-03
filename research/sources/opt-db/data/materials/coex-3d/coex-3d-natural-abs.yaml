@@ -1,0 +1,18 @@
+uuid: 3d579a51-5cc8-5c85-9f2f-a49becd29ff2
+slug: coex-3d-natural-abs
+brand:
+  slug: coex-3d
+name: Natural ABS+
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#dfdfd3ff'
+tags:
+- translucent
+- filtration_recommended
+- without_pigments
+photos:
+- url: https://files.openprinttag.org/coex-3d/coex-3d-natural-abs/c145aefb2eb3.png
+  type: unspecified
+properties: {}

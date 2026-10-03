@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-deepseek-3",
+  "disposition": "CONFIRMED",
+  "reason": "CONFIRMED WITH NARROWER SCOPE: malformed NFC handling already catches read/decode errors. A late callback after executor disposal could throw; RejectedExecutionException now contained. Pending closure review.",
+  "evidence_reference": "work/m1/host-evidence/remediation-round3-build.log; app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt; work/m1/host-evidence/migrated-user-data/summary.json",
+  "resolved": false
+}

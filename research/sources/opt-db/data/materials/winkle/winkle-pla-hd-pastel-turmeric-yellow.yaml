@@ -1,0 +1,14 @@
+uuid: e7b4b4f8-99b3-56ff-bce1-5b06a2ee4aa8
+slug: winkle-pla-hd-pastel-turmeric-yellow
+brand:
+  slug: winkle
+name: PLA HD Pastel Turmeric Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f2b70aff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

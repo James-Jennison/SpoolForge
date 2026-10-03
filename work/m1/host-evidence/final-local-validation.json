@@ -1,0 +1,73 @@
+{
+  "core": [
+    {
+      "suite": "net.jamesjennison.spoolio.core.OpenSpoolCodecTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "suite": "net.jamesjennison.spoolio.core.WriteStateMachineTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0"
+    }
+  ],
+  "app": [
+    {
+      "suite": "net.jamesjennison.spoolio.StorageAcceptanceTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0"
+    }
+  ],
+  "device": {
+    "model": "motorola razr 2023",
+    "sdk": 36,
+    "ensure_existing_catalog_ms": 2096.715208,
+    "catalog_packages": 22347,
+    "queries": [
+      {
+        "query": "SUNLU ABS Orange",
+        "samples": 40,
+        "p95_ms": 5.080625,
+        "max_ms": 6.433073
+      },
+      {
+        "query": "PLA Black",
+        "samples": 40,
+        "p95_ms": 12.429948,
+        "max_ms": 14.585208
+      },
+      {
+        "query": "PETG",
+        "samples": 40,
+        "p95_ms": 20.46375,
+        "max_ms": 25.232188
+      },
+      {
+        "query": "Bambu",
+        "samples": 40,
+        "p95_ms": 12.867031,
+        "max_ms": 15.942448
+      },
+      {
+        "query": "Polymaker",
+        "samples": 40,
+        "p95_ms": 7.492552,
+        "max_ms": 8.832344
+      },
+      {
+        "query": "eSUN",
+        "samples": 40,
+        "p95_ms": 9.551406,
+        "max_ms": 11.380677
+      }
+    ],
+    "catalog_files_bytes_including_wal": 6647808,
+    "measurement": "Debug APK, actual Room DAO and device SQLite; excludes Compose rendering and keyboard latency; existing-catalog integrity time excludes Activity startup"
+  },
+  "device_test": "OK (1 test), device-catalog-instrumentation.log",
+  "apk_sha256": "65c866ce65ee6f1e248e9244de4e1fa59e4c55a16e05ba38b5dc91a7bab3c2b2",
+  "build_log": "work/m1/host-evidence/device-candidate-build.log PASS"
+}

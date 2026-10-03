@@ -1,0 +1,33 @@
+[
+  {
+    "uuid": "d067f33c-fdda-4d05-8cf9-21c500d6ac7b",
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "empty_spool_weight": 20,
+    "spool_core_diameter": 100,
+    "article_number": "AXFR-175TBLK-C0500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/apollox-flame-retardant"
+      }
+    ]
+  },
+  {
+    "uuid": "111a4058-b62c-432c-b195-3d18764684fe",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "empty_spool_weight": 20,
+    "article_number": "AXFR-175TBLK-B1000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/apollox-flame-retardant"
+      }
+    ]
+  }
+]

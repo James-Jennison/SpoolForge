@@ -1,0 +1,23 @@
+uuid: 74a06d9e-3dc4-5ce6-8a27-ff853850062a
+slug: formfutura-titanx-light-grey
+brand:
+  slug: formfutura
+name: TitanX Light Grey
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#c3ccd5ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-titanx-light-grey/d00eaa5a4a3f.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 245
+  max_print_temperature: 270
+  min_bed_temperature: 100
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 720

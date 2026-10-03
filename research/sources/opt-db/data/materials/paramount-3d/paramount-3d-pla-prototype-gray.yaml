@@ -1,0 +1,13 @@
+uuid: abed9e3c-2e82-5d17-9a86-7f286780742f
+slug: paramount-3d-pla-prototype-gray
+brand:
+  slug: paramount-3d
+name: PLA (Prototype Gray)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#d6d7d8ff'
+tags:
+- industrially_compostable
+properties: {}

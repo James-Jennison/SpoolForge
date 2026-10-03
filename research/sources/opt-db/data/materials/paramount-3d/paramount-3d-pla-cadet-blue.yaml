@@ -1,0 +1,13 @@
+uuid: 40ca7afc-942a-5265-890b-fc3293641536
+slug: paramount-3d-pla-cadet-blue
+brand:
+  slug: paramount-3d
+name: PLA (Cadet Blue)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#375680ff'
+tags:
+- industrially_compostable
+properties: {}

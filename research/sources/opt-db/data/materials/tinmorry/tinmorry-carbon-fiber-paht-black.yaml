@@ -1,0 +1,14 @@
+uuid: 6e4c1e2b-1e9d-53dd-8760-bc7e10cef1c9
+slug: tinmorry-carbon-fiber-paht-black
+brand:
+  slug: tinmorry
+name: Carbon Fiber PAHT Black
+class: FFF
+abbreviation: ''
+primary_color:
+  color_rgba: '#3e413fff'
+tags:
+- contains_carbon_fiber
+- high_temperature
+- abrasive
+properties: {}

@@ -1,0 +1,11 @@
+uuid: 577c0204-46fa-5fef-83ce-f9250533440c
+slug: print-with-smile-pet-g-raspberry-pink
+brand:
+  slug: print-with-smile
+name: PET-G Raspberry PINK
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#eb0075ff'
+properties: {}

@@ -1,0 +1,12 @@
+uuid: 85f19af3-bc99-5ddc-9f5c-c727de89658b
+slug: tinmorry-tpu-95a-white
+brand:
+  slug: tinmorry
+name: TPU 95A White
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#ffffffff'
+properties:
+  hardness_shore_a: 95

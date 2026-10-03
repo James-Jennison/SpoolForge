@@ -1,0 +1,144 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.8-flash",
+  "status": "completed",
+  "usage": {
+    "total_tokens": 2657,
+    "total_input_tokens": 1194,
+    "input_tokens_by_modality": [
+      {
+        "modality": "image",
+        "tokens": 1064
+      },
+      {
+        "modality": "text",
+        "tokens": 130
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_output_tokens": 708,
+    "total_tool_use_tokens": 0,
+    "total_thought_tokens": 755,
+    "raw_prompt_token": 4621,
+    "model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 3557
+          },
+          {
+            "modality": "image",
+            "tokens": 1064
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 724
+          }
+        ],
+        "thoughts_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 755
+          }
+        ]
+      }
+    ]
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "FLASHFORGE",
+      "confidence": 0.9,
+      "evidence": "FLASHFORGE PLA Filament",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": null,
+      "confidence": 0.85,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "product": {
+      "value": null,
+      "confidence": 0.75,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "material": {
+      "value": "PLA",
+      "confidence": 0.95,
+      "evidence": "PLA Filament",
+      "basis": "printed"
+    },
+    "color": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "diameter_mm": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "net_weight_g": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.95,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "sku": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [
+      {
+        "value": "X0037RJ695",
+        "kind": "FNSKU",
+        "evidence": "X0037RJ695"
+      }
+    ],
+    "needs_user_review": []
+  }
+}

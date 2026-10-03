@@ -1,0 +1,13 @@
+uuid: 0cf3da46-68b0-52b6-ad29-9969dd138ba2
+slug: paramount-3d-pla-caribbean-coral
+brand:
+  slug: paramount-3d
+name: PLA (Caribbean Coral)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#d56b56ff'
+tags:
+- industrially_compostable
+properties: {}

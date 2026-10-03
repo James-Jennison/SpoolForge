@@ -1,0 +1,7 @@
+{
+  "change_id": "filamajig-label-prototype-20260907",
+  "severity": "MEDIUM",
+  "concern": "The supervised debug prototype uses unauthenticated ADB-reversed loopback HTTP; another process on the connected development device could invoke the workstation label service while that temporary reverse exists.",
+  "evidence_reference": "docs/AI_LABEL_SCANNING.md; app/src/debug/AndroidManifest.xml; device acceptance uses adb reverse tcp:8765",
+  "accepted": true
+}

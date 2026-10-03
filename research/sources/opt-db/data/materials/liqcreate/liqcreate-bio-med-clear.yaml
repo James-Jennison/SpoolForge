@@ -1,0 +1,18 @@
+uuid: b229dd28-896f-5b76-88b0-66da6edb0a59
+slug: liqcreate-bio-med-clear
+brand:
+  slug: liqcreate
+name: Bio-Med Clear
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#f3f6f4ff'
+tags:
+- biocompatible
+properties:
+  density: 1.18
+  cure_wavelength: 405
+  viscosity_18c: 791
+  viscosity_25c: 373
+  viscosity_40c: 114
+  viscosity_60c: 37

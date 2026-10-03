@@ -1,0 +1,24 @@
+uuid: 24a13410-6b6d-54c3-b7c0-73fd25de0ba3
+slug: formfutura-abspro-flame-retardant-black
+brand:
+  slug: formfutura
+name: ABSpro Flame Retardant Black
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - self_extinguishing
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-abspro-flame-retardant-black/b39c89343da1.png
+    type: unspecified
+properties:
+  density: 1.17
+  min_print_temperature: 240
+  max_print_temperature: 265
+  min_bed_temperature: 100
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 720

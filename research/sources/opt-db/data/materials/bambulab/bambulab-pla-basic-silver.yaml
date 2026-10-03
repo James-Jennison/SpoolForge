@@ -1,0 +1,16 @@
+uuid: e789dc66-eec0-5251-bc95-30a66544c4e8
+slug: bambulab-pla-basic-silver
+brand:
+  slug: bambulab
+name: PLA Basic Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#a6a9aaff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/bambulab/bambulab-pla-basic-silver/cb2e76eec848.png
+  type: unspecified
+properties: {}

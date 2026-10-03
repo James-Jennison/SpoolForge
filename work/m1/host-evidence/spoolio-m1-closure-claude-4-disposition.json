@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-closure-claude-4",
+  "disposition": "REJECTED",
+  "reason": "User-entered values remain locally authored even when equal to source. Original package link and pinned source are retained. Automatic source reattribution was not an Owner requirement.",
+  "evidence_reference": "work/m1/lifecycle-closure-review.json; work/m1/host-evidence/lifecycle-closure-build.log",
+  "resolved": true
+}

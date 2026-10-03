@@ -1,0 +1,15 @@
+{
+  "uuid": "90f4a094-02a4-4511-a615-49da2ff56520",
+  "id": "03",
+  "name": "03",
+  "color_hex": [
+    "#6C47B2",
+    "#F4D9DE",
+    "#F4A0B1",
+    "#AE96D4"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

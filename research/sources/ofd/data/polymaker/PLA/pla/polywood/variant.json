@@ -1,0 +1,10 @@
+{
+  "uuid": "7f053edc-c781-456f-8c01-779ed05043a1",
+  "id": "polywood",
+  "name": "PolyWood™",
+  "color_hex": "#D2A273",
+  "traits": {
+    "imitates_wood": true,
+    "industrially_compostable": true
+  }
+}

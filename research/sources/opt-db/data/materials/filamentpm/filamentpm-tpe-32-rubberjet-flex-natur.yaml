@@ -1,0 +1,20 @@
+uuid: 27985edc-0a81-566d-bbcd-d3fc5fa49458
+slug: filamentpm-tpe-32-rubberjet-flex-natur
+brand:
+  slug: filamentpm
+name: TPE 32 RubberJet Flex - Natur
+class: FFF
+type: TPE
+abbreviation: TPE
+primary_color:
+  color_rgba: '#dfdfd3ff'
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-tpe-32-rubberjet-flex-natur/d568a7fbb306.png
+    type: unspecified
+properties:
+  density: 1.1
+  hardness_shore_d: 32.0
+  min_print_temperature: 220
+  max_print_temperature: 240
+tags:
+  - without_pigments

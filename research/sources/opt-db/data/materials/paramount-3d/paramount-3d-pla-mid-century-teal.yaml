@@ -1,0 +1,13 @@
+uuid: 7b0d88c6-2282-5d02-91ba-ebea02f6cd5b
+slug: paramount-3d-pla-mid-century-teal
+brand:
+  slug: paramount-3d
+name: PLA (Mid Century Teal)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#63d6d6ff'
+tags:
+- industrially_compostable
+properties: {}

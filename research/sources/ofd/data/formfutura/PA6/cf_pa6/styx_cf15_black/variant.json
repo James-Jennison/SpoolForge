@@ -1,0 +1,10 @@
+{
+  "uuid": "051f5e47-8125-4629-8226-6a85eaae6ef2",
+  "id": "styx_cf15_black",
+  "name": "STYX -CF15 Black",
+  "color_hex": "#000000",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

@@ -1,0 +1,14 @@
+uuid: eafae5c0-8126-5351-abe3-e52687d907df
+slug: tinmorry-matte-pla-army-green
+brand:
+  slug: tinmorry
+name: Matte PLA Army Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6e8451ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

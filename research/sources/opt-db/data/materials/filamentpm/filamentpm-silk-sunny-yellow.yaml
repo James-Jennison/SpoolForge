@@ -1,0 +1,20 @@
+uuid: e6253299-f058-59c8-b4e2-5b86617f2820
+slug: filamentpm-silk-sunny-yellow
+brand:
+  slug: filamentpm
+name: SILK - Sunny Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f1dd38ff'
+tags:
+  - silk
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-silk-sunny-yellow/a680884e5d51.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 210
+  max_print_temperature: 250
+  max_bed_temperature: 60

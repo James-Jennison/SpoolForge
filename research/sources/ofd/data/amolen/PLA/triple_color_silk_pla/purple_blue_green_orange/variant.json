@@ -1,0 +1,14 @@
+{
+  "uuid": "1fd72378-359b-4653-be86-8a5240576495",
+  "id": "purple_blue_green_orange",
+  "name": "Purple Blue Green Orange",
+  "color_hex": [
+    "#00B4BC",
+    "#BA06AE",
+    "#375680"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

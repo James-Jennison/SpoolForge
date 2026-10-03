@@ -1,0 +1,19 @@
+{
+  "finding_id": "filamajig-marketplace-prefix-too-broad",
+  "change_id": "filamajig-label-marketplace-guard-20260907",
+  "cycle_id": "review-cycle-888c11ecf079",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "identifier-classification",
+  "summary": "Prefix-only X0 classification could suppress a legitimate manufacturer SKU.",
+  "claim": "Narrowing the prefix was necessary, but shape must remain candidate evidence rather than verified identity.",
+  "evidence": {
+    "review_cycle": "review-cycle-888c11ecf079"
+  },
+  "affected_components": [
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/LabelScan.kt"
+  ],
+  "suggested_remediation": "Use one ambiguity-safe predicate across local decoded values and AI SKU claims; preserve exact evidence and require user confirmation.",
+  "suggested_validation": "Cover known X00-shaped Code 128, QR, AI-only candidates, and a noncandidate X0 manufacturer SKU.",
+  "reviewer_confidence": "HIGH"
+}

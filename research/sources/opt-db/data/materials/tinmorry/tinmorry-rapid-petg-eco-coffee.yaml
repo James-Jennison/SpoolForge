@@ -1,0 +1,11 @@
+uuid: 1e873bdb-930a-59bc-a893-c15f8e18a28a
+slug: tinmorry-rapid-petg-eco-coffee
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Coffee
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ad7441ff'
+properties: {}

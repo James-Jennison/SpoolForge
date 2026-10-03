@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-claude-4",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "claude",
+  "severity": "MEDIUM",
+  "category": "NFC write-state machine / UI affordance",
+  "summary": "The visible 'Cancel' control is a silent no-op once the machine is in WRITE_OUTCOME_UNKNOWN, with no way to voluntarily leave that state short of re-tapping the tag.",
+  "claim": "The visible 'Cancel' control is a silent no-op once the machine is in WRITE_OUTCOME_UNKNOWN, with no way to voluntarily leave that state short of re-tapping the tag.",
+  "evidence": {
+    "source": "WriteStateMachine.cancel() (WriteStateMachine.kt): `if(phase==WRITING||VERIFYING||WRITE_OUTCOME_UNKNOWN){ if(phase!=WRITE_OUTCOME_UNKNOWN) writeInterrupted(...) } else {...=CANCELLED...}` \u2014 when phase is already WRITE_OUTCOME_UNKNOWN, neither branch fires, so state is unchanged. NfcPanel (MainActivity.kt) renders `TextButton(onClick=nfc::cancel){Text(\"Cancel\")}` whenever `phase != VERIFIED`, which includes WRITE_OUTCOME_UNKNOWN.",
+    "response_sha256": "24d3990562d67e978414fe65adda6f7e9777b1af1f8ae914bef77ccc315c4478"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Hide/relabel the Cancel button while WRITE_OUTCOME_UNKNOWN (e.g. show only re-tap guidance), or give it a real, clearly-labeled effect (e.g. explicitly abandon the journaled write and return to DRAFT with an explicit warning that the tag's true state is still unverified).",
+  "suggested_validation": "From WRITE_OUTCOME_UNKNOWN, tap Cancel and confirm either the control is absent or the state/detail visibly changes; currently neither occurs.",
+  "reviewer_confidence": "HIGH."
+}

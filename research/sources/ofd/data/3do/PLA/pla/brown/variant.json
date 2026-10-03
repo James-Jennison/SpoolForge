@@ -1,0 +1,12 @@
+{
+  "uuid": "a447816e-4431-4675-893f-92285bf65bde",
+  "id": "brown",
+  "name": "Brown",
+  "color_hex": "#6F4A2F",
+  "color_standards": {
+    "ral": "8007"
+  },
+  "traits": {
+    "recyclable": true
+  }
+}

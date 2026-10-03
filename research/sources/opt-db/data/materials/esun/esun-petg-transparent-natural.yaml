@@ -1,0 +1,18 @@
+uuid: 19403ab4-59b4-5e85-aeac-c5c87bace93c
+slug: esun-petg-transparent-natural
+brand:
+  slug: esun
+name: PETG Transparent Natural
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://www.amazon.com/eSUN-Filament-Toughness-Printing-Printer/dp/B0DDBZ8QL9
+primary_color:
+  color_rgba: '#d9d8deff'
+tags:
+  - silk
+  - translucent
+properties: {}
+photos:
+  - url: https://files.openprinttag.org/esun/esun-petg-transparent-natural/aa257655f5e6.jpg
+    type: unspecified

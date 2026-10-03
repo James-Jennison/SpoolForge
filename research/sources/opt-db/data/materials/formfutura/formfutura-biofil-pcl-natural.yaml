@@ -1,0 +1,22 @@
+uuid: 0a762279-5880-5f51-847f-0e54d8416de7
+slug: formfutura-biofil-pcl-natural
+brand:
+  slug: formfutura
+name: BioFil – PCL Natural
+class: FFF
+type: PCL
+abbreviation: PCL
+primary_color:
+  color_rgba: '#d9d8deff'
+tags:
+  - home_compostable
+  - without_pigments
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-biofil-pcl-natural/05b88ba209e5.png
+    type: unspecified
+properties:
+  density: 1.1
+  min_print_temperature: 95
+  max_print_temperature: 130
+  min_bed_temperature: 40
+  max_bed_temperature: 50

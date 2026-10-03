@@ -1,0 +1,15 @@
+{
+  "uuid": "89b20fc3-bd93-4eff-9d4e-a96e7232afca",
+  "id": "dusty_smoke_ht",
+  "name": "Dusty Smoke HT",
+  "color_hex": [
+    "#9F9F9F",
+    "#727376"
+  ],
+  "traits": {
+    "translucent": true,
+    "glitter": true,
+    "industrially_compostable": true,
+    "high_temperature": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "finding_id": "spoolio-m1-remediation-gemini-eviction",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-d04a66d06bba",
+  "reviewer": "gemini",
+  "severity": "MEDIUM",
+  "category": "NFC / Persistence",
+  "summary": "WriteJournal archive lacks eviction logic for entries exceeding 20 records.",
+  "claim": "Archiving unresolved writes repeatedly causes unbounded accumulation of archive keys in SharedPreferences, failing the required 20-entry archive eviction policy.",
+  "evidence": {
+    "source": "In app/src/main/kotlin/net/jamesjennison/spoolio/NfcCoordinator.kt: WriteJournal.archive(uid, payload) reads `val count=prefs.getInt(\"archive_count\",0)` and unconditionally increments `archive_count` via `prefs.edit().putInt(\"archive_count\",count+1).putString(\"archive_$slot\", ...).commit()`. No eviction or pruning of entries older than 20 is implemented.",
+    "response_sha256": "a1912cf0ec0fd0bf51d710bf81bbfb2ae82f77db6f49c139f9786741b19b2083"
+  },
+  "affected_components": [
+    "app"
+  ],
+  "suggested_remediation": "Modify WriteJournal.archive() to evict the oldest archived entries when the total archive count exceeds 20, maintaining a maximum of 20 archived records.",
+  "suggested_validation": "Execute a unit test invoking WriteJournal.archive() 25 times and verify that total retained archive entries do not exceed 20 and the 5 oldest entries are purged.",
+  "reviewer_confidence": "HIGH"
+}

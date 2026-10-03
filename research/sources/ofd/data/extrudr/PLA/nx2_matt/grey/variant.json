@@ -1,0 +1,13 @@
+{
+  "uuid": "e9a6701b-6dd1-4bb2-b2b0-ca20633a96ec",
+  "id": "grey",
+  "name": "Grey",
+  "color_hex": "#C5C5BF",
+  "color_standards": {
+    "ral": "7044"
+  },
+  "traits": {
+    "matte": true,
+    "industrially_compostable": true
+  }
+}

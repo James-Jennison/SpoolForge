@@ -1,0 +1,15 @@
+{
+  "uuid": "5b804050-523b-4b8a-bdb6-0bad86484ec5",
+  "id": "burnt_titanium_nebula",
+  "name": "Burnt Titanium Nebula",
+  "color_hex": [
+    "#008059",
+    "#AF7D00",
+    "#003B80"
+  ],
+  "traits": {
+    "iridescent": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

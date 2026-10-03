@@ -1,0 +1,12 @@
+uuid: 82a70f50-ccac-57cc-8101-ba52afcea00e
+slug: rosa3d-filaments-biowood
+brand:
+  slug: rosa3d-filaments
+name: BioWOOD
+class: FFF
+abbreviation: BioWOOD
+primary_color:
+  color_rgba: '#ba8960ff'
+tags:
+- contains_wood
+properties: {}

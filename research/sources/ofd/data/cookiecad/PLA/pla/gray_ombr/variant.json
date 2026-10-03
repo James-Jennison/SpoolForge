@@ -1,0 +1,13 @@
+{
+  "uuid": "4304c96e-0506-45ae-bbc6-b385cdc23574",
+  "id": "gray_ombr",
+  "name": "Gray Ombré",
+  "color_hex": [
+    "#88899D",
+    "#BDC8C8"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

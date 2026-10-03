@@ -1,0 +1,15 @@
+{
+  "uuid": "3d383828-4058-4c42-9c55-e50115b3cf65",
+  "id": "rainbow_andromeda",
+  "name": "Rainbow Andromeda",
+  "color_hex": [
+    "#567BAC",
+    "#6000B0",
+    "#6D102E",
+    "#9D00B1"
+  ],
+  "traits": {
+    "glitter": true,
+    "gradual_color_change": true
+  }
+}

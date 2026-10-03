@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-deepseek-2",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8b02c7b33686",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Provenance",
+  "summary": "Per-field provenance is incorrectly assigned to fields with no value, misrepresenting source data.",
+  "claim": "UI displays a source for missing data; edited records may claim catalog provenance for fields never present, violating per-field provenance preservation.",
+  "evidence": {
+    "source": "CatalogEntry.asCatalogItem() sets all EDITABLE_FIELDS to OFD source regardless of field presence; CustomRecord.asItem() inherits source strings even when value is blank/zero.",
+    "response_sha256": "519f846ac62aa678c54f2ef894a01beb502b004b570b5debb037f921542ece99"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "Assign source only when a value exists; for missing/null/blank fields use empty source or explicit 'Missing' marker, and preserve this in snapshots.",
+  "suggested_validation": "Test that a catalog entry with null nozzleMin gets nozzleMin source empty (or 'Missing'), not 'OFD revision'; saving edited record preserves empty source.",
+  "reviewer_confidence": "HIGH"
+}

@@ -1,0 +1,23 @@
+uuid: 81641d14-f1bd-5047-9e93-b31dee786868
+slug: bambulab-petg-translucent-light-blue
+brand:
+  slug: bambulab
+name: PETG Translucent Light Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#61b0ffff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-translucent-light-blue/4fb4e155b4bf.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

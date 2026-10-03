@@ -1,0 +1,11 @@
+uuid: 6c2e32e6-3df8-5fae-afe3-da8ab0d7697f
+slug: paramount-3d-petg-iron-red
+brand:
+  slug: paramount-3d
+name: PETG (Iron Red)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#932721ff'
+properties: {}

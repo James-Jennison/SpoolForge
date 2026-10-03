@@ -1,0 +1,14 @@
+uuid: 77f6c2ae-9050-5957-a07b-6010f9a88968
+slug: overture-pla-royal-gold
+brand:
+  slug: overture
+name: PLA Royal Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffcb47ff'
+tags:
+- industrially_compostable
+photos: []
+properties: {}

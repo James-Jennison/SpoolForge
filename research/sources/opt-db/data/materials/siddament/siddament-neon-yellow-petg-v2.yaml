@@ -1,0 +1,13 @@
+uuid: 223e4f2f-2cde-53da-9c64-28a64c6b1699
+slug: siddament-neon-yellow-petg-v2
+brand:
+  slug: siddament
+name: Neon Yellow PETG V2
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#dfff00ff'
+tags:
+- neon
+properties: {}

@@ -1,0 +1,13 @@
+{
+  "uuid": "3a36aabe-baa6-4de5-8363-8fd7b904184f",
+  "id": "army",
+  "name": "Army",
+  "color_hex": [
+    "#6E8451",
+    "#D8BA64",
+    "#6E4325"
+  ],
+  "traits": {
+    "coextruded": true
+  }
+}

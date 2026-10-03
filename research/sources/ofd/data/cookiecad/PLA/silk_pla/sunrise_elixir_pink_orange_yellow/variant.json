@@ -1,0 +1,16 @@
+{
+  "uuid": "000afc80-72a0-4e4d-b1b3-0e6bce7e98b8",
+  "id": "sunrise_elixir_pink_orange_yellow",
+  "name": "Sunrise Elixir (pink → orange → yellow)",
+  "color_hex": [
+    "#FF5786",
+    "#FFB031",
+    "#F8CC00"
+  ],
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

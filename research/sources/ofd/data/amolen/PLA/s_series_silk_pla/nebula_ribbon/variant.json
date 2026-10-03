@@ -1,0 +1,14 @@
+{
+  "uuid": "bca2bb7e-7eb6-43e1-9a47-1303b786b0ea",
+  "id": "nebula_ribbon",
+  "name": "Nebula Ribbon",
+  "color_hex": [
+    "#C00698",
+    "#485CC7",
+    "#F5F5F5"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

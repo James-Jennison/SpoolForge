@@ -1,0 +1,9 @@
+{
+  "uuid": "560c8962-be4a-47ec-b06f-c9554373c987",
+  "id": "graphite_black",
+  "name": "Graphite Black",
+  "color_hex": "#292824",
+  "traits": {
+    "matte": true
+  }
+}

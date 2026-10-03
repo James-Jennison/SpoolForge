@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-gtin-verifier-deepseek-2",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-2a71123338a4",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Independent community ID verification / source-record provenance",
+  "summary": "The verifier recomputes Community package IDs from the stored `source_record` field but never verifies that `source_record` equals the `id` field of the original retained row. A builder defect or malicious modification that writes an incorrect `source_record` while computing a matching `package_id` would still pass verification.",
+  "claim": "The independent verifier accepts package IDs that are not actually derived from the source document `id`, breaking source provenance and undermining the owner requirement that Community IDs be independently verified from source records.",
+  "evidence": {
+    "source": "In verify_gtin_index.py, for source == 'community': assert pid == community_package_id(str(e['source_record']), str(e['scope'])) is present, but no assertion compares str(o.get('id', '')) to str(e['source_record']). The original row `o` is loaded from the `source_json` column and contains `id`; the verifier has the data to make this check but does not.",
+    "response_sha256": "4eb12c04a07f6c1fbd31a17edc117b0e3a7280215c2a238250a2849aebd19f8c"
+  },
+  "affected_components": [
+    "tools",
+    "app"
+  ],
+  "suggested_remediation": "Add an explicit check in the community branch, e.g., assert str(o.get('id', '')) == str(e['source_record']). Optionally enforce uniqueness of `source_record` across all community candidates to catch duplicate/missing identities.",
+  "suggested_validation": "Tamper with a candidate so `source_record` is changed from the original row `id` but `package_id` is recomputed from the tampered value. Run the verifier; it must fail with a source_record mismatch. After correction, the verifier fails on such tampering.",
+  "reviewer_confidence": "HIGH"
+}

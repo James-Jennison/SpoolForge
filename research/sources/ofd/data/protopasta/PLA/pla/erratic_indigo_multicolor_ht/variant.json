@@ -1,0 +1,14 @@
+{
+  "uuid": "39b01f90-a210-4e4c-a1c9-17b9c4dbcb61",
+  "id": "erratic_indigo_multicolor_ht",
+  "name": "Erratic Indigo Multicolor HT",
+  "color_hex": [
+    "#AAB1FF",
+    "#6C5BB1"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "high_temperature": true
+  }
+}

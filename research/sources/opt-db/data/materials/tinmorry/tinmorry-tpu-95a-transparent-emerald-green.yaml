@@ -1,0 +1,14 @@
+uuid: d5a9d23b-d983-515b-b2ca-8b75c3e609bf
+slug: tinmorry-tpu-95a-transparent-emerald-green
+brand:
+  slug: tinmorry
+name: TPU 95A Transparent Emerald Green
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#3d9441ff'
+tags:
+- translucent
+properties:
+  hardness_shore_a: 95

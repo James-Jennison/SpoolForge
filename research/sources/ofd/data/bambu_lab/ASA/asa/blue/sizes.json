@@ -1,0 +1,15 @@
+[
+  {
+    "uuid": "f6012d5b-d538-4194-b060-9310be3d89bc",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "gtin": "921087642072",
+    "article_number": "45600",
+    "purchase_links": [
+      {
+        "store_id": "bblstore",
+        "url": "https://us.store.bambulab.com/collections/asa-abs/products/asa-filament?variant=41227780784264"
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "finding_id": "spoolio-deepseek-6",
+  "change_id": "spoolio-feasibility-20260906",
+  "cycle_id": "review-cycle-511bc96fa65d",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Primary target firmware/version identification",
+  "summary": "The report does not identify the owner's exact installed PAXX build; it only lists discovered tags. All PAXX parser behavior claims relevant to M1, including the diameter conflict, are based on source snapshots that may not match the owner's firmware.",
+  "claim": "The report does not identify the owner's exact installed PAXX build; it only lists discovered tags. All PAXX parser behavior claims relevant to M1, including the diameter conflict, are based on source snapshots that may not match the owner's firmware.",
+  "evidence": {
+    "source": "Report section 9: \"The newest discovered release tag is v1.5.2-paxx12-21 ... GitHub's releases/latest returned older ... These are not the owner's verified installed build. Record the exact installed version and match its source before a physical test.\"",
+    "response_sha256": "14940ade81683577086eff6f20c1f63e0fab8d59722f737536c2d459e73d8747"
+  },
+  "affected_components": [
+    "docs/FEASIBILITY.md"
+  ],
+  "suggested_remediation": "Include a mandatory pre-M1 step to record the owner's phone model/Android version, tag capability, and exact installed PAXX build. Obtain the source for that exact build and map the compatibility profile behavior to it before any physical test.",
+  "suggested_validation": "Before M1 implementation approval, demonstrate that the exact installed PAXX build is identified and that the source snapshot used for OpenSpool parser analysis matches it. Any discrepancy is escalated and documented.",
+  "reviewer_confidence": "MEDIUM"
+}

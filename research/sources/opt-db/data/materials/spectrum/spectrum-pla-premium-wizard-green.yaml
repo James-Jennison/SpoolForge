@@ -1,0 +1,23 @@
+uuid: 2307aa7b-4404-5ccd-9bd0-7f568a31c141
+slug: spectrum-pla-premium-wizard-green
+brand:
+  slug: spectrum
+name: PLA Premium Wizard Green
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#616247ff'
+- color_rgba: '#4f3638ff'
+tags:
+- iridescent
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+primary_color:
+  color_rgba: '#4f3638ff'
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-premium-wizard-green/spectrum-pla-premium-wizard-green-0-acdf310b.jpg
+  type: unspecified

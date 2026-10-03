@@ -1,0 +1,11 @@
+uuid: b55c59b5-171d-5c71-89f5-1ba8cd97e59b
+slug: paramount-3d-petg-primordial-earth
+brand:
+  slug: paramount-3d
+name: PETG (Primordial Earth)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#90785eff'
+properties: {}

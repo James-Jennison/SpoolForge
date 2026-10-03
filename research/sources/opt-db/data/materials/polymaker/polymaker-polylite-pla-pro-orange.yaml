@@ -1,0 +1,16 @@
+uuid: addb05de-4bf1-53fc-96af-a2ea5d07c35d
+slug: polymaker-polylite-pla-pro-orange
+brand:
+  slug: polymaker
+name: PolyLite™ PLA Pro Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fd9106ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/polymaker/polymaker-polylite-pla-pro-orange/ab33e4772e74.png
+  type: unspecified
+properties: {}

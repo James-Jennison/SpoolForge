@@ -1,0 +1,17 @@
+uuid: d004c268-1826-5f89-97d6-cbf5efaf7c95
+slug: prusament-resin-flex80-black
+brand:
+  slug: prusament-resin
+name: Flex80 Black
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#595959ff'
+properties:
+  density: 1.0
+  hardness_shore_a: 80
+  cure_wavelength: 405
+  viscosity_18c: 255
+  viscosity_25c: 148
+  viscosity_40c: 58
+  viscosity_60c: 26

@@ -1,0 +1,14 @@
+{
+  "uuid": "bab37708-975a-4346-9eea-56f6265df1cc",
+  "id": "blue_green_orange_tri_color",
+  "name": "Blue Green Orange tri-color",
+  "color_hex": [
+    "#1DAF5E",
+    "#FFB031",
+    "#0E21AE"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

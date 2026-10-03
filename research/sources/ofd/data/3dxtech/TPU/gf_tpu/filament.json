@@ -1,0 +1,11 @@
+{
+  "uuid": "c646e1cb-5644-42c0-8eb7-3ae14c5288b9",
+  "id": "gf_tpu",
+  "name": "TPU GF",
+  "diameter_tolerance": 0.02,
+  "density": 1.21,
+  "min_print_temperature": 210,
+  "max_print_temperature": 240,
+  "min_bed_temperature": 30,
+  "max_bed_temperature": 60
+}

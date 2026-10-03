@@ -1,0 +1,14 @@
+uuid: 6264129c-be6e-57c9-9fc0-26df06662f70
+slug: winkle-pla-hd-mahogany-brown
+brand:
+  slug: winkle
+name: PLA HD Mahogany Brown
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#9f2f0dff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

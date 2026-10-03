@@ -1,0 +1,47 @@
+[
+  {
+    "uuid": "232fcd29-8117-461d-b871-68a22b0cb599",
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 140,
+    "article_number": "SX06-175SIWH-00500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/styx-pa6"
+      }
+    ]
+  },
+  {
+    "uuid": "2d96c55d-892a-4864-bc9e-ec4048612392",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "SX06-175SIWH-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/styx-pa6"
+      }
+    ]
+  },
+  {
+    "uuid": "2ae18f32-80a6-47b1-8735-128fa3bbecad",
+    "filament_weight": 4500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "SX06-175SIWH-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/styx-pa6"
+      }
+    ]
+  }
+]

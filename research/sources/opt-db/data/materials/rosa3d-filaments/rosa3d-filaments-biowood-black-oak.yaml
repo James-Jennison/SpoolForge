@@ -1,0 +1,12 @@
+uuid: 97d34058-1ea3-53db-a9c4-aafeb442bab3
+slug: rosa3d-filaments-biowood-black-oak
+brand:
+  slug: rosa3d-filaments
+name: BioWOOD Black Oak
+class: FFF
+abbreviation: BioWOOD
+primary_color:
+  color_rgba: '#292b2bff'
+tags:
+- contains_wood
+properties: {}

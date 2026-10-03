@@ -1,0 +1,13 @@
+uuid: cad1c5f5-180e-5a9b-aace-da1c9406f3fd
+slug: tinmorry-metallic-pla-rose-gold
+brand:
+  slug: tinmorry
+name: Metallic PLA Rose Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#976344ff'
+tags:
+- industrially_compostable
+properties: {}

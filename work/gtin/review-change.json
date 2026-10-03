@@ -1,0 +1,20 @@
+{
+  "change_id": "spoolio-gtin-20260907",
+  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "summary": "Owner-approved offline GTIN candidate index from OFD, OPT FFF and SpoolmanDB Community with retained source and field provenance; no auto merging.",
+  "classification": "SUBSTANTIVE",
+  "affected_components": [
+    "app",
+    "core",
+    "tools"
+  ],
+  "required_capabilities": [
+    "architecture",
+    "platform",
+    "adversarial"
+  ],
+  "provenance": {
+    "branch": "codex/m1-offline-openspool",
+    "scope": "Approved GTIN candidate lookup, source-preserving local edits, bundled offline index; no release, NFC writes or printer actions"
+  }
+}

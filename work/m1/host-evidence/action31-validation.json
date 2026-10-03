@@ -1,0 +1,37 @@
+{
+  "core": [
+    {
+      "suite": "net.jamesjennison.spoolio.core.CatalogGenerationStoreTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "suite": "net.jamesjennison.spoolio.core.OpenSpoolCodecTest",
+      "tests": "11",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "suite": "net.jamesjennison.spoolio.core.WriteStateMachineTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "app": [
+    {
+      "suite": "net.jamesjennison.spoolio.StorageAcceptanceTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "apk_sha256": "368e5f8a3713adf5a110ef893aa4638809dce58a6bf8861b81c5c00f3b6bee5c",
+  "build": "PASS; action31-host-build-retry.log; prior test compile failure retained in action31-host-build.log",
+  "installed_firmware_owner_report": "v1.5.2-paxx12-21"
+}

@@ -1,0 +1,14 @@
+uuid: 24456958-a9ed-5bb3-a9d8-351b3ac7cf5a
+slug: overture-pla-white
+brand:
+  slug: overture
+name: PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- industrially_compostable
+photos: []
+properties: {}

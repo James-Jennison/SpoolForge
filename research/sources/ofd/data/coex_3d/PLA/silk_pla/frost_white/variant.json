@@ -1,0 +1,10 @@
+{
+  "uuid": "a57caefa-6b4d-4ca5-ab92-d513ab7a41b7",
+  "id": "frost_white",
+  "name": "Frost White",
+  "color_hex": "#F0EBE5",
+  "traits": {
+    "silk": true,
+    "industrially_compostable": true
+  }
+}

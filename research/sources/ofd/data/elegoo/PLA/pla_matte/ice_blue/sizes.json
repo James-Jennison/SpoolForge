@@ -1,0 +1,24 @@
+[
+  {
+    "uuid": "61f9283f-d77a-4d5f-b948-3397fea62bd5",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/pla-matte-filament-1-75mm-colored-1kg"
+      }
+    ]
+  },
+  {
+    "uuid": "0f6fa82c-8756-48e7-92a8-c53a1b1e7719",
+    "filament_weight": 250,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/multi-color-250-g-filament-bundle?variant=51093424701716"
+      }
+    ]
+  }
+]

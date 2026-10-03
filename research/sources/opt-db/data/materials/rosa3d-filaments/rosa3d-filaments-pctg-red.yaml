@@ -1,0 +1,11 @@
+uuid: 13323533-4cb1-55fb-94df-8952f363d4c6
+slug: rosa3d-filaments-pctg-red
+brand:
+  slug: rosa3d-filaments
+name: PCTG Red
+class: FFF
+type: PCTG
+abbreviation: PCTG
+primary_color:
+  color_rgba: '#ec0000ff'
+properties: {}

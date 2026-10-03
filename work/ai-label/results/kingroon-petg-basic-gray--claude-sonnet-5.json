@@ -1,0 +1,118 @@
+{
+  "provider": "claude",
+  "model": "claude-sonnet-5",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 3153,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 0
+    },
+    "output_tokens": 884,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "service_tier": "standard",
+    "inference_geo": "global"
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "KINGROON 3D",
+      "confidence": 0.9,
+      "evidence": "KINGROON 3D printed near QR code",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": "KINGROON 3D",
+      "confidence": 0.75,
+      "evidence": "KINGROON 3D printed near QR code",
+      "basis": "printed"
+    },
+    "product": {
+      "value": "HC098",
+      "confidence": 0.85,
+      "evidence": "HC098 printed at top of label",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PETG Basic",
+      "confidence": 0.95,
+      "evidence": "\u6750\u8d28:PETG Basic 1.75mm",
+      "basis": "printed"
+    },
+    "color": {
+      "value": "Gray",
+      "confidence": 0.95,
+      "evidence": "Colour:Gray / \u989c\u8272:\u7070\u8272",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": 1.75,
+      "confidence": 0.95,
+      "evidence": "PETG Basic 1.75mm",
+      "basis": "printed"
+    },
+    "net_weight_g": {
+      "value": null,
+      "confidence": 0.95,
+      "evidence": "No weight printed on label",
+      "basis": "absent"
+    },
+    "nozzle_min_c": {
+      "value": 230,
+      "confidence": 0.9,
+      "evidence": "Printing Temp:230-250\u00b0C",
+      "basis": "printed"
+    },
+    "nozzle_max_c": {
+      "value": 250,
+      "confidence": 0.9,
+      "evidence": "Printing Temp:230-250\u00b0C",
+      "basis": "printed"
+    },
+    "bed_min_c": {
+      "value": 70,
+      "confidence": 0.9,
+      "evidence": "Hotbed Temp:70-90\u00b0C",
+      "basis": "printed"
+    },
+    "bed_max_c": {
+      "value": 90,
+      "confidence": 0.9,
+      "evidence": "Hotbed Temp:70-90\u00b0C",
+      "basis": "printed"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": "No barcode/GTIN visible, only QR code present",
+      "basis": "absent"
+    },
+    "sku": {
+      "value": "HC098",
+      "confidence": 0.8,
+      "evidence": "HC098 shown as product code on label",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": "0403-4",
+      "confidence": 0.9,
+      "evidence": "\u6279\u6b21:0403-4",
+      "basis": "printed"
+    },
+    "other_codes": [
+      {
+        "value": "QR code (unreadable content)",
+        "kind": "QR",
+        "evidence": "QR code printed on label next to KINGROON 3D text"
+      }
+    ],
+    "needs_user_review": [
+      "gtin",
+      "net_weight_g",
+      "manufacturer"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+uuid: 42317540-be69-5aeb-958a-7f8ebc1d4a88
+slug: polymaker-fiberon-petg-rcf08-black
+brand:
+  slug: polymaker
+name: Fiberon™ PETG-rCF08 Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#302e2fff'
+tags:
+  - recycled
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-fiberon-petg-rcf08-black/5ee9ff47b2f0.png
+    type: unspecified
+properties:
+  density: 1.3
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 60
+  max_bed_temperature: 70
+  drying_temperature: 65
+  drying_time: 180

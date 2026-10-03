@@ -1,0 +1,20 @@
+uuid: d6c4183f-72ca-56af-bbb5-5c83c27be6d9
+slug: addnorth-textura-flare-galaxy-black
+brand:
+  slug: addnorth
+name: Textura™ Flare Galaxy Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - glitter
+  - matte
+  - contains_organic_material
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-textura-flare-galaxy-black/672bc109906f.png
+    type: unspecified
+properties:
+  min_print_temperature: 200
+  max_print_temperature: 220

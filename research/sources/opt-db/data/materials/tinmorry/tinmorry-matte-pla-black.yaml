@@ -1,0 +1,14 @@
+uuid: 6684dcb3-8b39-5cad-8b93-b2edb69613cf
+slug: tinmorry-matte-pla-black
+brand:
+  slug: tinmorry
+name: Matte PLA Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#1d1d1dff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

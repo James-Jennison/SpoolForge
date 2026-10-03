@@ -1,0 +1,62 @@
+[
+  {
+    "uuid": "bde1466f-8d02-4d81-93db-58272b3416e9",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "RAPO-175CCGY-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rapollo"
+      }
+    ]
+  },
+  {
+    "uuid": "33310389-2cff-476c-abc3-faab663d8a1e",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "RAPO-175CCGY-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rapollo"
+      }
+    ]
+  },
+  {
+    "uuid": "fe3eb15b-4119-43dc-b74f-be3c96a98f43",
+    "filament_weight": 3500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 700,
+    "article_number": "RAPO-175CCGY-03500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rapollo"
+      }
+    ]
+  },
+  {
+    "uuid": "c8c5ea74-4625-4683-b827-d45e7e27d074",
+    "filament_weight": 4500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "RAPO-175CCGY-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rapollo"
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+uuid: 6eb14760-7cd8-5565-ab1e-cb55e00a71d3
+slug: paramount-3d-pla-steel-gray
+brand:
+  slug: paramount-3d
+name: PLA (Steel Gray)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#818fa0ff'
+tags:
+- industrially_compostable
+properties: {}

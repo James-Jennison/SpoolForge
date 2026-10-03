@@ -1,0 +1,12 @@
+{
+  "uuid": "6357a4d4-686a-4650-9755-9d1c262744e5",
+  "material": "PETG",
+  "default_slicer_settings": {
+    "bambustudio": {
+      "profile_name": "Inland PETG"
+    },
+    "orcaslicer": {
+      "profile_name": "Inland PETG"
+    }
+  }
+}

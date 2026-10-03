@@ -1,0 +1,20 @@
+uuid: 87d2ce12-6361-590a-8331-17791b58718c
+slug: raise3d-industrial-ppa-gf-natural
+brand:
+  slug: raise3d
+name: Industrial PPA GF Natural
+class: FFF
+type: PPA
+abbreviation: PPA
+primary_color:
+  color_rgba: '#f5f0e8ff'
+tags:
+- contains_glass_fiber
+- abrasive
+- contains_glass
+- without_pigments
+properties:
+  density: 1.16
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-industrial-ppa-gf-natural/raise3d-industrial-ppa-gf-natural-0-c2cdebaf.jpg
+  type: unspecified

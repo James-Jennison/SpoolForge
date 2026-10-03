@@ -1,0 +1,21 @@
+uuid: 960938b8-19d8-5bdf-adba-4ab58a333b89
+slug: spectrum-smart-abs-bahama-yellow
+brand:
+  slug: spectrum
+name: smart ABS™ Bahama Yellow
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#e8bd00ff'
+tags:
+- filtration_recommended
+properties:
+  density: 1.05
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 80
+  max_bed_temperature: 100
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-smart-abs-bahama-yellow/spectrum-smart-abs-bahama-yellow-0-66b1b33c.jpg
+  type: unspecified

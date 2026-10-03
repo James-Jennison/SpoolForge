@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "5700387f-79cd-4871-a77c-78baf51d61dd",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/epla-silk"
+      }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+uuid: d277493a-7cdd-5148-960f-58106db6d5a5
+slug: print-with-smile-pla-mahagon-wood
+brand:
+  slug: print-with-smile
+name: PLA MAHAGON Wood
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#a6464eff'
+tags:
+- contains_wood
+- industrially_compostable
+properties: {}

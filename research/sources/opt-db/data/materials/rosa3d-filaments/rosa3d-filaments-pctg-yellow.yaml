@@ -1,0 +1,11 @@
+uuid: acb1bcef-7ab3-5499-b1ab-780f82664fef
+slug: rosa3d-filaments-pctg-yellow
+brand:
+  slug: rosa3d-filaments
+name: PCTG Yellow
+class: FFF
+type: PCTG
+abbreviation: PCTG
+primary_color:
+  color_rgba: '#fadb24ff'
+properties: {}

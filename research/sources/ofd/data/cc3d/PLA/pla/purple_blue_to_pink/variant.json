@@ -1,0 +1,13 @@
+{
+  "uuid": "b8ce153e-019b-49d7-bca9-4fc23688303e",
+  "id": "purple_blue_to_pink",
+  "name": "Purple Blue to Pink",
+  "color_hex": [
+    "#6C47B2",
+    "#F300EA"
+  ],
+  "traits": {
+    "temperature_color_change": true,
+    "industrially_compostable": true
+  }
+}

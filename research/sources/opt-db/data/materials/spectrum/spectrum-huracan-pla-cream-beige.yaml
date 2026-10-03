@@ -1,0 +1,21 @@
+uuid: 7f6d81fd-fb56-5e4f-a056-b0b7105dbf11
+slug: spectrum-huracan-pla-cream-beige
+brand:
+  slug: spectrum
+name: Huracan PLA Cream Beige
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f1e6b2ff'
+tags:
+- silk
+- industrially_compostable
+properties:
+  density: 1.22
+  min_print_temperature: 190
+  max_print_temperature: 230
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-huracan-pla-cream-beige/spectrum-huracan-pla-cream-beige-0-27c7ba4a.jpg
+  type: unspecified

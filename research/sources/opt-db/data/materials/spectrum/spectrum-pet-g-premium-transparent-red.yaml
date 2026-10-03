@@ -1,0 +1,21 @@
+uuid: a0e21988-30e9-5717-be80-933fc6e51ed7
+slug: spectrum-pet-g-premium-transparent-red
+brand:
+  slug: spectrum
+name: PET-G Premium Transparent Red
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ac1a17ff'
+tags:
+- translucent
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pet-g-premium-transparent-red/spectrum-pet-g-premium-transparent-red-0-ef13c28d.jpg
+  type: unspecified

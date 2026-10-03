@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "baseline": [
+    {
+      "id": "canvas-paxx-diff-integrity",
+      "type": "source-integrity",
+      "severity": "HIGH",
+      "command": ["git", "diff", "--check"]
+    },
+    {
+      "id": "canvas-paxx-remote-source-provenance",
+      "type": "source-provenance",
+      "severity": "HIGH",
+      "command": ["ssh", "-F", "/dev/null", "-o", "BatchMode=yes", "build-host", "cd /tmp/filamajig-canvas-final-v3.a5oIzX && test $(sha256sum source-snapshot.tar | cut -d' ' -f1) = d44431b9e4aa4934a1c4d12859bbb8807388ad8b633a215dd436fb284861f66e"]
+    }
+  ],
+  "substantive": [
+    {
+      "id": "canvas-paxx-remote-core-tests",
+      "type": "remote-unit-tests",
+      "severity": "HIGH",
+      "command": ["ssh", "-F", "/dev/null", "-o", "BatchMode=yes", "build-host", "cd /tmp/filamajig-canvas-final-v3.a5oIzX && ANDROID_HOME=/opt/android-sdk ANDROID_SDK_ROOT=/opt/android-sdk JAVA_HOME=$PWD/toolchains/jdk17 PATH=$PWD/toolchains/jdk17/bin:$PATH ./gradlew --no-daemon core:test"]
+    },
+    {
+      "id": "canvas-paxx-remote-android-validation",
+      "type": "remote-android-test-lint-build",
+      "severity": "HIGH",
+      "command": ["ssh", "-F", "/dev/null", "-o", "BatchMode=yes", "build-host", "cd /tmp/filamajig-canvas-final-v3.a5oIzX && ANDROID_HOME=/opt/android-sdk ANDROID_SDK_ROOT=/opt/android-sdk JAVA_HOME=$PWD/toolchains/jdk17 PATH=$PWD/toolchains/jdk17/bin:$PATH ./gradlew --no-daemon app:testDebugUnitTest lintDebug assembleDebug"]
+    }
+  ],
+  "conditional": {}
+}

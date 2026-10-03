@@ -1,0 +1,18 @@
+uuid: a75d6f4f-8552-5964-a98a-af9e7ba15627
+slug: atomic-filament-carbon-fiber-extreme-black-petg-pro
+brand:
+  slug: atomic-filament
+name: CARBON FIBER Extreme Black PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/carbon-fiber-extreme-black-petg-pro-2-85mm
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- contains_carbon_fiber
+- abrasive
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-carbon-fiber-extreme-black-petg-pro/e3593a67df2f.png
+  type: unspecified
+properties: {}

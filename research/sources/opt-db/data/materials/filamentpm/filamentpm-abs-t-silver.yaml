@@ -1,0 +1,22 @@
+uuid: d30eeaee-61fa-5d1b-871a-727ef7c5aa27
+slug: filamentpm-abs-t-silver
+brand:
+  slug: filamentpm
+name: ABS-T - Silver
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#8f8f8fff'
+tags:
+  - high_temperature
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-abs-t-silver/610f69176a7b.png
+    type: unspecified
+properties:
+  density: 1.08
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 100
+  max_bed_temperature: 110

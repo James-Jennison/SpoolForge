@@ -1,0 +1,13 @@
+uuid: 4419c0d6-c4f2-5245-beb0-7fd5dcad50f5
+slug: overture-rock-pla-cheesewood
+brand:
+  slug: overture
+name: Rock PLA Cheesewood
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#da995fff'
+tags:
+- industrially_compostable
+properties: {}

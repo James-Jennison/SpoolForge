@@ -1,0 +1,22 @@
+uuid: cf975e66-730c-5562-a3f5-9a6322c2b13b
+slug: formfutura-reform-rpet-light-green
+brand:
+  slug: formfutura
+name: ReForm – rPET Light Green
+class: FFF
+abbreviation: PETG
+primary_color:
+  color_rgba: '#91c500ff'
+tags:
+  - recycled
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-reform-rpet-light-green/0569d1f85d87.png
+    type: unspecified
+properties:
+  density: 1.23
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+  drying_temperature: 60
+  drying_time: 720

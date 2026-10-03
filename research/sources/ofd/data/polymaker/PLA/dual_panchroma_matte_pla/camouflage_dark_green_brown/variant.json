@@ -1,0 +1,14 @@
+{
+  "uuid": "0d5c4d32-0474-48cc-9659-270363186f4f",
+  "id": "camouflage_dark_green_brown",
+  "name": "Camouflage Dark Green Brown",
+  "color_hex": [
+    "#5A7D5A",
+    "#926043"
+  ],
+  "traits": {
+    "matte": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

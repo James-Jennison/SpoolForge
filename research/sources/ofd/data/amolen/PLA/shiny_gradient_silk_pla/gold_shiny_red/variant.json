@@ -1,0 +1,13 @@
+{
+  "uuid": "7e4bcfb8-6f6a-43cc-864a-2a98036f4073",
+  "id": "gold_shiny_red",
+  "name": "Gold & Shiny Red",
+  "color_hex": [
+    "#C00000",
+    "#F6C500"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

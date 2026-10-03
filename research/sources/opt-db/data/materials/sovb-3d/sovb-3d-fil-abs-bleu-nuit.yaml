@@ -1,0 +1,19 @@
+uuid: d66ec733-c11a-54ea-9788-0096f240c240
+slug: sovb-3d-fil-abs-bleu-nuit
+brand:
+  slug: sovb-3d
+name: Fil ABS Bleu Nuit
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#2941bdff'
+  color_ral: '5013'
+tags:
+- filtration_recommended
+properties:
+  density: 1.03
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 90
+  max_bed_temperature: 100

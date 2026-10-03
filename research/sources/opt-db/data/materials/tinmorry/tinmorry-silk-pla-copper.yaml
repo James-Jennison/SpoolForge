@@ -1,0 +1,14 @@
+uuid: 133fca39-077d-5522-80a5-0f41f348bbc0
+slug: tinmorry-silk-pla-copper
+brand:
+  slug: tinmorry
+name: Silk PLA Copper
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c25c56ff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

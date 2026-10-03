@@ -1,0 +1,6 @@
+{
+  "active_journal_unchanged": true,
+  "unknown_restored_in_ui": true,
+  "restart_method": "adb am force-stop then am start, tag removed per requested procedure",
+  "reconciliation_not_yet_performed": true
+}

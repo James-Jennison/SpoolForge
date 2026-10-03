@@ -1,0 +1,13 @@
+{
+  "uuid": "3472ab38-eaa1-4f2b-abde-28e2b9842ba5",
+  "id": "green_to_yellow",
+  "name": "Green to Yellow",
+  "color_hex": [
+    "#FBE200",
+    "#91C500"
+  ],
+  "traits": {
+    "temperature_color_change": true,
+    "filtration_recommended": true
+  }
+}

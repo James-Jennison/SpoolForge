@@ -1,0 +1,22 @@
+uuid: dbae2d52-af68-5134-9a3b-94c8eeb63fe2
+slug: filamentpm-abs-sparkling-jungle
+brand:
+  slug: filamentpm
+name: ABS - Sparkling Jungle
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#008351ff'
+tags:
+  - glitter
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-abs-sparkling-jungle/1a3942e16bd0.png
+    type: unspecified
+properties:
+  density: 1.04
+  min_print_temperature: 220
+  max_print_temperature: 250
+  min_bed_temperature: 100
+  max_bed_temperature: 110

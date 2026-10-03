@@ -1,0 +1,18 @@
+uuid: 1e8ebbf9-7495-55fe-8ff9-3cd471335826
+slug: atomic-filament-stone-gray-carbon-fiber-extreme-petg-pro
+brand:
+  slug: atomic-filament
+name: Stone Gray CARBON FIBER Extreme PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/stone-gray-carbon-fiber-extreme-petg-pro
+primary_color:
+  color_rgba: '#9fa4a8ff'
+tags:
+- contains_carbon_fiber
+- abrasive
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-stone-gray-carbon-fiber-extreme-petg-pro/648ca83b78d8.png
+  type: unspecified
+properties: {}

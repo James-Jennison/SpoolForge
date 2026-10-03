@@ -1,0 +1,14 @@
+{
+  "uuid": "d6ead49e-6c40-47e7-97a0-086be96df542",
+  "id": "amber_sea",
+  "name": "Amber Sea",
+  "color_hex": [
+    "#1ADAFB",
+    "#F6FB38",
+    "#D60212"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

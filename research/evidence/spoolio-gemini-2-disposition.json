@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gemini-2",
+  "disposition": "CONFIRMED",
+  "reason": "ALREADY MITIGATED: OPT deferred and exact consumer/spec contract required; no published stable release was evidenced. Nozzle diameter is not nozzle temperature. No draft emission promised.",
+  "evidence_reference": "docs/FEASIBILITY.md revised; research/evidence/ofd-snapshot-validation.json; remediation review-cycle-5ac84cff9d4b",
+  "resolved": true
+}

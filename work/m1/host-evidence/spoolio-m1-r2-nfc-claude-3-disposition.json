@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-r2-nfc-claude-3",
+  "disposition": "CONFIRMED",
+  "reason": "Removed unreachable second ambiguity branch; conservative multiple-record rejection retained.",
+  "evidence_reference": "work/m1/host-evidence/remediation-round3-build.log; app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt; work/m1/host-evidence/migrated-user-data/summary.json",
+  "resolved": false
+}

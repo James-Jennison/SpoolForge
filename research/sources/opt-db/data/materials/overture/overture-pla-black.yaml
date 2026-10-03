@@ -1,0 +1,14 @@
+uuid: a04eb6ed-3a6f-540c-9360-47d5cded0dc5
+slug: overture-pla-black
+brand:
+  slug: overture
+name: PLA Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- industrially_compostable
+photos: []
+properties: {}

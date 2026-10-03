@@ -1,0 +1,9 @@
+{
+  "uuid": "3857eb51-2d81-4114-98d3-0582271e595e",
+  "id": "tin_grey",
+  "name": "Tin Grey",
+  "color_hex": "#BDC8C8",
+  "traits": {
+    "matte": true
+  }
+}

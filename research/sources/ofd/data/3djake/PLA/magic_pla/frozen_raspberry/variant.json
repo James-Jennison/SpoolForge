@@ -1,0 +1,13 @@
+{
+  "uuid": "f0ad4230-6d8e-4015-b836-66a06ce02a2a",
+  "id": "frozen_raspberry",
+  "name": "Frozen Raspberry",
+  "color_hex": [
+    "#D5447E",
+    "#C9D0D4"
+  ],
+  "traits": {
+    "iridescent": true,
+    "coextruded": true
+  }
+}

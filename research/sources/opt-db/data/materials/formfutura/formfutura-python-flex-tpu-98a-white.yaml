@@ -1,0 +1,19 @@
+uuid: 27f44566-c51d-54cd-8adb-c578ec838c94
+slug: formfutura-python-flex-tpu-98a-white
+brand:
+  slug: formfutura
+name: Python Flex TPU 98A White
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#ffffffff'
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-python-flex-tpu-98a-white/36f28575b28e.png
+    type: unspecified
+properties:
+  density: 1.16
+  hardness_shore_a: 98.0
+  min_print_temperature: 220
+  max_print_temperature: 250
+  max_bed_temperature: 60

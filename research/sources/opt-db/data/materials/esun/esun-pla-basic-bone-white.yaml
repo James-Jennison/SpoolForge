@@ -1,0 +1,24 @@
+uuid: 31c30bc0-a3e9-5012-9182-ae9279cfe139
+slug: esun-pla-basic-bone-white
+brand:
+  slug: esun
+name: PLA Basic Bone White
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://esun3dstoreeu.com/products/epla?VariantsId=13403
+primary_color:
+  color_rgba: '#e4cfbbff'
+tags:
+  - industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 210
+  max_print_temperature: 230
+  min_bed_temperature: 45
+  max_bed_temperature: 60
+  drying_temperature: 50
+  drying_time: 480
+photos:
+  - url: https://files.openprinttag.org/esun/esun-pla-basic-bone-white/esun-pla-basic-bone-white-0-8f774f3a.jpg
+    type: unspecified

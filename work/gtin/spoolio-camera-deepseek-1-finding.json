@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-camera-deepseek-1",
+  "change_id": "spoolio-camera-20260907",
+  "cycle_id": "review-cycle-059719ed2779",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "GTIN normalization before lookup",
+  "summary": "The camera scanner returns the raw decoded barcode string (e.g., 12-digit UPC-A or 13-digit EAN-13) and passes it directly to the exact GTIN lookup without normalizing it to the canonical GTIN-14 representation. The decoder only validates that the text can be normalized (via Gtin.normalize) but does not return the normalized value.",
+  "claim": "If the exact GTIN lookup expects zero-padded 14-digit GTIN values, scanning a valid UPC-A (12 digits) or EAN-13 (13 digits) may return no candidates, violating the owner requirement that a scan must populate the existing exact GTIN lookup.",
+  "evidence": {
+    "source": "In BarcodeCamera.kt, decodeGtin returns `reader.decodeWithState(...).text.takeIf { Gtin.normalize(it) != null }`, which is the raw text. In MainActivity.kt, the onBarcode callback sets `model.query = code; model.search()` with that raw text. The provided code does not call Gtin.normalize on the result before passing it to the lookup.",
+    "response_sha256": "ca94ac50691a81d3dcbc7b3d3ff17a99786bd54f0e96ccc51503a641ad848ad0"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Normalize the decoded GTIN to the canonical 14-digit form before assigning it to model.query, or ensure that model.search performs identical normalization internally and document that behavior.",
+  "suggested_validation": "Scan a known UPC-A barcode present in the catalog and verify the correct candidate appears; repeat for an EAN-13 barcode.",
+  "reviewer_confidence": "MEDIUM"
+}

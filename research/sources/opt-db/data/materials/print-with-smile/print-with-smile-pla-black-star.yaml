@@ -1,0 +1,13 @@
+uuid: 4e583579-662f-5eb5-9711-890c9f584b69
+slug: print-with-smile-pla-black-star
+brand:
+  slug: print-with-smile
+name: PLA BLACK STAR
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- industrially_compostable
+properties: {}

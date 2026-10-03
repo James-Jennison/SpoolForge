@@ -1,0 +1,16 @@
+uuid: 6ac568be-4913-5baa-8c12-70c113e77a99
+slug: bambulab-pla-basic-red
+brand:
+  slug: bambulab
+name: PLA Basic Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c12e1fff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/bambulab/bambulab-pla-basic-red/7fccfa4299a8.png
+  type: unspecified
+properties: {}

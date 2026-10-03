@@ -1,0 +1,26 @@
+uuid: e3d631c4-dcf9-5469-bca8-0f9b1392e435
+slug: amolen-pla-matte-dual-color-red-gold
+brand:
+  slug: amolen
+name: PLA Matte Dual Color Red Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#dd8131ff'
+- color_rgba: '#ed2602ff'
+tags:
+- matte
+- industrially_compostable
+- coextruded
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-matte-dual-color-red-gold/b8391807c665.png
+  type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

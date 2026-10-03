@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "baseline": [
+    {
+      "id": "m7-protected-android-validation",
+      "type": "build-test-static-package",
+      "severity": "HIGH",
+      "command": [
+        "heavy-gradle",
+        ":core:test",
+        ":app:testDebugUnitTest",
+        ":app:lintDebug",
+        ":app:assembleDebug",
+        ":app:assembleRelease",
+        ":app:assembleDebugAndroidTest",
+        "--console=plain"
+      ]
+    },
+    {
+      "id": "m7-wire-and-portable-compatibility",
+      "type": "compatibility-regression",
+      "severity": "HIGH",
+      "command": [
+        "bash",
+        "-c",
+        "test -z \"$(git diff --name-only 0dac497b4 -- core/src/main/kotlin/net/jamesjennison/filamajignfc/core/OpenSpoolCodec.kt core/src/main/kotlin/net/jamesjennison/filamajignfc/core/TagCodec.kt core/src/main/kotlin/net/jamesjennison/filamajignfc/core/PortableIdentity.kt core/src/test/resources/paxx)\""
+      ]
+    },
+    {
+      "id": "m7-room-schema-scope",
+      "type": "schema-contract",
+      "severity": "HIGH",
+      "command": [
+        "bash",
+        "-c",
+        "jq -e '.database.version == 6 and ([.database.entities[].tableName] | (index(\"evidence_references\") != null and index(\"optical_characterizations\") != null and index(\"appearance_assertions\") != null and index(\"full_spectrum_role_assertions\") != null and index(\"full_spectrum_assessments\") != null and index(\"full_spectrum_assessment_factors\") != null))' app/schemas/net.jamesjennison.filamajignfc.data.UserDatabase/6.json >/dev/null"
+      ]
+    },
+    {
+      "id": "m7-exact-device-acceptance",
+      "type": "physical-device-acceptance",
+      "severity": "HIGH",
+      "command": [
+        "bash",
+        "-c",
+        "test -s work/m7/device-acceptance.json && jq -e '.version == 1 and .model == \"motorola razr 2023\" and .app_version == \"0.7.0-m7\" and .migration_v5_to_v6 == \"PASS\" and .progressive_disclosure_ui == \"PASS\" and .role_and_suitability_persistence == \"PASS\" and .nfc_payload_regression == \"PASS\" and .portable_identity_v1_regression == \"PASS\" and .spoolman_export_regression == \"PASS\" and .foreign_key_check == \"PASS\"' work/m7/device-acceptance.json >/dev/null && test \"$(jq -r .apk_sha256 work/m7/device-acceptance.json)\" = \"$(sha256sum app/build/outputs/apk/debug/app-debug.apk | cut -d' ' -f1)\""
+      ]
+    },
+    {
+      "id": "m7-diff-format",
+      "type": "diff-check",
+      "severity": "HIGH",
+      "command": ["git", "diff", "--check"]
+    }
+  ],
+  "substantive": [],
+  "conditional": {}
+}

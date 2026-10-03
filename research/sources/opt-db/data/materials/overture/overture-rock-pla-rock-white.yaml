@@ -1,0 +1,18 @@
+uuid: 5851053b-2db3-5f4a-b7d4-04031eef893f
+slug: overture-rock-pla-rock-white
+brand:
+  slug: overture
+name: Rock PLA Rock White
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#000000ff'
+- color_rgba: '#f0ebe5ff'
+tags:
+- imitates_marble
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/overture/overture-rock-pla-rock-white/84004b48699d.jpg
+  type: unspecified
+properties: {}

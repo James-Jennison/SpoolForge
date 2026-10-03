@@ -1,0 +1,13 @@
+{
+  "uuid": "978a8fa6-0cca-4658-ab64-700ddc05ec68",
+  "id": "goblin",
+  "name": "Goblin",
+  "color_hex": [
+    "#58C91B",
+    "#6000B0"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

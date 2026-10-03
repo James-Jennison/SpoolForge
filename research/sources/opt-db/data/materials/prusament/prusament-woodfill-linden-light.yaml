@@ -1,0 +1,26 @@
+uuid: 5e102611-2d87-5d3d-9909-7f4a72fae3d0
+slug: prusament-woodfill-linden-light
+brand:
+  slug: prusament
+name: Woodfill Linden Light
+class: FFF
+abbreviation: Wood
+primary_color:
+  color_rgba: '#dfbf9fff'
+tags:
+  - contains_wood
+  - contains_organic_material
+properties:
+  density: 1.16
+  hardness_shore_d: 67
+  min_print_temperature: 185
+  max_print_temperature: 205
+  preheat_temperature: 170
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  chamber_temperature: 20
+  min_chamber_temperature: 18
+  max_chamber_temperature: 40
+photos:
+  - url: https://files.openprinttag.org/prusament/prusament-woodfill-linden-light/prusament-woodfill-linden-light-0-7306bbc7.jpg
+    type: unspecified

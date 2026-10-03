@@ -1,0 +1,20 @@
+{
+  "finding_id": "filamajig-label-deepseek-stale-preview",
+  "change_id": "filamajig-label-prototype-20260907",
+  "cycle_id": "review-cycle-b283c5a2aa6c",
+  "reviewer": "deepseek",
+  "severity": "CRITICAL",
+  "category": "barcode-evidence",
+  "summary": "Live preview codes could persist across frames and differ from the captured JPEG.",
+  "claim": "A product identifier not visible in the saved label image could override AI data.",
+  "evidence": {
+    "source": "review-cycle-b283c5a2aa6c"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "Decode all barcode and QR evidence from the exact captured JPEG and discard preview accumulation.",
+  "suggested_validation": "Captured-still test finds EAN-13 and QR together and excludes stale preview data.",
+  "reviewer_confidence": "HIGH"
+}

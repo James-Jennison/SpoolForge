@@ -1,0 +1,20 @@
+{
+  "finding_id": "filamajig-label-gemini-main-thread-io",
+  "change_id": "filamajig-label-prototype-20260907",
+  "cycle_id": "review-cycle-b283c5a2aa6c",
+  "reviewer": "gemini",
+  "severity": "MEDIUM",
+  "category": "android-performance",
+  "summary": "The captured JPEG was read synchronously on Android main thread.",
+  "claim": "Large images could freeze or crash the capture UI.",
+  "evidence": {
+    "source": "review-cycle-b283c5a2aa6c"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "Move JPEG I/O and still-image decoding off main thread and handle read failures.",
+  "suggested_validation": "Android tests and closure review verify background processing and failure handling.",
+  "reviewer_confidence": "HIGH"
+}

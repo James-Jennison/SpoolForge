@@ -1,0 +1,14 @@
+{
+  "uuid": "8d394eef-45e6-4650-9cf9-29141372ed2b",
+  "id": "fire",
+  "name": "Fire",
+  "color_hex": [
+    "#EC0000",
+    "#F8CC00",
+    "#FA8423"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

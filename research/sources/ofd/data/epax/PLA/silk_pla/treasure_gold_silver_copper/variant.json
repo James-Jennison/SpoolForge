@@ -1,0 +1,14 @@
+{
+  "uuid": "7ff5a67b-cb3f-40c5-ab17-22d021f8dd0b",
+  "id": "treasure_gold_silver_copper",
+  "name": "Treasure (Gold / Silver / Copper)",
+  "color_hex": [
+    "#DDB95D",
+    "#AEB8C1",
+    "#C25C56"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "uuid": "43d36ad3-3c6d-44b7-81cd-2238f0e2a24b",
+  "id": "dolos",
+  "name": "ASA Dolos Color Shifting",
+  "diameter_tolerance": 0.03,
+  "density": 1.08,
+  "min_print_temperature": 230,
+  "max_print_temperature": 260,
+  "min_bed_temperature": 100,
+  "max_bed_temperature": 115
+}

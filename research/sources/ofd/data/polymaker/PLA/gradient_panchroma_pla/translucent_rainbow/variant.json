@@ -1,0 +1,17 @@
+{
+  "uuid": "7585dfd4-538f-423b-96e4-689ff5fb020b",
+  "id": "translucent_rainbow",
+  "name": "Translucent Rainbow",
+  "color_hex": [
+    "#0095FF",
+    "#F00C00",
+    "#F3C102",
+    "#60AB61",
+    "#F67405"
+  ],
+  "traits": {
+    "translucent": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

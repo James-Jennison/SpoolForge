@@ -1,0 +1,10 @@
+{
+  "uuid": "f6d727c0-f65c-4c93-9462-c8fa1802acd4",
+  "id": "glitter_black",
+  "name": "Glitter Black",
+  "color_hex": "#000000",
+  "traits": {
+    "glitter": true,
+    "industrially_compostable": true
+  }
+}

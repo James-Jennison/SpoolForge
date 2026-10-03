@@ -1,0 +1,11 @@
+uuid: b98dfd11-fa60-5d5b-892e-e8919930460d
+slug: tinmorry-rapid-petg-eco-mint-green
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Mint Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#82e3ecff'
+properties: {}

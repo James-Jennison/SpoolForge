@@ -1,0 +1,17 @@
+uuid: 844d9719-2a19-5347-9bf5-1062cd7541f3
+slug: atomic-filament-royal-blue-pla
+brand:
+  slug: atomic-filament
+name: Royal Blue PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://atomicfilament.com/products/1-kg-blue-pla-filament
+primary_color:
+  color_rgba: '#4921c1ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-royal-blue-pla/5f9730a0ee52.png
+  type: unspecified
+properties: {}

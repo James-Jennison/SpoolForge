@@ -1,0 +1,28 @@
+uuid: 1ffee22e-12eb-5540-b341-dc5c17b173d5
+slug: amolen-pla-silk-s-series-black-blue-purple
+brand:
+  slug: amolen
+name: PLA Silk S-Series Black Blue Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://www.amolen.com/products/pla-silk-s-series?variant=40819669532695
+secondary_colors:
+- color_rgba: '#346ce3ff'
+- color_rgba: '#9b76e7ff'
+- color_rgba: '#000000ff'
+tags:
+- coextruded
+- silk
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-silk-s-series-black-blue-purple/DSC01271.jpg
+  type: unspecified
+properties:
+  density: 1.29
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

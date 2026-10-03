@@ -1,0 +1,13 @@
+uuid: d8af0b37-a1a3-5e79-a2ce-b4c0e525170a
+slug: paramount-3d-pla-terra-copper
+brand:
+  slug: paramount-3d
+name: PLA (Terra Copper)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c88582ff'
+tags:
+- industrially_compostable
+properties: {}

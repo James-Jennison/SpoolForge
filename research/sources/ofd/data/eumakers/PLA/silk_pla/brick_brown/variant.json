@@ -1,0 +1,9 @@
+{
+  "uuid": "26c84547-9878-4ecf-a5fd-322a5db0b694",
+  "id": "brick_brown",
+  "name": "Brick Brown",
+  "color_hex": "#A54830",
+  "traits": {
+    "silk": true
+  }
+}

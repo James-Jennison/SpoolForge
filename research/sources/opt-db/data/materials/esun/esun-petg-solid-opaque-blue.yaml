@@ -1,0 +1,15 @@
+uuid: 545d2b5d-0fe9-5525-9120-0b3d64531fff
+slug: esun-petg-solid-opaque-blue
+brand:
+  slug: esun
+name: PETG Solid Opaque Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://www.amazon.com/eSUN-1-75mm-Filament-Printer-Semi-Transparent/dp/B01LMDFYVS
+primary_color:
+  color_rgba: '#485cc7ff'
+properties: {}
+photos:
+  - url: https://files.openprinttag.org/esun/esun-petg-solid-opaque-blue/a3975c43c458.jpg
+    type: unspecified

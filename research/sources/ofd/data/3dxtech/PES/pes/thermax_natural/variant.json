@@ -1,0 +1,9 @@
+{
+  "uuid": "a24ba696-63c6-48b2-8a5c-d8d89c2e4215",
+  "id": "thermax_natural",
+  "name": "ThermaX Natural",
+  "color_hex": "#FADCA4",
+  "traits": {
+    "without_pigments": true
+  }
+}

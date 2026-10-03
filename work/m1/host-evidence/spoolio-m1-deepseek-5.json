@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-deepseek-5",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "NFC write validation",
+  "summary": "Duplicate OpenSpool records on a tag are not rejected before write.",
+  "claim": "Duplicate OpenSpool records on a tag are not rejected before write.",
+  "evidence": {
+    "source": "In NfcCoordinator.handle(), existingOpenSpool list is built but only checked for unsupported records (firstOrNull { it !is DecodeResult.Supported }). If all existing OpenSpool records are Supported, no rejection occurs. decodeSingleOpenSpool() does reject records.size != 1 on read, but the write path bypasses this check and after overwrite consent writes a single record, potentially discarding extra OpenSpool records.",
+    "response_sha256": "9ce1f17a15210414355a99fa316c46989f28239b61a329155699d55078adf435"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Before writing, reject if the number of existing OpenSpool NDEF records is not exactly one, regardless of whether each is Supported.",
+  "suggested_validation": "Present a tag containing two valid OpenSpool records while in AWAITING_TAG; expect a rejection with duplicate/multiple OpenSpool message and no write.",
+  "reviewer_confidence": "HIGH"
+}

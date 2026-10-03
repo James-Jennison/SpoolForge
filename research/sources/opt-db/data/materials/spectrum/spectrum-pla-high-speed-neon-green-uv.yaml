@@ -1,0 +1,23 @@
+uuid: d3d58218-0faf-5d8c-bb4e-797d6c1d2032
+slug: spectrum-pla-high-speed-neon-green-uv
+brand:
+  slug: spectrum
+name: PLA High Speed Neon Green UV
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#9fec41ff'
+- color_rgba: '#ebece9ff'
+tags:
+- high_speed
+- neon
+- illuminescent_color_change
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-high-speed-neon-green-uv/spectrum-pla-high-speed-neon-green-uv-0-d0b7411d.jpg
+  type: unspecified

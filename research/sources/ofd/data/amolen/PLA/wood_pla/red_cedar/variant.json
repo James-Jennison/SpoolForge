@@ -1,0 +1,14 @@
+{
+  "uuid": "83eedfe4-5e97-4b0a-a3ff-912bc98e3488",
+  "id": "red_cedar",
+  "name": "Red Cedar",
+  "color_hex": [
+    "#F6A25C",
+    "#FF9100"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true,
+    "contains_wood": true
+  }
+}

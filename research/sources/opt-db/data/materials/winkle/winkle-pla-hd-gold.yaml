@@ -1,0 +1,14 @@
+uuid: 290ecf19-a3d9-5113-9e88-023236b5e2e9
+slug: winkle-pla-hd-gold
+brand:
+  slug: winkle
+name: PLA HD Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ce9f2eff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

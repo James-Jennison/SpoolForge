@@ -1,0 +1,24 @@
+uuid: e01c7e89-205e-57bb-b3b0-fcefd9fc6bec
+slug: polymaker-panchroma-matte-pla-grass-green
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Grass Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#32bc46ff'
+tags:
+- matte
+photos:
+- url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-grass-green/polymaker-panchroma-matte-pla-grass-green-0-89af01d2.jpg
+  type: unspecified
+transmission_distance: 0.6
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

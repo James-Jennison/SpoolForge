@@ -1,0 +1,13 @@
+uuid: cd857fee-3f01-5c3f-b744-ec053448e9e5
+slug: overture-pla-professional-moonlight-silver
+brand:
+  slug: overture
+name: PLA Professional Moonlight Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#abacb0ff'
+tags:
+- industrially_compostable
+properties: {}

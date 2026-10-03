@@ -1,0 +1,20 @@
+{
+  "finding_id": "filamajig-label-deepseek-interrupted-response",
+  "change_id": "filamajig-label-prototype-20260907",
+  "cycle_id": "review-cycle-f8f42090eb69",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "transport-recovery",
+  "summary": "An interrupted loopback response could leave the scan failed after the server completed a billed provider request.",
+  "claim": "Retrying without request identity could duplicate provider work or lose a completed result.",
+  "evidence": {
+    "source": "review-cycle-f8f42090eb69"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "Bind requests to image SHA-256, cache completed results server-side, and retry one IOException with the same identity.",
+  "suggested_validation": "Python test proves cache compute occurs once and final three-reviewer closure reports no findings.",
+  "reviewer_confidence": "HIGH"
+}

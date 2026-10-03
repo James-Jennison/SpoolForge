@@ -1,0 +1,19 @@
+uuid: 55ce000c-528d-5b43-ab0e-382294038f31
+slug: sovb-3d-fil-pla-orange-fluo
+brand:
+  slug: sovb-3d
+name: Fil PLA Orange Fluo
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#eb5405ff'
+tags:
+- neon
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 180
+  max_print_temperature: 200
+  min_bed_temperature: 0
+  max_bed_temperature: 60

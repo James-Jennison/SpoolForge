@@ -1,0 +1,21 @@
+uuid: a7999663-73eb-5f22-9026-c30dddfe3fec
+slug: filamentpm-abs-white
+brand:
+  slug: filamentpm
+name: ABS - White
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#ebece9ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-abs-white/00784fdb1686.png
+    type: unspecified
+properties:
+  density: 1.04
+  min_print_temperature: 220
+  max_print_temperature: 250
+  min_bed_temperature: 100
+  max_bed_temperature: 110

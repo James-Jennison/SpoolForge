@@ -1,0 +1,9 @@
+{
+  "uuid": "3e280d2c-272f-46fa-b983-b2c0c7576aeb",
+  "id": "nature",
+  "name": "Nature",
+  "color_hex": "#C3C9C2",
+  "traits": {
+    "glitter": true
+  }
+}

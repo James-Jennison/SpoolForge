@@ -1,0 +1,16 @@
+{
+  "uuid": "d90b763f-8115-4f0d-917a-c714daf17bd6",
+  "id": "fairy_floss_pink_purple_blue",
+  "name": "Fairy Floss (pink → purple → blue)",
+  "color_hex": [
+    "#FF00A2",
+    "#BE2ED6",
+    "#0099E6"
+  ],
+  "traits": {
+    "translucent": true,
+    "glitter": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

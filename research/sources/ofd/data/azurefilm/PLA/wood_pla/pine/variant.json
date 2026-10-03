@@ -1,0 +1,9 @@
+{
+  "uuid": "3b0184e8-320e-4d28-96ee-e97750632f0d",
+  "id": "pine",
+  "name": "Pine",
+  "color_hex": "#c2a085",
+  "traits": {
+    "contains_wood": true
+  }
+}

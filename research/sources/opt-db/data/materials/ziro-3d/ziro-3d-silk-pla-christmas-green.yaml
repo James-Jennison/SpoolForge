@@ -1,0 +1,14 @@
+uuid: b2a4037f-5f25-5c13-acd4-08684f2b6996
+slug: ziro-3d-silk-pla-christmas-green
+brand:
+  slug: ziro-3d
+name: Silk PLA Christmas Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#00c456ff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

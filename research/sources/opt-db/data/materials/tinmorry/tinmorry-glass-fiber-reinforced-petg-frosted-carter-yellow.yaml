@@ -1,0 +1,14 @@
+uuid: 60afb502-5b71-5389-b7f5-95e8b4bd925e
+slug: tinmorry-glass-fiber-reinforced-petg-frosted-carter-yellow
+brand:
+  slug: tinmorry
+name: Glass Fiber Reinforced PETG Frosted Carter Yellow
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f8cc00ff'
+tags:
+- contains_glass_fiber
+- abrasive
+properties: {}

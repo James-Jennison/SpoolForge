@@ -1,0 +1,9 @@
+{
+  "uuid": "c12046b7-f08b-4c8f-bd43-217dc94eab3e",
+  "id": "red",
+  "name": "Red",
+  "color_hex": "#E20010",
+  "traits": {
+    "ipa_soluble": true
+  }
+}

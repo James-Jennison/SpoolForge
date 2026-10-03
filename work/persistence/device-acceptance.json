@@ -1,0 +1,35 @@
+{
+  "observed_at": "2026-09-07 PDT",
+  "device": "motorola razr 2023",
+  "package": "net.jamesjennison.filamajignfc",
+  "installed_apk_sha256": "ca73900b2a48fce47765e65c898b21570488c8b39b808a33009c2dd540f3d7d0",
+  "installed_apk_matches_local": true,
+  "before": {
+    "user_database_version": 4,
+    "custom_records": 6,
+    "recents": 4
+  },
+  "after": {
+    "user_database_version": 5,
+    "custom_records": 6,
+    "recents": 4,
+    "filament_profiles": 6,
+    "profile_observations": 72,
+    "profile_overrides": 72,
+    "profile_identifiers": 1,
+    "physical_spools": 6,
+    "tag_bindings": 0,
+    "transmission_distance_measurements": 0,
+    "foreign_key_violations": 0
+  },
+  "acceptance": {
+    "legacy_custom_record_hash_preserved": true,
+    "legacy_recent_hash_preserved": true,
+    "one_profile_per_legacy_record": true,
+    "one_spool_per_legacy_record": true,
+    "cold_restart_completed": true,
+    "preserved_recent_records_visible": true,
+    "ai_scan_entry_visible": true
+  },
+  "scope": "Migration/readback only. No NFC tag or printer operation was performed. Raw database backups and UI captures remain local and are excluded from Git."
+}

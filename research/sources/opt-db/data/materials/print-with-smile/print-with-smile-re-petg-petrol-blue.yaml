@@ -1,0 +1,13 @@
+uuid: 0302bd0c-ae76-5f45-83c2-cbb6eb60a6a9
+slug: print-with-smile-re-petg-petrol-blue
+brand:
+  slug: print-with-smile
+name: RE-PETG Petrol BLUE
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#178b9fff'
+tags:
+- recycled
+properties: {}

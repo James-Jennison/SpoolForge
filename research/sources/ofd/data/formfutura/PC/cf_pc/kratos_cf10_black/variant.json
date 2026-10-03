@@ -1,0 +1,10 @@
+{
+  "uuid": "cc4913ce-5be8-439a-af71-d6ecdfc27301",
+  "id": "kratos_cf10_black",
+  "name": "Kratos CF10 Black",
+  "color_hex": "#000000",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "uuid": "1fbc95cf-f414-4e81-b523-e6de9adec002",
+  "id": "neon_green_uv",
+  "name": "Neon Green UV",
+  "color_hex": [
+    "#9FEC41",
+    "#386DFF"
+  ],
+  "traits": {
+    "neon": true,
+    "illuminescent_color_change": true,
+    "industrially_compostable": true,
+    "high_flow": true
+  }
+}

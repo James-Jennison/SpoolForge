@@ -1,0 +1,21 @@
+uuid: cd819f88-3982-584a-aa82-e80de0a60f47
+slug: spectrum-pctg-premium-transparent-yellow
+brand:
+  slug: spectrum
+name: PCTG Premium Transparent Yellow
+class: FFF
+type: PCTG
+abbreviation: PCTG
+primary_color:
+  color_rgba: '#fadb24ff'
+tags:
+- translucent
+properties:
+  density: 1.23
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 60
+  max_bed_temperature: 100
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pctg-premium-transparent-yellow/spectrum-pctg-premium-transparent-yellow-0-f9735d26.jpg
+  type: unspecified

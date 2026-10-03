@@ -1,0 +1,11 @@
+uuid: a9595b33-1953-5f7c-8306-e4866d40cfac
+slug: print-with-smile-pet-g-green
+brand:
+  slug: print-with-smile
+name: PET-G GREEN
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#089a45ff'
+properties: {}

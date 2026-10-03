@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-closure-claude-2",
+  "disposition": "OUT_OF_SCOPE",
+  "reason": "Optional startup budget/optimization, not a defect against an Owner requirement. Full integrity check retained to catch same-count corruption. Actual measured latency disclosed; Owner warm-query100ms p95 target passes. No high risk accepted or invented cold-start target.",
+  "evidence_reference": "work/m1/lifecycle-closure-review.json; work/m1/host-evidence/lifecycle-closure-build.log",
+  "resolved": true
+}

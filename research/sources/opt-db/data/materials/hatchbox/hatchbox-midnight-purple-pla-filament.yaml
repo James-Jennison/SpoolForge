@@ -1,0 +1,21 @@
+uuid: a1296898-ea4c-5a93-a1b8-a911ffa857a2
+slug: hatchbox-midnight-purple-pla-filament
+brand:
+  slug: hatchbox
+name: Midnight Purple PLA Filament
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#8846aeff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-midnight-purple-pla-filament/5a07e8ee8c28.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 180
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 60

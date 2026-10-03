@@ -1,0 +1,12 @@
+uuid: 82683368-1744-57a0-a7a1-51f30203bc39
+slug: recreus-filaflex-82a-tpu-white
+brand:
+  slug: recreus
+name: Filaflex 82A TPU White
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#efefefff'
+properties:
+  hardness_shore_a: 82

@@ -1,0 +1,21 @@
+{
+  "model": "motorola razr 2023",
+  "app_version": "0.6.0-m6",
+  "photo_count": 1,
+  "local_qr_codes": 1,
+  "local_code_decode_ms": 5399.014164,
+  "ai_label_to_review_ms": 8905.444736,
+  "ai_under_one_minute": true,
+  "retail_gtin_lookup_ms": 199.819271,
+  "manual_csv_prepare_ms": 2.203489,
+  "manual_obscure_filament": "Gizmo Dorks HIPS White",
+  "ai_fields": {
+    "brand": "MARSWORK",
+    "material": "PLA",
+    "color": "Cyan",
+    "transmission_distance": "2.7",
+    "diameter_mm": "1.75",
+    "weight_g": "1000"
+  },
+  "measurement": "Device pipeline timings end when an editable seed is available; camera framing and human review time are excluded."
+}

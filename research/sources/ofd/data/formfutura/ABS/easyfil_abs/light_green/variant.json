@@ -1,0 +1,10 @@
+{
+  "uuid": "6f86fbef-08d3-4046-99b3-ad2e0e019d9e",
+  "id": "light_green",
+  "name": "Light Green",
+  "color_hex": "#9AED51",
+  "discontinued": false,
+  "traits": {
+    "filtration_recommended": true
+  }
+}

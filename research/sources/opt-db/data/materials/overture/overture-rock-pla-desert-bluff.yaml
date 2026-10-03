@@ -1,0 +1,15 @@
+uuid: 30f555c6-1b4b-5e9f-a3fb-7c2094f7225d
+slug: overture-rock-pla-desert-bluff
+brand:
+  slug: overture
+name: Rock PLA Desert Bluff
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#e56750ff'
+- color_rgba: '#e7a662ff'
+tags:
+- gradual_color_change
+- industrially_compostable
+properties: {}

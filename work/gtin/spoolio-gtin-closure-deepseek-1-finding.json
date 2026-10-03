@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-gtin-closure-deepseek-1",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-dcf83ca9ce72",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Performance/Integrity Verification",
+  "summary": "The p95 latency measurement in DeviceGtinAcceptanceTest does not include per-lookup sidecar digest validation because the timed loop reuses a single GtinIndex instance; constructor validation is bypassed after initial lookup. Additionally, the change text cites 95.45ms, but the provided device evidence records 99.91927ms.",
+  "claim": "The decision to retain full per-lookup digest based on measured p95 is not supported by the timed operation; actual full lookup with hash validation may be slower and could exceed acceptable latency. The reported p95 may mislead performance expectations.",
+  "evidence": {
+    "source": "DeviceGtinAcceptanceTest.kt times loop: 'val times=(1..20).map { ... index.lookup(\"07340002119380\") ... }' uses the same 'index' variable from before; sidecar corruption test creates 'GtinIndex(context)' to trigger repair. Device evidence p95_ms=99.91927, change text says 'measured target p95 is 95.45ms'.",
+    "response_sha256": "cbbfa3506a7d9bf853664aa861be1e39241d84883b64b7b167b6d1e39e35a3df"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "Either implement per-lookup digest inside GtinIndex.lookup and ensure the timed loop includes it (e.g., by asserting a digest validation count increments each lookup), or change the test to instantiate a new GtinIndex for each timed lookup if validation is per-construction. Update the change description to match the actual measured p95 (99.91927ms).",
+  "suggested_validation": "Add an instrumentation test that corrupts the sidecar and verifies lookup either repairs it (proving per-lookup digest) or that a new GtinIndex is required. Ensure the p95 measurement includes any per-lookup digest overhead and matches the reported value.",
+  "reviewer_confidence": "HIGH"
+}

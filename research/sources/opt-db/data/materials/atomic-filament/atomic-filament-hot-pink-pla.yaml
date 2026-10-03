@@ -1,0 +1,17 @@
+uuid: 7ab0daa7-52d6-5c34-8849-4ca5c7e6253c
+slug: atomic-filament-hot-pink-pla
+brand:
+  slug: atomic-filament
+name: Hot Pink PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://atomicfilament.com/products/hot-pink-pla-filament
+primary_color:
+  color_rgba: '#f06e92ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-hot-pink-pla/d5f62a13252c.png
+  type: unspecified
+properties: {}

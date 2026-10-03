@@ -1,0 +1,10 @@
+{
+  "uuid": "47750361-5549-4fcc-86cf-5a96b7ac1579",
+  "id": "vertigo_chocolate",
+  "name": "Vertigo Chocolate",
+  "color_hex": "#6E4325",
+  "traits": {
+    "glitter": true,
+    "industrially_compostable": true
+  }
+}

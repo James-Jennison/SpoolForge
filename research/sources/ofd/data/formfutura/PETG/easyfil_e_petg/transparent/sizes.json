@@ -1,0 +1,137 @@
+[
+  {
+    "uuid": "373a1695-2630-45f2-a8d6-95bd47f73714",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "PTGE-175TRNS-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epetg"
+      }
+    ]
+  },
+  {
+    "uuid": "8c90de64-5c61-4601-95d3-a13fa89c8c1c",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "empty_spool_weight": 20,
+    "article_number": "PTGE-175TRNS-B1000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epetg"
+      }
+    ]
+  },
+  {
+    "uuid": "ecfda6f4-af2b-4cf1-9ad8-07dd91bb17ca",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "PTGE-175TRNS-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epetg"
+      }
+    ]
+  },
+  {
+    "uuid": "ce4cfa17-ad84-4b35-a773-f37b762ae7a3",
+    "filament_weight": 4500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "PTGE-175TRNS-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epetg"
+      }
+    ]
+  },
+  {
+    "uuid": "27d64b09-1d41-4eb4-90c8-07f77ea58197",
+    "filament_weight": 8000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 1040,
+    "article_number": "PTGE-175TRNS-08000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epetg"
+      }
+    ]
+  },
+  {
+    "uuid": "a0b2cec6-61e9-4469-a213-828abd00deba",
+    "filament_weight": 1000,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "PTGE-285TRNS-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epetg"
+      }
+    ]
+  },
+  {
+    "uuid": "db3b38ef-634a-4e19-9783-3bfb12579194",
+    "filament_weight": 2300,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "PTGE-285TRNS-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epetg"
+      }
+    ]
+  },
+  {
+    "uuid": "ab5b3bd4-afa8-4575-88ae-7a6bb48af9e8",
+    "filament_weight": 4500,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "PTGE-285TRNS-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epetg"
+      }
+    ]
+  },
+  {
+    "uuid": "50de18c7-36cf-42b2-8c20-ef1892bfe9b7",
+    "filament_weight": 8000,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 1040,
+    "article_number": "PTGE-285TRNS-08000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-epetg"
+      }
+    ]
+  }
+]

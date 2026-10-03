@@ -1,0 +1,21 @@
+uuid: 97a8dc9d-ba28-58fa-9a9d-74891b31ee56
+slug: spectrum-rpetg-porcelain-white
+brand:
+  slug: spectrum
+name: rPETG Porcelain White
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#eaedf2ff'
+tags:
+- recycled
+properties:
+  density: 1.23
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-rpetg-porcelain-white/spectrum-rpetg-porcelain-white-0-aa9b4d44.jpg
+  type: unspecified

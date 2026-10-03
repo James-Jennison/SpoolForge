@@ -1,0 +1,14 @@
+uuid: 41a3a0a5-97f1-5adb-b28c-46f1f31c82cc
+slug: tinmorry-matte-pla-grey
+brand:
+  slug: tinmorry
+name: Matte PLA Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#9f9f9fff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

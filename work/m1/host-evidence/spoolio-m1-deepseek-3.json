@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-deepseek-3",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "Catalog metadata editing",
+  "summary": "No local edit capability for catalog entries.",
+  "claim": "No local edit capability for catalog entries.",
+  "evidence": {
+    "source": "Detail composable in MainActivity.kt displays metadata and offers only 'Prepare verified NFC write'; no edit button. The only local record creation is the FAB 'Custom filament' or editing a decoded tag. No function in MainViewModel converts a CatalogEntry to a Provenance.CATALOG_EDITED record.",
+    "response_sha256": "9ce1f17a15210414355a99fa316c46989f28239b61a329155699d55078adf435"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Add an 'Edit locally' action in Detail that opens a pre-populated form (including temperatures) and saves a CATALOG_EDITED record preserving original values and per-field provenance.",
+  "suggested_validation": "Select a catalog entry, modify a field, save. Verify the edited record appears, original source/provenance is retained per field, and data survives catalog replacement.",
+  "reviewer_confidence": "HIGH"
+}

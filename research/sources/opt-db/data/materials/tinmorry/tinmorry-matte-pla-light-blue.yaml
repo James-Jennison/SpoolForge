@@ -1,0 +1,14 @@
+uuid: 309f1fc6-7b29-5548-8f37-b9e73fdda144
+slug: tinmorry-matte-pla-light-blue
+brand:
+  slug: tinmorry
+name: Matte PLA Light Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c6f3fdff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

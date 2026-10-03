@@ -1,0 +1,13 @@
+uuid: 299de67e-53a9-50eb-b98d-830826e36258
+slug: tinmorry-petg-marble-granite
+brand:
+  slug: tinmorry
+name: PETG Marble Granite
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ecefedff'
+tags:
+- imitates_marble
+properties: {}

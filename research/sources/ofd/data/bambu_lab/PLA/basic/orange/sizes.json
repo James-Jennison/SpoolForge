@@ -1,0 +1,28 @@
+[
+  {
+    "uuid": "88a0e35f-f0cc-478a-8c1d-c9160d131bca",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "ean": "6977252426954",
+    "article_number": "10300",
+    "purchase_links": [
+      {
+        "store_id": "bblstore",
+        "url": "https://us.store.bambulab.com/collections/pla/products/pla-basic-filament?variant=40475106672776"
+      }
+    ]
+  },
+  {
+    "uuid": "db5ac5bb-2d89-4519-a530-7d42a0a9fabc",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "6975337030898",
+    "purchase_links": [
+      {
+        "store_id": "3deksperten",
+        "url": "https://3deksperten.dk/products/bambu-lab-pla-basic-orange-1-75mm-1kg-refill"
+      }
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+uuid: a3c92b00-7432-52f4-a897-4a25f80d0dd8
+slug: polymaker-polysonic-pla-purple
+brand:
+  slug: polymaker
+name: PolySonic™ PLA Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6c5bb1ff'
+tags:
+  - high_speed
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polysonic-pla-purple/e5c69491d60e.png
+    type: unspecified
+properties:
+  density: 1.23
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

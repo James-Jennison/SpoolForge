@@ -1,0 +1,21 @@
+uuid: fe083e45-ac96-5847-afac-ca6b2f8823a7
+slug: spectrum-rpetg-signal-blue
+brand:
+  slug: spectrum
+name: rPETG Signal Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0078bfff'
+tags:
+- recycled
+properties:
+  density: 1.23
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-rpetg-signal-blue/spectrum-rpetg-signal-blue-0-fba9bfd4.jpg
+  type: unspecified

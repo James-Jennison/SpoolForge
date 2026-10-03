@@ -1,0 +1,14 @@
+uuid: dc473e7a-92d7-5e54-bd09-5ff7e735ac44
+slug: overture-pla-gray-blue
+brand:
+  slug: overture
+name: PLA Gray Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5e84a4ff'
+tags:
+- industrially_compostable
+photos: []
+properties: {}

@@ -1,0 +1,11 @@
+{
+  "uuid": "0117e4c3-1315-46d2-b71f-ae100026a3ea",
+  "id": "primaselect_glow_abs",
+  "name": "Primaselect Glow ABS",
+  "diameter_tolerance": 0.02,
+  "density": 1.04,
+  "min_print_temperature": 230,
+  "max_print_temperature": 260,
+  "min_bed_temperature": 90,
+  "max_bed_temperature": 110
+}

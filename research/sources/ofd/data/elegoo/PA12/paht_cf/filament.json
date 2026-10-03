@@ -1,0 +1,17 @@
+{
+    "uuid": "e2c35499-180d-4291-bf02-eddc313af1ad",
+    "id": "paht_cf",
+    "name": "PAHT-CF",
+    "diameter_tolerance": 0.02,
+    "density": 1.06,
+    "slicer_settings": {
+        "orcaslicer": {
+            "id": "OEPAHTB0",
+            "profile_name": "Elegoo PAHT-CF"
+        },
+        "elegooslicer": {
+            "id": "OEPAHTB0",
+            "profile_name": "Elegoo PAHT-CF"
+        }
+    }
+}

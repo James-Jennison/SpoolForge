@@ -1,0 +1,20 @@
+{
+  "change_id": "filamajig-label-marketplace-guard-20260907",
+  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "classification": "SUBSTANTIVE",
+  "summary": "Prevent AI label fields from promoting locally decoded marketplace identifiers to manufacturer SKU or packaging-condition text to brand.",
+  "provenance": {
+    "branch": "codex/m1-offline-openspool",
+    "scope": "Local Android prototype parser, tests, debug APK, and 2023 Razr installation only"
+  },
+  "required_capabilities": [
+    "architecture",
+    "code-correctness",
+    "maintainability",
+    "platform",
+    "android",
+    "adversarial",
+    "ux"
+  ],
+  "modes": []
+}

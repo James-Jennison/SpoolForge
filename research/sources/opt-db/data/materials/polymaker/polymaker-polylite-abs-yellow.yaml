@@ -1,0 +1,23 @@
+uuid: 2f44e408-b401-5d03-bb94-6ca77a9ea98a
+slug: polymaker-polylite-abs-yellow
+brand:
+  slug: polymaker
+name: PolyLite™ ABS Yellow
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#eda900ff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polylite-abs-yellow/e071dc0c6c14.png
+    type: unspecified
+properties:
+  density: 1.04
+  min_print_temperature: 245
+  max_print_temperature: 265
+  min_bed_temperature: 90
+  max_bed_temperature: 100
+  drying_temperature: 70
+  drying_time: 360

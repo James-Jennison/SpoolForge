@@ -1,0 +1,14 @@
+uuid: b8b6fe79-b5ff-5d5d-a439-4e04d9e6fbc9
+slug: winkle-pla-hd-interference-emerald-green
+brand:
+  slug: winkle
+name: PLA HD Interference Emerald Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5f7967ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

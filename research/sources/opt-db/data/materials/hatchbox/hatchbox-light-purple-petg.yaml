@@ -1,0 +1,19 @@
+uuid: d068762d-c863-5388-a4dc-2088bc74176b
+slug: hatchbox-light-purple-petg
+brand:
+  slug: hatchbox
+name: Light Purple PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#8d65c7ff'
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-light-purple-petg/9facde37badc.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 0
+  max_bed_temperature: 85

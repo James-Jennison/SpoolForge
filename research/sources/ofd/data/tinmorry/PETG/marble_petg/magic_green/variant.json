@@ -1,0 +1,10 @@
+{
+  "uuid": "1e9773d5-9bdb-4df0-b00a-d68a9b43f9b0",
+  "id": "magic_green",
+  "name": "Magic Green",
+  "color_hex": "#C8D8C4",
+  "traits": {
+    "imitates_marble": true,
+    "imitates_stone": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "uuid": "ea3669e7-0131-4120-93bf-83eb4224dccf",
+  "id": "e_glow_in_the_dark_green",
+  "name": "E- Glow in the Dark Green",
+  "color_hex": [
+    "#F1E6B2",
+    "#41A840"
+  ],
+  "traits": {
+    "glow": true,
+    "illuminescent_color_change": true,
+    "industrially_compostable": true,
+    "abrasive": true
+  }
+}

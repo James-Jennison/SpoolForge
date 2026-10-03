@@ -1,0 +1,12 @@
+[
+  {
+    "uuid": "8752c6dc-ab43-4228-be4a-7619bd9eaeab",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 180,
+    "spool_core_diameter": 75,
+    "gtin": "5903707923786",
+    "discontinued": false
+  }
+]

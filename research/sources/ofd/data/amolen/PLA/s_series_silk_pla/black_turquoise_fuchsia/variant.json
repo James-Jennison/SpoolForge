@@ -1,0 +1,14 @@
+{
+  "uuid": "dfcd79ca-7a3b-4a72-a897-49befc6bd95d",
+  "id": "black_turquoise_fuchsia",
+  "name": "Black Turquoise Fuchsia",
+  "color_hex": [
+    "#C00698",
+    "#70F0F1",
+    "#000000"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

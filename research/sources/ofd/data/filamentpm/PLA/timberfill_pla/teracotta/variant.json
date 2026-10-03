@@ -1,0 +1,11 @@
+{
+  "uuid": "3872d0eb-cead-4482-92de-107098c0d5dc",
+  "id": "teracotta",
+  "name": "Teracotta",
+  "color_hex": "#CD5A2E",
+  "traits": {
+    "imitates_wood": true,
+    "industrially_compostable": true,
+    "contains_wood": true
+  }
+}

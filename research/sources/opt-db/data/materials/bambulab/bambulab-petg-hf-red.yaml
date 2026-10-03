@@ -1,0 +1,23 @@
+uuid: a8f3e9e1-b90c-512f-bffc-149df12875fa
+slug: bambulab-petg-hf-red
+brand:
+  slug: bambulab
+name: PETG HF Red
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#eb3a3aff'
+tags:
+  - high_speed
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-hf-red/6481a49ce4ab.png
+    type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

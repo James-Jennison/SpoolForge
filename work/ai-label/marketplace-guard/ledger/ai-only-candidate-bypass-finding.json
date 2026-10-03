@@ -1,0 +1,19 @@
+{
+  "finding_id": "filamajig-marketplace-ai-only-candidate-bypass",
+  "change_id": "filamajig-label-marketplace-guard-20260907",
+  "cycle_id": "review-cycle-5037cd18b671",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "identifier-classification",
+  "summary": "An AI-only X00-shaped SKU bypassed local-code candidate suppression.",
+  "claim": "The AI claim itself must pass the shared ambiguity predicate before articleNumber can be populated.",
+  "evidence": {
+    "review_cycle": "review-cycle-5037cd18b671"
+  },
+  "affected_components": [
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/LabelScan.kt"
+  ],
+  "suggested_remediation": "Use one ambiguity-safe predicate across local decoded values and AI SKU claims; preserve exact evidence and require user confirmation.",
+  "suggested_validation": "Cover known X00-shaped Code 128, QR, AI-only candidates, and a noncandidate X0 manufacturer SKU.",
+  "reviewer_confidence": "HIGH"
+}

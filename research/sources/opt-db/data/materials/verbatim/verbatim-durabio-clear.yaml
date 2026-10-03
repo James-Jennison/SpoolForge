@@ -1,0 +1,12 @@
+uuid: 89027b40-b0e5-5038-b4ea-59fa64011e3c
+slug: verbatim-durabio-clear
+brand:
+  slug: verbatim
+name: DURABIO™ Clear
+class: FFF
+abbreviation: Bio
+primary_color:
+  color_rgba: '#e4e7e5ff'
+tags:
+- translucent
+properties: {}

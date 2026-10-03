@@ -1,0 +1,19 @@
+uuid: 89056385-ecab-5df2-8e22-f270d37cc74a
+slug: sovb-3d-fil-pla-bleu-ciel
+brand:
+  slug: sovb-3d
+name: Fil PLA Bleu ciel
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0378d0ff'
+  color_ral: '5015'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24
+  min_print_temperature: 180
+  max_print_temperature: 200
+  min_bed_temperature: 0
+  max_bed_temperature: 60

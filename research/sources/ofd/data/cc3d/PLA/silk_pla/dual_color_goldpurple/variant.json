@@ -1,0 +1,14 @@
+{
+  "uuid": "307a691a-12eb-4808-bc70-09f058a9d001",
+  "id": "dual_color_goldpurple",
+  "name": "Dual Color Gold/Purple",
+  "color_hex": [
+    "#FFCB47",
+    "#8846AE"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

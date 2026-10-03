@@ -1,0 +1,23 @@
+uuid: 68537e21-1293-5ef8-92b6-90c20fd685e8
+slug: polymaker-polysmooth-teal
+brand:
+  slug: polymaker
+name: PolySmooth™ Teal
+class: FFF
+type: PVB
+abbreviation: PVB
+primary_color:
+  color_rgba: '#77d3ddff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polysmooth-teal/57d4cbc82d77.png
+    type: unspecified
+properties:
+  density: 1.1
+  min_print_temperature: 190
+  max_print_temperature: 220
+  min_bed_temperature: 25
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 720
+tags:
+  - ipa_soluble

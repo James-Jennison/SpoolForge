@@ -1,0 +1,15 @@
+uuid: d8453705-c976-5b60-a563-24df49094549
+slug: winkle-pla-high-speed-sky-blue
+brand:
+  slug: winkle
+name: PLA High Speed Sky Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0099e6ff'
+tags:
+- high_speed
+- industrially_compostable
+properties:
+  density: 1.24

@@ -1,0 +1,8 @@
+{
+  "uuid": "b118cc1c-bd63-4ec7-ba6a-3a4b070113a7",
+  "id": "pla_basic",
+  "name": "PLA Basic",
+  "diameter_tolerance": 0.02,
+  "density": 1.24,
+  "discontinued": false
+}

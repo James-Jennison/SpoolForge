@@ -1,0 +1,24 @@
+uuid: c794bad7-f3a3-5b7e-bef9-ccd777f65f35
+slug: bambulab-tpu-90a-grape-jelly
+brand:
+  slug: bambulab
+name: TPU 90A Grape Jelly
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#d6abffff'
+tags:
+- translucent
+properties:
+  density: 1.24
+  hardness_shore_a: 90.0
+  min_print_temperature: 200
+  max_print_temperature: 250
+  min_bed_temperature: 30
+  max_bed_temperature: 35
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45
+photos:
+- url: https://files.openprinttag.org/bambulab/bambulab-tpu-90a-grape-jelly/bambulab-tpu-90a-grape-jelly-0-97023b32.png
+  type: unspecified

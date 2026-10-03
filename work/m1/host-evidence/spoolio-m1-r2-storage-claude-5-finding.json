@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-claude-5",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8b02c7b33686",
+  "reviewer": "claude",
+  "severity": "LOW",
+  "category": "Per-field provenance accuracy",
+  "summary": "Unchanged: reverting an edited field back to its pristine catalog value in a later session still displays 'Edited locally' rather than reverting to 'OFD <revision>', since only the most recent saved state is retained for diffing.",
+  "claim": "Minor, low-impact provenance-display inaccuracy only; no data-correctness impact.",
+  "evidence": {
+    "source": "`saveCustom()`'s `sources` computation, identical to prior submission.",
+    "response_sha256": "b2edd4f8158ecbdbe0fa40ccdfef0d865615410fedc3b04319bbf019f759f765"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "As previously stated: retain the pristine original value per field if exact revert-detection is required.",
+  "suggested_validation": "As previously stated.",
+  "reviewer_confidence": "MEDIUM"
+}

@@ -1,0 +1,10 @@
+{
+  "uuid": "7d93f09d-c6de-4c58-b84c-2c299084eeff",
+  "id": "natural_black",
+  "name": "INNOVATEFIL® CF Natural (Black)",
+  "color_hex": "#000000",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

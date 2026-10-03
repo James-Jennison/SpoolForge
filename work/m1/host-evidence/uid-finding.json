@@ -1,0 +1,17 @@
+{
+  "finding_id": "spoolio-m1-closure-deepseek-uid",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8531a942e791",
+  "reviewer": "deepseek",
+  "severity": "LOW",
+  "category": "NFC Archive UI / Evidence Integrity",
+  "summary": "The new unresolved archive history display in MainActivity formats UID bytes using Java's String.format(\"%02X\", byte), which sign-extends negative byte values. Any UID byte >= 0x80 (e.g., 0xAB) will render as 8 hex digits such as 'FFFFFFAB' instead of two-digit 'AB', corrupting the archived UID evidence shown to the user.",
+  "claim": "Users viewing unresolved write history may misidentify the physical tag associated with an archived payload, undermining the retained-inspectable evidence feature and potentially causing incorrect manual reconciliation decisions.",
+  "evidence": {
+    "source": "Diff line in MainActivity.kt: `Text(\"Unresolved \u00b7 ${java.util.Date(entry.timestamp)} \u00b7 UID ${entry.uid.joinToString(\"\") { \"%02X\".format(it) }}\", fontWeight = FontWeight.Bold)`. The `%02X` format applied to a Kotlin Byte triggers Java Formatter's widening conversion to int, sign-extending bytes with the high bit set. The existing test `unresolvedArchiveRetainsEveryEntryBeyondTwenty` only uses UID bytes 0..24, all below 0x80, so this failure path is not covered by the passing test suite.",
+    "response_sha256": "e73efb5dd58308cfe1cc4233f0e628423f7ba916b004ab3cfc4c97979d4dc22a"
+  },
+  "suggested_remediation": "Mask the byte to an unsigned int before formatting, e.g., use `\"%02X\".format(it.toInt() and 0xFF)` or `it.toUByte().toString(16).padStart(2, '0').uppercase()` inside the joinToString block.",
+  "suggested_validation": "Add a unit test (e.g., in StorageAcceptanceTest) that creates a WriteJournal archive with a UID containing byte 0xAB, retrieves archives(), and asserts the UID string contains 'AB' and not 'FFFFFFAB'. Alternatively, a UI test for NfcPanel history display.",
+  "reviewer_confidence": "HIGH"
+}

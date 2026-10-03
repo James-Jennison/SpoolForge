@@ -1,0 +1,11 @@
+uuid: 86174a20-9dea-5e20-87ea-23b96d933ca1
+slug: mexico-makers-petg-gris
+brand:
+  slug: mexico-makers
+name: PETG - Gris
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#7a838eff'
+properties: {}

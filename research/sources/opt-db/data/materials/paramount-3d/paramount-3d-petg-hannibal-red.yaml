@@ -1,0 +1,11 @@
+uuid: 12b254d2-ca2b-597a-97d8-90c7128553a4
+slug: paramount-3d-petg-hannibal-red
+brand:
+  slug: paramount-3d
+name: PETG (Hannibal Red)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#7a341cff'
+properties: {}

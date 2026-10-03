@@ -1,0 +1,11 @@
+{
+  "uuid": "78474e10-12bc-4cce-a7a8-44d1b2eaba5e",
+  "id": "pet",
+  "name": "PET",
+  "diameter_tolerance": 0.02,
+  "density": 1.38,
+  "min_print_temperature": 220,
+  "max_print_temperature": 250,
+  "min_bed_temperature": 70,
+  "max_bed_temperature": 90
+}

@@ -1,0 +1,14 @@
+{
+  "uuid": "96cf22a2-0402-4da6-8bda-b3b316191586",
+  "id": "solar_flare",
+  "name": "Solar Flare",
+  "color_hex": [
+    "#FADB24",
+    "#62E480"
+  ],
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "industrially_compostable": true
+  }
+}

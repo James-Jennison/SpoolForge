@@ -1,0 +1,14 @@
+uuid: 639c5e7b-33ac-5383-a700-c91708114ca4
+slug: matter3d-inc-basics-series-pla-silkglitter-metallic-silk-orange
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA - Silk/Glitter Metallic (Silk) Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f07821ff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

@@ -1,0 +1,15 @@
+{
+  "uuid": "f70f6c18-e449-4037-995d-5a3d526fd4e0",
+  "id": "sunset_rainbow",
+  "name": "Sunset Rainbow",
+  "color_hex": [
+    "#FFB031",
+    "#00A594",
+    "#E31A1F",
+    "#0353BA"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "uuid": "59edd20b-1446-44aa-b55d-7f4184d504c9",
+  "id": "special_rainbow",
+  "name": "Special Rainbow",
+  "color_hex": [
+    "#436176",
+    "#FC6D8E"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "recycled": true,
+    "industrially_compostable": true
+  }
+}

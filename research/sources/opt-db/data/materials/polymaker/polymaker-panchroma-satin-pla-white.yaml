@@ -1,0 +1,21 @@
+uuid: f8816973-54c5-5b12-97d5-b13c36e954be
+slug: polymaker-panchroma-satin-pla-white
+brand:
+  slug: polymaker
+name: Panchroma™ Satin PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f5f0ecff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-satin-pla-white/2c8e486ddcd4.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

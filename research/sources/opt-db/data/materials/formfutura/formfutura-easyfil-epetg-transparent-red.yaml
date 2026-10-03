@@ -1,0 +1,21 @@
+uuid: 6772c000-21c5-5eae-99d6-a7e9aca30f7a
+slug: formfutura-easyfil-epetg-transparent-red
+brand:
+  slug: formfutura
+name: EasyFil ePETG Transparent Red
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#98282fff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-easyfil-epetg-transparent-red/96d490fba70e.png
+    type: unspecified
+properties:
+  density: 1.29
+  min_print_temperature: 235
+  max_print_temperature: 275
+  min_bed_temperature: 70
+  max_bed_temperature: 90

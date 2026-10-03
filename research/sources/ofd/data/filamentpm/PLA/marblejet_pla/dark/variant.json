@@ -1,0 +1,10 @@
+{
+  "uuid": "385960dd-388b-4cf5-9022-211c5a110554",
+  "id": "dark",
+  "name": "Dark",
+  "color_hex": "#ACB1BA",
+  "traits": {
+    "imitates_marble": true,
+    "industrially_compostable": true
+  }
+}

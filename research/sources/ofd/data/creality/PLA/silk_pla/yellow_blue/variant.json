@@ -1,0 +1,14 @@
+{
+  "uuid": "816552b9-8b2d-4ef4-be22-19fcd54494ca",
+  "id": "yellow_blue",
+  "name": "Yellow-Blue",
+  "color_hex": [
+    "#FBF942",
+    "#0078BF"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

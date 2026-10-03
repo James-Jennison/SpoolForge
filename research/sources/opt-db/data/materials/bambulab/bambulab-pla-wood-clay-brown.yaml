@@ -1,0 +1,26 @@
+uuid: 0e596c2a-2b72-515c-8ccb-c702fe176d74
+slug: bambulab-pla-wood-clay-brown
+brand:
+  slug: bambulab
+name: PLA Wood Clay Brown
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#995f11ff'
+tags:
+  - matte
+  - contains_wood
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-wood-clay-brown/3de1134b811f.png
+    type: unspecified
+properties:
+  density: 1.21
+  min_print_temperature: 190
+  max_print_temperature: 240
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45
+url: https://us.store.bambulab.com/products/pla-wood?id=43075832021128

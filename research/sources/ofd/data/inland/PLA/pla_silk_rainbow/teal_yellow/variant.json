@@ -1,0 +1,15 @@
+{
+  "uuid": "ec820065-1e7e-4457-b0cc-30f5d28ca04e",
+  "id": "teal_yellow",
+  "name": "Teal, Yellow",
+  "color_hex": [
+    "#00B4BC",
+    "#D8BA64",
+    "#875117"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

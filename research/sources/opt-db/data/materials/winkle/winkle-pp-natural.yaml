@@ -1,0 +1,14 @@
+uuid: 0cd0278a-16f8-54d4-bcf6-33a90b223678
+slug: winkle-pp-natural
+brand:
+  slug: winkle
+name: PP Natural
+class: FFF
+type: PP
+abbreviation: PP
+primary_color:
+  color_rgba: '#dee2daff'
+tags:
+- without_pigments
+properties:
+  density: 0.89

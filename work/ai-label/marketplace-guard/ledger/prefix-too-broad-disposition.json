@@ -1,0 +1,7 @@
+{
+  "finding_id": "filamajig-marketplace-prefix-too-broad",
+  "disposition": "CONFIRMED",
+  "reason": "Resolved by the shared Amazon-style candidate predicate, ambiguity-safe articleNumber merge, explicit confirmation message, and regression coverage. Grok, Gemini, and DeepSeek returned no findings on the exact final source.",
+  "evidence_reference": "review-cycle-cd73e6825341; evidence-cycle-d958dceae5ca",
+  "resolved": true
+}

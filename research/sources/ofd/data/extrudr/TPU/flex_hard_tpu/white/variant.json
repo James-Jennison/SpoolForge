@@ -1,0 +1,9 @@
+{
+  "uuid": "1a9ca98c-acad-44d1-82b3-078b6785c9e5",
+  "id": "white",
+  "name": "White",
+  "color_hex": "#FFFFFF",
+  "color_standards": {
+    "ral": "9003"
+  }
+}

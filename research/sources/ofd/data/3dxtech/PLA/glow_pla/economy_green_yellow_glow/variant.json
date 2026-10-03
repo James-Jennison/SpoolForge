@@ -1,0 +1,13 @@
+{
+  "uuid": "ee1935e2-6e64-43f9-aec6-c0a4cb16af35",
+  "id": "economy_green_yellow_glow",
+  "name": "Economy green-yellow-glow",
+  "color_hex": [
+    "#7FE200",
+    "#F2EFE9"
+  ],
+  "traits": {
+    "illuminescent_color_change": true,
+    "industrially_compostable": true
+  }
+}

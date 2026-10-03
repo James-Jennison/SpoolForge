@@ -1,0 +1,13 @@
+{
+  "uuid": "d24e667d-ac14-4c44-8bad-56f21b5e0c38",
+  "id": "mermaid_95a",
+  "name": "Mermaid 95A",
+  "color_hex": [
+    "#69EBB6",
+    "#39B9DB",
+    "#8D65C7"
+  ],
+  "traits": {
+    "gradual_color_change": true
+  }
+}

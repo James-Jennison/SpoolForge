@@ -1,0 +1,11 @@
+uuid: a7ad0ee5-355d-57c8-9c45-d94197cb336b
+slug: tinmorry-rapid-petg-eco-light-grey
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Light Grey
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#d6d7d8ff'
+properties: {}

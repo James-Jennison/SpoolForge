@@ -1,0 +1,20 @@
+{
+  "finding_id": "spoolio-deepseek-3",
+  "change_id": "spoolio-feasibility-20260906",
+  "cycle_id": "review-cycle-511bc96fa65d",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "Feasibility evidence from existing applications",
+  "summary": "None of the inspected existing Android writer applications demonstrates the requested verified write/read-back acceptance criterion. SpoolPainter's write-followed-by-read-back is commented out and transitions to success; U1-RFID reports success without fresh read-back. Thus the feasibility of reliable tag writing is not proven by prior art.",
+  "claim": "None of the inspected existing Android writer applications demonstrates the requested verified write/read-back acceptance criterion. SpoolPainter's write-followed-by-read-back is commented out and transitions to success; U1-RFID reports success without fresh read-back. Thus the feasibility of reliable tag writing is not proven by prior art.",
+  "evidence": {
+    "source": "Report section 10: \"SpoolPainter 2.4.1 NfcRepository.kt has the write-followed-by-read-back block commented out, then transitions to success. ... U1-RFID also reports written after the write/format call without fresh read-back. These upstream applications cannot be described as proven implementations of the requested reliability standard.\"",
+    "response_sha256": "14940ade81683577086eff6f20c1f63e0fab8d59722f737536c2d459e73d8747"
+  },
+  "affected_components": [
+    "docs/FEASIBILITY.md"
+  ],
+  "suggested_remediation": "Explicitly record in feasibility documentation that no inspected application demonstrates verified NTAG215/OpenSpool read-back. Do not use those applications as evidence of this capability. Implement the report's separate frozen intent/write/fresh read/compare state machine and require it in acceptance.",
+  "suggested_validation": "M1 test 4 (owner's phone/NTAG215 read/inspect \u2192 capacity check \u2192 write \u2192 fresh read \u2192 decode/compare) plus failure/RF-removal tests must be executed and evidence captured. Only a successful fresh decode/compare may display Verified. The test must not rely on SpoolPainter/U1-RFID results.",
+  "reviewer_confidence": "HIGH"
+}

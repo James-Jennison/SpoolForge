@@ -1,0 +1,13 @@
+uuid: 219b90c0-c352-5fc9-b6fa-5542178f45bf
+slug: print-with-smile-satin-pla-yellow
+brand:
+  slug: print-with-smile
+name: SATIN PLA Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f3b400ff'
+tags:
+- industrially_compostable
+properties: {}

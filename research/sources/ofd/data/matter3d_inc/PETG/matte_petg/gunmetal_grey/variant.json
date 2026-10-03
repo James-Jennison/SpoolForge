@@ -1,0 +1,9 @@
+{
+  "uuid": "4f4a6be8-76bd-4574-b11c-7461d566a8cb",
+  "id": "gunmetal_grey",
+  "name": "Gunmetal Grey",
+  "color_hex": "#545252",
+  "traits": {
+    "matte": true
+  }
+}

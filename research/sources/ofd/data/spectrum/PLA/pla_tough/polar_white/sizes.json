@@ -1,0 +1,28 @@
+[
+  {
+    "uuid": "29d65b86-e5c1-4f71-8ab4-c4804e12c298",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5903175651679",
+    "article_number": "80195",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1159-Filament-Spectrum-PLA-Tough-1-75mm-POLAR-WHITE-1kg-RAL-9003.html"
+      }
+    ]
+  },
+  {
+    "uuid": "dbe99b3e-8b82-413e-9c59-9a6fa3a97da5",
+    "filament_weight": 1000,
+    "diameter": 2.85,
+    "ean": "5903175651716",
+    "article_number": "80199",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1163-Filament-Spectrum-PLA-Tough-2-85mm-POLAR-WHITE-1kg-RAL-9003.html"
+      }
+    ]
+  }
+]

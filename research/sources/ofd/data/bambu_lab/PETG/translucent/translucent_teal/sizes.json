@@ -1,0 +1,29 @@
+[
+  {
+    "uuid": "b8e5fcb1-5f30-4288-b4b5-ef9e9ddaadec",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "6975337035992",
+    "article_number": "32501",
+    "purchase_links": [
+      {
+        "store_id": "bblstore",
+        "url": "https://us.store.bambulab.com/collections/petg/products/petg-translucent?variant=41638808092808"
+      }
+    ]
+  },
+  {
+    "uuid": "2e29fd5c-0f7a-4b71-ba0a-fb72fb8a5005",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "ean": "6975337035992",
+    "article_number": "32501",
+    "purchase_links": [
+      {
+        "store_id": "bblstore",
+        "url": "https://us.store.bambulab.com/collections/petg/products/petg-translucent?variant=42720024952968"
+      }
+    ]
+  }
+]

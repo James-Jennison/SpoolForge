@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "e2dc0391-5b1f-4439-8764-d365cc88ccc9",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "polymaker",
+        "url": "https://us.polymaker.com/products/panchroma-dual-matte?variant=43613087825977?"
+      }
+    ]
+  }
+]

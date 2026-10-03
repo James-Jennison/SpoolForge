@@ -1,0 +1,11 @@
+uuid: ca11f27b-3154-5328-befe-660e4fdbee07
+slug: paramount-3d-petg-simpson-yellow
+brand:
+  slug: paramount-3d
+name: PETG (Simpson Yellow)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#fadb24ff'
+properties: {}

@@ -1,0 +1,22 @@
+uuid: fb395d57-fad3-539c-b91d-16513f49fa74
+slug: formfutura-metalfil-ancient-bronze
+brand:
+  slug: formfutura
+name: MetalFil – Ancient Bronze
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#8c7354ff'
+tags:
+  - contains_bronze
+  - abrasive
+  - contains_metal
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-metalfil-ancient-bronze/5fe3679ceaf4.png
+    type: unspecified
+properties:
+  density: 3.5
+  min_print_temperature: 190
+  max_print_temperature: 220
+  max_bed_temperature: 60

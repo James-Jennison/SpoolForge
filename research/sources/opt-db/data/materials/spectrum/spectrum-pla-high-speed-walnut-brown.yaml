@@ -1,0 +1,20 @@
+uuid: e1e054c8-83a5-58a2-b6a1-295c1d17124a
+slug: spectrum-pla-high-speed-walnut-brown
+brand:
+  slug: spectrum
+name: PLA High Speed Walnut Brown
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#55331aff'
+tags:
+- high_speed
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-high-speed-walnut-brown/spectrum-pla-high-speed-walnut-brown-0-80aa38bb.jpg
+  type: unspecified

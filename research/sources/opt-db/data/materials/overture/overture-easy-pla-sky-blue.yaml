@@ -1,0 +1,13 @@
+uuid: 22088c49-659e-5df6-9c14-fe763ddeb052
+slug: overture-easy-pla-sky-blue
+brand:
+  slug: overture
+name: Easy PLA Sky Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#3bc9edff'
+tags:
+- industrially_compostable
+properties: {}

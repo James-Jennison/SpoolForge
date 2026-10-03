@@ -1,0 +1,23 @@
+uuid: d386296a-1088-54cd-8bae-0bb27386f80f
+slug: esun-pla-chameleon-raspberry-red
+brand:
+  slug: esun
+name: PLA Chameleon Raspberry Red
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://esun3dstoreeu.com/products/epla-chameleon?VariantsId=12196
+primary_color:
+  color_rgba: '#fb6066ff'
+tags:
+  - iridescent
+  - glitter
+properties:
+  density: 1.24
+  min_print_temperature: 220
+  max_print_temperature: 240
+  min_bed_temperature: 45
+  max_bed_temperature: 60
+photos:
+  - url: https://files.openprinttag.org/esun/esun-pla-chameleon-raspberry-red/esun-pla-chameleon-raspberry-red-0-b5a0a27c.jpg
+    type: unspecified

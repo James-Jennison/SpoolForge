@@ -1,0 +1,28 @@
+[
+  {
+    "uuid": "67b72243-b5a8-424c-aca5-164ebffb0595",
+    "filament_weight": 250,
+    "diameter": 1.75,
+    "ean": "5905991400523",
+    "article_number": "80989",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1612-Filament-Spectrum-PLA-Nature-1-75mm-FLAX-0-25kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "a17ccf0a-dd93-4f4f-b7bb-37b82784c1b7",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5903175659965",
+    "article_number": "80934",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1605-Filament-Spectrum-PLA-Nature-1-75mm-FLAX-1kg.html"
+      }
+    ]
+  }
+]

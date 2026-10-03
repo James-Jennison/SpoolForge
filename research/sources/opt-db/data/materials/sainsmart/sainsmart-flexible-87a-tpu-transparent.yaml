@@ -1,0 +1,12 @@
+uuid: 5a3c5020-d728-5d67-bfe9-560e106e1855
+slug: sainsmart-flexible-87a-tpu-transparent
+brand:
+  slug: sainsmart
+name: Flexible 87A TPU Transparent
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#efefefff'
+properties:
+  hardness_shore_a: 87

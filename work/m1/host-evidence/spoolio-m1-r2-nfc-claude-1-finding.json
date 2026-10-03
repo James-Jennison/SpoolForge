@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-nfc-claude-1",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-d04a66d06bba",
+  "reviewer": "claude",
+  "severity": "MEDIUM",
+  "category": "NFC write journal / archived unresolved writes",
+  "summary": "The prior silent-eviction bug is confirmed fixed (unresolved write archives are now retained without loss), but there is still no way to ever read back, inspect, export, or individually delete an archived unresolved-write record \u2014 only a bare count is exposed. Combined with confirmed-unbounded retention, this means archived records accumulate forever as permanently opaque, unmanageable data.",
+  "claim": "An unresolved write whose true tag state could never be confirmed (e.g. write partially reached the tag but the app couldn't verify it) is archived to satisfy 'no silent loss,' but then becomes permanently unreachable by the user or any code path \u2014 defeating the purpose of retaining it, since it can never be reviewed, exported for manual reconciliation, or purged once resolved by other means (e.g. reading the physical tag separately). Over the life of an installation, this SharedPreferences-backed store also grows without bound or compaction.",
+  "evidence": {
+    "source": "WriteJournal (NfcCoordinator.kt) exposes `archive()` (write), `archiveCount()` (count only), and `clear()` (which only removes the active `version`/`uid`/`payload` keys, never `archive_*` keys) \u2014 there is no `read`/`list`/`delete` function for archive entries anywhere in NfcCoordinator.kt. `NfcPanel`'s only surfaced signal is `\"${nfc.unresolvedArchiveCount} unresolved write result(s) retained in local history.\"` (from the complementary storage-ui source reviewed in this same cycle). `archive()`'s only bound is `check(count < Int.MAX_VALUE)`, i.e. effectively unbounded, confirmed by the passing test `unresolvedArchiveRetainsEveryEntryBeyondTwenty` which explicitly proves 25 entries are all retained with no eviction.",
+    "response_sha256": "d6d71aae2d028242a00be48b5f18e4566107f046cfee292ddd5d03a59e223f5e"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "Add a minimal read-back surface: at least a way to list archived entries (timestamp + UID) and delete individual entries once a user has manually confirmed/resolved the physical tag, or a bulk-clear affordance with explicit confirmation; consider migrating this to Room if the count is expected to grow meaningfully.",
+  "suggested_validation": "Archive an unresolved write, then verify the app provides a UI/API path to view that specific entry's UID/timestamp and to remove it individually, and that removing it decrements `archiveCount()`.",
+  "reviewer_confidence": "HIGH"
+}

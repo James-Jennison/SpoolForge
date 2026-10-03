@@ -1,0 +1,15 @@
+uuid: 3e3f31f9-0728-5473-949e-ac0bb210e3e0
+slug: raise3d-premium-tpu-95a-black
+brand:
+  slug: raise3d
+name: Premium TPU-95A Black
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#101820ff'
+properties:
+  hardness_shore_a: 95.0
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-premium-tpu-95a-black/raise3d-premium-tpu-95a-black-0-709d1804.jpg
+  type: unspecified

@@ -1,0 +1,11 @@
+{
+  "uuid": "51f972c3-7022-4b76-9b9d-6b527ce3567c",
+  "id": "metallic_finish_bronze",
+  "name": "Metallic Finish Bronze",
+  "color_hex": "#95846F",
+  "traits": {
+    "silk": true,
+    "imitates_metal": true,
+    "industrially_compostable": true
+  }
+}

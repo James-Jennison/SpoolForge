@@ -1,0 +1,29 @@
+[
+  {
+    "uuid": "a008e3bd-3a24-42f5-b368-13b85587fe8f",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "ean": "6975337032342",
+    "article_number": "10602",
+    "purchase_links": [
+      {
+        "store_id": "bblstore",
+        "url": "https://us.store.bambulab.com/collections/pla/products/pla-basic-filament?variant=40475106869384"
+      }
+    ]
+  },
+  {
+    "uuid": "3849caa6-0942-4f1b-9e7d-519d78a0195e",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "ean": "6975337030232",
+    "purchase_links": [
+      {
+        "store_id": "3deksperten",
+        "url": "https://3deksperten.dk/products/bambu-lab-pla-basic-blue-grey-1-75mm-1kg-refill"
+      }
+    ]
+  }
+]

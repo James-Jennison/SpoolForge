@@ -1,0 +1,15 @@
+uuid: 2d0ca326-246c-59ff-ba2c-006f907b5525
+slug: overture-tpu-high-speed-translucent-purple
+brand:
+  slug: overture
+name: TPU High Speed Translucent Purple
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#583061ff'
+tags:
+- translucent
+- high_speed
+properties:
+  hardness_shore_a: 95

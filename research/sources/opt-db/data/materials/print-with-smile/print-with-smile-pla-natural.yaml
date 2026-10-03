@@ -1,0 +1,13 @@
+uuid: b2856317-15eb-5866-b270-f2cf6b401083
+slug: print-with-smile-pla-natural
+brand:
+  slug: print-with-smile
+name: PLA Natural
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#dfdfd3ff'
+tags:
+- industrially_compostable
+properties: {}

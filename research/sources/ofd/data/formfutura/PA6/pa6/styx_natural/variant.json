@@ -1,0 +1,10 @@
+{
+  "uuid": "03671a93-b2ee-46f1-88ad-ca9ce0155566",
+  "id": "styx_natural",
+  "name": "Natural",
+  "color_hex": "#D9D8DE",
+  "discontinued": false,
+  "traits": {
+    "without_pigments": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "uuid": "d762237e-6c7e-444e-a10b-bdfc42646fbb",
+  "id": "chrome_gray",
+  "name": "Chrome Gray",
+  "color_hex": [
+    "#6F727E",
+    "#C3CCD5"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

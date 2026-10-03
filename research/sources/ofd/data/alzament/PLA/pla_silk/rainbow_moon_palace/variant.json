@@ -1,0 +1,14 @@
+{
+  "uuid": "d0b8fdec-eb02-481d-8650-13a73b693a5a",
+  "id": "rainbow_moon_palace",
+  "name": "Rainbow Moon Palace",
+  "color_hex": [
+    "#afa6ce",
+    "#93d7dd",
+    "#e3d4c0"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

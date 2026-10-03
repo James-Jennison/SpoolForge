@@ -1,0 +1,22 @@
+uuid: 046aeba0-cdc0-5da0-8f81-ab418e9495e8
+slug: spectrum-pet-g-ht100-transparent-blue
+brand:
+  slug: spectrum
+name: PET-G HT100™ Transparent Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0066d9ff'
+tags:
+- translucent
+- high_temperature
+properties:
+  density: 1.18
+  min_print_temperature: 250
+  max_print_temperature: 280
+  min_bed_temperature: 100
+  max_bed_temperature: 110
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pet-g-ht100-transparent-blue/spectrum-pet-g-ht100-transparent-blue-0-e955da9f.jpg
+  type: unspecified

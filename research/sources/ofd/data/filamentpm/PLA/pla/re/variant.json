@@ -1,0 +1,9 @@
+{
+  "uuid": "473ee312-31af-4f3a-9696-525c9e67d994",
+  "id": "re",
+  "name": "Re",
+  "color_hex": "#5B4C49",
+  "traits": {
+    "industrially_compostable": true
+  }
+}

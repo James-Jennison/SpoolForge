@@ -1,0 +1,22 @@
+uuid: c5008e88-af5f-5905-afcf-d443c76b6676
+slug: filamentpm-pla-marblejet-dark
+brand:
+  slug: filamentpm
+name: PLA MarbleJet - Dark
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#acb1baff'
+tags:
+  - imitates_marble
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-pla-marblejet-dark/a0b8b62ffee9.png
+    type: unspecified
+properties:
+  density: 1.24
+  hardness_shore_d: 78.3
+  min_print_temperature: 200
+  max_print_temperature: 220
+  min_bed_temperature: 20
+  max_bed_temperature: 60

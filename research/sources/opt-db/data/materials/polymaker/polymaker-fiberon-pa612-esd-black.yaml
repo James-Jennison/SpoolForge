@@ -1,0 +1,27 @@
+uuid: 0d3be6f5-f556-5308-93c8-523d22f2dd38
+slug: polymaker-fiberon-pa612-esd-black
+brand:
+  slug: polymaker
+name: Fiberon™ PA612-ESD Black
+class: FFF
+abbreviation: PA612
+primary_color:
+  color_rgba: '#161618ff'
+tags:
+  - esd_safe
+  - contains_carbon_nano_tubes
+  - contains_carbon
+  - contains_carbon_fiber
+  - abrasive
+  - filtration_recommended
+properties:
+  density: 1.1
+  min_print_temperature: 280
+  max_print_temperature: 300
+  min_bed_temperature: 40
+  max_bed_temperature: 50
+  drying_temperature: 100
+  drying_time: 600
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-fiberon-pa612-esd-black/polymaker-fiberon-pa612-esd-black-0-a53faa56.jpg
+    type: unspecified

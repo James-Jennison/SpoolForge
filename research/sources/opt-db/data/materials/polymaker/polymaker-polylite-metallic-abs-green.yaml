@@ -1,0 +1,24 @@
+uuid: e476776d-f6a4-532e-a99f-fd794ecc66e3
+slug: polymaker-polylite-metallic-abs-green
+brand:
+  slug: polymaker
+name: PolyLite™ Metallic ABS Green
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#3d441eff'
+tags:
+  - imitates_metal
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polylite-metallic-abs-green/5885debcf350.png
+    type: unspecified
+properties:
+  density: 1.04
+  min_print_temperature: 245
+  max_print_temperature: 265
+  min_bed_temperature: 90
+  max_bed_temperature: 100
+  drying_temperature: 70
+  drying_time: 360

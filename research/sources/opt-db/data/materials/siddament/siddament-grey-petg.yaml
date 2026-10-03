@@ -1,0 +1,11 @@
+uuid: bb803805-f4b2-52ca-84b8-4b890e4ee03d
+slug: siddament-grey-petg
+brand:
+  slug: siddament
+name: Grey PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#c5c7c4ff'
+properties: {}

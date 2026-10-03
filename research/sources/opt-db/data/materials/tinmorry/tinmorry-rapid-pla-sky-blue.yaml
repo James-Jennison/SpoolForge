@@ -1,0 +1,13 @@
+uuid: b899ef07-b7b9-51d0-ae31-2e5d86693eeb
+slug: tinmorry-rapid-pla-sky-blue
+brand:
+  slug: tinmorry
+name: Rapid PLA Sky Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#40b6e4ff'
+tags:
+- industrially_compostable
+properties: {}

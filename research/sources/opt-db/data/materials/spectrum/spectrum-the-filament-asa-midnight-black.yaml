@@ -1,0 +1,12 @@
+uuid: 1e9b245e-9a15-5686-af0f-7f55d628a464
+slug: spectrum-the-filament-asa-midnight-black
+brand:
+  slug: spectrum
+name: The Filament ASA Midnight Black
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#000000ff'
+properties:
+  density: 1.07

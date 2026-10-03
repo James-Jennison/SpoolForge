@@ -1,0 +1,17 @@
+{
+  "finding_id": "spoolio-m1-closure-claude-3",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8531a942e791",
+  "reviewer": "claude",
+  "severity": "LOW",
+  "category": "Evidentiary completeness",
+  "summary": "Unchanged: the dispositions claim of a physical-device edited-record/process-restart survival test still has no corresponding evidence artifact in this package.",
+  "claim": "Same \u2014 should not be treated as independently verified from this package.",
+  "evidence": {
+    "source": "Identical to prior submission.",
+    "response_sha256": "c7030a186661ce81c2b1dfdb22aea7bb623d554953ba7e0d64102b6162b2da39"
+  },
+  "suggested_remediation": "Attach the corresponding artifact if this was genuinely exercised on-device.",
+  "suggested_validation": "Not applicable.",
+  "reviewer_confidence": "HIGH"
+}

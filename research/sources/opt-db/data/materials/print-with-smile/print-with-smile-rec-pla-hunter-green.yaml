@@ -1,0 +1,14 @@
+uuid: 4f437884-3eef-5b88-a44b-20fb35bf465a
+slug: print-with-smile-rec-pla-hunter-green
+brand:
+  slug: print-with-smile
+name: REC-PLA Hunter GREEN
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#a1ac21ff'
+tags:
+- recycled
+- industrially_compostable
+properties: {}

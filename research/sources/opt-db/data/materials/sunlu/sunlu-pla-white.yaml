@@ -1,0 +1,23 @@
+uuid: 6bbf0b65-3cb0-5fe4-85fb-d27a08bcb8f6
+slug: sunlu-pla-white
+brand:
+  slug: sunlu
+name: PLA White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/sunlu/sunlu-pla-white/71MUJPt7apL._AC_SX425_.jpg
+  type: unspecified
+properties:
+  density: 1.23
+  hardness_shore_d: 80
+  min_print_temperature: 190
+  max_print_temperature: 260
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50

@@ -1,0 +1,14 @@
+uuid: 1ce6c15e-9c35-5e12-bf61-02ab1b506acc
+slug: siddament-pure-white-htpla
+brand:
+  slug: siddament
+name: Pure White HTPLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- high_temperature
+- industrially_compostable
+properties: {}

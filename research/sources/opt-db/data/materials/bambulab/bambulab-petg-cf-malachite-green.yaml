@@ -1,0 +1,25 @@
+uuid: e5d9071e-9fbe-5a0c-9515-78b105508547
+slug: bambulab-petg-cf-malachite-green
+brand:
+  slug: bambulab
+name: PETG-CF Malachite Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#16b08eff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-cf-malachite-green/d3ca161011c1.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

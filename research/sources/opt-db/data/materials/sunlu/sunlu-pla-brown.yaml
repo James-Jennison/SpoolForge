@@ -1,0 +1,23 @@
+uuid: aeb3f7ef-62ff-5e05-a911-5b01656403dd
+slug: sunlu-pla-brown
+brand:
+  slug: sunlu
+name: PLA Brown
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6e4325ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/sunlu/sunlu-pla-brown/4d5dec848180.jpg
+  type: unspecified
+properties:
+  density: 1.23
+  hardness_shore_d: 80
+  min_print_temperature: 190
+  max_print_temperature: 260
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50

@@ -1,0 +1,13 @@
+uuid: c3c444f9-095c-569e-988e-44b91e9bee7b
+slug: print-with-smile-pla-black
+brand:
+  slug: print-with-smile
+name: PLA Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- industrially_compostable
+properties: {}

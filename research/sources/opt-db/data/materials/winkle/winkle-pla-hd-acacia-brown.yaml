@@ -1,0 +1,14 @@
+uuid: 5e4c78ba-4e6d-554c-aa4c-479576364744
+slug: winkle-pla-hd-acacia-brown
+brand:
+  slug: winkle
+name: PLA HD Acacia Brown
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#875117ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

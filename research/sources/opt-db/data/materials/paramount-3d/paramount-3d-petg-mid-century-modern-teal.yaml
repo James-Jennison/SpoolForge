@@ -1,0 +1,11 @@
+uuid: 4d007d55-025f-51a5-846a-4ecfb7fc46eb
+slug: paramount-3d-petg-mid-century-modern-teal
+brand:
+  slug: paramount-3d
+name: PETG (Mid Century Modern Teal)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#00b4bcff'
+properties: {}

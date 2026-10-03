@@ -1,0 +1,13 @@
+{
+  "uuid": "ba85cf8b-39d2-4b28-9d7e-0bd1fde581ce",
+  "id": "gradient_yellow_blue",
+  "name": "Gradient Yellow Blue",
+  "color_hex": [
+    "#0099E6",
+    "#E4E46D"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

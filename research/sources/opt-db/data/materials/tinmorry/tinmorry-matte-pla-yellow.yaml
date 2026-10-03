@@ -1,0 +1,14 @@
+uuid: d6930f6a-dd36-5b1b-95d5-48a82ef52cbb
+slug: tinmorry-matte-pla-yellow
+brand:
+  slug: tinmorry
+name: Matte PLA Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#efd00bff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

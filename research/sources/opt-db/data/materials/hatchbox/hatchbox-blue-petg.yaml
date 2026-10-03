@@ -1,0 +1,19 @@
+uuid: d3060ea5-2af0-56bf-8288-566892cfb07a
+slug: hatchbox-blue-petg
+brand:
+  slug: hatchbox
+name: Blue PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0e21aeff'
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-blue-petg/9fcadc072493.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 0
+  max_bed_temperature: 85

@@ -1,0 +1,4 @@
+package: net.jamesjennison.spoolio
+uses-permission: name='android.permission.NFC'
+permission: net.jamesjennison.spoolio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission: name='net.jamesjennison.spoolio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'

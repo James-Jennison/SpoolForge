@@ -1,0 +1,17 @@
+uuid: 66b61658-e476-56b4-9006-b4022ccd0e5f
+slug: atomic-filament-perfect-blue-abs
+brand:
+  slug: atomic-filament
+name: Perfect Blue ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+url: https://atomicfilament.com/products/blue-pantone-285c-abs-filament
+primary_color:
+  color_rgba: '#473fc9ff'
+tags:
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-perfect-blue-abs/202f56293f47.png
+  type: unspecified
+properties: {}

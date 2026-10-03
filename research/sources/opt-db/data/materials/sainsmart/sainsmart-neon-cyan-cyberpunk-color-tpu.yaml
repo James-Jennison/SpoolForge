@@ -1,0 +1,14 @@
+uuid: a0a85497-70c4-5798-8b9b-bc8f30de2512
+slug: sainsmart-neon-cyan-cyberpunk-color-tpu
+brand:
+  slug: sainsmart
+name: Neon Cyan, Cyberpunk Color TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#00e3e2ff'
+tags:
+- neon
+properties:
+  hardness_shore_a: 95

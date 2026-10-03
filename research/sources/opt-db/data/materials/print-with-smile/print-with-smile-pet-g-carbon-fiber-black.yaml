@@ -1,0 +1,14 @@
+uuid: 86894ab4-bea0-5b34-b733-9717866f1703
+slug: print-with-smile-pet-g-carbon-fiber-black
+brand:
+  slug: print-with-smile
+name: PET-G - CARBON Fiber - BLACK
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- contains_carbon_fiber
+- abrasive
+properties: {}

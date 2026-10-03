@@ -1,0 +1,8 @@
+{
+  "version": "1",
+  "uid": "04A2FEA68D2681",
+  "payload_bytes": 213,
+  "intended_min_temp": "230",
+  "payload_sha256": "f108a8262f713aadf6bf73535c5e67428ca6a70a8356c274d78d34f7e71c936b",
+  "active_journal_present": true
+}

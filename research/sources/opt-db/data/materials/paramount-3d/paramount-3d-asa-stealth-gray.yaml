@@ -1,0 +1,11 @@
+uuid: ebf1cdec-f372-5015-ba88-5e3aeef6f9e2
+slug: paramount-3d-asa-stealth-gray
+brand:
+  slug: paramount-3d
+name: ASA (Stealth Gray)
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#4c5051ff'
+properties: {}

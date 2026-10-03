@@ -1,0 +1,14 @@
+uuid: b02e60a1-6ef4-51b4-a531-b978ff045b45
+slug: print-with-smile-silk-pla-gold
+brand:
+  slug: print-with-smile
+name: SILK PLA GOLD
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f6c500ff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

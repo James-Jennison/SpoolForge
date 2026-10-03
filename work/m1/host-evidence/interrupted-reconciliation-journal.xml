@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="uid">BKL+po0mgQ==</string>
+    <string name="payload">eyJwcm90b2NvbCI6Im9wZW5zcG9vbCIsInZlcnNpb24iOiIxLjAiLCJ0eXBlIjoiQUJTIiwiY29sb3JfaGV4IjoiRkY4RTI0IiwiYnJhbmQiOiJTVU5MVSIsIm1pbl90ZW1wIjoiMjMwIiwibWF4X3RlbXAiOiIyNjAiLCJzdWJ0eXBlIjoiQUJTIiwiYmVkX21pbl90ZW1wIjoiOTAiLCJiZWRfbWF4X3RlbXAiOiIxMTAiLCJkaWFtZXRlciI6IjEuNzUiLCJ3ZWlnaHQiOjEwMDB9</string>
+    <int name="version" value="1" />
+</map>

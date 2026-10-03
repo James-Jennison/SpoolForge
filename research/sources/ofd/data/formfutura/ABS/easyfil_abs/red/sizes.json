@@ -1,0 +1,17 @@
+[
+  {
+    "uuid": "7543946c-6d48-4323-96eb-98a1382fd834",
+    "filament_weight": 750,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "EABS-175REDC-00750",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/easyfil-abs"
+      }
+    ]
+  }
+]

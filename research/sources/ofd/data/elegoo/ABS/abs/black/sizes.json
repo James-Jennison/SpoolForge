@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "12670b67-7c7b-47bb-affb-9693611c0e7b",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "elegoo",
+        "url": "https://eu.elegoo.com/products/abs-filament-1-75mm-colored-1kg"
+      }
+    ]
+  }
+]

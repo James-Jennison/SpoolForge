@@ -1,0 +1,13 @@
+uuid: a086cb50-bf1f-5068-9b3e-7de0cd45eb50
+slug: print-with-smile-pet-g-neon-red
+brand:
+  slug: print-with-smile
+name: PET-G Neon RED
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#cb4726ff'
+tags:
+- neon
+properties: {}

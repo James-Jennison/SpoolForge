@@ -1,0 +1,19 @@
+uuid: c9c0abac-d3a0-5162-a431-d7638b9c661d
+slug: hatchbox-copper-petg
+brand:
+  slug: hatchbox
+name: Copper PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#af784dff'
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-copper-petg/1410968d15be.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 0
+  max_bed_temperature: 85

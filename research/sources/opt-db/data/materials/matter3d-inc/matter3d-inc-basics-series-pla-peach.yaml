@@ -1,0 +1,13 @@
+uuid: e94a0685-5bb0-5325-b6dd-b1a7128aa626
+slug: matter3d-inc-basics-series-pla-peach
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA Peach
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffc3a0ff'
+tags:
+- industrially_compostable
+properties: {}

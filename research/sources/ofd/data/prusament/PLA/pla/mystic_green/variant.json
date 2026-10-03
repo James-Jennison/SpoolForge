@@ -1,0 +1,10 @@
+{
+  "uuid": "f35c3dd6-5da1-403e-846b-278154cb0303",
+  "id": "mystic_green",
+  "name": "Mystic Green",
+  "color_hex": "#555846",
+  "traits": {
+    "iridescent": true,
+    "industrially_compostable": true
+  }
+}

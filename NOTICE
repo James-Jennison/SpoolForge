@@ -1,0 +1,28 @@
+SpoolForge
+Copyright (C) 2026 James Jennison
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version. It is distributed WITHOUT ANY WARRANTY; see the LICENSE file for the
+complete terms.
+
+Third-party material
+--------------------
+
+SpoolForge bundles a normalized snapshot of the Open Filament Database.
+
+Open Filament Database
+Copyright (c) Open Filament Collective contributors
+Licensed under the MIT License. The complete upstream license is bundled as
+app/src/main/assets/OFD-LICENSE.txt and remains available in the source snapshot.
+
+The ELEGOO CANVAS compatibility codec derives its documented byte layout and
+code tables from Blumlaut/filament-rfid-writer, revision 26086675, under the
+MIT License. The upstream license is bundled as research/sources/blumlaut/LICENSE.
+
+The Creality CFS interoperability codec is based on public protocol and tag
+format facts documented by MakaiView/cfs-programmer revision 52349f4f and
+cross-checked against soylentOrange/K2-RFID revision b4f2760c. The former is
+MIT licensed; the latter is GPL-3.0-or-later. SpoolForge's implementation is
+independent and does not copy GPL implementation code.

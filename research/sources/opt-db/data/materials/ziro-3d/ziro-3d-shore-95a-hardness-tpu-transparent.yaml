@@ -1,0 +1,12 @@
+uuid: 8113512a-f9a0-59d5-93ec-92e8a1837f0b
+slug: ziro-3d-shore-95a-hardness-tpu-transparent
+brand:
+  slug: ziro-3d
+name: Shore 95A Hardness TPU Transparent
+class: FFF
+type: TPU
+abbreviation: TPU
+tags:
+- transparent
+properties:
+  hardness_shore_a: 95

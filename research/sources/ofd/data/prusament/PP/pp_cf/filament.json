@@ -1,0 +1,15 @@
+{
+  "uuid": "098228e1-6c8e-4253-9a56-70cbc57ac86d",
+  "id": "pp_cf",
+  "name": "PP-CF",
+  "diameter_tolerance": 0.04,
+  "density": 1.82,
+  "min_print_temperature": 260,
+  "max_print_temperature": 280,
+  "preheat_temperature": 170,
+  "min_bed_temperature": 65,
+  "max_bed_temperature": 85,
+  "min_chamber_temperature": 40,
+  "max_chamber_temperature": 90,
+  "chamber_temperature": 50
+}

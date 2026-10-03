@@ -1,0 +1,11 @@
+uuid: 4eed45fa-c507-55b4-9bce-fd755b0f9f07
+slug: print-with-smile-asa-yellow
+brand:
+  slug: print-with-smile
+name: ASA YELLOW
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#e8bd00ff'
+properties: {}

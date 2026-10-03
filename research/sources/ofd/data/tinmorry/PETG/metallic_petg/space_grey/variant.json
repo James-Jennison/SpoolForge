@@ -1,0 +1,9 @@
+{
+  "uuid": "b43b4753-3960-44f1-bd30-1478da8cda50",
+  "id": "space_grey",
+  "name": "Space Grey",
+  "color_hex": "#76797D",
+  "traits": {
+    "imitates_metal": true
+  }
+}

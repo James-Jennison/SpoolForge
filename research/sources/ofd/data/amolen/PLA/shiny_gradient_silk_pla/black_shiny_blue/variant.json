@@ -1,0 +1,13 @@
+{
+  "uuid": "bef2bb37-a587-44d0-8aee-c097f4874177",
+  "id": "black_shiny_blue",
+  "name": "Black & Shiny Blue",
+  "color_hex": [
+    "#000000",
+    "#485CC7"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

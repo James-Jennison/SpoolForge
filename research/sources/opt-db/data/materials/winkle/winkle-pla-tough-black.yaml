@@ -1,0 +1,14 @@
+uuid: e17e5599-1f4f-5a4e-afc1-15fd44cf7d12
+slug: winkle-pla-tough-black
+brand:
+  slug: winkle
+name: PLA Tough Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#292824ff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.21

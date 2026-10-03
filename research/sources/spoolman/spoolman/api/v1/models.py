@@ -1,0 +1,786 @@
+"""Pydantic data models for typing the FastAPI request/responses."""
+
+from datetime import datetime, timezone
+from enum import Enum
+from typing import TYPE_CHECKING, Annotated, Literal
+
+from pydantic import BaseModel, Field, PlainSerializer
+
+from spoolman.database import models
+from spoolman.math import length_from_weight
+from spoolman.settings import SettingDefinition, SettingType
+
+if TYPE_CHECKING:
+    # Only for typing: spoolman.database.search reaches spoolman.database.filament,
+    # which imports this module, so importing it for real would be circular.
+    from spoolman.database import search
+
+
+def datetime_to_str(dt: datetime) -> str:
+    """Convert a datetime object to a string."""
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.isoformat().replace("+00:00", "Z")
+
+
+SpoolmanDateTime = Annotated[datetime, PlainSerializer(datetime_to_str)]
+
+
+def _sanitize_color_hex(value: str | None) -> str | None:
+    """Normalize a color code read from the database.
+
+    Older releases could store a value with a leading ``#`` (see #780). Strip it and
+    drop anything that still isn't a valid 6 or 8 character code, so that one bad row
+    doesn't make the whole filament list unserializable.
+    """
+    if not value:
+        return None
+    clr = value.upper().removeprefix("#")
+    if len(clr) not in (6, 8) or any(c not in "0123456789ABCDEF" for c in clr):
+        return None
+    return clr
+
+
+def _sanitize_multi_color_hexes(value: str | None) -> str | None:
+    """Normalize a comma-separated list of color codes read from the database."""
+    if not value:
+        return None
+    colors = [c for c in (_sanitize_color_hex(part) for part in value.split(",")) if c is not None]
+    if len(colors) < 2:  # noqa: PLR2004
+        return None
+    return ",".join(colors)
+
+
+def _extra_fields_description(entity: str) -> str:
+    r"""Build the description for an entity's ``extra`` field.
+
+    Every value in the ``extra`` map is a JSON-encoded string, regardless of the field's
+    configured type. For example, an ``integer`` field returns ``"42"`` (not ``42``) and a
+    ``text`` field returns ``"\"hello\""``. Consumers must JSON-decode each value to get the
+    typed value. This keeps the map uniformly typed as ``dict[str, str]`` on the wire.
+    """
+    return (
+        f"Extra fields for this {entity}. Every value is a JSON-encoded string, regardless of the field's "
+        'configured type: e.g. an integer field returns "42" (not 42) and a text field returns "\\"hello\\"". '
+        "Consumers must JSON-decode each value. Query the /fields endpoint for the type of each field."
+    )
+
+
+def extra_fields_request_description(entity: str) -> str:
+    """Build the description for an entity's ``extra`` field on a create/update request.
+
+    Values are JSON-encoded strings, exactly as in the response. An update merges per key —
+    a field left out of the map keeps whatever it held — and a null value means "no value
+    for this field": nothing is stored, so it clears a value that was previously set. There
+    is no other way to remove one.
+    """
+    return (
+        f"Extra fields for this {entity}. Every value is a JSON-encoded string matching the field's "
+        'configured type, e.g. "42" for an integer field and "\\"hello\\"" for a text field. '
+        "Patching this map merges per key: a field left out of it keeps whatever it held. Pass null "
+        "instead of a string to store no value for the field, which is how a value that has already "
+        "been set is cleared."
+    )
+
+
+class Message(BaseModel):
+    message: str = Field()
+
+
+class TagConflictMessage(Message):
+    """A tag UID is already linked to something else.
+
+    Subclasses Message so the `message` key is where it is in every other error body, and
+    adds the conflicting spool's ID so a client can offer to move the tag there instead of
+    making the user go and find it.
+
+    `spool_id` is optional because a tag identifies one thing and that thing is not always
+    a spool -- see `models.Tag`. It is absent when the UID is held by something else, in
+    which case `message` still says what; a client that cannot offer "move it here" without
+    an id should fall back to reporting the message.
+    """
+
+    spool_id: int | None = Field(
+        None,
+        description="The spool the tag is already linked to, if it is a spool that holds it.",
+        examples=[42],
+    )
+
+
+class SettingResponse(BaseModel):
+    value: str = Field(description="Setting value.")
+    is_set: bool = Field(description="Whether the setting has been set. If false, 'value' contains the default value.")
+    type: SettingType = Field(description="Setting type. This corresponds with JSON types.")
+
+
+class SettingKV(BaseModel):
+    key: str = Field(description="Setting key.")
+    setting: SettingResponse = Field(description="Setting value.")
+
+    @staticmethod
+    def from_db(definition: SettingDefinition, set_value: str | None) -> "SettingKV":
+        """Create a new Pydantic vendor object from a database vendor object."""
+        return SettingKV(
+            key=definition.key,
+            setting=SettingResponse(
+                value=set_value if set_value is not None else definition.default,
+                is_set=set_value is not None,
+                type=definition.type,
+            ),
+        )
+
+
+class Vendor(BaseModel):
+    id: int = Field(description="Unique internal ID of this vendor.")
+    registered: SpoolmanDateTime = Field(description="When the vendor was registered in the database. UTC Timezone.")
+    name: str = Field(max_length=64, description="Vendor name.", examples=["Polymaker"])
+    comment: str | None = Field(
+        None,
+        max_length=1024,
+        description="Free text comment about this vendor.",
+        examples=[""],
+    )
+    empty_spool_weight: float | None = Field(
+        None,
+        ge=0,
+        description="The empty spool weight, in grams.",
+        examples=[140],
+    )
+    external_id: str | None = Field(
+        None,
+        max_length=256,
+        description=(
+            "Set if this vendor comes from an external database. This contains the ID in the external database."
+        ),
+        examples=["eSun"],
+    )
+    extra: dict[str, str] = Field(
+        description=_extra_fields_description("vendor"),
+    )
+
+    @staticmethod
+    def from_db(item: models.Vendor) -> "Vendor":
+        """Create a new Pydantic vendor object from a database vendor object."""
+        return Vendor(
+            id=item.id,
+            registered=item.registered,
+            name=item.name,
+            comment=item.comment,
+            empty_spool_weight=item.empty_spool_weight,
+            external_id=item.external_id,
+            extra={field.key: field.value for field in item.extra},
+        )
+
+
+class MultiColorDirection(Enum):
+    """Enum for multi-color direction."""
+
+    COAXIAL = "coaxial"
+    LONGITUDINAL = "longitudinal"
+
+
+class Filament(BaseModel):
+    id: int = Field(description="Unique internal ID of this filament type.")
+    registered: SpoolmanDateTime = Field(description="When the filament was registered in the database. UTC Timezone.")
+    name: str | None = Field(
+        None,
+        max_length=64,
+        description=(
+            "Filament name, to distinguish this filament type among others from the same vendor."
+            "Should contain its color for example."
+        ),
+        examples=["PolyTerra™ Charcoal Black"],
+    )
+    vendor: Vendor | None = Field(None, description="The vendor of this filament type.")
+    material: str | None = Field(
+        None,
+        max_length=64,
+        description="The material of this filament, e.g. PLA.",
+        examples=["PLA"],
+    )
+    price: float | None = Field(
+        None,
+        ge=0,
+        description="The price of this filament in the system configured currency.",
+        examples=[20.0],
+    )
+    density: float = Field(gt=0, description="The density of this filament in g/cm3.", examples=[1.24])
+    diameter: float = Field(gt=0, description="The diameter of this filament in mm.", examples=[1.75])
+    weight: float | None = Field(
+        None,
+        gt=0,
+        description="The weight of the filament in a full spool, in grams.",
+        examples=[1000],
+    )
+    spool_weight: float | None = Field(None, ge=0, description="The empty spool weight, in grams.", examples=[140])
+    article_number: str | None = Field(
+        None,
+        max_length=64,
+        description="Vendor article number, e.g. EAN, QR code, etc.",
+        examples=["PM70820"],
+    )
+    comment: str | None = Field(
+        None,
+        max_length=1024,
+        description="Free text comment about this filament type.",
+        examples=[""],
+    )
+    settings_extruder_temp: int | None = Field(
+        None,
+        ge=0,
+        description="Overridden extruder temperature, in °C.",
+        examples=[210],
+    )
+    settings_bed_temp: int | None = Field(
+        None,
+        ge=0,
+        description="Overridden bed temperature, in °C.",
+        examples=[60],
+    )
+    color_hex: str | None = Field(
+        None,
+        min_length=6,
+        max_length=8,
+        description=(
+            "Hexadecimal color code of the filament, e.g. FF0000 for red. Supports alpha channel at the end. "
+            "If it's a multi-color filament, the multi_color_hexes field is used instead."
+        ),
+        examples=["FF0000"],
+    )
+    multi_color_hexes: str | None = Field(
+        None,
+        min_length=6,
+        description=(
+            "Hexadecimal color code of the filament, e.g. FF0000 for red. Supports alpha channel at the end. "
+            "Specifying multiple colors separated by commas. "
+            "Also set the multi_color_direction field if you specify multiple colors."
+        ),
+        examples=["FF0000,00FF00,0000FF"],
+    )
+    multi_color_direction: MultiColorDirection | None = Field(
+        None,
+        description=("Type of multi-color filament. Only set if the multi_color_hexes field is set."),
+        examples=["coaxial", "longitudinal"],
+    )
+    external_id: str | None = Field(
+        None,
+        max_length=256,
+        description=(
+            "Set if this filament comes from an external database. This contains the ID in the external database."
+        ),
+        examples=["polymaker_pla_polysonicblack_1000_175"],
+    )
+    extra: dict[str, str] = Field(
+        description=_extra_fields_description("filament"),
+    )
+
+    @staticmethod
+    def from_db(item: models.Filament) -> "Filament":
+        """Create a new Pydantic filament object from a database filament object."""
+        return Filament(
+            id=item.id,
+            registered=item.registered,
+            name=item.name,
+            vendor=Vendor.from_db(item.vendor) if item.vendor is not None else None,
+            material=item.material,
+            price=item.price,
+            density=item.density,
+            diameter=item.diameter,
+            weight=item.weight,
+            spool_weight=item.spool_weight,
+            article_number=item.article_number,
+            comment=item.comment,
+            settings_extruder_temp=item.settings_extruder_temp,
+            settings_bed_temp=item.settings_bed_temp,
+            color_hex=_sanitize_color_hex(item.color_hex),
+            multi_color_hexes=_sanitize_multi_color_hexes(item.multi_color_hexes),
+            multi_color_direction=(
+                MultiColorDirection(item.multi_color_direction) if item.multi_color_direction is not None else None
+            ),
+            external_id=item.external_id,
+            extra={field.key: field.value for field in item.extra},
+        )
+
+
+class SpoolTag(BaseModel):
+    """A physical NFC/RFID tag linked to a spool."""
+
+    uid: str = Field(
+        description=(
+            "The tag's hardware UID, normalized to uppercase hexadecimal with separators "
+            "stripped. Unique across all spools: one tag identifies exactly one spool."
+        ),
+        examples=["04A2B3C4D5E6F7"],
+    )
+    format: str | None = Field(
+        None,
+        description=(
+            "What kind of tag this is, e.g. openprinttag, ntag, bambu, tigertag. "
+            "Informational, free-form, and not validated against a fixed list."
+        ),
+        examples=["ntag"],
+    )
+    added: SpoolmanDateTime = Field(description="When the tag was linked to the spool. UTC Timezone.")
+
+    @staticmethod
+    def from_db(item: models.Tag) -> "SpoolTag":
+        """Create a new Pydantic spool tag object from a database spool tag object."""
+        return SpoolTag(uid=item.uid, format=item.format, added=item.added)
+
+
+class Spool(BaseModel):
+    id: int = Field(description="Unique internal ID of this spool of filament.")
+    registered: SpoolmanDateTime = Field(description="When the spool was registered in the database. UTC Timezone.")
+    first_used: SpoolmanDateTime | None = Field(
+        None,
+        description="First logged occurence of spool usage. UTC Timezone.",
+    )
+    last_used: SpoolmanDateTime | None = Field(
+        None,
+        description="Last logged occurence of spool usage. UTC Timezone.",
+    )
+    filament: Filament = Field(description="The filament type of this spool.")
+    price: float | None = Field(
+        None,
+        ge=0,
+        description="The price of this spool in the system configured currency.",
+        examples=[20.0],
+    )
+    remaining_weight: float | None = Field(
+        default=None,
+        ge=0,
+        description=(
+            "Estimated remaining weight of filament on the spool in grams. "
+            "Only set if the filament type has a weight set."
+        ),
+        examples=[500.6],
+    )
+    initial_weight: float | None = Field(
+        default=None,
+        ge=0,
+        description=("The initial weight, in grams, of the filament on the spool (net weight)."),
+        examples=[1246],
+    )
+    spool_weight: float | None = Field(
+        default=None,
+        ge=0,
+        description=("Weight of an empty spool (tare weight)."),
+        examples=[246],
+    )
+    used_weight: float = Field(
+        ge=0,
+        description="Consumed weight of filament from the spool in grams.",
+        examples=[500.3],
+    )
+    remaining_length: float | None = Field(
+        default=None,
+        ge=0,
+        description=(
+            "Estimated remaining length of filament on the spool in millimeters."
+            " Only set if the filament type has a weight set."
+        ),
+        examples=[5612.4],
+    )
+    used_length: float = Field(
+        ge=0,
+        description="Consumed length of filament from the spool in millimeters.",
+        examples=[50.7],
+    )
+    location: str | None = Field(
+        None,
+        max_length=64,
+        description="Where this spool can be found.",
+        examples=["Shelf A"],
+    )
+    lot_nr: str | None = Field(
+        None,
+        max_length=64,
+        description="Vendor manufacturing lot/batch number of the spool.",
+        examples=["52342"],
+    )
+    comment: str | None = Field(
+        None,
+        max_length=1024,
+        description="Free text comment about this specific spool.",
+        examples=[""],
+    )
+    archived: bool = Field(description="Whether this spool is archived and should not be used anymore.")
+    extra: dict[str, str] = Field(
+        description=_extra_fields_description("spool"),
+    )
+    tags: list[SpoolTag] = Field(
+        default_factory=list,
+        description=(
+            "NFC/RFID tags linked to this spool. A spool can carry more than one tag, e.g. when a "
+            "vendor tag has been copied onto a blank sticker. Empty if none are linked."
+        ),
+    )
+
+    @staticmethod
+    def from_db(item: models.Spool) -> "Spool":
+        """Create a new Pydantic spool object from a database spool object."""
+        filament = Filament.from_db(item.filament)
+
+        remaining_weight: float | None = None
+        remaining_length: float | None = None
+
+        if item.initial_weight is not None:
+            remaining_weight = max(item.initial_weight - item.used_weight, 0)
+            remaining_length = length_from_weight(
+                weight=remaining_weight,
+                density=filament.density,
+                diameter=filament.diameter,
+            )
+        elif filament.weight is not None:
+            remaining_weight = max(filament.weight - item.used_weight, 0)
+            remaining_length = length_from_weight(
+                weight=remaining_weight,
+                density=filament.density,
+                diameter=filament.diameter,
+            )
+
+        used_length = length_from_weight(
+            weight=item.used_weight,
+            density=filament.density,
+            diameter=filament.diameter,
+        )
+
+        return Spool(
+            id=item.id,
+            registered=item.registered,
+            first_used=item.first_used,
+            last_used=item.last_used,
+            filament=filament,
+            price=item.price,
+            initial_weight=item.initial_weight,
+            spool_weight=item.spool_weight,
+            used_weight=item.used_weight,
+            used_length=used_length,
+            remaining_weight=remaining_weight,
+            remaining_length=remaining_length,
+            location=item.location,
+            lot_nr=item.lot_nr,
+            comment=item.comment,
+            archived=item.archived if item.archived is not None else False,
+            extra={field.key: field.value for field in item.extra},
+            tags=[SpoolTag.from_db(tag) for tag in item.tags],
+        )
+
+
+class SpoolGroup(BaseModel):
+    """A group of spools with server-computed aggregates.
+
+    Returned by the ``/spool/group`` endpoint. Spools are grouped by one axis
+    (``group_by``); the aggregates are computed over the matching spools of each
+    group so the client can paginate whole groups without fetching every spool.
+    """
+
+    group_by: str = Field(
+        description="The field the spools are grouped by.",
+        examples=["filament"],
+    )
+    key: str | None = Field(
+        None,
+        description=(
+            "The group key. For group_by=filament/vendor this is the entity ID as a string; for "
+            "material/location and extra fields it is the value. Null when the grouped "
+            "field is unset (e.g. spools with no location or a filament with no vendor)."
+        ),
+        examples=["12"],
+    )
+    spool_count: int = Field(description="Number of matching spools in this group.", examples=[6])
+    in_use_count: int = Field(
+        description="Number of matching spools that have been used (used_weight > 0).",
+        examples=[2],
+    )
+    total_remaining_weight: float | None = Field(
+        None,
+        description="Sum of remaining filament weight across the group's matching spools, in grams.",
+        examples=[3120.0],
+    )
+    last_used: SpoolmanDateTime | None = Field(
+        None,
+        description="Most recent last_used across the group's matching spools. UTC Timezone.",
+    )
+    filament: Filament | None = Field(
+        None,
+        description="The filament, embedded for group_by=filament so the header needs no extra request.",
+    )
+    vendor: Vendor | None = Field(
+        None,
+        description="The vendor, embedded for group_by=vendor.",
+    )
+
+
+class SearchResultSpool(BaseModel):
+    """A spool that matched a search, with which field matched."""
+
+    spool: Spool = Field(description="The matching spool.")
+    match_field: str = Field(
+        description=(
+            "Which field matched the query: a native field name (e.g. 'comment', 'location', "
+            "'lot_nr'), 'id' for an exact spool-id match, or 'extra.<key>' for an extra field."
+        ),
+        examples=["comment"],
+    )
+
+
+class SearchResultFilamentSpool(BaseModel):
+    """A spool of a filament that matched a search, in the fields needed to offer it as a shortcut."""
+
+    id: int = Field(description="Unique internal ID of this spool of filament.")
+    remaining_weight: float | None = Field(
+        default=None,
+        ge=0,
+        description=(
+            "Estimated remaining weight of filament on the spool in grams. "
+            "Only set if the spool or its filament type has a weight set."
+        ),
+        examples=[500.6],
+    )
+    location: str | None = Field(
+        None,
+        max_length=64,
+        description="Where this spool can be found.",
+        examples=["Shelf A"],
+    )
+    archived: bool = Field(description="Whether this spool is archived and should not be used anymore.")
+
+    @staticmethod
+    def from_db(item: "search.FilamentSpool", filament_weight: float | None) -> "SearchResultFilamentSpool":
+        """Create the compact spool object, deriving its weight the way `Spool.from_db` does."""
+        remaining_weight: float | None = None
+        if item.initial_weight is not None:
+            remaining_weight = max(item.initial_weight - item.used_weight, 0)
+        elif filament_weight is not None:
+            remaining_weight = max(filament_weight - item.used_weight, 0)
+
+        return SearchResultFilamentSpool(
+            id=item.id,
+            remaining_weight=remaining_weight,
+            location=item.location,
+            archived=item.archived,
+        )
+
+
+class SearchResultFilament(BaseModel):
+    """A filament that matched a search, with which field matched."""
+
+    filament: Filament = Field(description="The matching filament.")
+    match_field: str = Field(
+        description=(
+            "Which field matched the query: a native field name (e.g. 'name', 'material', "
+            "'article_number', 'comment'), 'color' for a color-similarity match, or 'extra.<key>'."
+        ),
+        examples=["color"],
+    )
+    spools: list[SearchResultFilamentSpool] | None = Field(
+        default=None,
+        description=(
+            "The filament's first spools, oldest id first, so a filament hit can be followed "
+            "straight to one of its spools. Only present if spools_per_filament was requested. "
+            "Obeys allow_archived like the rest of the response."
+        ),
+    )
+    spool_count: int | None = Field(
+        default=None,
+        description=(
+            "How many spools this filament has in total, of which `spools` holds at most "
+            "spools_per_filament. Only present if spools_per_filament was requested."
+        ),
+        examples=[3],
+    )
+
+
+class SearchResultVendor(BaseModel):
+    """A vendor that matched a search, with which field matched."""
+
+    vendor: Vendor = Field(description="The matching vendor.")
+    match_field: str = Field(
+        description="Which field matched the query: 'name', 'comment', or 'extra.<key>'.",
+        examples=["name"],
+    )
+
+
+class SearchResults(BaseModel):
+    """Categorized results of a cross-entity search."""
+
+    spools: list[SearchResultSpool] = Field(description="Matching spools, best matches first.")
+    filaments: list[SearchResultFilament] = Field(description="Matching filaments, best matches first.")
+    vendors: list[SearchResultVendor] = Field(description="Matching vendors, best matches first.")
+    is_color_query: bool = Field(
+        description=(
+            "Whether the query was recognized as a color (hex code or CSS color name), in which case "
+            "the filament results include color-similarity matches and a threshold slider is relevant."
+        ),
+        examples=[False],
+    )
+
+
+class TagScan(BaseModel):
+    """One tag read reported by a reader-side agent.
+
+    Scans are ephemeral: they are broadcast to the scan websockets and never stored. The
+    match is resolved server-side and included, so an agent that ignores websockets
+    entirely can use the scan endpoint as a one-shot lookup.
+    """
+
+    uid: str = Field(
+        description="The scanned tag's UID, normalized to uppercase hexadecimal with separators stripped.",
+        examples=["04A2B3C4D5E6F7"],
+    )
+    reader_id: str = Field(
+        description=(
+            "Which reader reported the scan. Either the id the agent sent, or one derived from its "
+            "network address when it sent none."
+        ),
+        examples=["printer-voron"],
+    )
+    name: str | None = Field(
+        None,
+        description="Human-readable name for the reader, if it sent one.",
+        examples=["Voron spool holder"],
+    )
+    format: str | None = Field(
+        None,
+        description="What kind of tag this is, if the agent could tell.",
+        examples=["ntag"],
+    )
+    payload_b64: str | None = Field(
+        None,
+        description=(
+            "The tag's raw contents, base64-encoded, if the agent read them. Carried through "
+            "untouched: Spoolman does not decode tag contents."
+        ),
+    )
+    matched_spool_id: int | None = Field(
+        None,
+        description="The spool this tag is linked to, or null if the tag is not known to Spoolman.",
+        examples=[42],
+    )
+    spool: Spool | None = Field(
+        None,
+        description="The matched spool, so a client needs no follow-up request. Null if the tag is unknown.",
+    )
+
+
+class TagReader(BaseModel):
+    """A reader that has reported a scan recently.
+
+    The registry is in-memory and is not persisted: a reader reappears the moment it
+    scans again, and the list is empty after a restart until one does.
+    """
+
+    reader_id: str = Field(description="The reader's id.", examples=["printer-voron"])
+    name: str | None = Field(
+        None,
+        description="Human-readable name for the reader, if it has sent one.",
+        examples=["Voron spool holder"],
+    )
+    last_seen: SpoolmanDateTime = Field(description="When this reader last reported a scan. UTC Timezone.")
+    last_uid: str | None = Field(
+        None,
+        description=(
+            "The last tag UID this reader reported, normalized. Lets a client offer what is "
+            "already on the reader instead of waiting for another tap. Null if the reader has "
+            "not scanned since the server started."
+        ),
+        examples=["04A2B3C4D5E6F7"],
+    )
+
+
+class Info(BaseModel):
+    version: str = Field(examples=["0.7.0"])
+    debug_mode: bool = Field(examples=[False])
+    automatic_backups: bool = Field(examples=[True])
+    data_dir: str = Field(examples=["/home/app/.local/share/spoolman"])
+    logs_dir: str = Field(examples=["/home/app/.local/share/spoolman"])
+    backups_dir: str = Field(examples=["/home/app/.local/share/spoolman/backups"])
+    db_type: str = Field(examples=["sqlite"])
+    external_db_name: str = Field(
+        description="Display name for the external filament library, configurable via EXTERNAL_DB_NAME.",
+        examples=["SpoolmanDB"],
+    )
+    git_commit: str | None = Field(None, examples=["a1b2c3d"])
+    build_date: SpoolmanDateTime | None = Field(None, examples=["2021-01-01T00:00:00Z"])
+
+
+class HealthCheck(BaseModel):
+    status: str = Field(examples=["healthy"])
+
+
+class BackupResponse(BaseModel):
+    path: str = Field(
+        description="Path to the created backup file.",
+        examples=["/home/app/.local/share/spoolman/backups/spoolman.db"],
+    )
+    created: bool = Field(
+        default=True,
+        description=(
+            "Whether this call wrote a new backup. False means an existing one was returned "
+            "instead, either because the database has not changed since it was taken or because "
+            "one was made very recently. Rotating discards the oldest restore point, so it is "
+            "deliberately not done more often than necessary."
+        ),
+        examples=[True],
+    )
+
+
+class EventType(str, Enum):
+    """Event types."""
+
+    ADDED = "added"
+    UPDATED = "updated"
+    DELETED = "deleted"
+    # Only ever emitted on the dedicated scan websockets (see TagScanEvent), never on the
+    # entity ones, so no existing consumer can receive it.
+    SCANNED = "scanned"
+
+
+class Event(BaseModel):
+    """Event."""
+
+    type: EventType = Field(description="Event type.")
+    resource: str = Field(description="Resource type.")
+    date: SpoolmanDateTime = Field(description="When the event occured. UTC Timezone.")
+    payload: BaseModel
+
+
+class SpoolEvent(Event):
+    """Event."""
+
+    payload: Spool = Field(description="Updated spool.")
+    resource: Literal["spool"] = Field(description="Resource type.")
+
+
+class FilamentEvent(Event):
+    """Event."""
+
+    payload: Filament = Field(description="Updated filament.")
+    resource: Literal["filament"] = Field(description="Resource type.")
+
+
+class VendorEvent(Event):
+    """Event."""
+
+    payload: Vendor = Field(description="Updated vendor.")
+    resource: Literal["vendor"] = Field(description="Resource type.")
+
+
+class SettingEvent(Event):
+    """Event."""
+
+    payload: SettingKV = Field(description="Updated setting.")
+    resource: Literal["setting"] = Field(description="Resource type.")
+
+
+class TagScanEvent(Event):
+    """A tag was scanned by a reader.
+
+    Travels ONLY on the dedicated scan websockets, which are a separate subscription tree
+    from the entity ones. It therefore never reaches the root /api/v1/ websocket, whose
+    subscribers asked to hear about changes to data -- and a scan changes nothing.
+    """
+
+    payload: TagScan = Field(description="The scan.")
+    resource: Literal["tag_scan"] = Field(description="Resource type.")

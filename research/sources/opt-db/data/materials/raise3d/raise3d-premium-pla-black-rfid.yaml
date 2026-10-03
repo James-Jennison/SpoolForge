@@ -1,0 +1,17 @@
+uuid: 73c58df2-49cb-5258-9973-aedff5d69006
+slug: raise3d-premium-pla-black-rfid
+brand:
+  slug: raise3d
+name: Premium PLA Black - RFID
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#30312fff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.2
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-premium-pla-black-rfid/raise3d-premium-pla-black-rfid-0-36d146eb.jpg
+  type: unspecified

@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-gtin-android-deepseek-3",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-2cba3cb75876",
+  "reviewer": "deepseek",
+  "severity": "LOW",
+  "category": "Robustness",
+  "summary": "GtinIndex.ensureFile relies on File.renameTo to replace a corrupted installed sidecar. On some Android filesystems, renameTo may fail when destination exists, causing lookup to throw and leaving the corrupted file.",
+  "claim": "If sidecar becomes corrupted and rename fails, barcode lookup is unavailable until next attempt (which may also fail), impacting feature availability.",
+  "evidence": {
+    "source": "Code: 'check(temporary.renameTo(file)) { \"Could not install barcode index\" }'. Android documentation notes renameTo may fail on some filesystems; no fallback delete+rename or Files.move with REPLACE_EXISTING.",
+    "response_sha256": "ce723611f338a8ea74c80a27e0021f13be463cfb2697892f09e34f1afe91ebf9"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "tools"
+  ],
+  "suggested_remediation": "Use atomic replace supported by java.nio.file.Files.move with REPLACE_EXISTING/ATOMIC_MOVE, or delete destination before rename with proper error handling.",
+  "suggested_validation": "Simulate corrupted installed sidecar and verify self-repair succeeds on all supported Android API levels/filesystems.",
+  "reviewer_confidence": "LOW"
+}

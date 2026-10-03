@@ -1,0 +1,17 @@
+uuid: ce40664a-9298-5e06-aaea-c858c9091c6a
+slug: atomic-filament-dark-cherry-red-abs
+brand:
+  slug: atomic-filament
+name: Dark Cherry Red ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+url: https://atomicfilament.com/products/dark-cherry-red-abs-filament
+primary_color:
+  color_rgba: '#520b0fff'
+tags:
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-dark-cherry-red-abs/fd9e862db7e8.png
+  type: unspecified
+properties: {}

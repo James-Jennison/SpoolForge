@@ -1,0 +1,14 @@
+{
+  "uuid": "330618e2-8b5e-4455-9472-9220e919de8f",
+  "material": "PLA",
+  "default_max_dry_temperature": 50,
+  "default_slicer_settings": {
+    "orcaslicer": {
+      "bed_temp": 60,
+      "first_layer_bed_temp": 60,
+      "first_layer_nozzle_temp": 225,
+      "nozzle_temp": 225,
+      "profile_name": "TECBEARS PLA"
+    }
+  }
+}

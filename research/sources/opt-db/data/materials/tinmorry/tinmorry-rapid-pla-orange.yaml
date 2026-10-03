@@ -1,0 +1,13 @@
+uuid: 523a6c10-4ab6-5408-9b47-8f4096278dee
+slug: tinmorry-rapid-pla-orange
+brand:
+  slug: tinmorry
+name: Rapid PLA Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fa8423ff'
+tags:
+- industrially_compostable
+properties: {}

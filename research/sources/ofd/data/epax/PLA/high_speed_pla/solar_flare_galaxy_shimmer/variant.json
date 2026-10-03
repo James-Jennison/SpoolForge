@@ -1,0 +1,13 @@
+{
+  "uuid": "dcc89d25-e78a-47c2-b32f-d8de85e12198",
+  "id": "solar_flare_galaxy_shimmer",
+  "name": "Solar Flare (Galaxy Shimmer)",
+  "color_hex": [
+    "#F07821",
+    "#E31A1F"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "high_flow": true
+  }
+}

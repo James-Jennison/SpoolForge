@@ -1,0 +1,8 @@
+{
+  "uuid": "90dd0b27-b488-4da6-b0b3-07395fa56f27",
+  "id": "petg_transparent",
+  "name": "PETG Transparent",
+  "diameter_tolerance": 0.03,
+  "density": 1.26,
+  "max_dry_temperature": 60
+}

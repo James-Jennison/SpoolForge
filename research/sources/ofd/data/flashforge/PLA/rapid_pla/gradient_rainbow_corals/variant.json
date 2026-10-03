@@ -1,0 +1,14 @@
+{
+  "uuid": "91e0cab5-33bd-4ce2-8257-c19166e1ef72",
+  "id": "gradient_rainbow_corals",
+  "name": "Gradient Rainbow Corals",
+  "color_hex": [
+    "#C6F666",
+    "#FCE575",
+    "#F67405"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

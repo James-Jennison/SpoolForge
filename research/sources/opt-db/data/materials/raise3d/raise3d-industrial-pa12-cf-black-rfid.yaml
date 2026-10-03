@@ -1,0 +1,19 @@
+uuid: 810249e0-c714-5d0e-b495-703de27bf750
+slug: raise3d-industrial-pa12-cf-black-rfid
+brand:
+  slug: raise3d
+name: Industrial PA12 CF+ Black - RFID
+class: FFF
+type: PA6
+abbreviation: PA6
+primary_color:
+  color_rgba: '#2b2b2cff'
+tags:
+- contains_carbon_fiber
+- abrasive
+- contains_carbon
+properties:
+  density: 1.03
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-industrial-pa12-cf-black-rfid/raise3d-industrial-pa12-cf-black-rfid-0-4736aa97.jpg
+  type: unspecified

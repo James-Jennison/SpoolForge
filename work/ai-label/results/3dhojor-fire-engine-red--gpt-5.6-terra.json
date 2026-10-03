@@ -1,0 +1,114 @@
+{
+  "provider": "openai",
+  "model": "gpt-5.6-terra",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 2959,
+    "input_tokens_details": {
+      "cache_write_tokens": 2956,
+      "cached_tokens": 0
+    },
+    "output_tokens": 509,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 3468
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "New",
+      "confidence": 0.96,
+      "evidence": "\"New\" is visibly printed on the main white label.",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": null,
+      "confidence": 0.92,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "product": {
+      "value": "3DHQ for 3D Printing Filament... D FDM Printer-Fire Engine Red",
+      "confidence": 0.76,
+      "evidence": "Main label visibly reads: \"3DHQ for 3D Printing Filament... D FDM Printer-Fire Engine Red\"; some wording is unclear/truncated in the photo.",
+      "basis": "printed"
+    },
+    "material": {
+      "value": null,
+      "confidence": 0.96,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "color": {
+      "value": "Fire Engine Red",
+      "confidence": 0.98,
+      "evidence": "Printed at the end of the product description on the main label.",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": null,
+      "confidence": 0.95,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "net_weight_g": {
+      "value": null,
+      "confidence": 0.95,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "sku": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 0.96,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [
+      {
+        "value": "X00444MZE3",
+        "kind": "barcode-associated identifier",
+        "evidence": "Alphanumeric code visibly printed beneath the barcode on the main label."
+      }
+    ],
+    "needs_user_review": [
+      "The printed product-description wording between \"Filament\" and \"D FDM Printer\" is partially unclear in the image.",
+      "The barcode is visible, but its numeric/GTIN value is not printed legibly in the image."
+    ]
+  }
+}

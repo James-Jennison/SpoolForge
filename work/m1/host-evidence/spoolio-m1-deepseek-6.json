@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-deepseek-6",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "NFC write state recovery",
+  "summary": "Cannot cancel or recover from WRITE_OUTCOME_UNKNOWN state.",
+  "claim": "Cannot cancel or recover from WRITE_OUTCOME_UNKNOWN state.",
+  "evidence": {
+    "source": "WriteStateMachine.cancel() has a no-op for phase WRITE_OUTCOME_UNKNOWN because the conditional branch does nothing and the else branch is not reached. NfcCoordinator.cancel() then calls persistOrClear(), which for UNKNOWN re-saves the journal instead of clearing. The UI NfcPanel always shows Cancel for non-VERIFIED states, but clicking it has no effect.",
+    "response_sha256": "9ce1f17a15210414355a99fa316c46989f28239b61a329155699d55078adf435"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "In cancel() for WRITE_OUTCOME_UNKNOWN, clear the journal and set state to CANCELLED or DRAFT, allowing re-arm.",
+  "suggested_validation": "Induce WRITE_OUTCOME_UNKNOWN, tap Cancel, verify state returns to CANCELLED/DRAFT, journal is cleared, and a new write can be armed.",
+  "reviewer_confidence": "HIGH"
+}

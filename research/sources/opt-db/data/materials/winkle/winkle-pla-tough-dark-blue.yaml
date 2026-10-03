@@ -1,0 +1,14 @@
+uuid: 02fce807-c8f5-5ce4-a785-b5c29a67ded0
+slug: winkle-pla-tough-dark-blue
+brand:
+  slug: winkle
+name: PLA Tough Dark Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0353baff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.21

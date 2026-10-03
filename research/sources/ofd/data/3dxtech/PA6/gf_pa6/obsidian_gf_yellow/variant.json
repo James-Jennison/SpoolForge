@@ -1,0 +1,10 @@
+{
+  "uuid": "0aef6bc1-9ed0-4070-8ef2-b845abf45051",
+  "id": "obsidian_gf_yellow",
+  "name": "OBSIDIAN GF+ Yellow",
+  "color_hex": "#FFFB00",
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

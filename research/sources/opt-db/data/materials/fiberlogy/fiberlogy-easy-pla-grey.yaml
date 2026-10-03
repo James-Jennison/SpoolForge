@@ -1,0 +1,23 @@
+uuid: 7f70d164-6426-54d8-9b9c-e48ea8661c3b
+slug: fiberlogy-easy-pla-grey
+brand:
+  slug: fiberlogy
+name: Easy PLA Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c5c5bfff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-easy-pla-grey/dd7259497a3b.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 240

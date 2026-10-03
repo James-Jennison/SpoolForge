@@ -1,0 +1,9 @@
+{
+  "uuid": "b8668b32-1720-4029-bc48-85143a492646",
+  "id": "ocean_blue",
+  "name": "Ocean Blue",
+  "color_hex": "#40B6E4",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

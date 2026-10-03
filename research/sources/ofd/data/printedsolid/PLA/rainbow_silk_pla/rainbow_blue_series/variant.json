@@ -1,0 +1,17 @@
+{
+  "uuid": "a960ea76-cbc7-478b-ba0f-44b89495b321",
+  "id": "rainbow_blue_series",
+  "name": "Rainbow-Blue Series",
+  "color_hex": [
+    "#32A584",
+    "#FA8423",
+    "#E72F1D",
+    "#EBFF57",
+    "#A38496"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "uuid": "1e279a3c-229f-4857-a055-db64fa05d142",
+  "id": "pink",
+  "name": "Pink",
+  "color_hex": "#E71280",
+  "traits": {
+    "neon": true
+  }
+}

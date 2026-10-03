@@ -1,0 +1,13 @@
+uuid: 72e9baed-2ae1-51ee-b3b5-01158c7438d7
+slug: verbatim-abs-green
+brand:
+  slug: verbatim
+name: ABS Green
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#739549ff'
+tags:
+- filtration_recommended
+properties: {}

@@ -1,0 +1,14 @@
+uuid: 329768bb-f10b-5d4f-bfd8-57b350775126
+slug: siddament-matte-light-grey-pla
+brand:
+  slug: siddament
+name: Matte Light Grey PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c5c7c4ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

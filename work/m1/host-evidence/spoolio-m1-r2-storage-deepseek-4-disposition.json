@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-deepseek-4",
+  "disposition": "CONFIRMED",
+  "reason": "CONFIRMED WITH NARROWER SCOPE: real 2023 legacy catalog recent hydrated and persisted. Matching generation is required to avoid fabricating old data; unavailable legacy source rows remain stored. Custom fallback and test added.",
+  "evidence_reference": "work/m1/host-evidence/remediation-round3-build.log; app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt; work/m1/host-evidence/migrated-user-data/summary.json",
+  "resolved": false
+}

@@ -1,0 +1,14 @@
+{
+  "uuid": "e69939da-2a26-4079-a49c-b8122e239a6c",
+  "id": "gold_red",
+  "name": "Gold-Red",
+  "color_hex": [
+    "#FFCB47",
+    "#DE1619"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

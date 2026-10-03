@@ -1,0 +1,11 @@
+uuid: c8b9d1cc-cff4-5983-9898-1438501b2e26
+slug: paramount-3d-petg-british-racing-green
+brand:
+  slug: paramount-3d
+name: PETG (British Racing Green)
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#1e5a4fff'
+properties: {}

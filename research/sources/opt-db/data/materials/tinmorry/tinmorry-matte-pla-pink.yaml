@@ -1,0 +1,14 @@
+uuid: f09eaea5-7d9b-590e-8f39-3eb4643fc43b
+slug: tinmorry-matte-pla-pink
+brand:
+  slug: tinmorry
+name: Matte PLA Pink
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fcafc0ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

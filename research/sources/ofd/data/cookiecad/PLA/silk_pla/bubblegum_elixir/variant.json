@@ -1,0 +1,11 @@
+{
+  "uuid": "85594cc7-33fc-4b11-a16a-770da1e2b076",
+  "id": "bubblegum_elixir",
+  "name": "Bubblegum Elixir",
+  "color_hex": "#F19DCD",
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "industrially_compostable": true
+  }
+}

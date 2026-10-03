@@ -1,0 +1,9 @@
+{
+  "model": "motorola razr 2023",
+  "initial_lookup_ms": 149.113593,
+  "samples": 20,
+  "p95_ms": 78.060208,
+  "max_ms": 83.796146,
+  "candidates": 4,
+  "measurement": "Actual sidecar installation\/hash validation\/SQLite lookup; excludes Compose rendering. No predefined latency acceptance threshold."
+}

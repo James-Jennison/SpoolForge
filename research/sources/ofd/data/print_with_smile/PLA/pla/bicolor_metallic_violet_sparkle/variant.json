@@ -1,0 +1,14 @@
+{
+  "uuid": "0e725d60-e857-4ac4-9a03-c0283b386744",
+  "id": "bicolor_metallic_violet_sparkle",
+  "name": "BICOLOR METALLIC VIOLET SPARKLE",
+  "color_hex": [
+    "#583061",
+    "#4D6383"
+  ],
+  "traits": {
+    "iridescent": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "uuid": "2276d0ad-59a5-4f9e-9f43-6d5616d11dbe",
+  "id": "funfetti",
+  "name": "Funfetti",
+  "color_hex": "#E4E7E5",
+  "traits": {
+    "translucent": true,
+    "glitter": true
+  }
+}

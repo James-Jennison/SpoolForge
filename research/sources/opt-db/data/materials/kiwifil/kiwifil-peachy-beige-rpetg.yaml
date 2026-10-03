@@ -1,0 +1,16 @@
+uuid: cb6a532c-5bb7-5a16-a6d3-55fc7e73a08b
+slug: kiwifil-peachy-beige-rpetg
+brand:
+  slug: kiwifil
+name: Peachy Beige rPETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#d7a86aff'
+tags:
+- recycled
+photos:
+- url: https://files.openprinttag.org/kiwifil/kiwifil-peachy-beige-rpetg/4142c627fdbe.jpg
+  type: unspecified
+properties: {}

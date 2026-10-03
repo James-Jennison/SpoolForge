@@ -1,0 +1,13 @@
+uuid: b8f17055-5ebf-51de-891c-96b143af4bb9
+slug: paramount-3d-abs-skin-dark-complexion
+brand:
+  slug: paramount-3d
+name: ABS (Skin - Dark Complexion)
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#c0894dff'
+tags:
+- filtration_recommended
+properties: {}

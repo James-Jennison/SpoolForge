@@ -1,0 +1,24 @@
+uuid: 5dbbfb82-0a88-55dc-9ca4-8a8594033b54
+slug: fiberlogy-easy-abs-pure-transparent
+brand:
+  slug: fiberlogy
+name: Easy ABS - Pure Transparent
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#e4e7e5ff'
+tags:
+  - translucent
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-easy-abs-pure-transparent/92a6df251997.png
+    type: unspecified
+properties:
+  density: 1.09
+  min_print_temperature: 235
+  max_print_temperature: 255
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 240

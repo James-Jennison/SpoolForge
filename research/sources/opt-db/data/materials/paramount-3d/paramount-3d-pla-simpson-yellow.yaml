@@ -1,0 +1,13 @@
+uuid: 360ae28a-8345-566d-ab76-04ff41ece76e
+slug: paramount-3d-pla-simpson-yellow
+brand:
+  slug: paramount-3d
+name: PLA (Simpson Yellow)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fadb24ff'
+tags:
+- industrially_compostable
+properties: {}

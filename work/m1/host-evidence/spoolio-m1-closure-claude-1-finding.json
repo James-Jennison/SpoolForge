@@ -1,0 +1,17 @@
+{
+  "finding_id": "spoolio-m1-closure-claude-1",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8531a942e791",
+  "reviewer": "claude",
+  "severity": "MEDIUM",
+  "category": "NfcCoordinator lifecycle safety",
+  "summary": "Unchanged: the executor-shutdown-race guard added to `onTag()` was not applied to `dispatch()`, which backs `arm()`, `approveOverwrite()`, `cancel()`, and `archiveUnknown()`.",
+  "claim": "Same narrower-but-real crash window remains open on four UI-reachable call sites.",
+  "evidence": {
+    "source": "Identical to prior submission \u2014 `onTag` catches `RejectedExecutionException`; `dispatch`'s `io.execute{...}` does not.",
+    "response_sha256": "c7030a186661ce81c2b1dfdb22aea7bb623d554953ba7e0d64102b6162b2da39"
+  },
+  "suggested_remediation": "Apply the same guard to `dispatch()` (or a shared safe-execute helper).",
+  "suggested_validation": "Call `nfc.shutdown()` then each of `arm/approveOverwrite/cancel/archiveUnknown` and assert no exception propagates.",
+  "reviewer_confidence": "HIGH"
+}

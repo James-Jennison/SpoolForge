@@ -1,0 +1,14 @@
+{
+  "uuid": "41dff0ca-505d-4152-9e99-8f57e1057250",
+  "id": "nature",
+  "name": "Nature",
+  "color_hex": "#CAAC78",
+  "color_standards": {
+    "ral": "1013"
+  },
+  "traits": {
+    "imitates_wood": true,
+    "industrially_compostable": true,
+    "contains_wood": true
+  }
+}

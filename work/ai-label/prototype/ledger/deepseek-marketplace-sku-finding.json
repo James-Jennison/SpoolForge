@@ -1,0 +1,20 @@
+{
+  "finding_id": "filamajig-label-deepseek-marketplace-sku",
+  "change_id": "filamajig-label-prototype-20260907",
+  "cycle_id": "review-cycle-b283c5a2aa6c",
+  "reviewer": "deepseek",
+  "severity": "HIGH",
+  "category": "identifier-classification",
+  "summary": "The blank-SKU fallback treated marketplace and generic Code 128 identifiers as manufacturer SKU.",
+  "claim": "An Amazon FNSKU could be stored as the manufacturer SKU.",
+  "evidence": {
+    "source": "review-cycle-b283c5a2aa6c"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "Remove the broad identifier fallback and retain marketplace identifiers as evidence only.",
+  "suggested_validation": "Unit test X0 marketplace identifier with blank AI SKU and require blank article number.",
+  "reviewer_confidence": "HIGH"
+}

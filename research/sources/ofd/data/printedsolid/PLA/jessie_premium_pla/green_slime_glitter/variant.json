@@ -1,0 +1,10 @@
+{
+  "uuid": "8e3ee797-8ab2-4498-8f6f-b2c07d4fef84",
+  "id": "green_slime_glitter",
+  "name": "Green Slime Glitter",
+  "color_hex": "#A1AC21",
+  "traits": {
+    "glitter": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,20 @@
+uuid: f5499bfb-634c-5651-8777-1c6595d28501
+slug: spectrum-safeguard-pla-light-grey
+brand:
+  slug: spectrum
+name: Safeguard PLA Light Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#d6d7d8ff'
+tags:
+- antibacterial
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-safeguard-pla-light-grey/spectrum-safeguard-pla-light-grey-0-ca617f05.jpg
+  type: unspecified

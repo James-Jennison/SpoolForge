@@ -1,0 +1,12 @@
+uuid: bd76310d-6e1f-5342-80c8-d88243849b1f
+slug: winkle-petg-royal-blue
+brand:
+  slug: winkle
+name: PETG Royal Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#2c3294ff'
+properties:
+  density: 1.23

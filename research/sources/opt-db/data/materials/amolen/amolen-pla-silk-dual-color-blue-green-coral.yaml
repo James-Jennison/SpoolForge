@@ -1,0 +1,27 @@
+uuid: e2655549-b826-5ff4-9a81-63f2de6818ea
+slug: amolen-pla-silk-dual-color-blue-green-coral
+brand:
+  slug: amolen
+name: PLA Silk Dual Color Blue Green & Coral
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://www.amolen.com/products/pla-silk-dual
+secondary_colors:
+- color_rgba: '#63d6d6ff'
+- color_rgba: '#ff2c29ff'
+tags:
+- silk
+- coextruded
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-silk-dual-color-blue-green-coral/2_b9b72136-60c3-4509-90ed-b8921f7fb64d.png
+  type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

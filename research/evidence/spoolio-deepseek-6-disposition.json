@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-deepseek-6",
+  "disposition": "CONFIRMED",
+  "reason": "CONFIRMED WITH NARROWER SCOPE: Hardware and exact installed build identification are required before physical tests in owner-approved M1. They do not block completion of research or approval to begin local implementation.",
+  "evidence_reference": "docs/FEASIBILITY.md revised; research/evidence/ofd-snapshot-validation.json; remediation review-cycle-5ac84cff9d4b",
+  "resolved": true
+}

@@ -1,0 +1,15 @@
+uuid: f90b60e1-fcf8-53cc-938a-e1093df3d5ec
+slug: winkle-pla-silk-king-gold
+brand:
+  slug: winkle
+name: PLA Silk King Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f4ac23ff'
+tags:
+- silk
+- industrially_compostable
+properties:
+  density: 1.24

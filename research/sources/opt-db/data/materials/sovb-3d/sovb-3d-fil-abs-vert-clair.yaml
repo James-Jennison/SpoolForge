@@ -1,0 +1,19 @@
+uuid: a35b3fcb-e9d9-5060-9786-04d634577e83
+slug: sovb-3d-fil-abs-vert-clair
+brand:
+  slug: sovb-3d
+name: Fil ABS Vert Clair
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#58c91bff'
+  color_ral: '6018'
+tags:
+- filtration_recommended
+properties:
+  density: 1.03
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 90
+  max_bed_temperature: 100

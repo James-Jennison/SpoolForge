@@ -1,0 +1,14 @@
+uuid: df658331-a256-5718-bb7b-ae8c1398defc
+slug: winkle-pla-hd-purple
+brand:
+  slug: winkle
+name: PLA HD Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#a368bbff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

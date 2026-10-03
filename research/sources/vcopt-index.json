@@ -1,0 +1,1339 @@
+{
+  "repo": "DBNinja/VCOPT",
+  "sha": "fd9b4226eb0e98dc7f0564dac9bde316dcb2ff74",
+  "date": "2026-03-03T02:43:31Z",
+  "license": {
+    "key": "agpl-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "spdx_id": "AGPL-3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0",
+    "node_id": "MDc6TGljZW5zZTE="
+  },
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68388534036ff0a0e81a0402d377c01d61f9d6be",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/68388534036ff0a0e81a0402d377c01d61f9d6be"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "07e306707e082b06c606553b05b44563144eb0bc",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/07e306707e082b06c606553b05b44563144eb0bc"
+    },
+    {
+      "path": ".github/workflows/android-ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48c262548aba6c12ef53d1a6dd0c302b1143f743",
+      "size": 1006,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/48c262548aba6c12ef53d1a6dd0c302b1143f743"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be04c7b124aff6ceec448566d3b41d614a8f6708",
+      "size": 133,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/be04c7b124aff6ceec448566d3b41d614a8f6708"
+    },
+    {
+      "path": "CLAUDE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "683b7b3032bd61032eeadafa4da801d3d4638649",
+      "size": 4068,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/683b7b3032bd61032eeadafa4da801d3d4638649"
+    },
+    {
+      "path": "Gemfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f21ac79eccf22996c0591501221e42ef6ecfc9f7",
+      "size": 47,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/f21ac79eccf22996c0591501221e42ef6ecfc9f7"
+    },
+    {
+      "path": "Gemfile.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27e71dc416a3ae1937a39d134ec59bb7c8844724",
+      "size": 6461,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/27e71dc416a3ae1937a39d134ec59bb7c8844724"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bfc1baf7e8eddd35ed780a687a7d203ad4c217e",
+      "size": 31745,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/1bfc1baf7e8eddd35ed780a687a7d203ad4c217e"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2cd24cdc9868a915bf843f0337e24e1e6ce042b",
+      "size": 1575,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/d2cd24cdc9868a915bf843f0337e24e1e6ce042b"
+    },
+    {
+      "path": "app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "32982b335f106e6ab8de292e36d8e50ce61da564",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/32982b335f106e6ab8de292e36d8e50ce61da564"
+    },
+    {
+      "path": "app/build.gradle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb4ab6ffb3614e53d7e6a19e927d363b33d96526",
+      "size": 3003,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/fb4ab6ffb3614e53d7e6a19e927d363b33d96526"
+    },
+    {
+      "path": "app/proguard-rules.pro",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b157a1e7c75b358f6ace3406e37b6a7ece050f9c",
+      "size": 585,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/b157a1e7c75b358f6ace3406e37b6a7ece050f9c"
+    },
+    {
+      "path": "app/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca59d2047f01c218085aa38c0743a543f8a54f1a",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/ca59d2047f01c218085aa38c0743a543f8a54f1a"
+    },
+    {
+      "path": "app/src/main",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "66cf8f4d954896180e5c6723c69340517d7b9c82",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/66cf8f4d954896180e5c6723c69340517d7b9c82"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89f42828f88cc336628989b070bb1fd7d0547a1f",
+      "size": 1732,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/89f42828f88cc336628989b070bb1fd7d0547a1f"
+    },
+    {
+      "path": "app/src/main/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "758705700dad9344d3bab2acbb0df8e8ff7c5a9d",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/758705700dad9344d3bab2acbb0df8e8ff7c5a9d"
+    },
+    {
+      "path": "app/src/main/assets/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34066c09578f27c9171ccb254c5cd0c630788992",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/34066c09578f27c9171ccb254c5cd0c630788992"
+    },
+    {
+      "path": "app/src/main/assets/data/Prusa MIT License.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fc45eff1d6ffa19e3cd16f19a320f0411a2d1d0",
+      "size": 1060,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/5fc45eff1d6ffa19e3cd16f19a320f0411a2d1d0"
+    },
+    {
+      "path": "app/src/main/assets/data/aux_fields.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2455e61d8ef2c8e71f4991478b10fa9ef900785a",
+      "size": 908,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/2455e61d8ef2c8e71f4991478b10fa9ef900785a"
+    },
+    {
+      "path": "app/src/main/assets/data/config_nfcv.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85241054e3493d1f712bb2b411fbbb38a3ae9e3b",
+      "size": 139,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/85241054e3493d1f712bb2b411fbbb38a3ae9e3b"
+    },
+    {
+      "path": "app/src/main/assets/data/config_noroot.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14e9e07d738bddf6720a5dccacbd84ab46611d43",
+      "size": 139,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/14e9e07d738bddf6720a5dccacbd84ab46611d43"
+    },
+    {
+      "path": "app/src/main/assets/data/main_fields.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "407f773a707f4a0a1cf02cedefca3ef0090c10b9",
+      "size": 12646,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/407f773a707f4a0a1cf02cedefca3ef0090c10b9"
+    },
+    {
+      "path": "app/src/main/assets/data/material_certifications_enum.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5e4357f5f2d9f6981d9aa4623dea3aee2c8074d",
+      "size": 612,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/f5e4357f5f2d9f6981d9aa4623dea3aee2c8074d"
+    },
+    {
+      "path": "app/src/main/assets/data/material_class_enum.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84d37d90f13280f9c8839f9f563bddb0291a7d09",
+      "size": 95,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/84d37d90f13280f9c8839f9f563bddb0291a7d09"
+    },
+    {
+      "path": "app/src/main/assets/data/material_type_enum.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79534456551238f11b5e857f9991d802cda1c707",
+      "size": 7384,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/79534456551238f11b5e857f9991d802cda1c707"
+    },
+    {
+      "path": "app/src/main/assets/data/meta_fields.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7993a259538c24199977256fe7c4bde0557b19c6",
+      "size": 858,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/7993a259538c24199977256fe7c4bde0557b19c6"
+    },
+    {
+      "path": "app/src/main/assets/data/tag_categories_enum.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa321651d8f9fbee1c0b44c7b2f84cb166d70947",
+      "size": 618,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/fa321651d8f9fbee1c0b44c7b2f84cb166d70947"
+    },
+    {
+      "path": "app/src/main/assets/data/tags_enum.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8ee032db2b8bb6cddbe4344b7c241b34c650e60",
+      "size": 16140,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/b8ee032db2b8bb6cddbe4344b7c241b34c650e60"
+    },
+    {
+      "path": "app/src/main/assets/data/write_protection_enum.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7c1f6b0ff3ff7ddadd3a6ff4ca9f85fc91acd75",
+      "size": 378,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/a7c1f6b0ff3ff7ddadd3a6ff4ca9f85fc91acd75"
+    },
+    {
+      "path": "app/src/main/ic_launcher-playstore.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15512f3d24d4a7b2c123aed32f503e41f1b296cc",
+      "size": 20601,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/15512f3d24d4a7b2c123aed32f503e41f1b296cc"
+    },
+    {
+      "path": "app/src/main/java",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a73e24d0740042f9144316d7a49fe619bb20d220",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/a73e24d0740042f9144316d7a49fe619bb20d220"
+    },
+    {
+      "path": "app/src/main/java/com",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f603717d360b0c5a8c8358822ff3365785c0db6f",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/f603717d360b0c5a8c8358822ff3365785c0db6f"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fb519c4bcf52eab159d171272a36dce827d2cc7c",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/fb519c4bcf52eab159d171272a36dce827d2cc7c"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "66732140a51406cbf2f3b7576b81adb6c2991c6b",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/66732140a51406cbf2f3b7576b81adb6c2991c6b"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag/AuxEditorActivity.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fb7dfe5a1e89a3039f1742293c7af20e5f3d5a4",
+      "size": 8726,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/0fb7dfe5a1e89a3039f1742293c7af20e5f3d5a4"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag/CreditsActivity.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "accde2aa52b22487ff8e7d091d3cae2d27f52175",
+      "size": 4720,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/accde2aa52b22487ff8e7d091d3cae2d27f52175"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag/GeneratorActivity.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18a58850f99926d94300aeacfc508648a42993a1",
+      "size": 45940,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/18a58850f99926d94300aeacfc508648a42993a1"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag/MainActivity.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4fe3386192f243a08c5657f63eada749a6f14ef",
+      "size": 33850,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/a4fe3386192f243a08c5657f63eada749a6f14ef"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag/NfcHelper.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5c116e01cdad1aebcf37ebd7146c0e760d09298",
+      "size": 24064,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/a5c116e01cdad1aebcf37ebd7146c0e760d09298"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fbfc29436c10626685e12d643c3816e0e4df7a73",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/fbfc29436c10626685e12d643c3816e0e4df7a73"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag/model/LibraryLicense.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c74609643cca7945c5524c5087c876d7856d25e2",
+      "size": 11145,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/c74609643cca7945c5524c5087c876d7856d25e2"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag/model/OpenPrintTagModel.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9802d98f418db58ea3e35b69d0eb44659369d854",
+      "size": 11469,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/9802d98f418db58ea3e35b69d0eb44659369d854"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag/model/Serializer.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1469b96ae58b58c1cbcfecfec165426f10ed8e08",
+      "size": 40171,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/1469b96ae58b58c1cbcfecfec165426f10ed8e08"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag/ui",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5817cde90028369ba0b2f1c9b6bd29eafb5af329",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/5817cde90028369ba0b2f1c9b6bd29eafb5af329"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag/ui/TagDataAdapter.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5512dbbb0c018f0e68a36ac9335224c575ce6c0",
+      "size": 13211,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/a5512dbbb0c018f0e68a36ac9335224c575ce6c0"
+    },
+    {
+      "path": "app/src/main/java/com/drunkenblindninja/vcoprinttag/ui/TagDisplaySection.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44934744831d241cf3145b7507ce5fb2143a335f",
+      "size": 10974,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/44934744831d241cf3145b7507ce5fb2143a335f"
+    },
+    {
+      "path": "app/src/main/res",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19fbd94fccf280d5a658ff46fcd79501a833395c",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/19fbd94fccf280d5a658ff46fcd79501a833395c"
+    },
+    {
+      "path": "app/src/main/res/drawable",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6dd3d87019c330ce7f47fd11e69f5cbdc14ea03e",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/6dd3d87019c330ce7f47fd11e69f5cbdc14ea03e"
+    },
+    {
+      "path": "app/src/main/res/drawable/hsv_wheel.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1da05b21552c39568b54d51df136e26222be1ac6",
+      "size": 34481,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/1da05b21552c39568b54d51df136e26222be1ac6"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_arrow_back.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd6974545eb0adb19bb5315b3eff4391b0e63b79",
+      "size": 422,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/cd6974545eb0adb19bb5315b3eff4391b0e63b79"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_calendar.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fb79ed60fa72d610807d635d8d9c948d3f92413",
+      "size": 597,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/2fb79ed60fa72d610807d635d8d9c948d3f92413"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_edit.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffc1b960fcf93ca752cd1fdfecc03883a2b30257",
+      "size": 526,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/ffc1b960fcf93ca752cd1fdfecc03883a2b30257"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_expand_more.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51d1c8dd358181675dbadf9469502a16ff07cd08",
+      "size": 405,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/51d1c8dd358181675dbadf9469502a16ff07cd08"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_folder_open.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4d0d11348dae747fd03db8f956113b9ea4502ee",
+      "size": 484,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/d4d0d11348dae747fd03db8f956113b9ea4502ee"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_github.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f01ec698245d2b5244d29874d587dda6db9c5c1b",
+      "size": 1065,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/f01ec698245d2b5244d29874d587dda6db9c5c1b"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_info.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23f4e28736d8439883f29465e47a63d8fa6af01c",
+      "size": 370,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/23f4e28736d8439883f29465e47a63d8fa6af01c"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_background.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9656185d71dcefa984bc9ed687da08b7979fa955",
+      "size": 273,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/9656185d71dcefa984bc9ed687da08b7979fa955"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9c2474fe0c67de74376914a7fc2dec58d6cbdc3",
+      "size": 302,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/b9c2474fe0c67de74376914a7fc2dec58d6cbdc3"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_save.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81a338df16eb983903f71cecc5c298dcd6ee3d2b",
+      "size": 519,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/81a338df16eb983903f71cecc5c298dcd6ee3d2b"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_trash_base.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "05fcdd956d8576b01918eff2bc58a1ba012232f7",
+      "size": 465,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/05fcdd956d8576b01918eff2bc58a1ba012232f7"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_trash_lid.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec00c51c96eb4ed8c31246fe7101c738db53241e",
+      "size": 433,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/ec00c51c96eb4ed8c31246fe7101c738db53241e"
+    },
+    {
+      "path": "app/src/main/res/drawable/profile_selector_background.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acc47430e5fc1ac830972fd7a16338e0096aad54",
+      "size": 349,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/acc47430e5fc1ac830972fd7a16338e0096aad54"
+    },
+    {
+      "path": "app/src/main/res/drawable/progress_usage.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bd5a99d2af57f60da85f6ed9a20b5a9ae37211d",
+      "size": 416,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/8bd5a99d2af57f60da85f6ed9a20b5a9ae37211d"
+    },
+    {
+      "path": "app/src/main/res/drawable/progress_usage_track.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5c1b16d1f304fae126231310333196df07f83079",
+      "size": 267,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/5c1b16d1f304fae126231310333196df07f83079"
+    },
+    {
+      "path": "app/src/main/res/drawable/wheel_selector_icon.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afbfeb870547cd592e6ac30b086210668ef11e58",
+      "size": 415,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/afbfeb870547cd592e6ac30b086210668ef11e58"
+    },
+    {
+      "path": "app/src/main/res/layout",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c79aca9ec376a4316958f0168741c89546fdabb6",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/c79aca9ec376a4316958f0168741c89546fdabb6"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_aux_editor.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e588675170c050fc198d2c6457dee6f84db5921",
+      "size": 13606,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/2e588675170c050fc198d2c6457dee6f84db5921"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_credits.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b6a66fdf6702eba79324926f75b07e1b322a510f",
+      "size": 8165,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/b6a66fdf6702eba79324926f75b07e1b322a510f"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_generator.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "519eabff961816975892ba13869fd9304c4fe8eb",
+      "size": 79080,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/519eabff961816975892ba13869fd9304c4fe8eb"
+    },
+    {
+      "path": "app/src/main/res/layout/activity_main.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bf173aeefba06458110464979e85487bf7f5317",
+      "size": 9039,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/3bf173aeefba06458110464979e85487bf7f5317"
+    },
+    {
+      "path": "app/src/main/res/layout/item_chip_group.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8c7f22d5e9ef0b090e8671ce7a38bfff7d76b3e",
+      "size": 514,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/a8c7f22d5e9ef0b090e8671ce7a38bfff7d76b3e"
+    },
+    {
+      "path": "app/src/main/res/layout/item_color_swatches.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffae95dc457831e34eb3e4334c7caec1e23e3bde",
+      "size": 417,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/ffae95dc457831e34eb3e4334c7caec1e23e3bde"
+    },
+    {
+      "path": "app/src/main/res/layout/item_empty_state.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d5760771602ff87186f0303d4ce6fad46130e2f",
+      "size": 1057,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/9d5760771602ff87186f0303d4ce6fad46130e2f"
+    },
+    {
+      "path": "app/src/main/res/layout/item_material_header.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6638ac423f5d0cdf205c9bca09425becb0eb2f77",
+      "size": 2219,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/6638ac423f5d0cdf205c9bca09425becb0eb2f77"
+    },
+    {
+      "path": "app/src/main/res/layout/item_property_row.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4d51e8efe5e20f78961e8ff462177a33fa369fd",
+      "size": 1705,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/e4d51e8efe5e20f78961e8ff462177a33fa369fd"
+    },
+    {
+      "path": "app/src/main/res/layout/item_section_header.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad8b2af49124bdd57ccd1b0e638cce19df5339c4",
+      "size": 466,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/ad8b2af49124bdd57ccd1b0e638cce19df5339c4"
+    },
+    {
+      "path": "app/src/main/res/layout/item_temperature_row.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd28fc747626ba135d698adbb8b01d9cccff10f3",
+      "size": 958,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/cd28fc747626ba135d698adbb8b01d9cccff10f3"
+    },
+    {
+      "path": "app/src/main/res/layout/item_usage_progress.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02c212f0d637ea14cd6a85e5a60678798cb0c05e",
+      "size": 1488,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/02c212f0d637ea14cd6a85e5a60678798cb0c05e"
+    },
+    {
+      "path": "app/src/main/res/layout/list_item.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2eb7c0cc8df34ff9749a5462a547d04b3956537e",
+      "size": 376,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/2eb7c0cc8df34ff9749a5462a547d04b3956537e"
+    },
+    {
+      "path": "app/src/main/res/layout/tag_category_header.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8167b620ade67d816911c38cdc262dea6653c143",
+      "size": 414,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/8167b620ade67d816911c38cdc262dea6653c143"
+    },
+    {
+      "path": "app/src/main/res/layout/tag_category_select.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00db0e66553c589cde0b152767e2fdbc6c9bd59a",
+      "size": 788,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/00db0e66553c589cde0b152767e2fdbc6c9bd59a"
+    },
+    {
+      "path": "app/src/main/res/layout/tag_selectable_option.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "871fbca182870ff1c6fac3b3a513c78c9d0abb4f",
+      "size": 1247,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/871fbca182870ff1c6fac3b3a513c78c9d0abb4f"
+    },
+    {
+      "path": "app/src/main/res/menu",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f4f2ebc683709743b861590b880063b434d2f02f",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/f4f2ebc683709743b861590b880063b434d2f02f"
+    },
+    {
+      "path": "app/src/main/res/menu/menu_main.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b302ad054c5ebca2ab14c1342bb8ad404301dfdd",
+      "size": 835,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/b302ad054c5ebca2ab14c1342bb8ad404301dfdd"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ba3fdf49f20e403cb1b78632ed126d2d3ac10f5b",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/ba3fdf49f20e403cb1b78632ed126d2d3ac10f5b"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cecb2f4536aa23ee7226b2539cd034641d5ec0d",
+      "size": 334,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/2cecb2f4536aa23ee7226b2539cd034641d5ec0d"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8100aee6bb0e7d7ab8df6ea8ef4c8f064c5eed3",
+      "size": 336,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/a8100aee6bb0e7d7ab8df6ea8ef4c8f064c5eed3"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9814902fbfeb6d6528b7f1873e3c6b6b32c468bc",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/9814902fbfeb6d6528b7f1873e3c6b6b32c468bc"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec073f4aafa5d9bac9b803b43dd0337862a38651",
+      "size": 1514,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/ec073f4aafa5d9bac9b803b43dd0337862a38651"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi/ic_launcher_foreground.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "214f69e2acb629b2bf9cac2b42e1ef024b392b85",
+      "size": 1292,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/214f69e2acb629b2bf9cac2b42e1ef024b392b85"
+    },
+    {
+      "path": "app/src/main/res/mipmap-hdpi/ic_launcher_round.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "596fedae346946de3caafbf8dbd6393b2f4a3d53",
+      "size": 3270,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/596fedae346946de3caafbf8dbd6393b2f4a3d53"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "68b7a0d1c9935a0c1da7bbf255aeaf77508e2873",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/68b7a0d1c9935a0c1da7bbf255aeaf77508e2873"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi/ic_launcher.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2c18192a98a327c88743545b9743472371e8813",
+      "size": 976,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/c2c18192a98a327c88743545b9743472371e8813"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi/ic_launcher_foreground.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38ed99346c4762bb980f4892079ff1a1eaf0183e",
+      "size": 888,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/38ed99346c4762bb980f4892079ff1a1eaf0183e"
+    },
+    {
+      "path": "app/src/main/res/mipmap-mdpi/ic_launcher_round.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "774ea1204ea75e74efe0ee431e882c6ecb4df336",
+      "size": 2020,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/774ea1204ea75e74efe0ee431e882c6ecb4df336"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8dffc527078ed5f80927d4dc9781a4ceefaa177b",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/8dffc527078ed5f80927d4dc9781a4ceefaa177b"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi/ic_launcher.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51df978ad31ee82e1b32fdd989e12c12acf7ecba",
+      "size": 2110,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/51df978ad31ee82e1b32fdd989e12c12acf7ecba"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11dc3705f0ba1a3b95a5361e7c11dfb83aa64da7",
+      "size": 1796,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/11dc3705f0ba1a3b95a5361e7c11dfb83aa64da7"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4803ae1ca8c4853572da313e9c1608bb09142127",
+      "size": 4678,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/4803ae1ca8c4853572da313e9c1608bb09142127"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0c6299dfdd989c60079c2e64095e9f7f5b1fbc6b",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/0c6299dfdd989c60079c2e64095e9f7f5b1fbc6b"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi/ic_launcher.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "813e21e281b9a27a836bc52ffa38ffe5f3987796",
+      "size": 3230,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/813e21e281b9a27a836bc52ffa38ffe5f3987796"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "66cea8c5cc701112e3ad1408f7f9bb4331d9ffa8",
+      "size": 2632,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/66cea8c5cc701112e3ad1408f7f9bb4331d9ffa8"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b16fd7e628adc15e58c5dee7521ab1792b878393",
+      "size": 7300,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/b16fd7e628adc15e58c5dee7521ab1792b878393"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d5427d3a80650228821f339323d1a6110c9a45f",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/7d5427d3a80650228821f339323d1a6110c9a45f"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e128d0b4b21ea13fdd43e5cdfc3fdbecd9e58a34",
+      "size": 4326,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/e128d0b4b21ea13fdd43e5cdfc3fdbecd9e58a34"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8504f3e6ecc7ae893ce09e37a57617de62572bf2",
+      "size": 3534,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/8504f3e6ecc7ae893ce09e37a57617de62572bf2"
+    },
+    {
+      "path": "app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcc0058036ec5aa73c124299df5bc9be6bbbc998",
+      "size": 10240,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/dcc0058036ec5aa73c124299df5bc9be6bbbc998"
+    },
+    {
+      "path": "app/src/main/res/values-night",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "31bbcf09aedb799c4fe02f7e12ee2adc32573f19",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/31bbcf09aedb799c4fe02f7e12ee2adc32573f19"
+    },
+    {
+      "path": "app/src/main/res/values-night/colors.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cedece195352096464bf07b3cfcdcdadca48ea45",
+      "size": 2103,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/cedece195352096464bf07b3cfcdcdadca48ea45"
+    },
+    {
+      "path": "app/src/main/res/values-night/styles.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8dca9db56bc1d2dde21ea62d511c4da24f86e06",
+      "size": 2372,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/d8dca9db56bc1d2dde21ea62d511c4da24f86e06"
+    },
+    {
+      "path": "app/src/main/res/values",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26a26e8c6ca24eec4733b6e2c82d6b2d08f78666",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/26a26e8c6ca24eec4733b6e2c82d6b2d08f78666"
+    },
+    {
+      "path": "app/src/main/res/values/colors.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a94ed121591f504d4c4ada3381a3384d688e95b4",
+      "size": 2368,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/a94ed121591f504d4c4ada3381a3384d688e95b4"
+    },
+    {
+      "path": "app/src/main/res/values/dimens.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d288deed1a3f9b3aa34ca1f5e69c822d13bea1d",
+      "size": 1526,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/1d288deed1a3f9b3aa34ca1f5e69c822d13bea1d"
+    },
+    {
+      "path": "app/src/main/res/values/ic_launcher_background.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10d2ccb53551e6e35f1c2cf47e29ae160049e77c",
+      "size": 120,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/10d2ccb53551e6e35f1c2cf47e29ae160049e77c"
+    },
+    {
+      "path": "app/src/main/res/values/strings.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5e21df56fbea64674a441ab2da8b2d2ebab600c",
+      "size": 10683,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/c5e21df56fbea64674a441ab2da8b2d2ebab600c"
+    },
+    {
+      "path": "app/src/main/res/values/styles.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d7e1007e48fb18aceca3fa4481301fa65c83d79",
+      "size": 2383,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/0d7e1007e48fb18aceca3fa4481301fa65c83d79"
+    },
+    {
+      "path": "app/src/main/res/values/themes.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "329cc578210b221a00054f46c745d611b540a5c1",
+      "size": 5617,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/329cc578210b221a00054f46c745d611b540a5c1"
+    },
+    {
+      "path": "app/src/main/res/values/type.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ee19696cf9a984034baff4bad9185d90a961850",
+      "size": 4303,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/2ee19696cf9a984034baff4bad9185d90a961850"
+    },
+    {
+      "path": "app/src/main/res/xml",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "42e42236417ff89ad1d190e0b7ea3f794a0b7f7e",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/42e42236417ff89ad1d190e0b7ea3f794a0b7f7e"
+    },
+    {
+      "path": "app/src/main/res/xml/nfc_tech_filter.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "578ffda5cecef766a3b9e71af95258f6db68231c",
+      "size": 344,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/578ffda5cecef766a3b9e71af95258f6db68231c"
+    },
+    {
+      "path": "app/src/test",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "679d6fff1f80daa51be8be5b69902b83082c43b8",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/679d6fff1f80daa51be8be5b69902b83082c43b8"
+    },
+    {
+      "path": "app/src/test/java",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "381bfe824f7f6db1655a6360cbb8c9d77c4bb8d8",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/381bfe824f7f6db1655a6360cbb8c9d77c4bb8d8"
+    },
+    {
+      "path": "app/src/test/java/com",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b1114ac4a2b96025aa22ca2cd1f0b37781302d10",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/b1114ac4a2b96025aa22ca2cd1f0b37781302d10"
+    },
+    {
+      "path": "app/src/test/java/com/drunkenblindninja",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "99a8ae777fb03cbd3787391db0155d76ddaee2a7",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/99a8ae777fb03cbd3787391db0155d76ddaee2a7"
+    },
+    {
+      "path": "app/src/test/java/com/drunkenblindninja/vcoprinttag",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95e7a445d48bf5b14fe59ffcf6d542910e737b19",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/95e7a445d48bf5b14fe59ffcf6d542910e737b19"
+    },
+    {
+      "path": "app/src/test/java/com/drunkenblindninja/vcoprinttag/SelectionManagerTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbcc29015687660bc1acf63cce7e8510649f588a",
+      "size": 7723,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/bbcc29015687660bc1acf63cce7e8510649f588a"
+    },
+    {
+      "path": "app/src/test/java/com/drunkenblindninja/vcoprinttag/SerializerUnitTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11e4006da702810018212e3ae31dae72a42c2628",
+      "size": 7277,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/11e4006da702810018212e3ae31dae72a42c2628"
+    },
+    {
+      "path": "app/src/test/java/com/drunkenblindninja/vcoprinttag/model",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3e31978ede41b7e98d9ab6d92125b5e81bf4e613",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/3e31978ede41b7e98d9ab6d92125b5e81bf4e613"
+    },
+    {
+      "path": "app/src/test/java/com/drunkenblindninja/vcoprinttag/model/FieldCoverageTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25dc3d3736e7f248ca321cd12f5fc08fafa2984a",
+      "size": 10813,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/25dc3d3736e7f248ca321cd12f5fc08fafa2984a"
+    },
+    {
+      "path": "app/src/test/java/com/drunkenblindninja/vcoprinttag/model/OpenPrintTagEncodeDecodeTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96214de55ecd1af2cb0fca5a7897481b2c9f49fc",
+      "size": 19183,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/96214de55ecd1af2cb0fca5a7897481b2c9f49fc"
+    },
+    {
+      "path": "app/src/test/java/com/drunkenblindninja/vcoprinttag/model/OpenPrintTagModelTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "354105b3a2e2545e37769e572501ca69acf45a0c",
+      "size": 11587,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/354105b3a2e2545e37769e572501ca69acf45a0c"
+    },
+    {
+      "path": "app/src/test/java/com/drunkenblindninja/vcoprinttag/model/SerializerTest.kt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "942555ed306276c8640fd7571ecc28bc445d1f4f",
+      "size": 4196,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/942555ed306276c8640fd7571ecc28bc445d1f4f"
+    },
+    {
+      "path": "app/src/test/resources",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "849cf7193363731f1ac9b36addbd83d5698c1311",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/849cf7193363731f1ac9b36addbd83d5698c1311"
+    },
+    {
+      "path": "app/src/test/resources/encode_decode",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b3be46aee6eecccad99bb83296953af59cfef18",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/5b3be46aee6eecccad99bb83296953af59cfef18"
+    },
+    {
+      "path": "app/src/test/resources/encode_decode/01_data.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1442939a5a16766da70a3218a35c8c87da989100",
+      "size": 312,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/1442939a5a16766da70a3218a35c8c87da989100"
+    },
+    {
+      "path": "app/src/test/resources/encode_decode/01_input.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e5c38f8e8b06ae2f11a279ecae29d0ad613d461",
+      "size": 1024,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/6e5c38f8e8b06ae2f11a279ecae29d0ad613d461"
+    },
+    {
+      "path": "app/src/test/resources/encode_decode/02_data.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04e5c08dfdf248263ed1c5a2d58092815b0ad08e",
+      "size": 312,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/04e5c08dfdf248263ed1c5a2d58092815b0ad08e"
+    },
+    {
+      "path": "app/src/test/resources/encode_decode/02_input.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "692d3bac5645aebf264a453b1dad6f58aabb3d59",
+      "size": 940,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/692d3bac5645aebf264a453b1dad6f58aabb3d59"
+    },
+    {
+      "path": "app/src/test/resources/encode_decode/03_data.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb0d104ca289749f6ce80173d5c569e4876b9894",
+      "size": 312,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/eb0d104ca289749f6ce80173d5c569e4876b9894"
+    },
+    {
+      "path": "app/src/test/resources/encode_decode/03_input.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9785773401f27e6aafa3f1754ecd7e2b637fcdcd",
+      "size": 986,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/9785773401f27e6aafa3f1754ecd7e2b637fcdcd"
+    },
+    {
+      "path": "app/src/test/resources/encode_decode/04_data.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a242500a2342c0b937600796cc72b8e4134cb040",
+      "size": 312,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/a242500a2342c0b937600796cc72b8e4134cb040"
+    },
+    {
+      "path": "app/src/test/resources/encode_decode/04_input.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c200a61fe6ca73b991d2395821d70a554abea2f",
+      "size": 1157,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/7c200a61fe6ca73b991d2395821d70a554abea2f"
+    },
+    {
+      "path": "app/src/test/resources/encode_decode/05_data.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "423b232c1d00aef24cbd63f82366f72dc21eec96",
+      "size": 312,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/423b232c1d00aef24cbd63f82366f72dc21eec96"
+    },
+    {
+      "path": "app/src/test/resources/encode_decode/05_input.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b191828c31b109c535e4a58f4e8cb10a368f11d",
+      "size": 313,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/4b191828c31b109c535e4a58f4e8cb10a368f11d"
+    },
+    {
+      "path": "app/src/test/resources/test_data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "97fbb15c242ee26097a7dcb8e9f171c29ab74af8",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/97fbb15c242ee26097a7dcb8e9f171c29ab74af8"
+    },
+    {
+      "path": "app/src/test/resources/test_data/openprinttag_PETG_Kandy_Blast.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d83a8cb0089fb9470446a8b447ef101ab639f0d7",
+      "size": 312,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/d83a8cb0089fb9470446a8b447ef101ab639f0d7"
+    },
+    {
+      "path": "build.gradle",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a484e4fe279b7f79298a04a45279811de65f3ae9",
+      "size": 346,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/a484e4fe279b7f79298a04a45279811de65f3ae9"
+    },
+    {
+      "path": "fastlane",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5f2dabe8b42de26d775b5d4a4e7efeb00ee03c15",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/5f2dabe8b42de26d775b5d4a4e7efeb00ee03c15"
+    },
+    {
+      "path": "fastlane/Appfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1aea112594b5a57e9639787cc9b1143a1a8d9c5",
+      "size": 193,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/f1aea112594b5a57e9639787cc9b1143a1a8d9c5"
+    },
+    {
+      "path": "fastlane/Fastfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19c557cc6e2f6ad10abcbb968e6b19ba0ec3a051",
+      "size": 909,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/19c557cc6e2f6ad10abcbb968e6b19ba0ec3a051"
+    },
+    {
+      "path": "fastlane/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ec1207f1ac3c0f8ccf39b01b241f46ce1cce577",
+      "size": 934,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/7ec1207f1ac3c0f8ccf39b01b241f46ce1cce577"
+    },
+    {
+      "path": "fastlane/metadata",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6882a42ac9d4842f8c7aabde676893ca901715f5",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/6882a42ac9d4842f8c7aabde676893ca901715f5"
+    },
+    {
+      "path": "fastlane/metadata/android",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6906dee4459ab29dea43acf30b9f40bd8750400b",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/6906dee4459ab29dea43acf30b9f40bd8750400b"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5a3558eb3be1f5d7e8eb015396cfb00b1c187db7",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/5a3558eb3be1f5d7e8eb015396cfb00b1c187db7"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/full_description.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de386b7dd6b9d6432be6f4b478e303926aa59d75",
+      "size": 638,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/de386b7dd6b9d6432be6f4b478e303926aa59d75"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "532c27f0c456d87a3385e0e94016b4d352705f22",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/532c27f0c456d87a3385e0e94016b4d352705f22"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/images/phoneScreenshots",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a55f058cdafd198d0417e194cbdc3db082de720e",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/a55f058cdafd198d0417e194cbdc3db082de720e"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/images/phoneScreenshots/1.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "432abca6d37748fc4a38ce1a0dfd9f568cb394ed",
+      "size": 123343,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/432abca6d37748fc4a38ce1a0dfd9f568cb394ed"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/images/phoneScreenshots/2.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37720d4901c64f4294c503cb5373062afad6765e",
+      "size": 87315,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/37720d4901c64f4294c503cb5373062afad6765e"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/images/phoneScreenshots/3.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7735bac583a2de23c1a55e6ecf4f637cb0cb8db",
+      "size": 101309,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/c7735bac583a2de23c1a55e6ecf4f637cb0cb8db"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/images/phoneScreenshots/4.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21aeb90af9ec6d04646e44cc3d37be5cf925edd3",
+      "size": 109957,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/21aeb90af9ec6d04646e44cc3d37be5cf925edd3"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/short_description.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "931b3e0e325c427c959134061837711434c5f7cf",
+      "size": 60,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/931b3e0e325c427c959134061837711434c5f7cf"
+    },
+    {
+      "path": "fastlane/metadata/android/en-US/title.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1440f6a8430c2cdb145c7736e5f5ac0584c25529",
+      "size": 27,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/1440f6a8430c2cdb145c7736e5f5ac0584c25529"
+    },
+    {
+      "path": "gradle.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55f7c0e34a7cd2c6183d8f61146eef47c42b795a",
+      "size": 385,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/55f7c0e34a7cd2c6183d8f61146eef47c42b795a"
+    },
+    {
+      "path": "gradle",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77be1504106937d68f6e67c37bd981b0549ec8b2",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/77be1504106937d68f6e67c37bd981b0549ec8b2"
+    },
+    {
+      "path": "gradle/wrapper",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b143aac71db177ee39e6f7b32a53ea124542c5a",
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/trees/5b143aac71db177ee39e6f7b32a53ea124542c5a"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8bdaf60c75ab801e22807dde59e12a8735a34077",
+      "size": 45457,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/8bdaf60c75ab801e22807dde59e12a8735a34077"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a38a8cea61177dc6098dd44ae3792f3e9eb8e96",
+      "size": 339,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/6a38a8cea61177dc6098dd44ae3792f3e9eb8e96"
+    },
+    {
+      "path": "gradlew",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "adff685a0348c64b2b64f0b302f1f82b28eeaaea",
+      "size": 8618,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/adff685a0348c64b2b64f0b302f1f82b28eeaaea"
+    },
+    {
+      "path": "gradlew.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e509b2dd8fe5579a5954a2c28633ad914cd1c225",
+      "size": 2896,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/e509b2dd8fe5579a5954a2c28633ad914cd1c225"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6befe3b038fe83f46213e483cc1d3296ae91dbe7",
+      "size": 186,
+      "url": "https://api.github.com/repos/DBNinja/VCOPT/git/blobs/6befe3b038fe83f46213e483cc1d3296ae91dbe7"
+    }
+  ]
+}

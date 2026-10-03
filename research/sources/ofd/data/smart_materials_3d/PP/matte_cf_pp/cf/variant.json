@@ -1,0 +1,11 @@
+{
+  "uuid": "701ac98b-ebc3-4173-b755-78e312e98168",
+  "id": "cf",
+  "name": "Cf",
+  "color_hex": "#000000",
+  "traits": {
+    "matte": true,
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

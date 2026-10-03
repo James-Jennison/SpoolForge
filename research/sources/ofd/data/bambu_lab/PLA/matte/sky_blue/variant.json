@@ -1,0 +1,11 @@
+{
+  "uuid": "51c99321-89d1-4709-a6e8-32685ca78e64",
+  "id": "sky_blue",
+  "name": "Sky Blue",
+  "color_hex": [
+    "#56B7E6"
+  ],
+  "traits": {
+    "matte": true
+  }
+}

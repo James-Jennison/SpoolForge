@@ -1,0 +1,14 @@
+uuid: 26a8c90c-b12f-54a7-905f-0b9da84e0811
+slug: winkle-pla-hd-phantom-white
+brand:
+  slug: winkle
+name: PLA HD Phantom White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#efefefff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.24

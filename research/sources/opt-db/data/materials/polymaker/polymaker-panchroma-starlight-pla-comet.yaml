@@ -1,0 +1,24 @@
+uuid: e9e18638-b36e-5504-812f-439fc1266f39
+slug: polymaker-panchroma-starlight-pla-comet
+brand:
+  slug: polymaker
+name: Panchroma™ Starlight PLA Comet
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#1f312aff'
+tags:
+  - iridescent
+  - glitter
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-starlight-pla-comet/2a2c23c9e044.png
+    type: unspecified
+properties:
+  density: 1.17
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

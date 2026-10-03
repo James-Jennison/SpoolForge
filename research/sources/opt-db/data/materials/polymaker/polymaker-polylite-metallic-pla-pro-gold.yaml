@@ -1,0 +1,22 @@
+uuid: 418fd92a-108e-5a3b-b626-49e3e7017906
+slug: polymaker-polylite-metallic-pla-pro-gold
+brand:
+  slug: polymaker
+name: PolyLite™ Metallic PLA Pro Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#a66301ff'
+tags:
+  - imitates_metal
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polylite-metallic-pla-pro-gold/polymaker-polylite-metallic-pla-pro-gold-0-69a57ceb.jpg
+    type: unspecified
+properties:
+  density: 1.22
+  min_print_temperature: 190
+  max_print_temperature: 220
+  min_bed_temperature: 30
+  max_bed_temperature: 60

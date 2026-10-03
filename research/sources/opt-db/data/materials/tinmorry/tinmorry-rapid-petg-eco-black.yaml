@@ -1,0 +1,11 @@
+uuid: 2b250183-6cd0-5b47-b49f-5491b44228f3
+slug: tinmorry-rapid-petg-eco-black
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Black
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#000000ff'
+properties: {}

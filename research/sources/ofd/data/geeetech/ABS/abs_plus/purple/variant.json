@@ -1,0 +1,9 @@
+{
+  "uuid": "dee9201f-6123-4340-9a32-58a99eee2732",
+  "id": "purple",
+  "name": "Purple",
+  "color_hex": "#800080",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

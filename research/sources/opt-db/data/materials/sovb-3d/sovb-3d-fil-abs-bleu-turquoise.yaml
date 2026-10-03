@@ -1,0 +1,19 @@
+uuid: d0ee4fb6-ab5c-515c-91e3-33388c1b1d62
+slug: sovb-3d-fil-abs-bleu-turquoise
+brand:
+  slug: sovb-3d
+name: Fil ABS Bleu Turquoise
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#40b6e4ff'
+  color_ral: '5018'
+tags:
+- filtration_recommended
+properties:
+  density: 1.03
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 90
+  max_bed_temperature: 100

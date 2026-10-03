@@ -1,0 +1,21 @@
+uuid: 4867195e-8f00-5abd-8294-7f21f84a9bbd
+slug: formfutura-matt-pla-stealth-white
+brand:
+  slug: formfutura
+name: Matt PLA Stealth White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-matt-pla-stealth-white/9852406b0fbc.png
+    type: unspecified
+properties:
+  density: 1.38
+  min_print_temperature: 215
+  max_print_temperature: 235
+  min_bed_temperature: 50
+  max_bed_temperature: 60

@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-gemini-2",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "gemini",
+  "severity": "HIGH",
+  "category": "NFC & Local Workflow Interoperability",
+  "summary": "Decoded OpenSpool tags fail validation when saved locally because OpenSpool NDEF payloads lack a color name field and decoded temperatures are ignored.",
+  "claim": "Decoded OpenSpool tags fail validation when saved locally because OpenSpool NDEF payloads lack a color name field and decoded temperatures are ignored.",
+  "evidence": {
+    "source": "In MainViewModel.kt, decodedSeed() maps the decoded tag values into CustomSeed with color set to \"\" and omits min_temp, max_temp, bed_min_temp, and bed_max_temp. When saveCustom() is invoked, validateRecord() throws a ValidationException(\"Brand, material, product, and color are required\").",
+    "response_sha256": "11d27f62d8327b2e140b8d0ad35699fce61fb74755db64e1412c245d13d852bd"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Modify decodedSeed() to extract min_temp, max_temp, bed_min_temp, and bed_max_temp from the decoded JsonValue map, provide a sensible default or derived color name when converting NDEF payloads, and update CustomDialog to expose temperature editing.",
+  "suggested_validation": "Scan an OpenSpool tag containing temperature ranges, select 'Edit as a local record', and save the record without manual intervention; confirm that the local record saves successfully and retains the decoded temperatures.",
+  "reviewer_confidence": "HIGH"
+}

@@ -1,0 +1,9 @@
+{
+  "uuid": "ad7a9dea-165f-4ed4-b6aa-8ac3acad409e",
+  "id": "luminous_green",
+  "name": "Luminous Green",
+  "color_hex": "#46DF55",
+  "traits": {
+    "neon": true
+  }
+}

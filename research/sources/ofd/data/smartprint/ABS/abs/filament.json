@@ -1,0 +1,8 @@
+{
+  "uuid": "4eefbda1-2ba2-4807-87e4-2dad4a4d91be",
+  "id": "abs",
+  "name": "ABS",
+  "diameter_tolerance": 0.03,
+  "density": 1.05,
+  "max_dry_temperature": 80
+}

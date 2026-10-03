@@ -1,0 +1,16 @@
+uuid: 4f607cab-34f2-533b-91b9-4bb08b98b4d2
+slug: prusament-resin-model-bright-cyan
+brand:
+  slug: prusament-resin
+name: Model Bright Cyan
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#0079a7ff'
+properties:
+  density: 1.11
+  cure_wavelength: 405
+  viscosity_18c: 287
+  viscosity_25c: 167
+  viscosity_40c: 66
+  viscosity_60c: 1

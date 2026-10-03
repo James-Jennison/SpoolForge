@@ -1,0 +1,28 @@
+[
+  {
+    "uuid": "68b09f1f-5955-4d12-b599-82ceda31b477",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5905991405955",
+    "article_number": "TF-24042",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-2665-The-Filament-ReFill-PLA-1-75mm-TRAFFIC-WHITE-1kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "bb663a59-f1f6-4ea9-a7a8-74881fc84197",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5905991405085",
+    "article_number": "TF-24001",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-2600-The-Filament-PLA-1-75mm-TRAFFIC-WHITE-1kg.html"
+      }
+    ]
+  }
+]

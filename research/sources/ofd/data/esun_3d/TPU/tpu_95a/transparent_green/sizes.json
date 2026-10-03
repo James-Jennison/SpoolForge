@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "bc0dac9b-060e-45ba-b1e2-58d66e786e46",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/tpu-95a"
+      }
+    ]
+  }
+]

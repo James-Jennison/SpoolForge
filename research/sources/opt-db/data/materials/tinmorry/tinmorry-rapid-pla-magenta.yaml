@@ -1,0 +1,13 @@
+uuid: 958cf4f1-63f7-5faa-ba48-802773731f11
+slug: tinmorry-rapid-pla-magenta
+brand:
+  slug: tinmorry
+name: Rapid PLA Magenta
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e23288ff'
+tags:
+- industrially_compostable
+properties: {}

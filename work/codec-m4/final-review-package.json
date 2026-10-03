@@ -1,0 +1,75 @@
+{
+  "phase": "CLOSURE",
+  "objective": "Close M4 after the physical NTAG215 and U1 gate that remained open in remediation cycle review-cycle-739271fd9e4f.",
+  "owner_requirements": [
+    "Real 2023 Razr NTAG215 fresh readback",
+    "One-tag completion and durable spool binding",
+    "U1 v1.5.2-paxx12-21 recognition",
+    "Final 0.4.0-m4 build and evidence closure"
+  ],
+  "previous_full_source_review": {
+    "cycle": "review-cycle-739271fd9e4f",
+    "package_sha256": "dda1075a430213a62e2f6b8416e3333d1be9157c2f826cb194c3ae4bab9d5a56",
+    "result": "Grok, Gemini and DeepSeek COMPLETE with no remaining source finding; physical hardware gate explicitly remained open."
+  },
+  "material_delta_since_previous_review": "Only versionName, M4 completion documentation, physical evidence, and the evidence verifier changed. No runtime codec/NFC/persistence source changed after the prior no-findings review.",
+  "objective_evidence": {
+    "protected_gate": "PASS: 97 Gradle tasks; 101 host tests; lint; app and test APKs",
+    "device_gate": "PASS: 5 instrumentation tests on exact motorola razr 2023 Android 16 in 13.123 seconds",
+    "installed_build": "0.4.0-m4, app APK sha256 1aafa0b84df95f5ba71721f32cc1d8c7e297a4257d0a0d40246703d0a2ce98b4",
+    "control_plane_evidence": "evidence-cycle-795de7429821: both HIGH checks PASS with intact artifacts",
+    "physical": {
+      "schema_version": 1,
+      "captured_at": "2026-09-08T04:59:53.010706+00:00",
+      "device": {
+        "model": "motorola_razr_2023",
+        "transport": "wireless-adb",
+        "android_version": 16
+      },
+      "tag": {
+        "type": "NTAG215",
+        "uid_recorded": false,
+        "capacity_bytes": 492
+      },
+      "codec": {
+        "id": "openspool-paxx-u1-1.0",
+        "target": "Snapmaker U1 v1.5.2-paxx12-21"
+      },
+      "spool": {
+        "brand": "MARSWORK",
+        "material": "PLA",
+        "color": "Cyan",
+        "nozzle_min_c": 190,
+        "nozzle_max_c": 230
+      },
+      "phone_acceptance": {
+        "fresh_readback": "PASS",
+        "write_result": "Write verified",
+        "binding_result": "Tag 1 is verified and bound to this spool",
+        "single_tag_completion": "Completed with one verified tag"
+      },
+      "printer_acceptance": {
+        "state": "PASS",
+        "firmware": "v1.5.2-paxx12-21",
+        "mode": "OpenRFID",
+        "bay": 1,
+        "recognized_profile": {
+          "brand": "MARSWORK",
+          "material": "PLA",
+          "color": "Cyan",
+          "nozzle_min_c": 190,
+          "nozzle_max_c": 230
+        },
+        "result_source": "Owner-observed U1 display after physical Bay 1 presentation"
+      }
+    },
+    "privacy": "No tag UID recorded."
+  },
+  "finding_resolution": "filamajig-m4-deepseek-physical-gate disposition CONFIRMED/resolved as finding-disposition-91c7411bfe80.",
+  "review_questions": [
+    "Does this evidence close the physical HIGH finding?",
+    "Does the small post-review delta introduce any BLOCKER, HIGH, or MEDIUM defect?",
+    "Is M4 READY with no residual risk?"
+  ],
+  "material_delta_diff": "diff --git a/app/build.gradle.kts b/app/build.gradle.kts\nindex d6fae4e34..f75656bc2 100644\n--- a/app/build.gradle.kts\n+++ b/app/build.gradle.kts\n@@ -28,7 +28,7 @@ android {\n         minSdk = 28\n         targetSdk = 36\n         versionCode = 1\n-        versionName = \"0.3.0-m3\"\n+        versionName = \"0.4.0-m4\"\n         testInstrumentationRunner = \"androidx.test.runner.AndroidJUnitRunner\"\n         buildConfigField(\"String\", \"OPENAI_API_KEY\", \"\\\"\\\"\")\n     }\ndiff --git a/docs/ROADMAP.md b/docs/ROADMAP.md\nindex 39a9cc602..55de86f5c 100644\n--- a/docs/ROADMAP.md\n+++ b/docs/ROADMAP.md\n@@ -96,6 +96,8 @@ Completed with the self-contained UTF-8 `filamajig.spool` version 1 QR contract;\n \n Previous OpenSpool/PAXX/NFC state-machine work remains substantial. Route UI through registry; add exact standard vs PAXX field/omission previews and release-pinned fixtures; bind one or two tags to a spool. Acceptance: unit round trips, byte capacity, malformed/unknown preservation, current Razr NTAG215 write/readback, and U1 `v1.5.2-paxx12-21` recognition across the supported field matrix. No generic claim substitutes.\n \n+Completed with an explicit Standard OpenSpool/PAXX codec registry; exact included-field, JSON-type, omitted-field and NTAG215-capacity previews; byte-stable release-pinned PAXX fixtures; and transactional one- or two-tag spool bindings recorded only after fresh semantic readback. Host acceptance covers the supported PLA, PETG, ABS, TPU and PVA type matrix plus Silk, Rapid, Transparent, Flexible and Support subtype mappings, malformed and unknown-field preservation, restart reconciliation, duplicate UIDs, second-tag failure, and binding-callback recovery without rewriting. All 101 host tests, lint and both APK assemblies pass. Five instrumentation tests pass on the 2023 Razr, and a real NTAG215 written there was read back, bound as a single verified tag and recognized in U1 Bay 1 running `v1.5.2-paxx12-21` in OpenRFID mode.\n+\n ### M5 \u2014 Open ecosystem adapters\n \n Add read/convert support before write support for OpenPrintTag and OpenTag3D, then Spoolman import/export/sync. Acceptance is format-specific and separates radio hardware, read, write, verify and conversion. No printer control.\n@@ -116,4 +118,4 @@ Refine the existing one-photo AI and retail-code paths, landscape/task restorati\n | Label/QR prototype | M3 | Completed with versioned offline identity and configurable rendering |\n | Amazon/Icecat trials | None | Research retained; product dependency removed |\n \n-The next coherent milestone is **M4 codec registry and pinned PAXX release**. It converts the already-proven OpenSpool/PAXX work into explicit release-pinned codec contracts and binds one or two verified tags to a physical spool.\n+The next coherent milestone is **M5 open ecosystem adapters**: read and conversion support for OpenPrintTag and OpenTag3D, followed by Spoolman interoperability.\ndiff --git a/tools/verify_codec_m4_evidence.py b/tools/verify_codec_m4_evidence.py\nnew file mode 100644\nindex 000000000..04d5afc0e\n--- /dev/null\n+++ b/tools/verify_codec_m4_evidence.py\n@@ -0,0 +1,33 @@\n+#!/usr/bin/env python3\n+import json\n+from pathlib import Path\n+\n+d=json.loads(Path('work/codec-m4/device-acceptance.json').read_text())\n+assert d['model']=='motorola razr 2023'\n+assert d['codec_id']=='openspool-paxx-u1-1.0'\n+assert d['firmware_target']=='v1.5.2-paxx12-21'\n+assert 0 < d['payload_bytes'] < d['ndef_message_bytes'] <= d['ntag215_capacity']==492\n+assert d['semantic_round_trip']=='PASS'\n+assert d['physical_write_required'] is True\n+\n+p=json.loads(Path('work/codec-m4/physical-acceptance.json').read_text())\n+assert p['tag']['type']=='NTAG215'\n+assert p['tag']['uid_recorded'] is False\n+assert p['tag']['capacity_bytes']==492\n+assert p['codec']['id']=='openspool-paxx-u1-1.0'\n+assert p['codec']['target']=='Snapmaker U1 v1.5.2-paxx12-21'\n+assert p['phone_acceptance']['fresh_readback']=='PASS'\n+assert p['phone_acceptance']['write_result']=='Write verified'\n+assert p['phone_acceptance']['single_tag_completion']=='Completed with one verified tag'\n+assert p['printer_acceptance']['state']=='PASS'\n+assert p['printer_acceptance']['firmware']=='v1.5.2-paxx12-21'\n+assert p['printer_acceptance']['mode']=='OpenRFID'\n+assert p['printer_acceptance']['bay']==1\n+assert p['printer_acceptance']['recognized_profile'] == {\n+    'brand': 'MARSWORK',\n+    'material': 'PLA',\n+    'color': 'Cyan',\n+    'nozzle_min_c': 190,\n+    'nozzle_max_c': 230,\n+}\n+print('M4 codec, physical NTAG215, and U1 evidence: PASS')\n"
+}

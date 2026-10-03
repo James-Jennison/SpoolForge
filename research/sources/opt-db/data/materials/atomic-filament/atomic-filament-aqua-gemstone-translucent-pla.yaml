@@ -1,0 +1,18 @@
+uuid: d92bc689-aed3-5d9a-9b5e-de93cac80d76
+slug: atomic-filament-aqua-gemstone-translucent-pla
+brand:
+  slug: atomic-filament
+name: Aqua Gemstone Translucent PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://atomicfilament.com/products/aqua-gemstone-translucent-pla
+primary_color:
+  color_rgba: '#36dbe7ff'
+tags:
+- industrially_compostable
+- translucent
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-aqua-gemstone-translucent-pla/412aae0bee2b.png
+  type: unspecified
+properties: {}

@@ -1,0 +1,107 @@
+{
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 2959,
+    "input_tokens_details": {
+      "cache_write_tokens": 2956,
+      "cached_tokens": 0
+    },
+    "output_tokens": 487,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 3446
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "GIZMO DORKS",
+      "confidence": 0.99,
+      "evidence": "\u201cGIZMO DORKS\u201d printed at the top of the package label.",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "product": {
+      "value": "1.75MM HIPS FILAMENT",
+      "confidence": 0.99,
+      "evidence": "\u201c1.75MM HIPS FILAMENT\u201d printed on the label.",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "HIPS",
+      "confidence": 0.99,
+      "evidence": "\u201cHIPS FILAMENT\u201d printed on the label.",
+      "basis": "printed"
+    },
+    "color": {
+      "value": "WHITE",
+      "confidence": 0.99,
+      "evidence": "\u201cWHITE\u201d printed on the label.",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": 1.75,
+      "confidence": 0.99,
+      "evidence": "\u201c1.75MM\u201d printed on the label.",
+      "basis": "printed"
+    },
+    "net_weight_g": {
+      "value": 1000,
+      "confidence": 0.99,
+      "evidence": "\u201c1.0KG NET WEIGHT\u201d printed on the label.",
+      "basis": "printed"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": "887503120752",
+      "confidence": 0.99,
+      "evidence": "UPC-A digits printed beneath the barcode: \u201c8 87503 12075 2\u201d.",
+      "basis": "barcode"
+    },
+    "sku": {
+      "value": "AO9C",
+      "confidence": 0.9,
+      "evidence": "\u201cAO9C\u201d printed above the barcode; identifier type is not explicitly labeled.",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [],
+    "needs_user_review": [
+      "Confirm whether printed code \u201cAO9C\u201d is a manufacturer SKU or another internal product code."
+    ]
+  }
+}

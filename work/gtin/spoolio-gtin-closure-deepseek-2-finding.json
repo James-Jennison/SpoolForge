@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-gtin-closure-deepseek-2",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-dcf83ca9ce72",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Provenance/License Integrity",
+  "summary": "The build script hardcodes the license field as 'MIT' for all sources and does not validate the actual LICENSE files copied from upstream. The verify script asserts MIT based on the same constant, so a non-MIT upstream license would be misrepresented in the UI.",
+  "claim": "Users rely on displayed license information for compliance. If any source (OFD, OPT, Community) has a different license (e.g., CC, proprietary), the UI incorrectly shows MIT, exposing users to legal risk and undermining provenance trust.",
+  "evidence": {
+    "source": "build_gtin_index.py: snapshot = {'license': 'MIT', ...} for all sources; later copies 'LICENSE' file to assets but does not compare content. verify_gtin_index.py: assert e['snapshot']['license']=='MIT'.",
+    "response_sha256": "cbbfa3506a7d9bf853664aa861be1e39241d84883b64b7b167b6d1e39e35a3df"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "Parse the copied LICENSE file content and set the snapshot license accordingly, or maintain a verified mapping of source to license and assert the file content matches an allowed license text. Do not hardcode.",
+  "suggested_validation": "Add a build-time test that reads each source LICENSE file, extracts a license identifier (e.g., via SPDX text matching), and fails if it does not match the snapshot license field.",
+  "reviewer_confidence": "MEDIUM"
+}

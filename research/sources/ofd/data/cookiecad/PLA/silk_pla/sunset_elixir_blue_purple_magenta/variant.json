@@ -1,0 +1,16 @@
+{
+  "uuid": "4c159b6e-5116-4e17-8c5f-ee79d9ec87fa",
+  "id": "sunset_elixir_blue_purple_magenta",
+  "name": "Sunset Elixir (blue → purple → magenta)",
+  "color_hex": [
+    "#4921C1",
+    "#6000B0",
+    "#E23288"
+  ],
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

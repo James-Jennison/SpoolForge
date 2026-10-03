@@ -1,0 +1,13 @@
+{
+  "uuid": "85e8fe71-a425-4419-a417-c3fe25f43938",
+  "id": "orange_to_green_gradient",
+  "name": "Orange to Green Gradient",
+  "color_hex": [
+    "#FD9106",
+    "#BBDB4B"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

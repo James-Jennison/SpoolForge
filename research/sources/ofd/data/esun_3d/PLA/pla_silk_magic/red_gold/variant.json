@@ -1,0 +1,15 @@
+{
+  "uuid": "a46a136e-4650-4345-8910-d7a404a3477c",
+  "id": "red_gold",
+  "name": "Red Gold",
+  "color_hex": [
+    "#FB6066",
+    "#E3B145"
+  ],
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

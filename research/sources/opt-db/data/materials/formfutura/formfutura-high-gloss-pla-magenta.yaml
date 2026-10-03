@@ -1,0 +1,23 @@
+uuid: 0c8fa30b-d1ce-5231-9c2b-b7d4496fe55c
+slug: formfutura-high-gloss-pla-magenta
+brand:
+  slug: formfutura
+name: High Gloss PLA Magenta
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c80181ff'
+tags:
+  - silk
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-high-gloss-pla-magenta/dd6790ff1ff3.png
+    type: unspecified
+properties:
+  density: 1.22
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 40
+  max_bed_temperature: 60
+  drying_temperature: 60
+  drying_time: 360

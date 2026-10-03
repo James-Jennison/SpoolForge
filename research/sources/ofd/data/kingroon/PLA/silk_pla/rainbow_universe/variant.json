@@ -1,0 +1,14 @@
+{
+  "uuid": "3e0bc2c2-f91b-419e-93fb-2765e8cb643a",
+  "id": "rainbow_universe",
+  "name": "Rainbow Universe",
+  "color_hex": [
+    "#7F068C",
+    "#1E5A4F",
+    "#0E21AE"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true
+  }
+}

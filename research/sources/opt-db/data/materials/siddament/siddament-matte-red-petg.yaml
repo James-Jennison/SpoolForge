@@ -1,0 +1,13 @@
+uuid: 4f1d330f-27de-5da7-8e8b-863ebae6557e
+slug: siddament-matte-red-petg
+brand:
+  slug: siddament
+name: Matte Red PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#b84a1bff'
+tags:
+- matte
+properties: {}

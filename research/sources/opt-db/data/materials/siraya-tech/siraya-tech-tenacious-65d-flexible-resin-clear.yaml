@@ -1,0 +1,13 @@
+uuid: 264fa543-9ef4-56cc-8a04-2c2039b38c78
+slug: siraya-tech-tenacious-65d-flexible-resin-clear
+brand:
+  slug: siraya-tech
+name: Tenacious - 65D Flexible resin Clear
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#e4e7e5ff'
+tags:
+- transparent
+properties:
+  hardness_shore_d: 65

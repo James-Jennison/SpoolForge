@@ -1,0 +1,10 @@
+{
+  "uuid": "85ceac9c-ea3a-4277-a71a-9bf4b3880d1c",
+  "id": "coolgrey",
+  "name": "CoolGrey",
+  "color_hex": "#5A696C",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

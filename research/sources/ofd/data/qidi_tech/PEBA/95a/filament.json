@@ -1,0 +1,11 @@
+{
+  "uuid": "87341de8-4473-4b0b-8ca5-172c93cd7edf",
+  "id": "95a",
+  "name": "PEBA 95A",
+  "diameter_tolerance": 0.02,
+  "density": 1.01,
+  "min_print_temperature": 230,
+  "max_print_temperature": 260,
+  "min_bed_temperature": 35,
+  "max_bed_temperature": 75
+}

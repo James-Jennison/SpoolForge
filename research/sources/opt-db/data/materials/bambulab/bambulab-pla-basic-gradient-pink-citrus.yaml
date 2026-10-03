@@ -1,0 +1,26 @@
+uuid: 9aea2b3a-3823-5357-b643-c3c8e71b3225
+slug: bambulab-pla-basic-gradient-pink-citrus
+brand:
+  slug: bambulab
+name: PLA Basic Gradient Pink Citrus
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+  - color_rgba: '#e4505aff'
+  - color_rgba: '#f78f77ff'
+tags:
+  - gradual_color_change
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-basic-gradient-pink-citrus/35b9db40cfad.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45
+url: https://us.store.bambulab.com/products/pla-basic-gradient?id=43158301278344

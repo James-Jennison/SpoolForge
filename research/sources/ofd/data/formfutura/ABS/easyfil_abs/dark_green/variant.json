@@ -1,0 +1,10 @@
+{
+  "uuid": "71bdf4f3-da77-4e7b-884d-a2953c974b6a",
+  "id": "dark_green",
+  "name": "Dark Green",
+  "color_hex": "#008059",
+  "discontinued": false,
+  "traits": {
+    "filtration_recommended": true
+  }
+}

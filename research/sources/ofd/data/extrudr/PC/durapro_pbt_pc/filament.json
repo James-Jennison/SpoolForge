@@ -1,0 +1,11 @@
+{
+  "uuid": "739eca51-63d7-4416-b5b4-f8bb0c384162",
+  "id": "durapro_pbt_pc",
+  "name": "DuraPro PBT PC",
+  "diameter_tolerance": 0.02,
+  "density": 1.2,
+  "min_print_temperature": 260,
+  "max_print_temperature": 300,
+  "min_bed_temperature": 100,
+  "max_bed_temperature": 120
+}

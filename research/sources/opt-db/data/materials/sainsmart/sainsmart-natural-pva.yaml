@@ -1,0 +1,13 @@
+uuid: d24c8799-a686-55f9-a87f-599b0bbccbac
+slug: sainsmart-natural-pva
+brand:
+  slug: sainsmart
+name: Natural PVA
+class: FFF
+type: PVA
+abbreviation: PVA
+primary_color:
+  color_rgba: '#e8ebceff'
+tags:
+- water_soluble
+properties: {}

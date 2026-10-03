@@ -1,0 +1,11 @@
+uuid: 47ddb942-e566-56d1-b279-132d801e7f5d
+slug: print-with-smile-pet-g-yellow
+brand:
+  slug: print-with-smile
+name: PET-G Yellow
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e8bd00ff'
+properties: {}

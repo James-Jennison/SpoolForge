@@ -1,0 +1,16 @@
+{
+  "uuid": "7f243837-479b-4d48-8fb0-0b51fb3fa089",
+  "id": "gold_silver_copper",
+  "name": "Gold Silver Copper",
+  "color_hex": [
+    "#E3B145",
+    "#C9D0D4",
+    "#863938"
+  ],
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

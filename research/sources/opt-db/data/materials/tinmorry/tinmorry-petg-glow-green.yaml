@@ -1,0 +1,17 @@
+uuid: 9d298860-e648-5813-894b-49e3af3e254a
+slug: tinmorry-petg-glow-green
+brand:
+  slug: tinmorry
+name: PETG Glow Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#7fe200ff'
+secondary_colors:
+- color_rgba: '#efeadfff'
+tags:
+- glow_in_the_dark
+- illuminescent_color_change
+- abrasive
+properties: {}

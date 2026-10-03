@@ -1,0 +1,25 @@
+uuid: 5809960b-956a-572d-8638-315766652465
+slug: elegoo-rapid-petg-transparent
+brand:
+  slug: elegoo
+name: RAPID PETG Transparent
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#e4e7e5ff'
+tags:
+- transparent
+- high_speed
+photos:
+- url: https://files.openprinttag.org/elegoo/elegoo-rapid-petg-transparent/5db2ca2f5bf6.png
+  type: unspecified
+properties:
+  density: 1.29
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  drying_temperature: 60
+  drying_time: 480
+  min_nozzle_diameter: 200

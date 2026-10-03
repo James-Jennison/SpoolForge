@@ -1,0 +1,11 @@
+{
+  "uuid": "073656e8-aa3e-451f-80b9-ec6f81eb3d8a",
+  "id": "transparent_pla",
+  "name": "Transparent PLA",
+  "diameter_tolerance": 0.02,
+  "density": 1.24,
+  "min_print_temperature": 190,
+  "max_print_temperature": 230,
+  "min_bed_temperature": 50,
+  "max_bed_temperature": 70
+}

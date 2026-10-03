@@ -1,0 +1,21 @@
+uuid: c80014a8-ed3d-5a75-a251-da7aef903f1d
+slug: spectrum-rpla-signal-white
+brand:
+  slug: spectrum
+name: rPLA Signal White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- recycled
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 215
+  min_bed_temperature: 40
+  max_bed_temperature: 50
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-rpla-signal-white/spectrum-rpla-signal-white-0-86cec0ab.jpg
+  type: unspecified

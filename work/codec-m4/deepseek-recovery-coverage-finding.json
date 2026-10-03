@@ -1,0 +1,15 @@
+{
+  "finding_id": "filamajig-m4-deepseek-recovery-coverage",
+  "change_id": "filamajig-codec-paxx-m4-20260907",
+  "cycle_id": "review-cycle-c7f4a095abee",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "State machine and binding recovery",
+  "summary": "The initial evidence did not enumerate callback failure and second-tag failure recovery coverage.",
+  "claim": "A verified physical write whose local binding callback fails could lose durable retry context.",
+  "evidence": {"source": "Initial tests covered null reads, restart reconciliation, duplicate second-tag UID, and one-tag completion, but the callback failure path cleared the journal.", "response_sha256": "91dc8e266a3a7d0945646b9c7c102db7fab41e7d2188dd74fc1fa1c5fcb74135"},
+  "affected_components": ["android", "nfc", "persistence"],
+  "suggested_remediation": "Retain binding context and payload for read-only retry after callback failure and explicitly test callback, restart, duplicate UID, null read, and second-tag failure paths.",
+  "suggested_validation": "The focused and full protected suites pass with explicit assertions that no rewrite occurs and a failed binding callback retains the correct second-tag context.",
+  "reviewer_confidence": "MEDIUM"
+}

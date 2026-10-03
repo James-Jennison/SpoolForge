@@ -1,0 +1,76 @@
+{
+  "method": "Canonical ordered row serialization; BLOB values represented only by SHA-256; record values omitted",
+  "all_tables_identical": true,
+  "tables": {
+    "android_metadata": {
+      "rows_before": 1,
+      "rows_after": 1,
+      "sha256_before": "f2986903ad07c4759d558edd9ca00f918abb07ad6b005fc7861f541956a5aef7",
+      "sha256_after": "f2986903ad07c4759d558edd9ca00f918abb07ad6b005fc7861f541956a5aef7",
+      "identical": true
+    },
+    "custom_records": {
+      "rows_before": 6,
+      "rows_after": 6,
+      "sha256_before": "2fd2a7b9d23224f4edaa18d6c14ee13a8169facec5cfd915a0e87aa7577791f4",
+      "sha256_after": "2fd2a7b9d23224f4edaa18d6c14ee13a8169facec5cfd915a0e87aa7577791f4",
+      "identical": true
+    },
+    "filament_profiles": {
+      "rows_before": 6,
+      "rows_after": 6,
+      "sha256_before": "5ea25a04bedc2065102ca7207e4d6757a83bb1ea1dbebe09a1443e742413fb48",
+      "sha256_after": "5ea25a04bedc2065102ca7207e4d6757a83bb1ea1dbebe09a1443e742413fb48",
+      "identical": true
+    },
+    "physical_spools": {
+      "rows_before": 6,
+      "rows_after": 6,
+      "sha256_before": "efa824d1f8d14fb24be12ed30c677a3a6b18f936059f7fb964ec05f8b643ac5f",
+      "sha256_after": "efa824d1f8d14fb24be12ed30c677a3a6b18f936059f7fb964ec05f8b643ac5f",
+      "identical": true
+    },
+    "profile_identifiers": {
+      "rows_before": 1,
+      "rows_after": 1,
+      "sha256_before": "23df55c675154813f46ecea03863818b4e9ce033cc128f357a2278cb2d2d8e6a",
+      "sha256_after": "23df55c675154813f46ecea03863818b4e9ce033cc128f357a2278cb2d2d8e6a",
+      "identical": true
+    },
+    "profile_observations": {
+      "rows_before": 72,
+      "rows_after": 72,
+      "sha256_before": "e14e5ffb734fafdc19bb0384ebd4e8cf5613eea94ecdc0284d7540ba3391b7df",
+      "sha256_after": "e14e5ffb734fafdc19bb0384ebd4e8cf5613eea94ecdc0284d7540ba3391b7df",
+      "identical": true
+    },
+    "profile_overrides": {
+      "rows_before": 72,
+      "rows_after": 72,
+      "sha256_before": "f7ad8313d46d80b15a7056a9ae2996ba187aa3aac5d2c494ac8d90835d426d1d",
+      "sha256_after": "f7ad8313d46d80b15a7056a9ae2996ba187aa3aac5d2c494ac8d90835d426d1d",
+      "identical": true
+    },
+    "recents": {
+      "rows_before": 6,
+      "rows_after": 6,
+      "sha256_before": "a6b6245a294e983a24a8e6c1d788fa2190b6dcb19c53c1339e41db650ba2e89a",
+      "sha256_after": "a6b6245a294e983a24a8e6c1d788fa2190b6dcb19c53c1339e41db650ba2e89a",
+      "identical": true
+    },
+    "tag_bindings": {
+      "rows_before": 1,
+      "rows_after": 1,
+      "sha256_before": "4bf60b6cbda158cd5a7a3ef5bf72af9d6762d4ad9e6d29e49c5fc67568b9a08b",
+      "sha256_after": "4bf60b6cbda158cd5a7a3ef5bf72af9d6762d4ad9e6d29e49c5fc67568b9a08b",
+      "identical": true
+    },
+    "transmission_distance_measurements": {
+      "rows_before": 0,
+      "rows_after": 0,
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    }
+  }
+}

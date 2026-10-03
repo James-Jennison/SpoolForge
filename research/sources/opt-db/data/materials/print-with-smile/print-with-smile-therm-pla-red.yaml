@@ -1,0 +1,15 @@
+uuid: ad43dc50-0a83-5cf1-987b-359be73ca259
+slug: print-with-smile-therm-pla-red
+brand:
+  slug: print-with-smile
+name: THERM PLA RED
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#ff7d7aff'
+- color_rgba: '#dfdfd3ff'
+tags:
+- temperature_color_change
+- industrially_compostable
+properties: {}

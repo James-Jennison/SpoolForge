@@ -1,0 +1,14 @@
+{
+  "uuid": "9e33f8cc-b870-4c06-8653-bed5a052a1fc",
+  "id": "green_flexible_tpu",
+  "name": "Green, Flexible TPU",
+  "color_hex": [
+    "#DFDFD3",
+    "#62E480"
+  ],
+  "traits": {
+    "glow": true,
+    "illuminescent_color_change": true,
+    "abrasive": true
+  }
+}

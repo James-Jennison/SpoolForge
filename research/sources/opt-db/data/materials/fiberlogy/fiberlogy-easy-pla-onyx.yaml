@@ -1,0 +1,23 @@
+uuid: 4c0bf352-ee98-5806-ae48-80b7badd41b3
+slug: fiberlogy-easy-pla-onyx
+brand:
+  slug: fiberlogy
+name: Easy PLA Onyx
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+  - glitter
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-easy-pla-onyx/6db8def1ff39.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 240

@@ -1,0 +1,151 @@
+{
+  "unit_results": {
+    "core": [
+      {
+        "suite": "net.jamesjennison.spoolio.core.OpenSpoolCodecTest",
+        "tests": "12",
+        "failures": "0",
+        "errors": "0"
+      },
+      {
+        "suite": "net.jamesjennison.spoolio.core.WriteStateMachineTest",
+        "tests": "10",
+        "failures": "0",
+        "errors": "0"
+      }
+    ],
+    "app": [
+      {
+        "suite": "net.jamesjennison.spoolio.StorageAcceptanceTest",
+        "tests": "7",
+        "failures": "0",
+        "errors": "0"
+      }
+    ]
+  },
+  "device_benchmark": {
+    "model": "motorola razr 2023",
+    "sdk": 36,
+    "ensure_existing_catalog_ms": 1579.251301,
+    "catalog_packages": 22347,
+    "queries": [
+      {
+        "query": "SUNLU ABS Orange",
+        "samples": 40,
+        "p95_ms": 3.444687,
+        "max_ms": 4.586927
+      },
+      {
+        "query": "PLA Black",
+        "samples": 40,
+        "p95_ms": 7.965,
+        "max_ms": 10.480469
+      },
+      {
+        "query": "PETG",
+        "samples": 40,
+        "p95_ms": 9.954844,
+        "max_ms": 10.576562
+      },
+      {
+        "query": "Bambu",
+        "samples": 40,
+        "p95_ms": 4.668177,
+        "max_ms": 5.188489
+      },
+      {
+        "query": "Polymaker",
+        "samples": 40,
+        "p95_ms": 5.937604,
+        "max_ms": 12.464323
+      },
+      {
+        "query": "eSUN",
+        "samples": 40,
+        "p95_ms": 4.861666,
+        "max_ms": 5.372239
+      }
+    ],
+    "catalog_files_bytes_including_wal": 6647808,
+    "measurement": "Debug APK, actual Room DAO and device SQLite; excludes Compose rendering and keyboard latency; existing-catalog integrity time excludes Activity startup"
+  },
+  "device_test_output": "\nnet.jamesjennison.spoolio.DeviceCatalogAcceptanceTest:.\n\nTime: 3.055\n\nOK (1 test)\n\n\n",
+  "build": "heavy-gradle :core:test :app:testDebugUnitTest :app:lintDebug :app:assembleDebug :app:assembleDebugAndroidTest PASS; lifecycle-closure-build.log",
+  "apk_sha256": "dfa95796d898e756893fb77a5cc470ad8ac23d7da43ce52925c5c2f15e164aaa",
+  "source_manifest_sha256": "a8c16640e9cb3250a6182e01e9f948f33a38e922ec1809cbb0be75adb06222e1",
+  "restart_database_evidence": {
+    "integrity": "ok",
+    "version": 2,
+    "customs": [
+      {
+        "id": "edited:14417b3a-38d3-4643-ace8-40bdc9b7ecf3",
+        "original_package_id": "14417b3a-38d3-4643-ace8-40bdc9b7ecf3",
+        "nozzle_min_c": 235,
+        "nozzle_max_c": 260,
+        "bed_min_c": 90,
+        "bed_max_c": 110,
+        "brand_source": "OFD e3888b68",
+        "nozzle_min_source": "Edited locally"
+      }
+    ],
+    "recents": [
+      {
+        "record_id": "14417b3a-38d3-4643-ace8-40bdc9b7ecf3",
+        "kind": "CATALOG"
+      }
+    ]
+  },
+  "restarted-edited-detail": [
+    "Search brand, material, product, color, or package ID",
+    "Search",
+    "\u2039 Back to catalog",
+    "SUNLU ABS",
+    "Orange \u00b7 ABS",
+    "Exact package",
+    "1.75 mm \u00b7 1000 g",
+    "Nozzle",
+    "235\u2013260 \u00b0C",
+    "Bed",
+    "90\u2013110 \u00b0C",
+    "Barcode",
+    "Missing in source",
+    "Provenance",
+    "Locally edited from OFD e3888b68",
+    "Field sources: brand OFD e3888b68; material OFD e3888b68; color OFD e3888b68",
+    "Edit saved record",
+    "Tag compatibility",
+    "PAXX",
+    "Canonical",
+    "NDEF payload 124 bytes. Not written in this profile: additional colors, bed maximum, bed minimum, diameter, barcode, mass, package identifier, product label, field provenance, article number.",
+    "Prepare verified NFC write",
+    "Spoolio",
+    "Offline filament tag manager",
+    "Custom filament"
+  ],
+  "final-custom-restarted-detail": [
+    "Search brand, material, product, color, or package ID",
+    "Search",
+    "\u2039 Back to catalog",
+    "Spoolio QA Persistence QA",
+    "Orange \u00b7 PLA",
+    "Exact package",
+    "1.75 mm \u00b7 1000 g",
+    "Nozzle",
+    "200\u2013220 \u00b0C",
+    "Bed",
+    "50\u201360 \u00b0C",
+    "Barcode",
+    "Missing in source",
+    "Provenance",
+    "Local custom",
+    "Field sources: brand User; material User; color User",
+    "Edit saved record",
+    "Tag compatibility",
+    "PAXX",
+    "Canonical",
+    "NDEF payload 129 bytes. Not written in this profile: additional colors, bed maximum, bed minimum, diameter, barcode, mass, package identifier, product label, field provenance, article number.",
+    "Prepare verified NFC write",
+    "Spoolio",
+    "Offline filament tag manager"
+  ]
+}

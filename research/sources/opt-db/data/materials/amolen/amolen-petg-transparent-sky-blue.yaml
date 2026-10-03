@@ -1,0 +1,17 @@
+uuid: d718b4cc-243a-5b7e-9f7a-af7018c6189a
+slug: amolen-petg-transparent-sky-blue
+brand:
+  slug: amolen
+name: PETG Transparent Sky Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://www.amolen.com/products/petg-transparent?variant=41741864534039
+primary_color:
+  color_rgba: '#99b2deff'
+tags:
+- translucent
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-petg-transparent-sky-blue/b75f06f0db12.png
+  type: unspecified
+properties: {}

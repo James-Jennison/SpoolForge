@@ -1,0 +1,15 @@
+[
+  {
+    "uuid": "cde5aa46-1100-4385-9bd4-05ed2e2054d2",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 125,
+    "spool_core_diameter": 52,
+    "purchase_links": [
+      {
+        "store_id": "anycubic",
+        "url": "https://store.anycubic.com/products/pla-plus-filament?variant=44831294324925"
+      }
+    ]
+  }
+]

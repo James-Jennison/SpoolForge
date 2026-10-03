@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-closure-deepseek-2",
+  "disposition": "CONFIRMED",
+  "reason": "The builder now identifies MIT from required phrases in each actual source LICENSE, including quote normalization, and fails on an unrecognized license. The independent verifier checks every shipped notice before accepting candidate license metadata.",
+  "evidence_reference": "tools/build_gtin_index.py; tools/verify_gtin_index.py; work/gtin/bundle-verification-stable-id.log",
+  "resolved": true
+}

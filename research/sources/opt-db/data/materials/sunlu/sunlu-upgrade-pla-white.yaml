@@ -1,0 +1,16 @@
+uuid: 90cfd87d-81fd-56a4-a804-6762f9423465
+slug: sunlu-upgrade-pla-white
+brand:
+  slug: sunlu
+name: Upgrade PLA+ White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/sunlu/sunlu-upgrade-pla-white/71c07f46afa5.jpg
+  type: unspecified
+properties: {}

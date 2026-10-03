@@ -1,0 +1,21 @@
+uuid: 7de097e4-73f7-5d87-9cac-16a19e0c41b0
+slug: formfutura-hdglass-see-through-yellow
+brand:
+  slug: formfutura
+name: HDglass See Through Yellow
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f3b400ff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-hdglass-see-through-yellow/af3ce35e9ab0.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 195
+  max_print_temperature: 225
+  min_bed_temperature: 80
+  max_bed_temperature: 90

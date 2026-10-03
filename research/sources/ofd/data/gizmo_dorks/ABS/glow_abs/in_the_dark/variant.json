@@ -1,0 +1,14 @@
+{
+  "uuid": "81be9bec-de6c-4522-902c-78db94cd378e",
+  "id": "in_the_dark",
+  "name": "In the Dark",
+  "color_hex": [
+    "#58C91B",
+    "#EADAC2"
+  ],
+  "traits": {
+    "glow": true,
+    "abrasive": true,
+    "filtration_recommended": true
+  }
+}

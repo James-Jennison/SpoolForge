@@ -1,0 +1,18 @@
+uuid: 5d8a4fb9-4cc2-5e4b-a2f1-9440074c90a6
+slug: addnorth-e-pla-black
+brand:
+  slug: addnorth
+name: E-PLA Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-e-pla-black/6a34974cf53a.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 205
+  max_print_temperature: 225
+  max_bed_temperature: 60

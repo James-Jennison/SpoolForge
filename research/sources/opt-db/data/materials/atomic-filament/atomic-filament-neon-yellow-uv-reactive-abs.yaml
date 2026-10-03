@@ -1,0 +1,18 @@
+uuid: 2d344b21-8b42-5573-a5b2-bdd5107f2e96
+slug: atomic-filament-neon-yellow-uv-reactive-abs
+brand:
+  slug: atomic-filament
+name: Neon Yellow UV Reactive ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+url: https://atomicfilament.com/products/neon-yellow-uv-reactive-abs-filament
+primary_color:
+  color_rgba: '#fffb00ff'
+tags:
+- neon
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-neon-yellow-uv-reactive-abs/f8b55cf2a5d4.png
+  type: unspecified
+properties: {}

@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-final-v2-deepseek-3",
+  "disposition": "CONFIRMED",
+  "reason": "Every record pointer is dereferenced from a hashed retained source file and reconstructed original JSON must match; every field origin must equal the independently expected path and exist in the input manifest; every nonempty emitted value is recomputed.",
+  "evidence_reference": "tools/verify_gtin_index.py; work/gtin/verify-pointer-verification.log",
+  "resolved": true
+}

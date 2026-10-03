@@ -1,0 +1,15 @@
+{
+  "uuid": "3519207e-4139-4c04-8cf8-db42d8a286e1",
+  "id": "dual_color_blue_green",
+  "name": "Dual Color Blue Green",
+  "color_hex": [
+    "#2E56F1",
+    "#089A45"
+  ],
+  "traits": {
+    "silk": true,
+    "iridescent": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "uuid": "9de3ee31-c7ca-453b-aa4f-fd39a6ffd1ec",
+  "id": "therm_red",
+  "name": "THERM RED",
+  "color_hex": [
+    "#FF7D7A",
+    "#DFDFD3"
+  ],
+  "traits": {
+    "temperature_color_change": true,
+    "industrially_compostable": true
+  }
+}

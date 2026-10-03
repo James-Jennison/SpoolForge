@@ -1,0 +1,9 @@
+{
+  "uuid": "820acf4f-a780-4ba0-bde4-df06f4411dff",
+  "id": "emerald_translucid",
+  "name": "Emerald (translucid)",
+  "color_hex": "#06B100",
+  "traits": {
+    "translucent": true
+  }
+}

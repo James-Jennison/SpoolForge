@@ -1,0 +1,77 @@
+[
+  {
+    "uuid": "aef107e9-45fa-43ef-a6f8-e9fb69219eba",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 165,
+    "article_number": "RTIT-175BLCK-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rtitan"
+      }
+    ]
+  },
+  {
+    "uuid": "7cfc8cf2-dea7-4355-9d62-3594f2baf8c5",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 625,
+    "article_number": "RTIT-175BLCK-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rtitan"
+      }
+    ]
+  },
+  {
+    "uuid": "2f261ca6-6931-4061-9834-da33cf128416",
+    "filament_weight": 3500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 705,
+    "article_number": "RTIT-175BLCK-03500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rtitan"
+      }
+    ]
+  },
+  {
+    "uuid": "ab52e8e4-b6e7-425a-9ef8-cf35f7ebedb8",
+    "filament_weight": 4500,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "RTIT-175BLCK-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rtitan"
+      }
+    ]
+  },
+  {
+    "uuid": "b6fabfaf-e326-41a0-a045-f1f01c992652",
+    "filament_weight": 4500,
+    "diameter": 2.85,
+    "spool_refill": false,
+    "empty_spool_weight": 785,
+    "article_number": "RTIT-285BLCK-04500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/reform-rtitan"
+      }
+    ]
+  }
+]

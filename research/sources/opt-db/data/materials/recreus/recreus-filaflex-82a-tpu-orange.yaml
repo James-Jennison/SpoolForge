@@ -1,0 +1,12 @@
+uuid: 9d24879f-b24a-5efa-9472-4a5e41067050
+slug: recreus-filaflex-82a-tpu-orange
+brand:
+  slug: recreus
+name: Filaflex 82A TPU Orange
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#f07821ff'
+properties:
+  hardness_shore_a: 82

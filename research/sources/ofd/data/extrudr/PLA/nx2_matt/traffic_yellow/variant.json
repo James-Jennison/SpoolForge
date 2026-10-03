@@ -1,0 +1,13 @@
+{
+  "uuid": "33281210-cc6a-4ea9-81b9-fa78726b0c1e",
+  "id": "traffic_yellow",
+  "name": "Traffic Yellow",
+  "color_hex": "#FBE200",
+  "color_standards": {
+    "ral": "1023"
+  },
+  "traits": {
+    "matte": true,
+    "industrially_compostable": true
+  }
+}

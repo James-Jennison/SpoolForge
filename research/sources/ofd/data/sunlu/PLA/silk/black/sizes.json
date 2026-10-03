@@ -1,0 +1,18 @@
+[
+  {
+    "uuid": "e1600075-640b-40e4-b0e6-00f293b25c3e",
+    "filament_weight": 250,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "sunlu",
+        "url": "https://www.sunlu.com/products/best-halloween-gift-250g-pla-silk-filament-1-75mm-moq-24-rolls"
+      }
+    ]
+  },
+  {
+    "uuid": "e789aa27-a547-4106-8520-d8a876d11491",
+    "filament_weight": 1000,
+    "diameter": 1.75
+  }
+]

@@ -1,0 +1,23 @@
+uuid: cf0dd186-0f63-5016-b6ef-c5f446d475eb
+slug: spectrum-pla-glow-in-the-dark-blue
+brand:
+  slug: spectrum
+name: PLA Glow in the Dark Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+tags:
+- glow_in_the_dark
+- abrasive
+- illuminescent_color_change
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 225
+  max_bed_temperature: 45
+secondary_colors:
+- color_rgba: '#dee2daff'
+- color_rgba: '#23cfd2ff'
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-glow-in-the-dark-blue/spectrum-pla-glow-in-the-dark-blue-0-675e6117.jpg
+  type: unspecified

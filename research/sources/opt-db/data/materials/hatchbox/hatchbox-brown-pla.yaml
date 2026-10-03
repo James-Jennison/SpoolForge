@@ -1,0 +1,21 @@
+uuid: 0d6e7889-b2df-54c5-a667-10b6b56a2ee4
+slug: hatchbox-brown-pla
+brand:
+  slug: hatchbox
+name: Brown PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#332120ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-brown-pla/52566ff6601c.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 180
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 60

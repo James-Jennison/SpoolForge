@@ -1,0 +1,9 @@
+{
+  "uuid": "df6296f9-898f-4162-a399-3357c6557e82",
+  "id": "black_walnut",
+  "name": "Black Walnut",
+  "color_hex": "#745036",
+  "traits": {
+    "contains_wood": true
+  }
+}

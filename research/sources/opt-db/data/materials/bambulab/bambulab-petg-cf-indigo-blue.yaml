@@ -1,0 +1,25 @@
+uuid: 1276b383-e1ab-5741-be3a-422a393c538a
+slug: bambulab-petg-cf-indigo-blue
+brand:
+  slug: bambulab
+name: PETG-CF Indigo Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#324585ff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-cf-indigo-blue/pasted-image-1741171564020.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

@@ -1,0 +1,20 @@
+uuid: eb8f21b2-7bca-59fd-8f0d-19afb66f4895
+slug: spectrum-pla-matt-lime-green
+brand:
+  slug: spectrum
+name: PLA MATT Lime Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#bbdb4bff'
+tags:
+- matte
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-matt-lime-green/spectrum-pla-matt-lime-green-0-801e1093.jpg
+  type: unspecified

@@ -1,0 +1,17 @@
+uuid: 9d30ed13-7fe5-579e-b504-89ec9e28be2f
+slug: qidi-petg-rapido-copper
+brand:
+  slug: qidi
+name: PETG Rapido Copper
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#604629ff'
+tags:
+- high_speed
+properties:
+  density: 1.31
+photos:
+- url: https://files.openprinttag.org/qidi/qidi-petg-rapido-copper/qidi-petg-rapido-copper-0-b6e34670.jpg
+  type: unspecified

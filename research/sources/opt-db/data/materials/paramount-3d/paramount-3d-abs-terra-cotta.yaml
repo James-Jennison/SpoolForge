@@ -1,0 +1,13 @@
+uuid: 537c42f1-0a6f-5223-a8c4-a3f528686068
+slug: paramount-3d-abs-terra-cotta
+brand:
+  slug: paramount-3d
+name: ABS (Terra Cotta)
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#d99773ff'
+tags:
+- filtration_recommended
+properties: {}

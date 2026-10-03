@@ -1,0 +1,9 @@
+{
+  "uuid": "d338c691-6ed5-4e9f-b1d2-1480a5d7f1fe",
+  "id": "luminous_blue",
+  "name": "Luminous Blue",
+  "color_hex": "#00BFFF",
+  "traits": {
+    "glow": true
+  }
+}

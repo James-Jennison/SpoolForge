@@ -1,0 +1,25 @@
+uuid: d15ccc2e-9e96-51fe-82a5-3073ec0d7d92
+slug: bambulab-pla-translucent-orange
+brand:
+  slug: bambulab
+name: PLA Translucent Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://eu.store.bambulab.com/products/pla-translucent?id=54345716662620
+primary_color:
+  color_rgba: '#f74e02ff'
+tags:
+- translucent
+- industrially_compostable
+properties:
+  density: 1.22
+  min_print_temperature: 200
+  max_print_temperature: 240
+  min_bed_temperature: 35
+  max_bed_temperature: 65
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45
+photos:
+- url: https://files.openprinttag.org/bambulab/bambulab-pla-translucent-orange/bambulab-pla-translucent-orange-0-73492553.png
+  type: unspecified

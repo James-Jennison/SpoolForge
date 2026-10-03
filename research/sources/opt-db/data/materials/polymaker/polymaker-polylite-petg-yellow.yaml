@@ -1,0 +1,14 @@
+uuid: 39ce60c7-17be-515c-a628-97304de64d29
+slug: polymaker-polylite-petg-yellow
+brand:
+  slug: polymaker
+name: PolyLite™ PETG Yellow
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f3b400ff'
+photos:
+- url: https://files.openprinttag.org/polymaker/polymaker-polylite-petg-yellow/1393daa5dd58.png
+  type: unspecified
+properties: {}

@@ -1,0 +1,9 @@
+{
+  "uuid": "34e2cf6d-6700-4207-aea4-9ea40c9a3ad6",
+  "id": "default",
+  "name": "Default",
+  "color_hex": "#7E472A",
+  "traits": {
+    "matte": true
+  }
+}

@@ -1,0 +1,18 @@
+uuid: d2469499-b6e9-5b29-a90f-c65779af94d8
+slug: addnorth-e-pla-light-grey
+brand:
+  slug: addnorth
+name: E-PLA Light Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c5c5bfff'
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-e-pla-light-grey/b74e4eab7359.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 205
+  max_print_temperature: 225
+  max_bed_temperature: 60

@@ -1,0 +1,14 @@
+{
+  "uuid": "b41efda4-532d-486a-ac1f-2f450f84a9a0",
+  "id": "blue_green_orange_translucent_rainbow",
+  "name": "Blue Green Orange Translucent Rainbow",
+  "color_hex": [
+    "#1ADAFB",
+    "#FF8400",
+    "#9AED51"
+  ],
+  "traits": {
+    "translucent": true,
+    "gradual_color_change": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "uuid": "b26f5096-d242-4346-9ad7-f87fe04cf5f8",
+  "id": "mint_blush",
+  "name": "Mint Blush",
+  "color_hex": [
+    "#DB3FA9",
+    "#509F45"
+  ],
+  "traits": {
+    "iridescent": true,
+    "coextruded": true
+  }
+}

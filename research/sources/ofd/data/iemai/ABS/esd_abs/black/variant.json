@@ -1,0 +1,9 @@
+{
+  "uuid": "b10e9a89-80d5-4ba3-bae7-fb744d19d96d",
+  "id": "black",
+  "name": "Black",
+  "color_hex": "#000000",
+  "traits": {
+    "esd_safe": true
+  }
+}

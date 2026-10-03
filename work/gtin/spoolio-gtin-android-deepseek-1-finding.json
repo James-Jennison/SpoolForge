@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-gtin-android-deepseek-1",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-2cba3cb75876",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Performance",
+  "summary": "GtinIndex.ensureFile recomputes SHA-256 hash of the entire decompressed sidecar (62.7MB) on every lookup, adding significant latency and CPU usage to each barcode search.",
+  "claim": "User-visible delay when performing barcode lookup; excessive battery/CPU consumption; may approach ANR threshold if called repeatedly, despite being off main thread.",
+  "evidence": {
+    "source": "Code in GtinIndex.kt: 'if (file.isFile && digest(file) == expected) return file'; digest reads whole file. Package evidence: sidecar decompressed 62.7MB; actual phone lookup latency pending.",
+    "response_sha256": "ce723611f338a8ea74c80a27e0021f13be463cfb2697892f09e34f1afe91ebf9"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "tools"
+  ],
+  "suggested_remediation": "Cache the validated file digest in memory after first successful check, or use file metadata (size, lastModified) to avoid rehashing on every call if file can be trusted immutable, while still revalidating after any modification detection.",
+  "suggested_validation": "Instrument GtinIndex to count digest calls during repeated lookups; assert digest computed once per file install/modification; benchmark lookup latency on a mid-range device with sidecar >50MB and ensure < e.g. 500ms.",
+  "reviewer_confidence": "HIGH"
+}

@@ -1,0 +1,11 @@
+{
+  "uuid": "2d3720fb-b1ca-4110-b893-5075e7b1ef1a",
+  "id": "3dxtech",
+  "name": "ABS 3DXTech",
+  "diameter_tolerance": 0.02,
+  "density": 1.04,
+  "min_print_temperature": 230,
+  "max_print_temperature": 260,
+  "min_bed_temperature": 90,
+  "max_bed_temperature": 110
+}

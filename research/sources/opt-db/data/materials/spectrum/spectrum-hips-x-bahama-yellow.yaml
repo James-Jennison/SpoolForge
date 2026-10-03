@@ -1,0 +1,21 @@
+uuid: d23579a2-f4a6-5d9a-8687-92346ee743e2
+slug: spectrum-hips-x-bahama-yellow
+brand:
+  slug: spectrum
+name: HIPS-X™ Bahama Yellow
+class: FFF
+type: HIPS
+abbreviation: HIPS
+primary_color:
+  color_rgba: '#fadb24ff'
+properties:
+  density: 1.05
+  min_print_temperature: 230
+  max_print_temperature: 245
+  min_bed_temperature: 80
+  max_bed_temperature: 100
+tags:
+- limonene_soluble
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-hips-x-bahama-yellow/spectrum-hips-x-bahama-yellow-0-b104acf1.jpg
+  type: unspecified

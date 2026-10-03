@@ -1,0 +1,12 @@
+uuid: 81c92421-074a-5c7b-acbc-6ef9c2077cf0
+slug: sainsmart-kaoss-purple-flexible-tpu
+brand:
+  slug: sainsmart
+name: Kaoss Purple, Flexible TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#ae00ffff'
+properties:
+  hardness_shore_a: 95

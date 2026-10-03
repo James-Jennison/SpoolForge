@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-deepseek-6",
+  "disposition": "CONFIRMED",
+  "reason": "CONFIRMED WITH NARROWER SCOPE: unresolved-operation UI needs a safe escape. Reject proposed clearing of UNKNOWN history or claiming CANCELLED before write. Archive unresolved operation durably with explicit user acknowledgement and retain read-only reconciliation; no automatic rewrite.",
+  "evidence_reference": "work/m1/HOST_REMEDIATION_DIRECTION.md; host initial source snapshot review-cycle-38636c32948d",
+  "resolved": false
+}

@@ -1,0 +1,11 @@
+{
+  "model": "motorola razr 2023",
+  "initial_lookup_ms": 682.384895,
+  "samples": 20,
+  "fresh_index_each_sample": true,
+  "p95_ms": 87.419322,
+  "max_ms": 88.885364,
+  "candidates": 4,
+  "corrupt_sidecar_repaired": true,
+  "measurement": "Every timed sample creates a fresh GtinIndex and performs actual sidecar hash validation plus SQLite lookup; excludes Compose rendering. No predefined latency acceptance threshold."
+}

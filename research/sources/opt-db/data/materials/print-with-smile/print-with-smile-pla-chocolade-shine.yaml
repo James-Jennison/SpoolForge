@@ -1,0 +1,13 @@
+uuid: 1e699762-f969-5ffa-9870-42b79600e5d2
+slug: print-with-smile-pla-chocolade-shine
+brand:
+  slug: print-with-smile
+name: PLA Chocolade Shine
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#611a1fff'
+tags:
+- industrially_compostable
+properties: {}

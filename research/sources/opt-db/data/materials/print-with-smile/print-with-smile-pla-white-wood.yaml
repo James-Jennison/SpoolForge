@@ -1,0 +1,15 @@
+uuid: febc523c-39fa-50d8-9939-2c4d09dbfe1f
+slug: print-with-smile-pla-white-wood
+brand:
+  slug: print-with-smile
+name: PLA White Wood
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#e6dddbff'
+- color_rgba: '#a6662eff'
+tags:
+- contains_wood
+- industrially_compostable
+properties: {}

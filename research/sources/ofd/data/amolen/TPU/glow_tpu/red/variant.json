@@ -1,0 +1,10 @@
+{
+  "uuid": "cbdafd74-97d5-45cc-ae89-c0abc6b0e5ef",
+  "id": "red",
+  "name": "Red",
+  "color_hex": "#ED2602",
+  "traits": {
+    "glow": true,
+    "abrasive": true
+  }
+}

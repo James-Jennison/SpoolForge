@@ -1,0 +1,24 @@
+uuid: c7334476-a757-5d15-8448-e3b72e33dec3
+slug: elegoo-pla-yellow
+brand:
+  slug: elegoo
+name: PLA Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fad61bff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/elegoo/elegoo-pla-yellow/ef50231c7832.png
+  type: unspecified
+properties:
+  density: 1.26
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 65
+  drying_temperature: 50
+  drying_time: 480
+  min_nozzle_diameter: 200

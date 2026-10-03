@@ -1,0 +1,21 @@
+{
+  "finding_id": "filamajig-closure-deepseek-2",
+  "change_id": "filamajig-identity-camera-20260907",
+  "cycle_id": "review-cycle-23bf89fe8459",
+  "reviewer": "deepseek",
+  "severity": "LOW",
+  "category": "Test coverage",
+  "summary": "The remediation's format-boundary rules are not fully covered by automated end-to-end decode tests. Only EAN-13 and QR have actual decodeGtin tests; EAN-8, UPC-A, UPC-E, ITF-14, and GS1 Code128 are only tested at the normalization layer or not at all.",
+  "claim": "A regression in barcodeReader's POSSIBLE_FORMATS or decodeGtin could go undetected, reducing confidence that the remediation fully closes the defect across all required formats.",
+  "evidence": {
+    "source": "BarcodeCameraTest contains bundledDecoderReadsKnownIndexedEan13 (EAN-13 end-to-end) and numericGtinQrIsAcceptedButArbitraryQrContentIsRejected (QR end-to-end). No test calls decodeGtin with generated EAN-8, UPC-A, UPC-E, ITF-14, or Code128. The provided live scan evidence only lists EAN and numeric QR, not the other accepted formats.",
+    "response_sha256": "86111df7215db9d8cba3656e581542427a3bd57edd03f6a4ed89af53aa579337"
+  },
+  "affected_components": [
+    "app",
+    "tools"
+  ],
+  "suggested_remediation": "Add automated tests that generate and decode real barcodes for EAN-8, UPC-A, UPC-E, ITF-14, and GS1 Code128 using decodeGtin(barcodeReader(), ...), asserting acceptance/rejection according to the remediation rules.",
+  "suggested_validation": "Test suite passes with new cases for each required format and rejection of non-GS1 linear formats end-to-end.",
+  "reviewer_confidence": "HIGH"
+}

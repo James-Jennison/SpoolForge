@@ -1,0 +1,18 @@
+uuid: 32892a72-6057-5830-a8f7-d6a71b518e31
+slug: colorfabb-woodfill
+brand:
+  slug: colorfabb
+name: woodFill
+class: FFF
+type: PHA
+abbreviation: PHA
+url: https://colorfabb.com/woodfill?_gl=1*zp2ndj*_up*MQ..*_gs*MQ..&gclid=EAIaIQobChMI88_m6fuXkgMVR4KDBx24VBIJEAAYASAAEgJzBPD_BwE&gbraid=0AAAAADn-1hRSsWdKOKuS9wep7_VM9u0XX
+primary_color:
+  color_rgba: '#f0ddc2ff'
+tags:
+- contains_wood
+- home_compostable
+photos:
+- url: https://files.openprinttag.org/colorfabb/colorfabb-woodfill/8259da46422f.png
+  type: unspecified
+properties: {}

@@ -1,0 +1,20 @@
+{
+  "finding_id": "spoolio-deepseek-5",
+  "change_id": "spoolio-feasibility-20260906",
+  "cycle_id": "review-cycle-511bc96fa65d",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "OpenPrintTag spec stability for later milestone",
+  "summary": "OpenPrintTag's inspected default branch contains an unreleased diameter migration changing keys/units, and no stable release tag is available (`releases/latest` 404). The report nevertheless lists OPT as a later codec, making that interoperability claim speculative and introducing risk of version drift.",
+  "claim": "OpenPrintTag's inspected default branch contains an unreleased diameter migration changing keys/units, and no stable release tag is available (`releases/latest` 404). The report nevertheless lists OPT as a later codec, making that interoperability claim speculative and introducing risk of version drift.",
+  "evidence": {
+    "source": "Report section 7: \"Current inspected spec commit 7e09cc38 has an unreleased diameter migration ... legacy filament_diameter key 30 in mm is replaced by filament_diameter_v2 key 61 in \u00b5m ... API tags returned an empty list and latest-release lookup returned 404. There is no release tag to assume as an automatically stable contract.\"",
+    "response_sha256": "14940ade81683577086eff6f20c1f63e0fab8d59722f737536c2d459e73d8747"
+  },
+  "affected_components": [
+    "docs/FEASIBILITY.md"
+  ],
+  "suggested_remediation": "Defer any OPT implementation until a released spec tag and consumer compatibility fixtures exist. If development occurs earlier, pin an exact spec commit, implement only released keys, and mark unreleased fields read-only. Do not emit `main`-only keys.",
+  "suggested_validation": "Before the OPT milestone, identify a tagged release or explicitly accepted pinned spec and database schema. Run codec tests against static fixtures including legacy diameter key 30 and current draft key 61 to ensure versioned mapping.",
+  "reviewer_confidence": "HIGH"
+}

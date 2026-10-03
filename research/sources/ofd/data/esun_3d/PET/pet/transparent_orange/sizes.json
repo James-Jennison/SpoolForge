@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "d1405dc1-11b7-4fe6-9796-9995d8017f3a",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/pet"
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+uuid: bfec7ba5-7718-5ac7-8ed1-c7d9bf4a41cb
+slug: matter3d-inc-basics-series-pla-sky-blue
+brand:
+  slug: matter3d-inc
+name: Basics Series PLA Sky Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#87cefaff'
+tags:
+- industrially_compostable
+properties: {}

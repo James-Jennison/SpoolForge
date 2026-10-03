@@ -1,0 +1,11 @@
+uuid: 0053c6dc-c088-5a16-b06b-7a37c4166a66
+slug: print-with-smile-pet-g-rubin-red
+brand:
+  slug: print-with-smile
+name: PET-G Rubin RED
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#f14147ff'
+properties: {}

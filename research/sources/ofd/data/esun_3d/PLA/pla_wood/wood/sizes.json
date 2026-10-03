@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "96a01de4-d603-4165-a524-c4b6099e1895",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/pla-wood"
+      }
+    ]
+  }
+]

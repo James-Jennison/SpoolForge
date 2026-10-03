@@ -1,0 +1,14 @@
+{
+  "uuid": "439e0480-f3aa-4537-870f-c74ccd6dc630",
+  "id": "sunrise_red_yellow",
+  "name": "Sunrise Red Yellow",
+  "color_hex": [
+    "#FBE200",
+    "#E20010"
+  ],
+  "traits": {
+    "matte": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

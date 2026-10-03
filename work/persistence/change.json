@@ -1,0 +1,12 @@
+{
+  "change_id": "filamajig-canonical-persistence-20260907",
+  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "summary": "Add canonical provenance-aware profile, physical-spool, tag-binding, identifier, override, and transmission-distance persistence with lossless legacy migration and rollback.",
+  "classification": "SUBSTANTIVE",
+  "affected_components": ["android-room", "local-repository", "migration", "inventory-domain", "documentation"],
+  "required_capabilities": ["architecture", "platform", "adversarial"],
+  "provenance": {
+    "branch": "codex/m1-offline-openspool",
+    "scope": "Local M1 canonical persistence and migration; no NFC payload or write-path changes, printer operations, production release, or external data refresh"
+  }
+}

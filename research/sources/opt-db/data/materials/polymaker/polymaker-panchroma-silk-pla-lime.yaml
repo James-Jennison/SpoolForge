@@ -1,0 +1,23 @@
+uuid: ef0a0ffa-f804-5802-8293-3172505d654c
+slug: polymaker-panchroma-silk-pla-lime
+brand:
+  slug: polymaker
+name: Panchroma™ Silk PLA Lime
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#c4cf4cff'
+tags:
+  - silk
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-silk-pla-lime/b5059923d6cb.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

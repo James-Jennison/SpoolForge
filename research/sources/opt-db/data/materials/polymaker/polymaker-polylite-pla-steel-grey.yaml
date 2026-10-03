@@ -1,0 +1,23 @@
+uuid: 4a8a01c3-bfeb-5d0f-8daa-508cb457475c
+slug: polymaker-polylite-pla-steel-grey
+brand:
+  slug: polymaker
+name: PolyLite™ PLA Steel Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#5d5e63ff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polylite-pla-steel-grey/c4be2f43a874.png
+    type: unspecified
+properties:
+  density: 1.17
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

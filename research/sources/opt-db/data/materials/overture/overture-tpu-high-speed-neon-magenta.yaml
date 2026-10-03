@@ -1,0 +1,15 @@
+uuid: 882b2087-3d17-5753-9922-245513ef2312
+slug: overture-tpu-high-speed-neon-magenta
+brand:
+  slug: overture
+name: TPU High Speed Neon Magenta
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#fd3db5ff'
+tags:
+- neon
+- high_speed
+properties:
+  hardness_shore_a: 95

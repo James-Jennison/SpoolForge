@@ -1,0 +1,12 @@
+{
+  "uuid": "321dc046-20c2-4534-aa73-4f233ab0efd2",
+  "id": "metallic",
+  "name": "Metallic",
+  "color_hex": "#63646B",
+  "color_standards": {
+    "ral": "9023"
+  },
+  "traits": {
+    "filtration_recommended": true
+  }
+}

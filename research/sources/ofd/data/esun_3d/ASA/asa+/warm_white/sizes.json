@@ -1,0 +1,14 @@
+[
+  {
+    "uuid": "a7cdc24c-808b-4ca8-95e0-c0f3344152b1",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "empty_spool_weight": 140,
+    "purchase_links": [
+      {
+        "store_id": "esun3d",
+        "url": "https://esun3dstore.com/products/easa"
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+uuid: d6b5680e-3b5e-5eba-9d3a-01406dce66ac
+slug: winkle-pla-hd-pastel-banana-yellow
+brand:
+  slug: winkle
+name: PLA HD Pastel Banana Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fce575ff'
+tags:
+- industrially_compostable
+properties: {}

@@ -1,0 +1,18 @@
+uuid: 722bde8c-3368-55eb-a5ae-0ec86c87f6ac
+slug: atomic-filament-dark-cherry-carbon-fiber-extreme-petg-pro
+brand:
+  slug: atomic-filament
+name: Dark Cherry CARBON FIBER Extreme PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/dark-cherry-carbon-fiber-extreme-petg
+primary_color:
+  color_rgba: '#520b0fff'
+tags:
+- contains_carbon_fiber
+- abrasive
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-dark-cherry-carbon-fiber-extreme-petg-pro/ced409a5d856.png
+  type: unspecified
+properties: {}

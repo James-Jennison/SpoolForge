@@ -1,0 +1,11 @@
+uuid: fe1fc8e7-1697-5688-beb1-c12984aa6209
+slug: tinmorry-metallic-petg-green
+brand:
+  slug: tinmorry
+name: Metallic PETG Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#90903bff'
+properties: {}

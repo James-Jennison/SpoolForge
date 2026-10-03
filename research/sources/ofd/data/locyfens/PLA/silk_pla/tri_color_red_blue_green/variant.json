@@ -1,0 +1,15 @@
+{
+  "uuid": "d04ed719-036c-4c07-a82d-7a8ef456f1be",
+  "id": "tri_color_red_blue_green",
+  "name": "Tri-color Red Blue Green",
+  "color_hex": [
+    "#C80181",
+    "#0099E6",
+    "#41A840"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

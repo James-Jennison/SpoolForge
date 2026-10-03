@@ -1,0 +1,3 @@
+f7d13d09f43e5714d1f86b9c11007652ec094af16931c0a202e6bceac512bd64  work/package-migration/user.db
+c5d749ae5f3cddfd39f2b8201022bc492599e587806e55dbb9d402a01a0d04d8  work/package-migration/nfc-read-diagnostics.xml
+380f4a8d2b76f8e83016d0634c7023297af035c0bf46ae669a140f3302064b6d  work/package-migration/nfc-write-journal.xml

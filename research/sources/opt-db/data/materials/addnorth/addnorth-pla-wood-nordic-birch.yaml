@@ -1,0 +1,19 @@
+uuid: 40c36ad6-175a-5763-9a4c-598e7a291729
+slug: addnorth-pla-wood-nordic-birch
+brand:
+  slug: addnorth
+name: PLA Wood Nordic Birch
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#e8e1d1ff'
+tags:
+  - contains_wood
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-pla-wood-nordic-birch/4266d1da27a1.png
+    type: unspecified
+properties:
+  min_print_temperature: 200
+  max_print_temperature: 230
+  max_bed_temperature: 60

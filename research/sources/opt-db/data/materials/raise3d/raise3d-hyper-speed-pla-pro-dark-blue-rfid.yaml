@@ -1,0 +1,20 @@
+uuid: e68fbdc4-4301-50b4-b372-180ec7429ce9
+slug: raise3d-hyper-speed-pla-pro-dark-blue-rfid
+brand:
+  slug: raise3d
+name: Hyper Speed PLA Pro Dark Blue - RFID
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#2a3756ff'
+tags:
+- high_speed
+- matte
+- contains_carbon
+- industrially_compostable
+properties:
+  density: 1.21
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-hyper-speed-pla-pro-dark-blue-rfid/raise3d-hyper-speed-pla-pro-dark-blue-rfid-0-7c50d394.jpg
+  type: unspecified

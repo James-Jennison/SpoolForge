@@ -1,0 +1,22 @@
+uuid: fd608ee3-d6b8-52f5-b89f-dbc0a8bbf2be
+slug: filamentpm-pla-khaki
+brand:
+  slug: filamentpm
+name: PLA - Khaki
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#84754eff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-pla-khaki/5de9997fbbaa.png
+    type: unspecified
+properties:
+  density: 1.24
+  hardness_shore_d: 78.3
+  min_print_temperature: 200
+  max_print_temperature: 220
+  min_bed_temperature: 20
+  max_bed_temperature: 60

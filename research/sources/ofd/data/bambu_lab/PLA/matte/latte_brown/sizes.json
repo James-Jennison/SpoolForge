@@ -1,0 +1,29 @@
+[
+  {
+    "uuid": "1065c67d-a6f9-4f68-a6c2-12cf4906472f",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "ean": "6975337032427",
+    "article_number": "11800",
+    "purchase_links": [
+      {
+        "store_id": "bblstore",
+        "url": "https://us.store.bambulab.com/collections/pla/products/pla-matte?variant=40489682010248"
+      }
+    ]
+  },
+  {
+    "uuid": "9d67db27-a4c7-41b1-81d4-ad5ef12dac3a",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "ean": "6975337030126",
+    "purchase_links": [
+      {
+        "store_id": "3deksperten",
+        "url": "https://3deksperten.dk/products/bambu-lab-pla-matte-latte-brown-1-75mm-1kg-refill"
+      }
+    ]
+  }
+]

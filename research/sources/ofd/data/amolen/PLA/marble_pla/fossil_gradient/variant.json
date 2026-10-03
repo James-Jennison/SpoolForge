@@ -1,0 +1,15 @@
+{
+  "uuid": "c24822d2-5874-4a20-b813-42789619cb0e",
+  "id": "fossil_gradient",
+  "name": "Fossil Gradient",
+  "color_hex": [
+    "#7B6B57",
+    "#A38777",
+    "#7C594A"
+  ],
+  "traits": {
+    "gradual_color_change": true,
+    "imitates_marble": true,
+    "industrially_compostable": true
+  }
+}

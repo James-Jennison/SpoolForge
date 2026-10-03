@@ -1,0 +1,14 @@
+uuid: daaeab2b-1c4e-5bc7-ab14-583d028fd83a
+slug: overture-pla-professional-light-blue
+brand:
+  slug: overture
+name: PLA Professional Light Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#99f1ffff'
+tags:
+- industrially_compostable
+photos: []
+properties: {}

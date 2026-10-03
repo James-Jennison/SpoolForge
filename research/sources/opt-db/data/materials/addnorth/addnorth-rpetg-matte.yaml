@@ -1,0 +1,17 @@
+uuid: 3f320300-1b90-54df-89a7-107809df2062
+slug: addnorth-rpetg-matte
+brand:
+  slug: addnorth
+name: rPETG Matte
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+  - recycled
+  - matte
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-rpetg-matte/727d84438ad5.png
+    type: unspecified
+properties: {}

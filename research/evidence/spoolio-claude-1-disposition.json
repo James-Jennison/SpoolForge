@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-claude-1",
+  "disposition": "CONFIRMED",
+  "reason": "CONFIRMED WITH NARROWER SCOPE: Distribution reliability was insufficiently prominent. Report now proposes bundled-source-only M1 and gates live refresh separately. Cause of403 is unknown, not proven bot filtering.",
+  "evidence_reference": "docs/FEASIBILITY.md revised; research/evidence/ofd-snapshot-validation.json; remediation review-cycle-5ac84cff9d4b",
+  "resolved": true
+}

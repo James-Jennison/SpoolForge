@@ -1,0 +1,18 @@
+uuid: 8f374e7e-9911-549e-a2a7-000f0f35242d
+slug: atomic-filament-flame-retardant-sabic-fr15u-black-abs
+brand:
+  slug: atomic-filament
+name: FLAME RETARDANT Sabic FR15U Black ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+url: https://atomicfilament.com/products/flame-retardant-black-abs-filament
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- self_extinguishing
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-flame-retardant-sabic-fr15u-black-abs/a173f77c93cd.png
+  type: unspecified
+properties: {}

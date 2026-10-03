@@ -1,0 +1,19 @@
+uuid: 8065da9c-32b3-5bb4-8fa9-0fa35c39722f
+slug: amolen-pla-glow-in-the-dark-glow-blue-purple
+brand:
+  slug: amolen
+name: PLA Glow-in-the-Dark Glow Blue Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://www.amolen.com/products/pla-glow?variant=41718427287575
+primary_color:
+  color_rgba: '#ae00ffff'
+tags:
+- glow_in_the_dark
+- abrasive
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-glow-in-the-dark-glow-blue-purple/bdd0cd6ab54d.png
+  type: unspecified
+properties: {}

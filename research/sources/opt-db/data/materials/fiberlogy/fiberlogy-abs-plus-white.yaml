@@ -1,0 +1,23 @@
+uuid: 3c7599a1-25f5-5550-941d-430579bfd660
+slug: fiberlogy-abs-plus-white
+brand:
+  slug: fiberlogy
+name: ABS PLUS White
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-abs-plus-white/b17567032219.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 240

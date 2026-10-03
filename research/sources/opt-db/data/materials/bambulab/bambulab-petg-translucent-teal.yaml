@@ -1,0 +1,23 @@
+uuid: 4b151ec1-1f6c-5b38-ba98-31ffacd8ed91
+slug: bambulab-petg-translucent-teal
+brand:
+  slug: bambulab
+name: PETG Translucent Teal
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#77edd7ff'
+tags:
+  - translucent
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-translucent-teal/facd34b84fdf.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

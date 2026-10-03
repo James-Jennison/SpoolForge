@@ -1,0 +1,18 @@
+uuid: f252a5cd-c306-5e7f-8680-71c4d9988c3d
+slug: ziro-3d-shore-95a-hardness-tpu-flex-rainbow
+brand:
+  slug: ziro-3d
+name: Shore 95A Hardness TPU Flex Rainbow
+class: FFF
+type: TPU
+abbreviation: TPU
+secondary_colors:
+- color_rgba: '#00ae42ff'
+- color_rgba: '#cb0100ff'
+- color_rgba: '#c4299dff'
+- color_rgba: '#00a5a8ff'
+tags:
+- gradual_color_change
+- translucent
+properties:
+  hardness_shore_a: 95

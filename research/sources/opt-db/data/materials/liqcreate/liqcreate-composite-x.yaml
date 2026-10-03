@@ -1,0 +1,16 @@
+uuid: d568a7b4-7857-56d1-aaca-535048367948
+slug: liqcreate-composite-x
+brand:
+  slug: liqcreate
+name: Composite-X
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#d6d7d8ff'
+properties:
+  density: 1.52
+  cure_wavelength: 405
+  viscosity_18c: 313
+  viscosity_25c: 196
+  viscosity_40c: 86
+  viscosity_60c: 39

@@ -1,0 +1,20 @@
+uuid: d99326c9-4936-5fdf-b11c-f352e413f53b
+slug: spectrum-pla-high-speed-leaf-green
+brand:
+  slug: spectrum
+name: PLA High Speed Leaf Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#3d9441ff'
+tags:
+- high_speed
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-high-speed-leaf-green/spectrum-pla-high-speed-leaf-green-0-9c03ba31.jpg
+  type: unspecified

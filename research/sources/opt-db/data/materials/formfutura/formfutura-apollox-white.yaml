@@ -1,0 +1,22 @@
+uuid: 4d83a71c-096f-581c-9371-e8c5a7cab0af
+slug: formfutura-apollox-white
+brand:
+  slug: formfutura
+name: ApolloX White
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#ffffffff'
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-apollox-white/d6df37a657a9.png
+    type: unspecified
+properties:
+  density: 1.11
+  min_print_temperature: 235
+  max_print_temperature: 255
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  chamber_temperature: 40
+tags:
+  - filtration_recommended

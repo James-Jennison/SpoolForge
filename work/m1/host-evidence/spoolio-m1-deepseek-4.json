@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-m1-deepseek-4",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-38636c32948d",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Search",
+  "summary": "Search does not support package identifier.",
+  "claim": "Search does not support package identifier.",
+  "evidence": {
+    "source": "catalog_fts Fts4 table in Databases.kt has columns brand, material, product, color_name only; package_id is absent. MainViewModel.search() builds an FTS query only against those columns.",
+    "response_sha256": "9ce1f17a15210414355a99fa316c46989f28239b61a329155699d55078adf435"
+  },
+  "affected_components": [
+    "app",
+    "core"
+  ],
+  "suggested_remediation": "Add package_id to the FTS index or implement a separate exact package lookup integrated with search.",
+  "suggested_validation": "Enter a known package ID in the search field and verify matching catalog entries are returned.",
+  "reviewer_confidence": "HIGH"
+}

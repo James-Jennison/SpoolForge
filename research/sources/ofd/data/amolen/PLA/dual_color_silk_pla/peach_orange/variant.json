@@ -1,0 +1,13 @@
+{
+  "uuid": "411e1ac6-fc64-445b-8d9b-c8a060395a54",
+  "id": "peach_orange",
+  "name": "Peach Orange",
+  "color_hex": [
+    "#EB0075",
+    "#F47D59"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true
+  }
+}

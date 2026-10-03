@@ -1,0 +1,14 @@
+uuid: c16874ac-e511-5a94-9ecd-c3f28c624f65
+slug: winkle-pla-tough-iron-gray
+brand:
+  slug: winkle
+name: PLA Tough Iron Gray
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#3e413fff'
+tags:
+- industrially_compostable
+properties:
+  density: 1.21

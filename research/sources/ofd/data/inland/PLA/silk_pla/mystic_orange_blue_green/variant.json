@@ -1,0 +1,15 @@
+{
+  "uuid": "e6a35e12-9879-4a9d-af4f-53ec96ab753e",
+  "id": "mystic_orange_blue_green",
+  "name": "Mystic Orange Blue Green",
+  "color_hex": [
+    "#FF8133",
+    "#008059",
+    "#0378D0"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "3e2e1f60-210c-4c78-882e-66da3267bb2e",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 180,
+    "spool_core_diameter": 75,
+    "gtin": "5903707923052",
+    "article_number": "FG-P171-E1",
+    "discontinued": false
+  }
+]

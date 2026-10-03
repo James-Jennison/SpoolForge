@@ -1,0 +1,13 @@
+uuid: 0a5ee27b-9ef9-5842-b2cb-f7d2c893aa54
+slug: print-with-smile-re-petg-persian-blue
+brand:
+  slug: print-with-smile
+name: RE-PETG Persian BLUE
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0378d0ff'
+tags:
+- recycled
+properties: {}

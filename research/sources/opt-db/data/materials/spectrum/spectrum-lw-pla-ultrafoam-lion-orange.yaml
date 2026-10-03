@@ -1,0 +1,21 @@
+uuid: a47eaae5-e9fc-5f31-a52e-0d42db765ed5
+slug: spectrum-lw-pla-ultrafoam-lion-orange
+brand:
+  slug: spectrum
+name: LW-PLA UltraFoam Lion Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fa8423ff'
+tags:
+  - foaming
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 250
+  min_bed_temperature: 40
+  max_bed_temperature: 50
+photos:
+  - url: https://files.openprinttag.org/spectrum/spectrum-lw-pla-ultrafoam-lion-orange/spectrum-lw-pla-ultrafoam-lion-orange-0-7b8ad278.jpg
+    type: unspecified

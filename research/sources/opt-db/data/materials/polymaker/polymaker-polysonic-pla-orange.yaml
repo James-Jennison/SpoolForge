@@ -1,0 +1,24 @@
+uuid: e23fd035-db2f-570d-9a62-e40d8c0b4708
+slug: polymaker-polysonic-pla-orange
+brand:
+  slug: polymaker
+name: PolySonic™ PLA Orange
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ff6a13ff'
+tags:
+  - high_speed
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polysonic-pla-orange/e5908d4c6c09.png
+    type: unspecified
+properties:
+  density: 1.23
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

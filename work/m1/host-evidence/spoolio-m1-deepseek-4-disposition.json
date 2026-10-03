@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-deepseek-4",
+  "disposition": "REJECTED",
+  "reason": "NOT APPLICABLE as a requirement defect: exact package selection is required, raw UUID search was not an Owner acceptance requirement. Optional lookup may be added without substituting requirements.",
+  "evidence_reference": "work/m1/HOST_REMEDIATION_DIRECTION.md; host initial source snapshot review-cycle-38636c32948d",
+  "resolved": true
+}

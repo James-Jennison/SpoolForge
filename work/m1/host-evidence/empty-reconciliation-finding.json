@@ -1,0 +1,16 @@
+{
+  "finding_id": "spoolio-m1-empty-reconciliation-wording",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-246957788f4c",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "NFC reconciliation wording",
+  "summary": "Empty reconciliation was described as complete message mismatch",
+  "claim": "UI falsely implies complete NDEF was read when records are empty.",
+  "evidence": {
+    "source": "WriteStateMachine.reconciled mismatch detail; deferred-diagnostics-deepseek.json"
+  },
+  "suggested_remediation": "Use explicit no-message wording for empty records while preserving UNKNOWN.",
+  "suggested_validation": "Empty reconciliation stays UNKNOWN and says No NDEF message.",
+  "reviewer_confidence": "HIGH"
+}

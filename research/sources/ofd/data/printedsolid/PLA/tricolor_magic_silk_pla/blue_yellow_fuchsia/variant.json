@@ -1,0 +1,15 @@
+{
+  "uuid": "5d9e0641-d876-4120-a269-422b1917a224",
+  "id": "blue_yellow_fuchsia",
+  "name": "Blue-Yellow-Fuchsia",
+  "color_hex": [
+    "#0353BA",
+    "#FBF942",
+    "#CC00E3"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

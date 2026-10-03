@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-claude-3",
+  "disposition": "CONFIRMED",
+  "reason": "Confirmed; remediate against Owner requirements and host guidance. Preserve unresolved NFC history, exercise actual Android store/lifecycle paths, remove unused installer if not authoritative.",
+  "evidence_reference": "work/m1/HOST_REMEDIATION_DIRECTION.md",
+  "resolved": false
+}

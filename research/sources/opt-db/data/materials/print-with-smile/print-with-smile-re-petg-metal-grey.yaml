@@ -1,0 +1,13 @@
+uuid: 605bb934-42cf-5e4e-9bf1-9610d7d9f048
+slug: print-with-smile-re-petg-metal-grey
+brand:
+  slug: print-with-smile
+name: RE-PETG Metal GREY
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#6a6c6eff'
+tags:
+- recycled
+properties: {}

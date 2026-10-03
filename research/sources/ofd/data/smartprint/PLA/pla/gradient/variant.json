@@ -1,0 +1,11 @@
+{
+  "uuid": "dc087574-03b7-4474-ac6c-bac392763653",
+  "id": "gradient",
+  "name": "Gradient",
+  "color_hex": [
+    "#00c7fc",
+    "#96d35f",
+    "#fffc41",
+    "#ffaa00"
+  ]
+}

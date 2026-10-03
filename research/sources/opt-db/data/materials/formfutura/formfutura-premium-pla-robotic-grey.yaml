@@ -1,0 +1,23 @@
+uuid: 3d452dd4-556d-594b-a854-b25aa27821e1
+slug: formfutura-premium-pla-robotic-grey
+brand:
+  slug: formfutura
+name: Premium PLA Robotic Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6a6c6eff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-premium-pla-robotic-grey/59a95d8f4159.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50
+  drying_time: 360

@@ -1,0 +1,17 @@
+[
+  {
+    "uuid": "db42f9a2-3210-43dd-b019-cd9bbd8627a7",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "amazon",
+        "url": "https://www.amazon.co.uk/dp/B07DVY9BLN"
+      },
+      {
+        "store_id": "polymaker",
+        "url": "https://us.polymaker.com/products/polylite-pla-cf"
+      }
+    ]
+  }
+]

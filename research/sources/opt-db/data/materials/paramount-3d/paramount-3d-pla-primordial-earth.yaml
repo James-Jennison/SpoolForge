@@ -1,0 +1,13 @@
+uuid: ec50287a-07bf-5d3a-83fb-44e8d6aa2877
+slug: paramount-3d-pla-primordial-earth
+brand:
+  slug: paramount-3d
+name: PLA (Primordial Earth)
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ae9d7eff'
+tags:
+- industrially_compostable
+properties: {}

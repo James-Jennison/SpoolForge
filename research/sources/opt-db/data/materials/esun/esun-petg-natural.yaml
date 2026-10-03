@@ -1,0 +1,23 @@
+uuid: 36c09693-04b9-5030-9639-c78f9efaf23b
+slug: esun-petg-natural
+brand:
+  slug: esun
+name: PETG Natural
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://esun3dstoreeu.com/products/petg?VariantsId=12128
+primary_color:
+  color_rgba: '#d9d8deff'
+tags:
+  - translucent
+  - without_pigments
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 75
+  max_bed_temperature: 90
+photos:
+  - url: https://files.openprinttag.org/esun/esun-petg-natural/d56b45180b80.jpg
+    type: unspecified

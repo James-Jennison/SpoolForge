@@ -1,0 +1,20 @@
+uuid: c21fa8c0-f161-518a-b96b-39636f4fa064
+slug: raise3d-hyper-speed-pla-pro-brick-red-rfid
+brand:
+  slug: raise3d
+name: Hyper Speed PLA Pro Brick Red - RFID
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6d342dff'
+tags:
+- high_speed
+- matte
+- contains_carbon
+- industrially_compostable
+properties:
+  density: 1.21
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-hyper-speed-pla-pro-brick-red-rfid/raise3d-hyper-speed-pla-pro-brick-red-rfid-0-0bf85193.jpg
+  type: unspecified

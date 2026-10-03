@@ -1,0 +1,7 @@
+{
+  "finding_id": "filamajig-m4-deepseek-physical-gate",
+  "disposition": "CONFIRMED",
+  "reason": "The required physical gate was executed. The 2023 Razr wrote a real NTAG215, obtained a fresh semantic readback, persisted binding position 1, and completed the one-tag flow. The owner then presented that tag to U1 Bay 1 in OpenRFID mode on v1.5.2-paxx12-21 and confirmed recognition of the MarsWork PLA Cyan profile with the expected 190-230 C nozzle range.",
+  "evidence_reference": "work/codec-m4/physical-acceptance.json; work/codec-m4/device-acceptance.json",
+  "resolved": true
+}

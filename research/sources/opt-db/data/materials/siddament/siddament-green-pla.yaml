@@ -1,0 +1,13 @@
+uuid: fdc600d2-efee-5c7d-8286-8263ec59ebcf
+slug: siddament-green-pla
+brand:
+  slug: siddament
+name: Green PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#01e041ff'
+tags:
+- industrially_compostable
+properties: {}

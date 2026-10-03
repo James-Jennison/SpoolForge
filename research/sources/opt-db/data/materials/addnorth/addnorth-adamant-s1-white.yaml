@@ -1,0 +1,16 @@
+uuid: b08586d6-930a-510c-894a-b45938fc62ad
+slug: addnorth-adamant-s1-white
+brand:
+  slug: addnorth
+name: Adamant S1 White
+class: FFF
+type: PVDF
+abbreviation: PVDF
+primary_color:
+  color_rgba: '#ffffffff'
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-adamant-s1-white/96a00a9f4565.png
+    type: unspecified
+properties: {}
+tags:
+  - filtration_recommended

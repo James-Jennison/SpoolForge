@@ -1,0 +1,14 @@
+{
+  "uuid": "525e4138-aaab-4e93-9b89-85e3f68f8cb1",
+  "id": "titanx_abs",
+  "name": "TitanX",
+  "diameter_tolerance": 0.02,
+  "density": 1.05,
+  "min_print_temperature": 245,
+  "max_print_temperature": 270,
+  "min_bed_temperature": 100,
+  "max_bed_temperature": 110,
+  "data_sheet_url": "https://www.formfutura.com/web/content/256648?download=true",
+  "safety_sheet_url": "https://www.formfutura.com/web/content/256647?download=true",
+  "discontinued": false
+}

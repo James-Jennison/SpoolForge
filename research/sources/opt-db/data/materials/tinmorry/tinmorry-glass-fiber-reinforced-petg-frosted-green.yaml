@@ -1,0 +1,14 @@
+uuid: fa6e3bf0-58b5-551c-a72e-9df408cfae83
+slug: tinmorry-glass-fiber-reinforced-petg-frosted-green
+brand:
+  slug: tinmorry
+name: Glass Fiber Reinforced PETG Frosted Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#58c91bff'
+tags:
+- contains_glass_fiber
+- abrasive
+properties: {}

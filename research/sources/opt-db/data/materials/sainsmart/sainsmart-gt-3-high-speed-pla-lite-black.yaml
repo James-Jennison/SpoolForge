@@ -1,0 +1,14 @@
+uuid: 42401a8c-2d8c-5306-92f8-52c66ae29a95
+slug: sainsmart-gt-3-high-speed-pla-lite-black
+brand:
+  slug: sainsmart
+name: GT-3 High Speed PLA-Lite Black
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- industrially_compostable
+- high_speed
+properties: {}

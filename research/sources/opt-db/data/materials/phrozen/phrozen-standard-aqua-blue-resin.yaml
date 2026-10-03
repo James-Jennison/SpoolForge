@@ -1,0 +1,10 @@
+uuid: 314c0ea9-5fbf-5846-8e8b-081399e8372e
+slug: phrozen-standard-aqua-blue-resin
+brand:
+  slug: phrozen
+name: Standard Aqua Blue Resin
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#40b6e4ff'
+properties: {}

@@ -1,0 +1,14 @@
+uuid: 3246c914-026e-5072-8342-ef89018fcd6b
+slug: overture-pla-pink
+brand:
+  slug: overture
+name: PLA Pink
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f09bb5ff'
+tags:
+- industrially_compostable
+photos: []
+properties: {}

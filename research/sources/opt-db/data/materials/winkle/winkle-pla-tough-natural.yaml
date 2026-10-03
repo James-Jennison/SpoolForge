@@ -1,0 +1,15 @@
+uuid: 136772b3-3d3a-5381-8ce1-a3ea2da0abde
+slug: winkle-pla-tough-natural
+brand:
+  slug: winkle
+name: PLA Tough Natural
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#efeadfff'
+tags:
+- without_pigments
+- industrially_compostable
+properties:
+  density: 1.21

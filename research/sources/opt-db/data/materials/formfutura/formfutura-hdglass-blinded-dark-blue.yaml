@@ -1,0 +1,21 @@
+uuid: 176c77ae-61ba-55de-a44b-4b73a684c91b
+slug: formfutura-hdglass-blinded-dark-blue
+brand:
+  slug: formfutura
+name: HDglass Blinded Dark Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#0353baff'
+tags:
+  - silk
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-hdglass-blinded-dark-blue/a0a90d8a317b.png
+    type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 195
+  max_print_temperature: 225
+  min_bed_temperature: 80
+  max_bed_temperature: 90

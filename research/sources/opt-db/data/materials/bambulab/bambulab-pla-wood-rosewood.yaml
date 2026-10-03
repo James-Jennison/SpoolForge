@@ -1,0 +1,26 @@
+uuid: e367345a-6ad0-52b7-afd1-bf76adf3c402
+slug: bambulab-pla-wood-rosewood
+brand:
+  slug: bambulab
+name: PLA Wood Rosewood
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#4c241cff'
+tags:
+  - matte
+  - contains_wood
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-pla-wood-rosewood/610d88da2000.png
+    type: unspecified
+properties:
+  density: 1.21
+  min_print_temperature: 190
+  max_print_temperature: 240
+  min_bed_temperature: 35
+  max_bed_temperature: 45
+  min_chamber_temperature: 25
+  max_chamber_temperature: 45
+url: https://us.store.bambulab.com/products/pla-wood?id=43075831988360

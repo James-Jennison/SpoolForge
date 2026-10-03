@@ -1,0 +1,12 @@
+uuid: 769e16a1-7e58-578d-80f1-74c96e343806
+slug: tinmorry-tpu-95a-transparent-orange
+brand:
+  slug: tinmorry
+name: TPU 95A Transparent Orange
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#ff8133ff'
+properties:
+  hardness_shore_a: 95

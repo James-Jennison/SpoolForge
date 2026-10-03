@@ -1,0 +1,20 @@
+uuid: 8538229a-07f6-5082-8266-f39ac1b04ff5
+slug: esun-carbon-fiber-pla-purple
+brand:
+  slug: esun
+name: Carbon Fiber PLA Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://esun3dstoreeu.com/products/epla-cf?VariantsId=12175
+primary_color:
+  color_rgba: '#2f2936ff'
+tags:
+  - matte
+  - contains_carbon_fiber
+  - abrasive
+  - contains_carbon
+properties: {}
+photos:
+  - url: https://files.openprinttag.org/esun/esun-carbon-fiber-pla-purple/352ed8ffa118.jpg
+    type: unspecified

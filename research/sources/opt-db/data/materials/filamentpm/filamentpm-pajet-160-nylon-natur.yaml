@@ -1,0 +1,23 @@
+uuid: fba1f4da-72ee-5e01-b12e-a5616dd11b7e
+slug: filamentpm-pajet-160-nylon-natur
+brand:
+  slug: filamentpm
+name: PAJet 160 Nylon - Natur
+class: FFF
+abbreviation: PA12
+primary_color:
+  color_rgba: '#f2f0ebff'
+tags:
+  - translucent
+  - without_pigments
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-pajet-160-nylon-natur/9e770b5f41a2.png
+    type: unspecified
+properties:
+  density: 1.01
+  min_print_temperature: 230
+  max_print_temperature: 240
+  min_bed_temperature: 110
+  max_bed_temperature: 120
+type: PA12

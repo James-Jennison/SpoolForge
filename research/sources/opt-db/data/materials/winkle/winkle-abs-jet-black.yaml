@@ -1,0 +1,14 @@
+uuid: dce9503a-4729-542e-9103-d8f5cf06e01b
+slug: winkle-abs-jet-black
+brand:
+  slug: winkle
+name: ABS Jet Black
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- filtration_recommended
+properties:
+  density: 1.05

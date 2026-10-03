@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gtin-ui-deepseek-1",
+  "disposition": "CONFIRMED",
+  "reason": "The test claim was too weak. It now creates a fresh index instance, verifies known candidates after corruption, and checks the SQLite header and size; Razr instrumentation independently repeats the repair.",
+  "evidence_reference": "app/src/test/kotlin/net/jamesjennison/spoolio/GtinIndexTest.kt; work/gtin/device-instrumentation-final.log",
+  "resolved": true
+}

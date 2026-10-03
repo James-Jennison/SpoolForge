@@ -1,0 +1,13 @@
+uuid: 1988cb79-f9dd-5537-9e71-d38bfbaae664
+slug: print-with-smile-re-petg-royal-blue
+brand:
+  slug: print-with-smile
+name: RE-PETG Royal BLUE
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#2c3294ff'
+tags:
+- recycled
+properties: {}

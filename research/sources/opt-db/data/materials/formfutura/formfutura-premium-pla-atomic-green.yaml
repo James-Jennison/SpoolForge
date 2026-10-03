@@ -1,0 +1,23 @@
+uuid: 7be382d4-fa38-59a4-9be2-71865b714ff3
+slug: formfutura-premium-pla-atomic-green
+brand:
+  slug: formfutura
+name: Premium PLA Atomic Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#4dff64ff'
+tags:
+  - industrially_compostable
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-premium-pla-atomic-green/d519aea800d0.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50
+  drying_time: 360

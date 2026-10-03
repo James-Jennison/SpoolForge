@@ -1,0 +1,70 @@
+{
+  "phase": "REMEDIATION_REVIEW",
+  "objective": "Verify remediation of the initial CANVAS plus U1/PAXX review findings without expanding the milestone.",
+  "change_id": "filamajig-canvas-u1-paxx-20260929",
+  "source_snapshot_sha256": "65b01c9957cea0bf36412eda9c614e704892d52faf4fb018c83d6be863d1af13",
+  "remediation": [
+    {
+      "finding": "No byte-accurate pinned OpenRFID fixture",
+      "disposition": "CONFIRMED",
+      "change": "Added a 41-byte golden encoder vector and a real pinned OpenRFID factory-vector decoder test covering header, manufacturer marker, material/subtype, RGBA, nozzle range, diameter, and weight offsets."
+    },
+    {
+      "finding": "Data outside pages 16-31 could leave a competing payload",
+      "disposition": "CONFIRMED",
+      "change": "CANVAS one-tag writes now require every inspected user-area byte outside pages 16-31 to be zero. Non-zero data is rejected and preserved; it is never erased implicitly. Discovery also refuses to describe such a tag as a one-format CANVAS tag."
+    },
+    {
+      "finding": "Compatibility claims were insufficiently bounded without hardware acceptance",
+      "disposition": "CONFIRMED",
+      "change": "Resolver and UI now say implementation-compatible and prominently state that physical CANVAS and U1 reader acceptance remains pending and experimental."
+    },
+    {
+      "finding": "Dynamic-lock validation omitted other lock bits",
+      "disposition": "DISPUTED",
+      "evidence": "NXP NTAG213/215/216 data sheet dynamic-lock mapping assigns byte 0 bit 0 to pages 16-31 and byte 2 bit 0 to the corresponding block-lock. Other bits govern later ranges. Tests now prove later-range bits do not falsely reject pages 16-31. AUTH0 <= 31 is rejected."
+    },
+    {
+      "finding": "Interrupted raw writes need a recovery path",
+      "disposition": "ALREADY MITIGATED",
+      "change": "The durable write state already forbids automatic retry and requires a same-UID read-only reconciliation. The CANVAS interruption message now explicitly says pages 16-31 may be partially modified."
+    },
+    {
+      "finding": "Unsupported profile fields were not clear",
+      "disposition": "ALREADY MITIGATED",
+      "evidence": "The encoder fails closed for unrepresentable brand/material and the existing encoded preview enumerates every omitted local field before arming a write."
+    }
+  ],
+  "objective_evidence": {
+    "build_host": "gthost-build01",
+    "remote_directory": "/tmp/filamajig-canvas-final.A2dKu4",
+    "jdk": "Temurin 17.0.20.1",
+    "core_tests": {"tests": 89, "failures": 0, "errors": 0, "skipped": 0},
+    "app_tests": {"tests": 74, "failures": 0, "errors": 0, "skipped": 0},
+    "lint_debug": "PASS",
+    "assemble_debug": "PASS",
+    "apk_sha256": "24a207dcbe02561dcd2761d121de8ccc46c0a43964da15009a3336dffc9ef8d4"
+  },
+  "review_files": [
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/ElegooCanvasCodec.kt",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/CompatibilityResolver.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt",
+    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/VendorTagCodecsTest.kt",
+    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/CompatibilityResolverTest.kt",
+    "docs/ARCHITECTURE.md",
+    "docs/OPEN_ECOSYSTEM_ADAPTERS.md"
+  ],
+  "known_limits": [
+    "No physical NTAG215, CANVAS, or U1/PAXX acceptance was performed.",
+    "PAXX documents unreliable factory Elegoo tag placement on U1.",
+    "The pre-existing dirty working tree was preserved; the exact dirty snapshot was validated remotely."
+  ],
+  "review_questions": [
+    "Do the golden vectors prove alignment with the pinned OpenRFID Elegoo processor?",
+    "Does the one-format exclusivity check prevent a competing payload without destructive cleanup?",
+    "Are the remaining compatibility statements properly bounded?",
+    "Are any initial HIGH findings still materially open?"
+  ],
+  "sanitization": "No credentials, tokens, keys, private network addresses, NFC UIDs, user data, device serials, photos, or account data are included."
+}

@@ -1,0 +1,23 @@
+uuid: 54652e33-50ea-53e2-a312-28f52494860a
+slug: bambulab-petg-hf-forest-green
+brand:
+  slug: bambulab
+name: PETG HF Forest Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#39541aff'
+tags:
+  - high_speed
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-hf-forest-green/daa62670735b.png
+    type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

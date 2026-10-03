@@ -1,0 +1,21 @@
+uuid: c8b9b61d-434e-5eaf-8d49-e782711e7b3d
+slug: spectrum-petg-premium-high-speed-bright-green
+brand:
+  slug: spectrum
+name: PETG Premium High Speed Bright Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#70fa00ff'
+tags:
+- high_speed
+properties:
+  density: 1.29
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-petg-premium-high-speed-bright-green/spectrum-petg-premium-high-speed-bright-green-0-8bd08a4e.jpg
+  type: unspecified

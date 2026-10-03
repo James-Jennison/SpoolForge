@@ -1,0 +1,22 @@
+uuid: 93f205f8-35a9-5c8a-91fa-171bf7d5d34f
+slug: polymaker-polycast-natural
+brand:
+  slug: polymaker
+name: PolyCast™ Natural
+class: FFF
+abbreviation: PCast
+primary_color:
+  color_rgba: '#e9dfd3ff'
+tags:
+  - without_pigments
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polycast-natural/b4be628f64d7.png
+    type: unspecified
+properties:
+  density: 1.1
+  min_print_temperature: 190
+  max_print_temperature: 220
+  min_bed_temperature: 25
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 720

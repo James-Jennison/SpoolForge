@@ -1,0 +1,24 @@
+uuid: bae5d126-3f3a-5585-a1d2-00ccc1affaa3
+slug: polymaker-panchroma-matte-pla-wood-brown
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Wood Brown
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ab7449ff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-wood-brown/3a1bca7b08d6.png
+    type: unspecified
+transmission_distance: 0.2
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

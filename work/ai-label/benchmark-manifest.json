@@ -1,0 +1,419 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "panchroma-starlight-purple-red",
+      "image": "fixtures/panchroma-starlight-purple-red.png",
+      "expected": {
+        "label_brand": "Panchroma",
+        "manufacturer": null,
+        "material": "PLA",
+        "color": "Starlight Purple-Red",
+        "diameter_mm": 1.75,
+        "net_weight_g": 1000,
+        "nozzle_min_c": null,
+        "nozzle_max_c": null,
+        "bed_min_c": null,
+        "bed_max_c": null,
+        "gtin": "6938936717461",
+        "sku": "CA09019",
+        "lot": null
+      },
+      "product_terms": [
+        "panchroma",
+        "pla",
+        "gradient",
+        "starlight",
+        "purple",
+        "red"
+      ],
+      "other_codes": [
+        {
+          "value": "X004QSH4ZH",
+          "kind": "FNSKU"
+        }
+      ],
+      "source_sha256": "9ceff68b8ed32ec2dac8736244c16384ab89d7c59a8bc93a5c5d74f24b3f8fe2"
+    },
+    {
+      "id": "gizmo-dorks-hips-white",
+      "image": "fixtures/gizmo-dorks-hips-white.png",
+      "expected": {
+        "label_brand": "Gizmo Dorks",
+        "manufacturer": null,
+        "material": "HIPS",
+        "color": "White",
+        "diameter_mm": 1.75,
+        "net_weight_g": 1000,
+        "nozzle_min_c": null,
+        "nozzle_max_c": null,
+        "bed_min_c": null,
+        "bed_max_c": null,
+        "gtin": "887503120752",
+        "lot": null
+      },
+      "product_terms": [
+        "hips",
+        "filament"
+      ],
+      "other_codes": [],
+      "ground_truth_notes": [
+        "The printed A09C/AO9C glyph is ambiguous, so SKU is excluded from scoring.",
+        "UPC-A payload independently decoded with ZXing 3.5.4 and its check digit is valid."
+      ],
+      "source_sha256": "73a394d1fb99f2513411123071cc10e4acf27d99db22c6255d3963f011676e73"
+    },
+    {
+      "id": "kingroon-petg-basic-gray",
+      "image": "fixtures/kingroon-petg-basic-gray.png",
+      "expected": {
+        "label_brand": "KINGROON 3D",
+        "manufacturer": null,
+        "material": "PETG",
+        "color": "Gray",
+        "diameter_mm": 1.75,
+        "net_weight_g": null,
+        "nozzle_min_c": 230,
+        "nozzle_max_c": 250,
+        "bed_min_c": 70,
+        "bed_max_c": 90,
+        "gtin": null,
+        "sku": "HC098",
+        "lot": "0403-4"
+      },
+      "product_terms": [
+        "petg",
+        "basic"
+      ],
+      "other_codes": [
+        {
+          "value": "https://qr12.cn/CRDd80",
+          "kind": "QR_URL"
+        }
+      ],
+      "ground_truth_notes": [
+        "QR payload independently decoded with ZXing 3.5.4 from the original fixture."
+      ],
+      "source_sha256": "5ce3facd2abf0d1faea28a8c0490493ccffce3b1ede2abba847c2ea47ea03ac0"
+    },
+    {
+      "id": "anycubic-pla-magenta",
+      "image": "fixtures/anycubic-pla-magenta.png",
+      "expected": {
+        "label_brand": "ANYCUBIC",
+        "manufacturer": null,
+        "material": "PLA",
+        "color": "Magenta",
+        "diameter_mm": 1.75,
+        "net_weight_g": 1000,
+        "nozzle_min_c": 190,
+        "nozzle_max_c": 230,
+        "bed_min_c": null,
+        "bed_max_c": null,
+        "gtin": null,
+        "sku": "AHPLMG-107",
+        "lot": null
+      },
+      "product_terms": [
+        "pla"
+      ],
+      "other_codes": [
+        {
+          "value": "X004LDC21N",
+          "kind": "FNSKU"
+        }
+      ],
+      "source_sha256": "e24c88d981dbcacc4cf0ab6df54660a2efc2fdd038ffd77d0eb00cf2be596160",
+      "ground_truth_notes": [
+        "Code 128 payload independently decoded with ZXing 3.5.4 from the original fixture."
+      ]
+    },
+    {
+      "id": "3dhojor-fire-engine-red",
+      "image": "fixtures/3dhojor-fire-engine-red.png",
+      "expected": {
+        "label_brand": "3DHoJor",
+        "manufacturer": null,
+        "material": null,
+        "color": "Fire Engine Red",
+        "diameter_mm": null,
+        "net_weight_g": null,
+        "nozzle_min_c": null,
+        "nozzle_max_c": null,
+        "bed_min_c": null,
+        "bed_max_c": null,
+        "gtin": null,
+        "sku": null,
+        "lot": null
+      },
+      "product_terms": [
+        "3d",
+        "printing",
+        "filament",
+        "fdm",
+        "printer",
+        "fire",
+        "engine",
+        "red"
+      ],
+      "other_codes": [
+        {
+          "value": "X00444MZE3",
+          "kind": "FNSKU"
+        }
+      ],
+      "ground_truth_notes": [
+        "Material, diameter, weight, and temperatures are not readable in the truncated marketplace title and remain absent even if catalog sources supply them.",
+        "Code 128 payload independently decoded with ZXing 3.5.4 from the original fixture."
+      ],
+      "source_sha256": "de1316cf0cdc18b07b3d09c401d96ca45660f4fcd471cd1967c9226d91c9e312"
+    },
+    {
+      "id": "flashforge-pla-city-hide-layer-line",
+      "image": "fixtures/flashforge-pla-city-hide-layer-line.png",
+      "expected": {
+        "label_brand": "FLASHFORGE",
+        "manufacturer": null,
+        "material": "PLA",
+        "color": null,
+        "diameter_mm": null,
+        "net_weight_g": null,
+        "nozzle_min_c": null,
+        "nozzle_max_c": null,
+        "bed_min_c": null,
+        "bed_max_c": null,
+        "gtin": null,
+        "sku": null,
+        "lot": null
+      },
+      "product_terms": [
+        "pla",
+        "filament",
+        "city",
+        "hide",
+        "layer",
+        "line"
+      ],
+      "other_codes": [
+        {
+          "value": "X0037RJ695",
+          "kind": "FNSKU"
+        }
+      ],
+      "ground_truth_notes": [
+        "City Hide The Layer Line is visible as title text but is not explicitly labeled as a color.",
+        "Code 128 payload independently decoded with ZXing 3.5.4 from the original fixture."
+      ],
+      "source_sha256": "3936c12e4ded5289e37dca732a11baacc11304fe069f7276cbc675d037023d33"
+    }
+  ],
+  "runs": [
+    {
+      "case": "panchroma-starlight-purple-red",
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "result": "panchroma-terra-v2-smoke.json",
+      "legacy_result_format": true
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "provider": "xai",
+      "model": "grok-4.6",
+      "result": "panchroma-grok-4.6-v2-smoke.json",
+      "legacy_result_format": true
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "result": "panchroma-gemini-3.8-flash-v2-smoke.json",
+      "legacy_result_format": true
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "result": "panchroma-sol-v2-smoke.json",
+      "legacy_result_format": true
+    },
+    {
+      "case": "panchroma-starlight-purple-red",
+      "provider": "claude",
+      "model": "claude-sonnet-5",
+      "result": "panchroma-claude-sonnet-5-v2-smoke.json",
+      "legacy_result_format": true
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "result": "results/gizmo-dorks-hips-white--gpt-5.6-terra.json"
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "provider": "xai",
+      "model": "grok-4.6",
+      "result": "results/gizmo-dorks-hips-white--grok-4.6.json"
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "result": "results/gizmo-dorks-hips-white--gemini-3.8-flash.json"
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "result": "results/gizmo-dorks-hips-white--gpt-5.6-sol.json"
+    },
+    {
+      "case": "gizmo-dorks-hips-white",
+      "provider": "claude",
+      "model": "claude-sonnet-5",
+      "result": "results/gizmo-dorks-hips-white--claude-sonnet-5.json"
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "result": "results/kingroon-petg-basic-gray--gpt-5.6-terra.json"
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "provider": "xai",
+      "model": "grok-4.6",
+      "result": "results/kingroon-petg-basic-gray--grok-4.6.json"
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "result": "results/kingroon-petg-basic-gray--gpt-5.6-sol.json"
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "result": "results/anycubic-pla-magenta--gpt-5.6-terra.json"
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "result": "results/anycubic-pla-magenta--gpt-5.6-sol.json"
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "result": "results/3dhojor-fire-engine-red--gpt-5.6-terra.json"
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "result": "results/3dhojor-fire-engine-red--gpt-5.6-sol.json"
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "provider": "openai",
+      "model": "gpt-5.6-terra",
+      "result": "results/flashforge-pla-city-hide-layer-line--gpt-5.6-terra.json"
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "result": "results/flashforge-pla-city-hide-layer-line--gpt-5.6-sol.json"
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "provider": "xai",
+      "model": "grok-4.6",
+      "result": "results/anycubic-pla-magenta--grok-4.6.json"
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "provider": "xai",
+      "model": "grok-4.6",
+      "result": "results/3dhojor-fire-engine-red--grok-4.6.json"
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "provider": "xai",
+      "model": "grok-4.6",
+      "result": "results/flashforge-pla-city-hide-layer-line--grok-4.6.json"
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "provider": "claude",
+      "model": "claude-sonnet-5",
+      "result": "results/kingroon-petg-basic-gray--claude-sonnet-5.json"
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "provider": "claude",
+      "model": "claude-sonnet-5",
+      "result": "results/anycubic-pla-magenta--claude-sonnet-5.json"
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "provider": "claude",
+      "model": "claude-sonnet-5",
+      "result": "results/3dhojor-fire-engine-red--claude-sonnet-5.json"
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "provider": "claude",
+      "model": "claude-sonnet-5",
+      "result": "results/flashforge-pla-city-hide-layer-line--claude-sonnet-5.json"
+    },
+    {
+      "case": "kingroon-petg-basic-gray",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "result": "results/kingroon-petg-basic-gray--gemini-3.8-flash.json"
+    },
+    {
+      "case": "anycubic-pla-magenta",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "result": "results/anycubic-pla-magenta--gemini-3.8-flash.json"
+    },
+    {
+      "case": "3dhojor-fire-engine-red",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "result": "results/3dhojor-fire-engine-red--gemini-3.8-flash.json"
+    },
+    {
+      "case": "flashforge-pla-city-hide-layer-line",
+      "provider": "gemini",
+      "model": "gemini-3.8-flash",
+      "result": "results/flashforge-pla-city-hide-layer-line--gemini-3.8-flash.json"
+    }
+  ],
+  "candidates": [
+    {
+      "provider": "openai",
+      "model": "gpt-5.6-terra"
+    },
+    {
+      "provider": "xai",
+      "model": "grok-4.6"
+    },
+    {
+      "provider": "gemini",
+      "model": "gemini-3.8-flash"
+    },
+    {
+      "provider": "openai",
+      "model": "gpt-5.6-sol"
+    },
+    {
+      "provider": "claude",
+      "model": "claude-sonnet-5"
+    }
+  ]
+}

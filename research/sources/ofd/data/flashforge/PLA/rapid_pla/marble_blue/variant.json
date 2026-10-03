@@ -1,0 +1,10 @@
+{
+  "uuid": "4c6c9115-3abb-4647-8411-f1effe25bf46",
+  "id": "marble_blue",
+  "name": "Marble Blue",
+  "color_hex": "#BFDFEF",
+  "traits": {
+    "imitates_marble": true,
+    "industrially_compostable": true
+  }
+}

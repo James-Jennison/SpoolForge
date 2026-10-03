@@ -1,0 +1,22 @@
+{
+  "finding_id": "spoolio-m1-r2-storage-deepseek-4",
+  "change_id": "spoolio-m1-20260906",
+  "cycle_id": "review-cycle-8b02c7b33686",
+  "reviewer": "deepseek",
+  "severity": "LOW",
+  "category": "Legacy Recent Hydration",
+  "summary": "Legacy recent recovery depends on a matching catalog entry and same-generation revision; recents referencing removed/replaced catalog entries are silently dropped, and no test covers successful hydration.",
+  "claim": "Legacy catalog recents may disappear after catalog replacement/removal, contradicting recovery intent; testing gap leaves hydration unverified.",
+  "evidence": {
+    "source": "restoreLegacyRecent returns null if byId(id) returns null or revision mismatch; StorageAcceptanceTest only tests decodeSnapshot rejection and DB preservation, not actual hydration output.",
+    "response_sha256": "519f846ac62aa678c54f2ef894a01beb502b004b570b5debb037f921542ece99"
+  },
+  "affected_components": [
+    "app",
+    "core",
+    "catalog-tool"
+  ],
+  "suggested_remediation": "Either preserve legacy recents as self-contained snapshots (including original values) or document/accept loss; add test that hydrates a legacy recent with matching catalog entry and verifies full item.",
+  "suggested_validation": "Create legacy DB with recent for known package, run init, assert recent appears with all fields and provenance.",
+  "reviewer_confidence": "MEDIUM"
+}

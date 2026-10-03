@@ -1,0 +1,24 @@
+[
+  {
+    "uuid": "cee1a31c-cd9a-4154-9740-20dd6a0e649c",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "crealitystore",
+        "url": "https://store.creality.com/products/hyper-pla-rfid-3d-printing-filament-1kg"
+      }
+    ]
+  },
+  {
+    "uuid": "532c5872-95d0-41ab-9b0c-6cafb6dfb537",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "crealitystore",
+        "url": "https://store.creality.com/products/hyper-series-pla-3d-printing-filament-1kg"
+      }
+    ]
+  }
+]

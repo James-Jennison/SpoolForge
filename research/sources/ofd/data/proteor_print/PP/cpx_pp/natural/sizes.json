@@ -1,0 +1,15 @@
+[
+  {
+    "uuid": "0ba4d66a-e614-4bee-b6f9-3786b3052cc5",
+    "filament_weight": 4310,
+    "diameter": 2.85,
+    "empty_spool_weight": 810,
+    "spool_core_diameter": 50,
+    "purchase_links": [
+      {
+        "store_id": "proteorprint",
+        "url": "https://www.proteordigital.com/product-page/cpx-pp"
+      }
+    ]
+  }
+]

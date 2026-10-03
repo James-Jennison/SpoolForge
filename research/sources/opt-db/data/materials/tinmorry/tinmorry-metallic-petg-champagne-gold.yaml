@@ -1,0 +1,11 @@
+uuid: 2c30e6bf-0cd3-5642-a5fd-2458790a7356
+slug: tinmorry-metallic-petg-champagne-gold
+brand:
+  slug: tinmorry
+name: Metallic PETG Champagne Gold
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#8d754aff'
+properties: {}

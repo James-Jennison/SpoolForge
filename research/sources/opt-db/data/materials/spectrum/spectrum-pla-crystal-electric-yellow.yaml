@@ -1,0 +1,20 @@
+uuid: 424d26c4-6fd7-51f9-adf5-057cf90a15e9
+slug: spectrum-pla-crystal-electric-yellow
+brand:
+  slug: spectrum
+name: PLA Crystal Electric Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fbf942ff'
+tags:
+- translucent
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-crystal-electric-yellow/spectrum-pla-crystal-electric-yellow-0-acbd04cc.jpg
+  type: unspecified

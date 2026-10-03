@@ -1,0 +1,23 @@
+uuid: 6b636d3d-9eda-531e-9b1d-be4d8acf91e1
+slug: bambulab-petg-hf-lake-blue
+brand:
+  slug: bambulab
+name: PETG HF Lake Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#1f79e5ff'
+tags:
+  - high_speed
+photos:
+  - url: https://files.openprinttag.org/bambulab/bambulab-petg-hf-lake-blue/38b6db6fa8af.png
+    type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 230
+  max_print_temperature: 260
+  min_bed_temperature: 65
+  max_bed_temperature: 75
+  min_chamber_temperature: 35
+  max_chamber_temperature: 50

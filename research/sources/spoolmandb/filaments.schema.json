@@ -1,0 +1,347 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "manufacturer",
+        "filaments"
+    ],
+    "properties": {
+        "manufacturer": {
+            "type": "string"
+        },
+        "filaments": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                    "name",
+                    "density",
+                    "material",
+                    "weights",
+                    "diameters",
+                    "colors"
+                ],
+                "properties": {
+                    "name": {
+                        "$comment": "Name of the filament, typically contains {color_name} but not strictly enforced",
+                        "type": "string"
+                    },
+                    "material": {
+                        "$comment": "Valid materials must be alphanumeric letters and numbers (case-insensitive), optionally separated by +, -, /, or _. Optionally includes filler, hardness, or variant suffixes. Examples: ABS, BioWOOD, rPLA, ePLA-ST, ABS-CF15, PC+ABS, TPU-95A, PC/PBT.",
+                        "type": "string",
+                        "pattern": "^[a-zA-Z0-9]+([+/\\-_][a-zA-Z0-9]+)*\\+?$"
+                    },
+                    "density": {
+                        "type": "number",
+                        "exclusiveMinimum": 0
+                    },
+                    "weights": {
+                        "type": "array",
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "required": [
+                                "weight"
+                            ],
+                            "properties": {
+                                "weight": {
+                                    "type": "number",
+                                    "minimum": 0
+                                },
+                                "spool_weight": {
+                                    "type": "number",
+                                    "minimum": 0
+                                },
+                                "spool_type": {
+                                    "$comment": "Material of the physical spool. 'refill' and 'unknow' are legacy source sentinels retained for compatibility; use is_refill for new refill data.",
+                                    "enum": [
+                                        null,
+                                        "plastic",
+                                        "cardboard",
+                                        "metal",
+                                        "refill",
+                                        "unknow"
+                                    ]
+                                },
+                                "is_refill": {
+                                    "$comment": "True when the product is supplied without a spool. Preferred over the legacy spool_type value 'refill'.",
+                                    "type": "boolean"
+                                },
+                                "legacy_id_spool_type": {
+                                    "$comment": "Source-only field to preserve historical generated variant IDs when updating real spool_type metadata. Never emitted in compiled output.",
+                                    "enum": [
+                                        null,
+                                        "plastic",
+                                        "cardboard",
+                                        "metal",
+                                        "refill",
+                                        "unknow"
+                                    ]
+                                }
+                            },
+                            "allOf": [
+                                {
+                                    "if": {
+                                        "properties": {
+                                            "is_refill": {
+                                                "const": true
+                                            }
+                                        },
+                                        "required": [
+                                            "is_refill"
+                                        ]
+                                    },
+                                    "then": {
+                                        "properties": {
+                                            "spool_type": {
+                                                "enum": [
+                                                    null,
+                                                    "refill"
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "if": {
+                                        "properties": {
+                                            "spool_type": {
+                                                "const": "refill"
+                                            }
+                                        },
+                                        "required": [
+                                            "spool_type"
+                                        ]
+                                    },
+                                    "then": {
+                                        "properties": {
+                                            "is_refill": {
+                                                "const": true
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "diameters": {
+                        "type": "array",
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                        }
+                    },
+                    "extruder_temp": {
+                        "type": "integer"
+                    },
+                    "extruder_temp_range": {
+                        "$comment": "Temperature range for the extruder in degrees Celsius.",
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                            "type": "integer"
+                        }
+                    },
+                    "bed_temp": {
+                        "type": "integer"
+                    },
+                    "bed_temp_range": {
+                        "$comment": "Temperature range for the bed in degrees Celsius.",
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                            "type": "integer"
+                        }
+                    },
+                    "fill": {
+                        "$comment": "Type of fill material.",
+                        "enum": [
+                            null,
+                            "glass fiber",
+                            "carbon fiber",
+                            "wood"
+                        ]
+                    },
+                    "finish": {
+                        "$comment": "Surface finish. Don't set if it's not explicitly stated by the manufacturer.",
+                        "enum": [
+                            null,
+                            "matte",
+                            "glossy"
+                        ]
+                    },
+                    "multi_color_direction": {
+                        "$comment": "Coaxial = the color changes depending on print direction, longitudinal = the color changes along the duration of the print.",
+                        "enum": [
+                            null,
+                            "coaxial",
+                            "longitudinal"
+                        ]
+                    },
+                    "pattern": {
+                        "$comment": "Surface details",
+                        "enum": [
+                            null,
+                            "marble",
+                            "sparkle"
+                        ]
+                    },
+                    "translucent": {
+                        "$comment": "True if the filament is at least partly see-through",
+                        "type": "boolean"
+                    },
+                    "glow": {
+                        "$comment": "True if the filament has a glow-in-the-dark effect",
+                        "type": "boolean"
+                    },
+                    "colors": {
+                        "type": "array",
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "oneOf": [
+                                {
+                                    "required": [
+                                        "name",
+                                        "hex"
+                                    ]
+                                },
+                                {
+                                    "required": [
+                                        "name",
+                                        "hexes"
+                                    ]
+                                }
+                            ],
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "display_name": {
+                                    "$comment": "Optional full compiled filament name when combining the product template and official color name would be redundant. Does not alter the historical public ID input.",
+                                    "type": "string",
+                                    "minLength": 1
+                                },
+                                "hex": {
+                                    "$comment": "For a single-color filament.",
+                                    "type": "string",
+                                    "pattern": "^[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$"
+                                },
+                                "hexes": {
+                                    "$comment": "For a multi-color filament.",
+                                    "type": "array",
+                                    "minItems": 2,
+                                    "uniqueItems": true,
+                                    "items": {
+                                        "type": "string",
+                                        "pattern": "^[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$"
+                                    }
+                                },
+                                "fill": {
+                                    "$comment": "Type of fill material of this color.",
+                                    "enum": [
+                                        null,
+                                        "glass fiber",
+                                        "carbon fiber",
+                                        "wood"
+                                    ]
+                                },
+                                "finish": {
+                                    "$comment": "Surface finish of this color. Don't set if it's not explicitly stated by the manufacturer.",
+                                    "enum": [
+                                        null,
+                                        "matte",
+                                        "glossy"
+                                    ]
+                                },
+                                "multi_color_direction": {
+                                    "$comment": "Coaxial = the color changes depending on print direction, longitudinal = the color changes along the duration of the print.",
+                                    "enum": [
+                                        null,
+                                        "coaxial",
+                                        "longitudinal"
+                                    ]
+                                },
+                                "pattern": {
+                                    "$comment": "Surface details of this color",
+                                    "enum": [
+                                        null,
+                                        "marble",
+                                        "sparkle"
+                                    ]
+                                },
+                                "translucent": {
+                                    "$comment": "True if this color is at least partly see-through",
+                                    "type": "boolean"
+                                },
+                                "glow": {
+                                    "$comment": "True if this color has a glow-in-the-dark effect",
+                                    "type": "boolean"
+                                },
+                                "codes": {
+                                    "$comment": "Manufacturer product codes, SKUs, or platform variant IDs for this color variant.",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "minLength": 1
+                                    },
+                                    "uniqueItems": true,
+                                    "minItems": 1
+                                },
+                                "eans": {
+                                    "$comment": "EAN/GTIN barcodes for the spooled version of this color.",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "pattern": "^[0-9]{8,14}$"
+                                    },
+                                    "uniqueItems": true,
+                                    "minItems": 1
+                                },
+                                "eans_refill": {
+                                    "$comment": "EAN/GTIN barcodes for the refill version of this color.",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "pattern": "^[0-9]{8,14}$"
+                                    },
+                                    "uniqueItems": true,
+                                    "minItems": 1
+                                }
+                            }
+                        }
+                    },
+                    "country_of_origin": {
+                        "$comment": "ISO 3166-1 alpha-2 manufacturing country code only (e.g. US, CN, DE). Full names and non-ISO strings are rejected.",
+                        "type": "string",
+                        "pattern": "^[A-Z]{2}$",
+                        "minLength": 2,
+                        "maxLength": 2
+                    },
+                    "sds_url": {
+                        "$comment": "Link to the Safety Data Sheet (SDS).",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "tds_url": {
+                        "$comment": "Link to the Technical Data Sheet (TDS).",
+                        "type": "string",
+                        "format": "uri"
+                    }
+                }
+            }
+        }
+    }
+}
+

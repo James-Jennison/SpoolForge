@@ -1,0 +1,23 @@
+uuid: 4eac6696-4daa-5851-9742-70377295fc59
+slug: sunlu-pla-olive-green
+brand:
+  slug: sunlu
+name: PLA Olive Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#4e7642ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/sunlu/sunlu-pla-olive-green/39ecae231300.jpg
+  type: unspecified
+properties:
+  density: 1.23
+  hardness_shore_d: 80
+  min_print_temperature: 190
+  max_print_temperature: 260
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50

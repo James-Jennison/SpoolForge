@@ -1,0 +1,107 @@
+{
+  "provider": "openai",
+  "model": "gpt-5.6-terra",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 2959,
+    "input_tokens_details": {
+      "cache_write_tokens": 2956,
+      "cached_tokens": 0
+    },
+    "output_tokens": 445,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 3404
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "FLASHFORGE",
+      "confidence": 0.99,
+      "evidence": "Sticker text reads \u201cFLASHFORGE PLA Filament\u201d.",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": null,
+      "confidence": 0.84,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "product": {
+      "value": "PLA Filament: City Hide The Layer Line",
+      "confidence": 0.98,
+      "evidence": "Printed on sticker: \u201cFLASHFORGE PLA Filament: City Hide The Layer Line\u201d.",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PLA",
+      "confidence": 0.99,
+      "evidence": "Printed on sticker: \u201cFLASHFORGE PLA Filament\u201d.",
+      "basis": "printed"
+    },
+    "color": {
+      "value": null,
+      "confidence": 0.88,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "diameter_mm": {
+      "value": null,
+      "confidence": 0.93,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "net_weight_g": {
+      "value": null,
+      "confidence": 0.93,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.8,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "sku": {
+      "value": "X0037RJ695",
+      "confidence": 0.96,
+      "evidence": "Alphanumeric code printed beneath the barcode: X0037RJ695.",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 0.91,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [],
+    "needs_user_review": [
+      "The barcode is visible, but no human-readable GTIN digits are printed; the encoded barcode value cannot be verified from the image alone."
+    ]
+  }
+}

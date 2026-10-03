@@ -1,0 +1,23 @@
+uuid: 2be65939-86ec-5810-bdec-7a1b8655787b
+slug: polymaker-panchroma-luminous-pla-green
+brand:
+  slug: polymaker
+name: Panchroma™ Luminous PLA Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#bfeb8cff'
+tags:
+  - glow_in_the_dark
+  - abrasive
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-luminous-pla-green/53e4fde8adbd.png
+    type: unspecified
+properties:
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

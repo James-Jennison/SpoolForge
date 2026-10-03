@@ -1,0 +1,16 @@
+uuid: e39f7a3d-3fd5-5fe8-8fd5-db5d29cf29c2
+slug: prusament-resin-model-anthracite-grey
+brand:
+  slug: prusament-resin
+name: Model Anthracite Grey
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#808080ff'
+properties:
+  density: 1.11
+  cure_wavelength: 405
+  viscosity_18c: 287
+  viscosity_25c: 167
+  viscosity_40c: 66
+  viscosity_60c: 1

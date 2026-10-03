@@ -1,0 +1,18 @@
+{
+  "ofd-api-index.json": {
+    "url": "https://api.openfilamentdatabase.org/api/v1/index.json",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  "ofd-manifest.json": {
+    "url": "https://api.openfilamentdatabase.org/manifest.json",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  "ofd-all.json.gz": {
+    "url": "https://api.openfilamentdatabase.org/json/all.json.gz",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  "ofd-filaments.db.xz": {
+    "url": "https://api.openfilamentdatabase.org/sqlite/filaments.db.xz",
+    "error": "HTTP Error 403: Forbidden"
+  }
+}

@@ -1,0 +1,25 @@
+uuid: fe31ad73-d8bf-523c-bbf1-ec5ce2624cfb
+slug: amolen-pla-silk-basic-bronze-green
+brand:
+  slug: amolen
+name: PLA Silk Basic Bronze Green
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://www.amolen.com/products/pla-silk-basic
+primary_color:
+  color_rgba: '#99a45fff'
+tags:
+- silk
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-silk-basic-bronze-green/PLA_Silk_Basic_green-2.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

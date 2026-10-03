@@ -1,0 +1,11 @@
+uuid: b4c449e2-8142-5b95-8101-7399bdb575cb
+slug: print-with-smile-asa-black-volkano
+brand:
+  slug: print-with-smile
+name: ASA BLACK Volkano
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#000000ff'
+properties: {}

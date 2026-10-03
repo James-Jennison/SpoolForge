@@ -1,0 +1,11 @@
+uuid: 4d3753e0-817e-5e25-af4c-339d27f279fe
+slug: print-with-smile-pet-g-anthracite
+brand:
+  slug: print-with-smile
+name: PET-G Anthracite
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#3f4647ff'
+properties: {}

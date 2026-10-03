@@ -1,0 +1,20 @@
+uuid: 4c3b6b62-fc54-5d56-9a29-4ad03b46dbb3
+slug: spectrum-pla-crystal-neon-green
+brand:
+  slug: spectrum
+name: PLA Crystal Neon Green
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#70fa00ff'
+tags:
+- translucent
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-crystal-neon-green/spectrum-pla-crystal-neon-green-0-097784c5.jpg
+  type: unspecified

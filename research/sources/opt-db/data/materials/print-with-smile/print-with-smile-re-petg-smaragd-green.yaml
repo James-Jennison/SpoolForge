@@ -1,0 +1,13 @@
+uuid: 23508760-aec5-5320-823a-f50b8ef69332
+slug: print-with-smile-re-petg-smaragd-green
+brand:
+  slug: print-with-smile
+name: RE-PETG Smaragd GREEN
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#089a45ff'
+tags:
+- recycled
+properties: {}

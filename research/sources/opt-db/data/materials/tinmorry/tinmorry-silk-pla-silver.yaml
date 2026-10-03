@@ -1,0 +1,14 @@
+uuid: 7aff4e53-5b45-5672-b527-20f34a523f5c
+slug: tinmorry-silk-pla-silver
+brand:
+  slug: tinmorry
+name: Silk PLA Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#aabccfff'
+tags:
+- silk
+- industrially_compostable
+properties: {}

@@ -1,0 +1,13 @@
+uuid: a35a53b8-5b6e-5b01-bc83-025672e363c4
+slug: tinmorry-petg-marble-magic-purple
+brand:
+  slug: tinmorry
+name: PETG Marble Magic Purple
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#dad4dcff'
+tags:
+- imitates_marble
+properties: {}

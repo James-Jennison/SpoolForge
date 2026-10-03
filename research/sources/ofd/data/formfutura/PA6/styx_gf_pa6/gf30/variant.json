@@ -1,0 +1,11 @@
+{
+  "uuid": "29748984-feca-448e-94d1-0463d927c004",
+  "id": "gf30",
+  "name": "Black",
+  "color_hex": "#000000",
+  "discontinued": false,
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

@@ -1,0 +1,15 @@
+uuid: ced15e34-6b6a-5bc8-b033-38fc86de8566
+slug: raise3d-premium-pc-white-rfid
+brand:
+  slug: raise3d
+name: Premium PC White - RFID
+class: FFF
+type: PC
+abbreviation: PC
+primary_color:
+  color_rgba: '#ffffffff'
+properties:
+  density: 1.19
+photos:
+- url: https://files.openprinttag.org/raise3d/raise3d-premium-pc-white-rfid/raise3d-premium-pc-white-rfid-0-39a52997.jpg
+  type: unspecified

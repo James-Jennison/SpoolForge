@@ -1,0 +1,18 @@
+uuid: b46ee6bf-50d6-5ff2-8d39-855213ace5cc
+slug: liqcreate-flame-retardant-hdt
+brand:
+  slug: liqcreate
+name: Flame Retardant HDT
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#d6d7d8ff'
+tags:
+- self_extinguishing
+properties:
+  density: 1.12
+  cure_wavelength: 405
+  viscosity_18c: 1389
+  viscosity_25c: 630
+  viscosity_40c: 165
+  viscosity_60c: 49

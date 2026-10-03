@@ -1,0 +1,18 @@
+uuid: 5bf35e79-e957-587d-9ad7-7024365c379f
+slug: qidi-tpu-aero-white
+brand:
+  slug: qidi
+name: TPU-Aero White
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+- foaming
+- matte
+properties:
+  density: 0.74
+photos:
+- url: https://files.openprinttag.org/qidi/qidi-tpu-aero-white/qidi-tpu-aero-white-0-4ea7d277.jpg
+  type: unspecified

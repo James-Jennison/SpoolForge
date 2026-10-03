@@ -1,0 +1,11 @@
+{
+  "uuid": "2963dc6b-11f6-4367-a41d-885ee9e93e84",
+  "id": "polysonic_pla",
+  "name": "Polysonic PLA",
+  "diameter_tolerance": 0.02,
+  "density": 1.24,
+  "min_print_temperature": 190,
+  "max_print_temperature": 230,
+  "min_bed_temperature": 50,
+  "max_bed_temperature": 70
+}

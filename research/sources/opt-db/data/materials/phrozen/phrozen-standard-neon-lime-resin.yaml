@@ -1,0 +1,12 @@
+uuid: 915b10f4-18d2-5dcb-8228-33437cc965b4
+slug: phrozen-standard-neon-lime-resin
+brand:
+  slug: phrozen
+name: Standard Neon-Lime Resin
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#00cc00ff'
+tags:
+- neon
+properties: {}

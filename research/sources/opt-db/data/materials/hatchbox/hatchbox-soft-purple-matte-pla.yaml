@@ -1,0 +1,17 @@
+uuid: faecc81e-61a0-59b7-9023-93a2387568c7
+slug: hatchbox-soft-purple-matte-pla
+brand:
+  slug: hatchbox
+name: Soft Purple Matte PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#a38496ff'
+tags:
+- matte
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-soft-purple-matte-pla/b1dcfd8df712.jpg
+  type: unspecified
+properties: {}

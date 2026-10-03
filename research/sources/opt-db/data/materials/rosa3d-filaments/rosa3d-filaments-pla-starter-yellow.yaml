@@ -1,0 +1,13 @@
+uuid: 84965c22-47d2-580d-abe5-7d8e395bac5e
+slug: rosa3d-filaments-pla-starter-yellow
+brand:
+  slug: rosa3d-filaments
+name: PLA Starter Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#f2de00ff'
+tags:
+- industrially_compostable
+properties: {}

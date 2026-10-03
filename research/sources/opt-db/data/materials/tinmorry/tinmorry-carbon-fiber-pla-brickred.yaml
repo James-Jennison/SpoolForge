@@ -1,0 +1,14 @@
+uuid: 8a728e1d-5cf8-5154-9acd-41b512e3d9bf
+slug: tinmorry-carbon-fiber-pla-brickred
+brand:
+  slug: tinmorry
+name: Carbon Fiber PLA BrickRed
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#9f563eff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+properties: {}

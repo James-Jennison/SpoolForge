@@ -1,0 +1,9 @@
+{
+  "uuid": "2a913b63-9d00-4119-be05-90f27d19207b",
+  "id": "pc_natural",
+  "name": "PC/ Natural",
+  "color_hex": "#DFDFD3",
+  "traits": {
+    "filtration_recommended": true
+  }
+}

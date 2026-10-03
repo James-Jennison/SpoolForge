@@ -1,0 +1,7 @@
+{
+  "finding_id": "filamajig-closure-deepseek-2",
+  "disposition": "CONFIRMED",
+  "reason": "Generated end-to-end decoder tests now cover EAN-8, UPC-A, UPC-E, ITF-14, GS1-128 and non-GS1 Code128 rejection in addition to existing EAN-13 and QR cases.",
+  "evidence_reference": "app/src/test/kotlin/net/jamesjennison/filamajignfc/BarcodeCameraTest.kt; work/package-migration/final-remediation-build.log",
+  "resolved": true
+}

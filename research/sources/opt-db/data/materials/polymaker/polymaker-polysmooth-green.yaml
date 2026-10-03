@@ -1,0 +1,23 @@
+uuid: 1727ce9e-5846-5c2f-93c7-01cfe6758bef
+slug: polymaker-polysmooth-green
+brand:
+  slug: polymaker
+name: PolySmooth™ Green
+class: FFF
+type: PVB
+abbreviation: PVB
+primary_color:
+  color_rgba: '#4ca743ff'
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-polysmooth-green/6b7fe71dd26f.png
+    type: unspecified
+properties:
+  density: 1.1
+  min_print_temperature: 190
+  max_print_temperature: 220
+  min_bed_temperature: 25
+  max_bed_temperature: 70
+  drying_temperature: 50
+  drying_time: 720
+tags:
+  - ipa_soluble

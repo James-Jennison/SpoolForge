@@ -1,0 +1,14 @@
+{
+  "uuid": "1886f110-4b07-464b-bd05-c50ee89c21b0",
+  "id": "dark_purpleyellow",
+  "name": "Dark Purple/Yellow",
+  "color_hex": [
+    "#7142A3",
+    "#EEEA44"
+  ],
+  "traits": {
+    "matte": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

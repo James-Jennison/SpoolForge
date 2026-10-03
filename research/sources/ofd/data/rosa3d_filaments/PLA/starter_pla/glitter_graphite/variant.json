@@ -1,0 +1,9 @@
+{
+  "uuid": "a7288763-d1d4-4933-9f5e-738eb5b1eb65",
+  "id": "glitter_graphite",
+  "name": "Glitter Graphite",
+  "color_hex": "#3E413F",
+  "traits": {
+    "glitter": true
+  }
+}

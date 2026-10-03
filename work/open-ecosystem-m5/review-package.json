@@ -1,0 +1,114 @@
+{
+  "phase": "INITIAL_REVIEW",
+  "objective": "Validate M5 revision-pinned OpenTag3D/OpenPrintTag read-only conversion and Spoolman import/export/profile-sync implementation.",
+  "owner_requirements": [
+    "Read and convert OpenPrintTag and OpenTag3D before considering writes",
+    "Add Spoolman import/export/sync",
+    "Preserve provenance on every conversion",
+    "No printer control",
+    "Do not weaken existing OpenSpool/PAXX write safety or user data preservation"
+  ],
+  "change_summary": [
+    "Format registry and decoders",
+    "Android NFC routing and conversion UI",
+    "Official fixture plus malformed/future/unknown tests",
+    "Spoolman JSON review/import/share export",
+    "OkHttp server profile sync with create/update/failure tests",
+    "0.5.0-m5 device installation and preservation check"
+  ],
+  "architecture_decisions": [
+    "External tag adapters are read-only and return the complete raw payload plus warnings",
+    "OpenTag3D pinned to 2.000 revision d0f70689; newer major is read-only",
+    "OpenPrintTag pinned to 7e09cc38 with bounded CBOR, key 61 micrometres, legacy key 30 millimetres, and official fixture",
+    "Android reader enables NFC-A and NFC-V; NDEF may contain unrelated URI records but multiple filament MIME records are rejected",
+    "Spoolman imports official flattened exports and nested API responses; exports flattened shape",
+    "Live sync is profile-only and uses stable external IDs; physical spool creation is excluded because Spoolman has no spool external ID",
+    "Mutation transport loss is UNKNOWN and never automatically retried",
+    "Cleartext HTTP is enabled for local Spoolman prototypes and disclosed; no Spoolman credentials are handled"
+  ],
+  "upstream_contracts": {
+    "OpenTag3D": {
+      "url": "https://github.com/GooborgStudios/OpenTag3D",
+      "revision": "d0f706896e772663404edab8aa814633ba3c6543",
+      "version": "2.000"
+    },
+    "OpenPrintTag": {
+      "url": "https://github.com/OpenPrintTag/openprinttag-specification",
+      "revision": "7e09cc38df1c8e7824a67f5b1ae93071f52519ad"
+    },
+    "Spoolman": {
+      "url": "https://github.com/Donkie/Spoolman",
+      "revision": "81636f253ecd6ac76fcfe5d13fe2cbb417095823"
+    }
+  },
+  "objective_evidence": {
+    "schema_version": 1,
+    "milestone": "M5 open ecosystem adapters",
+    "app_version": "0.5.0-m5",
+    "device": {
+      "model": "motorola razr 2023",
+      "transport": "wireless-adb",
+      "android_api": 36
+    },
+    "host": {
+      "python_tests": 16,
+      "core_tests": 61,
+      "app_tests": 55,
+      "lint": "PASS",
+      "app_assemble": "PASS",
+      "test_apk_assemble": "PASS"
+    },
+    "device_tests": {
+      "tests": 6,
+      "failures": 0,
+      "duration_seconds": 11.559,
+      "external_adapter_test": "PASS"
+    },
+    "installed_apk_sha256": "d58f637c603935d4f7e10bfcee14f0fc63170edd26ed5a91d11533019daa0f75",
+    "test_apk_sha256": "4c1e2303da57e7db9d8625afe79c6392c05ef85b0dee321716a405fe9524df2c",
+    "data_preservation": {
+      "custom_records": "6 -> 6",
+      "filament_profiles": "6 -> 6",
+      "physical_spools": "6 -> 6",
+      "recents": "6 -> 6",
+      "tag_bindings": "1 -> 1"
+    },
+    "visible_ui": {
+      "home": "PASS",
+      "spoolman_import_dialog": "PASS"
+    },
+    "physical_external_tags": {
+      "OpenTag3D": "NOT RUN - no physical formatted tag supplied",
+      "OpenPrintTag": "NOT RUN - no physical NFC-V tag supplied"
+    },
+    "live_spoolman_server": "NOT RUN - no server URL supplied; mock transport create/update/failure tests pass",
+    "unrelated_state": "A user editor swap file beside .env.local was preserved and excluded."
+  },
+  "review_files": [
+    "work/open-ecosystem-m5/m5-review.diff",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/ExternalTagAdapters.kt",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/SpoolmanCodec.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/NfcCoordinator.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/SpoolmanSyncClient.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt",
+    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/ExternalTagAdaptersTest.kt",
+    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/SpoolmanCodecTest.kt",
+    "app/src/test/kotlin/net/jamesjennison/filamajignfc/SpoolmanSyncClientTest.kt",
+    "docs/OPEN_ECOSYSTEM_ADAPTERS.md"
+  ],
+  "known_limits": [
+    "No physical OpenTag3D or OpenPrintTag tag was available, so radio-path hardware acceptance remains open and documented",
+    "No live Spoolman server URL was supplied, so real server mutation was not run",
+    "External format write/verify is unsupported by design"
+  ],
+  "review_questions": [
+    "Are binary/CBOR semantics and future/unknown preservation correct?",
+    "Does NFC routing preserve existing write safety and actual Android NFC-A/NFC-V behavior?",
+    "Are Spoolman flattened export and API sync contracts correct at the pinned revision?",
+    "Can partial failures create duplicates or false success?",
+    "Are cleartext, UI, lifecycle, performance, accessibility, or provenance risks material?",
+    "Report normalized findings with severity, evidence, correction, acceptance test and confidence."
+  ],
+  "sanitization": "No credentials, environment values, user database contents, NFC UIDs, device serials, network addresses, photos, or account data are included."
+}

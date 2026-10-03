@@ -1,0 +1,120 @@
+{
+  "provider": "xai",
+  "model": "grok-4.6",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 4024,
+    "input_tokens_details": {
+      "cached_tokens": 2816
+    },
+    "output_tokens": 787,
+    "output_tokens_details": {
+      "reasoning_tokens": 292
+    },
+    "total_tokens": 4811,
+    "num_sources_used": 0,
+    "num_server_side_tools_used": 0,
+    "cost_in_usd_ticks": 85460000,
+    "context_details": {
+      "input_tokens": 4024,
+      "output_tokens": 787
+    }
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "FLASHFORGE",
+      "confidence": 0.95,
+      "evidence": "Printed on the white sticker as FLASHFORGE PLA Filament",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": "FLASHFORGE",
+      "confidence": 0.9,
+      "evidence": "FLASHFORGE printed on the white barcode sticker",
+      "basis": "printed"
+    },
+    "product": {
+      "value": "PLA Filament ... city Hide The Layer Line",
+      "confidence": 0.7,
+      "evidence": "Sticker text FLASHFORGE PLA Filament ... city Hide The Layer Line (middle of line truncated)",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PLA",
+      "confidence": 0.95,
+      "evidence": "PLA printed on the sticker next to Filament",
+      "basis": "printed"
+    },
+    "color": {
+      "value": null,
+      "confidence": 0.75,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "diameter_mm": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "net_weight_g": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 0.95,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 0.95,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 0.95,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 0.95,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.85,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "sku": {
+      "value": "X0037RJ695",
+      "confidence": 0.95,
+      "evidence": "Alphanumeric code printed beside the barcode on the white sticker",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [
+      {
+        "value": "X0037RJ695",
+        "kind": "marketplace_asin",
+        "evidence": "Printed next to the barcode; typical Amazon-style identifier"
+      }
+    ],
+    "needs_user_review": [
+      "product name truncated on sticker",
+      "barcode has no human-readable GTIN digits"
+    ]
+  }
+}

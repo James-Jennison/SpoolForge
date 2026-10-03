@@ -1,0 +1,20 @@
+uuid: abdfeba2-471d-5422-9506-a587e9a6d71b
+slug: filamentpm-silk-deep-blue
+brand:
+  slug: filamentpm
+name: SILK - Deep Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6093acff'
+tags:
+  - silk
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-silk-deep-blue/f5981798108c.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 210
+  max_print_temperature: 250
+  max_bed_temperature: 60

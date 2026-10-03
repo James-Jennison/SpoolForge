@@ -1,0 +1,11 @@
+{
+  "uuid": "5d7a8778-3d32-48a0-9fdf-f2b0f54e8b0b",
+  "id": "bronze_metallic",
+  "name": "Bronze Metallic",
+  "color_hex": "#A98C4B",
+  "traits": {
+    "silk": true,
+    "imitates_metal": true,
+    "industrially_compostable": true
+  }
+}

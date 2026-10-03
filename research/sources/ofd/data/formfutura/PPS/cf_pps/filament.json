@@ -1,0 +1,7 @@
+{
+  "uuid": "a5dc4213-5ec5-4c5c-8a86-2e79297688b8",
+  "id": "cf_pps",
+  "name": "PPS CF",
+  "diameter_tolerance": 0.02,
+  "density": 1.24
+}

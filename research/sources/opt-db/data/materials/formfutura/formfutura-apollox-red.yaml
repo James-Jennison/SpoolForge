@@ -1,0 +1,22 @@
+uuid: e854121b-e350-5bb0-b843-6de931a9f48c
+slug: formfutura-apollox-red
+brand:
+  slug: formfutura
+name: ApolloX Red
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#d33d3dff'
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-apollox-red/4f94dc4f1f2b.png
+    type: unspecified
+properties:
+  density: 1.11
+  min_print_temperature: 235
+  max_print_temperature: 255
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  chamber_temperature: 40
+tags:
+  - filtration_recommended

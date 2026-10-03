@@ -1,0 +1,8 @@
+{
+  "uuid": "ecccb671-cda3-4917-8761-923db3140ec0",
+  "id": "pla_wood",
+  "name": "PLA Wood",
+  "diameter_tolerance": 0.03,
+  "density": 1.21,
+  "max_dry_temperature": 50
+}

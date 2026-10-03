@@ -1,0 +1,12 @@
+uuid: 5ce9d289-b39c-526d-9cdf-43412d9777f4
+slug: tinmorry-tpu-95a-black
+brand:
+  slug: tinmorry
+name: TPU 95A Black
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#3e413fff'
+properties:
+  hardness_shore_a: 95

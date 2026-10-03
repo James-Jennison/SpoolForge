@@ -1,0 +1,14 @@
+uuid: 5071d9c3-cfce-553f-85bc-ec8364e850c7
+slug: sainsmart-epa12-cf-black
+brand:
+  slug: sainsmart
+name: ePA12-CF Black
+class: FFF
+type: PA12
+abbreviation: PA12
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- contains_carbon_fiber
+- abrasive
+properties: {}

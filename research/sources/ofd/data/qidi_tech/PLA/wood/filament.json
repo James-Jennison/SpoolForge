@@ -1,0 +1,11 @@
+{
+  "uuid": "8a25641a-6c46-4cdc-89cb-a4e165d079d0",
+  "id": "wood",
+  "name": "PLA Wood",
+  "diameter_tolerance": 0.02,
+  "density": 1.23,
+  "min_print_temperature": 190,
+  "max_print_temperature": 220,
+  "min_bed_temperature": 30,
+  "max_bed_temperature": 60
+}

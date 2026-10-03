@@ -1,0 +1,9 @@
+{
+  "uuid": "20606ae5-5a23-4f08-93a7-42860e17b02f",
+  "id": "pla_art_glowing",
+  "name": "PLA Art Glowing",
+  "diameter_tolerance": 0.03,
+  "density": 1.24,
+  "data_sheet_url": "https://api.nebulafilaments.com/wp-content/uploads/2025/02/TDS-PLA-GLOWING.pdf",
+  "safety_sheet_url": "https://api.nebulafilaments.com/wp-content/uploads/2025/02/Karta-charakterystyki-msds-PLA-GLOWING-Nebula.pdf"
+}

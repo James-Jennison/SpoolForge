@@ -1,0 +1,13 @@
+uuid: 231ed032-8a05-5b7d-8846-6d0757ce213f
+slug: overture-pla-metallic-gray
+brand:
+  slug: overture
+name: PLA Metallic Gray
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#7d8eaaff'
+tags:
+- industrially_compostable
+properties: {}

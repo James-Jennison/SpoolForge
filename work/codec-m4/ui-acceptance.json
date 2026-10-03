@@ -1,0 +1,12 @@
+{
+  "model": "motorola razr 2023",
+  "paxx_selected_label": "PAXX U1",
+  "paxx_target": "Snapmaker U1 v1.5.2-paxx12-21",
+  "paxx_example": {"payload_bytes": 207, "ndef_message_bytes": 226, "capacity_bytes": 492},
+  "standard_selected_label": "OpenSpool",
+  "standard_target": "OpenSpool 1.0 readers",
+  "standard_example": {"payload_bytes": 127, "ndef_message_bytes": 146, "capacity_bytes": 492},
+  "field_types_visible": true,
+  "omitted_fields_visible": true,
+  "write_button_visible": true
+}

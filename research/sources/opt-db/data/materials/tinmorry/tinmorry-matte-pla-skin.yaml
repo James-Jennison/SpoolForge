@@ -1,0 +1,14 @@
+uuid: 98f46f40-bdc4-5a7a-826d-ad04480bbee1
+slug: tinmorry-matte-pla-skin
+brand:
+  slug: tinmorry
+name: Matte PLA Skin
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ead7b8ff'
+tags:
+- matte
+- industrially_compostable
+properties: {}

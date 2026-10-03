@@ -1,0 +1,13 @@
+{
+  "uuid": "b006550e-d5fd-4797-87a9-9a7856bea8f1",
+  "id": "88a_glow_in_the_dark",
+  "name": "88A Glow In The Dark",
+  "color_hex": [
+    "#62E480",
+    "#F9F3E5"
+  ],
+  "traits": {
+    "glow": true,
+    "illuminescent_color_change": true
+  }
+}

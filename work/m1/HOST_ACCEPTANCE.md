@@ -1,0 +1,12 @@
+# M1 host acceptance checklist
+
+Approved target: Motorola Razr 2023 only, per Owner correction. Identify exact device/API when connected; do not use the2026 model. Do not touch other ADB devices. Install local Spoolio debug APK after exact package/artifact inspection; preserve unrelated applications/data. No account, network settings or printer/firmware modifications.
+
+1. Record APK digest, source manifest, version and package. Verify merged manifest lacks INTERNET and arbitrary exported receivers; verify shipped notices and catalog counts. Run protected unit/lint/build tasks.
+2. Install debug APK without clearing app data. On first launch inspect actual UI; exercise offline search for SUNLU ABS Orange, differentiate Sunny Orange and select correct1.75mm/1000g package, #FF8E24,230-260 nozzle90-110bed, absent barcode/tare. Capture only this app UI; do not capture lock screen or unrelated surfaces.
+3. Edit/create record, provenance labels and saved recents. Restart app process and verify values persist. Invalid input and unsupported-format read-only behavior need source/unit/runtime evidence as applicable. Stage/corrupt catalog scenarios on isolated test data, not deleting owner records.
+4. Real app-driven search performance: warm query p95 on device and actual catalog/storage figures. Upstream archive/compression arithmetic is not app performance.
+5. No NFC success before tag tap. Owner taps a writable NTAG215 when app ready. Inspect technology/capacity, choose explicit write; fresh read/decode/compare before Verified. Inspect ordinary rewrite, persistence after RF removal, interrupted write and read-only reconciliation; no blind retry or tag locking. Cannot fabricate this with mocks.
+6. Owner provides installed PAXX version, match source, verify same tag recognized by U1 and promised extensions only. No printer commands/firmware changes. Independent second reader/app must decode canonical OpenSpool. Phone and printer recognition are distinct outcomes.
+7. Submit sanitized exact-source initial review to Claude/Gemini/DeepSeek through host broker; preserve raw findings and separate Codex dispositions. Revalidate/review material remediation. Register proper engineering evidence profile and M1 change; do not reuse research READY to claim app readiness.
+8. Local readiness can be established before human hardware checks; M1 remains incomplete until all criteria pass. Keep exact human-only gate if tags/printer are not available after local work exhausted.

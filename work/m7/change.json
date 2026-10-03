@@ -1,0 +1,24 @@
+{
+  "change_id": "filamajig-full-spectrum-m7-20260908",
+  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "summary": "Add the owner-approved M7 evidence-based Full Spectrum characterization foundation without changing NFC or portable identity wire formats.",
+  "classification": "SUBSTANTIVE",
+  "affected_components": [
+    "android",
+    "room",
+    "persistence",
+    "domain",
+    "ui",
+    "migration",
+    "documentation"
+  ],
+  "required_capabilities": [
+    "architecture",
+    "platform",
+    "adversarial"
+  ],
+  "provenance": {
+    "branch": "codex/m1-offline-openspool",
+    "scope": "Local M7 Full Spectrum foundation only; excludes sets, recipes, automatic best-set scoring, private NFC fields, slicer generation, production, and release"
+  }
+}

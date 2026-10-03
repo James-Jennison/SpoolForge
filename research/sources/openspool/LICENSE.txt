@@ -1,0 +1,13 @@
+
+# Hardware
+
+See [./LICENSE-Hardware.txt](./LICENSE-Hardware.txt)
+
+# Software
+
+See [./LICENSE-Software.txt](./LICENSE-Software.txt)
+
+
+# Documentation
+
+See [./LICENSE-Documentation.txt](./LICENSE-Documentation.txt)

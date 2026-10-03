@@ -1,0 +1,14 @@
+uuid: 844b9d40-f381-5580-84d1-0316c5e1d84a
+slug: sainsmart-yellow-flexible-tpu
+brand:
+  slug: sainsmart
+name: Yellow, Flexible TPU
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#e4ff33ff'
+tags:
+- translucent
+properties:
+  hardness_shore_a: 90

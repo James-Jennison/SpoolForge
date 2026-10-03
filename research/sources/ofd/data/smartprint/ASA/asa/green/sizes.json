@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "d6389f35-3c1d-4ef1-b61a-d663ae48c5b4",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": false,
+    "empty_spool_weight": 180,
+    "spool_core_diameter": 75,
+    "gtin": "5903707922598",
+    "article_number": "FG-S137-E1",
+    "discontinued": false
+  }
+]

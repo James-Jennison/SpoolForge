@@ -1,0 +1,10 @@
+{
+  "uuid": "55621e0e-0ffd-4f6f-9805-ef11fd94c291",
+  "id": "carter_yellow",
+  "name": "Carter Yellow",
+  "color_hex": "#F8CC00",
+  "traits": {
+    "abrasive": true,
+    "contains_glass_fiber": true
+  }
+}

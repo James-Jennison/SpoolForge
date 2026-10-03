@@ -1,0 +1,21 @@
+uuid: 9d4cddf3-a0ec-5972-be1a-875faaf4b703
+slug: fiberlogy-pctg-white
+brand:
+  slug: fiberlogy
+name: PCTG White
+class: FFF
+type: PCTG
+abbreviation: PCTG
+primary_color:
+  color_rgba: '#ffffffff'
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-pctg-white/f35e5e315c54.png
+    type: unspecified
+properties:
+  density: 1.23
+  min_print_temperature: 250
+  max_print_temperature: 270
+  min_bed_temperature: 90
+  max_bed_temperature: 110
+  drying_temperature: 60
+  drying_time: 240

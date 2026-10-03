@@ -1,0 +1,17 @@
+uuid: fbaa4aa7-3874-5c9f-ba0c-837838b7015c
+slug: stronghero3d-pla-silk-gold
+brand:
+  slug: stronghero3d
+name: PLA Silk Gold
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#cba613ff'
+tags:
+- silk
+- industrially_compostable
+properties: {}
+photos:
+- url: https://files.openprinttag.org/stronghero3d/stronghero3d-pla-silk-gold/stronghero3d-pla-silk-gold-0-b5975b00.jpg
+  type: unspecified

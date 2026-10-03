@@ -1,0 +1,13 @@
+{
+  "uuid": "0704195a-f8c2-493f-95e9-a071ae7f8f1d",
+  "id": "anthracite",
+  "name": "Anthracite",
+  "color_hex": "#697272",
+  "color_standards": {
+    "ral": "7016"
+  },
+  "traits": {
+    "matte": true,
+    "industrially_compostable": true
+  }
+}

@@ -1,0 +1,18 @@
+uuid: bde1d6ea-3575-5dd3-a410-09533320c1e2
+slug: atomic-filament-rose-gold-metallic-translucent-pla
+brand:
+  slug: atomic-filament
+name: Rose Gold Metallic Translucent PLA
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://atomicfilament.com/products/rose-gold-metallic-translucent
+primary_color:
+  color_rgba: '#bf7473ff'
+tags:
+- industrially_compostable
+- translucent
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-rose-gold-metallic-translucent-pla/4b829c42de44.png
+  type: unspecified
+properties: {}

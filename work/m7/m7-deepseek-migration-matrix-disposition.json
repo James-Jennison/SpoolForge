@@ -1,0 +1,7 @@
+{
+  "finding_id": "m7-deepseek-migration-matrix",
+  "disposition": "CONFIRMED",
+  "resolved": true,
+  "reason": "Existing host tests cover chained v4-to-v6 migration, direct v5-to-v6, shared profiles, deletion, rollback retention, malformed values, conflicts, and foreign keys; the new exact-device test independently creates and migrates a v5 database.",
+  "evidence_reference": "StorageAcceptanceTest migration, shared-profile, deletion, and rollback tests plus DeviceFullSpectrumAcceptanceTest"
+}

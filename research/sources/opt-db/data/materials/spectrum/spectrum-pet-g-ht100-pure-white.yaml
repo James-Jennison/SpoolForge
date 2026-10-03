@@ -1,0 +1,21 @@
+uuid: d830a627-1806-56af-a865-3cb61f886cb2
+slug: spectrum-pet-g-ht100-pure-white
+brand:
+  slug: spectrum
+name: PET-G HT100™ Pure White
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#efefefff'
+tags:
+- high_temperature
+properties:
+  density: 1.18
+  min_print_temperature: 250
+  max_print_temperature: 280
+  min_bed_temperature: 100
+  max_bed_temperature: 110
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pet-g-ht100-pure-white/spectrum-pet-g-ht100-pure-white-0-9b2b44af.jpg
+  type: unspecified

@@ -1,0 +1,16 @@
+uuid: d245ff46-aa7f-5a1a-8aa1-ce5dd2c464b8
+slug: tectonic-3d-kratir-rpeek-cf-black
+brand:
+  slug: tectonic-3d
+name: KRATIR rPEEK CF Black
+class: FFF
+type: PEEK
+abbreviation: PEEK
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- recycled
+- contains_carbon_fiber
+- abrasive
+- low_outgassing
+properties: {}

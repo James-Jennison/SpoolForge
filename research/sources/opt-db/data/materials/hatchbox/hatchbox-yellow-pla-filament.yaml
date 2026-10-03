@@ -1,0 +1,21 @@
+uuid: 4a1210db-f7d1-579e-9407-48bafef7801e
+slug: hatchbox-yellow-pla-filament
+brand:
+  slug: hatchbox
+name: Yellow PLA Filament
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#fbe200ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/hatchbox/hatchbox-yellow-pla-filament/d5ef17edd41f.jpg
+  type: unspecified
+properties:
+  density: 1.27
+  min_print_temperature: 180
+  max_print_temperature: 210
+  min_bed_temperature: 50
+  max_bed_temperature: 60

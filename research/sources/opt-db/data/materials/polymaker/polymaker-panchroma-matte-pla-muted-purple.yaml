@@ -1,0 +1,24 @@
+uuid: f550a2c8-56c4-55e3-af13-c4ef8f7a2ec7
+slug: polymaker-panchroma-matte-pla-muted-purple
+brand:
+  slug: polymaker
+name: Panchroma™ Matte PLA Muted Purple
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#7c5c78ff'
+tags:
+  - matte
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-matte-pla-muted-purple/119c94ebecb3.png
+    type: unspecified
+transmission_distance: 0.6
+properties:
+  density: 1.37
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

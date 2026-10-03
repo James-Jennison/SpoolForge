@@ -1,0 +1,15 @@
+{
+  "uuid": "55f394ba-93da-4edd-9e6d-d9e7fd06f5de",
+  "id": "candy_gold_blue_green",
+  "name": "Candy Gold Blue Green",
+  "color_hex": [
+    "#F6C500",
+    "#41A840",
+    "#0353BA"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

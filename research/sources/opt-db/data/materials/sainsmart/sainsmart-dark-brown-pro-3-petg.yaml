@@ -1,0 +1,11 @@
+uuid: 23a68b1d-4977-5acc-adf8-d09998a9cb10
+slug: sainsmart-dark-brown-pro-3-petg
+brand:
+  slug: sainsmart
+name: Dark Brown PRO-3 PETG
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#7e4f4aff'
+properties: {}

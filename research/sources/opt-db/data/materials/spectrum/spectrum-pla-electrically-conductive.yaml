@@ -1,0 +1,21 @@
+uuid: 8a5ee7c6-a1ea-5d86-9203-240385ce5c1b
+slug: spectrum-pla-electrically-conductive
+brand:
+  slug: spectrum
+name: PLA Electrically Conductive
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#000000ff'
+tags:
+- conductive
+properties:
+  density: 1.35
+  min_print_temperature: 210
+  max_print_temperature: 230
+  min_bed_temperature: 40
+  max_bed_temperature: 50
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pla-electrically-conductive/spectrum-pla-electrically-conductive-0-a4b69ccb.jpg
+  type: unspecified

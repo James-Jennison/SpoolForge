@@ -1,0 +1,14 @@
+uuid: 0a2c12f3-8e6e-5136-93e0-c336bba5eeef
+slug: mexico-makers-pla-matte-verde-militar
+brand:
+  slug: mexico-makers
+name: PLA Matte - Verde Militar
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#7f9958ff'
+tags:
+  - matte
+  - industrially_compostable
+properties: {}

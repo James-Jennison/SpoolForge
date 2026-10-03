@@ -1,0 +1,10 @@
+{
+  "uuid": "019bfbcb-47b6-4d4c-b2e0-014947dc1edb",
+  "id": "black_carbon_fiber",
+  "name": "Black Carbon Fiber",
+  "color_hex": "#1D1D1D",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

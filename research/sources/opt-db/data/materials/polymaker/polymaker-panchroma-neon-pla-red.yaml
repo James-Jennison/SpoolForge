@@ -1,0 +1,22 @@
+uuid: 7a862684-d2aa-53c6-907a-c5800cd94c00
+slug: polymaker-panchroma-neon-pla-red
+brand:
+  slug: polymaker
+name: Panchroma™ Neon PLA Red
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#ff4f4dff'
+tags:
+  - neon
+photos:
+  - url: https://files.openprinttag.org/polymaker/polymaker-panchroma-neon-pla-red/63846cfb3a28.png
+    type: unspecified
+properties:
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 25
+  max_bed_temperature: 60
+  drying_temperature: 55
+  drying_time: 360

@@ -1,0 +1,13 @@
+uuid: dffde752-2807-5c90-aa85-05b38d775434
+slug: rosa3d-filaments-pet-g-standard-hs-burgundy-red
+brand:
+  slug: rosa3d-filaments
+name: PET-G Standard HS Burgundy Red
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#ac1a17ff'
+tags:
+- high_speed
+properties: {}

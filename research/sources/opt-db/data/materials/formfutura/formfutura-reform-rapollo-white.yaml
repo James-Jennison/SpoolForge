@@ -1,0 +1,23 @@
+uuid: 262cf72f-06f2-5806-ac74-c5bb36592c6a
+slug: formfutura-reform-rapollo-white
+brand:
+  slug: formfutura
+name: ReForm – rApollo White
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#ffffffff'
+tags:
+  - recycled
+  - filtration_recommended
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-reform-rapollo-white/e816ef414eab.png
+    type: unspecified
+properties:
+  min_print_temperature: 230
+  max_print_temperature: 270
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+  min_chamber_temperature: 25
+  max_chamber_temperature: 30

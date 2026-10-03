@@ -1,0 +1,80 @@
+[
+  {
+    "uuid": "0fa3786b-4d62-4c1e-be01-a17398faeab3",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5905991404019",
+    "article_number": "81334",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1910-Filament-Spectrum-ReFill-ASA-275-1-75mm-POLAR-WHITE-1kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "ff1cc560-2ec7-418e-8394-a11680180a6c",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "ean": "5903175650092",
+    "article_number": "80307",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1215-Filament-Spectrum-ASA-275-1-75mm-POLAR-WHITE-1kg.html"
+      }
+    ]
+  },
+  {
+    "uuid": "2d159cb3-1821-4a7f-9638-63d39d83efcd",
+    "filament_weight": 1000,
+    "diameter": 2.85,
+    "ean": "5903175653048",
+    "article_number": "80732",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1340-Filament-Spectrum-ASA-275-2-85-mm-POLAR-WHITE-1kg-RAL-9003.html"
+      }
+    ]
+  },
+  {
+    "uuid": "85039c44-dc0b-440b-bebf-c026a59e7a0c",
+    "filament_weight": 2000,
+    "diameter": 1.75,
+    "ean": "5903175653062",
+    "article_number": "80651",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1341-Filament-Spectrum-ASA-275-1-75-mm-POLAR-WHITE-2kg-RAL-9003.html"
+      }
+    ]
+  },
+  {
+    "uuid": "e71965b5-63c5-42f0-be59-bdb243a2ec45",
+    "filament_weight": 4500,
+    "diameter": 1.75,
+    "ean": "5903175653086",
+    "article_number": "80649",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1344-Filament-Spectrum-ASA-275-1-75-mm-POLAR-WHITE-4-5kg-RAL-9003.html"
+      }
+    ]
+  },
+  {
+    "uuid": "035dca64-70d5-4942-b7f0-fac1d4423099",
+    "filament_weight": 8000,
+    "diameter": 1.75,
+    "ean": "5903175654588",
+    "article_number": "80680",
+    "purchase_links": [
+      {
+        "store_id": "spectrum",
+        "url": "https://shop.spectrumfilaments.com/product-eng-1448-Filament-Spectrum-ASA-275-1-75-mm-POLAR-WHITE-8kg-RAL-9003.html"
+      }
+    ]
+  }
+]

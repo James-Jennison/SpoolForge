@@ -1,0 +1,9 @@
+{
+  "uuid": "6dc2fa4d-71c7-4669-8f20-61d984526ddd",
+  "id": "purifier",
+  "name": "Purifier",
+  "color_hex": "#DED9D4",
+  "traits": {
+    "air_filtering": true
+  }
+}

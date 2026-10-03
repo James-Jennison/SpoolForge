@@ -1,0 +1,10 @@
+{
+  "uuid": "f06b6bc0-369b-4455-9196-95b6a08f3e45",
+  "id": "malachite_green",
+  "name": "Malachite Green",
+  "color_hex": "#16B08E",
+  "traits": {
+    "abrasive": true,
+    "contains_carbon_fiber": true
+  }
+}

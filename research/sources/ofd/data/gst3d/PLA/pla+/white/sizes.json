@@ -1,0 +1,35 @@
+[
+  {
+    "uuid": "7374b77d-f441-43f7-9e01-74ef71384002",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "gst3d",
+        "url": "https://gst3d.eu/products/pla-pink-panter"
+      }
+    ]
+  },
+  {
+    "uuid": "095b6d4d-9aa4-4699-bb3e-7e17b5980bb2",
+    "filament_weight": 3500,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "gst3d",
+        "url": "https://gst3d.eu/products/pla-3-5kg-white?variant=52219971666253"
+      }
+    ]
+  },
+  {
+    "uuid": "af047e32-cb36-46ba-b010-7be37977c42f",
+    "filament_weight": 5000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "gst3d",
+        "url": "https://gst3d.eu/products/pla-3-5kg-white?variant=52250599096653"
+      }
+    ]
+  }
+]

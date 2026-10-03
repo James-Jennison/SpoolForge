@@ -1,0 +1,16 @@
+{
+  "uuid": "7ec9fdca-eb52-4546-a0aa-228264c85431",
+  "id": "gold_bronze",
+  "name": "Gold-Bronze",
+  "color_hex": [
+    "#E3B145",
+    "#8C7354",
+    "#99A45F",
+    "#CAAA99"
+  ],
+  "traits": {
+    "silk": true,
+    "gradual_color_change": true,
+    "industrially_compostable": true
+  }
+}

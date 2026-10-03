@@ -1,0 +1,11 @@
+{
+  "uuid": "e60485bb-486f-4072-8cb5-28e636ec98e3",
+  "id": "pla_silk",
+  "name": "PLA SILK",
+  "diameter_tolerance": 0.02,
+  "density": 1.22,
+  "min_print_temperature": 190,
+  "max_print_temperature": 230,
+  "min_bed_temperature": 50,
+  "max_bed_temperature": 70
+}

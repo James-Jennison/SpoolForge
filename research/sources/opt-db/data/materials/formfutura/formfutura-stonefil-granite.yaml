@@ -1,0 +1,24 @@
+uuid: 729c25ba-e4a8-5222-a16b-a58f93037451
+slug: formfutura-stonefil-granite
+brand:
+  slug: formfutura
+name: StoneFil Granite
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#acb1baff'
+tags:
+  - contains_stone
+  - imitates_stone
+photos:
+  - url: https://files.openprinttag.org/formfutura/formfutura-stonefil-granite/e2dd1464d633.png
+    type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 225
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 40
+  drying_time: 360

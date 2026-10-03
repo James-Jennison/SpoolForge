@@ -1,0 +1,22 @@
+uuid: e83d7723-89ec-5649-9cf4-7dd4671dc340
+slug: esun-petg-translucent-yellow
+brand:
+  slug: esun
+name: PETG Translucent Yellow
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://esun3dstoreeu.com/products/petg?VariantsId=12130
+primary_color:
+  color_rgba: '#fbe200ff'
+tags:
+  - translucent
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 250
+  min_bed_temperature: 75
+  max_bed_temperature: 90
+photos:
+  - url: https://files.openprinttag.org/esun/esun-petg-translucent-yellow/esun-petg-translucent-yellow-0-798a9769.jpg
+    type: unspecified

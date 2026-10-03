@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-layout-compile-claim",
+  "disposition": "REJECTED",
+  "reason": "Exact source compiled, tests/lint/assemble passed; exact APK installed and recents/detail visually verified. Receiver item method is callable despite local item name. No compilation defect exists in observed source.",
+  "evidence_reference": "work/m1/host-evidence/layout-build.log; layout-installed-artifact.json; layout-catalog-installed.json",
+  "resolved": true
+}

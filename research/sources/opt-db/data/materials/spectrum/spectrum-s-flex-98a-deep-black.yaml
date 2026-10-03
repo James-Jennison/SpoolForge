@@ -1,0 +1,20 @@
+uuid: d69c0906-7210-56b3-aa78-8660a4c36740
+slug: spectrum-s-flex-98a-deep-black
+brand:
+  slug: spectrum
+name: S-Flex 98A™ Deep Black
+class: FFF
+abbreviation: TPU
+primary_color:
+  color_rgba: '#000000ff'
+properties:
+  density: 1.09
+  hardness_shore_a: 98.0
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+type: TPU
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-s-flex-98a-deep-black/spectrum-s-flex-98a-deep-black-0-2833e54e.jpg
+  type: unspecified

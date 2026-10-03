@@ -1,0 +1,18 @@
+uuid: 825475a1-6a01-5f9e-abb9-f44ebe89140e
+slug: filamentpm-tpe-88-rubberjet-flex-blue
+brand:
+  slug: filamentpm
+name: TPE 88 RubberJet Flex - Blue
+class: FFF
+type: TPE
+abbreviation: TPE
+primary_color:
+  color_rgba: '#0099e6ff'
+photos:
+  - url: https://files.openprinttag.org/filamentpm/filamentpm-tpe-88-rubberjet-flex-blue/7f80c83b028f.png
+    type: unspecified
+properties:
+  density: 0.89
+  hardness_shore_a: 88.0
+  min_print_temperature: 220
+  max_print_temperature: 240

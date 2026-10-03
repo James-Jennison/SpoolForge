@@ -1,0 +1,26 @@
+uuid: a71933d4-9264-5f29-af0a-ae31ba04061f
+slug: spectrum-pet-g-glow-in-the-dark-yellow-green
+brand:
+  slug: spectrum
+name: PET-G Glow in the Dark Yellow Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#4dff64ff'
+secondary_colors:
+- color_rgba: '#4dff64ff'
+- color_rgba: '#dfdfd3ff'
+tags:
+- glow_in_the_dark
+- abrasive
+- illuminescent_color_change
+properties:
+  density: 1.27
+  min_print_temperature: 230
+  max_print_temperature: 255
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pet-g-glow-in-the-dark-yellow-green/spectrum-pet-g-glow-in-the-dark-yellow-green-0-a9202101.jpg
+  type: unspecified

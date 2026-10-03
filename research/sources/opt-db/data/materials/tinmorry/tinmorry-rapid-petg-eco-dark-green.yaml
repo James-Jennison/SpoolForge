@@ -1,0 +1,11 @@
+uuid: 13e74cb0-0e2d-5214-9bdb-83ed843d97ec
+slug: tinmorry-rapid-petg-eco-dark-green
+brand:
+  slug: tinmorry
+name: Rapid PETG-Eco Dark Green
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#00cc00ff'
+properties: {}

@@ -1,0 +1,23 @@
+uuid: a08bd33c-b944-534c-a703-2c1558649080
+slug: sunlu-pla-silver
+brand:
+  slug: sunlu
+name: PLA Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#abacb0ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/sunlu/sunlu-pla-silver/1acaba44ae61.jpg
+  type: unspecified
+properties:
+  density: 1.23
+  hardness_shore_d: 80
+  min_print_temperature: 190
+  max_print_temperature: 260
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50

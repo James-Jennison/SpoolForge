@@ -1,0 +1,13 @@
+uuid: af070b79-bd1b-541b-a815-a0913c68338a
+slug: paramount-3d-abs-mclaren-orange
+brand:
+  slug: paramount-3d
+name: ABS (McLaren Orange)
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#fa8423ff'
+tags:
+- filtration_recommended
+properties: {}

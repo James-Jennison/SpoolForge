@@ -1,0 +1,10 @@
+{
+  "uuid": "4f80c9ea-f7ee-4c52-9663-5125a8d6200f",
+  "id": "natural",
+  "name": "Natural",
+  "color_hex": "#F1E6B2",
+  "traits": {
+    "without_pigments": true,
+    "home_compostable": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "uuid": "2b18b6b1-e57e-4324-b195-21be112e7bd6",
+  "id": "silver_glitter",
+  "name": "Silver Glitter",
+  "color_hex": "#ABACB0",
+  "traits": {
+    "glitter": true,
+    "industrially_compostable": true
+  }
+}

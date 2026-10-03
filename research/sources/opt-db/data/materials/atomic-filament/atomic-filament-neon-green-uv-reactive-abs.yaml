@@ -1,0 +1,18 @@
+uuid: a2cc5c40-1c91-5f3e-adf8-dd6e305b78e2
+slug: atomic-filament-neon-green-uv-reactive-abs
+brand:
+  slug: atomic-filament
+name: Neon Green UV Reactive ABS
+class: FFF
+type: ABS
+abbreviation: ABS
+url: https://atomicfilament.com/products/neon-green-uv-reactive-abs-filament
+primary_color:
+  color_rgba: '#58c91bff'
+tags:
+- neon
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-neon-green-uv-reactive-abs/cbf4aedfc6d9.png
+  type: unspecified
+properties: {}

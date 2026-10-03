@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-gemini-1",
+  "disposition": "CONFIRMED",
+  "reason": "CONFIRMED WITH NARROWER SCOPE: Hosted refresh is explicitly outside M1; pinned licensed source is the build input. No header disguise or mirror evasion authorized. Future permitted intended-client validation remains a release gate.",
+  "evidence_reference": "docs/FEASIBILITY.md revised; research/evidence/ofd-snapshot-validation.json; remediation review-cycle-5ac84cff9d4b",
+  "resolved": true
+}

@@ -1,0 +1,22 @@
+uuid: aa0efead-41c9-53a5-9b16-169a61c19a8f
+slug: spectrum-asa-275-natural
+brand:
+  slug: spectrum
+name: ASA 275™ Natural
+class: FFF
+type: ASA
+abbreviation: ASA
+primary_color:
+  color_rgba: '#dfdfd3ff'
+tags:
+- without_pigments
+- filtration_recommended
+properties:
+  density: 1.07
+  min_print_temperature: 200
+  max_print_temperature: 240
+  min_bed_temperature: 40
+  max_bed_temperature: 60
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-asa-275-natural/spectrum-asa-275-natural-0-d071f129.jpg
+  type: unspecified

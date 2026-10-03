@@ -1,0 +1,54 @@
+{
+  "phase": "INITIAL_REVIEW",
+  "objective": "Review Filamajig NFC M3 portable spool identity and label implementation for offline interoperability, versioning, profile/spool identity integrity, import/export fidelity, Unicode/QR behavior, Android lifecycle and UI, persistence transactions, collision recovery, privacy, and documentation accuracy.",
+  "owner_requirements": [
+    "Provide a working prototype of portable local filament/spool identity without requiring a server or account",
+    "Generate a self-contained QR and a full export/import bundle, preserving provenance on the full bundle",
+    "Keep reusable filament profile identity separate from each owned physical spool identity",
+    "Support configurable human-readable label output including temperatures, identifiers, and transmission distance",
+    "Operate offline on the Motorola Razr 2023 and preserve existing local records and NFC behavior"
+  ],
+  "change_summary": [
+    "Added deterministic filamajig.spool version 1 UTF-8 JSON encoding with compact QR and source-bearing bundle forms",
+    "Added strict decode results for supported, future-version preserved bytes, and rejected inputs with 64 KiB decode and 2,048-byte QR limits",
+    "Added local camera QR bypass of AI, pasted-bundle review import, configurable portable label dialog, and explicit Android sharing",
+    "Persisted imported profile/spool IDs and quantities transactionally, supports multiple spools sharing a profile, rejects spool/reassignment collisions atomically, and deletes shared/final profiles correctly",
+    "Corrected strict JSON parsing for valid escaped and literal surrogate pairs while retaining rejection of unpaired surrogates",
+    "Added host and real-device acceptance plus architecture, schema, offline recovery, privacy, and roadmap documentation"
+  ],
+  "objective_evidence": {
+    "host": "Protected full gate PASS before final small error-reporting refinement: 97 tasks for core tests, app unit/storage tests, lint, app APK and Android-test APK. Focused tests PASS after persistence/parser remediation. Evidence command will rebuild current source.",
+    "device": "Installed APK and Android-test APK only on verified motorola razr 2023. DevicePortableIdentityAcceptanceTest PASS in 4.186 seconds through actual JPEG QR decode path; 575-byte payload, exact Prismático 雪 Unicode, distinct IDs, remaining quantity, network_required false. Visible UI confirms home import button and a real local-spool dialog with 609-byte QR, controls, distinct IDs, and share action.",
+    "diff": "work/portable-identity/m3-review.diff sha256 7c11bd6f213d186359c4b42688ae376f40d9b8926363e7b102a4a3378ae6c00e",
+    "device_artifact": "work/portable-identity/device-acceptance.json"
+  },
+  "review_files": [
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/PortableIdentity.kt",
+    "core/src/test/kotlin/net/jamesjennison/filamajignfc/core/PortableIdentityTest.kt",
+    "app/src/androidTest/kotlin/net/jamesjennison/filamajignfc/DevicePortableIdentityAcceptanceTest.kt",
+    "docs/PORTABLE_IDENTITY.md",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainActivity.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/MainViewModel.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/BarcodeCamera.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/LabelScan.kt",
+    "app/src/main/kotlin/net/jamesjennison/filamajignfc/data/CanonicalPersistence.kt",
+    "app/src/test/kotlin/net/jamesjennison/filamajignfc/StorageAcceptanceTest.kt",
+    "core/src/main/kotlin/net/jamesjennison/filamajignfc/core/StrictJson.kt",
+    "docs/ARCHITECTURE.md",
+    "docs/ROADMAP.md",
+    "work/portable-identity/m3-review.diff",
+    "work/portable-identity/device-acceptance.json"
+  ],
+  "known_limits": [
+    "Version 1 imports filament fields, profile/spool IDs, and quantities; broader purchase, vendor, location, notes, tag bindings, and custom spool metadata are outside the M3 format",
+    "Compact QR omits per-field source strings to control capacity; the separately shared full bundle retains those sources",
+    "The UI offers Android text sharing rather than managing a filesystem document internally",
+    "The real-device acceptance programmatically exercises the production decoder and separately inspects visible surfaces; it does not photographically scan a printed label during this cycle"
+  ],
+  "review_questions": [
+    "Is any architecture, data-loss, collision, security/privacy, versioning, encoding, Android lifecycle, accessibility, or interoperability defect release-blocking for M3?",
+    "Do the tests prove offline deterministic round trip, forward-version handling, Unicode, capacity, shared-profile persistence, atomic collision rollback, delete behavior, and real-device decoder execution?",
+    "Does the schema and documentation make app-removal survivability and the distinction between profile and physical-spool identity precise?"
+  ],
+  "sanitization": "No credentials, environment values, user database contents, NFC UIDs, device serials, network addresses, photos, or account data are included."
+}

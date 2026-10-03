@@ -1,0 +1,7 @@
+{
+  "finding_id": "filamajig-label-deepseek-stale-preview",
+  "disposition": "CONFIRMED",
+  "reason": "The defect was reproduced from the reviewed source, corrected, covered by targeted regression tests, and the exact remediated source received no findings from Grok, Gemini, and DeepSeek.",
+  "evidence_reference": "review-cycle-f8f42090eb69; evidence-cycle-737db5802777",
+  "resolved": true
+}

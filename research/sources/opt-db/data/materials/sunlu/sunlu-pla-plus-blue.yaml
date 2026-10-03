@@ -1,0 +1,23 @@
+uuid: e371ca94-0b59-5d49-bd18-e1e938e34337
+slug: sunlu-pla-plus-blue
+brand:
+  slug: sunlu
+name: PLA Plus Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#0066d9ff'
+tags:
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/sunlu/sunlu-pla-plus-blue/b01bce1bc1ca.jpg
+  type: unspecified
+properties:
+  density: 1.21
+  hardness_shore_d: 81
+  min_print_temperature: 205
+  max_print_temperature: 245
+  min_bed_temperature: 50
+  max_bed_temperature: 60
+  drying_temperature: 50

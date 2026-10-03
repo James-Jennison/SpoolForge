@@ -1,0 +1,27 @@
+uuid: 54a02967-3708-50cc-8708-ee7037fec584
+slug: amolen-pla-silk-rainbow-pink-blue
+brand:
+  slug: amolen
+name: PLA Silk Rainbow Pink Blue
+class: FFF
+type: PLA
+abbreviation: PLA
+url: https://www.amolen.com/products/pla-silk-rainbow?variant=43042401517591
+secondary_colors:
+- color_rgba: '#f6abd7ff'
+- color_rgba: '#cbe4edff'
+tags:
+- silk
+- gradual_color_change
+- industrially_compostable
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-silk-rainbow-pink-blue/2_0b465549-a784-485e-80f6-d2429867f5d5.png
+  type: unspecified
+properties:
+  density: 1.28
+  min_print_temperature: 210
+  max_print_temperature: 240
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

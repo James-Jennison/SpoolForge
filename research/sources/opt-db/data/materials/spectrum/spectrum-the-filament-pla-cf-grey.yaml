@@ -1,0 +1,15 @@
+uuid: 2b9b9e6b-3b6d-52ad-a308-c922a466f865
+slug: spectrum-the-filament-pla-cf-grey
+brand:
+  slug: spectrum
+name: The Filament PLA CF Grey
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#aabccfff'
+tags:
+  - contains_carbon_fiber
+  - abrasive
+properties:
+  density: 1.22

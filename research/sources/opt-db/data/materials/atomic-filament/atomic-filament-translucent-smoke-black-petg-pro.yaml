@@ -1,0 +1,17 @@
+uuid: d157545e-ebb1-5f88-bf57-f20eaf1245d0
+slug: atomic-filament-translucent-smoke-black-petg-pro
+brand:
+  slug: atomic-filament
+name: Translucent Smoke Black PETG PRO
+class: FFF
+type: PETG
+abbreviation: PETG
+url: https://atomicfilament.com/products/translucent-smoke-black-petg-pro
+primary_color:
+  color_rgba: '#363331ff'
+tags:
+- translucent
+photos:
+- url: https://files.openprinttag.org/atomic-filament/atomic-filament-translucent-smoke-black-petg-pro/2b6968a034c9.png
+  type: unspecified
+properties: {}

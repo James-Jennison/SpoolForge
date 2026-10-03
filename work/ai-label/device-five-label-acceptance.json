@@ -1,0 +1,321 @@
+{
+  "version": 1,
+  "device": {
+    "model": "motorola razr 2023",
+    "serial": "<device-serial>",
+    "transport": "Wireless ADB"
+  },
+  "apk_sha256": "6e34c88053a7462946bc7e38f9a66bba666b8701c2afadf6cc32131b6f9a4db8",
+  "service": {
+    "provider": "openai",
+    "model": "gpt-5.6-terra",
+    "health": "ready"
+  },
+  "save_policy": "Review only; do not persist without owner action.",
+  "already_verified": [
+    "kingroon-petg-basic-gray"
+  ],
+  "pending": [
+    {
+      "id": "panchroma-starlight-purple-red",
+      "expected": {
+        "label_brand": "Panchroma",
+        "manufacturer": null,
+        "material": "PLA",
+        "color": "Starlight Purple-Red",
+        "diameter_mm": 1.75,
+        "net_weight_g": 1000,
+        "nozzle_min_c": null,
+        "nozzle_max_c": null,
+        "bed_min_c": null,
+        "bed_max_c": null,
+        "gtin": "6938936717461",
+        "sku": "CA09019",
+        "lot": null
+      },
+      "other_codes": [
+        {
+          "value": "X004QSH4ZH",
+          "kind": "FNSKU"
+        }
+      ],
+      "result": {
+        "status": "PASS",
+        "captured_at": "2026-09-07",
+        "actual": {
+          "label_brand": "Panchroma",
+          "material": "PLA",
+          "product": "Panchroma PLA Gradient Starlight Purple-Red",
+          "color": "Starlight Purple-Red",
+          "color_hex": "8A5A62",
+          "diameter_mm": 1.75,
+          "net_weight_g": 1000,
+          "nozzle_min_c": null,
+          "nozzle_max_c": null,
+          "bed_min_c": null,
+          "bed_max_c": null,
+          "gtin": "06938936717461",
+          "sku": "CA09019"
+        },
+        "semantic_fields": "PASS for visible ground truth",
+        "secondary_codes": {
+          "expected": [
+            "X004QSH4ZH"
+          ],
+          "actual": [
+            {
+              "value": "6938936717461",
+              "kind": "GTIN",
+              "format": "QR_CODE"
+            },
+            {
+              "value": "X004QSH4ZH",
+              "kind": "Amazon-style identifier candidate",
+              "format": "CODE_128"
+            }
+          ],
+          "status": "PASS"
+        },
+        "evidence": [
+          "/tmp/label5.xml",
+          "/tmp/label5lower.xml"
+        ],
+        "saved": false
+      }
+    },
+    {
+      "id": "gizmo-dorks-hips-white",
+      "expected": {
+        "label_brand": "Gizmo Dorks",
+        "manufacturer": null,
+        "material": "HIPS",
+        "color": "White",
+        "diameter_mm": 1.75,
+        "net_weight_g": 1000,
+        "nozzle_min_c": null,
+        "nozzle_max_c": null,
+        "bed_min_c": null,
+        "bed_max_c": null,
+        "gtin": "887503120752",
+        "lot": null
+      },
+      "other_codes": [],
+      "result": {
+        "status": "PASS",
+        "captured_at": "2026-09-07",
+        "actual": {
+          "label_brand": "Gizmo Dorks",
+          "material": "HIPS",
+          "product": "1.75mm HIPS Filament",
+          "color": "White",
+          "color_hex": "F5F5F5",
+          "diameter_mm": 1.75,
+          "net_weight_g": 1000,
+          "nozzle_min_c": null,
+          "nozzle_max_c": null,
+          "bed_min_c": null,
+          "bed_max_c": null,
+          "gtin": "00887503120752",
+          "sku": null
+        },
+        "semantic_fields": "PASS for visible ground truth",
+        "secondary_codes": {
+          "expected": [],
+          "actual": [
+            {
+              "value": "AO9C",
+              "kind": "unclassified printed code",
+              "format": "text"
+            }
+          ],
+          "status": "PASS"
+        },
+        "evidence": [
+          "/tmp/label4.xml",
+          "/tmp/label4lower.xml"
+        ],
+        "saved": false
+      }
+    },
+    {
+      "id": "anycubic-pla-magenta",
+      "expected": {
+        "label_brand": "ANYCUBIC",
+        "manufacturer": null,
+        "material": "PLA",
+        "color": "Magenta",
+        "diameter_mm": 1.75,
+        "net_weight_g": 1000,
+        "nozzle_min_c": 190,
+        "nozzle_max_c": 230,
+        "bed_min_c": null,
+        "bed_max_c": null,
+        "gtin": null,
+        "sku": "AHPLMG-107",
+        "lot": null
+      },
+      "other_codes": [
+        {
+          "value": "X004LDC21N",
+          "kind": "FNSKU"
+        }
+      ],
+      "result": {
+        "status": "PASS",
+        "captured_at": "2026-09-07",
+        "actual": {
+          "label_brand": "ANYCUBIC",
+          "material": "PLA",
+          "product": "PLA",
+          "color": "Magenta",
+          "color_hex": "C02672",
+          "diameter_mm": 1.75,
+          "net_weight_g": 1000,
+          "nozzle_min_c": 190,
+          "nozzle_max_c": 230,
+          "bed_min_c": null,
+          "bed_max_c": null,
+          "gtin": null,
+          "sku": "AHPLMG-107"
+        },
+        "semantic_fields": "PASS for visible ground truth",
+        "secondary_codes": {
+          "expected": [
+            "X004LDC21N"
+          ],
+          "actual": [
+            {
+              "value": "X004LDC21N",
+              "kind": "Amazon-style identifier candidate",
+              "format": "CODE_128"
+            }
+          ],
+          "status": "PASS"
+        },
+        "evidence": [
+          "/tmp/label3.xml",
+          "/tmp/label3lower.xml"
+        ],
+        "saved": false
+      }
+    },
+    {
+      "id": "3dhojor-fire-engine-red",
+      "expected": {
+        "label_brand": "3DHoJor",
+        "manufacturer": null,
+        "material": null,
+        "color": "Fire Engine Red",
+        "diameter_mm": null,
+        "net_weight_g": null,
+        "nozzle_min_c": null,
+        "nozzle_max_c": null,
+        "bed_min_c": null,
+        "bed_max_c": null,
+        "gtin": null,
+        "sku": null,
+        "lot": null
+      },
+      "other_codes": [
+        {
+          "value": "X00444MZE3",
+          "kind": "FNSKU"
+        }
+      ],
+      "result": {
+        "status": "PARTIAL",
+        "captured_at": "2026-09-07",
+        "actual": {
+          "label_brand": "3DHoJor",
+          "material": null,
+          "product": "3D Printing Filament",
+          "color": "Fire Engine Red",
+          "color_hex": "9D3130",
+          "diameter_mm": null,
+          "net_weight_g": null,
+          "nozzle_min_c": null,
+          "nozzle_max_c": null,
+          "bed_min_c": null,
+          "bed_max_c": null,
+          "gtin": null,
+          "sku": null
+        },
+        "semantic_fields": "PASS for visible ground truth",
+        "secondary_codes": {
+          "expected": [
+            "X00444MZE3"
+          ],
+          "actual": [],
+          "status": "MISS"
+        },
+        "evidence": [
+          "/tmp/filamajig-label-1.xml",
+          "/tmp/filamajig-label-1-lower.xml"
+        ],
+        "saved": false
+      }
+    },
+    {
+      "id": "flashforge-pla-city-hide-layer-line",
+      "expected": {
+        "label_brand": "FLASHFORGE",
+        "manufacturer": null,
+        "material": "PLA",
+        "color": null,
+        "diameter_mm": null,
+        "net_weight_g": null,
+        "nozzle_min_c": null,
+        "nozzle_max_c": null,
+        "bed_min_c": null,
+        "bed_max_c": null,
+        "gtin": null,
+        "sku": null,
+        "lot": null
+      },
+      "other_codes": [
+        {
+          "value": "X0037RJ695",
+          "kind": "FNSKU"
+        }
+      ],
+      "result": {
+        "status": "PARTIAL",
+        "captured_at": "2026-09-07",
+        "actual": {
+          "label_brand": "FLASHFORGE",
+          "material": "PLA",
+          "product": "PLA Filament",
+          "color": null,
+          "color_hex": "808080 placeholder",
+          "diameter_mm": null,
+          "net_weight_g": null,
+          "nozzle_min_c": null,
+          "nozzle_max_c": null,
+          "bed_min_c": null,
+          "bed_max_c": null,
+          "gtin": null,
+          "sku": null
+        },
+        "semantic_fields": "PARTIAL: expected product wording City Hide The Layer Line was omitted",
+        "secondary_codes": {
+          "expected": [
+            "X0037RJ695"
+          ],
+          "actual": [
+            {
+              "value": "X0037RJ695",
+              "kind": "Amazon-style identifier candidate",
+              "format": "CODE_128"
+            }
+          ],
+          "status": "PASS"
+        },
+        "evidence": [
+          "/tmp/label2.xml",
+          "/tmp/label2lower.xml"
+        ],
+        "saved": false
+      }
+    }
+  ]
+}

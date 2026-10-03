@@ -1,0 +1,14 @@
+uuid: 60d8dd5c-1cb8-5b00-96cc-a22bf281053f
+slug: 3d-fuel-pro-abs-snow-white
+brand:
+  slug: 3d-fuel
+name: Pro ABS, Snow White
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#f5f5f4ff'
+tags:
+- filtration_recommended
+photos: []
+properties: {}

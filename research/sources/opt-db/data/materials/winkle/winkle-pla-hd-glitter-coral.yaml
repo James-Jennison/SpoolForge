@@ -1,0 +1,15 @@
+uuid: f8ee178f-9ea5-5895-8228-2ac704046e2b
+slug: winkle-pla-hd-glitter-coral
+brand:
+  slug: winkle
+name: PLA HD Glitter Coral
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#d33d3dff'
+tags:
+- glitter
+- industrially_compostable
+properties:
+  density: 1.24

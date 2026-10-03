@@ -1,0 +1,16 @@
+uuid: c64cbe4b-e184-5273-aea0-5199df12d647
+slug: overture-silk-pla-lettuce-tomato
+brand:
+  slug: overture
+name: Silk PLA Lettuce Tomato
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#df3303ff'
+- color_rgba: '#00935cff'
+tags:
+- silk
+- gradual_color_change
+- industrially_compostable
+properties: {}

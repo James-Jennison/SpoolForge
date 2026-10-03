@@ -1,0 +1,23 @@
+uuid: 54ce5046-6714-5cfd-bb25-63a6f8efbf8f
+slug: fiberlogy-fiberflex-40d-pink
+brand:
+  slug: fiberlogy
+name: FiberFlex 40D Pink
+class: FFF
+type: TPU
+abbreviation: TPU
+primary_color:
+  color_rgba: '#c90d6eff'
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-fiberflex-40d-pink/f188fc95f534.png
+    type: unspecified
+properties:
+  density: 1.16
+  hardness_shore_d: 40.0
+  hardness_shore_a: 91.0
+  min_print_temperature: 200
+  max_print_temperature: 220
+  min_bed_temperature: 50
+  max_bed_temperature: 70
+  drying_temperature: 60
+  drying_time: 240

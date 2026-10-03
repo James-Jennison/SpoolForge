@@ -1,0 +1,19 @@
+uuid: 5acf45d4-62d2-5c2b-82d9-537fae211880
+slug: fiberlogy-pp-graphite
+brand:
+  slug: fiberlogy
+name: PP Graphite
+class: FFF
+type: PP
+abbreviation: PP
+primary_color:
+  color_rgba: '#6f727eff'
+photos:
+  - url: https://files.openprinttag.org/fiberlogy/fiberlogy-pp-graphite/f70163fcaa42.png
+    type: unspecified
+properties:
+  density: 1.05
+  min_print_temperature: 220
+  max_print_temperature: 250
+  drying_temperature: 50
+  drying_time: 240

@@ -1,0 +1,20 @@
+uuid: 5e2a4b67-7765-5a75-ae98-84575525d602
+slug: spectrum-safeguard-pla-bahama-yellow
+brand:
+  slug: spectrum
+name: Safeguard PLA Bahama Yellow
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#efd00bff'
+tags:
+- antibacterial
+properties:
+  density: 1.24
+  min_print_temperature: 185
+  max_print_temperature: 215
+  max_bed_temperature: 45
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-safeguard-pla-bahama-yellow/spectrum-safeguard-pla-bahama-yellow-0-7467c557.jpg
+  type: unspecified

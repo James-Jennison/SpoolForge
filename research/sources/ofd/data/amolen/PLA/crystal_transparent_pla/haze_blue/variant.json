@@ -1,0 +1,14 @@
+{
+  "uuid": "bd4f0711-c62d-42c3-945f-cfd0fcbda9cb",
+  "id": "haze_blue",
+  "name": "Haze Blue",
+  "color_hex": [
+    "#B5A7AA",
+    "#B9CAD0",
+    "#CAAAC2"
+  ],
+  "traits": {
+    "translucent": true,
+    "gradual_color_change": true
+  }
+}

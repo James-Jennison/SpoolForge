@@ -1,0 +1,22 @@
+uuid: a6971d6a-a713-505f-869c-166fa77cec12
+slug: spectrum-petg-premium-high-speed-transparent-blue
+brand:
+  slug: spectrum
+name: PETG Premium High Speed Transparent Blue
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#4921c1ff'
+tags:
+- high_speed
+- translucent
+properties:
+  density: 1.29
+  min_print_temperature: 240
+  max_print_temperature: 270
+  min_bed_temperature: 60
+  max_bed_temperature: 80
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-petg-premium-high-speed-transparent-blue/spectrum-petg-premium-high-speed-transparent-blue-0-f3bb4943.jpg
+  type: unspecified

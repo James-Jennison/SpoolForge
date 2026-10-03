@@ -1,0 +1,25 @@
+uuid: 2aa04d24-f155-5d9d-8969-76ae3e5f626b
+slug: elegoo-rapid-pla-plus-silver
+brand:
+  slug: elegoo
+name: RAPID PLA Plus Silver
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#6f727eff'
+tags:
+- industrially_compostable
+- high_speed
+photos:
+- url: https://files.openprinttag.org/elegoo/elegoo-rapid-pla-plus-silver/a75a97b529b2.png
+  type: unspecified
+properties:
+  density: 1.23
+  min_print_temperature: 200
+  max_print_temperature: 230
+  min_bed_temperature: 35
+  max_bed_temperature: 65
+  drying_temperature: 50
+  drying_time: 480
+  min_nozzle_diameter: 200

@@ -1,0 +1,8 @@
+{
+  "uuid": "dae6c897-9a8f-49a3-a995-297a49dac0ee",
+  "id": "pla_galaxy",
+  "name": "PLA Galaxy",
+  "diameter_tolerance": 0.03,
+  "density": 1.24,
+  "max_dry_temperature": 50
+}

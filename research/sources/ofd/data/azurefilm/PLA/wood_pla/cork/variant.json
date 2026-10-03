@@ -1,0 +1,9 @@
+{
+  "uuid": "10b065ef-7a1a-41b7-9040-855082558e6d",
+  "id": "cork",
+  "name": "Cork",
+  "color_hex": "#6a4f3e",
+  "traits": {
+    "contains_wood": true
+  }
+}

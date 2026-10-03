@@ -1,0 +1,9 @@
+{
+  "uuid": "fe283185-f9b9-43ce-8cf6-e1fccb694268",
+  "id": "signal_blue",
+  "name": "Signal Blue",
+  "color_hex": "#0078BF",
+  "traits": {
+    "recycled": true
+  }
+}

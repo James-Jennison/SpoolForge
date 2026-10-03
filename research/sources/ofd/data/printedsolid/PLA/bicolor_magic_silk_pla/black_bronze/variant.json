@@ -1,0 +1,14 @@
+{
+  "uuid": "66857833-8695-4581-84be-b382fb3232f1",
+  "id": "black_bronze",
+  "name": "Black-Bronze",
+  "color_hex": [
+    "#000000",
+    "#99A45F"
+  ],
+  "traits": {
+    "silk": true,
+    "coextruded": true,
+    "industrially_compostable": true
+  }
+}

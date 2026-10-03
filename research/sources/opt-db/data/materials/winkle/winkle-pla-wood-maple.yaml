@@ -1,0 +1,15 @@
+uuid: 040d5324-5030-5037-96b4-732bb64e0a7c
+slug: winkle-pla-wood-maple
+brand:
+  slug: winkle
+name: PLA Wood Maple
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#b4aaa2ff'
+tags:
+- contains_wood
+- industrially_compostable
+properties:
+  density: 1.27

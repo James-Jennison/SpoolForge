@@ -1,0 +1,47 @@
+[
+  {
+    "uuid": "746f7756-042e-4949-b4ff-7db486e205b8",
+    "filament_weight": 500,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "empty_spool_weight": 20,
+    "article_number": "CFC3-175BLCK-00500",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/carbonfil-cf03"
+      }
+    ]
+  },
+  {
+    "uuid": "82d0287d-56d0-4ab9-9db3-b8e4cdcaee93",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "empty_spool_weight": 20,
+    "article_number": "CFC3-175BLCK-01000",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/carbonfil-cf03"
+      }
+    ]
+  },
+  {
+    "uuid": "ae4f8736-c60d-43c9-adf3-0dee85caf753",
+    "filament_weight": 2300,
+    "diameter": 1.75,
+    "spool_refill": true,
+    "empty_spool_weight": 40,
+    "article_number": "CFC3-175BLCK-02300",
+    "discontinued": false,
+    "purchase_links": [
+      {
+        "store_id": "formfutura",
+        "url": "https://www.formfutura.com/carbonfil-cf03"
+      }
+    ]
+  }
+]

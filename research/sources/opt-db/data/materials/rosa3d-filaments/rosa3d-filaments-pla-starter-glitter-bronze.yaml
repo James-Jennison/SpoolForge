@@ -1,0 +1,14 @@
+uuid: 3af41be9-cdb3-51ba-b90a-df6241e2a18e
+slug: rosa3d-filaments-pla-starter-glitter-bronze
+brand:
+  slug: rosa3d-filaments
+name: PLA Starter Glitter Bronze
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#b26e3eff'
+tags:
+- glitter
+- industrially_compostable
+properties: {}

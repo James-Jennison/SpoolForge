@@ -1,0 +1,14 @@
+uuid: 2aeea50c-9a18-50e8-a737-16154ab47508
+slug: print-with-smile-rec-pla-just-purple
+brand:
+  slug: print-with-smile
+name: REC-PLA Just PURPLE
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#8d65c7ff'
+tags:
+- recycled
+- industrially_compostable
+properties: {}

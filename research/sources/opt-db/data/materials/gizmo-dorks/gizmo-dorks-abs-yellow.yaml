@@ -1,0 +1,16 @@
+uuid: 8f83e7f7-34a4-5174-bd9c-e5ce689c795b
+slug: gizmo-dorks-abs-yellow
+brand:
+  slug: gizmo-dorks
+name: ABS Yellow
+class: FFF
+type: ABS
+abbreviation: ABS
+primary_color:
+  color_rgba: '#ffd342ff'
+tags:
+- filtration_recommended
+photos:
+- url: https://files.openprinttag.org/gizmo-dorks/gizmo-dorks-abs-yellow/9c4bafd20158.png
+  type: unspecified
+properties: {}

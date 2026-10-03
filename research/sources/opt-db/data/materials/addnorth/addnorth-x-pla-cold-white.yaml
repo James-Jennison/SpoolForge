@@ -1,0 +1,18 @@
+uuid: 78967847-ee5f-5053-9135-67f43c0bafcc
+slug: addnorth-x-pla-cold-white
+brand:
+  slug: addnorth
+name: X-PLA Cold White
+class: FFF
+type: PLA
+abbreviation: PLA
+primary_color:
+  color_rgba: '#eaecf5ff'
+photos:
+  - url: https://files.openprinttag.org/addnorth/addnorth-x-pla-cold-white/8e7c66c6b0da.png
+    type: unspecified
+properties:
+  density: 1.25
+  min_print_temperature: 180
+  max_print_temperature: 220
+  max_bed_temperature: 70

@@ -1,0 +1,28 @@
+uuid: ed9087f9-9480-5a32-8271-f9d50a54b74b
+slug: amolen-pla-matte-multicolor-rainbow
+brand:
+  slug: amolen
+name: PLA Matte Multicolor Rainbow
+class: FFF
+type: PLA
+abbreviation: PLA
+secondary_colors:
+- color_rgba: '#a048f2ff'
+- color_rgba: '#ff9100ff'
+- color_rgba: '#5aeb90ff'
+- color_rgba: '#40b6e4ff'
+tags:
+- matte
+- industrially_compostable
+- gradual_color_change
+photos:
+- url: https://files.openprinttag.org/amolen/amolen-pla-matte-multicolor-rainbow/d339ddf6cfdf.png
+  type: unspecified
+properties:
+  density: 1.24
+  min_print_temperature: 190
+  max_print_temperature: 230
+  min_bed_temperature: 30
+  max_bed_temperature: 65
+  drying_temperature: 55
+  drying_time: 480

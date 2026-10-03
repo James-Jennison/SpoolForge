@@ -1,0 +1,13 @@
+{
+  "uuid": "96aca253-db8a-4430-acc5-ecb99295ce46",
+  "id": "golden_alloy",
+  "name": "Golden Alloy",
+  "color_hex": [
+    "#CE9F2E",
+    "#C9D0D4"
+  ],
+  "traits": {
+    "iridescent": true,
+    "coextruded": true
+  }
+}

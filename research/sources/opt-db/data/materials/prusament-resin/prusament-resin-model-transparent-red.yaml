@@ -1,0 +1,18 @@
+uuid: e8b1ed99-8fa1-54de-b9f2-3a8b14c347ef
+slug: prusament-resin-model-transparent-red
+brand:
+  slug: prusament-resin
+name: Model Transparent Red
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#d21b31ff'
+tags:
+- transparent
+properties:
+  density: 1.11
+  cure_wavelength: 405
+  viscosity_18c: 287
+  viscosity_25c: 167
+  viscosity_40c: 66
+  viscosity_60c: 1

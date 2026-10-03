@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-gtin-final-v2-deepseek-1",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-7e324a5f3168",
+  "reviewer": "deepseek",
+  "severity": "CRITICAL",
+  "category": "Verification robustness / assert reliance",
+  "summary": "The verifier relies entirely on Python `assert` statements for its checks. If run with `python -O` (optimized mode), all `assert` statements are removed, so the verifier would perform no validation and still print `{\\\"integrity\\\": \\\"PASS\\\", ...}`. Thus the reported PASS and negative oracle can be produced without any actual verification.",
+  "claim": "A verifier output of PASS can be generated with zero actual checks, meaning the bundle is not independently proven. The owner requirement for provenance and correctness on every match is completely compromised by this possibility.",
+  "evidence": {
+    "source": "The verifier source contains `assert` for every integrity check, e.g., `assert db.execute('PRAGMA integrity_check').fetchone()[0]=='ok'`, `assert source_binding_valid(source,e,o,gtin)`, and many others. The final line prints PASS unconditionally: `print(json.dumps({'integrity':'PASS',...}))`. Python's `-O` flag disables `assert` statements globally. The negative license tests rely on `assert` inside `require_mit`; under `-O` one try block would falsely pass because the manual `raise AssertionError` is caught and ignored.",
+    "response_sha256": "964a15670621e3c9b422b701411c7242e61613d026b2db884499462755cbed26"
+  },
+  "affected_components": [
+    "tools",
+    "app"
+  ],
+  "suggested_remediation": "Replace all `assert` statements with explicit checks that raise exceptions even under optimization (e.g., `if not condition: raise ValueError(...)`), or at minimum enforce `__debug__ is True` at startup and refuse to run under `-O`. Do not use `assert` for any verification logic.",
+  "suggested_validation": "Run the verifier with `python -O` and confirm it does not output PASS. Confirm that the negative license tests still reject invalid licenses under optimized mode.",
+  "reviewer_confidence": "HIGH"
+}

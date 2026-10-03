@@ -1,0 +1,13 @@
+[
+  {
+    "uuid": "1f094cd9-6d3b-4ab2-b884-9132cb9f36d7",
+    "filament_weight": 1000,
+    "diameter": 1.75,
+    "purchase_links": [
+      {
+        "store_id": "prusa3d",
+        "url": "https://www.prusa3d.com/product/prusament-premium-pla-mystic-green-1kg-2/"
+      }
+    ]
+  }
+]

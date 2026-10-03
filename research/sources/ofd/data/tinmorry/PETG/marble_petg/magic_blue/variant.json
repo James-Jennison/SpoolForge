@@ -1,0 +1,10 @@
+{
+  "uuid": "e0a81c42-0df7-433c-bbeb-1f37e043d858",
+  "id": "magic_blue",
+  "name": "Magic Blue",
+  "color_hex": "#DEDDEA",
+  "traits": {
+    "imitates_marble": true,
+    "imitates_stone": true
+  }
+}

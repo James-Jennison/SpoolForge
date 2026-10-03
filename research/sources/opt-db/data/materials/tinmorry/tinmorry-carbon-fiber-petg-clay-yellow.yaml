@@ -1,0 +1,14 @@
+uuid: 17fdfb4c-f369-5078-b364-bde24113e888
+slug: tinmorry-carbon-fiber-petg-clay-yellow
+brand:
+  slug: tinmorry
+name: Carbon Fiber PETG Clay Yellow
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#624f22ff'
+tags:
+- contains_carbon_fiber
+- abrasive
+properties: {}

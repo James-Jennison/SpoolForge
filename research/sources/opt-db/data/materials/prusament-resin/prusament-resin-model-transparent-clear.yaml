@@ -1,0 +1,18 @@
+uuid: 71e0c19a-af99-5851-95c2-53237122b9af
+slug: prusament-resin-model-transparent-clear
+brand:
+  slug: prusament-resin
+name: Model Transparent Clear
+class: SLA
+abbreviation: ''
+primary_color:
+  color_rgba: '#f3f6f4ff'
+tags:
+- transparent
+properties:
+  density: 1.11
+  cure_wavelength: 405
+  viscosity_18c: 287
+  viscosity_25c: 167
+  viscosity_40c: 66
+  viscosity_60c: 1

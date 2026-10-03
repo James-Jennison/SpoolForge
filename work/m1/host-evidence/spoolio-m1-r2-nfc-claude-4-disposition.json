@@ -1,0 +1,7 @@
+{
+  "finding_id": "spoolio-m1-r2-nfc-claude-4",
+  "disposition": "OUT_OF_SCOPE",
+  "reason": "Optional convention improvement, no current correctness defect. Existing import/validation/export and source oracle normalize safely; preserving asset convention avoids an unnecessary catalog format migration.",
+  "evidence_reference": "work/m1/host-evidence/remediation-round3-build.log; app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt; work/m1/host-evidence/migrated-user-data/summary.json",
+  "resolved": true
+}

@@ -1,0 +1,114 @@
+{
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 2959,
+    "input_tokens_details": {
+      "cache_write_tokens": 2956,
+      "cached_tokens": 0
+    },
+    "output_tokens": 515,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 3474
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "FLASHFORGE",
+      "confidence": 0.99,
+      "evidence": "Sticker visibly reads \u201cFLASHFORGE PLA Filament...\u201d",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": "FLASHFORGE",
+      "confidence": 0.99,
+      "evidence": "FLASHFORGE name is visibly printed on the package sticker.",
+      "basis": "printed"
+    },
+    "product": {
+      "value": "PLA Filament",
+      "confidence": 0.99,
+      "evidence": "Sticker visibly reads \u201cFLASHFORGE PLA Filament...\u201d",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PLA",
+      "confidence": 0.99,
+      "evidence": "Sticker visibly reads \u201cPLA Filament.\u201d",
+      "basis": "printed"
+    },
+    "color": {
+      "value": "City Hide The Layer Line",
+      "confidence": 0.96,
+      "evidence": "Sticker text after the product description reads \u201cCity Hide The Layer Line.\u201d",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "net_weight_g": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_min_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_max_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_min_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "bed_max_c": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.98,
+      "evidence": "A barcode is visible, but no retail GTIN digits are visibly printed.",
+      "basis": "absent"
+    },
+    "sku": {
+      "value": null,
+      "confidence": 0.9,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "lot": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "other_codes": [
+      {
+        "value": "X0037RJ695",
+        "kind": "barcode-associated marketplace identifier",
+        "evidence": "Alphanumeric code \u201cX0037RJ695\u201d is printed directly beneath the barcode."
+      }
+    ],
+    "needs_user_review": [
+      "Confirm whether \u201cCity Hide The Layer Line\u201d is the intended printed color/variant name; the wording is unusual but legible.",
+      "The barcode-associated code X0037RJ695 is not classified as a retail GTIN or manufacturer SKU from the visible evidence alone."
+    ]
+  }
+}

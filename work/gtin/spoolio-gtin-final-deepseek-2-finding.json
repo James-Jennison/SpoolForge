@@ -1,0 +1,21 @@
+{
+  "finding_id": "spoolio-gtin-final-deepseek-2",
+  "change_id": "spoolio-gtin-20260907",
+  "cycle_id": "review-cycle-fe0f80e7443f",
+  "reviewer": "deepseek",
+  "severity": "MEDIUM",
+  "category": "Community Identity Stability Verification",
+  "summary": "The independent verifier does not validate that the built database's community package IDs are actually derived from upstream ID plus scope and are independent of row pointer. It only unit-tests the package_identity function with synthetic inputs and checks that actual package IDs start with 'community:'.",
+  "claim": "A malicious or erroneous build_gtin_index.py could change package_identity to incorporate the row pointer or otherwise break stability without the verifier detecting it. The claimed remediation of stable Community identities would not be independently assured.",
+  "evidence": {
+    "source": "In verify_gtin_index.py, only these assertions exist for identity stability:\nassert package_identity('community','test-row','spoolmandb/compiled.json#/0','spooled package') != package_identity('community','test-row','spoolmandb/compiled.json#/0','refill')\nassert package_identity('community','test-row','spoolmandb/compiled.json#/0','spooled package') == package_identity('community','test-row','spoolmandb/compiled.json#/1','spooled package')\nLater, for each candidate, it only asserts: pid==e['source_record'] if source=='ofd' else pid.startswith(source+':'). It never computes the expected package_id from the actual evidence source_record and scope for community rows, and never checks that pointer does not affect the real package_id in the database.",
+    "response_sha256": "e63a05213b528087735e1b93bd768f3ffb84b9dd39d4524640f95b7657fb59ad"
+  },
+  "affected_components": [
+    "tools",
+    "app"
+  ],
+  "suggested_remediation": "In verify_gtin_index.py, for each community candidate, extract the upstream ID and scope from evidence (e.g., e['source_record'] and e['scope']) and independently compute the expected package_id using the documented algorithm, then assert it equals the stored pid. Also assert that for two community candidates with the same ID and scope but different record_pointer values, the stored package_id is identical. The verifier should not rely on importing package_identity from the build script; it should implement or copy the algorithm locally.",
+  "suggested_validation": "Create a build variant that generates community package_ids using the row pointer instead of ID+scope but leaves package_identity function unchanged; run the verifier and verify it fails. Then run the verifier on a correctly built database and verify it passes.",
+  "reviewer_confidence": "HIGH"
+}

@@ -1,0 +1,21 @@
+uuid: d175a8ad-5bca-59ce-ae60-328e4fbe1bb2
+slug: spectrum-pet-g-ht100-silver-steel
+brand:
+  slug: spectrum
+name: PET-G HT100™ Silver Steel
+class: FFF
+type: PETG
+abbreviation: PETG
+primary_color:
+  color_rgba: '#808080ff'
+tags:
+- high_temperature
+properties:
+  density: 1.18
+  min_print_temperature: 250
+  max_print_temperature: 280
+  min_bed_temperature: 100
+  max_bed_temperature: 110
+photos:
+- url: https://files.openprinttag.org/spectrum/spectrum-pet-g-ht100-silver-steel/spectrum-pet-g-ht100-silver-steel-0-fec4046d.jpg
+  type: unspecified

@@ -1,0 +1,138 @@
+{
+  "provider": "gemini",
+  "model": "gemini-3.8-flash",
+  "status": "completed",
+  "usage": {
+    "total_tokens": 2901,
+    "total_input_tokens": 1194,
+    "input_tokens_by_modality": [
+      {
+        "modality": "image",
+        "tokens": 1064
+      },
+      {
+        "modality": "text",
+        "tokens": 130
+      }
+    ],
+    "total_cached_tokens": 0,
+    "total_output_tokens": 767,
+    "total_tool_use_tokens": 0,
+    "total_thought_tokens": 940,
+    "raw_prompt_token": 4621,
+    "model_invocation_token_counts": [
+      {
+        "prompt_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 3557
+          },
+          {
+            "modality": "image",
+            "tokens": 1064
+          }
+        ],
+        "candidates_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 783
+          }
+        ],
+        "thoughts_tokens_details": [
+          {
+            "modality": "text",
+            "tokens": 940
+          }
+        ]
+      }
+    ]
+  },
+  "extracted": {
+    "label_brand": {
+      "value": "KINGROON 3D",
+      "confidence": 0.95,
+      "evidence": "KINGROON 3D",
+      "basis": "printed"
+    },
+    "manufacturer": {
+      "value": "KINGROON 3D",
+      "confidence": 0.85,
+      "evidence": "KINGROON 3D",
+      "basis": "printed"
+    },
+    "product": {
+      "value": "PETG Basic",
+      "confidence": 0.9,
+      "evidence": "PETG Basic 1.75mm",
+      "basis": "printed"
+    },
+    "material": {
+      "value": "PETG",
+      "confidence": 0.98,
+      "evidence": "\u6750\u8d28:PETG Basic",
+      "basis": "printed"
+    },
+    "color": {
+      "value": "Gray",
+      "confidence": 0.99,
+      "evidence": "Colour:Gray",
+      "basis": "printed"
+    },
+    "diameter_mm": {
+      "value": 1.75,
+      "confidence": 0.99,
+      "evidence": "1.75mm",
+      "basis": "printed"
+    },
+    "net_weight_g": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "nozzle_min_c": {
+      "value": 230,
+      "confidence": 0.99,
+      "evidence": "Printing Temp:230-250\u2103",
+      "basis": "printed"
+    },
+    "nozzle_max_c": {
+      "value": 250,
+      "confidence": 0.99,
+      "evidence": "Printing Temp:230-250\u2103",
+      "basis": "printed"
+    },
+    "bed_min_c": {
+      "value": 70,
+      "confidence": 0.99,
+      "evidence": "Hotbed Temp:70-90\u2103",
+      "basis": "printed"
+    },
+    "bed_max_c": {
+      "value": 90,
+      "confidence": 0.99,
+      "evidence": "Hotbed Temp:70-90\u2103",
+      "basis": "printed"
+    },
+    "gtin": {
+      "value": null,
+      "confidence": 0.99,
+      "evidence": null,
+      "basis": "absent"
+    },
+    "sku": {
+      "value": "HC098",
+      "confidence": 0.9,
+      "evidence": "HC098",
+      "basis": "printed"
+    },
+    "lot": {
+      "value": "0403-4",
+      "confidence": 0.98,
+      "evidence": "\u6279\u6b21:0403-4",
+      "basis": "printed"
+    },
+    "other_codes": [],
+    "needs_user_review": []
+  }
+}
