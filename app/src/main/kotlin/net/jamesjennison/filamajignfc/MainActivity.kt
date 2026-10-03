@@ -40,7 +40,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
-import androidx.core.view.WindowCompat
 import net.jamesjennison.filamajignfc.core.*
 
 class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
@@ -48,17 +47,11 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
     private val adapter by lazy { NfcAdapter.getDefaultAdapter(this) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = true
         setContent { FilamajigTheme { FilamajigApp(model, adapter != null) } }
     }
     override fun onResume() { super.onResume(); adapter?.enableReaderMode(this, this, NfcAdapter.FLAG_READER_NFC_A or NfcAdapter.FLAG_READER_NFC_V, null) }
     override fun onPause() { adapter?.disableReaderMode(this); super.onPause() }
     override fun onTagDiscovered(tag: Tag) = model.nfc.onTag(tag)
-}
-
-@Composable private fun FilamajigTheme(content: @Composable () -> Unit) {
-    val colors = lightColorScheme(primary = Color(0xFF286354), secondary = Color(0xFF7A5731), background = Color(0xFFF8F6F0), surface = Color(0xFFFFFCF5), error = Color(0xFF9B2C2C))
-    MaterialTheme(colorScheme = colors, typography = Typography(), content = content)
 }
 
 @Composable fun FilamajigApp(model: MainViewModel, nfcAvailable: Boolean) {
@@ -122,11 +115,11 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
                         }
                         model.searchNotice?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
                     }
-                    NfcPanel(model.nfc)
+                    if (model.selected == null) NfcPanel(model.nfc)
                 }
                 when {
                     model.loading -> item { Box(Modifier.fillMaxWidth().height(160.dp), contentAlignment = Alignment.Center) { CircularProgressIndicator() } }
-                    model.selected != null -> item { Detail(model, model.selected!!, { custom = model.seed(model.selected!!); showCustom = true }) { model.selected = null } }
+                    model.selected != null -> item { FilamentScreen(model, model.selected!!, { custom = model.seed(model.selected!!); showCustom = true }) { model.selected = null } }
                     else -> {
                         item { ReadResult(model.nfc.lastRead) { model.decodedSeed()?.let { custom = it; showCustom = true } } }
                         catalogItems(if(model.barcodeMode) emptyList() else model.recents, model.results, model::select)
@@ -351,104 +344,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
         }
 }
 
-@Composable private fun Detail(model: MainViewModel, item: FilamentItem, edit: () -> Unit, back: () -> Unit) {
-    val e = item.entry
-    val context = LocalContext.current
-    val uriHandler = LocalUriHandler.current
-    var confirmDelete by remember(item.entry.packageId) { mutableStateOf(false) }
-    var showPortable by remember(item.entry.packageId) { mutableStateOf(false) }
-    var showSpoolmanSync by remember(item.entry.packageId) { mutableStateOf(false) }
-    var portableIdentity by remember(item.entry.packageId) { mutableStateOf<PortableSpoolIdentity?>(null) }
-    val hasCatalogBarcodeEvidence = isCatalogBarcodeEvidence(item.barcodeEvidence)
-    val hasProviderEvidence = isProviderCandidateEvidence(item.barcodeEvidence)
-    val encodedResult = remember(item, model.codecId) { runCatching { model.encodedTag(item) } }
-    val encoded = encodedResult.getOrNull()
-    val selectedCodec = remember(model.codecId) { model.selectedTagCodec() }
-    var tagFormatMenu by rememberSaveable { mutableStateOf(false) }
-    Column(Modifier.padding(vertical = 12.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        TextButton(onClick = back) { Text("‹ Back to catalog") }
-        Text("${e.brand} ${e.product.ifBlank { e.material }}", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
-        Text("${e.colorName.ifBlank { "#" + e.colorHex }} · ${e.material}")
-        Info(if(hasCatalogBarcodeEvidence || hasProviderEvidence) "Candidate package" else "Package", packageSummary(e)); Info("Nozzle", range(e.nozzleMinC, e.nozzleMaxC)); Info("Bed", range(e.bedMinC, e.bedMaxC)); Info("Retail GTIN", retailGtinDisplay(e.gtin, item.barcodeEvidence))
-        if (item.barcodeEvidence.isNotBlank() && !hasCatalogBarcodeEvidence && !hasProviderEvidence) DetectedCodeEvidence(item.barcodeEvidence)
-        Info("Transmission distance", item.transmissionDistance?.let { "$it mm (HueForge TD)" } ?: "Missing in source")
-        Info("Provenance", when {
-            hasCatalogBarcodeEvidence -> barcodeSummary(item.barcodeEvidence)
-            hasProviderEvidence -> providerCandidateSummary(item.barcodeEvidence)
-            else -> when (item.provenance) { Provenance.CATALOG -> "OFD ${e.sourceRevision} · catalog"; Provenance.CATALOG_EDITED -> "Locally edited from OFD ${e.sourceRevision}"; Provenance.CUSTOM -> "Local custom" }
-        })
-        if(hasCatalogBarcodeEvidence) BarcodeEvidence(item)
-        if(hasProviderEvidence) ProviderCandidateEvidence(item.barcodeEvidence)
-        Text("Field sources: brand ${item.source("brand").substringBefore(" · ").take(36)}; material ${item.source("material").substringBefore(" · ").take(36)}; color ${item.source("colorHex").substringBefore(" · ").take(36)}", style = MaterialTheme.typography.bodySmall)
-        OutlinedButton(onClick = edit, modifier = Modifier.fillMaxWidth()) { Text(if (item.provenance == Provenance.CATALOG) "Edit locally" else "Edit saved record") }
-        if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = {
-            model.loadPortableIdentity(item) { portableIdentity = it; showPortable = true }
-        }, modifier = Modifier.fillMaxWidth()) { Text("Portable QR and export") }
-        if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = {
-            context.startActivity(Intent.createChooser(Intent(Intent.ACTION_SEND).apply {
-                type = "application/json"
-                putExtra(Intent.EXTRA_TEXT, model.spoolmanExport(item))
-            }, "Export for Spoolman"))
-        }, modifier = Modifier.fillMaxWidth()) { Text("Share Spoolman JSON") }
-        if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = { showSpoolmanSync = true }, modifier = Modifier.fillMaxWidth(), enabled = !model.spoolmanSync.busy) { Text("Sync filament profile to Spoolman") }
-        model.spoolmanSync.message?.let { Notice(it, model.spoolmanSync.outcomeUnknown || it.contains("failed", ignoreCase = true) || it.contains("rejected", ignoreCase = true)) }
-        if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = { confirmDelete = true }, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.error)) { Text("Delete local record") }
-        OutlinedButton(onClick = { uriHandler.openUri(filamentProfilesSearchUrl(item.entry.brand, item.entry.material, item.entry.colorName)) }, modifier = Modifier.fillMaxWidth()) { Text("Search 3D Filament Profiles") }
-        Text("Tag compatibility", fontWeight = FontWeight.Bold)
-        if(item.provenance!=Provenance.CATALOG) Info("Verified tag bindings", "${model.savedTagBindings.size} of 2" + model.savedTagBindings.joinToString(prefix=if(model.savedTagBindings.isEmpty()) "" else " · ",separator=" / ") { binding -> "position ${binding.bindingOrder}: ${runCatching { TagCodecRegistry.require(binding.codecId).format.displayName }.getOrDefault(binding.codecId)}" })
-        Text("Compatible printers",style=MaterialTheme.typography.labelLarge)
-        listOf(PrinterTarget.ELEGOO_CANVAS,PrinterTarget.SNAPMAKER_U1_PAXX).forEach { target ->
-            Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically) {
-                Checkbox(checked=target in model.compatiblePrinterTargets,onCheckedChange={model.setCompatiblePrinter(target,it)})
-                Text(target.displayName)
-            }
-        }
-        when(val result=model.compatibilityResult) {
-            is CompatibilityResult.Resolved -> if(model.chooseByPrinters) {
-                val resolution=result.resolution
-                Notice("Recommendation: ${resolution.physicalTags.joinToString{it.displayName}} · ${resolution.encodingName} format\n"+
-                    resolution.targetCompatibility.joinToString("\n"){capability->"${capability.target.displayName}: ${capability.note}"}+
-                    "\nSnapmaker U1 — stock firmware: Not compatible",false)
-                if(PrinterTarget.SNAPMAKER_U1_PAXX in resolution.targets) Text("In PAXX firmware-config, select OpenRFID, then enable [elegoo_tag_processor] in /oem/printer_data/config/extended/openrfid_user.cfg. Upstream disables it by default because factory Elegoo tag placement can read unreliably.",style=MaterialTheme.typography.bodySmall)
-                Text("Experimental: implementation and upstream source paths are verified, but physical CANVAS and U1 reader acceptance has not yet been run. PAXX/OpenRFID is community firmware; this mode does not imply Snapmaker or ELEGOO endorsement.",style=MaterialTheme.typography.bodySmall)
-            }
-            is CompatibilityResult.Unsupported -> if(model.chooseByPrinters) Notice(result.reason,true)
-        }
-        ExposedDropdownMenuBox(expanded=tagFormatMenu,onExpandedChange={tagFormatMenu=it},modifier=Modifier.fillMaxWidth()) {
-            OutlinedTextField(selectedCodec.format.displayName,{},readOnly=true,label={Text(if(model.chooseByPrinters) "Resolved encoding format" else "Advanced format selection")},trailingIcon={ExposedDropdownMenuDefaults.TrailingIcon(tagFormatMenu)},modifier=Modifier.menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable).fillMaxWidth())
-            ExposedDropdownMenu(expanded=tagFormatMenu,onDismissRequest={tagFormatMenu=false}) {
-                model.tagCodecs.forEach { codec -> DropdownMenuItem(text={Column{Text(codec.format.displayName);Text(codec.format.compatibilityTarget,style=MaterialTheme.typography.bodySmall)}},onClick={model.selectTagCodec(codec.format.id);tagFormatMenu=false}) }
-            }
-        }
-        encoded?.let {
-            val storage=when(it.format.transport){TagTransport.NDEF->"NDEF message ${it.ndefMessageSizeBytes} bytes";TagTransport.NTAG_RAW->"Raw NTAG user area ${it.sizeBytes} bytes";TagTransport.MIFARE_CLASSIC_QIDI->"MIFARE Classic data block ${it.sizeBytes} bytes";TagTransport.MIFARE_CLASSIC_CFS->"Encrypted MIFARE Classic data blocks ${it.sizeBytes} bytes"}
-            Notice("${it.format.displayName}\nTarget: ${it.format.compatibilityTarget}\n$storage.\nIncluded: ${it.includedWireFields.sorted().joinToString()}\nOmitted local fields: ${it.omittedFields.sorted().joinToString { field -> fieldLabel(field) }.ifBlank { "none" }}.", false)
-            if(it.format.id==ElegooCanvasTagCodec.format.id) Text("CANVAS writes only raw pages 16-31 on an identified, unlocked NTAG215. All 504 user bytes are inspected; outside the CANVAS block, only blank bytes or the factory empty-NDEF marker are allowed. Existing payload data is rejected rather than erased.",style=MaterialTheme.typography.bodySmall)
-        }
-        if (item.transmissionDistance != null && selectedCodec === PaxxU1ExtendedTagCodec) Text("transmission_distance is a numeric SpoolForge extension. PAXX v1.5.2-paxx12-21 ignores it; the U1 fields above remain compatible.", style = MaterialTheme.typography.bodySmall)
-        if(selectedCodec===ElegooCanvasTagCodec) Text("This writes only the ELEGOO CANVAS raw filament block to pages 16–31 of a verified, unlocked NTAG215. It does not add an OpenSpool record. The existing NDEF area outside those pages is preserved. The brand is not written: the CANVAS manufacturer word is a fixed format marker, so CANVAS and PAXX readers will show this spool as ELEGOO-format filament and a later read of the tag will not recover the brand.",style=MaterialTheme.typography.bodySmall)
-        if(selectedCodec===OpenPrintTagWriteCodec) Text("Requires an NFC-V / ISO 15693 tag that is already NDEF-formatted, writable, and unprotected. SpoolForge does not format or unlock protected regions.",style=MaterialTheme.typography.bodySmall)
-        if(selectedCodec===QidiBoxTagCodec) Text("QIDI Box writes only documented material, palette color, and manufacturer codes. The selected color must exactly match the registered QIDI palette.",style=MaterialTheme.typography.bodySmall)
-        if(selectedCodec===CrealityCfsTagCodec) Text("Creality CFS uses three encrypted blocks on a phone-supported MIFARE Classic 1K tag. Write two separately verified tags with the same frozen spool record for opposite sides of the spool.",style=MaterialTheme.typography.bodySmall)
-        if(selectedCodec !in listOf(StandardOpenSpoolTagCodec,PaxxU1ExtendedTagCodec)) Text("Codec and host validation passed; acceptance on the selected physical reader remains unverified until tested with that hardware.",style=MaterialTheme.typography.bodySmall)
-        if (item.provenance == Provenance.CATALOG) Text("Save this candidate locally to bind verified tag identities to a physical spool. The tag can still be written without a local binding.", style = MaterialTheme.typography.bodySmall)
-        encodedResult.exceptionOrNull()?.message?.let { Notice("Complete missing or invalid fields before writing: $it", true) }
-        val canStartWrite = model.nfc.state.phase in setOf(WritePhase.DRAFT, WritePhase.COMPLETED, WritePhase.CANCELLED, WritePhase.REJECTED, WritePhase.FAILED_BEFORE_WRITE, WritePhase.UNRESOLVED_ARCHIVED)
-        Button(onClick = { model.arm(item) }, modifier = Modifier.fillMaxWidth(), enabled = encoded != null && canStartWrite && model.compatibilityReady()) { Text("Prepare verified NFC write") }
-        Spacer(Modifier.height(90.dp))
-    }
-    if (confirmDelete) AlertDialog(
-        onDismissRequest = { confirmDelete = false },
-        title = { Text("Delete local record?") },
-        text = { Text("Delete ${e.brand} ${e.product.ifBlank { e.material }} — ${e.colorName.ifBlank { "#${e.colorHex}" }} from this device? Its Recent entry will also be removed.") },
-        dismissButton = { TextButton(onClick = { confirmDelete = false }) { Text("Keep record") } },
-        confirmButton = { TextButton(onClick = { confirmDelete = false; model.deleteLocal(item) }, colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error)) { Text("Delete") } },
-    )
-    if (showPortable && portableIdentity != null) PortableIdentityDialog(portableIdentity!!) { showPortable = false }
-    if (showSpoolmanSync) SpoolmanSyncDialog(model.spoolmanServer, model.spoolmanSync.busy, dismiss = { showSpoolmanSync = false }, sync = { server, density -> model.syncSpoolmanProfile(item, server, density); showSpoolmanSync = false })
-}
-
-@Composable private fun SpoolmanSyncDialog(initialServer: String, busy: Boolean, dismiss: () -> Unit, sync: (String, String?) -> Unit) {
+@Composable internal fun SpoolmanSyncDialog(initialServer: String, busy: Boolean, dismiss: () -> Unit, sync: (String, String?) -> Unit) {
     var server by rememberSaveable { mutableStateOf(initialServer) }
     var density by rememberSaveable { mutableStateOf("") }
     AlertDialog(
@@ -464,7 +360,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
     )
 }
 
-@Composable private fun PortableIdentityDialog(identity: PortableSpoolIdentity, dismiss: () -> Unit) {
+@Composable internal fun PortableIdentityDialog(identity: PortableSpoolIdentity, dismiss: () -> Unit) {
     val context = LocalContext.current
     var temperatures by rememberSaveable { mutableStateOf(true) }
     var identifiers by rememberSaveable { mutableStateOf(true) }
@@ -512,13 +408,13 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
     }
 }
 
-@Composable private fun NfcPanel(nfc: NfcCoordinator) {
+@Composable internal fun NfcPanel(nfc: NfcCoordinator) {
     var showDiagnostics by remember { mutableStateOf(false) }
     var showHistory by remember { mutableStateOf(false) }
     val s = nfc.state
     val optionalSecondTag = s.tagNumber == 2 && s.phase in setOf(WritePhase.AWAITING_TAG, WritePhase.INSPECTING, WritePhase.NEEDS_OVERWRITE_CONSENT, WritePhase.REJECTED, WritePhase.FAILED_BEFORE_WRITE)
     val active = s.phase !in setOf(WritePhase.DRAFT, WritePhase.UNRESOLVED_ARCHIVED, WritePhase.CANCELLED)
-    if (active) Card(Modifier.fillMaxWidth().padding(top = 8.dp), colors = CardDefaults.cardColors(containerColor = if (s.phase == WritePhase.VERIFIED) Color(0xFFDDEFE6) else Color(0xFFFFF1D8))) {
+    if (active) Card(Modifier.fillMaxWidth().padding(top = 8.dp), colors = if (s.phase == WritePhase.VERIFIED) CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer, contentColor = MaterialTheme.colorScheme.onPrimaryContainer) else CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.tertiaryContainer, contentColor = MaterialTheme.colorScheme.onTertiaryContainer)) {
         Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
             Text(phaseLabel(s.phase), fontWeight = FontWeight.Bold)
             Text(s.detail)
@@ -562,7 +458,7 @@ internal fun wireFieldSummary(payload: ByteArray): String {
     }
 }
 
-private fun barcodeSummary(evidence: String): String = runCatching {
+internal fun barcodeSummary(evidence: String): String = runCatching {
     val e = org.json.JSONObject(evidence)
     val count = e.getInt("candidate_count")
     "${e.getJSONObject("snapshot").getString("source")} · ${e.getString("scope")} · $count candidate(s) for barcode"
@@ -622,7 +518,7 @@ private fun summarizeQrPayload(payload: String): String = runCatching {
     "QR/RFID profile: $schema${identity.takeIf { it.isNotEmpty() }?.joinToString(prefix = " · ", separator = " · ").orEmpty()}"
 }.getOrElse { "QR payload: ${payload.take(72)}${if (payload.length > 72) "…" else ""}" }
 
-@Composable private fun ProviderCandidateEvidence(evidence: String) {
+@Composable internal fun ProviderCandidateEvidence(evidence: String) {
     var show by remember { mutableStateOf(false) }
     val value = remember(evidence) { runCatching { org.json.JSONObject(evidence) }.getOrNull() }
     val conflicts = value?.optJSONArray("conflicting_fields")?.let { array -> (0 until array.length()).map(array::getString) }.orEmpty()
@@ -636,7 +532,7 @@ private fun summarizeQrPayload(payload: String): String = runCatching {
     )
 }
 
-@Composable private fun DetectedCodeEvidence(evidence: String) {
+@Composable internal fun DetectedCodeEvidence(evidence: String) {
     var show by remember { mutableStateOf(false) }
     Info("Detected code", scannedCodeSummary(evidence))
     if (evidence.length > scannedCodeSummary(evidence).length) {
@@ -650,7 +546,7 @@ private fun summarizeQrPayload(payload: String): String = runCatching {
     )
 }
 
-@Composable private fun BarcodeEvidence(item: FilamentItem) {
+@Composable internal fun BarcodeEvidence(item: FilamentItem) {
     var show by remember { mutableStateOf(false) }
     val evidence = remember(item.barcodeEvidence) { runCatching { org.json.JSONObject(item.barcodeEvidence) }.getOrNull() }
     evidence?.let { ev ->
@@ -685,7 +581,7 @@ private fun summarizeQrPayload(payload: String): String = runCatching {
     }
 }
 
-@Composable private fun Info(label: String, value: String) {
+@Composable internal fun Info(label: String, value: String) {
     if (label.length > 17) {
         Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(2.dp)) {
             Text(label, fontWeight = FontWeight.SemiBold)
@@ -698,9 +594,9 @@ private fun summarizeQrPayload(payload: String): String = runCatching {
         }
     }
 }
-@Composable private fun Notice(text: String, error: Boolean) { Surface(color = if (error) MaterialTheme.colorScheme.errorContainer else MaterialTheme.colorScheme.secondaryContainer, shape = RoundedCornerShape(10.dp)) { Text(text, Modifier.padding(12.dp)) } }
+@Composable internal fun Notice(text: String, error: Boolean) { Surface(color = if (error) MaterialTheme.colorScheme.errorContainer else MaterialTheme.colorScheme.secondaryContainer, shape = RoundedCornerShape(10.dp)) { Text(text, Modifier.padding(12.dp)) } }
 private fun range(a: Int?, b: Int?) = when { a == null && b == null -> "Missing in source"; a == b -> "$a °C"; else -> "${a ?: "?"}–${b ?: "?"} °C" }
-private fun packageSummary(e: net.jamesjennison.filamajignfc.data.CatalogEntry): String {
+internal fun packageSummary(e: net.jamesjennison.filamajignfc.data.CatalogEntry): String {
     val diameter = e.diameterMm.ifBlank { DEFAULT_DIAMETER_MM }
     val mass = e.massG.takeIf { it > 0 } ?: DEFAULT_NOMINAL_MASS_G.toInt()
     return "$diameter mm · $mass g"
@@ -728,7 +624,7 @@ private fun packageSummary(e: net.jamesjennison.filamajignfc.data.CatalogEntry):
     )
 }
 
-private fun fieldLabel(value: String) = mapOf("brand" to "brand", "colorName" to "color name", "bedTemperatureRange" to "bed temperature range", "bedTemperatureTargets" to "bed temperature targets", "temperatures" to "temperatures", "weight" to "weight", "drying" to "drying settings", "packageIdentity" to "package identity", "remainingWeight" to "remaining weight", "signature" to "signature", "product" to "product label", "diameter" to "diameter", "mass" to "mass", "nozzleMin" to "nozzle minimum", "nozzleMax" to "nozzle maximum", "bedMin" to "bed minimum", "bedMax" to "bed maximum", "transmissionDistance" to "transmission distance", "additionalColors" to "additional colors", "packageId" to "package identifier", "gtin" to "barcode", "sku" to "article number", "provenance" to "field provenance")[value] ?: value
+internal fun fieldLabel(value: String) = mapOf("brand" to "brand", "colorName" to "color name", "bedTemperatureRange" to "bed temperature range", "bedTemperatureTargets" to "bed temperature targets", "temperatures" to "temperatures", "weight" to "weight", "drying" to "drying settings", "packageIdentity" to "package identity", "remainingWeight" to "remaining weight", "signature" to "signature", "product" to "product label", "diameter" to "diameter", "mass" to "mass", "nozzleMin" to "nozzle minimum", "nozzleMax" to "nozzle maximum", "bedMin" to "bed minimum", "bedMax" to "bed maximum", "transmissionDistance" to "transmission distance", "additionalColors" to "additional colors", "packageId" to "package identifier", "gtin" to "barcode", "sku" to "article number", "provenance" to "field provenance")[value] ?: value
 private const val FILAMENT_PROFILES_CATALOG_URL = "https://3dfilamentprofiles.com/filaments"
 
 /**

@@ -85,6 +85,8 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     var compatiblePrinterTargets by mutableStateOf(setOf(PrinterTarget.ELEGOO_CANVAS,PrinterTarget.SNAPMAKER_U1_PAXX)); private set
     var compatibilityResult by mutableStateOf(CompatibilityResolver.resolve(compatiblePrinterTargets)); private set
     var chooseByPrinters by mutableStateOf(true); private set
+    /** The user's answer to "Which printer is it for?"; it decides the tag format. */
+    internal var writeTarget by mutableStateOf(WriteTargets.require(WriteTargets.DEFAULT_ID)); private set
     private val gtinIndex = GtinIndex(app)
     private val ofdProvider = OfdCatalogProvider(store.catalog.catalog())
     private val localProvider = LocalCatalogProvider(store.user)
@@ -352,11 +354,14 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
     fun selectedTagCodec(): FilamentTagCodec = TagCodecRegistry.require(codecId)
-    fun setCompatiblePrinter(target:PrinterTarget,selected:Boolean) {
-        chooseByPrinters=true
-        compatiblePrinterTargets=if(selected)compatiblePrinterTargets+target else compatiblePrinterTargets-target
-        compatibilityResult=CompatibilityResolver.resolve(compatiblePrinterTargets)
-        (compatibilityResult as? CompatibilityResult.Resolved)?.let{codecId=it.resolution.codecId}
+    internal fun selectWriteTarget(id: String) {
+        val target = WriteTargets.require(id)
+        writeTarget = target
+        if (target.codecId != null) { selectTagCodec(target.codecId); return }
+        chooseByPrinters = true
+        compatiblePrinterTargets = target.printers
+        compatibilityResult = CompatibilityResolver.resolve(target.printers)
+        (compatibilityResult as? CompatibilityResult.Resolved)?.let { codecId = it.resolution.codecId }
     }
     fun selectTagCodec(id:String) {
         codecId=TagCodecRegistry.require(id).format.id
