@@ -36,7 +36,9 @@ import net.jamesjennison.filamajignfc.core.*
 
     Column(Modifier.padding(vertical = 12.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
         TextButton(onClick = back) { Text("‹ Back") }
+        if (model.openedFromTag) Notice("This is the spool that tag belongs to.", false)
         FilamentHeader(item)
+        if (saved) model.spoolQuantity?.let { RemainingFilament(it) { grams -> model.setRemaining(item, grams) } }
         FilamentFacts(item)
         WriteTagCard(model, item)
         if (saved) Text(savedTagsSummary(model.savedTagBindings), style = MaterialTheme.typography.bodyMedium)
@@ -79,6 +81,35 @@ import net.jamesjennison.filamajignfc.core.*
             Text(displayName(item), style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
             Text("${displayColor(item)} · ${e.material}", style = MaterialTheme.typography.titleMedium)
         }
+    }
+}
+
+/** How much is left on the spool, with a way to correct it after a print or a weigh-in. */
+@Composable private fun RemainingFilament(quantity: net.jamesjennison.filamajignfc.data.SavedPortableIdentity, save: (Int) -> Unit) {
+    val total = quantity.initialQuantityG
+    val left = quantity.remainingQuantityG ?: total
+    var editing by rememberSaveable(quantity.spoolId) { mutableStateOf(false) }
+    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+            Text("$left g left of $total g", Modifier.weight(1f), fontWeight = FontWeight.SemiBold)
+            TextButton(onClick = { editing = true }) { Text("Update") }
+        }
+        LinearProgressIndicator(progress = { (left.toFloat() / total).coerceIn(0f, 1f) }, modifier = Modifier.fillMaxWidth())
+    }
+    if (editing) {
+        var text by rememberSaveable { mutableStateOf(left.toString()) }
+        val grams = text.trim().toIntOrNull()?.takeIf { it in 0..total }
+        AlertDialog(
+            onDismissRequest = { editing = false },
+            title = { Text("How much is left?") },
+            text = { Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                OutlinedTextField(text, { text = it.filter(Char::isDigit).take(6) }, label = { Text("Grams of filament") }, singleLine = true,
+                    isError = grams == null, supportingText = { Text("Between 0 and $total g. Weigh the spool and subtract the empty spool's weight.") },
+                    keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(keyboardType = androidx.compose.ui.text.input.KeyboardType.Number))
+            } },
+            dismissButton = { TextButton(onClick = { editing = false }) { Text("Cancel") } },
+            confirmButton = { TextButton(onClick = { grams?.let(save); editing = false }, enabled = grams != null) { Text("Save") } },
+        )
     }
 }
 
@@ -126,7 +157,8 @@ import net.jamesjennison.filamajignfc.core.*
                 enabled = encoded != null && model.compatibilityReady(),
             ) { Text("Write tag") }
 
-            encoded?.let { tag ->
+            // A phone-only tag just points this phone at the saved filament, so what the tag itself holds does not matter.
+            if (target.id != WriteTargets.PHONE_ONLY_ID) encoded?.let { tag ->
                 val lost = valuesLeftOffTag(item, tag.omittedFields)
                 if (lost.isNotEmpty()) Text("This kind of tag can't hold this filament's ${lost.joinToString()}.", style = MaterialTheme.typography.bodySmall)
             }

@@ -191,6 +191,7 @@ interface CanonicalDao {
     @Query("SELECT * FROM profile_identifiers WHERE profile_id=:profileId ORDER BY scheme, value") suspend fun identifiers(profileId: String): List<ProfileIdentifierEntity>
     @Query("SELECT * FROM physical_spools WHERE profile_id=:profileId ORDER BY created_at, spool_id") suspend fun spools(profileId: String): List<PhysicalSpoolEntity>
     @Query("SELECT * FROM physical_spools WHERE spool_id=:id") suspend fun spool(id: String): PhysicalSpoolEntity?
+    @Query("UPDATE physical_spools SET remaining_quantity_g=:grams, updated_at=:now WHERE spool_id=:id") suspend fun setRemainingQuantity(id: String, grams: Int, now: Long)
     @Query("SELECT * FROM physical_spools WHERE legacy_record_id=:legacyId") suspend fun spoolForLegacyRecord(legacyId: String): PhysicalSpoolEntity?
     @Query("SELECT * FROM tag_bindings WHERE spool_id=:spoolId ORDER BY binding_order, created_at") suspend fun tagBindings(spoolId: String): List<TagBindingEntity>
     @Query("SELECT * FROM tag_bindings WHERE technology=:technology AND uid_hex=:uidHex") suspend fun tagBindingByUid(technology: String, uidHex: String): TagBindingEntity?
@@ -448,6 +449,17 @@ class LocalFilamentRepository internal constructor(private val database: UserDat
     }
 
     suspend fun tagBindings(spoolId: String): List<TagBindingEntity> = database.canonical().tagBindings(spoolId)
+
+    /** The saved filament a tag was written for, found by the tag's own serial number. */
+    suspend fun recordIdForTag(uidHex: String): String? =
+        database.canonical().tagBindingByUid("NFC-A", uidHex)?.let { database.canonical().spool(it.spoolId)?.legacyRecordId }
+
+    suspend fun setRemainingQuantity(recordId: String, grams: Int, now: Long = System.currentTimeMillis()): SavedPortableIdentity {
+        val spool = database.canonical().spoolForLegacyRecord(recordId) ?: error("Save this filament before tracking how much is left")
+        require(grams in 0..spool.initialQuantityG) { "Enter a weight between 0 and ${spool.initialQuantityG} g" }
+        database.canonical().setRemainingQuantity(spool.spoolId, grams, now)
+        return SavedPortableIdentity(spool.profileId, spool.spoolId, spool.initialQuantityG, grams)
+    }
 }
 
 data class SavedPortableIdentity(val profileId: String, val spoolId: String, val initialQuantityG: Int, val remainingQuantityG: Int?)

@@ -16,6 +16,9 @@ import java.util.concurrent.Executors
 private const val ELEGOO_USER_OFFSET = ElegooCanvasTagCodec.USER_AREA_OFFSET
 
 data class WriteBindingContext(val spoolId: String, val codecId: String)
+/** A tag touched outside a write. [at] makes two taps of the same tag distinct events. */
+data class TagTap(val uidHex: String, val at: Long)
+private val IDLE_PHASES=setOf(WritePhase.DRAFT,WritePhase.COMPLETED,WritePhase.CANCELLED,WritePhase.REJECTED,WritePhase.FAILED_BEFORE_WRITE,WritePhase.UNRESOLVED_ARCHIVED)
 data class VerifiedTagWrite(val context: WriteBindingContext, val uid: ByteArray, val payload: ByteArray, val bindingOrder: Int)
 internal enum class BindingPersistence { NOT_REQUIRED, SAVED, RETRY_REQUIRED }
 
@@ -31,6 +34,8 @@ class NfcCoordinator(
     var readDiagnostic by mutableStateOf<String?>(null); private set
     var state by mutableStateOf(machine.state); private set
     var lastRead by mutableStateOf<DecodeResult?>(null); private set
+    /** The most recent tag held to the phone while no write was under way. */
+    var lastTap by mutableStateOf<TagTap?>(null); private set
     var bindingStatus by mutableStateOf<String?>(null); private set
     var detectedTagType by mutableStateOf<String?>(null); private set
     var unresolvedArchiveCount by mutableIntStateOf(journal.archiveCount()); private set
@@ -76,6 +81,7 @@ class NfcCoordinator(
     }
     private fun awaitingWrite()=machine.state.phase in setOf(WritePhase.AWAITING_TAG,WritePhase.INSPECTING,WritePhase.NEEDS_OVERWRITE_CONSENT)
     private fun handle(tag:Tag){
+        if(machine.state.phase in IDLE_PHASES){val tap=TagTap(tag.id.joinToString(""){"%02X".format(it)},System.nanoTime());post{lastTap=tap}}
         val codecId=machine.state.intent?.codecId?:activeCodecId
         val transport=codecId?.let{runCatching{TagCodecRegistry.require(it).format.transport}.getOrNull()}
         if(transport==TagTransport.NTAG_RAW){handleRawNtag(tag,checkNotNull(codecId));return}

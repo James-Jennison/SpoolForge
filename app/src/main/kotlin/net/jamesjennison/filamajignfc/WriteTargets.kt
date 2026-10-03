@@ -29,6 +29,7 @@ internal data class WriteTarget(
 
 internal object WriteTargets {
     const val DEFAULT_ID = "canvas-u1"
+    const val PHONE_ONLY_ID = "phone-only"
 
     val all: List<WriteTarget> = listOf(
         WriteTarget(
@@ -57,6 +58,11 @@ internal object WriteTargets {
             setupNote = "The tag must already be formatted and unprotected. SpoolForge does not format or unlock tags.",
         ),
         WriteTarget("opentag3d", "OpenTag3D", "NTAG215 or NTAG216", codecId = OpenTag3dWriteCodec.format.id),
+        WriteTarget(
+            PHONE_ONLY_ID, "My printer doesn't read tags", "NTAG215 or NTAG216",
+            codecId = StandardOpenSpoolTagCodec.format.id, unconfirmedReader = null,
+            setupNote = "Your printer won't read this tag. It lets this phone recognize the spool when you tap it. You can also print a QR label from More.",
+        ),
         WriteTarget(
             "openspool", "OpenSpool (standard)", "NTAG215 or NTAG216",
             codecId = StandardOpenSpoolTagCodec.format.id, unconfirmedReader = null,

@@ -25,7 +25,7 @@ class WriteTargetsTest {
     }
 
     @Test fun onlyTargetsWithReaderEvidenceDropTheUnconfirmedWarning() {
-        assertEquals(setOf("canvas", "u1-paxx", "openspool"), WriteTargets.all.filter { it.unconfirmedReader == null }.map { it.id }.toSet())
+        assertEquals(setOf("canvas", "u1-paxx", "phone-only", "openspool"), WriteTargets.all.filter { it.unconfirmedReader == null }.map { it.id }.toSet())
         assertEquals("Snapmaker U1", WriteTargets.require(WriteTargets.DEFAULT_ID).unconfirmedReader)
     }
 }

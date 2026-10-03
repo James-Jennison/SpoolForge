@@ -22,6 +22,16 @@ class FilamentScreenTextTest {
         assertEquals("Unknown color", displayColor(item(colorName = "", hex = "")))
     }
 
+    @Test fun recentIsHiddenWhenItOnlyRepeatsAShortSavedList() {
+        fun saved(id: String) = item().let { it.copy(entry = it.entry.copy(packageId = id)) }
+        fun catalog(id: String) = saved(id).copy(provenance = Provenance.CATALOG)
+        val few = listOf(saved("a"), saved("b"))
+        assertEquals(emptyList<FilamentItem>(), recentWorthShowing(few, few + catalog("c")))
+        assertEquals(listOf("c"), recentWorthShowing(listOf(catalog("c")), few + catalog("c")).map { it.entry.packageId })
+        val many = (1..7).map { saved("s$it") }
+        assertEquals(5, recentWorthShowing(many, many).size)
+    }
+
     @Test fun onlyValuesTheFilamentHasAreReportedAsLeftOffTheTag() {
         val omitted = setOf("brand", "colorName", "bedTemperatureRange", "additionalColors", "transmissionDistance", "sku", "gtin")
         assertEquals(listOf("bed temperature range", "brand", "color name"), valuesLeftOffTag(item(), omitted))

@@ -4,6 +4,7 @@ import android.app.Application
 import android.os.SystemClock
 import androidx.compose.runtime.*
 import androidx.lifecycle.AndroidViewModel
+import androidx.core.content.edit
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
@@ -64,6 +65,10 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         pendingLabelFile.takeIf { it.isFile && it.length() in 1..6_000_000 }?.readBytes()
     }.getOrNull()
     var savedTagBindings by mutableStateOf<List<TagBindingEntity>>(emptyList()); private set
+    /** How much filament the selected saved spool started with and has left. */
+    var spoolQuantity by mutableStateOf<SavedPortableIdentity?>(null); private set
+    /** Set when the open filament was found by tapping its tag. */
+    var openedFromTag by mutableStateOf(false); private set
     val nfc = NfcCoordinator(app, onVerified = { verified ->
         runBlocking {
             store.filaments.bindVerifiedTag(
@@ -86,7 +91,8 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     var compatibilityResult by mutableStateOf(CompatibilityResolver.resolve(compatiblePrinterTargets)); private set
     var chooseByPrinters by mutableStateOf(true); private set
     /** The user's answer to "Which printer is it for?"; it decides the tag format. */
-    internal var writeTarget by mutableStateOf(WriteTargets.require(WriteTargets.DEFAULT_ID)); private set
+    private val writePrefs = app.getSharedPreferences("write-settings", 0)
+    internal var writeTarget by mutableStateOf(WriteTargets.all.firstOrNull { it.id == writePrefs.getString("target", null) } ?: WriteTargets.require(WriteTargets.DEFAULT_ID)); private set
     private val gtinIndex = GtinIndex(app)
     private val ofdProvider = OfdCatalogProvider(store.catalog.catalog())
     private val localProvider = LocalCatalogProvider(store.user)
@@ -110,14 +116,18 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     var spoolmanImports by mutableStateOf<List<SpoolmanImport>>(emptyList()); private set
     var bulkImports by mutableStateOf<List<BulkCsvRecord>>(emptyList()); private set
     var labelPhotos by mutableStateOf(restoredLabelPhoto?.let { listOf(LabelPhoto(LabelPhotoRole.PROFILE, it, emptyList())) }.orEmpty()); private set
-    var barcodeMode by mutableStateOf(false); private set
     var searchNotice by mutableStateOf<String?>(null); private set
+    /** True while a search the user is waiting on has not finished, so the list does not claim "no matches" early. */
+    var searching by mutableStateOf(false); private set
+    private var searchJob: kotlinx.coroutines.Job? = null
     private var searchGeneration = 0
     private var customItems: List<FilamentItem> = emptyList()
     private var catalogItems: List<FilamentItem> = emptyList()
 
     init {
         refreshChatGpt()
+        selectWriteTargetQuietly()
+        viewModelScope.launch { snapshotFlow { nfc.lastTap }.collect { tap -> if (tap != null) openSpoolForTag(tap) } }
         viewModelScope.launch {
             runCatching { withContext(Dispatchers.IO) {
                 store.ensureCatalog()
@@ -134,41 +144,72 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         viewModelScope.launch { store.user.user().customs().collectLatest { customItems = it.map(CustomRecord::asItem); refreshVisible() } }
     }
 
-    fun useBarcodeLookup(enabled: Boolean) {
-        searchGeneration++; barcodeMode=enabled; error=null; searchNotice=null
-        results=if(enabled) emptyList() else customItems+catalogItems
-    }
-
-    private fun refreshVisible() { if (query.isBlank() && !barcodeMode) results = customItems + catalogItems }
+    private fun refreshVisible() { if (query.isBlank()) results = customItems + catalogItems }
     fun search() {
         val q = query.trim()
         if (q.length > 120) { error = "Search is limited to 120 characters"; return }
         val generation = ++searchGeneration
-        val useBarcode = barcodeMode
-        if(useBarcode) { results=emptyList(); searchNotice="Looking up barcode…" }
-        viewModelScope.launch {
+        // A run of 8 to 14 digits is a retail barcode. It is looked up exactly first; if nothing carries it,
+        // the same digits are searched as text so a numeric SKU still finds its filament.
+        val looksLikeBarcode = q.length in 8..14 && q.all(Char::isDigit)
+        searchJob?.cancel()
+        searching = true
+        searchJob = viewModelScope.launch {
+            // Searching runs as the user types; wait for a short pause so each keystroke does not start a lookup.
+            if (q.isNotEmpty()) kotlinx.coroutines.delay(200)
             runCatching {
                 withContext(Dispatchers.IO) {
-                    if (useBarcode) return@withContext CatalogCandidateRanking.rank(
-                        gtinProvider.search(CatalogQuery(identifiers = listOf("GTIN" to q), limit = 100))
-                    ).map(CatalogCandidate::toFilamentItem)
+                    if (looksLikeBarcode) {
+                        // Digits that are not a valid barcode (a wrong check digit, a number still being typed) are not an error.
+                        val exact = runCatching { CatalogCandidateRanking.rank(gtinProvider.search(CatalogQuery(identifiers = listOf("GTIN" to q), limit = 100))) }.getOrDefault(emptyList())
+                        if (exact.isNotEmpty()) return@withContext exact.map(CatalogCandidate::toFilamentItem) to true
+                    }
                     val providerQuery = CatalogQuery(text = q, identifiers = listOf("SKU" to q), limit = 100)
                     val local=localProvider.search(providerQuery)
-                    if (q.isBlank()) return@withContext local.map(CatalogCandidate::toFilamentItem)+catalogItems
-                    CatalogCandidateRanking.rank(local + ofdProvider.search(providerQuery) + communityProvider.search(providerQuery),limit=100).map(CatalogCandidate::toFilamentItem)
+                    if (q.isBlank()) return@withContext (local.map(CatalogCandidate::toFilamentItem)+catalogItems) to false
+                    CatalogCandidateRanking.rank(local + ofdProvider.search(providerQuery) + communityProvider.search(providerQuery),limit=100).map(CatalogCandidate::toFilamentItem) to false
                 }
-            }.onSuccess { if (generation == searchGeneration) { results = it; error = null; searchNotice = if(useBarcode) "${it.size} source candidates. Select the exact package; sources are not automatically merged." else null } }.onFailure { if(generation == searchGeneration) { results=emptyList(); searchNotice=null; error = if(useBarcode) it.message ?: "Barcode lookup failed" else "Search could not be completed" } }
+            }.onSuccess { (found, byBarcode) ->
+                if (generation == searchGeneration) {
+                    searching = false
+                    results = found; error = null
+                    searchNotice = if (byBarcode && found.size > 1) "Several packages carry this barcode. Pick the one that matches your spool." else null
+                }
+            }.onFailure {
+                if (it is kotlinx.coroutines.CancellationException) throw it
+                if (generation == searchGeneration) { searching = false; results = emptyList(); searchNotice = null; error = "Search could not be completed" }
+            }
         }
     }
 
-    fun select(item: FilamentItem) {
+    fun select(item: FilamentItem, fromTag: Boolean = false) {
         selected = item
+        openedFromTag = fromTag
         savedTagBindings=emptyList()
+        spoolQuantity=null
         viewModelScope.launch(Dispatchers.IO) { store.user.user().recent(Recent(item.entry.packageId, item.provenance.name, encodeSnapshot(item), System.currentTimeMillis())) }
         if(item.provenance!=Provenance.CATALOG)viewModelScope.launch {
-            savedTagBindings = withContext(Dispatchers.IO) {
-                store.filaments.portableIds(item.entry.packageId)?.let { store.filaments.tagBindings(it.spoolId) }.orEmpty()
+            val (quantity, bindings) = withContext(Dispatchers.IO) {
+                val ids = store.filaments.portableIds(item.entry.packageId)
+                ids to ids?.let { store.filaments.tagBindings(it.spoolId) }.orEmpty()
             }
+            if (selected?.entry?.packageId == item.entry.packageId) { spoolQuantity = quantity; savedTagBindings = bindings }
+        }
+    }
+
+    fun setRemaining(item: FilamentItem, grams: Int) {
+        viewModelScope.launch {
+            runCatching { withContext(Dispatchers.IO) { store.filaments.setRemainingQuantity(item.entry.packageId, grams) } }
+                .onSuccess { if (selected?.entry?.packageId == item.entry.packageId) spoolQuantity = it; error = null }
+                .onFailure { error = it.message ?: "The remaining weight could not be saved" }
+        }
+    }
+
+    /** Tapping a tag this app wrote opens the spool it belongs to. Tags it does not know are left to the tag reader. */
+    private fun openSpoolForTag(tap: TagTap) {
+        viewModelScope.launch {
+            val recordId = runCatching { withContext(Dispatchers.IO) { store.filaments.recordIdForTag(tap.uidHex) } }.getOrNull() ?: return@launch
+            customItems.firstOrNull { it.entry.packageId == recordId }?.let { select(it, fromTag = true) }
         }
     }
 
@@ -354,9 +395,19 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
     fun selectedTagCodec(): FilamentTagCodec = TagCodecRegistry.require(codecId)
+    /** Applies the remembered printer choice at startup without writing it back. */
+    private fun selectWriteTargetQuietly() {
+        val target = writeTarget
+        if (target.codecId != null) { selectTagCodec(target.codecId); return }
+        chooseByPrinters = true
+        compatiblePrinterTargets = target.printers
+        compatibilityResult = CompatibilityResolver.resolve(target.printers)
+        (compatibilityResult as? CompatibilityResult.Resolved)?.let { codecId = it.resolution.codecId }
+    }
     internal fun selectWriteTarget(id: String) {
         val target = WriteTargets.require(id)
         writeTarget = target
+        writePrefs.edit { putString("target", target.id) }
         if (target.codecId != null) { selectTagCodec(target.codecId); return }
         chooseByPrinters = true
         compatiblePrinterTargets = target.printers

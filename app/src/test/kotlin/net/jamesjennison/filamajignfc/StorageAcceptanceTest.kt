@@ -508,6 +508,31 @@ class StorageAcceptanceTest {
         }
     }
 
+    @Test fun aTappedTagFindsItsSpoolAndRemainingWeightIsTrackedWithinTheSpoolSize() = runBlocking {
+        Room.inMemoryDatabaseBuilder(context, UserDatabase::class.java).allowMainThreadQueries().build().use { db ->
+            val record = CustomRecord(
+                "tapped-spool", null, "", "", "Owner", "PLA", "Basic", "Blue", "0000FF", "1.75", 1000,
+                200, 220, 50, 60, null, null, "", "user", "CUSTOM", "User", "User", "User", "User", "User",
+                "Assumed default", "Assumed default", "User", "User", "User", "User", 99, "", null, null,
+            )
+            val repository = LocalFilamentRepository(db)
+            repository.save(record)
+            val spoolId = repository.portableIds(record.id)!!.spoolId
+            repository.bindVerifiedTag(spoolId, byteArrayOf(0x04, 0xA2.toByte(), 0x7F), "elegoo-canvas-1.0", "payload".encodeToByteArray(), 1, 100)
+
+            assertEquals("tapped-spool", repository.recordIdForTag("04A27F"))
+            assertNull(repository.recordIdForTag("04A280"))
+
+            assertEquals(1000, repository.portableIds(record.id)!!.remainingQuantityG)
+            assertEquals(640, repository.setRemainingQuantity(record.id, 640, now = 200).remainingQuantityG)
+            assertEquals(640, repository.portableIds(record.id)!!.remainingQuantityG)
+            repository.save(record.copy(updatedAt = 300))
+            assertEquals(640, repository.portableIds(record.id)!!.remainingQuantityG)
+            assertTrue(runCatching { repository.setRemainingQuantity(record.id, 1001) }.exceptionOrNull() is IllegalArgumentException)
+            assertTrue(runCatching { repository.setRemainingQuantity("never-saved", 10) }.isFailure)
+        }
+    }
+
     @Test fun repositoryBindsTwoVerifiedTagsReplacesSlotsAndCascadesWithSpool() = runBlocking {
         Room.inMemoryDatabaseBuilder(context, UserDatabase::class.java).allowMainThreadQueries().build().use { db ->
             val record = CustomRecord(

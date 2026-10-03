@@ -55,13 +55,12 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
 }
 
 @Composable fun FilamajigApp(model: MainViewModel, nfcAvailable: Boolean) {
-    val focusManager=LocalFocusManager.current
-    val keyboardController=LocalSoftwareKeyboardController.current
     var custom by remember { mutableStateOf<CustomSeed?>(null) }
     var showLabelScanner by rememberSaveable { mutableStateOf(false) }
     var showPortableImport by rememberSaveable { mutableStateOf(false) }
     var showSpoolmanImport by rememberSaveable { mutableStateOf(false) }
     var showBulkImport by rememberSaveable { mutableStateOf(false) }
+    var showAiAccount by rememberSaveable { mutableStateOf(false) }
     var showCustom by remember { mutableStateOf(false) }
     var labelReview by remember { mutableStateOf<List<String>>(emptyList()) }
     var labelCodes by remember { mutableStateOf<List<LabelCode>>(emptyList()) }
@@ -83,52 +82,45 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
             model.consumePortableImport()
         }
     }
-    val uriHandler = LocalUriHandler.current
+    val addManually = { custom = CustomSeed(); showCustom = true }
     Scaffold(
-        topBar = { TopAppBar(title = { Column { Text(stringResource(R.string.app_name), fontWeight = FontWeight.Bold); Text(stringResource(R.string.app_tagline), style = MaterialTheme.typography.labelMedium) } }) },
-        floatingActionButton = { if (model.selected == null) ExtendedFloatingActionButton(onClick = { custom = CustomSeed(); showCustom = true }) { Text("Custom filament") } },
+        topBar = { TopAppBar(
+            title = { Text(stringResource(R.string.app_name), fontWeight = FontWeight.Bold) },
+            actions = { if (model.selected == null) HomeMenu(
+                importBundle = { showPortableImport = true }, importSpoolman = { showSpoolmanImport = true },
+                importSpreadsheet = { showBulkImport = true }, aiScanning = { showAiAccount = true },
+            ) },
+        ) },
     ) { padding ->
         // One scrolling surface: status/history can never pin the detail form underneath them.
         key(model.selected?.entry?.packageId) {
-            LazyColumn(Modifier.padding(padding).padding(horizontal = 16.dp).fillMaxSize(), contentPadding = PaddingValues(bottom = 100.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            LazyColumn(Modifier.padding(padding).padding(horizontal = 16.dp).fillMaxSize(), contentPadding = PaddingValues(bottom = 32.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 item {
-                    if (!nfcAvailable) Notice("NFC is unavailable on this device. Offline catalog remains usable.", true)
+                    if (!nfcAvailable) Notice("This phone has no NFC, so it can't write tags. You can still look up and save filaments.", true)
                     model.error?.let { Notice(it, true) }
                     if (model.selected == null) {
-                        Row(verticalAlignment = Alignment.CenterVertically) { Switch(checked = model.barcodeMode, onCheckedChange = model::useBarcodeLookup, modifier = Modifier.semantics { contentDescription = "Exact barcode lookup" }); Text("Exact barcode lookup") }
-                        OutlinedTextField(model.query, { model.query = it }, Modifier.fillMaxWidth().padding(top = 12.dp), label = { Text(if(model.barcodeMode) "GTIN / EAN / UPC-A" else "Brand, product, color, package ID, or SKU") }, singleLine = true, trailingIcon = { TextButton(onClick = model::search) { Text("Search") } })
-                        Button(
-                            onClick = { model.clearLabelPhotos(); showLabelScanner = true },
-                            modifier = Modifier.fillMaxWidth(),
-                        ) { Text("Scan label or QR with AI") }
-                        ChatGptPlanCard(model)
-                        if (model.query.isNotBlank()) OutlinedButton(onClick = { uriHandler.openUri(filamentProfilesSearchUrl(model.query)) }, modifier = Modifier.fillMaxWidth()) { Text("Search 3D Filament Profiles for this") }
-                        OutlinedButton(onClick = { showPortableImport = true }, modifier = Modifier.fillMaxWidth()) { Text("Import portable spool bundle") }
-                        OutlinedButton(onClick = { showSpoolmanImport = true }, modifier = Modifier.fillMaxWidth()) { Text("Import Spoolman JSON") }
-                        OutlinedButton(onClick = { showBulkImport = true }, modifier = Modifier.fillMaxWidth()) { Text("Bulk add CSV") }
-                        labelAnalysis.message?.let { Notice(it, it.startsWith("Label scan failed")) }
-                        if (!labelAnalysis.busy && labelAnalysis.result == null && model.labelPhotos.isNotEmpty()) {
-                            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                Button(onClick = model::analyzeLabelPhotos, modifier = Modifier.weight(1f)) { Text("Retry analysis") }
-                                OutlinedButton(onClick = model::clearLabelAnalysis, modifier = Modifier.weight(1f)) { Text("Discard photo") }
-                            }
-                        }
-                        model.searchNotice?.let { Text(it, style = MaterialTheme.typography.bodySmall) }
+                        HomeHeader(model, scanLabel = { model.clearLabelPhotos(); showLabelScanner = true }, addManually = addManually)
+                        NfcPanel(model.nfc)
                     }
-                    if (model.selected == null) NfcPanel(model.nfc)
                 }
                 when {
                     model.loading -> item { Box(Modifier.fillMaxWidth().height(160.dp), contentAlignment = Alignment.Center) { CircularProgressIndicator() } }
                     model.selected != null -> item { FilamentScreen(model, model.selected!!, { custom = model.seed(model.selected!!); showCustom = true }) { model.selected = null } }
                     else -> {
                         item { ReadResult(model.nfc.lastRead) { model.decodedSeed()?.let { custom = it; showCustom = true } } }
-                        catalogItems(if(model.barcodeMode) emptyList() else model.recents, model.results, model::select)
+                        filamentList(model.query, model.searching, model.recents, model.results, model::select, addManually)
                     }
                 }
             }
         }
     }
 
+    if (showAiAccount) AlertDialog(
+        onDismissRequest = { showAiAccount = false },
+        title = { Text("Label scanning") },
+        text = { ChatGptPlanCard(model) },
+        confirmButton = { TextButton(onClick = { showAiAccount = false }) { Text("Done") } },
+    )
     if (showLabelScanner) LabelCamera(
         onDismiss = { showLabelScanner = false; model.clearLabelPhotos() },
         onCapture = { bytes, codes ->
@@ -308,40 +300,6 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
         is DecodeResult.Rejected -> Notice("Tag read: ${result.reason}", false)
         null -> Unit
     }
-}
-
-private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents: List<FilamentItem>, entries: List<FilamentItem>, select: (FilamentItem) -> Unit) {
-    if (recents.isNotEmpty()) {
-        item { Text("Recent", Modifier.padding(top = 12.dp), fontWeight = FontWeight.Bold) }
-        recents.take(5).forEach { item ->
-            val e = item.entry
-            item { TextButton(onClick = { select(item) }, modifier = Modifier.fillMaxWidth()) { Text((e.brand + " · " + e.product.ifBlank { e.material }) + " — " + e.colorName.ifBlank { "#" + e.colorHex }, modifier = Modifier.fillMaxWidth()) } }
-        }
-    }
-    item { Text("${entries.size} matches shown", Modifier.padding(vertical = 12.dp), style = MaterialTheme.typography.labelLarge) }
-        items(entries, key = { it.entry.packageId }) { item ->
-            val e = item.entry
-            Card(Modifier.fillMaxWidth().clickable { select(item) }) {
-                Row(Modifier.padding(14.dp), verticalAlignment = Alignment.CenterVertically) {
-                    val color = runCatching { Color(android.graphics.Color.parseColor("#" + e.colorHex.removePrefix("#"))) }.getOrElse { Color.Gray }
-                    Box(Modifier.size(42.dp).background(color, RoundedCornerShape(12.dp)).semantics { contentDescription = "${e.colorName.ifBlank { "Filament" }} color sample" })
-                    Spacer(Modifier.width(12.dp))
-                    Column(Modifier.weight(1f)) {
-                        Text("${e.brand} · ${e.product.ifBlank { e.material }}", fontWeight = FontWeight.SemiBold)
-                        Text("${e.material} — ${e.colorName.ifBlank { "#" + e.colorHex }}")
-                        Text(packageSummary(e), style = MaterialTheme.typography.bodySmall)
-                        if(item.barcodeEvidence.isNotBlank()) Text(
-                            when {
-                                isCatalogBarcodeEvidence(item.barcodeEvidence) -> barcodeSummary(item.barcodeEvidence)
-                                isProviderCandidateEvidence(item.barcodeEvidence) -> providerCandidateSummary(item.barcodeEvidence)
-                                else -> scannedCodeSummary(item.barcodeEvidence)
-                            },
-                            style = MaterialTheme.typography.bodySmall,
-                        )
-                    }
-                }
-            }
-        }
 }
 
 @Composable internal fun SpoolmanSyncDialog(initialServer: String, busy: Boolean, dismiss: () -> Unit, sync: (String, String?) -> Unit) {
