@@ -1,10 +1,12 @@
 <resources>
+    <!-- Android 12 and later draw the splash screen themselves from these values. -->
     <style name="Theme.FilamajigNfc" parent="android:style/Theme.Material.Light.NoActionBar">
         <item name="android:fontFamily">sans</item>
         <item name="android:colorAccent">#3D6F61</item>
         <item name="android:navigationBarColor">@color/app_background</item>
         <item name="android:windowLightNavigationBar">@bool/light_system_bars</item>
-        <!-- Shown while the app starts; the app draws its own background once it is running. -->
-        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowBackground">@color/app_background</item>
+        <item name="android:windowSplashScreenBackground">@color/brand_green</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
     </style>
 </resources>

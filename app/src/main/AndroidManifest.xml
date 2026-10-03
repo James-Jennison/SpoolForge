@@ -6,7 +6,7 @@
     <!-- Only for the short-lived service that keeps the app unfrozen while ChatGPT sign-in is open in the browser. -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-feature android:name="android.hardware.nfc" android:required="false" />
-    <application android:name=".FilamajigApplication" android:allowBackup="false" android:usesCleartextTraffic="true" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/Theme.FilamajigNfc">
+    <application android:name=".FilamajigApplication" android:allowBackup="false" android:usesCleartextTraffic="true" android:dataExtractionRules="@xml/data_extraction_rules" android:fullBackupContent="@xml/backup_rules" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/Theme.FilamajigNfc">
         <activity android:name=".MainActivity" android:exported="true" android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

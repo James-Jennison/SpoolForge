@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Single-color version for themed icons: the launcher supplies the tint. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#FFFFFF" android:fillType="evenOdd"
+        android:pathData="M26,58a24,24 0 1,0 48,0a24,24 0 1,0 -48,0M33,58a17,17 0 1,0 34,0a17,17 0 1,0 -34,0M41,58a9,9 0 1,0 18,0a9,9 0 1,0 -18,0M46,58a4,4 0 1,0 8,0a4,4 0 1,0 -8,0" />
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="3.5" android:strokeLineCap="round" android:pathData="M60.26,29.81A30,30 0 0 1 78.19,47.74" />
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="3.5" android:strokeLineCap="round" android:pathData="M62.31,24.17A36,36 0 0 1 83.83,45.69" />
+</vector>
