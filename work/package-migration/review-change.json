@@ -1,6 +1,6 @@
 {
   "change_id": "filamajig-identity-camera-20260907",
-  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "repository": "/home/user/Documents/ChatGPT/Spoolio",
   "summary": "Rename the Android product and namespace to Filamajig NFC, migrate prototype user state, and accept checksum-valid numeric GTIN QR labels while rejecting marketplace identifiers and arbitrary QR content.",
   "classification": "SUBSTANTIVE",
   "affected_components": ["app", "core", "catalog-tool", "device-data"],

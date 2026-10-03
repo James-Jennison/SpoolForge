@@ -131,7 +131,7 @@ warning: The following options were not recognized by any processor: '[room.sche
 > Task :app:lintAnalyzeDebug
 
 > Task :app:lintReportDebug
-Wrote HTML report to file:///home/jjennison/Documents/ChatGPT/Spoolio/app/build/reports/lint-results-debug.html
+Wrote HTML report to file:///home/user/Documents/ChatGPT/Spoolio/app/build/reports/lint-results-debug.html
 
 > Task :app:lintDebug
 

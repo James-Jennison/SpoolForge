@@ -1,6 +1,6 @@
 {
   "change_id": "filamajig-portable-identity-pivot-20260907",
-  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "repository": "/home/user/Documents/ChatGPT/Spoolio",
   "summary": "Establish an evidence-backed pivot to a local-first portable filament identity workbench, with canonical profile/spool/provenance models plus catalog-provider and explicit OpenSpool/PAXX codec boundaries.",
   "classification": "SUBSTANTIVE",
   "affected_components": ["product-direction", "domain-model", "catalog-boundary", "tag-codec-boundary", "roadmap"],

@@ -1,6 +1,6 @@
 {
   "change_id": "filamajig-codec-paxx-m4-20260907",
-  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "repository": "/home/user/Documents/ChatGPT/Spoolio",
   "summary": "Route tag writes through an explicit codec registry, pin and test the PAXX U1 extended contract, preview exact fields and capacity, and persist one or two tag bindings only after verified NFC readback.",
   "classification": "SUBSTANTIVE",
   "affected_components": ["android", "nfc", "openspool", "paxx-u1", "persistence", "recovery", "ui", "documentation"],

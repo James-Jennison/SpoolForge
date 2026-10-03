@@ -1,6 +1,6 @@
 {
   "change_id": "filamajig-portable-identity-m3-20260907",
-  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "repository": "/home/user/Documents/ChatGPT/Spoolio",
   "summary": "Add the versioned offline Filamajig portable spool QR and export bundle with separate profile and physical-spool identity, local import, configurable label output, and lossless identity persistence.",
   "classification": "SUBSTANTIVE",
   "affected_components": [

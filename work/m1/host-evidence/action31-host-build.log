@@ -1,9 +1,9 @@
-heavy-build: project=/home/jjennison/Documents/ChatGPT/Spoolio jobs=6 scratch=/mnt/faststorage/build-work/tmp/Spoolio-80cd9ca34cca/run.hecMIRxB
+heavy-build: project=/home/user/Documents/ChatGPT/Spoolio jobs=6 scratch=/mnt/faststorage/build-work/tmp/Spoolio-80cd9ca34cca/run.hecMIRxB
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.13/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
 
 > Configure project :app
-w: file:///home/jjennison/Documents/ChatGPT/Spoolio/app/build.gradle.kts:17:21: 'jvmTarget: String' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
+w: file:///home/user/Documents/ChatGPT/Spoolio/app/build.gradle.kts:17:21: 'jvmTarget: String' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
 
 > Task :core:checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :core:compileKotlin UP-TO-DATE
@@ -92,11 +92,11 @@ warning: The following options were not recognized by any processor: '[room.sche
 > Task :app:mergeDebugJavaResource UP-TO-DATE
 
 > Task :app:compileDebugUnitTestKotlin FAILED
-e: file:///home/jjennison/Documents/ChatGPT/Spoolio/app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt:42:150 Cannot infer type for type parameter 'R'. Specify it explicitly.
-e: file:///home/jjennison/Documents/ChatGPT/Spoolio/app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt:42:150 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+e: file:///home/user/Documents/ChatGPT/Spoolio/app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt:42:150 Cannot infer type for type parameter 'R'. Specify it explicitly.
+e: file:///home/user/Documents/ChatGPT/Spoolio/app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt:42:150 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
 fun <T : Closeable?, R> T.use(block: (T) -> R): R
-e: file:///home/jjennison/Documents/ChatGPT/Spoolio/app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt:54:159 Cannot infer type for type parameter 'R'. Specify it explicitly.
-e: file:///home/jjennison/Documents/ChatGPT/Spoolio/app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt:54:159 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+e: file:///home/user/Documents/ChatGPT/Spoolio/app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt:54:159 Cannot infer type for type parameter 'R'. Specify it explicitly.
+e: file:///home/user/Documents/ChatGPT/Spoolio/app/src/test/kotlin/net/jamesjennison/spoolio/StorageAcceptanceTest.kt:54:159 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
 fun <T : Closeable?, R> T.use(block: (T) -> R): R
 
 > Task :app:mergeProjectDexDebug

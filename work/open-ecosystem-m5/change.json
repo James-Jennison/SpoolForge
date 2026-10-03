@@ -1,6 +1,6 @@
 {
   "change_id": "filamajig-open-ecosystem-m5-20260907",
-  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "repository": "/home/user/Documents/ChatGPT/Spoolio",
   "summary": "Add revision-pinned read and conversion adapters for OpenTag3D and OpenPrintTag, plus Spoolman JSON import/export and idempotent filament-profile sync.",
   "classification": "SUBSTANTIVE",
   "affected_components": ["android", "nfc", "ndef", "cbor", "external-formats", "spoolman", "network", "ui", "documentation"],

@@ -1,6 +1,6 @@
 {
   "change_id": "filamajig-label-prototype-20260907",
-  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "repository": "/home/user/Documents/ChatGPT/Spoolio",
   "summary": "Add debug-only hybrid camera label scanning with deterministic local code evidence, a loopback OpenAI Terra extraction service, provenance-aware merge, and mandatory field review before local save.",
   "classification": "SUBSTANTIVE",
   "affected_components": [

@@ -1,6 +1,6 @@
 {
   "change_id": "spoolio-camera-20260907",
-  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "repository": "/home/user/Documents/ChatGPT/Spoolio",
   "summary": "Owner-approved on-device camera barcode scanner feeding the existing exact offline GTIN candidate lookup.",
   "classification": "SUBSTANTIVE",
   "affected_components": ["app", "core"],

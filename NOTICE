@@ -26,3 +26,9 @@ format facts documented by MakaiView/cfs-programmer revision 52349f4f and
 cross-checked against soylentOrange/K2-RFID revision b4f2760c. The former is
 MIT licensed; the latter is GPL-3.0-or-later. SpoolForge's implementation is
 independent and does not copy GPL implementation code.
+
+The GPL-3.0 and AGPL-3.0 projects kept under research/sources (PAXX extended
+firmware, SpoolPainter, VCOPT) are interoperability references. A line-by-line
+comparison on 2026-10-03 found no source line of the PAXX or SpoolPainter code
+reproduced in SpoolForge; the overlap is limited to public wire-format field
+names and platform API names.

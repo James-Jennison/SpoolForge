@@ -1,6 +1,6 @@
 {
   "change_id": "filamajig-label-marketplace-guard-20260907",
-  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "repository": "/home/user/Documents/ChatGPT/Spoolio",
   "classification": "SUBSTANTIVE",
   "summary": "Prevent AI label fields from promoting locally decoded marketplace identifiers to manufacturer SKU or packaging-condition text to brand.",
   "provenance": {

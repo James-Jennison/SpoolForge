@@ -1,6 +1,6 @@
 {
   "change_id": "filamajig-offline-providers-20260907",
-  "repository": "/home/jjennison/Documents/ChatGPT/Spoolio",
+  "repository": "/home/user/Documents/ChatGPT/Spoolio",
   "summary": "Add deterministic offline OFD, local, merged-GTIN, and SpoolmanDB Community providers with per-candidate provenance, ambiguity retention, and ranked identifier and structured-field lookup.",
   "classification": "SUBSTANTIVE",
   "affected_components": ["android", "catalog-provider", "offline-data", "search-ranking", "provenance", "build-tooling"],
