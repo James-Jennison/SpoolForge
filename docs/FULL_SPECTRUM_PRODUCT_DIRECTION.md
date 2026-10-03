@@ -1,6 +1,6 @@
 # Full Spectrum Product Direction Report
 
-Status: **OWNER APPROVED — M7 implemented and validated**
+Status: **ARCHIVED — the feature was removed from the app on 2026-10-03 (see [ADR-002](decisions/ADR-002-refocus-on-tag-manager-and-public-release.md)). This report is kept as a design record; M7–M8 code is in the git history.**
 Repository baseline: `0dac497b4` (`codex/m1-offline-openspool`)
 Assessment date: 2026-09-08
 

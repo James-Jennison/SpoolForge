@@ -42,7 +42,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.core.view.WindowCompat
 import net.jamesjennison.filamajignfc.core.*
-import net.jamesjennison.filamajignfc.data.FullSpectrumProfileData
 
 class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
     private val model: MainViewModel by viewModels()
@@ -70,7 +69,6 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
     var showPortableImport by rememberSaveable { mutableStateOf(false) }
     var showSpoolmanImport by rememberSaveable { mutableStateOf(false) }
     var showBulkImport by rememberSaveable { mutableStateOf(false) }
-    var showSpectrumFilters by rememberSaveable { mutableStateOf(false) }
     var showCustom by remember { mutableStateOf(false) }
     var labelReview by remember { mutableStateOf<List<String>>(emptyList()) }
     var labelCodes by remember { mutableStateOf<List<LabelCode>>(emptyList()) }
@@ -106,12 +104,6 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
                     if (model.selected == null) {
                         Row(verticalAlignment = Alignment.CenterVertically) { Switch(checked = model.barcodeMode, onCheckedChange = model::useBarcodeLookup, modifier = Modifier.semantics { contentDescription = "Exact barcode lookup" }); Text("Exact barcode lookup") }
                         OutlinedTextField(model.query, { model.query = it }, Modifier.fillMaxWidth().padding(top = 12.dp), label = { Text(if(model.barcodeMode) "GTIN / EAN / UPC-A" else "Brand, product, color, package ID, or SKU") }, singleLine = true, trailingIcon = { TextButton(onClick = model::search) { Text("Search") } })
-                        if(!model.barcodeMode) {
-                            OutlinedButton(onClick={focusManager.clearFocus();keyboardController?.hide();showSpectrumFilters=!showSpectrumFilters},modifier=Modifier.fillMaxWidth()) {
-                                Text(if(showSpectrumFilters) "Hide Full Spectrum filters" else "Full Spectrum filters")
-                            }
-                            if(showSpectrumFilters) FullSpectrumFilters(model)
-                        }
                         Button(
                             onClick = { model.clearLabelPhotos(); showLabelScanner = true },
                             modifier = Modifier.fillMaxWidth(),
@@ -186,39 +178,6 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
         },
     )
     if (showCustom) CustomDialog(custom ?: CustomSeed(), labelReview, labelCodes, onDismiss = { showCustom = false; labelReview = emptyList(); labelCodes = emptyList(); model.clearLabelAnalysis() }, onSave = { values -> model.saveCustom(custom ?: CustomSeed(), values); showCustom = false; labelReview = emptyList(); labelCodes = emptyList(); model.clearLabelAnalysis() })
-}
-
-@Composable private fun FullSpectrumFilters(model:MainViewModel) {
-    val current=model.fullSpectrumFilter
-    var minimum by rememberSaveable { mutableStateOf(current.tdMinimumMm.orEmpty()) }
-    var maximum by rememberSaveable { mutableStateOf(current.tdMaximumMm.orEmpty()) }
-    Column(Modifier.fillMaxWidth(),verticalArrangement=Arrangement.spacedBy(6.dp)) {
-        Text("Mixing role",fontWeight=FontWeight.Bold)
-        Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(4.dp)) {
-            listOf("C","M","Y","G").forEach { role -> FilterChip(current.roleKey==role,{model.updateFullSpectrumFilter(current.copy(roleKey=if(current.roleKey==role)null else role))},{Text(role)},Modifier.weight(1f)) }
-        }
-        Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(4.dp)) {
-            FilterChip(current.tdOrigin==TdOrigin.USER_MEASURED.name,{model.updateFullSpectrumFilter(current.copy(tdOrigin=if(current.tdOrigin==TdOrigin.USER_MEASURED.name)null else TdOrigin.USER_MEASURED.name))},{Text("Measured")},Modifier.weight(1f))
-            FilterChip(current.tdOrigin==TdOrigin.MANUFACTURER_PUBLISHED.name,{model.updateFullSpectrumFilter(current.copy(tdOrigin=if(current.tdOrigin==TdOrigin.MANUFACTURER_PUBLISHED.name)null else TdOrigin.MANUFACTURER_PUBLISHED.name))},{Text("Published")},Modifier.weight(1f))
-        }
-        Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(4.dp)) {
-            listOf(SuitabilityRating.GOOD,SuitabilityRating.USABLE,SuitabilityRating.POOR).forEach { rating -> FilterChip(current.suitability==rating,{model.updateFullSpectrumFilter(current.copy(suitability=if(current.suitability==rating)null else rating))},{Text(rating.name.lowercase().replaceFirstChar(Char::uppercase))},Modifier.weight(1f)) }
-        }
-        Text("Evidence and inventory",fontWeight=FontWeight.Bold)
-        Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(4.dp)) {
-            FilterChip(current.testState==FullSpectrumTestState.TESTED,{model.updateFullSpectrumFilter(current.copy(testState=if(current.testState==FullSpectrumTestState.TESTED)null else FullSpectrumTestState.TESTED))},{Text("Tested")},Modifier.weight(1f))
-            FilterChip(current.testState==FullSpectrumTestState.UNTESTED,{model.updateFullSpectrumFilter(current.copy(testState=if(current.testState==FullSpectrumTestState.UNTESTED)null else FullSpectrumTestState.UNTESTED))},{Text("Untested")},Modifier.weight(1f))
-            FilterChip(current.ownership==InventoryOwnership.OWNED,{model.updateFullSpectrumFilter(current.copy(ownership=if(current.ownership==InventoryOwnership.OWNED)null else InventoryOwnership.OWNED))},{Text("Owned")},Modifier.weight(1f))
-        }
-        Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(8.dp)) {
-            OutlinedTextField(minimum,{minimum=it},Modifier.weight(1f),label={Text("TD min mm")},singleLine=true)
-            OutlinedTextField(maximum,{maximum=it},Modifier.weight(1f),label={Text("TD max mm")},singleLine=true)
-        }
-        Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(8.dp)) {
-            Button(onClick={runCatching { model.updateFullSpectrumFilter(current.copy(tdMinimumMm=minimum.trim().ifBlank{null},tdMaximumMm=maximum.trim().ifBlank{null})) }},Modifier.weight(1f)){Text("Apply")}
-            TextButton(onClick={minimum="";maximum="";model.clearFullSpectrumFilter()},Modifier.weight(1f)){Text("Clear")}
-        }
-    }
 }
 
 @Composable private fun BulkCsvImportDialog(dismiss: () -> Unit, import: (String) -> Unit) {
@@ -400,7 +359,6 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
     var showPortable by remember(item.entry.packageId) { mutableStateOf(false) }
     var showSpoolmanSync by remember(item.entry.packageId) { mutableStateOf(false) }
     var portableIdentity by remember(item.entry.packageId) { mutableStateOf<PortableSpoolIdentity?>(null) }
-    var fullSpectrumExpanded by rememberSaveable(item.entry.packageId) { mutableStateOf(false) }
     val hasCatalogBarcodeEvidence = isCatalogBarcodeEvidence(item.barcodeEvidence)
     val hasProviderEvidence = isProviderCandidateEvidence(item.barcodeEvidence)
     val encodedResult = remember(item, model.codecId) { runCatching { model.encodedTag(item) } }
@@ -422,10 +380,6 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
         if(hasCatalogBarcodeEvidence) BarcodeEvidence(item)
         if(hasProviderEvidence) ProviderCandidateEvidence(item.barcodeEvidence)
         Text("Field sources: brand ${item.source("brand").substringBefore(" · ").take(36)}; material ${item.source("material").substringBefore(" · ").take(36)}; color ${item.source("colorHex").substringBefore(" · ").take(36)}", style = MaterialTheme.typography.bodySmall)
-        OutlinedButton(onClick={ fullSpectrumExpanded=!fullSpectrumExpanded },modifier=Modifier.fillMaxWidth()) {
-            Text(if(fullSpectrumExpanded) "Hide Full Spectrum profile" else "Show Full Spectrum profile")
-        }
-        if(fullSpectrumExpanded) FullSpectrumProfile(model,item,model.fullSpectrum)
         OutlinedButton(onClick = edit, modifier = Modifier.fillMaxWidth()) { Text(if (item.provenance == Provenance.CATALOG) "Edit locally" else "Edit saved record") }
         if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = {
             model.loadPortableIdentity(item) { portableIdentity = it; showPortable = true }
@@ -492,37 +446,6 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
     )
     if (showPortable && portableIdentity != null) PortableIdentityDialog(portableIdentity!!) { showPortable = false }
     if (showSpoolmanSync) SpoolmanSyncDialog(model.spoolmanServer, model.spoolmanSync.busy, dismiss = { showSpoolmanSync = false }, sync = { server, density -> model.syncSpoolmanProfile(item, server, density); showSpoolmanSync = false })
-}
-
-@Composable private fun FullSpectrumProfile(model:MainViewModel,item:FilamentItem,data:FullSpectrumProfileData?) {
-    Column(Modifier.fillMaxWidth().padding(vertical=4.dp),verticalArrangement=Arrangement.spacedBy(8.dp)) {
-        Text("Full Spectrum characterization",fontWeight=FontWeight.Bold)
-        Text("Evidence is local and is never written to OpenSpool, PAXX, or portable identity v1.",style=MaterialTheme.typography.bodySmall)
-        if(item.provenance==Provenance.CATALOG) {
-            Text("Save this profile locally before recording optical evidence, roles, or suitability.")
-            return@Column
-        }
-        val summary=fullSpectrumUiSummary(data)
-        Info("Optical characterization",summary.optical)
-        Info("Role assertions",summary.roles)
-        Info("CMYG readiness",summary.completeness)
-        if(model.fullSpectrumAlternates.isNotEmpty()) Text(model.fullSpectrumAlternates.entries.joinToString(" · ") { (role,candidates) -> "$role: ${candidates.size} alternate${if(candidates.size==1) "" else "s"} with evidence" },style=MaterialTheme.typography.bodySmall)
-        Text("Confirm a role",style=MaterialTheme.typography.labelLarge)
-        Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(4.dp)) {
-            listOf("C","M","Y","G").forEach { role -> AssistChip(onClick={model.assertFullSpectrumRole(item,role)},label={Text(role)},modifier=Modifier.weight(1f)) }
-        }
-        Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(4.dp)) {
-            listOf("WHITE","BLACK").forEach { role -> AssistChip(onClick={model.assertFullSpectrumRole(item,role)},label={Text(role.lowercase().replaceFirstChar(Char::uppercase))},modifier=Modifier.weight(1f)) }
-        }
-        Info("Recommended suitability",summary.recommended)
-        Info("Observed suitability",summary.observed)
-        Text("Record an observed result",style=MaterialTheme.typography.labelLarge)
-        Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(4.dp)) {
-            listOf(SuitabilityRating.GOOD,SuitabilityRating.USABLE,SuitabilityRating.POOR).forEach { rating ->
-                AssistChip(onClick={model.recordObservedSuitability(item,rating)},label={Text(rating.name.lowercase().replaceFirstChar(Char::uppercase))},modifier=Modifier.weight(1f))
-            }
-        }
-    }
 }
 
 @Composable private fun SpoolmanSyncDialog(initialServer: String, busy: Boolean, dismiss: () -> Unit, sync: (String, String?) -> Unit) {

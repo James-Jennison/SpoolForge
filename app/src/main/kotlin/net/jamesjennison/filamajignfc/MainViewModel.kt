@@ -64,8 +64,6 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         pendingLabelFile.takeIf { it.isFile && it.length() in 1..6_000_000 }?.readBytes()
     }.getOrNull()
     var savedTagBindings by mutableStateOf<List<TagBindingEntity>>(emptyList()); private set
-    var fullSpectrum by mutableStateOf<FullSpectrumProfileData?>(null); private set
-    var fullSpectrumAlternates by mutableStateOf<Map<String,List<FullSpectrumCandidateEvidence>>>(emptyMap()); private set
     val nfc = NfcCoordinator(app, onVerified = { verified ->
         runBlocking {
             store.filaments.bindVerifiedTag(
@@ -112,7 +110,6 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     var labelPhotos by mutableStateOf(restoredLabelPhoto?.let { listOf(LabelPhoto(LabelPhotoRole.PROFILE, it, emptyList())) }.orEmpty()); private set
     var barcodeMode by mutableStateOf(false); private set
     var searchNotice by mutableStateOf<String?>(null); private set
-    var fullSpectrumFilter by mutableStateOf(FullSpectrumSearchFilter()); private set
     private var searchGeneration = 0
     private var customItems: List<FilamentItem> = emptyList()
     private var catalogItems: List<FilamentItem> = emptyList()
@@ -140,9 +137,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         results=if(enabled) emptyList() else customItems+catalogItems
     }
 
-    fun updateFullSpectrumFilter(value:FullSpectrumSearchFilter) { fullSpectrumFilter=value; search() }
-    fun clearFullSpectrumFilter() { updateFullSpectrumFilter(FullSpectrumSearchFilter()) }
-    private fun refreshVisible() { if (query.isBlank() && !barcodeMode && fullSpectrumFilter.isEmpty) results = customItems + catalogItems }
+    private fun refreshVisible() { if (query.isBlank() && !barcodeMode) results = customItems + catalogItems }
     fun search() {
         val q = query.trim()
         if (q.length > 120) { error = "Search is limited to 120 characters"; return }
@@ -157,10 +152,6 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                     ).map(CatalogCandidate::toFilamentItem)
                     val providerQuery = CatalogQuery(text = q, identifiers = listOf("SKU" to q), limit = 100)
                     val local=localProvider.search(providerQuery)
-                    if (!fullSpectrumFilter.isEmpty) {
-                        val accepted=store.filaments.searchFullSpectrum(fullSpectrumFilter).toSet()
-                        return@withContext local.filter { it.providerRecordId in accepted }.map(CatalogCandidate::toFilamentItem)
-                    }
                     if (q.isBlank()) return@withContext local.map(CatalogCandidate::toFilamentItem)+catalogItems
                     CatalogCandidateRanking.rank(local + ofdProvider.search(providerQuery) + communityProvider.search(providerQuery),limit=100).map(CatalogCandidate::toFilamentItem)
                 }
@@ -171,36 +162,14 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     fun select(item: FilamentItem) {
         selected = item
         savedTagBindings=emptyList()
-        fullSpectrum=null
-        fullSpectrumAlternates=emptyMap()
         viewModelScope.launch(Dispatchers.IO) { store.user.user().recent(Recent(item.entry.packageId, item.provenance.name, encodeSnapshot(item), System.currentTimeMillis())) }
         if(item.provenance!=Provenance.CATALOG)viewModelScope.launch {
-            withContext(Dispatchers.IO) {
-                val bindings = store.filaments.portableIds(item.entry.packageId)?.let { store.filaments.tagBindings(it.spoolId) }.orEmpty()
-                val spectrum = store.filaments.fullSpectrum(item.entry.packageId)
-                val missing=SetCompletenessService.analyze(spectrum?.roles.orEmpty().filter { it.assertionState==AssertionState.ACTIVE.name }.map { it.roleKey }).missingMixingRoles
-                val alternatives=missing.associateWith { store.filaments.alternateCandidates(it).filter { candidate -> candidate.recordId!=item.entry.packageId } }
-                Triple(bindings,spectrum,alternatives.filterValues { it.isNotEmpty() })
-            }.let { (bindings,spectrum,alternatives) -> savedTagBindings=bindings; fullSpectrum=spectrum; fullSpectrumAlternates=alternatives }
+            savedTagBindings = withContext(Dispatchers.IO) {
+                store.filaments.portableIds(item.entry.packageId)?.let { store.filaments.tagBindings(it.spoolId) }.orEmpty()
+            }
         }
     }
 
-    fun assertFullSpectrumRole(item: FilamentItem, role: String) {
-        viewModelScope.launch {
-            runCatching { withContext(Dispatchers.IO) { store.filaments.assertUserRole(item.entry.packageId, role); store.filaments.fullSpectrum(item.entry.packageId) } }
-                .onSuccess { fullSpectrum=it; error=null }
-                .onFailure { error=it.message ?: "Role evidence could not be saved" }
-        }
-    }
-
-    fun recordObservedSuitability(item: FilamentItem, rating: SuitabilityRating) {
-        viewModelScope.launch {
-            runCatching { withContext(Dispatchers.IO) {
-                store.filaments.recordObservedSuitability(item.entry.packageId, rating, "User-recorded profile observation")
-                store.filaments.fullSpectrum(item.entry.packageId)
-            } }.onSuccess { fullSpectrum=it; error=null }.onFailure { error=it.message ?: "Suitability evidence could not be saved" }
-        }
-    }
     fun clearLabelPhotos() { if (!labelAnalysis.busy) { labelPhotos = emptyList(); pendingLabelFile.delete() } }
     fun addLabelPhoto(jpeg: ByteArray, codes: List<LabelCode>) {
         if (labelAnalysis.busy || labelPhotos.isNotEmpty()) return

@@ -4,6 +4,10 @@ import androidx.room.*
 import androidx.sqlite.db.SupportSQLiteDatabase
 import net.jamesjennison.filamajignfc.core.*
 
+// Storage for the Full Spectrum color-mixing feature, which was removed from the app in October 2026.
+// The tables stay in the schema so existing databases open without a migration and their rows survive.
+// Only the transmission distance history (optical_characterizations and its evidence) is still written.
+
 @Entity(tableName="evidence_references",indices=[Index(value=["kind","provider","record_id"])])
 data class EvidenceReferenceEntity(
     @PrimaryKey @ColumnInfo(name="evidence_id") val evidenceId:String,
@@ -70,21 +74,6 @@ data class FullSpectrumAssessmentFactorEntity(
     @ColumnInfo(name="value_text") val valueText:String?,@ColumnInfo(name="evidence_id") val evidenceId:String?,val rationale:String?,
 )
 
-data class FullSpectrumProfileData(
-    val opticalCharacterizations:List<OpticalCharacterizationEntity>,
-    val appearances:List<AppearanceAssertionEntity>,
-    val roles:List<FullSpectrumRoleAssertionEntity>,
-    val suitability:List<FullSpectrumSuitabilityAssessmentEntity>,
-)
-
-data class FullSpectrumCandidateEvidence(
-    @ColumnInfo(name="record_id") val recordId:String,
-    @ColumnInfo(name="profile_id") val profileId:String,
-    @ColumnInfo(name="role_key") val roleKey:String,
-    val authority:String,
-    @ColumnInfo(name="evidence_id") val evidenceId:String?,
-)
-
 @Dao interface FullSpectrumDao {
     @Upsert suspend fun putEvidence(value:EvidenceReferenceEntity)
     @Upsert suspend fun putOpticalCharacterization(value:OpticalCharacterizationEntity)
@@ -98,23 +87,6 @@ data class FullSpectrumCandidateEvidence(
     @Query("SELECT * FROM appearance_assertions WHERE profile_id=:profileId ORDER BY asserted_at,assertion_id") suspend fun appearances(profileId:String):List<AppearanceAssertionEntity>
     @Query("SELECT * FROM full_spectrum_role_assertions WHERE profile_id=:profileId ORDER BY asserted_at,assertion_id") suspend fun roles(profileId:String):List<FullSpectrumRoleAssertionEntity>
     @Query("SELECT * FROM full_spectrum_assessments WHERE profile_id=:profileId ORDER BY assessed_at,assessment_id") suspend fun suitability(profileId:String):List<FullSpectrumSuitabilityAssessmentEntity>
-    @Query("""
-        SELECT DISTINCT fp.legacy_record_id FROM filament_profiles fp
-        WHERE fp.legacy_record_id IS NOT NULL
-          AND (:roleKey IS NULL OR EXISTS (SELECT 1 FROM full_spectrum_role_assertions r WHERE r.profile_id=fp.profile_id AND r.role_key=:roleKey AND r.assertion_state='ACTIVE' AND r.superseded_by_assertion_id IS NULL))
-          AND (:tdOrigin IS NULL AND :tdMinimum IS NULL AND :tdMaximum IS NULL OR EXISTS (SELECT 1 FROM optical_characterizations o WHERE o.profile_id=fp.profile_id AND o.property_key='transmission_distance' AND o.value_text IS NOT NULL AND o.superseded_by_characterization_id IS NULL AND (:tdOrigin IS NULL OR o.origin=:tdOrigin) AND (:tdMinimum IS NULL OR CAST(o.value_text AS REAL)>=:tdMinimum) AND (:tdMaximum IS NULL OR CAST(o.value_text AS REAL)<=:tdMaximum)))
-          AND (:suitability IS NULL OR EXISTS (SELECT 1 FROM full_spectrum_assessments a WHERE a.profile_id=fp.profile_id AND a.rating=:suitability AND a.superseded_by_assessment_id IS NULL))
-          AND (:testState IS NULL OR (:testState='TESTED' AND EXISTS (SELECT 1 FROM full_spectrum_assessments a WHERE a.profile_id=fp.profile_id AND a.assessment_kind='OBSERVED' AND a.rating NOT IN ('UNKNOWN','UNTESTED') AND a.superseded_by_assessment_id IS NULL)) OR (:testState='UNTESTED' AND NOT EXISTS (SELECT 1 FROM full_spectrum_assessments a WHERE a.profile_id=fp.profile_id AND a.assessment_kind='OBSERVED' AND a.rating NOT IN ('UNKNOWN','UNTESTED') AND a.superseded_by_assessment_id IS NULL)))
-          AND (:ownership IS NULL OR (:ownership='OWNED' AND EXISTS (SELECT 1 FROM physical_spools s WHERE s.profile_id=fp.profile_id)) OR (:ownership='PROFILE_ONLY' AND NOT EXISTS (SELECT 1 FROM physical_spools s WHERE s.profile_id=fp.profile_id)))
-        ORDER BY fp.updated_at DESC, fp.profile_id LIMIT :limit
-    """) suspend fun searchRecordIds(roleKey:String?,tdOrigin:String?,tdMinimum:Double?,tdMaximum:Double?,suitability:String?,testState:String?,ownership:String?,limit:Int=100):List<String>
-    @Query("""
-        SELECT fp.legacy_record_id AS record_id,fp.profile_id,r.role_key,r.authority,r.evidence_id
-        FROM full_spectrum_role_assertions r JOIN filament_profiles fp ON fp.profile_id=r.profile_id
-        WHERE fp.legacy_record_id IS NOT NULL AND r.role_key=:roleKey AND r.assertion_state='ACTIVE' AND r.superseded_by_assertion_id IS NULL
-          AND NOT EXISTS (SELECT 1 FROM full_spectrum_role_assertions newer WHERE newer.profile_id=r.profile_id AND newer.role_key=r.role_key AND newer.assertion_state='ACTIVE' AND newer.superseded_by_assertion_id IS NULL AND (newer.asserted_at>r.asserted_at OR (newer.asserted_at=r.asserted_at AND newer.assertion_id>r.assertion_id)))
-        ORDER BY r.authority,fp.updated_at DESC,fp.profile_id LIMIT :limit
-    """) suspend fun alternateCandidates(roleKey:String,limit:Int=20):List<FullSpectrumCandidateEvidence>
 }
 
 internal fun addFullSpectrumSearchIndexesV7(db:SupportSQLiteDatabase) {

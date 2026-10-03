@@ -16,11 +16,9 @@ flowchart LR
   I <--> X[Export / Spoolman sync adapters]
 ```
 
-### Full Spectrum extension
+### Removed: Full Spectrum
 
-The owner-approved direction in [`FULL_SPECTRUM_PRODUCT_DIRECTION.md`](FULL_SPECTRUM_PRODUCT_DIRECTION.md) extends the canonical side of this diagram. M7 implements optical characterizations plus evidence-bearing appearance, role, and suitability assertions. Reusable CMYG sets, portable recipes, calibration runs, printer deployments, and contextual tool assignments remain later milestones. Full Spectrum concerns do not enter tag codecs or make Snapmaker tool numbers part of profile identity.
-
-M8 queries saved profiles through canonical Room projections. Structured filters use indexed active role assertions, current TD evidence, assessment/test state, and physical-spool ownership. CMYG completeness is a deterministic set operation. Alternate candidates expose assertion authority and evidence identifiers without ranking a best set.
+The Full Spectrum color-mixing feature (M7–M8) was removed from the app on 2026-10-03 ([ADR-002](decisions/ADR-002-refocus-on-tag-manager-and-public-release.md)). Its tables remain in user database schema v7 so existing databases open without a migration; only the transmission distance history in `optical_characterizations` is still written. Its design is archived in [`FULL_SPECTRUM_PRODUCT_DIRECTION.md`](FULL_SPECTRUM_PRODUCT_DIRECTION.md).
 
 ```mermaid
 flowchart LR

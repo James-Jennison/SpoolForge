@@ -448,54 +448,6 @@ class LocalFilamentRepository internal constructor(private val database: UserDat
     }
 
     suspend fun tagBindings(spoolId: String): List<TagBindingEntity> = database.canonical().tagBindings(spoolId)
-
-    suspend fun fullSpectrum(recordId: String): FullSpectrumProfileData? {
-        val profileId = profileIdForRecord(recordId) ?: return null
-        return FullSpectrumProfileData(
-            database.fullSpectrum().opticalCharacterizations(profileId), database.fullSpectrum().appearances(profileId),
-            database.fullSpectrum().roles(profileId), database.fullSpectrum().suitability(profileId),
-        )
-    }
-
-    suspend fun searchFullSpectrum(filter:FullSpectrumSearchFilter,limit:Int=100):List<String> =
-        database.fullSpectrum().searchRecordIds(
-            filter.roleKey?.let(FullSpectrumRoles::validate), filter.tdOrigin?.let(TdOrigins::validate),
-            filter.tdMinimumMm?.toDoubleOrNull(), filter.tdMaximumMm?.toDoubleOrNull(),
-            filter.suitability?.name, filter.testState?.name, filter.ownership?.name, limit,
-        )
-
-    suspend fun alternateCandidates(roleKey:String,limit:Int=20):List<FullSpectrumCandidateEvidence> =
-        database.fullSpectrum().alternateCandidates(FullSpectrumRoles.validate(roleKey),limit)
-
-    suspend fun assertUserRole(recordId: String, roleKey: String, now: Long = System.currentTimeMillis()) {
-        val profileId = profileIdForRecord(recordId)
-            ?: error("Save this filament locally before adding Full Spectrum evidence")
-        val normalized = FullSpectrumRoles.validate(roleKey)
-        database.withTransaction {
-            val evidenceId="user-role-evidence:$profileId:$normalized:$now"
-            database.fullSpectrum().putEvidence(EvidenceReferenceEntity(evidenceId,"USER","Local user",recordId,null,null,now,"User-confirmed role"))
-            database.fullSpectrum().putRole(FullSpectrumRoleAssertionEntity(
-                "role:$profileId:$normalized:$now", profileId, normalized,
-                FullSpectrumRoles.category(normalized).name, RoleAuthority.USER_CONFIRMED.name,
-                AssertionState.ACTIVE.name, null, evidenceId, null, null, now,
-            ))
-        }
-    }
-
-    suspend fun recordObservedSuitability(recordId: String, rating: SuitabilityRating, rationale: String, now: Long = System.currentTimeMillis()) {
-        require(rationale.isNotBlank())
-        val profileId = profileIdForRecord(recordId)
-            ?: error("Save this filament locally before recording Full Spectrum evidence")
-        database.withTransaction {
-            val evidenceId="user-suitability-evidence:$profileId:$now"
-            database.fullSpectrum().putEvidence(EvidenceReferenceEntity(evidenceId,"USER","Local user",recordId,null,null,now,"User-observed suitability"))
-            database.fullSpectrum().putSuitability(FullSpectrumSuitabilityAssessmentEntity(
-                "suitability:$profileId:$now", profileId, SuitabilityKind.OBSERVED.name, rating.name,
-                SuitabilityScope.PROFILE.name, null, null, null, "[]", rationale,
-                evidenceId, null, "Local user", now, null,
-            ))
-        }
-    }
 }
 
 data class SavedPortableIdentity(val profileId: String, val spoolId: String, val initialQuantityG: Int, val remainingQuantityG: Int?)

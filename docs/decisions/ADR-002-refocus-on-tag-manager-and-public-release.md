@@ -1,8 +1,8 @@
 # ADR-002: Refocus on the filament tag manager and a public release
 
-- Status: Proposed — awaiting owner acceptance
+- Status: Partly accepted — decisions 2 and 7 were made by the owner on 2026-10-03; the rest is proposed
 - Date: 2026-10-03
-- Supersedes: the "Proposed M9–M12" milestones in [`ROADMAP.md`](../ROADMAP.md) if accepted
+- Supersedes: the M9–M12 milestones in [`ROADMAP.md`](../ROADMAP.md)
 
 ## Context
 
@@ -15,7 +15,7 @@ On 2026-10-03 the owner decided that SpoolForge will be published on Google Play
 ## Decision
 
 1. **Core product.** SpoolForge's core is the original tag manager: identify a filament, review it, write a tag in the reader's format, verify it. Inventory and portable identity stay as supporting features.
-2. **Full Spectrum is frozen at M8.** What M7 and M8 shipped stays in the app behind its existing opt-in controls and keeps its tests. M9–M12 (sets, recipes, slicer guidance, shared evidence) are deferred with no planned date.
+2. **Full Spectrum is removed from the app** (owner decision, 2026-10-03). The filters, the profile panel, role and suitability recording, gap reporting, and their tests are deleted; M9–M12 are dropped. Transmission distance stays as an ordinary filament field. The Full Spectrum tables stay in user database schema v7, unread, so existing databases need no migration and lose no rows. The design report is archived in `docs/`.
 3. **Next milestones** replace M9–M12:
    - **R1 — Release readiness.** Release signing, a Play listing, a privacy statement covering the camera and optional AI providers, a build that works from a clean clone, and removal of debug-only configuration from release builds.
    - **R2 — Finding a filament.** Brand → product → color browsing and color-similarity search over the bundled catalogs.
@@ -24,16 +24,16 @@ On 2026-10-03 the owner decided that SpoolForge will be published on Google Play
 4. **AI label scanning** stays optional. The providers are the user's own ChatGPT plan and a self-hosted local vision model; no provider credential ships in the app.
 5. **3D Filament Profiles** is link-only (a pre-filled search in the browser) until its owner grants licensed access. No scraping, page reading, or AI extraction of its data.
 6. **Compatibility claims** continue to require device evidence per format and reader.
+7. **The application ID becomes `net.jamesjennison.spoolforge`** (owner decision, 2026-10-03), before any store release fixes it permanently. The Kotlin namespace and packages, database names, portable identity schema, and MIME types keep their existing names.
 
 ## Consequences
 
 - `ROADMAP.md` and `PRODUCT.md` need their milestone sections rewritten once this is accepted; until then they describe the superseded plan.
-- Full Spectrum code remains a maintenance cost with no planned growth; removing it would be a separate decision.
+- A debug install under the old application ID is a separate app; its data must be copied across once.
 - Release work now precedes feature work, because the repository is already public.
 - Eligibility of the "Sign in with ChatGPT" preview for a Play-distributed app must be confirmed under R1; if it is not eligible, the local model becomes the only shipped provider.
 
 ## Open questions for the owner
 
 - Is the order R1 → R4 right, or should finding a filament (R2) come before release?
-- Should Full Spectrum be hidden entirely in the first public release rather than left opt-in?
 - Will the Play listing carry ads or donations? Either changes what third parties will license.

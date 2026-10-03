@@ -445,7 +445,7 @@ class StorageAcceptanceTest {
         }
     }
 
-    @Test fun fullSpectrumMigrationPreservesValidConflictsAndUiDoesNotSelectAWinner() = runBlocking {
+    @Test fun fullSpectrumMigrationPreservesValidConflictsWithoutSelectingAWinner() = runBlocking {
         val name = "full-spectrum-conflicting-td-migration"
         val file=context.getDatabasePath(name); file.parentFile!!.mkdirs()
         SQLiteDatabase.openOrCreateDatabase(file,null).use { db ->
@@ -466,9 +466,6 @@ class StorageAcceptanceTest {
             val optical=db.fullSpectrum().opticalCharacterizations("profile-conflict")
             assertEquals(setOf("2.4","2.7"),optical.mapNotNull { it.valueText }.toSet())
             assertTrue(optical.all { it.supersededByCharacterizationId==null })
-            val summary=fullSpectrumUiSummary(FullSpectrumProfileData(optical,emptyList(),emptyList(),emptyList()))
-            assertTrue(summary.optical.startsWith("Conflicting evidence"))
-            assertTrue(summary.optical.contains("2.4 mm")); assertTrue(summary.optical.contains("2.7 mm"))
         }
     }
 
@@ -548,17 +545,12 @@ class StorageAcceptanceTest {
 
             repository.save(record("portable-a", 11))
             assertEquals(SavedPortableIdentity("profile:shared", "spool:a", 1100, 725), repository.portableIds("portable-a"))
-            repository.assertUserRole("portable-a", "C", 12)
-            repository.recordObservedSuitability("portable-a", net.jamesjennison.filamajignfc.core.SuitabilityRating.GOOD, "Observed print", 13)
-            assertEquals("C", repository.fullSpectrum("portable-a")!!.roles.single().roleKey)
-            assertEquals("GOOD", repository.fullSpectrum("portable-a")!!.suitability.single().rating)
 
             repository.save(record("portable-a", 14).copy(transmissionDistance=null, transmissionDistanceSource=null))
-            val clearedSpectrum = repository.fullSpectrum("portable-a")!!
-            val clearMarker = clearedSpectrum.opticalCharacterizations.last()
+            val tdHistory = db.fullSpectrum().opticalCharacterizations("profile:shared")
+            val clearMarker = tdHistory.last()
             assertNull(clearMarker.valueText)
-            assertEquals(clearMarker.characterizationId, clearedSpectrum.opticalCharacterizations.first { it.valueText == "2.7" }.supersededByCharacterizationId)
-            assertTrue(fullSpectrumUiSummary(clearedSpectrum).optical.startsWith("Unknown"))
+            assertEquals(clearMarker.characterizationId, tdHistory.first { it.valueText == "2.7" }.supersededByCharacterizationId)
 
             val reassignment = runCatching { repository.save(record("portable-a", 15), "profile:other", "spool:other", 1000, 1000) }
             assertTrue(reassignment.exceptionOrNull()!!.message!!.contains("different profile"))
@@ -597,32 +589,6 @@ class StorageAcceptanceTest {
             assertNull(db.user().byId(record.id))
             assertNull(db.canonical().profile(profileId)!!.legacyRecordId)
             assertEquals("second-owned-spool", db.canonical().spools(profileId).single().spoolId)
-        }
-    }
-
-    @Test fun fullSpectrumSearchUsesCanonicalIndexesAndReturnsEvidenceBearingAlternates() = runBlocking {
-        Room.inMemoryDatabaseBuilder(context,UserDatabase::class.java).allowMainThreadQueries().build().use { db ->
-            fun record(id:String,brand:String,td:String)=CustomRecord(
-                id,null,"","",brand,"PLA","Basic","Cyan","00ADFF","1.75",1000,190,230,35,65,null,null,"","user","CUSTOM",
-                "User","User","User","User","User","User","User","User","User","User","User",10,"",td,"User",
-            )
-            val repository=LocalFilamentRepository(db)
-            repository.save(record("cyan-a","Alpha", "2.7"))
-            repository.save(record("cyan-b","Beta", "3.1"))
-            repository.assertUserRole("cyan-a","C",20)
-            repository.assertUserRole("cyan-b","C",21)
-            repository.recordObservedSuitability("cyan-a",net.jamesjennison.filamajignfc.core.SuitabilityRating.GOOD,"Observed",22)
-
-            val ids=repository.searchFullSpectrum(net.jamesjennison.filamajignfc.core.FullSpectrumSearchFilter(
-                roleKey="C",tdMinimumMm="2.5",tdMaximumMm="2.9",tdOrigin="USER_REPORTED_UNSPECIFIED",
-                suitability=net.jamesjennison.filamajignfc.core.SuitabilityRating.GOOD,
-                testState=net.jamesjennison.filamajignfc.core.FullSpectrumTestState.TESTED,
-                ownership=net.jamesjennison.filamajignfc.core.InventoryOwnership.OWNED,
-            ))
-            assertEquals(listOf("cyan-a"),ids)
-            assertEquals(setOf("cyan-a","cyan-b"),repository.alternateCandidates("C").map { it.recordId }.toSet())
-            assertTrue(repository.alternateCandidates("C").all { it.evidenceId?.startsWith("user-role-evidence:")==true })
-            assertEquals(listOf("cyan-a"),db.canonical().searchLegacyRecordIds("Alpha",100))
         }
     }
 

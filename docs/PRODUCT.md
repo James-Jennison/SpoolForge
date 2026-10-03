@@ -11,15 +11,12 @@ SpoolForge owns the Forge family's filament and material layer: canonical filame
 
 The one-minute target is: identify a filament, review the values and their sources, create a spool, select an exact tag profile, preview omissions and capacity, write, and verify.
 
-M7 establishes Full Spectrum optical characterization as a first-class optional profile workflow without inventing certainty. M8 adds evidence-filtered local inventory search, deterministic CMYG gap reporting, and alternate candidates without declaring a best set. Later approved milestones assemble reusable evidence-backed CMYG sets, preserve White and Black as separate anchors, translate portable mix recipes into contextual printer tool assignments, and record what combinations actually produced under defined print conditions. The staged direction is in [`FULL_SPECTRUM_PRODUCT_DIRECTION.md`](FULL_SPECTRUM_PRODUCT_DIRECTION.md); later behavior must not be described as implemented before its milestone passes acceptance.
-
 ## Target users
 
 - Android users who buy third-party, generic, rebranded, or older filament;
 - owners of printers and material systems that consume PAXX/OpenSpool, ELEGOO CANVAS, OpenPrintTag, Anycubic ACE, OpenTag3D, QIDI Box, or TigerTag records;
 - makers who want local inventory without running a server or joining a printer cloud;
 - users moving data among OFD, Spoolman, open tag formats, QR labels, and future tools.
-- users characterizing calibrated or mixed-brand Cyan, Magenta, Yellow, and Gray sets for Full Spectrum printing.
 
 ## Differentiation
 
@@ -35,9 +32,6 @@ Tag My Spool is a strong focused writer; Spool Hoarder is a stronger general loc
 6. Codec isolation: a vendor or standard format never dictates the canonical database.
 7. Explicit compatibility: tag technology and tag data format are separate; each reader ecosystem is an explicit target and the dual U1/CANVAS layout is named as such.
 8. Conservative writes: preview, consent, byte-capacity gate, readback, and durable unknown outcomes remain mandatory.
-9. Evidence before prediction: TD, suitability, roles, recipes, and observed colors retain source and test context; unknown and untested remain valid states.
-10. Portable mixing: a recipe identifies profiles/roles and ratios or cycles; printer tool numbering belongs to a separate deployment.
-11. Progressive disclosure: ordinary filament lookup stays simple for users who do not use Full Spectrum workflows.
 
 ## Non-goals for the focused roadmap
 

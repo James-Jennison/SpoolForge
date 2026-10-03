@@ -1,6 +1,6 @@
 # SpoolForge revised roadmap
 
-> **Proposed change:** [ADR-002](decisions/ADR-002-refocus-on-tag-manager-and-public-release.md) proposes freezing Full Spectrum at M8 and replacing M9–M12 with release and tag-manager milestones. It is awaiting owner acceptance; the plan below is unchanged until then.
+> **Changed 2026-10-03:** Full Spectrum (M7–M8) was removed from the app and M9–M12 are dropped, per [ADR-002](decisions/ADR-002-refocus-on-tag-manager-and-public-release.md). The replacement milestones in that record are still proposed. The history below is kept as written.
 
 This roadmap starts from the existing uncommitted prototype; it is not a greenfield plan.
 
