@@ -92,6 +92,7 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
             model.consumePortableImport()
         }
     }
+    val uriHandler = LocalUriHandler.current
     Scaffold(
         topBar = { TopAppBar(title = { Column { Text(stringResource(R.string.app_name), fontWeight = FontWeight.Bold); Text(stringResource(R.string.app_tagline), style = MaterialTheme.typography.labelMedium) } }) },
         floatingActionButton = { if (model.selected == null) ExtendedFloatingActionButton(onClick = { custom = CustomSeed(); showCustom = true }) { Text("Custom filament") } },
@@ -116,6 +117,7 @@ class MainActivity : ComponentActivity(), NfcAdapter.ReaderCallback {
                             modifier = Modifier.fillMaxWidth(),
                         ) { Text("Scan label or QR with AI") }
                         ChatGptPlanCard(model)
+                        if (model.query.isNotBlank()) OutlinedButton(onClick = { uriHandler.openUri(filamentProfilesSearchUrl(model.query)) }, modifier = Modifier.fillMaxWidth()) { Text("Search 3D Filament Profiles for this") }
                         OutlinedButton(onClick = { showPortableImport = true }, modifier = Modifier.fillMaxWidth()) { Text("Import portable spool bundle") }
                         OutlinedButton(onClick = { showSpoolmanImport = true }, modifier = Modifier.fillMaxWidth()) { Text("Import Spoolman JSON") }
                         OutlinedButton(onClick = { showBulkImport = true }, modifier = Modifier.fillMaxWidth()) { Text("Bulk add CSV") }
@@ -437,7 +439,7 @@ private fun androidx.compose.foundation.lazy.LazyListScope.catalogItems(recents:
         if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = { showSpoolmanSync = true }, modifier = Modifier.fillMaxWidth(), enabled = !model.spoolmanSync.busy) { Text("Sync filament profile to Spoolman") }
         model.spoolmanSync.message?.let { Notice(it, model.spoolmanSync.outcomeUnknown || it.contains("failed", ignoreCase = true) || it.contains("rejected", ignoreCase = true)) }
         if (item.provenance != Provenance.CATALOG) OutlinedButton(onClick = { confirmDelete = true }, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.error)) { Text("Delete local record") }
-        OutlinedButton(onClick = { uriHandler.openUri(FILAMENT_PROFILES_CATALOG_URL) }, modifier = Modifier.fillMaxWidth()) { Text("Search 3D Filament Profiles") }
+        OutlinedButton(onClick = { uriHandler.openUri(filamentProfilesSearchUrl(item.entry.brand, item.entry.material, item.entry.colorName)) }, modifier = Modifier.fillMaxWidth()) { Text("Search 3D Filament Profiles") }
         Text("Tag compatibility", fontWeight = FontWeight.Bold)
         if(item.provenance!=Provenance.CATALOG) Info("Verified tag bindings", "${model.savedTagBindings.size} of 2" + model.savedTagBindings.joinToString(prefix=if(model.savedTagBindings.isEmpty()) "" else " · ",separator=" / ") { binding -> "position ${binding.bindingOrder}: ${runCatching { TagCodecRegistry.require(binding.codecId).format.displayName }.getOrDefault(binding.codecId)}" })
         Text("Compatible printers",style=MaterialTheme.typography.labelLarge)
@@ -795,8 +797,8 @@ private fun packageSummary(e: net.jamesjennison.filamajignfc.data.CatalogEntry):
                 seed.articleNumber?.let { Text("SKU / identifier: $it"); seed.sources["articleNumber"]?.let { source -> Text("Source: $source", style = MaterialTheme.typography.bodySmall) } }
                 if(seed.barcodeEvidence.isNotBlank()) Text(scannedCodeSummary(seed.barcodeEvidence), style = MaterialTheme.typography.bodySmall)
             } }
-            OutlinedButton(onClick = { uriHandler.openUri(FILAMENT_PROFILES_CATALOG_URL) }, modifier = Modifier.fillMaxWidth()) { Text("Search 3D Filament Profiles") }
-            Text("The public catalog opens in your browser. SpoolForge does not copy profile data until 3D Filament Profiles provides an authorized API or export.", style = MaterialTheme.typography.bodySmall)
+            OutlinedButton(onClick = { uriHandler.openUri(filamentProfilesSearchUrl(values["brand"], values["material"], values["colorName"])) }, modifier = Modifier.fillMaxWidth()) { Text("Search 3D Filament Profiles") }
+            Text("Opens their search in your browser with this brand, material, and color filled in. SpoolForge does not copy profile data until 3D Filament Profiles provides an authorized API or export.", style = MaterialTheme.typography.bodySmall)
             fields.forEach { (key, label) -> OutlinedTextField(values[key].orEmpty(), { values[key] = it }, label = { Text(label) }, supportingText = seed.sources[key]?.takeIf(String::isNotBlank)?.let { source -> { Text(if(source == "Not found on label") source else "Source: $source") } }, singleLine = true) }
         } },
         confirmButton = { Button(onClick = { onSave(values.toMap()) }) { Text("Save locally") } }, dismissButton = { TextButton(onClick = onDismiss) { Text("Cancel") } },
@@ -805,4 +807,13 @@ private fun packageSummary(e: net.jamesjennison.filamajignfc.data.CatalogEntry):
 
 private fun fieldLabel(value: String) = mapOf("brand" to "brand", "colorName" to "color name", "bedTemperatureRange" to "bed temperature range", "bedTemperatureTargets" to "bed temperature targets", "temperatures" to "temperatures", "weight" to "weight", "drying" to "drying settings", "packageIdentity" to "package identity", "remainingWeight" to "remaining weight", "signature" to "signature", "product" to "product label", "diameter" to "diameter", "mass" to "mass", "nozzleMin" to "nozzle minimum", "nozzleMax" to "nozzle maximum", "bedMin" to "bed minimum", "bedMax" to "bed maximum", "transmissionDistance" to "transmission distance", "additionalColors" to "additional colors", "packageId" to "package identifier", "gtin" to "barcode", "sku" to "article number", "provenance" to "field provenance")[value] ?: value
 private const val FILAMENT_PROFILES_CATALOG_URL = "https://3dfilamentprofiles.com/filaments"
+
+/**
+ * Link to 3D Filament Profiles' own search for the given terms. Their search box accepts brand, material,
+ * type, color, SKU, GTIN, or a #hex color; with no usable terms this is the catalog front page.
+ */
+internal fun filamentProfilesSearchUrl(vararg terms: String?): String {
+    val query = terms.mapNotNull { it?.trim()?.takeIf(String::isNotEmpty) }.joinToString(" ").replace(Regex("\\s+"), " ").take(120)
+    return if (query.isEmpty()) FILAMENT_PROFILES_CATALOG_URL else "$FILAMENT_PROFILES_CATALOG_URL?q=${java.net.URLEncoder.encode(query, "UTF-8")}"
+}
 private fun phaseLabel(phase: WritePhase) = when (phase) { WritePhase.AWAITING_TAG -> "Ready for tag"; WritePhase.INSPECTING -> "Inspecting tag"; WritePhase.NEEDS_OVERWRITE_CONSENT -> "Overwrite approval needed"; WritePhase.WRITING -> "Writing — keep tag in place"; WritePhase.VERIFYING -> "Verifying fresh read"; WritePhase.VERIFICATION_PENDING -> "Verification needed"; WritePhase.VERIFIED -> "Write verified"; WritePhase.COMPLETED -> "Tagging complete"; WritePhase.CANCELLED -> "Cancelled before writing"; WritePhase.REJECTED -> "Tag rejected"; WritePhase.FAILED_BEFORE_WRITE -> "Write not attempted"; WritePhase.WRITE_OUTCOME_UNKNOWN -> "Write outcome unknown"; WritePhase.UNRESOLVED_ARCHIVED -> "Unresolved result archived"; WritePhase.DRAFT -> "Draft" }

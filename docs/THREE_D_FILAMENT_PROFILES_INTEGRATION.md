@@ -16,8 +16,16 @@ payloads, browser cookies, or unofficial extraction scripts as a product data
 feed.
 
 The application currently provides a compliant bridge: **Search 3D Filament
-Profiles** opens the public catalog in the user's browser from both a saved
-filament and the AI label review form. No values are imported automatically.
+Profiles** opens the site's own search in the user's browser with the query
+filled in (`https://3dfilamentprofiles.com/filaments?q=...`). It is offered
+from the home search box (the typed text), a saved filament, and the label
+review form (brand, material, and color name). It is an ordinary link: the
+application never fetches, reads, or parses the site's pages, and no values
+are imported automatically.
+
+The Terms of Service (updated 2026-03-29) prohibit scraping, automated or AI
+extraction, copying, redistribution, and derived datasets, and state that
+licensed API access is available on request through GitHub Issues or Reddit.
 
 ## Authorized integration contract
 
