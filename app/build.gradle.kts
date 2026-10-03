@@ -27,7 +27,8 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
     defaultConfig {
-        applicationId = "net.jamesjennison.filamajignfc"
+        // The installed app identity. The namespace and Kotlin packages keep their original name.
+        applicationId = "net.jamesjennison.spoolforge"
         minSdk = 28
         targetSdk = 36
         versionCode = 8
