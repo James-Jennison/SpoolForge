@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">SpoolForge</string>
-    <string name="app_tagline">Universal filament identity, inventory, and RFID interoperability.</string>
+    <string name="app_tagline">Tap a spool, know what it is — and so does your printer.</string>
     <string name="store_listing_name">SpoolForge</string>
 </resources>

@@ -1,6 +1,6 @@
 # ADR-002: Refocus on the filament tag manager and a public release
 
-- Status: Partly accepted — decisions 2 and 7 were made by the owner on 2026-10-03; the rest is proposed
+- Status: Partly accepted — decisions 1, 2 and 7 were made by the owner on 2026-10-03; the rest is proposed
 - Date: 2026-10-03
 - Supersedes: the M9–M12 milestones in [`ROADMAP.md`](../ROADMAP.md)
 
@@ -14,7 +14,7 @@ On 2026-10-03 the owner decided that SpoolForge will be published on Google Play
 
 ## Decision
 
-1. **Core product.** SpoolForge's core is the original tag manager: identify a filament, review it, write a tag in the reader's format, verify it. Inventory and portable identity stay as supporting features.
+1. **Core promise: "Tap a spool, know what it is — and so does your printer"** (owner decision, 2026-10-03). Every spool gets an identity that both the phone and the printer can read: a printer-native NFC tag where the printer reads tags, and a QR label or phone-only tag where it does not. Tapping or scanning a spool shows what it is and how much is left. This replaces the narrower "tag any spool for your printer", which was used once per spool and served only tag-reading printers. It is not a full inventory manager: locations, purchase history, and dashboards stay out, as do printer control, slicer profiles, and cloud sync.
 2. **Full Spectrum is removed from the app** (owner decision, 2026-10-03). The filters, the profile panel, role and suitability recording, gap reporting, and their tests are deleted; M9–M12 are dropped. Transmission distance stays as an ordinary filament field. The Full Spectrum tables stay in user database schema v7, unread, so existing databases need no migration and lose no rows. The design report is archived in `docs/`.
 3. **Next milestones** replace M9–M12:
    - **R1 — Release readiness.** Release signing, a Play listing, a privacy statement covering the camera and optional AI providers, a build that works from a clean clone, and removal of debug-only configuration from release builds.

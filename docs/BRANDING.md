@@ -1,7 +1,7 @@
 # SpoolForge product identity
 
 - Product name: **SpoolForge**
-- Description: **Universal filament identity, inventory, and RFID interoperability.**
+- Description: **Tap a spool, know what it is — and so does your printer.**
 - App store name: **SpoolForge**
 
 The Android application ID is `net.jamesjennison.spoolforge`, set on 2026-10-03

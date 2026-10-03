@@ -1,6 +1,6 @@
 # SpoolForge
 
-**Universal filament identity, inventory, and RFID interoperability.**
+**Tap a spool, know what it is — and so does your printer.**
 
 SpoolForge is the Forge family's local-first material identity layer. It identifies physical filament, maintains normalized profiles and spool inventory, reads and writes supported RFID/NFC formats, and translates metadata between explicitly supported printer ecosystems. Its compatibility resolver can select one NTAG215 with ELEGOO CANVAS encoding for both CANVAS and a Snapmaker U1 running PAXX/OpenRFID with the Elegoo processor enabled; stock U1 firmware is explicitly excluded. Separate codecs preserve format-oriented workflows for OpenPrintTag, Anycubic ACE, Creality CFS, OpenTag3D, QIDI Box, TigerTag, standard OpenSpool, and PAXX U1.
 
